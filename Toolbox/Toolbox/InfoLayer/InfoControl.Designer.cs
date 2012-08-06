@@ -45,7 +45,7 @@
             this.richTextBox.Name = "richTextBox";
             this.richTextBox.ReadOnly = true;
             this.richTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox.Size = new System.Drawing.Size(800, 332);
+            this.richTextBox.Size = new System.Drawing.Size(924, 399);
             this.richTextBox.TabIndex = 1;
             this.richTextBox.Text = "";
             this.richTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
@@ -55,9 +55,9 @@
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(191, 388);
+            this.buttonClose.Location = new System.Drawing.Point(191, 455);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(415, 27);
+            this.buttonClose.Size = new System.Drawing.Size(539, 27);
             this.buttonClose.TabIndex = 2;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             this.buttonClose2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose2.Location = new System.Drawing.Point(753, 10);
+            this.buttonClose2.Location = new System.Drawing.Point(877, 10);
             this.buttonClose2.Name = "buttonClose2";
             this.buttonClose2.Size = new System.Drawing.Size(28, 28);
             this.buttonClose2.TabIndex = 29;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.richTextBox);
             this.Name = "InfoControl";
-            this.Size = new System.Drawing.Size(800, 429);
+            this.Size = new System.Drawing.Size(924, 496);
             this.ResumeLayout(false);
 
         }

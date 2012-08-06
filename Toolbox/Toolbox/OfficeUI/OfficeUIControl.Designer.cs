@@ -35,6 +35,7 @@
             this.toolStripDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListTreeView = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeViewOfficeUI = new NetOffice.DeveloperToolbox.MultiSelectTreeView();
             this.buttonCloseOfficeApp = new System.Windows.Forms.Button();
             this.checkBoxScanForProperties = new System.Windows.Forms.CheckBox();
             this.propertyGridItems = new System.Windows.Forms.PropertyGrid();
@@ -43,7 +44,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelInfo = new System.Windows.Forms.Label();
             this.buttonInfo = new System.Windows.Forms.Button();
-            this.treeViewOfficeUI = new NetOffice.DeveloperToolbox.MultiSelectTreeView();
             this.contextMenuTreeView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -101,19 +101,38 @@
             this.splitContainer1.Panel2.Controls.Add(this.buttonCloseOfficeApp);
             this.splitContainer1.Panel2.Controls.Add(this.checkBoxScanForProperties);
             this.splitContainer1.Panel2.Controls.Add(this.propertyGridItems);
-            this.splitContainer1.Size = new System.Drawing.Size(797, 374);
-            this.splitContainer1.SplitterDistance = 203;
+            this.splitContainer1.Size = new System.Drawing.Size(921, 441);
+            this.splitContainer1.SplitterDistance = 234;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // treeViewOfficeUI
+            // 
+            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
+            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewOfficeUI.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewOfficeUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewOfficeUI.HideSelection = false;
+            this.treeViewOfficeUI.ImageIndex = 0;
+            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
+            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
+            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
+            this.treeViewOfficeUI.SelectedImageIndex = 0;
+            this.treeViewOfficeUI.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewOfficeUI.SelectedNodes")));
+            this.treeViewOfficeUI.Size = new System.Drawing.Size(234, 441);
+            this.treeViewOfficeUI.TabIndex = 1;
+            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
+            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
             // 
             // buttonCloseOfficeApp
             // 
             this.buttonCloseOfficeApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCloseOfficeApp.Enabled = false;
+            this.buttonCloseOfficeApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCloseOfficeApp.Image = ((System.Drawing.Image)(resources.GetObject("buttonCloseOfficeApp.Image")));
             this.buttonCloseOfficeApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCloseOfficeApp.Location = new System.Drawing.Point(398, 349);
+            this.buttonCloseOfficeApp.Location = new System.Drawing.Point(424, 416);
             this.buttonCloseOfficeApp.Name = "buttonCloseOfficeApp";
-            this.buttonCloseOfficeApp.Size = new System.Drawing.Size(189, 25);
+            this.buttonCloseOfficeApp.Size = new System.Drawing.Size(256, 25);
             this.buttonCloseOfficeApp.TabIndex = 4;
             this.buttonCloseOfficeApp.Text = "Office Anwendung schliessen";
             this.buttonCloseOfficeApp.UseVisualStyleBackColor = true;
@@ -123,9 +142,10 @@
             // 
             this.checkBoxScanForProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxScanForProperties.AutoSize = true;
-            this.checkBoxScanForProperties.Location = new System.Drawing.Point(3, 354);
+            this.checkBoxScanForProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxScanForProperties.Location = new System.Drawing.Point(3, 418);
             this.checkBoxScanForProperties.Name = "checkBoxScanForProperties";
-            this.checkBoxScanForProperties.Size = new System.Drawing.Size(133, 17);
+            this.checkBoxScanForProperties.Size = new System.Drawing.Size(160, 20);
             this.checkBoxScanForProperties.TabIndex = 1;
             this.checkBoxScanForProperties.Text = "Eigenschaften abrufen";
             this.checkBoxScanForProperties.UseVisualStyleBackColor = true;
@@ -135,15 +155,17 @@
             this.propertyGridItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.propertyGridItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.propertyGridItems.Location = new System.Drawing.Point(2, 2);
             this.propertyGridItems.Name = "propertyGridItems";
             this.propertyGridItems.PropertySort = System.Windows.Forms.PropertySort.Alphabetical;
-            this.propertyGridItems.Size = new System.Drawing.Size(585, 346);
+            this.propertyGridItems.Size = new System.Drawing.Size(678, 413);
             this.propertyGridItems.TabIndex = 0;
             this.propertyGridItems.ToolbarVisible = false;
             // 
             // buttonStartApplication
             // 
+            this.buttonStartApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartApplication.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartApplication.Image")));
             this.buttonStartApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStartApplication.Location = new System.Drawing.Point(12, 11);
@@ -160,9 +182,9 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInfo.Controls.Add(this.pictureBox5);
             this.panelInfo.Controls.Add(this.labelInfo);
-            this.panelInfo.Location = new System.Drawing.Point(219, 16);
+            this.panelInfo.Location = new System.Drawing.Point(239, 16);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(514, 24);
+            this.panelInfo.Size = new System.Drawing.Size(570, 24);
             this.panelInfo.TabIndex = 75;
             // 
             // pictureBox5
@@ -180,9 +202,10 @@
             this.labelInfo.AutoSize = true;
             this.labelInfo.BackColor = System.Drawing.SystemColors.Control;
             this.labelInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInfo.Location = new System.Drawing.Point(42, 7);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(381, 13);
+            this.labelInfo.Size = new System.Drawing.Size(469, 16);
             this.labelInfo.TabIndex = 72;
             this.labelInfo.Text = "Nutzen Sie das Kontextmenü in der linken Übersicht um Elemente zu entfernen.";
             // 
@@ -191,30 +214,13 @@
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfo.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo.Image")));
-            this.buttonInfo.Location = new System.Drawing.Point(753, 10);
+            this.buttonInfo.Location = new System.Drawing.Point(877, 10);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(28, 28);
             this.buttonInfo.TabIndex = 76;
             this.buttonInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonInfo.UseVisualStyleBackColor = true;
             this.buttonInfo.Click += new System.EventHandler(this.buttonInfo_Click);
-            // 
-            // treeViewOfficeUI
-            // 
-            this.treeViewOfficeUI.ContextMenuStrip = this.contextMenuTreeView;
-            this.treeViewOfficeUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewOfficeUI.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewOfficeUI.HideSelection = false;
-            this.treeViewOfficeUI.ImageIndex = 0;
-            this.treeViewOfficeUI.ImageList = this.imageListTreeView;
-            this.treeViewOfficeUI.Location = new System.Drawing.Point(0, 0);
-            this.treeViewOfficeUI.Name = "treeViewOfficeUI";
-            this.treeViewOfficeUI.SelectedImageIndex = 0;
-            this.treeViewOfficeUI.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewOfficeUI.SelectedNodes")));
-            this.treeViewOfficeUI.Size = new System.Drawing.Size(203, 374);
-            this.treeViewOfficeUI.TabIndex = 1;
-            this.treeViewOfficeUI.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewOfficeUI_BeforeExpand);
-            this.treeViewOfficeUI.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewOfficeUI_AfterSelect);
             // 
             // OfficeUIControl
             // 
@@ -225,7 +231,7 @@
             this.Controls.Add(this.buttonStartApplication);
             this.Controls.Add(this.splitContainer1);
             this.Name = "OfficeUIControl";
-            this.Size = new System.Drawing.Size(800, 429);
+            this.Size = new System.Drawing.Size(924, 496);
             this.contextMenuTreeView.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

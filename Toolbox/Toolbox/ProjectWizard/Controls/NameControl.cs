@@ -19,8 +19,18 @@ namespace NetOffice.DeveloperToolbox
             InitializeComponent();
             CreateSettingsDocument();
             Translate();
-            textBoxClassName.Text = "MyAssembly";
-            textBoxDescription.Text = "No Description available";
+
+            if (ProjectWizardControl.CurrentLanguageID == 1031)
+            {
+                textBoxClassName.Text = "MeinAssembly";
+                textBoxDescription.Text = "Assembly Beschreibung";
+            }
+            else
+            {
+                textBoxClassName.Text = "MyAssembly";
+                textBoxDescription.Text = "Assembly Description";
+            }
+
             ChangeSettings();
         }
 

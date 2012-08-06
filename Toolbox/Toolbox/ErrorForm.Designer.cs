@@ -40,6 +40,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.linkLabelDiscussionBoard = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,11 +150,24 @@
             this.columnHeader8.Text = "Source";
             this.columnHeader8.Width = 120;
             // 
+            // linkLabelDiscussionBoard
+            // 
+            this.linkLabelDiscussionBoard.AutoSize = true;
+            this.linkLabelDiscussionBoard.Location = new System.Drawing.Point(114, 88);
+            this.linkLabelDiscussionBoard.Name = "linkLabelDiscussionBoard";
+            this.linkLabelDiscussionBoard.Size = new System.Drawing.Size(137, 13);
+            this.linkLabelDiscussionBoard.TabIndex = 24;
+            this.linkLabelDiscussionBoard.TabStop = true;
+            this.linkLabelDiscussionBoard.Tag = "http://netoffice.codeplex.com/discussions";
+            this.linkLabelDiscussionBoard.Text = "NetOffice Discussion Board";
+            this.linkLabelDiscussionBoard.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDiscussionBoard_LinkClicked);
+            // 
             // ErrorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 335);
+            this.Controls.Add(this.linkLabelDiscussionBoard);
             this.Controls.Add(this.listViewTrace);
             this.Controls.Add(this.buttonCopyToClipboard);
             this.Controls.Add(this.labelExitMessage);
@@ -191,6 +205,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.LinkLabel linkLabelDiscussionBoard;
 
     }
 }

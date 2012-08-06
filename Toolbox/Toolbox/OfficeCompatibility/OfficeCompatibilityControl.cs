@@ -173,6 +173,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     SetupVersionInfo(_result.Outlook, "Outlook");
                     SetupVersionInfo(_result.PowerPoint, "PowerPoint");
                     SetupVersionInfo(_result.Access, "Access");
+                    SetupVersionInfo(_result.Project, "Project");
+                    SetupVersionInfo(_result.Visio, "Visio");
                 }
                 else
                 {
@@ -200,6 +202,21 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             }
         }
 
+        private void linkLabelNotSupported_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                if (_currentLanguageID == 1031)
+                    System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=UnsupportedVersions_DE");
+                else
+                    System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=UnsupportedVersions_EN");
+            }
+            catch (Exception exception)
+            {
+                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
+                errorForm.ShowDialog(this);
+            }
+        }
         
         #endregion
 
@@ -210,13 +227,13 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             switch (version)
             {
                 case SupportVersion.Support:
-                    box.Image = pictureBoxOk.Image;
+                    box.BackgroundImage = pictureBoxOk.Image;
                     break;
                 case SupportVersion.NotSupport:
-                    box.Image = pictureBoxProblem.Image;
+                    box.BackgroundImage = pictureBoxProblem.Image;
                     break;
                 default:
-                    box.Image = null;
+                    box.BackgroundImage = null;
                     break;
             }
         }
@@ -230,8 +247,11 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             PictureBox box14 = tableLayoutResult.Controls["pictureBox" + name + "14"] as PictureBox;
             PictureBox box15 = tableLayoutResult.Controls["pictureBox" + name + "15"] as PictureBox;
 
-            SetImage(box09, info[0].Support);
-            SetImage(box10, info[1].Support);
+            if (name != "Project" && name != "Visio")
+            { 
+                SetImage(box09, info[0].Support);
+                SetImage(box10, info[1].Support);
+            }
             SetImage(box11, info[2].Support);
             SetImage(box12, info[3].Support);
             SetImage(box14, info[4].Support);

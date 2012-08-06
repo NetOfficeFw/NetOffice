@@ -76,6 +76,10 @@
       <HintPath>..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="MSProjectApi">
+      <HintPath>..\..\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="NetOffice">
       <HintPath>..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>
@@ -108,6 +112,10 @@
     </Reference>
     <Reference Include="VBIDEApi">
       <HintPath>..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VisioApi">
+      <HintPath>..\..\Assemblies\Any CPU\VisioApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="WordApi">
@@ -236,11 +244,29 @@
     <Compile Include="ProjectWizard\Controls\NameControl.Designer.cs">
       <DependentUpon>NameControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectWizard\Controls\EnvironmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectWizard\Controls\EnvironmentControl.Designer.cs">
+      <DependentUpon>EnvironmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectWizard\Controls\ProjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProjectWizard\Controls\ProjectControl.Designer.cs">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectWizard\Controls\SummaryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ProjectWizard\Controls\SummaryControl.Designer.cs">
       <DependentUpon>SummaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectWizard\FinishDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectWizard\FinishDialog.Designer.cs">
+      <DependentUpon>FinishDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectWizard\ProjectConverter.cs" />
     <Compile Include="ProjectWizard\ProjectOptions.cs" />
@@ -251,12 +277,6 @@
       <DependentUpon>ProjectWizardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProjectWizard\SelectProjectTypeDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectWizard\SelectProjectTypeDialog.Designer.cs">
-      <DependentUpon>SelectProjectTypeDialog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Translator.cs" />
     <EmbeddedResource Include="ColorLabel.resx">
       <DependentUpon>ColorLabel.cs</DependentUpon>
@@ -300,8 +320,17 @@
     <EmbeddedResource Include="ProjectWizard\Controls\NameControl.resx">
       <DependentUpon>NameControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectWizard\Controls\EnvironmentControl.resx">
+      <DependentUpon>EnvironmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectWizard\Controls\ProjectControl.resx">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectWizard\Controls\SummaryControl.resx">
       <DependentUpon>SummaryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectWizard\FinishDialog.resx">
+      <DependentUpon>FinishDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectWizard\ProjectWizardControl.resx">
       <DependentUpon>ProjectWizardControl.cs</DependentUpon>
@@ -324,9 +353,6 @@
     <EmbeddedResource Include="OutlookSecurity\Info1033.rtf" />
     <EmbeddedResource Include="OfficeCompatibility\Info1031.rtf" />
     <EmbeddedResource Include="OfficeCompatibility\Info1033.rtf" />
-    <EmbeddedResource Include="ProjectWizard\SelectProjectTypeDialog.resx">
-      <DependentUpon>SelectProjectTypeDialog.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.config" />
     <EmbeddedResource Include="OfficeUI\Info1031.rtf" />
     <EmbeddedResource Include="OfficeUI\Info1033.rtf" />
@@ -497,6 +523,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NetOffice.Icon.32x32.ico" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlCompileVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlDesignerCS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlDesignerVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlCompileCS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlCS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneControlVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneMethodCS.txt" />
+    <EmbeddedResource Include="ProjectWizard\CodeTemplates\TaskPaneMethodVB.txt" />
+    <EmbeddedResource Include="ProjectWizard\Controls\ProjectControl.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2008CS.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2008VB.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\Solution2010CS.txt" />
@@ -529,7 +564,7 @@
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\UsingCSharp.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\UsingVB.txt" />
     <EmbeddedResource Include="ProjectWizard\CodeTemplates\AssemblyReference.txt" />
-    <EmbeddedResource Include="ProjectWizard\SelectProjectTypeDialog.txt" />
+    <EmbeddedResource Include="ProjectWizard\Controls\EnvironmentControl.txt" />
     <EmbeddedResource Include="ProjectWizard\Controls\GuiControl.txt" />
     <EmbeddedResource Include="ProjectWizard\Controls\LoadControl.txt" />
     <EmbeddedResource Include="ProjectWizard\Controls\NameControl.txt" />

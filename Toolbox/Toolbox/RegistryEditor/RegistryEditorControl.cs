@@ -247,6 +247,20 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
 
         #region Trigger
 
+        private void treeViewRegistry_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyData == Keys.Delete)
+                    toolStripKeyDelete_Click(sender, new EventArgs());
+            }
+            catch (Exception exception)
+            {
+                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
+                errorForm.ShowDialog(this);
+            }
+        }
+
         private void treeViewRegistry_AfterExpand(object sender, TreeViewEventArgs e)
         {
             try
@@ -474,7 +488,7 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
                     UtilsRegistryKey key = new UtilsRegistryKey(registryRoot, fullPath);
                     key.Delete();
                 }
-
+                
                 treeViewRegistry.SelectedNode = parentNode;
                 buttonRefresh_Click(this, new EventArgs());      
             }
@@ -747,8 +761,19 @@ namespace NetOffice.DeveloperToolbox.RegistryEditor
                 UtilsRegistry regRoot = rootNode.Tag as UtilsRegistry;
                 if ((regRoot.HiveKey == Registry.LocalMachine) && (!_userIsAdmin))
                     return;
-                if (Keys.Return == e.KeyCode)
-                    toolStripEditEntryValue_Click(this, new EventArgs());
+                switch (e.KeyCode)
+                {
+                    case Keys.Return:
+                        toolStripEditEntryValue_Click(this, new EventArgs());
+                        break;
+                    case Keys.Delete:
+                        toolStripDeleteEntry_Click(this, new EventArgs());
+                        break;
+                    default:
+                        break;
+                }
+              
+                    
             }
             catch (Exception exception)
             {

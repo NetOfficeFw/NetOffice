@@ -80,6 +80,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         SupportInfo[] _outlook;
         SupportInfo[] _powerPoint;
         SupportInfo[] _access;
+        SupportInfo[] _project;
+        SupportInfo[] _visio;
           
         #endregion
 
@@ -99,7 +101,9 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             _word = new SupportInfo[6];
             _outlook = new SupportInfo[6];
             _powerPoint = new SupportInfo[6];
-            _access = new SupportInfo[6];
+            _access = new SupportInfo[6];            
+            _project = new SupportInfo[6];
+            _visio = new SupportInfo[6];
 
             RemoveDelegateTypes();
 
@@ -109,6 +113,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
             SetupSupportInfo(_outlook, "Outlook");
             SetupSupportInfo(_powerPoint, "PowerPoint");
             SetupSupportInfo(_access, "Access");
+            SetupSupportInfo(_project, "MSProject");
+            SetupSupportInfo(_visio, "Visio");
         }
 
         #endregion
@@ -263,7 +269,22 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                 return _access;
             }
         }
-        
+
+        public SupportInfo[] Project
+        {
+            get
+            {
+                return _project;
+            }
+        }
+
+        public SupportInfo[] Visio
+        {
+            get
+            {
+                return _visio;
+            }
+        }
 
         #region Properties
 
@@ -401,10 +422,6 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         {   
             bool result = false;
 
-            if (methodDefinition.FullName.StartsWith("System.Void WordExamplesCS4.Example01"))
-            {
-                Console.WriteLine("");
-            }
             bool isProperty = methodDefinition.IsGetter || methodDefinition.IsSetter;
 
             XElement newMethodNode = new XElement("Method", new XAttribute("Name", methodDefinition.Name), new XAttribute("IsProperty", isProperty.ToString()), new XAttribute("IsPublic", methodDefinition.IsPublic.ToString()), new XElement("FieldSets"), new XElement("LocalFieldSets"));
@@ -904,28 +921,31 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                             string[] dumyByLibrary = _netOfficeSupportTable.GetTypeSupport(targetName);
                             if (null != dumyByLibrary)
                             {
-                                if (targetName == "NetOffice.WordApi.Enums.WdSaveFormat")
-                                {
-                                    int opValue = Convert.ToInt32(prevInstruction.Previous.Operand);
-                                    string enumMemberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(targetName, opValue);
-                                    if (null != enumMemberName)
+                                if(null != prevInstruction.Previous.Operand)
+                                {  
+                                    int temp = 0;
+                                    if (Int32.TryParse(prevInstruction.Previous.Operand.ToString(), out temp))
                                     {
-                                        string[] supportByLibrary = _netOfficeSupportTable.GetEnumMemberSupport(targetName, opValue);
-                                        if (null != supportByLibrary)
+                                        int opValue = Convert.ToInt32(temp);
+                                        string enumMemberName = _netOfficeSupportTable.GetEnumMemberNameFromValue(targetName, opValue);
+                                        if (null != enumMemberName)
                                         {
-                                            XElement newParameter = new XElement("Parameter");
-                                            string componentName = NetOfficeSupportTable.GetLibrary(targetName);
-                                            XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
-                                            supportByNode.Add(new XAttribute("Name", targetName + "." + enumMemberName));
+                                            string[] supportByLibrary = _netOfficeSupportTable.GetEnumMemberSupport(targetName, opValue);
+                                            if (null != supportByLibrary)
+                                            {
+                                                XElement newParameter = new XElement("Parameter");
+                                                string componentName = NetOfficeSupportTable.GetLibrary(targetName);
+                                                XElement supportByNode = new XElement("SupportByLibrary", new XAttribute("Api", componentName));
+                                                supportByNode.Add(new XAttribute("Name", targetName + "." + enumMemberName));
 
-                                            foreach (string item in supportByLibrary)
-                                                supportByNode.Add(new XElement("Version", item));
-                                            newParameter.Add(supportByNode);
-                                            newMethodCallNode.Element("Parameters").Add(newParameter);
+                                                foreach (string item in supportByLibrary)
+                                                    supportByNode.Add(new XElement("Version", item));
+                                                newParameter.Add(supportByNode);
+                                                newMethodCallNode.Element("Parameters").Add(newParameter);
+                                            }
                                         }
                                     }
-                                }
-                                
+                                } 
                             }
                         }
                         prevInstruction = prevInstruction.Previous;
@@ -1016,6 +1036,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         case "PowerPointApi":
                         case "AccessApi":
                         case "OfficeApi":
+                        case "MSProjectApi":
+                        case "VisioApi":
                             return true;
                     }
                 }
@@ -1036,6 +1058,8 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     case "PowerPointApi":
                     case "AccessApi":
                     case "OfficeApi":
+                    case "MSProjectApi":
+                    case "VisioApi":
                         if (!listReferences.Contains(item))
                             listReferences.Add(item);
                         break;

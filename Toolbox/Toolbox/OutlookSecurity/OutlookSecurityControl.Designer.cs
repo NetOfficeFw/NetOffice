@@ -68,12 +68,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMessages.BackColor = System.Drawing.SystemColors.Control;
             this.labelMessages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessages.ForeColor = System.Drawing.Color.White;
             this.labelMessages.Location = new System.Drawing.Point(23, 313);
             this.labelMessages.Multiline = true;
             this.labelMessages.Name = "labelMessages";
             this.labelMessages.ReadOnly = true;
-            this.labelMessages.Size = new System.Drawing.Size(758, 96);
+            this.labelMessages.Size = new System.Drawing.Size(882, 163);
             this.labelMessages.TabIndex = 68;
             this.labelMessages.Text = "<Keine Einträge>";
             this.labelMessages.WordWrap = false;
@@ -81,10 +82,10 @@
             // labelLog
             // 
             this.labelLog.AutoSize = true;
-            this.labelLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLog.Location = new System.Drawing.Point(20, 297);
             this.labelLog.Name = "labelLog";
-            this.labelLog.Size = new System.Drawing.Size(57, 13);
+            this.labelLog.Size = new System.Drawing.Size(61, 16);
             this.labelLog.TabIndex = 67;
             this.labelLog.Text = "Protokoll";
             // 
@@ -93,7 +94,7 @@
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfo.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo.Image")));
-            this.buttonInfo.Location = new System.Drawing.Point(753, 10);
+            this.buttonInfo.Location = new System.Drawing.Point(877, 10);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(28, 28);
             this.buttonInfo.TabIndex = 69;
@@ -115,9 +116,10 @@
             // 
             this.labelCaption.BackColor = System.Drawing.Color.Khaki;
             this.labelCaption.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaption.Location = new System.Drawing.Point(42, 21);
             this.labelCaption.Name = "labelCaption";
-            this.labelCaption.Size = new System.Drawing.Size(265, 14);
+            this.labelCaption.Size = new System.Drawing.Size(337, 15);
             this.labelCaption.TabIndex = 70;
             this.labelCaption.Text = "Unterdrücken Sie die Security Abfrage in Outlook.";
             // 
@@ -133,9 +135,10 @@
             // 
             // labelHint
             // 
+            this.labelHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHint.Location = new System.Drawing.Point(406, 108);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(285, 27);
+            this.labelHint.Size = new System.Drawing.Size(432, 36);
             this.labelHint.TabIndex = 73;
             this.labelHint.Text = "Outlook bietet je nach Version verschiedene Wege an diesen Dialog für Ihr Addin n" +
                 "icht anzuzeigen.";
@@ -143,18 +146,20 @@
             // labelSources
             // 
             this.labelSources.AutoSize = true;
-            this.labelSources.Location = new System.Drawing.Point(406, 144);
+            this.labelSources.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSources.Location = new System.Drawing.Point(406, 152);
             this.labelSources.Name = "labelSources";
-            this.labelSources.Size = new System.Drawing.Size(101, 13);
+            this.labelSources.Size = new System.Drawing.Size(127, 16);
             this.labelSources.TabIndex = 74;
             this.labelSources.Text = "Informationsquellen:";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.Location = new System.Drawing.Point(407, 174);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(340, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(418, 16);
             this.linkLabel1.TabIndex = 75;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "http://msdn.microsoft.com/library/1thd35d7%28en-US,VS.80%29.aspx";
@@ -163,9 +168,10 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.Location = new System.Drawing.Point(407, 200);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(353, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(431, 16);
             this.linkLabel2.TabIndex = 76;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "http://msdn.microsoft.com/en-US/library/zdc263t0%28v=VS.80%29.aspx";
@@ -173,9 +179,10 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.Location = new System.Drawing.Point(407, 227);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(365, 13);
+            this.linkLabel3.Size = new System.Drawing.Size(446, 16);
             this.linkLabel3.TabIndex = 77;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "http://msdn.microsoft.com/en-us/library/aa168346%28v=office.11%29.aspx";
@@ -195,9 +202,10 @@
             this.labelDidYouKnow.AutoSize = true;
             this.labelDidYouKnow.BackColor = System.Drawing.SystemColors.Control;
             this.labelDidYouKnow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelDidYouKnow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDidYouKnow.Location = new System.Drawing.Point(426, 79);
             this.labelDidYouKnow.Name = "labelDidYouKnow";
-            this.labelDidYouKnow.Size = new System.Drawing.Size(117, 13);
+            this.labelDidYouKnow.Size = new System.Drawing.Size(141, 16);
             this.labelDidYouKnow.TabIndex = 78;
             this.labelDidYouKnow.Text = "Wussten Sie schon... ?";
             // 
@@ -233,7 +241,7 @@
             this.Controls.Add(this.labelLog);
             this.Controls.Add(this.checkBoxSupressEnabled);
             this.Name = "OutlookSecurityControl";
-            this.Size = new System.Drawing.Size(800, 429);
+            this.Size = new System.Drawing.Size(924, 496);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

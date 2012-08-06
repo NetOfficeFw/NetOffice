@@ -170,32 +170,54 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _addinItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\PowerPoint\\Addins");
             _addinItems.Add("Access", Registry.LocalMachine, "Software\\Microsoft\\Office\\Access\\Addins");
             _addinItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\Access\\Addins");
+            _addinItems.Add("MSProject", Registry.LocalMachine, "Software\\Microsoft\\Office\\MSProject\\Addins");
+            _addinItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\MSProject\\Addins");
+            _addinItems.Add("Visio", Registry.LocalMachine, "Software\\Microsoft\\Office\\Visio\\Addins");
+            _addinItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\Visio\\Addins");
 
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Excel\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Word\\Resiliency\\DisabledItems");
             _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Word\\Resiliency\\DisabledItems");
             _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Word\\Resiliency\\DisabledItems");
             _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Word\\Resiliency\\DisabledItems");
             _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Word\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Word", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Word\\Resiliency\\DisabledItems");
             _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Outlook", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Outlook\\Resiliency\\DisabledItems");
+            _disabledItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Outlook\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\9.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\10.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\11.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\12.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Visio\\Resiliency\\DisabledItems");
+
 
             // 64 Bit
             _addinItems.Add("Excel", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Excel\\Addins");
@@ -208,6 +230,11 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _addinItems.Add("PowerPoint", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\PowerPoint\\Addins");
             _addinItems.Add("Access", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Access\\Addins");
             _addinItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Access\\Addins");
+            _addinItems.Add("MSProject", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\MSProject\\Addins");
+            _addinItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\MSProject\\Addins");
+            _addinItems.Add("Visio", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Visio\\Addins");
+            _addinItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Visio\\Addins");
+
 
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Excel\\Resiliency\\DisabledItems");
@@ -234,6 +261,16 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Access\\Resiliency\\DisabledItems");
             _disabledItems.Add("Access", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Access\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\MSProject\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\11.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\12.0\\Visio\\Resiliency\\DisabledItems");
+            _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\14.0\\Visio\\Resiliency\\DisabledItems");
 
             StartWatch();
         }

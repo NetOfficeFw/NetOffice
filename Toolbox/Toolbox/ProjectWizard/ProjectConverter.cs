@@ -12,29 +12,32 @@ namespace NetOffice.DeveloperToolbox
 {
     static class ProjectConverter
     {
+        static List<IWizardControl> _listControls;
         static ProjectOptions _projectOptions;
-        static List<Control> _listControls;
 
-        public static string ConvertProjectTemplate(ProjectOptions projectOptions, List<Control> listControls)
+        public static string ConvertProjectTemplate(List<IWizardControl> listControls)
         {
-            _projectOptions = projectOptions;
             _listControls = listControls;
-
-            if (!Directory.Exists(projectOptions.Folder))
-                    Directory.CreateDirectory(projectOptions.Folder);
+            _projectOptions = new ProjectOptions(listControls);
+             
             string templateFolder = Path.Combine(Application.StartupPath, "Project Wizard\\Templates");
             string assemblyFolder = Path.Combine(Application.StartupPath, "Project Wizard\\NetOffice Assemblies");
-              
-            string fullTemplatePath = Path.Combine(templateFolder, GetTargetTemplate(projectOptions));
+
+            string fullTemplatePath = Path.Combine(templateFolder, GetTargetTemplate(_projectOptions));
             if (!File.Exists(fullTemplatePath))
                 throw new System.IO.FileNotFoundException(string.Format("File not found:{0}", fullTemplatePath));
 
-            string targetFolder = Path.Combine(projectOptions.Folder, GetProjectName());
-            targetFolder = Path.Combine(targetFolder, GetProjectName());
+            string targetFolder = Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName);
+            targetFolder = Path.Combine(targetFolder, _projectOptions.AssemblyName);
 
-            if (Directory.Exists(Path.Combine(projectOptions.Folder, GetProjectName())))
-                Directory.Delete(Path.Combine(projectOptions.Folder, GetProjectName()), true);
-            Directory.CreateDirectory(Path.Combine(projectOptions.Folder, GetProjectName()));
+            if (!Directory.Exists(targetFolder))
+                Directory.CreateDirectory(targetFolder);
+            else
+                throw new InvalidOperationException(ProjectWizardControl.CurrentLanguageID == 1031 ? "Der angegebene Ordner existiert bereits." : "Directory already exists.");
+
+            if (Directory.Exists(Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName)))
+                Directory.Delete(Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName), true);
+            Directory.CreateDirectory(Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName));
             
             if (Directory.Exists(targetFolder))
                 Directory.Delete(targetFolder, true);
@@ -47,16 +50,36 @@ namespace NetOffice.DeveloperToolbox
             DoReplace(targetFolder);
             CopyAssemblies(GetAssemblies(), targetFolder, assemblyFolder);
             string projectGuid = ValidateProjectFile(targetFolder);
-            CreateSolutionFile(Path.Combine(projectOptions.Folder, GetProjectName()), projectGuid);
-            return Path.Combine(projectOptions.Folder, GetProjectName());
+            CreateSolutionFile(Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName), projectGuid);
+            CreateTaskPane(targetFolder);
+            return Path.Combine(_projectOptions.ProjectFolder, _projectOptions.AssemblyName);
+        }
+
+        static void CreateTaskPane(string targetFolder)
+        {
+            if (!_projectOptions.UseTaskPane)
+                return;
+            string file = CodeTemplates.TaskPane(_projectOptions.Language).Replace("$namespace$", _projectOptions.AssemblyName);
+            string fileDesigner = CodeTemplates.TaskPaneDesigner(_projectOptions.Language).Replace("$namespace$", _projectOptions.AssemblyName);
+
+            if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+            {
+                File.AppendAllText(Path.Combine(targetFolder, "TaskPaneControl.cs"), file, Encoding.UTF8);
+                File.AppendAllText(Path.Combine(targetFolder, "TaskPaneControl.Designer.cs"), fileDesigner, Encoding.UTF8);
+            }
+            else
+            {
+                File.AppendAllText(Path.Combine(targetFolder, "TaskPaneControl.vb"), file, Encoding.UTF8);
+                File.AppendAllText(Path.Combine(targetFolder, "TaskPaneControl.Designer.vb"), fileDesigner, Encoding.UTF8);
+            }
         }
 
         static void CreateSolutionFile(string targetFolder, string projectGuid)
         {
             string solutionContent = CodeTemplates.SolutionFile(_projectOptions.Language, (_projectOptions.IDE == IDE.VS2010));
-            solutionContent = solutionContent.Replace("%ProjectName%", GetProjectName());
+            solutionContent = solutionContent.Replace("%ProjectName%", _projectOptions.AssemblyName);
             solutionContent = solutionContent.Replace("%ProjectGUID%", projectGuid);
-            string filePath = Path.Combine(targetFolder, GetProjectName() + ".sln");
+            string filePath = Path.Combine(targetFolder, _projectOptions.AssemblyName + ".sln");
             File.AppendAllText(filePath, solutionContent, Encoding.UTF8);
         }
 
@@ -70,7 +93,7 @@ namespace NetOffice.DeveloperToolbox
             {
                 XDocument document = XDocument.Load(file);
                 XElement rootNode = (document.FirstNode as XElement);
-                rootNode.Attribute("ToolsVersion").Value = _projectOptions.NetRuntime == "4.0" ? "4.0" : "3.5";
+                rootNode.Attribute("ToolsVersion").Value = Convert.ToString(_projectOptions.NetRuntime == 4.0 ? 4.0 : 3.5);
                 var properties = (from a in rootNode.Elements() select a);
 
                 foreach (var property in properties)
@@ -97,8 +120,8 @@ namespace NetOffice.DeveloperToolbox
             {
                 string path = Path.GetDirectoryName(file);
                 string fileName = Path.GetFileName(file);
-             
-                string newFileName = GetProjectName() + extension;
+
+                string newFileName = _projectOptions.AssemblyName + extension;
                 File.Move(file, Path.Combine(path, newFileName));
             }
         }
@@ -119,7 +142,7 @@ namespace NetOffice.DeveloperToolbox
             Directory.CreateDirectory(targetAssemblyFolder);
             foreach (string sourceAssembly in assemblies)
             {
-                string fullSourcePathAssembly = Path.Combine(assemblyFolder, _projectOptions.NetRuntime + "\\" + sourceAssembly + ".dll");
+                string fullSourcePathAssembly = Path.Combine(assemblyFolder, _projectOptions.NetRuntime.ToString("0.0").Replace(",",".") + "\\" + sourceAssembly + ".dll");
                 string fullSourcePathDocuFile = Path.Combine(assemblyFolder, "Documentation\\" + sourceAssembly + ".xml");
 
                 string fullTargetPathAssembly = Path.Combine(targetAssemblyFolder, sourceAssembly + ".dll");
@@ -141,8 +164,17 @@ namespace NetOffice.DeveloperToolbox
             foreach (string file in files)
             {
                 string fileContent = File.ReadAllText(file, Encoding.UTF8);
-                fileContent = fileContent.Replace("$safeprojectname$", GetProjectName());
-                fileContent = fileContent.Replace("$targetframeworkversion$", GetFrameworkVersion());
+                fileContent = fileContent.Replace("$safeprojectname$", _projectOptions.AssemblyName);
+
+                if (_projectOptions.UseNetRuntimeClient)
+                {
+                    fileContent = fileContent.Replace("$targetframeworkversion$", _projectOptions.NetRuntime.ToString("0.0").Replace(",", "."));
+                    string target = "<TargetFrameworkVersion>v" + _projectOptions.NetRuntime.ToString("0.0").Replace(",", ".") + "</TargetFrameworkVersion>";
+                    fileContent = fileContent.Replace(target, target + Environment.NewLine + "    <TargetFrameworkProfile>Client</TargetFrameworkProfile>");
+                }
+                else
+                    fileContent = fileContent.Replace("$targetframeworkversion$", _projectOptions.NetRuntime.ToString("0.0").Replace(",", "."));
+
                 fileContent = fileContent.Replace("$assemblyReferences$", GetAssemblyReferences());
                 fileContent = fileContent.Replace("$usingItems$", GetUsings());
                 fileContent = fileContent.Replace("$randomGuid$", safeRandomGuid);
@@ -151,7 +183,7 @@ namespace NetOffice.DeveloperToolbox
 
                 if (IsAddinProject())
                 {
-                    if (IsRibbonUIEnabled())
+                    if (_projectOptions.UseRibbonUI)
                     {
                         fileContent = fileContent.Replace("$ribbonFileReference$", CodeTemplates.RibbonReference);
                         fileContent = fileContent.Replace("$ribbonImplement$", CodeTemplates.RibbonImplement(_projectOptions.Language));
@@ -167,7 +199,7 @@ namespace NetOffice.DeveloperToolbox
                         fileContent = fileContent.Replace("$helperCode$", "");
                     }
 
-                    if (IsClassicUIEnabled())
+                    if (_projectOptions.UseClassicUI)
                     {
                         fileContent = fileContent.Replace("$classicUICreateCall$", CodeTemplates.ClassicUICall(_projectOptions.Language));
                         fileContent = fileContent.Replace("$classicUIRemoveCall$", CodeTemplates.ClassicUIRemoveCall(_projectOptions.Language));
@@ -180,11 +212,28 @@ namespace NetOffice.DeveloperToolbox
                         fileContent = fileContent.Replace("$classicUICreateRemoveMethod$", "");
                     }
 
+                    if (_projectOptions.UseTaskPane)
+                    {
+                        fileContent = fileContent.Replace("$TaskPaneImplement$", _projectOptions.Language == ProgrammingLanguage.CSharp ? ", Office.ICustomTaskPaneConsumer" : ", Office.ICustomTaskPaneConsumer");
+                        fileContent = fileContent.Replace("$TaskPaneField$", _projectOptions.Language == ProgrammingLanguage.CSharp ? "        private static TaskPaneControl _taskPaneControl;\r\n" : "\r\n    Shared _taskPaneControl As TaskPaneControl");
+                        fileContent = fileContent.Replace("$TaskPaneMethod$", CodeTemplates.TaskPaneMethod(_projectOptions.Language));
+                        if(_projectOptions.Language == ProgrammingLanguage.CSharp)
+                            fileContent = fileContent.Replace("<Compile Include=\"Addin.cs\" />\r\n",  "<Compile Include=\"Addin.cs\" />" + "\r\n" + CodeTemplates.TaskPaneCompile(_projectOptions.Language));
+                        else
+                            fileContent = fileContent.Replace("<Compile Include=\"Addin.vb\" />\r\n", "<Compile Include=\"Addin.vb\" />" + "\r\n" + CodeTemplates.TaskPaneCompile(_projectOptions.Language));
+                    }
+                    else
+                    {
+                        fileContent = fileContent.Replace("$TaskPaneImplement$","");
+                        fileContent = fileContent.Replace("$TaskPaneField$", "");
+                        fileContent = fileContent.Replace("$TaskPaneMethod$", "");
+                    }
+
                     fileContent = fileContent.Replace("$registerCode$", GetRegisterCode());
                     fileContent = fileContent.Replace("$unregisterCode$", GetUnRegisterCode());
 
-                    if (GetSimpleAssemblies().Length == 1)
-                        fileContent = fileContent.Replace("$ApplicationField$", CodeTemplates.AppFieldCode(_projectOptions.Language).Replace("%OfficeApp%", GetSimpleAssemblies()[0]));
+                    if (_projectOptions.OfficeApps.Length == 1)
+                        fileContent = fileContent.Replace("$ApplicationField$", CodeTemplates.AppFieldCode(_projectOptions.Language).Replace("%OfficeApp%", _projectOptions.OfficeApps[0]));
                     else
                     {
                         if (_projectOptions.Language == ProgrammingLanguage.CSharp)
@@ -193,8 +242,8 @@ namespace NetOffice.DeveloperToolbox
                             fileContent = fileContent.Replace("$ApplicationField$", "\tDim _application As COMObject\r\n");
                     }
 
-                    if (GetSimpleAssemblies().Length == 1)
-                        fileContent = fileContent.Replace("$ApplicationConstruction$", CodeTemplates.AppConstructionCode(_projectOptions.Language).Replace("%OfficeApp%", GetSimpleAssemblies()[0]));
+                    if (_projectOptions.OfficeApps.Length == 1)
+                        fileContent = fileContent.Replace("$ApplicationConstruction$", CodeTemplates.AppConstructionCode(_projectOptions.Language).Replace("%OfficeApp%", _projectOptions.OfficeApps[0]));
                     else
                     {
                         if (_projectOptions.Language == ProgrammingLanguage.CSharp)
@@ -213,19 +262,6 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
-        private static string GetHiveKey()
-        {
-            foreach (Control item in _listControls)
-            {
-                LoadControl loadControl = item as LoadControl;
-                if (null != loadControl)
-                {
-                    return loadControl.Hivekey;
-                }
-            }
-            throw new ArgumentOutOfRangeException("LoadControl");
-        }
-
         private static string GetRegisterCode()
         {
             string result = "";
@@ -234,12 +270,12 @@ namespace NetOffice.DeveloperToolbox
                 HostControl hostControl = item as HostControl;
                 if (null != hostControl)
                 {
-                    List<string> hostApps = hostControl.HostApplications;
+                    List<string> hostApps = ToList(_projectOptions.OfficeApps);
                     foreach (string app in hostApps)
                     {
                         string registerCode = CodeTemplates.RegisterCode(_projectOptions.Language);
-                        registerCode = registerCode.Replace("%OfficeApp%", app).Replace("%HiveKey%", GetHiveKey()).Replace("%OfficAddinKey%", GetOfficeAddinKey(app));
-                        registerCode = registerCode.Replace("%Name%", GetProjectName()).Replace("%Description%", GetProjectDescription()).Replace("%LoadBehavior%", GetLoadBehaviour());
+                        registerCode = registerCode.Replace("%OfficeApp%", app).Replace("%HiveKey%", _projectOptions.RegistryKey).Replace("%OfficAddinKey%", GetOfficeAddinKey(app));
+                        registerCode = registerCode.Replace("%Name%", _projectOptions.AssemblyName).Replace("%Description%", _projectOptions.AssemblyDescription).Replace("%LoadBehavior%", GetLoadBehaviour());
                         result += registerCode;
                     }
                     return result;
@@ -256,11 +292,11 @@ namespace NetOffice.DeveloperToolbox
                 HostControl hostControl = item as HostControl;
                 if (null != hostControl)
                 {
-                    List<string> hostApps = hostControl.HostApplications;
+                    List<string> hostApps = ToList(_projectOptions.OfficeApps);
                     foreach (string app in hostApps)
                     {
                         string unRegisterCode = CodeTemplates.UnRegisterCode(_projectOptions.Language);
-                        unRegisterCode = unRegisterCode.Replace("%HiveKey%", GetHiveKey()).Replace("%OfficAddinKey%", GetOfficeAddinKey(app));
+                        unRegisterCode = unRegisterCode.Replace("%HiveKey%", _projectOptions.RegistryKey).Replace("%OfficAddinKey%", GetOfficeAddinKey(app));
                         result += unRegisterCode;
                     }
                     return result;
@@ -271,12 +307,12 @@ namespace NetOffice.DeveloperToolbox
 
         private static string GetOfficeAddinKey(string officeApp)
         {
-            return "Software\\Microsoft\\Office\\" + officeApp + "\\Addins\\" + GetProjectName() + ".Addin";
+            return "Software\\Microsoft\\Office\\" + officeApp + "\\Addins\\" + _projectOptions.AssemblyName + ".Addin";
         }
 
         private static void DeleteNonUsedAddinFiles(string targetFolder)
         {
-            if (!IsRibbonUIEnabled())
+            if (!_projectOptions.UseRibbonUI)
             {
                 string targetFile = Path.Combine(targetFolder, "RibbonUI.xml");
                 if (File.Exists(targetFile))
@@ -284,32 +320,7 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
-        private static bool IsClassicUIEnabled()
-        {
-            foreach (Control item in _listControls)
-            {
-                GuiControl guiControl = item as GuiControl;
-                if (null != guiControl)
-                {
-                    return guiControl.ClassicUIEnabled;
-                }
-            }
-            throw new ArgumentOutOfRangeException("GuiControl");
-        }
-
-        private static bool IsRibbonUIEnabled()
-        {
-            foreach (Control item in _listControls)
-            {
-                GuiControl guiControl = item as GuiControl;
-                if (null != guiControl)
-                {
-                    return guiControl.RibbonUIEnabled;
-                }
-            }
-            throw new ArgumentOutOfRangeException("GuiControl");
-        }
-
+  
         private static bool IsAddinProject()
         {
             return (_projectOptions.ProjectType == ProjectType.Addin);
@@ -341,20 +352,6 @@ namespace NetOffice.DeveloperToolbox
             throw new ArgumentOutOfRangeException("NameControl");
         }
 
-        private static string[] GetSimpleAssemblies()
-        {
-            foreach (Control item in _listControls)
-            {
-                HostControl hostControl = item as HostControl;
-                if (null != hostControl)
-                {
-                    List<string> hostApps = hostControl.HostApplications;
-                    return hostApps.ToArray();
-                }
-            }
-            throw new ArgumentOutOfRangeException("HostControl");
-        }
-
         private static string[] GetAssemblies()
         {
             foreach (Control item in _listControls)
@@ -362,7 +359,7 @@ namespace NetOffice.DeveloperToolbox
                 HostControl hostControl = item as HostControl;
                 if (null != hostControl)
                 {
-                    List<string> hostApps = hostControl.HostApplications;
+                    List<string> hostApps = ToList(_projectOptions.OfficeApps);
                     AddDependenciesToList(hostApps);
                     for (int i = 0; i < hostApps.Count; i++)
                         hostApps[i] = hostApps[i] + "Api";
@@ -371,6 +368,14 @@ namespace NetOffice.DeveloperToolbox
                 }
             }
             throw new ArgumentOutOfRangeException("HostControl");
+        }
+
+        private static List<string> ToList(string[] arr)
+        {
+            List<string> list = new List<string>();
+            foreach (var item in arr)
+                list.Add(item);
+            return list;
         }
 
         private static string GetUsings()
@@ -451,6 +456,13 @@ namespace NetOffice.DeveloperToolbox
                         AddToList(addList, "MSDATASRC");
                         AddToList(addList, "MSComctlLib");
                         break;
+                     case "MSProject":
+                        break;
+                     case "Visio":
+                        AddToList(addList, "Office");
+                        AddToList(addList, "VBIDE");
+                        AddToList(addList, "MSHTML");
+                        break;
                     default:
                         break;
                 }
@@ -471,38 +483,7 @@ namespace NetOffice.DeveloperToolbox
 
             list.Add(name);
         }
-
-        private static string GetFrameworkVersion()
-        {
-            return _projectOptions.NetRuntime;
-        }
-
-        private static string GetProjectDescription()
-        {
-            foreach (Control item in _listControls)
-            {
-                NameControl nameControl = item as NameControl;
-                if (null != nameControl)
-                {
-                    return nameControl.AssemblyDescription;
-                }
-            }
-            throw new ArgumentOutOfRangeException("NameControl");
-        }
-
-        private static string GetProjectName()
-        {
-            foreach (Control item in _listControls)
-            {
-                NameControl nameControl = item as NameControl;
-                if (null != nameControl)
-                {
-                    return nameControl.AssemblyName;
-                }
-            }
-            throw new ArgumentOutOfRangeException("NameControl");
-        }
-
+         
         private static string GetTargetTemplate(ProjectOptions projectOptions)
         {
             switch (projectOptions.Language)

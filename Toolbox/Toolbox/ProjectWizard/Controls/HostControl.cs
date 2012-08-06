@@ -35,6 +35,10 @@ namespace NetOffice.DeveloperToolbox
                     list.Add("PowerPoint");
                 if (checkBoxAccess.Checked)
                     list.Add("Access");
+                if (checkBoxProject.Checked)
+                    list.Add("Project");
+                if (checkBoxVisio.Checked)
+                    list.Add("Visio");                
                 return list;
             }
         }
@@ -159,12 +163,16 @@ namespace NetOffice.DeveloperToolbox
             _settings.FirstChild.AppendChild(_settings.CreateElement("Outlook"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("PowerPoint"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("Access"));
+            _settings.FirstChild.AppendChild(_settings.CreateElement("Project"));
+            _settings.FirstChild.AppendChild(_settings.CreateElement("Visio"));
 
             _settings.FirstChild.ChildNodes.Item(0).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(1).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(2).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(3).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(4).Attributes.Append(_settings.CreateAttribute("Selected"));
+            _settings.FirstChild.ChildNodes.Item(5).Attributes.Append(_settings.CreateAttribute("Selected"));
+            _settings.FirstChild.ChildNodes.Item(6).Attributes.Append(_settings.CreateAttribute("Selected"));
         }
 
         #endregion

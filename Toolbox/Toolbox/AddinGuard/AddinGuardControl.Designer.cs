@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Excel");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Word");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Outlook");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("PowerPoint");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Access");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Excel");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Word");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Outlook");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PowerPoint");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Access");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("MSProject");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Visio");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddinGuardControl));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeViewRegistry = new System.Windows.Forms.TreeView();
@@ -48,6 +50,14 @@
             this.labelTrayhint = new System.Windows.Forms.Label();
             this.labelMessageCaption = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panelDeactivatedElements = new System.Windows.Forms.Panel();
+            this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
+            this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
+            this.labelDisabledRegistryValue = new System.Windows.Forms.Label();
+            this.labelOfficeProduct = new System.Windows.Forms.Label();
+            this.labelRegistryKey = new System.Windows.Forms.Label();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.labelOfficeProductVersion = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
             this.pictureBoxNoAdmin = new System.Windows.Forms.PictureBox();
@@ -62,14 +72,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.labelClickInfo = new System.Windows.Forms.Label();
             this.labelInfoArea = new System.Windows.Forms.Label();
-            this.panelDeactivatedElements = new System.Windows.Forms.Panel();
-            this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
-            this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
-            this.labelDisabledRegistryValue = new System.Windows.Forms.Label();
-            this.labelOfficeProduct = new System.Windows.Forms.Label();
-            this.labelRegistryKey = new System.Windows.Forms.Label();
-            this.labelFilePath = new System.Windows.Forms.Label();
-            this.labelOfficeProductVersion = new System.Windows.Forms.Label();
             this.labelRegistryValues = new System.Windows.Forms.Label();
             this.dataGridViewValues = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
@@ -98,19 +100,20 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.imageListEntries = new System.Windows.Forms.ImageList(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelDeactivatedElements.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoAdmin)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelRegistryValues.SuspendLayout();
             this.panelInfos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panelDeactivatedElements.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -141,11 +144,11 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
-            this.splitContainer1.Panel2.Controls.Add(this.panelDeactivatedElements);
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
+            this.splitContainer1.Panel2.Controls.Add(this.panelDeactivatedElements);
             this.splitContainer1.Panel2.Controls.Add(this.panelRegistryValues);
-            this.splitContainer1.Size = new System.Drawing.Size(797, 375);
-            this.splitContainer1.SplitterDistance = 263;
+            this.splitContainer1.Size = new System.Drawing.Size(921, 442);
+            this.splitContainer1.SplitterDistance = 303;
             this.splitContainer1.TabIndex = 1;
             // 
             // treeViewRegistry
@@ -154,29 +157,36 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewRegistry.HideSelection = false;
             this.treeViewRegistry.ImageIndex = 0;
             this.treeViewRegistry.ImageList = this.imageListRegistry;
             this.treeViewRegistry.Location = new System.Drawing.Point(3, 3);
             this.treeViewRegistry.Name = "treeViewRegistry";
-            treeNode6.Name = "Excel";
-            treeNode6.Text = "Excel";
-            treeNode7.Name = "Word";
-            treeNode7.Text = "Word";
-            treeNode8.Name = "Outlook";
-            treeNode8.Text = "Outlook";
-            treeNode9.Name = "PowerPoint";
-            treeNode9.Text = "PowerPoint";
-            treeNode10.Name = "Access";
-            treeNode10.Text = "Access";
+            treeNode8.Name = "Excel";
+            treeNode8.Text = "Excel";
+            treeNode9.Name = "Word";
+            treeNode9.Text = "Word";
+            treeNode10.Name = "Outlook";
+            treeNode10.Text = "Outlook";
+            treeNode11.Name = "PowerPoint";
+            treeNode11.Text = "PowerPoint";
+            treeNode12.Name = "Access";
+            treeNode12.Text = "Access";
+            treeNode13.Name = "MSProject";
+            treeNode13.Text = "MSProject";
+            treeNode14.Name = "Visio";
+            treeNode14.Text = "Visio";
             this.treeViewRegistry.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
             treeNode8,
             treeNode9,
-            treeNode10});
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14});
             this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.Size = new System.Drawing.Size(256, 368);
+            this.treeViewRegistry.Size = new System.Drawing.Size(296, 435);
             this.treeViewRegistry.TabIndex = 36;
             this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
             this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
@@ -205,7 +215,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(1, 96);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(524, 140);
+            this.panel5.Size = new System.Drawing.Size(608, 140);
             this.panel5.TabIndex = 70;
             // 
             // pictureBox9
@@ -224,12 +234,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMessages.BackColor = System.Drawing.SystemColors.Control;
             this.labelMessages.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.labelMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessages.ForeColor = System.Drawing.Color.White;
             this.labelMessages.Location = new System.Drawing.Point(8, 88);
             this.labelMessages.Multiline = true;
             this.labelMessages.Name = "labelMessages";
             this.labelMessages.ReadOnly = true;
-            this.labelMessages.Size = new System.Drawing.Size(503, 42);
+            this.labelMessages.Size = new System.Drawing.Size(587, 42);
             this.labelMessages.TabIndex = 66;
             this.labelMessages.Text = "<Keine>";
             this.labelMessages.WordWrap = false;
@@ -246,9 +257,10 @@
             // radioButtonTray
             // 
             this.radioButtonTray.AutoSize = true;
-            this.radioButtonTray.Location = new System.Drawing.Point(111, 10);
+            this.radioButtonTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTray.Location = new System.Drawing.Point(116, 10);
             this.radioButtonTray.Name = "radioButtonTray";
-            this.radioButtonTray.Size = new System.Drawing.Size(64, 17);
+            this.radioButtonTray.Size = new System.Drawing.Size(75, 20);
             this.radioButtonTray.TabIndex = 47;
             this.radioButtonTray.Text = "TrayInfo";
             this.radioButtonTray.UseVisualStyleBackColor = true;
@@ -257,9 +269,10 @@
             // 
             this.radioButtonMsgBox.AutoSize = true;
             this.radioButtonMsgBox.Checked = true;
+            this.radioButtonMsgBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMsgBox.Location = new System.Drawing.Point(10, 9);
             this.radioButtonMsgBox.Name = "radioButtonMsgBox";
-            this.radioButtonMsgBox.Size = new System.Drawing.Size(86, 17);
+            this.radioButtonMsgBox.Size = new System.Drawing.Size(106, 20);
             this.radioButtonMsgBox.TabIndex = 46;
             this.radioButtonMsgBox.TabStop = true;
             this.radioButtonMsgBox.Text = "MessageBox";
@@ -269,10 +282,10 @@
             // labelLastMessages
             // 
             this.labelLastMessages.AutoSize = true;
-            this.labelLastMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLastMessages.Location = new System.Drawing.Point(3, 67);
             this.labelLastMessages.Name = "labelLastMessages";
-            this.labelLastMessages.Size = new System.Drawing.Size(108, 13);
+            this.labelLastMessages.Size = new System.Drawing.Size(113, 16);
             this.labelLastMessages.TabIndex = 61;
             this.labelLastMessages.Text = "Letzte Meldungen";
             // 
@@ -282,20 +295,20 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTrayhint.BackColor = System.Drawing.Color.Khaki;
             this.labelTrayhint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelTrayhint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrayhint.Location = new System.Drawing.Point(230, 20);
             this.labelTrayhint.Name = "labelTrayhint";
-            this.labelTrayhint.Size = new System.Drawing.Size(292, 40);
+            this.labelTrayhint.Size = new System.Drawing.Size(376, 34);
             this.labelTrayhint.TabIndex = 49;
-            this.labelTrayhint.Text = "Stellen Sie sicher das TrayBallons auf ihrem System nicht deaktiviert sind wenn S" +
-                "ie sich via TrayInfo benachrichtigen lassen möchten.";
+            this.labelTrayhint.Text = "Stellen Sie sicher das TrayBallons auf ihrem System nicht deaktiviert sind.";
             // 
             // labelMessageCaption
             // 
             this.labelMessageCaption.AutoSize = true;
-            this.labelMessageCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessageCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessageCaption.Location = new System.Drawing.Point(3, 4);
             this.labelMessageCaption.Name = "labelMessageCaption";
-            this.labelMessageCaption.Size = new System.Drawing.Size(55, 13);
+            this.labelMessageCaption.Size = new System.Drawing.Size(67, 16);
             this.labelMessageCaption.TabIndex = 41;
             this.labelMessageCaption.Text = "Meldung";
             // 
@@ -307,168 +320,8 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Location = new System.Drawing.Point(211, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 40);
+            this.label3.Size = new System.Drawing.Size(136, 33);
             this.label3.TabIndex = 71;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.labelNoAdminHint);
-            this.panel4.Controls.Add(this.pictureBoxNoAdmin);
-            this.panel4.Controls.Add(this.checkBoxRestoreLoadBehavior);
-            this.panel4.Controls.Add(this.labelStatusCaption);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.labelNoAdminHintIcon);
-            this.panel4.Location = new System.Drawing.Point(1, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(524, 76);
-            this.panel4.TabIndex = 69;
-            // 
-            // labelNoAdminHint
-            // 
-            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
-            this.labelNoAdminHint.Location = new System.Drawing.Point(230, 47);
-            this.labelNoAdminHint.Name = "labelNoAdminHint";
-            this.labelNoAdminHint.Size = new System.Drawing.Size(257, 26);
-            this.labelNoAdminHint.TabIndex = 68;
-            this.labelNoAdminHint.Text = "Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addin" +
-                "s verfügbar.";
-            this.labelNoAdminHint.Visible = false;
-            // 
-            // pictureBoxNoAdmin
-            // 
-            this.pictureBoxNoAdmin.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxNoAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoAdmin.Image")));
-            this.pictureBoxNoAdmin.Location = new System.Drawing.Point(211, 47);
-            this.pictureBoxNoAdmin.Name = "pictureBoxNoAdmin";
-            this.pictureBoxNoAdmin.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxNoAdmin.TabIndex = 67;
-            this.pictureBoxNoAdmin.TabStop = false;
-            this.pictureBoxNoAdmin.Visible = false;
-            // 
-            // checkBoxRestoreLoadBehavior
-            // 
-            this.checkBoxRestoreLoadBehavior.AutoSize = true;
-            this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
-            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(213, 29);
-            this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
-            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(284, 17);
-            this.checkBoxRestoreLoadBehavior.TabIndex = 49;
-            this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
-            this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
-            this.checkBoxRestoreLoadBehavior.CheckedChanged += new System.EventHandler(this.checkBoxRestoreLoadBehavior_CheckedChanged);
-            // 
-            // labelStatusCaption
-            // 
-            this.labelStatusCaption.AutoSize = true;
-            this.labelStatusCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusCaption.Location = new System.Drawing.Point(3, 3);
-            this.labelStatusCaption.Name = "labelStatusCaption";
-            this.labelStatusCaption.Size = new System.Drawing.Size(43, 13);
-            this.labelStatusCaption.TabIndex = 58;
-            this.labelStatusCaption.Text = "Status";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.radioButtonActivate);
-            this.panel1.Controls.Add(this.radioButtonDeactivate);
-            this.panel1.Location = new System.Drawing.Point(6, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 36);
-            this.panel1.TabIndex = 64;
-            // 
-            // radioButtonActivate
-            // 
-            this.radioButtonActivate.AutoSize = true;
-            this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
-            this.radioButtonActivate.Name = "radioButtonActivate";
-            this.radioButtonActivate.Size = new System.Drawing.Size(63, 17);
-            this.radioButtonActivate.TabIndex = 57;
-            this.radioButtonActivate.Text = "Aktiviert";
-            this.radioButtonActivate.UseVisualStyleBackColor = true;
-            this.radioButtonActivate.CheckedChanged += new System.EventHandler(this.radioButtonActivate_CheckedChanged);
-            // 
-            // radioButtonDeactivate
-            // 
-            this.radioButtonDeactivate.AutoSize = true;
-            this.radioButtonDeactivate.Checked = true;
-            this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
-            this.radioButtonDeactivate.Name = "radioButtonDeactivate";
-            this.radioButtonDeactivate.Size = new System.Drawing.Size(76, 17);
-            this.radioButtonDeactivate.TabIndex = 53;
-            this.radioButtonDeactivate.TabStop = true;
-            this.radioButtonDeactivate.Text = "Deaktiviert";
-            this.radioButtonDeactivate.UseVisualStyleBackColor = true;
-            // 
-            // labelNoAdminHintIcon
-            // 
-            this.labelNoAdminHintIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Khaki;
-            this.labelNoAdminHintIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelNoAdminHintIcon.Location = new System.Drawing.Point(211, 47);
-            this.labelNoAdminHintIcon.Name = "labelNoAdminHintIcon";
-            this.labelNoAdminHintIcon.Size = new System.Drawing.Size(52, 26);
-            this.labelNoAdminHintIcon.TabIndex = 72;
-            // 
-            // panelRegistryValues
-            // 
-            this.panelRegistryValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelRegistryValues.Controls.Add(this.panelInfos);
-            this.panelRegistryValues.Controls.Add(this.labelRegistryValues);
-            this.panelRegistryValues.Controls.Add(this.dataGridViewValues);
-            this.panelRegistryValues.Location = new System.Drawing.Point(2, 244);
-            this.panelRegistryValues.Name = "panelRegistryValues";
-            this.panelRegistryValues.Size = new System.Drawing.Size(522, 126);
-            this.panelRegistryValues.TabIndex = 67;
-            this.panelRegistryValues.Visible = false;
-            // 
-            // panelInfos
-            // 
-            this.panelInfos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelInfos.Controls.Add(this.pictureBox8);
-            this.panelInfos.Controls.Add(this.labelClickInfo);
-            this.panelInfos.Controls.Add(this.labelInfoArea);
-            this.panelInfos.Location = new System.Drawing.Point(1, 36);
-            this.panelInfos.Name = "panelInfos";
-            this.panelInfos.Size = new System.Drawing.Size(292, 209);
-            this.panelInfos.TabIndex = 72;
-            this.panelInfos.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(12, 37);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox8.TabIndex = 69;
-            this.pictureBox8.TabStop = false;
-            // 
-            // labelClickInfo
-            // 
-            this.labelClickInfo.AutoSize = true;
-            this.labelClickInfo.Location = new System.Drawing.Point(34, 40);
-            this.labelClickInfo.Name = "labelClickInfo";
-            this.labelClickInfo.Size = new System.Drawing.Size(392, 13);
-            this.labelClickInfo.TabIndex = 63;
-            this.labelClickInfo.Text = "Klicken Sie auf ein Addin oder ein deaktiviertes Element für weitere Informatione" +
-                "n.";
-            // 
-            // labelInfoArea
-            // 
-            this.labelInfoArea.AutoSize = true;
-            this.labelInfoArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoArea.Location = new System.Drawing.Point(3, 1);
-            this.labelInfoArea.Name = "labelInfoArea";
-            this.labelInfoArea.Size = new System.Drawing.Size(118, 13);
-            this.labelInfoArea.TabIndex = 62;
-            this.labelInfoArea.Text = "Informationsbereich";
             // 
             // panelDeactivatedElements
             // 
@@ -484,7 +337,7 @@
             this.panelDeactivatedElements.Controls.Add(this.labelOfficeProductVersion);
             this.panelDeactivatedElements.Location = new System.Drawing.Point(7, 86);
             this.panelDeactivatedElements.Name = "panelDeactivatedElements";
-            this.panelDeactivatedElements.Size = new System.Drawing.Size(499, 172);
+            this.panelDeactivatedElements.Size = new System.Drawing.Size(583, 239);
             this.panelDeactivatedElements.TabIndex = 68;
             this.panelDeactivatedElements.Visible = false;
             // 
@@ -552,13 +405,178 @@
             this.labelOfficeProductVersion.TabIndex = 63;
             this.labelOfficeProductVersion.Text = "Office Produkt Version";
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.labelNoAdminHint);
+            this.panel4.Controls.Add(this.pictureBoxNoAdmin);
+            this.panel4.Controls.Add(this.checkBoxRestoreLoadBehavior);
+            this.panel4.Controls.Add(this.labelStatusCaption);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.labelNoAdminHintIcon);
+            this.panel4.Location = new System.Drawing.Point(1, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(608, 76);
+            this.panel4.TabIndex = 69;
+            // 
+            // labelNoAdminHint
+            // 
+            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoAdminHint.Location = new System.Drawing.Point(230, 47);
+            this.labelNoAdminHint.Name = "labelNoAdminHint";
+            this.labelNoAdminHint.Size = new System.Drawing.Size(257, 26);
+            this.labelNoAdminHint.TabIndex = 68;
+            this.labelNoAdminHint.Text = "Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addin" +
+                "s verfügbar.";
+            this.labelNoAdminHint.Visible = false;
+            // 
+            // pictureBoxNoAdmin
+            // 
+            this.pictureBoxNoAdmin.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxNoAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoAdmin.Image")));
+            this.pictureBoxNoAdmin.Location = new System.Drawing.Point(211, 47);
+            this.pictureBoxNoAdmin.Name = "pictureBoxNoAdmin";
+            this.pictureBoxNoAdmin.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxNoAdmin.TabIndex = 67;
+            this.pictureBoxNoAdmin.TabStop = false;
+            this.pictureBoxNoAdmin.Visible = false;
+            // 
+            // checkBoxRestoreLoadBehavior
+            // 
+            this.checkBoxRestoreLoadBehavior.AutoSize = true;
+            this.checkBoxRestoreLoadBehavior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
+            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(213, 29);
+            this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
+            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(344, 20);
+            this.checkBoxRestoreLoadBehavior.TabIndex = 49;
+            this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
+            this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
+            this.checkBoxRestoreLoadBehavior.CheckedChanged += new System.EventHandler(this.checkBoxRestoreLoadBehavior_CheckedChanged);
+            // 
+            // labelStatusCaption
+            // 
+            this.labelStatusCaption.AutoSize = true;
+            this.labelStatusCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCaption.Location = new System.Drawing.Point(3, 3);
+            this.labelStatusCaption.Name = "labelStatusCaption";
+            this.labelStatusCaption.Size = new System.Drawing.Size(51, 16);
+            this.labelStatusCaption.TabIndex = 58;
+            this.labelStatusCaption.Text = "Status";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonActivate);
+            this.panel1.Controls.Add(this.radioButtonDeactivate);
+            this.panel1.Location = new System.Drawing.Point(6, 19);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(199, 36);
+            this.panel1.TabIndex = 64;
+            // 
+            // radioButtonActivate
+            // 
+            this.radioButtonActivate.AutoSize = true;
+            this.radioButtonActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
+            this.radioButtonActivate.Name = "radioButtonActivate";
+            this.radioButtonActivate.Size = new System.Drawing.Size(73, 20);
+            this.radioButtonActivate.TabIndex = 57;
+            this.radioButtonActivate.Text = "Aktiviert";
+            this.radioButtonActivate.UseVisualStyleBackColor = true;
+            this.radioButtonActivate.CheckedChanged += new System.EventHandler(this.radioButtonActivate_CheckedChanged);
+            // 
+            // radioButtonDeactivate
+            // 
+            this.radioButtonDeactivate.AutoSize = true;
+            this.radioButtonDeactivate.Checked = true;
+            this.radioButtonDeactivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
+            this.radioButtonDeactivate.Name = "radioButtonDeactivate";
+            this.radioButtonDeactivate.Size = new System.Drawing.Size(90, 20);
+            this.radioButtonDeactivate.TabIndex = 53;
+            this.radioButtonDeactivate.TabStop = true;
+            this.radioButtonDeactivate.Text = "Deaktiviert";
+            this.radioButtonDeactivate.UseVisualStyleBackColor = true;
+            // 
+            // labelNoAdminHintIcon
+            // 
+            this.labelNoAdminHintIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHintIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelNoAdminHintIcon.Location = new System.Drawing.Point(211, 47);
+            this.labelNoAdminHintIcon.Name = "labelNoAdminHintIcon";
+            this.labelNoAdminHintIcon.Size = new System.Drawing.Size(136, 26);
+            this.labelNoAdminHintIcon.TabIndex = 72;
+            // 
+            // panelRegistryValues
+            // 
+            this.panelRegistryValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelRegistryValues.Controls.Add(this.panelInfos);
+            this.panelRegistryValues.Controls.Add(this.labelRegistryValues);
+            this.panelRegistryValues.Controls.Add(this.dataGridViewValues);
+            this.panelRegistryValues.Location = new System.Drawing.Point(2, 244);
+            this.panelRegistryValues.Name = "panelRegistryValues";
+            this.panelRegistryValues.Size = new System.Drawing.Size(606, 193);
+            this.panelRegistryValues.TabIndex = 67;
+            this.panelRegistryValues.Visible = false;
+            // 
+            // panelInfos
+            // 
+            this.panelInfos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelInfos.Controls.Add(this.pictureBox8);
+            this.panelInfos.Controls.Add(this.labelClickInfo);
+            this.panelInfos.Controls.Add(this.labelInfoArea);
+            this.panelInfos.Location = new System.Drawing.Point(1, 36);
+            this.panelInfos.Name = "panelInfos";
+            this.panelInfos.Size = new System.Drawing.Size(376, 276);
+            this.panelInfos.TabIndex = 72;
+            this.panelInfos.Visible = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(12, 37);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox8.TabIndex = 69;
+            this.pictureBox8.TabStop = false;
+            // 
+            // labelClickInfo
+            // 
+            this.labelClickInfo.AutoSize = true;
+            this.labelClickInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClickInfo.Location = new System.Drawing.Point(34, 40);
+            this.labelClickInfo.Name = "labelClickInfo";
+            this.labelClickInfo.Size = new System.Drawing.Size(487, 16);
+            this.labelClickInfo.TabIndex = 63;
+            this.labelClickInfo.Text = "Klicken Sie auf ein Addin oder ein deaktiviertes Element für weitere Informatione" +
+                "n.";
+            // 
+            // labelInfoArea
+            // 
+            this.labelInfoArea.AutoSize = true;
+            this.labelInfoArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoArea.Location = new System.Drawing.Point(3, 1);
+            this.labelInfoArea.Name = "labelInfoArea";
+            this.labelInfoArea.Size = new System.Drawing.Size(125, 16);
+            this.labelInfoArea.TabIndex = 62;
+            this.labelInfoArea.Text = "Informationsbereich";
+            // 
             // labelRegistryValues
             // 
             this.labelRegistryValues.AutoSize = true;
-            this.labelRegistryValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistryValues.Location = new System.Drawing.Point(3, 0);
+            this.labelRegistryValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistryValues.Location = new System.Drawing.Point(3, -1);
             this.labelRegistryValues.Name = "labelRegistryValues";
-            this.labelRegistryValues.Size = new System.Drawing.Size(91, 13);
+            this.labelRegistryValues.Size = new System.Drawing.Size(97, 16);
             this.labelRegistryValues.TabIndex = 62;
             this.labelRegistryValues.Text = "Registry Werte";
             // 
@@ -586,7 +604,7 @@
             this.dataGridViewValues.Name = "dataGridViewValues";
             this.dataGridViewValues.RowHeadersVisible = false;
             this.dataGridViewValues.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewValues.Size = new System.Drawing.Size(522, 110);
+            this.dataGridViewValues.Size = new System.Drawing.Size(606, 177);
             this.dataGridViewValues.TabIndex = 50;
             // 
             // Image
@@ -623,7 +641,7 @@
             this.buttonInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInfo.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo.Image")));
-            this.buttonInfo.Location = new System.Drawing.Point(753, 10);
+            this.buttonInfo.Location = new System.Drawing.Point(877, 10);
             this.buttonInfo.Name = "buttonInfo";
             this.buttonInfo.Size = new System.Drawing.Size(28, 28);
             this.buttonInfo.TabIndex = 29;
@@ -661,6 +679,7 @@
             // labelAddinCurrentUser
             // 
             this.labelAddinCurrentUser.AutoSize = true;
+            this.labelAddinCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddinCurrentUser.Location = new System.Drawing.Point(174, 4);
             this.labelAddinCurrentUser.Name = "labelAddinCurrentUser";
             this.labelAddinCurrentUser.Size = new System.Drawing.Size(197, 13);
@@ -670,6 +689,7 @@
             // labelDeaktiveElement
             // 
             this.labelDeaktiveElement.AutoSize = true;
+            this.labelDeaktiveElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeaktiveElement.Location = new System.Drawing.Point(22, 4);
             this.labelDeaktiveElement.Name = "labelDeaktiveElement";
             this.labelDeaktiveElement.Size = new System.Drawing.Size(119, 13);
@@ -679,10 +699,10 @@
             // labelIconLegendCaption
             // 
             this.labelIconLegendCaption.AutoSize = true;
-            this.labelIconLegendCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIconLegendCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIconLegendCaption.Location = new System.Drawing.Point(3, 0);
             this.labelIconLegendCaption.Name = "labelIconLegendCaption";
-            this.labelIconLegendCaption.Size = new System.Drawing.Size(85, 13);
+            this.labelIconLegendCaption.Size = new System.Drawing.Size(102, 16);
             this.labelIconLegendCaption.TabIndex = 43;
             this.labelIconLegendCaption.Text = "Icon Legende";
             // 
@@ -701,10 +721,10 @@
             // labelColorLegendCaption
             // 
             this.labelColorLegendCaption.AutoSize = true;
-            this.labelColorLegendCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColorLegendCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorLegendCaption.Location = new System.Drawing.Point(94, 0);
             this.labelColorLegendCaption.Name = "labelColorLegendCaption";
-            this.labelColorLegendCaption.Size = new System.Drawing.Size(99, 13);
+            this.labelColorLegendCaption.Size = new System.Drawing.Size(122, 16);
             this.labelColorLegendCaption.TabIndex = 46;
             this.labelColorLegendCaption.Text = "Farben Legende";
             this.labelColorLegendCaption.Visible = false;
@@ -727,6 +747,7 @@
             // labelAddinLocalMachine
             // 
             this.labelAddinLocalMachine.AutoSize = true;
+            this.labelAddinLocalMachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddinLocalMachine.Location = new System.Drawing.Point(397, 4);
             this.labelAddinLocalMachine.Name = "labelAddinLocalMachine";
             this.labelAddinLocalMachine.Size = new System.Drawing.Size(197, 13);
@@ -737,7 +758,7 @@
             // 
             this.buttonChangeLegend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonChangeLegend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonChangeLegend.Location = new System.Drawing.Point(605, 15);
+            this.buttonChangeLegend.Location = new System.Drawing.Point(642, 15);
             this.buttonChangeLegend.Name = "buttonChangeLegend";
             this.buttonChangeLegend.Size = new System.Drawing.Size(29, 21);
             this.buttonChangeLegend.TabIndex = 44;
@@ -851,15 +872,18 @@
             this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.splitContainer1);
             this.Name = "AddinGuardControl";
-            this.Size = new System.Drawing.Size(800, 429);
+            this.Size = new System.Drawing.Size(924, 496);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelDeactivatedElements.ResumeLayout(false);
+            this.panelDeactivatedElements.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoAdmin)).EndInit();
@@ -870,8 +894,6 @@
             this.panelInfos.ResumeLayout(false);
             this.panelInfos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panelDeactivatedElements.ResumeLayout(false);
-            this.panelDeactivatedElements.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewValues)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

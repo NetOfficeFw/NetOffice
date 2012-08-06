@@ -131,6 +131,12 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
                     case "MsAccess":
                         _applicationObserver.Access = e.Item.Checked;
                         break;
+                    case "WinProj":
+                        _applicationObserver.Project = e.Item.Checked;
+                        break;
+                    case "Visio":
+                        _applicationObserver.Visio = e.Item.Checked;
+                        break;
                 }
             }
             catch (Exception exception)
@@ -213,7 +219,6 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
             }
             catch (Exception exception)
             {
-
                 ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
                 errorForm.ShowDialog(this);
             }
@@ -326,6 +331,12 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
             val = configNode.SelectSingleNode("Control/MsAccess").Attributes[0].Value;
             listViewApps.Items[4].Checked = Convert.ToBoolean(val);
 
+            val = configNode.SelectSingleNode("Control/Project").Attributes[0].Value;
+            listViewApps.Items[5].Checked = Convert.ToBoolean(val);
+
+            val = configNode.SelectSingleNode("Control/Visio").Attributes[0].Value;
+            listViewApps.Items[6].Checked = Convert.ToBoolean(val);
+             
             val = configNode.SelectSingleNode("Control/Tray").Attributes[0].Value;
             checkBoxAppsTray.Checked = Convert.ToBoolean(val);
 
@@ -344,6 +355,8 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
             configNode.SelectSingleNode("Control/Outlook").Attributes[0].Value = listViewApps.Items[2].Checked.ToString();
             configNode.SelectSingleNode("Control/PowerPnt").Attributes[0].Value = listViewApps.Items[3].Checked.ToString();
             configNode.SelectSingleNode("Control/MsAccess").Attributes[0].Value = listViewApps.Items[4].Checked.ToString();
+            configNode.SelectSingleNode("Control/Project").Attributes[0].Value = listViewApps.Items[5].Checked.ToString();
+            configNode.SelectSingleNode("Control/Visio").Attributes[0].Value = listViewApps.Items[6].Checked.ToString();
 
             configNode.SelectSingleNode("Control/Tray").Attributes[0].Value = checkBoxAppsTray.Checked.ToString();
             configNode.SelectSingleNode("Control/HotKey").Attributes[0].Value = checkBoxAppKill.Checked.ToString();
@@ -387,6 +400,10 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
                     return 4;
                 case "MSACCESS":
                     return 5;
+                case "WINPROJ":
+                    return 6;
+                case "VISIO":
+                    return 6;
                 default:
                     return 0;
             }

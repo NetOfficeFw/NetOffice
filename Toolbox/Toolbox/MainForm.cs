@@ -213,6 +213,24 @@ namespace NetOffice.DeveloperToolbox
 
         #region Config Methods
 
+        private bool ValidateConfigFileVersion()
+        {
+            XmlAttribute versionAttribute = null;
+            foreach (XmlAttribute item in _configFile.DocumentElement.Attributes)
+            {
+                if (item.Name == "Version")
+                {
+                    versionAttribute = item;
+                    break;
+                }
+            }
+
+            if (null == versionAttribute)
+                return false;
+
+            return (versionAttribute.Value == AssemblyVersion);
+        }
+
         private void LoadConfiguration()
         {
             try
@@ -220,7 +238,15 @@ namespace NetOffice.DeveloperToolbox
                 string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DeveloperToolbox.Settings.xml");
                 _configFile = new XmlDocument();
                 if (File.Exists(filePath))
+                {
                     _configFile.Load(filePath);
+                    if (!ValidateConfigFileVersion())
+                    {
+                        File.Delete(filePath);
+                        string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+                        _configFile.Load(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".DefaultConfiguration.xml"));
+                    }
+                }
                 else
                 {
                     string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
@@ -333,6 +359,19 @@ namespace NetOffice.DeveloperToolbox
         #endregion
 
         #region Trigger
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabControlMain.SelectedIndex = 1;
+            }
+            catch (Exception exception)
+            {
+                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
+                errorForm.ShowDialog(this);
+            }
+        }
 
         private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {

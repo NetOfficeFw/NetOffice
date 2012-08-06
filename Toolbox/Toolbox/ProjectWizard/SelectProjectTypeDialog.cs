@@ -37,7 +37,7 @@ namespace NetOffice.DeveloperToolbox
             get
             {
                 ProjectOptions options = new ProjectOptions(GetSelectedFolder(),
-                                                            comboBoxNetRuntime.Text,
+                                                           1.0,
                                                             GetSelectedProjectType(),
                                                             GetSelectedLanguage(),
                                                             GetSelectedIDE()
@@ -321,5 +321,10 @@ namespace NetOffice.DeveloperToolbox
         }
 
         #endregion
+
+        private void radioButtonApplicationData_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

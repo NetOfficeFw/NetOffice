@@ -10,7 +10,8 @@ using Word = NetOffice.WordApi;
 using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
-
+using Project = NetOffice.MSProjectApi;
+using Visio = NetOffice.VisioApi;
 using Office = NetOffice.OfficeApi;
 
 namespace NetOffice.DeveloperToolbox
@@ -23,6 +24,8 @@ namespace NetOffice.DeveloperToolbox
         Outlook.Application _outlookApplication;
         PowerPoint.Application _powerpointApplication;
         Access.Application _accessApplication;
+        Project.Application _projectApplication;
+        Visio.Application _visioApplication;
 
         internal ApplicationWrapper(string officeApp)
         {
@@ -49,6 +52,10 @@ namespace NetOffice.DeveloperToolbox
                         return _powerpointApplication.CommandBars;
                     case "Access":
                         return _accessApplication.CommandBars;
+                    case "Project":
+                        return _projectApplication.CommandBars;
+                    case "Visio":
+                        return _visioApplication.CommandBars as Office.CommandBars;
                     default:
                         throw new ArgumentOutOfRangeException("officeApp");
                 }
@@ -74,6 +81,12 @@ namespace NetOffice.DeveloperToolbox
                 case "Access":
                     _accessApplication.Quit();
                     break;
+                case "Project":
+                    _projectApplication.Quit();
+                    break;
+                case "Visio":
+                    _visioApplication.Quit();
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException("officeApp");
             }
@@ -96,6 +109,12 @@ namespace NetOffice.DeveloperToolbox
                     _powerpointApplication.Dispose();
                     break;
                 case "Access":
+                    _accessApplication.Dispose();
+                    break;
+                case "Project":
+                    _accessApplication.Dispose();
+                    break;
+                case "Visio":
                     _accessApplication.Dispose();
                     break;
                 default:
@@ -121,6 +140,12 @@ namespace NetOffice.DeveloperToolbox
                     break;
                 case "Access":
                     _accessApplication = new Access.Application("Access.Application");
+                    break;
+                case "Project":
+                    _projectApplication = new Project.Application("MSProject.Application");
+                    break;
+                case "Visio":
+                    _visioApplication = new Visio.Application("Visio.Application");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("officeApp");

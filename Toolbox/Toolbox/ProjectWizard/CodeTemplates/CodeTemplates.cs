@@ -54,6 +54,17 @@ namespace NetOffice.DeveloperToolbox
         static string _solutionFile2010CS;
         static string _solutionFile2010VB;
 
+        static string _taskPaneMethodCS;
+        static string _taskPaneMethodVB;
+
+        static string _taskPaneCompileCS;
+        static string _taskPaneCompileVB;
+
+        static string _taskPaneCS;
+        static string _taskPaneDesignerCS;
+        static string _taskPaneVB;
+        static string _taskPaneDesignerVB;
+
         public static string SolutionFile(ProgrammingLanguage language, bool Is2010)
         {
             if (language == ProgrammingLanguage.CSharp)
@@ -323,6 +334,70 @@ namespace NetOffice.DeveloperToolbox
                 return _usingVB;
             }
         }
-  
+
+        public static string TaskPaneMethod(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _taskPaneMethodCS)
+                    _taskPaneMethodCS = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneMethodCS.txt");
+                return _taskPaneMethodCS;
+            }
+            else
+            {
+                if (null == _taskPaneMethodVB)
+                    _taskPaneMethodVB = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneMethodVB.txt");
+                return _taskPaneMethodVB;
+            }
+        }
+
+        public static string TaskPaneCompile(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _taskPaneCompileCS)
+                    _taskPaneCompileCS = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlCompileCS.txt");
+                return _taskPaneCompileCS;
+            }
+            else
+            {
+                if (null == _taskPaneCompileVB)
+                    _taskPaneCompileVB = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlCompileVB.txt");
+                return _taskPaneCompileVB;
+            }
+
+        }
+         
+        public static string TaskPane(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _taskPaneCS)
+                    _taskPaneCS = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlCS.txt");
+                return _taskPaneCS;
+            }
+            else
+            {
+                if (null == _taskPaneVB)
+                    _taskPaneVB = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlVB.txt");
+                return _taskPaneVB;
+            }
+        }
+
+        public static string TaskPaneDesigner(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _taskPaneDesignerCS)
+                    _taskPaneDesignerCS = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlDesignerCS.txt");
+                return _taskPaneDesignerCS;
+            }
+            else
+            {
+                if (null == _taskPaneDesignerVB)
+                    _taskPaneDesignerVB = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneControlDesignerVB.txt");
+                return _taskPaneDesignerVB;
+            }
+        }
     }
 }

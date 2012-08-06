@@ -98,6 +98,18 @@ namespace NetOffice.DeveloperToolbox
             Clipboard.SetData(DataFormats.Text, clipboardContent); 
         }
 
+        private void linkLabelDiscussionBoard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start((sender as LinkLabel).Tag as string);
+            }
+            catch
+            {
+                ;
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -112,12 +124,13 @@ namespace NetOffice.DeveloperToolbox
         {
             switch (currentLanguageID)
             {
-                case 0:
-                    currentLanguageID = 1033;
-                    break;
                 case 1:
                     currentLanguageID = 1031;
                     break;
+                default:
+                    currentLanguageID = 1033;
+                    break;
+               
             }
 
             return currentLanguageID;

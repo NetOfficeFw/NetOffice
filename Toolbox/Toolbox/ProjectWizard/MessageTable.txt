@@ -1,5 +1,5 @@
 ﻿[1031]
-labelHint = Klicken Sie die Schaltfläche 'Ein neues Projekt' erstellen.
+labelHint = Klicken Sie die Schaltfläche 'Neues Projekt' um den Assistenten zu starten.
 buttonCreateProject = Neues Projekt
 cancelButton = Abbrechen
 backButton = Zurück

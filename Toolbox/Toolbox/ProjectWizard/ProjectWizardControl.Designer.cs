@@ -34,6 +34,8 @@
             this.buttonCreateProject = new System.Windows.Forms.Button();
             this.panelControls = new System.Windows.Forms.Panel();
             this.panelLeftHeader = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,6 +59,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
             this.panelLeftHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,13 +89,14 @@
             // 
             // buttonCreateProject
             // 
+            this.buttonCreateProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
             this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateProject.Location = new System.Drawing.Point(26, 14);
+            this.buttonCreateProject.Location = new System.Drawing.Point(26, 10);
             this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(133, 25);
+            this.buttonCreateProject.Size = new System.Drawing.Size(133, 28);
             this.buttonCreateProject.TabIndex = 78;
-            this.buttonCreateProject.Text = "Neues Projekt";
+            this.buttonCreateProject.Text = " &Neues Projekt";
             this.buttonCreateProject.UseVisualStyleBackColor = true;
             this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
@@ -103,7 +108,7 @@
             this.panelControls.BackColor = System.Drawing.SystemColors.Control;
             this.panelControls.Location = new System.Drawing.Point(134, 67);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(744, 279);
+            this.panelControls.Size = new System.Drawing.Size(744, 313);
             this.panelControls.TabIndex = 79;
             // 
             // panelLeftHeader
@@ -112,6 +117,8 @@
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.panelLeftHeader.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelLeftHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelLeftHeader.Controls.Add(this.pictureBox6);
+            this.panelLeftHeader.Controls.Add(this.pictureBox5);
             this.panelLeftHeader.Controls.Add(this.pictureBox4);
             this.panelLeftHeader.Controls.Add(this.pictureBox3);
             this.panelLeftHeader.Controls.Add(this.pictureBox2);
@@ -120,14 +127,34 @@
             this.panelLeftHeader.Controls.Add(this.labelCurrentStep);
             this.panelLeftHeader.Location = new System.Drawing.Point(0, 0);
             this.panelLeftHeader.Name = "panelLeftHeader";
-            this.panelLeftHeader.Size = new System.Drawing.Size(133, 346);
+            this.panelLeftHeader.Size = new System.Drawing.Size(133, 380);
             this.panelLeftHeader.TabIndex = 39;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(47, 295);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 33);
+            this.pictureBox6.TabIndex = 36;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(47, 251);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 33);
+            this.pictureBox5.TabIndex = 35;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(47, 177);
+            this.pictureBox4.Location = new System.Drawing.Point(47, 166);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 32);
             this.pictureBox4.TabIndex = 34;
@@ -137,7 +164,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(48, 134);
+            this.pictureBox3.Location = new System.Drawing.Point(48, 123);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 33;
@@ -147,7 +174,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 90);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 79);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 33);
             this.pictureBox2.TabIndex = 32;
@@ -157,7 +184,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 220);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 209);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 32);
             this.pictureBox1.TabIndex = 31;
@@ -176,7 +203,7 @@
             // labelCurrentStep
             // 
             this.labelCurrentStep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelCurrentStep.Location = new System.Drawing.Point(22, 305);
+            this.labelCurrentStep.Location = new System.Drawing.Point(22, 351);
             this.labelCurrentStep.Name = "labelCurrentStep";
             this.labelCurrentStep.Size = new System.Drawing.Size(92, 13);
             this.labelCurrentStep.TabIndex = 28;
@@ -208,10 +235,10 @@
             // 
             this.labelCaption.AutoSize = true;
             this.labelCaption.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelCaption.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaption.Location = new System.Drawing.Point(14, 13);
             this.labelCaption.Name = "labelCaption";
-            this.labelCaption.Size = new System.Drawing.Size(50, 15);
+            this.labelCaption.Size = new System.Drawing.Size(61, 16);
             this.labelCaption.TabIndex = 31;
             this.labelCaption.Text = "Caption";
             // 
@@ -220,7 +247,7 @@
             this.imageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imageBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.imageBox.Image = ((System.Drawing.Image)(resources.GetObject("imageBox.Image")));
-            this.imageBox.Location = new System.Drawing.Point(672, 13);
+            this.imageBox.Location = new System.Drawing.Point(676, 13);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(34, 33);
             this.imageBox.TabIndex = 30;
@@ -230,18 +257,20 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.Location = new System.Drawing.Point(30, 34);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(60, 13);
+            this.labelDescription.Size = new System.Drawing.Size(76, 16);
             this.labelDescription.TabIndex = 33;
             this.labelDescription.Text = "Description";
             // 
             // cancelButton
             // 
-            this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
             this.cancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelButton.Location = new System.Drawing.Point(542, 364);
+            this.cancelButton.Location = new System.Drawing.Point(549, 398);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(92, 25);
             this.cancelButton.TabIndex = 85;
@@ -251,9 +280,10 @@
             // finishButton
             // 
             this.finishButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.finishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finishButton.Image = ((System.Drawing.Image)(resources.GetObject("finishButton.Image")));
             this.finishButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.finishButton.Location = new System.Drawing.Point(435, 364);
+            this.finishButton.Location = new System.Drawing.Point(439, 398);
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(92, 25);
             this.finishButton.TabIndex = 84;
@@ -265,9 +295,10 @@
             // 
             this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.backButton.Enabled = false;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.backButton.Location = new System.Drawing.Point(646, 364);
+            this.backButton.Location = new System.Drawing.Point(650, 398);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(92, 25);
             this.backButton.TabIndex = 83;
@@ -278,9 +309,10 @@
             // 
             this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.nextButton.Enabled = false;
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
             this.nextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nextButton.Location = new System.Drawing.Point(748, 364);
+            this.nextButton.Location = new System.Drawing.Point(752, 398);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(92, 25);
             this.nextButton.TabIndex = 82;
@@ -289,6 +321,9 @@
             // 
             // panelWizardHost
             // 
+            this.panelWizardHost.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelWizardHost.Controls.Add(this.panel2);
             this.panelWizardHost.Controls.Add(this.panelLeftHeader);
             this.panelWizardHost.Controls.Add(this.cancelButton);
@@ -297,9 +332,9 @@
             this.panelWizardHost.Controls.Add(this.panel3);
             this.panelWizardHost.Controls.Add(this.nextButton);
             this.panelWizardHost.Controls.Add(this.panelControls);
-            this.panelWizardHost.Location = new System.Drawing.Point(26, 55);
+            this.panelWizardHost.Location = new System.Drawing.Point(26, 53);
             this.panelWizardHost.Name = "panelWizardHost";
-            this.panelWizardHost.Size = new System.Drawing.Size(881, 406);
+            this.panelWizardHost.Size = new System.Drawing.Size(881, 440);
             this.panelWizardHost.TabIndex = 89;
             this.panelWizardHost.Visible = false;
             // 
@@ -329,9 +364,9 @@
             this.panelHint.Controls.Add(this.pictureBoxLogo);
             this.panelHint.Controls.Add(this.pictureBox8);
             this.panelHint.Controls.Add(this.labelHint);
-            this.panelHint.Location = new System.Drawing.Point(27, 50);
+            this.panelHint.Location = new System.Drawing.Point(27, 48);
             this.panelHint.Name = "panelHint";
-            this.panelHint.Size = new System.Drawing.Size(878, 411);
+            this.panelHint.Size = new System.Drawing.Size(878, 445);
             this.panelHint.TabIndex = 93;
             // 
             // pictureBoxLogo
@@ -342,7 +377,7 @@
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(229, 35);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(401, 330);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(401, 364);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 94;
             this.pictureBoxLogo.TabStop = false;
@@ -375,6 +410,8 @@
             this.Name = "ProjectWizardControl";
             this.Size = new System.Drawing.Size(924, 496);
             this.panelLeftHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -420,5 +457,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

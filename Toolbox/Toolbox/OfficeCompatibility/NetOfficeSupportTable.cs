@@ -9,6 +9,8 @@ using System.IO;
 using System.IO.Compression;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
+using Project = NetOffice.MSProjectApi;
+using Visio = NetOffice.VisioApi;
 
 namespace NetOffice.DeveloperToolbox.OfficeCompatibility
 {
@@ -20,10 +22,17 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
         AssemblyDefinition _assOutlook;
         AssemblyDefinition _assPowerPoint;
         AssemblyDefinition _assAccess;
+        AssemblyDefinition _assMSProject;
+        AssemblyDefinition _assVisio;
+
         Assembly _thisAssembly = Assembly.GetExecutingAssembly();
         
         public NetOfficeSupportTable()
         {
+            Project.Application app1 = null;
+            Visio.Application app2 = null;
+            Console.WriteLine(app1);
+            Console.WriteLine(app2);
             AssemblyName[] referencedAssemblies = _thisAssembly.GetReferencedAssemblies();
             foreach (AssemblyName item in referencedAssemblies)
             {
@@ -70,8 +79,21 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         Stream stream = System.IO.File.OpenRead(assemblyPath);
                         _assAccess = AssemblyDefinition.ReadAssembly(stream);
                     }
+                    else if (item.Name.StartsWith("MSProjectApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assMSProject = AssemblyDefinition.ReadAssembly(stream);
+                    }
+                    else if (item.Name.StartsWith("VisioApi"))
+                    {
+                        string assemblyPath = GetPhysicalPath(item);
+                        Stream stream = System.IO.File.OpenRead(assemblyPath);
+                        _assVisio = AssemblyDefinition.ReadAssembly(stream);
+                    }
                 }
-            }        }
+            }        
+        }
 
         /// <summary>
         /// returns enum member name for an enum value
@@ -225,6 +247,10 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                     return _assPowerPoint;
                 case "Access":
                     return _assAccess;
+                case "MSProject":
+                    return _assMSProject;
+                case "Visio":
+                    return _assVisio;
                 default:
                     return null;
             }

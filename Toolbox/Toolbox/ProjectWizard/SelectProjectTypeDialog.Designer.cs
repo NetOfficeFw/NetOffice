@@ -500,6 +500,7 @@
             this.radioButtonApplicationData.TabStop = true;
             this.radioButtonApplicationData.Text = "Application Data";
             this.radioButtonApplicationData.UseVisualStyleBackColor = true;
+            this.radioButtonApplicationData.CheckedChanged += new System.EventHandler(this.radioButtonApplicationData_CheckedChanged);
             // 
             // pictureBox4
             // 
