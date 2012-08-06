@@ -98,6 +98,9 @@ namespace NetOffice.DeveloperToolbox
         {
             Translator.TranslateControls(this, "ProjectWizard.Controls.GuiControl.txt", ProjectWizardControl.CurrentLanguageID);
         }
+        public new void KeyDown(KeyEventArgs e)
+        {
+        }
 
         public void Activate()
         {

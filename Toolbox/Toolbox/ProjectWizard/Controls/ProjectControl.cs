@@ -91,6 +91,11 @@ namespace NetOffice.DeveloperToolbox
             get { return _settings; }
         }
 
+        public new void KeyDown(KeyEventArgs e)
+        {
+
+        }
+
         public string[] GetSettingsSummary()
         {
             string[] result = new string[2];
@@ -105,7 +110,26 @@ namespace NetOffice.DeveloperToolbox
         }
 
         #endregion
-          
+
+        internal string CalculatedFolder
+        { 
+            get
+            {
+                if (radioButtonCustomFolder.Checked)
+                    return textBoxCustomFolder.Text;
+                else 
+                {
+                    if (radioButtonDesktop.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    if (radioButtonUserFolder.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                    if (radioButtonApplicationData.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    return ProjectOptions.GetVisualStudioProjectFolder();
+                }
+            }
+        }
+
         internal string SelectedProjectType(int languageID)
         {
             if (radioButtonAutomationAddin.Checked)

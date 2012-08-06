@@ -32,6 +32,7 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.labelClassName = new System.Windows.Forms.Label();
             this.textBoxClassName = new System.Windows.Forms.TextBox();
+            this.labelHint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelDescription
@@ -72,16 +73,29 @@
             this.textBoxClassName.TabIndex = 14;
             this.textBoxClassName.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
+            // labelHint
+            // 
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.Red;
+            this.labelHint.Location = new System.Drawing.Point(239, 55);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(432, 16);
+            this.labelHint.TabIndex = 18;
+            this.labelHint.Text = "Es existiert im angegebenen Pfad bereits ein Ordner mit diesem Namen";
+            this.labelHint.Visible = false;
+            // 
             // NameControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.labelClassName);
             this.Controls.Add(this.textBoxClassName);
             this.Name = "NameControl";
-            this.Size = new System.Drawing.Size(611, 285);
+            this.Size = new System.Drawing.Size(744, 279);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +107,6 @@
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label labelClassName;
         private System.Windows.Forms.TextBox textBoxClassName;
+        private System.Windows.Forms.Label labelHint;
     }
 }

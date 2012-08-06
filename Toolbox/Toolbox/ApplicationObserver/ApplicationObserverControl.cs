@@ -270,6 +270,10 @@ namespace NetOffice.DeveloperToolbox.ApplicationObserver
        
         #region IUtilsControl Members
 
+        public new void KeyDown(KeyEventArgs e)
+        { 
+        }
+
         public string ControlName
         {
             get 

@@ -32,6 +32,16 @@ namespace NetOffice.DeveloperToolbox
          
         #region IToolboxControl Member
 
+        public new void KeyDown(KeyEventArgs e)
+        {
+            foreach (var item in _listControls)
+	        {
+                Control winControl = item as Control;
+                if(winControl.Visible)
+    		        item.KeyDown(e);
+	        }
+        }
+
         public string ControlName
         {
             get { return "ProjectWizard"; }
@@ -158,6 +168,22 @@ namespace NetOffice.DeveloperToolbox
                 i++;
             }
             throw new ArgumentOutOfRangeException("control");
+        }
+
+        internal bool FolderExists(string name)
+        {
+
+            foreach (var item in _listControls)
+            {
+                ProjectControl ctrl = item as ProjectControl;
+                if (null != ctrl)
+                {
+                    string basePath = ctrl.CalculatedFolder;
+                    string fullPath = System.IO.Path.Combine(basePath, name);
+                    return System.IO.Directory.Exists(fullPath) || System.IO.File.Exists(fullPath);
+                }
+            }
+            return false;
         }
 
         internal bool IsSingleMSProjectProject

@@ -15,13 +15,59 @@ namespace NetOffice.DeveloperToolbox
         static List<IWizardControl> _listControls;
         static ProjectOptions _projectOptions;
 
+        private static bool DebugMode
+        {
+            get 
+            {
+                string processName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+                if (processName.EndsWith("VSHost", StringComparison.InvariantCultureIgnoreCase) || (processName == "devenv"))
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        private static string GetBasePath()
+        {
+            string[] arr = Application.StartupPath.Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
+            int count = arr.Length -2;
+
+            string result = "";
+            for (int i = 0; i < count; i++)
+			    result += arr[i] + "\\";
+            return result;
+        }
+
+        private static string GetNetOfficePath()
+        {
+            string[] arr = Application.StartupPath.Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
+            int count = arr.Length - 4;
+
+            string result = "";
+            for (int i = 0; i < count; i++)
+                result += arr[i] + "\\";
+            return result;
+        }
+
         public static string ConvertProjectTemplate(List<IWizardControl> listControls)
         {
             _listControls = listControls;
             _projectOptions = new ProjectOptions(listControls);
-             
-            string templateFolder = Path.Combine(Application.StartupPath, "Project Wizard\\Templates");
-            string assemblyFolder = Path.Combine(Application.StartupPath, "Project Wizard\\NetOffice Assemblies");
+
+            string templateFolder = "";
+            string assemblyFolder = "";
+
+            if (DebugMode)
+            {
+                // 2 nach oben ProjectWizard\\Templates
+                templateFolder = Path.Combine(GetBasePath(), "ProjectWizard\\Templates");
+                assemblyFolder = Path.Combine(GetNetOfficePath(), "Assemblies");
+            }
+            else
+            {
+                templateFolder = Path.Combine(Application.StartupPath, "Project Wizard\\Templates");
+                assemblyFolder = Path.Combine(Application.StartupPath, "Project Wizard\\NetOffice Assemblies");
+            }
 
             string fullTemplatePath = Path.Combine(templateFolder, GetTargetTemplate(_projectOptions));
             if (!File.Exists(fullTemplatePath))
@@ -142,8 +188,18 @@ namespace NetOffice.DeveloperToolbox
             Directory.CreateDirectory(targetAssemblyFolder);
             foreach (string sourceAssembly in assemblies)
             {
-                string fullSourcePathAssembly = Path.Combine(assemblyFolder, _projectOptions.NetRuntime.ToString("0.0").Replace(",",".") + "\\" + sourceAssembly + ".dll");
-                string fullSourcePathDocuFile = Path.Combine(assemblyFolder, "Documentation\\" + sourceAssembly + ".xml");
+                string fullSourcePathAssembly = "";
+                string fullSourcePathDocuFile = "";
+                if (DebugMode)
+                {
+                    fullSourcePathAssembly = Path.Combine(assemblyFolder, "Any CPU\\" + sourceAssembly + ".dll");
+                    fullSourcePathDocuFile = Path.Combine(assemblyFolder, "Any CPU\\" + sourceAssembly + ".xml");
+                }
+                else
+                {
+                    fullSourcePathAssembly = Path.Combine(assemblyFolder, _projectOptions.NetRuntime.ToString("0.0").Replace(",", ".") + "\\" + sourceAssembly + ".dll");
+                    fullSourcePathDocuFile = Path.Combine(assemblyFolder, "Documentation\\" + sourceAssembly + ".xml");
+                }
 
                 string fullTargetPathAssembly = Path.Combine(targetAssemblyFolder, sourceAssembly + ".dll");
                 string fullTargetPathDocuFile = Path.Combine(targetAssemblyFolder, sourceAssembly + ".xml");

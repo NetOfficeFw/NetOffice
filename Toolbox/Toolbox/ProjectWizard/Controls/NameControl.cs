@@ -21,17 +21,55 @@ namespace NetOffice.DeveloperToolbox
             Translate();
 
             if (ProjectWizardControl.CurrentLanguageID == 1031)
+                SetEnglishDefaultName();
+            else
+                SetGermanDefaultName();
+
+            ChangeSettings();
+        }
+
+        private void SetEnglishDefaultName()
+        {
+          if (!ProjectWizardControl.Singleton.FolderExists("MyAssembly"))
+            {
+                textBoxClassName.Text = "MyAssembly";
+                textBoxDescription.Text = "Assembly Description";
+            }
+            else
+            {
+                for (int i = 2; i < 999; i++)
+                {
+                    string name = "MyAssembly" + i.ToString();
+                    if (!ProjectWizardControl.Singleton.FolderExists(name))
+                    {
+                        textBoxClassName.Text = name;
+                        textBoxDescription.Text = "Assembly Description";
+                        return;
+                    }
+                }
+            }
+        }
+
+        private void SetGermanDefaultName()
+        {
+            if (!ProjectWizardControl.Singleton.FolderExists("MeinAssembly"))
             {
                 textBoxClassName.Text = "MeinAssembly";
                 textBoxDescription.Text = "Assembly Beschreibung";
             }
             else
             {
-                textBoxClassName.Text = "MyAssembly";
-                textBoxDescription.Text = "Assembly Description";
+                for (int i = 2; i < 999; i++)
+                {
+                    string name = "MeinAssembly" + i.ToString();
+                    if (!ProjectWizardControl.Singleton.FolderExists(name))
+                    {
+                        textBoxClassName.Text = name;
+                        textBoxDescription.Text = "Assembly Beschreibung";
+                        return;
+                    }
+                }
             }
-
-            ChangeSettings();
         }
 
         public string AssemblyName
@@ -47,6 +85,11 @@ namespace NetOffice.DeveloperToolbox
 
         #region IWizardControl Member
 
+        public new void KeyDown(KeyEventArgs e)
+        {
+
+        }
+
         public event ReadyStateChangedHandler ReadyStateChanged;
 
         public bool IsReadyForNextStep
@@ -55,7 +98,7 @@ namespace NetOffice.DeveloperToolbox
             {
                 try
                 {
-                    return (("" != textBoxClassName.Text.Trim()) || ("" != textBoxClassName.Text.Trim()));
+                    return (("" != textBoxClassName.Text.Trim()) && (!ProjectWizardControl.Singleton.FolderExists(textBoxClassName.Text.Trim())));
                 }
                 catch (Exception ex)
                 {
@@ -109,9 +152,20 @@ namespace NetOffice.DeveloperToolbox
             Translator.TranslateControls(this, "ProjectWizard.Controls.NameControl.txt", ProjectWizardControl.CurrentLanguageID);
         }
 
+        bool FirstActivateFlag = false;
+
         public void Activate()
         {
             textBoxClassName.Focus();
+            if (FirstActivateFlag == false)
+            {
+                if (ProjectWizardControl.CurrentLanguageID == 1031)
+                    SetEnglishDefaultName();
+                else
+                    SetGermanDefaultName();
+
+                FirstActivateFlag = true;
+            }
         }
 
         public string[] GetSettingsSummary()
@@ -156,6 +210,10 @@ namespace NetOffice.DeveloperToolbox
         {
             ChangeSettings();
             RaiseChangeEvent();
+            if (ProjectWizardControl.Singleton.FolderExists(textBoxClassName.Text.Trim()))
+                labelHint.Visible = true;
+            else
+                labelHint.Visible = false;
         }
 
         private void ChangeSettings()

@@ -1,0 +1,24 @@
+﻿[1031]
+labelProjectType = Typ des Projekts
+radioButtonAutomationAddin = Automation Addin
+radioButtonWindowsForms = Windows Forms Projekt
+radioButtonConsole = Konsolen Projekt
+radioButtonClassLibrary = Klassenbibliothek
+labelFolder = Speicherordner für das Projekt
+radioButtonUserFolder = Eigene Dateien
+radioButtonVSProjectFolder = Visual Studio Projekt Ordner
+radioButtonCustomFolder = Benutzerdefiniert
+labelNoAdminHint = Developer Toolbox hat festgestellt das nicht für alle Ordner Schreibzugriff verfügbar ist.
+[End]
+[1033]
+labelProjectType = Project Type
+radioButtonAutomationAddin = Automation Addin
+radioButtonWindowsForms = Windows Forms Project
+radioButtonConsole = Console Project
+radioButtonClassLibrary = Class Library
+labelFolder = Project Folder
+labelNoAdminHint = Developer Toolbox has detected the write permissions are not available for some folders.
+radioButtonUserFolder = User Folder
+radioButtonVSProjectFolder = VS Project Folder
+radioButtonCustomFolder = Custom
+[End]

@@ -182,5 +182,35 @@ namespace NetOffice.DeveloperToolbox
             ChangeSettings();
             RaiseChangeEvent();
         }
+
+        public new void KeyDown(KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D1:
+                    checkBoxExcel.Checked = !checkBoxExcel.Checked;
+                    break;
+                case Keys.D2:
+                    checkBoxWord.Checked = !checkBoxWord.Checked;
+                    break;
+                case Keys.D3:
+                    checkBoxOutlook.Checked = !checkBoxOutlook.Checked;
+                    break;
+                case Keys.D4:
+                    checkBoxPowerPoint.Checked = !checkBoxPowerPoint.Checked;
+                    break;
+                case Keys.D5:
+                    checkBoxAccess.Checked = !checkBoxAccess.Checked;
+                    break;
+                case Keys.D6:
+                    checkBoxProject.Checked = !checkBoxProject.Checked;
+                    break;
+                case Keys.D7:
+                    checkBoxVisio.Checked = !checkBoxVisio.Checked;
+                    break;
+                default:
+                    break;
+            }                
+        }
     }
 }

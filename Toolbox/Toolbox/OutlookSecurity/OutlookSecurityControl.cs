@@ -59,6 +59,11 @@ namespace NetOffice.DeveloperToolbox.OutlookSecurity
 
         #region IToolboxControl Member
 
+        public new void KeyDown(KeyEventArgs e)
+        {
+
+        }
+
         public string ControlName
         {
             get { return "OutlookSecurity"; }

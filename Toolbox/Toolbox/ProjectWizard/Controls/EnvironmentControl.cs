@@ -22,6 +22,10 @@ namespace NetOffice.DeveloperToolbox
         }
 
         public event ReadyStateChangedHandler ReadyStateChanged;
+        
+        public new void KeyDown(KeyEventArgs e)
+        { 
+        }
 
         public bool IsReadyForNextStep
         {

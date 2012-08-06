@@ -141,7 +141,7 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
-        private string GetVisualStudioProjectFolder()
+        internal static string GetVisualStudioProjectFolder()
         {
             string folder10 = "Software\\Microsoft\\VisualStudio\\10.0";
             string folder09 = "Software\\Microsoft\\VisualStudio\\9.0";
@@ -168,7 +168,7 @@ namespace NetOffice.DeveloperToolbox
             return folderPath;
         }
 
-        private string TryGetRegistryValue(string key, string valueName)
+        private static string TryGetRegistryValue(string key, string valueName)
         {
             RegistryKey regKey = Registry.CurrentUser.OpenSubKey(key, false);
             if (null != regKey)

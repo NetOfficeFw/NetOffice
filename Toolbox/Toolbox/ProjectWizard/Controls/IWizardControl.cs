@@ -29,6 +29,8 @@ namespace NetOffice.DeveloperToolbox
         void Activate();
         XmlDocument SettingsDocument { get; }
         string[] GetSettingsSummary();
+
+        void KeyDown(KeyEventArgs e);
     }
 
   

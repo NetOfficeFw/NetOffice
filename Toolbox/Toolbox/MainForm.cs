@@ -360,6 +360,19 @@ namespace NetOffice.DeveloperToolbox
 
         #region Trigger
 
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            foreach (var item in _controls)
+            {
+                Control winControl = item as Control;
+                if (winControl.Visible)
+                {
+                    item.KeyDown(e);
+                    return;
+                }
+            }
+        }
+
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             try

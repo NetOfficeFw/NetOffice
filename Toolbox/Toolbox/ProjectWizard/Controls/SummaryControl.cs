@@ -22,6 +22,11 @@ namespace NetOffice.DeveloperToolbox
 
         #region IWizardControl Member
 
+        public new void KeyDown(KeyEventArgs e)
+        {
+
+        }
+
         public event ReadyStateChangedHandler ReadyStateChanged;
 
         public bool IsReadyForNextStep

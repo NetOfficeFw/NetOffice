@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -51,6 +52,12 @@ namespace NetOffice.DeveloperToolbox
         /// </summary>
         /// <param name="id"></param>
         void SetLanguage(int id);
+
+        /// <summary>
+        /// redirected from host application
+        /// </summary>
+        /// <param name="e"></param>
+        void KeyDown(KeyEventArgs e);
 
         /// <summary>
         /// components from control, translate stuff
