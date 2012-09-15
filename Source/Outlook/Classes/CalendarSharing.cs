@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.CalendarSharing objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.CalendarSharing array</returns>
+		public static NetOffice.OutlookApi.CalendarSharing[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","CalendarSharing");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CalendarSharing> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CalendarSharing>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.CalendarSharing(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CalendarSharing object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.CalendarSharing object or null</returns>
+		public static NetOffice.OutlookApi.CalendarSharing GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CalendarSharing", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CalendarSharing(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CalendarSharing object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.CalendarSharing object or null</returns>
+		public static NetOffice.OutlookApi.CalendarSharing GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CalendarSharing", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CalendarSharing(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Conversation objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Conversation array</returns>
+		public static NetOffice.OutlookApi.Conversation[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Conversation");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Conversation> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Conversation>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Conversation(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Conversation object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Conversation object or null</returns>
+		public static NetOffice.OutlookApi.Conversation GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Conversation", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Conversation(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Conversation object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Conversation object or null</returns>
+		public static NetOffice.OutlookApi.Conversation GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Conversation", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Conversation(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

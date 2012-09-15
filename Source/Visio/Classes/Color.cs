@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Color 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Color : IVColor
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Color objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Color array</returns>
+		public static NetOffice.VisioApi.Color[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Color");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Color> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Color>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Color(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Color object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Color object or null</returns>
+		public static NetOffice.VisioApi.Color GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Color", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Color(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Color object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Color object or null</returns>
+		public static NetOffice.VisioApi.Color GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Color", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Color(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass ValidationRule 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ValidationRule : IVValidationRule
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.ValidationRule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.ValidationRule array</returns>
+		public static NetOffice.VisioApi.ValidationRule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","ValidationRule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationRule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationRule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.ValidationRule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.ValidationRule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.ValidationRule object or null</returns>
+		public static NetOffice.VisioApi.ValidationRule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ValidationRule", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ValidationRule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.ValidationRule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.ValidationRule object or null</returns>
+		public static NetOffice.VisioApi.ValidationRule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ValidationRule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ValidationRule(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

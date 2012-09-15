@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ViewField objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ViewField array</returns>
+		public static NetOffice.OutlookApi.ViewField[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ViewField");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewField> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewField>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ViewField(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewField object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ViewField object or null</returns>
+		public static NetOffice.OutlookApi.ViewField GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewField", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewField(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewField object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ViewField object or null</returns>
+		public static NetOffice.OutlookApi.ViewField GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewField", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewField(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

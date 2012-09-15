@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass ValidationIssue 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ValidationIssue : IVValidationIssue
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.ValidationIssue objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.ValidationIssue array</returns>
+		public static NetOffice.VisioApi.ValidationIssue[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","ValidationIssue");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationIssue> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ValidationIssue>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.ValidationIssue(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.ValidationIssue object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.ValidationIssue object or null</returns>
+		public static NetOffice.VisioApi.ValidationIssue GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ValidationIssue", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ValidationIssue(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.ValidationIssue object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.ValidationIssue object or null</returns>
+		public static NetOffice.VisioApi.ValidationIssue GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ValidationIssue", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ValidationIssue(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

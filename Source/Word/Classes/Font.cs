@@ -91,6 +91,49 @@ namespace NetOffice.WordApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Word.Font objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Word.Font array</returns>
+		public static NetOffice.WordApi.Font[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Word","Font");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.Font> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.Font>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.WordApi.Font(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Word.Font object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Word.Font object or null</returns>
+		public static NetOffice.WordApi.Font GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","Font", false);
+			if(null != proxy)
+				return new NetOffice.WordApi.Font(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Word.Font object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Word.Font object or null</returns>
+		public static NetOffice.WordApi.Font GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","Font", throwOnError);
+			if(null != proxy)
+				return new NetOffice.WordApi.Font(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

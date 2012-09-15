@@ -59,6 +59,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChildItems(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

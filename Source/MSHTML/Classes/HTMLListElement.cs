@@ -155,6 +155,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLListElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLListElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLListElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLListElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLListElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLListElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLListElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLListElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLListElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLListElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLListElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLListElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLListElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLListElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLListElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLListElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLListElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

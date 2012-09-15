@@ -94,6 +94,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.References objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.References array</returns>
+		public static NetOffice.VBIDEApi.References[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","References");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.References> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.References>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.References(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.References object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.References object or null</returns>
+		public static NetOffice.VBIDEApi.References GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","References", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.References(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.References object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.References object or null</returns>
+		public static NetOffice.VBIDEApi.References GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","References", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.References(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

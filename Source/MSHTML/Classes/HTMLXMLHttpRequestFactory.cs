@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLXMLHttpRequestFactory objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLXMLHttpRequestFactory array</returns>
+		public static NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLXMLHttpRequestFactory");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLXMLHttpRequestFactory object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLXMLHttpRequestFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLXMLHttpRequestFactory", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLXMLHttpRequestFactory object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLXMLHttpRequestFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLXMLHttpRequestFactory", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLXMLHttpRequestFactory(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

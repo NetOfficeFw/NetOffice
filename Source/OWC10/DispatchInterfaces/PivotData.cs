@@ -243,6 +243,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="column">NetOffice.OWC10Api.PivotColumnMember Column</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DetailLeft(NetOffice.OWC10Api.PivotColumnMember column, Int32 value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column);

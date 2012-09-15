@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.Addins objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.Addins array</returns>
+		public static NetOffice.VBIDEApi.Addins[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","Addins");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Addins> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Addins>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.Addins(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Addins object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.Addins object or null</returns>
+		public static NetOffice.VBIDEApi.Addins GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Addins", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Addins(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Addins object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.Addins object or null</returns>
+		public static NetOffice.VBIDEApi.Addins GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Addins", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Addins(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

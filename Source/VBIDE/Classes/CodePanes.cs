@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.CodePanes objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.CodePanes array</returns>
+		public static NetOffice.VBIDEApi.CodePanes[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","CodePanes");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePanes> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePanes>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.CodePanes(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.CodePanes object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.CodePanes object or null</returns>
+		public static NetOffice.VBIDEApi.CodePanes GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","CodePanes", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.CodePanes(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.CodePanes object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.CodePanes object or null</returns>
+		public static NetOffice.VBIDEApi.CodePanes GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","CodePanes", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.CodePanes(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

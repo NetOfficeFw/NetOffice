@@ -104,6 +104,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.OlkCommandButton objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.OlkCommandButton array</returns>
+		public static NetOffice.OutlookApi.OlkCommandButton[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OlkCommandButton");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCommandButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkCommandButton>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.OlkCommandButton(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OlkCommandButton object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.OlkCommandButton object or null</returns>
+		public static NetOffice.OutlookApi.OlkCommandButton GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkCommandButton", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OlkCommandButton(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OlkCommandButton object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.OlkCommandButton object or null</returns>
+		public static NetOffice.OutlookApi.OlkCommandButton GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkCommandButton", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OlkCommandButton(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

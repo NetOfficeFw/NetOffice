@@ -105,6 +105,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLObjectElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLObjectElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLObjectElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLObjectElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLObjectElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLObjectElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLObjectElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLObjectElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLObjectElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLObjectElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLObjectElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLObjectElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLObjectElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLObjectElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLObjectElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLObjectElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLObjectElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

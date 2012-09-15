@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Layers 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Layers : IVLayers
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Layers objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Layers array</returns>
+		public static NetOffice.VisioApi.Layers[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Layers");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Layers> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Layers>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Layers(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Layers object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Layers object or null</returns>
+		public static NetOffice.VisioApi.Layers GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Layers", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Layers(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Layers object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Layers object or null</returns>
+		public static NetOffice.VisioApi.Layers GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Layers", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Layers(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

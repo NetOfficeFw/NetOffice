@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HtmlDlgSafeHelper objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HtmlDlgSafeHelper array</returns>
+		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HtmlDlgSafeHelper");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HtmlDlgSafeHelper> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HtmlDlgSafeHelper>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HtmlDlgSafeHelper object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HtmlDlgSafeHelper object or null</returns>
+		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HtmlDlgSafeHelper", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HtmlDlgSafeHelper object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HtmlDlgSafeHelper object or null</returns>
+		public static NetOffice.MSHTMLApi.HtmlDlgSafeHelper GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HtmlDlgSafeHelper", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HtmlDlgSafeHelper(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

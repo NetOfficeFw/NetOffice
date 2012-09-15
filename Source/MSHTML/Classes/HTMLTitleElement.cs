@@ -155,6 +155,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLTitleElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTitleElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLTitleElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLTitleElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTitleElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTitleElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLTitleElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTitleElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTitleElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTitleElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTitleElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTitleElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTitleElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLTitleElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTitleElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTitleElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTitleElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.DoNotUseMeFolder objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.DoNotUseMeFolder array</returns>
+		public static NetOffice.OutlookApi.DoNotUseMeFolder[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","DoNotUseMeFolder");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DoNotUseMeFolder> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DoNotUseMeFolder>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DoNotUseMeFolder object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.DoNotUseMeFolder object or null</returns>
+		public static NetOffice.OutlookApi.DoNotUseMeFolder GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DoNotUseMeFolder", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DoNotUseMeFolder object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.DoNotUseMeFolder object or null</returns>
+		public static NetOffice.OutlookApi.DoNotUseMeFolder GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DoNotUseMeFolder", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DoNotUseMeFolder(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

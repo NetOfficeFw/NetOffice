@@ -61,6 +61,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="level">optional Int32 Level</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 get_ItemCount(Int32 level)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(level);

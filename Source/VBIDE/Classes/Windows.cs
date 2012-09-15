@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.Windows objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.Windows array</returns>
+		public static NetOffice.VBIDEApi.Windows[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","Windows");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Windows> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Windows>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.Windows(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Windows object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.Windows object or null</returns>
+		public static NetOffice.VBIDEApi.Windows GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Windows", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Windows(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Windows object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.Windows object or null</returns>
+		public static NetOffice.VBIDEApi.Windows GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Windows", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Windows(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

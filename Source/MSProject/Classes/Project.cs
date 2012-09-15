@@ -100,6 +100,49 @@ namespace NetOffice.MSProjectApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSProject.Project objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSProject.Project array</returns>
+		public static NetOffice.MSProjectApi.Project[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSProject","Project");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Project> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Project>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSProjectApi.Project(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSProject.Project object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSProject.Project object or null</returns>
+		public static NetOffice.MSProjectApi.Project GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Project", false);
+			if(null != proxy)
+				return new NetOffice.MSProjectApi.Project(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSProject.Project object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSProject.Project object or null</returns>
+		public static NetOffice.MSProjectApi.Project GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Project", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSProjectApi.Project(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -4945,857 +4945,857 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjPERTTaskNotes = 188743695,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744160</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineFixedCost = 188744160,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744169</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1FixedCost = 188744169,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744180</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2FixedCost = 188744180,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744191</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3FixedCost = 188744191,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744202</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4FixedCost = 188744202,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744213</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5FixedCost = 188744213,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744231</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6FixedCost = 188744231,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744242</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7FixedCost = 188744242,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744253</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8FixedCost = 188744253,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744264</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9FixedCost = 188744264,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744275</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10FixedCost = 188744275,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744808</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTasknull_prop = 188744808,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744823</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskGuid = 188744823,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744824</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskCalendarGuid = 188744824,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744826</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskDeliverableGuid = 188744826,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744827</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskDeliverableType = 188744827,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744832</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskDeliverableStart = 188744832,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744833</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskDeliverableFinish = 188744833,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744845</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskIsPublished = 188744845,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744846</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskStatusManagerName = 188744846,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744847</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskErrorMessage = 188744847,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744850</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskAssignment_Owner = 188744850,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744851</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBudgetWork = 188744851,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744852</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBudgetCost = 188744852,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744853</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineFixedCostAccrual = 188744853,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744854</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineDeliverableStart = 188744854,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744855</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineDeliverableFinish = 188744855,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744856</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineBudgetWork = 188744856,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744857</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaselineBudgetCost = 188744857,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744860</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1FixedCostAccrual = 188744860,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744861</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1DeliverableStart = 188744861,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744862</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1DeliverableFinish = 188744862,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744863</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1BudgetWork = 188744863,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744864</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline1BudgetCost = 188744864,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744867</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2FixedCostAccrual = 188744867,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744868</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2DeliverableStart = 188744868,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744869</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2DeliverableFinish = 188744869,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744870</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2BudgetWork = 188744870,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744871</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline2BudgetCost = 188744871,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744874</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3FixedCostAccrual = 188744874,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744875</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3DeliverableStart = 188744875,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744876</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3DeliverableFinish = 188744876,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744877</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3BudgetWork = 188744877,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744878</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline3BudgetCost = 188744878,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744881</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4FixedCostAccrual = 188744881,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744882</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4DeliverableStart = 188744882,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744883</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4DeliverableFinish = 188744883,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744884</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4BudgetWork = 188744884,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744885</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline4BudgetCost = 188744885,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744888</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5FixedCostAccrual = 188744888,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744889</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5DeliverableStart = 188744889,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744890</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5DeliverableFinish = 188744890,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744891</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5BudgetWork = 188744891,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744892</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline5BudgetCost = 188744892,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744895</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6FixedCostAccrual = 188744895,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744896</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6DeliverableStart = 188744896,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744897</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6DeliverableFinish = 188744897,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744898</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6BudgetWork = 188744898,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744899</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline6BudgetCost = 188744899,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744902</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7FixedCostAccrual = 188744902,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744903</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7DeliverableStart = 188744903,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744904</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7DeliverableFinish = 188744904,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744905</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7BudgetWork = 188744905,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744906</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline7BudgetCost = 188744906,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744909</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8FixedCostAccrual = 188744909,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744910</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8DeliverableStart = 188744910,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744911</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8DeliverableFinish = 188744911,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744912</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8BudgetWork = 188744912,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744913</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline8BudgetCost = 188744913,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744916</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9FixedCostAccrual = 188744916,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744917</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9DeliverableStart = 188744917,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744918</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9DeliverableFinish = 188744918,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744919</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9BudgetWork = 188744919,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744920</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline9BudgetCost = 188744920,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744923</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10FixedCostAccrual = 188744923,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744924</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10DeliverableStart = 188744924,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744925</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10DeliverableFinish = 188744925,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744926</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10BudgetWork = 188744926,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744927</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskBaseline10BudgetCost = 188744927,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>188744956</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjPERTTaskDeliverableName = 188744956,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744959</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskActive = 188744959,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744960</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskManual = 188744960,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744961</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskPlaceholder = 188744961,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744962</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskWarning = 188744962,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744965</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskStartText = 188744965,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744966</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskFinishText = 188744966,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744967</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskDurationText = 188744967,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744979</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaselineStartText = 188744979,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744980</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaselineFinishText = 188744980,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744981</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaselineDurationText = 188744981,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744982</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline1StartText = 188744982,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744983</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline1FinishText = 188744983,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744984</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline1DurationText = 188744984,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744985</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline2StartText = 188744985,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744986</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline2FinishText = 188744986,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744987</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline2DurationText = 188744987,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744988</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline3StartText = 188744988,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744989</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline3FinishText = 188744989,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744990</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline3DurationText = 188744990,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744991</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline4StartText = 188744991,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744992</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline4FinishText = 188744992,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744993</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline4DurationText = 188744993,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744994</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline5StartText = 188744994,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744995</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline5FinishText = 188744995,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744996</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline5DurationText = 188744996,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744997</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline6StartText = 188744997,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744998</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline6FinishText = 188744998,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188744999</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline6DurationText = 188744999,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745000</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline7StartText = 188745000,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745001</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline7FinishText = 188745001,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745002</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline7DurationText = 188745002,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745003</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline8StartText = 188745003,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745004</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline8FinishText = 188745004,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745005</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline8DurationText = 188745005,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745006</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline9StartText = 188745006,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745007</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline9FinishText = 188745007,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745008</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline9DurationText = 188745008,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745009</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline10StartText = 188745009,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745010</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline10FinishText = 188745010,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745011</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskBaseline10DurationText = 188745011,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745012</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskIgnoreWarnings = 188745012,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>188745015</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjPERTTaskAssignmentPeakUnits = 188745015
 	}
 }

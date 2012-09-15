@@ -1,1 +1,1 @@
-﻿		_application = new Factory.CreateObjectFromComProxy(Nothing, Application)
+﻿		_application = Factory.CreateObjectFromComProxy(Nothing, Application)

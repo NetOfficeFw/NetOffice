@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ToOrFromRuleCondition objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ToOrFromRuleCondition array</returns>
+		public static NetOffice.OutlookApi.ToOrFromRuleCondition[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ToOrFromRuleCondition");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ToOrFromRuleCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ToOrFromRuleCondition>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ToOrFromRuleCondition(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ToOrFromRuleCondition object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ToOrFromRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.ToOrFromRuleCondition GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ToOrFromRuleCondition", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ToOrFromRuleCondition(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ToOrFromRuleCondition object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ToOrFromRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.ToOrFromRuleCondition GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ToOrFromRuleCondition", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ToOrFromRuleCondition(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

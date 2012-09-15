@@ -61,6 +61,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -87,6 +88,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -113,6 +115,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Vertices(object index1, object index2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -146,6 +149,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Vertices(object index1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);

@@ -107,6 +107,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access._CheckBoxInOption objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access._CheckBoxInOption array</returns>
+		public static NetOffice.AccessApi._CheckBoxInOption[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_CheckBoxInOption");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._CheckBoxInOption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._CheckBoxInOption>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi._CheckBoxInOption(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access._CheckBoxInOption object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access._CheckBoxInOption object or null</returns>
+		public static NetOffice.AccessApi._CheckBoxInOption GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_CheckBoxInOption", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi._CheckBoxInOption(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access._CheckBoxInOption object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access._CheckBoxInOption object or null</returns>
+		public static NetOffice.AccessApi._CheckBoxInOption GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_CheckBoxInOption", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi._CheckBoxInOption(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

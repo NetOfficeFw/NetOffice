@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass GraphicItem 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class GraphicItem : IVGraphicItem
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.GraphicItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.GraphicItem array</returns>
+		public static NetOffice.VisioApi.GraphicItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","GraphicItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.GraphicItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.GraphicItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.GraphicItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.GraphicItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.GraphicItem object or null</returns>
+		public static NetOffice.VisioApi.GraphicItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","GraphicItem", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.GraphicItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.GraphicItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.GraphicItem object or null</returns>
+		public static NetOffice.VisioApi.GraphicItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","GraphicItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.GraphicItem(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

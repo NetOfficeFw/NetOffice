@@ -102,6 +102,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ProgressBar objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ProgressBar array</returns>
+		public static NetOffice.MSComctlLibApi.ProgressBar[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ProgressBar");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ProgressBar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ProgressBar>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ProgressBar(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ProgressBar object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ProgressBar object or null</returns>
+		public static NetOffice.MSComctlLibApi.ProgressBar GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ProgressBar", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ProgressBar(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ProgressBar object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ProgressBar object or null</returns>
+		public static NetOffice.MSComctlLibApi.ProgressBar GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ProgressBar", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ProgressBar(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

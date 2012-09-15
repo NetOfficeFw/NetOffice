@@ -160,6 +160,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLTextAreaElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTextAreaElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLTextAreaElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLTextAreaElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTextAreaElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTextAreaElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLTextAreaElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTextAreaElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTextAreaElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTextAreaElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTextAreaElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTextAreaElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTextAreaElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLTextAreaElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTextAreaElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTextAreaElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTextAreaElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

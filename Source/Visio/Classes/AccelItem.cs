@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass AccelItem 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AccelItem : IVAccelItem
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.AccelItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.AccelItem array</returns>
+		public static NetOffice.VisioApi.AccelItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","AccelItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.AccelItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.AccelItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.AccelItem object or null</returns>
+		public static NetOffice.VisioApi.AccelItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","AccelItem", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.AccelItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.AccelItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.AccelItem object or null</returns>
+		public static NetOffice.VisioApi.AccelItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","AccelItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.AccelItem(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

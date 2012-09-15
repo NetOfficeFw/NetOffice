@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _Relation 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Relation : _DAO
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Name
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Table
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string ForeignTable
 		{
 			get
@@ -134,10 +134,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 Attributes
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public bool PartialReplica
 		{
 			get
@@ -194,12 +194,12 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="size">optional object Size</param>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
@@ -209,10 +209,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Field CreateField()
 		{
 			object[] paramsArray = null;
@@ -222,11 +222,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Field CreateField(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -236,12 +236,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);

@@ -59,10 +59,10 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjMicrosoftSchedulePlus = 6,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjMicrosoftPublisher = 7
 	}
 }

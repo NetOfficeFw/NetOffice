@@ -863,6 +863,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="path">NetOffice.WordApi.Enums.WdDefaultFilePath Path</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);

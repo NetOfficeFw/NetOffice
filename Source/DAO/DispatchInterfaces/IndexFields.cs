@@ -65,9 +65,9 @@ namespace NetOffice.DAOApi
 
 	///<summary>
 	/// DispatchInterface IndexFields 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IndexFields : IndexFields_ ,IEnumerable<object>
 	{
@@ -129,10 +129,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int16 Count
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
 		/// <param name="item">optional object Item</param>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public object this[object item]
 		{
@@ -173,9 +173,9 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;
@@ -187,9 +187,9 @@ namespace NetOffice.DAOApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute DAO, 5,12
+		/// SupportByVersionAttribute DAO, 12,3.6
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -202,9 +202,9 @@ namespace NetOffice.DAOApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute DAO, 5,12
+		/// SupportByVersionAttribute DAO, 12,3.6
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIODATACOLUMNS 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIODATACOLUMNS : COMObject ,IEnumerable<NetOffice.VisioApi.IVDataColumn>
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 Stat
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVDataRecordset DataRecordset
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -167,11 +167,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="indexOrName">object IndexOrName</param>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVDataColumn this[object indexOrName]
 		{
@@ -189,12 +189,12 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// </summary>
 		/// <param name="columnNames">String[] ColumnNames</param>
 		/// <param name="properties">Int32[] Properties</param>
 		/// <param name="values">object[] Values</param>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public void SetColumnProperties(String[] columnNames, Int32[] properties, object[] values)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray((object)columnNames, (object)properties, (object)values);
@@ -206,9 +206,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVDataColumn> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 12,14
+		/// SupportByVersionAttribute Visio, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
        public IEnumerator<NetOffice.VisioApi.IVDataColumn> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -221,9 +221,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 12,14
+		/// SupportByVersionAttribute Visio, 12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

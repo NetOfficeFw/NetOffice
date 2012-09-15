@@ -91,6 +91,49 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running ADODB.Command objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an ADODB.Command array</returns>
+		public static NetOffice.ADODBApi.Command[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Command");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Command> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Command>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ADODBApi.Command(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Command object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an ADODB.Command object or null</returns>
+		public static NetOffice.ADODBApi.Command GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Command", false);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Command(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Command object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an ADODB.Command object or null</returns>
+		public static NetOffice.ADODBApi.Command GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Command", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Command(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -109,6 +109,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.NavigationControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.NavigationControl array</returns>
+		public static NetOffice.AccessApi.NavigationControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","NavigationControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.NavigationControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.NavigationControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.NavigationControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.NavigationControl object or null</returns>
+		public static NetOffice.AccessApi.NavigationControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","NavigationControl", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.NavigationControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.NavigationControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.NavigationControl object or null</returns>
+		public static NetOffice.AccessApi.NavigationControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","NavigationControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.NavigationControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

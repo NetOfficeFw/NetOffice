@@ -93,6 +93,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Explorers objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Explorers array</returns>
+		public static NetOffice.OutlookApi.Explorers[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Explorers");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorers> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Explorers>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Explorers(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Explorers object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Explorers object or null</returns>
+		public static NetOffice.OutlookApi.Explorers GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Explorers", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Explorers(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Explorers object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Explorers object or null</returns>
+		public static NetOffice.OutlookApi.Explorers GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Explorers", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Explorers(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -103,6 +103,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLWindowProxy objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWindowProxy array</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindowProxy[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLWindowProxy");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindowProxy> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindowProxy>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWindowProxy object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWindowProxy object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindowProxy GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWindowProxy", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWindowProxy object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLWindowProxy object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindowProxy GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWindowProxy", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWindowProxy(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

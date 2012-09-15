@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.DataAccessPage objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.DataAccessPage array</returns>
+		public static NetOffice.AccessApi.DataAccessPage[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","DataAccessPage");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DataAccessPage> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DataAccessPage>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.DataAccessPage(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.DataAccessPage object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.DataAccessPage object or null</returns>
+		public static NetOffice.AccessApi.DataAccessPage GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","DataAccessPage", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.DataAccessPage(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.DataAccessPage object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.DataAccessPage object or null</returns>
+		public static NetOffice.AccessApi.DataAccessPage GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","DataAccessPage", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.DataAccessPage(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

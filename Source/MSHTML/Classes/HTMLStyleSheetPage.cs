@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLStyleSheetPage objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheetPage array</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetPage[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLStyleSheetPage");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheetPage> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheetPage>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLStyleSheetPage(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheetPage object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheetPage object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetPage GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheetPage", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheetPage(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheetPage object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLStyleSheetPage object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetPage GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheetPage", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheetPage(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.AutoCorrect objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.AutoCorrect array</returns>
+		public static NetOffice.AccessApi.AutoCorrect[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AutoCorrect");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AutoCorrect> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AutoCorrect>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.AutoCorrect(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.AutoCorrect object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.AutoCorrect object or null</returns>
+		public static NetOffice.AccessApi.AutoCorrect GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AutoCorrect", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AutoCorrect(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.AutoCorrect object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.AutoCorrect object or null</returns>
+		public static NetOffice.AccessApi.AutoCorrect GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AutoCorrect", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AutoCorrect(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

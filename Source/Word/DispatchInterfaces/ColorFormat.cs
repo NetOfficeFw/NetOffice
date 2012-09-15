@@ -259,6 +259,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Ink(Int32 index, Single value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

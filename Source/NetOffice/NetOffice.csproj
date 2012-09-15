@@ -31,8 +31,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,6 +55,12 @@
     <DocumentationFile>bin\Release\NetOffice.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -64,18 +69,21 @@
   <ItemGroup>
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
+    <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
     <Compile Include="CacheOptions.cs" />
     <Compile Include="DebugConsole.cs" />
     <Compile Include="Attributes\EntityTypeAttribute.cs" />
     <Compile Include="DependentAssembly.cs" />
     <Compile Include="EntityNotSupportedException.cs" />
-    <Compile Include="LateBindingApiException.cs" />
+    <Compile Include="ExceptionMessageHandling.cs" />
+    <Compile Include="NetOfficeException.cs" />
+    <Compile Include="OnDisposeEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="COMObject.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Interfaces\IFactoryInfo.cs" />
     <Compile Include="Invoker.cs" />
-    <Compile Include="Attributes\LateBindingAttribute.cs" />
+    <Compile Include="RunningObjectTable.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SinkHelper.cs" />
     <Compile Include="Attributes\SupportByVersionAttribute.cs" />
@@ -102,9 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="KeyTokens.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="NetOffice_v2.0.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

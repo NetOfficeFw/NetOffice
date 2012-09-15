@@ -55,7 +55,7 @@ namespace NetOffice
         #region Properties
 
         /// <summary>
-        /// returns an array about currently loaded LateBindingApi assemblies
+        /// returns an array about currently loaded NetOfficeApi assemblies
         /// </summary>
         public static IFactoryInfo[] Assemblies
         {
@@ -144,7 +144,7 @@ namespace NetOffice
 
         /// <summary>
         /// Must be called from client assembly for COMObject Support
-        /// Recieve factory infos from all loaded LateBindingApi Assemblies in current application domain
+        /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// </summary>
         public static void Initialize()
         {
@@ -821,7 +821,7 @@ namespace NetOffice
                 foreach (object itemAttribute in attributes)
                 {
                     string fullnameAttribute = itemAttribute.GetType().FullName;
-                    if (fullnameAttribute == "NetOffice.LateBindingAttribute")
+                    if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
                         return true;
                 }
                 return false;
@@ -909,14 +909,17 @@ namespace NetOffice
             foreach (object itemAttribute in attributes)
             {
                 string fullnameAttribute = itemAttribute.GetType().FullName;
-                if (fullnameAttribute == "NetOffice.LateBindingAttribute")
+                DebugConsole.WriteLine("Attribute:{0}", fullnameAttribute);
+                if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
                 {
                     Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
                     IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
-
+                  
                     bool exists = false;
                     foreach (IFactoryInfo itemFactory in _factoryList)
                     {
+                        DebugConsole.WriteLine("IFactoryInfo:{0}:{1}", itemFactory.Assembly.FullName, factoryInfo.Assembly.FullName);
+
                         if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
                         {
                             exists = true;
@@ -1007,7 +1010,7 @@ namespace NetOffice
             {
                 string notInitMessage = "Factory is initialized with NetOffice assemblies." + Environment.NewLine;
                 notInitMessage = "Please call NetOffice.Factory.Initialize()";
-                throw new LateBindingApiException(notInitMessage);
+                throw new NetOfficeException(notInitMessage);
             }
 
             string className = TypeDescriptor.GetClassName(comProxy);
@@ -1026,12 +1029,12 @@ namespace NetOffice
                     return item;
             }
 
-            string message = string.Format("class {0}:{1} not found in loaded LateBindingApi Assemblies{2}", hostGuid, className, Environment.NewLine);
-            message += string.Format("Currently loaded LateBindingApi Assemblies{0}", Environment.NewLine);
+            string message = string.Format("class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
+            message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
             foreach (IFactoryInfo item in _factoryList)
-                message += string.Format("Loaded LateBindingApi Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
+                message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
 
-            throw new LateBindingApiException(message);
+            throw new NetOfficeException(message);
         }
 
         private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)

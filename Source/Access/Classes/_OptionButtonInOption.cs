@@ -107,6 +107,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access._OptionButtonInOption objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access._OptionButtonInOption array</returns>
+		public static NetOffice.AccessApi._OptionButtonInOption[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_OptionButtonInOption");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._OptionButtonInOption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._OptionButtonInOption>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi._OptionButtonInOption(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access._OptionButtonInOption object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access._OptionButtonInOption object or null</returns>
+		public static NetOffice.AccessApi._OptionButtonInOption GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_OptionButtonInOption", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi._OptionButtonInOption(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access._OptionButtonInOption object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access._OptionButtonInOption object or null</returns>
+		public static NetOffice.AccessApi._OptionButtonInOption GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_OptionButtonInOption", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi._OptionButtonInOption(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

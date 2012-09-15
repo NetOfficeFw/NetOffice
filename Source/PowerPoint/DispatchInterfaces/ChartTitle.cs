@@ -61,6 +61,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -87,6 +88,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

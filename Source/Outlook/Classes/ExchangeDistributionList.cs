@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ExchangeDistributionList objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ExchangeDistributionList array</returns>
+		public static NetOffice.OutlookApi.ExchangeDistributionList[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ExchangeDistributionList");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ExchangeDistributionList> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ExchangeDistributionList>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ExchangeDistributionList(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ExchangeDistributionList object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ExchangeDistributionList object or null</returns>
+		public static NetOffice.OutlookApi.ExchangeDistributionList GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ExchangeDistributionList", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ExchangeDistributionList(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ExchangeDistributionList object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ExchangeDistributionList object or null</returns>
+		public static NetOffice.OutlookApi.ExchangeDistributionList GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ExchangeDistributionList", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ExchangeDistributionList(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

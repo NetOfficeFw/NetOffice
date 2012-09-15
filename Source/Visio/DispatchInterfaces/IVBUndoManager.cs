@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVBUndoManager 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBUndoManager : COMObject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pUnit">NetOffice.VisioApi.IVBUndoUnit pUnit</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Add(NetOffice.VisioApi.IVBUndoUnit pUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pUnit);

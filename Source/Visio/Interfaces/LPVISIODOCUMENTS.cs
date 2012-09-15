@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIODOCUMENTS 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIODOCUMENTS : COMObject ,IEnumerable<NetOffice.VisioApi.IVDocument>
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -105,11 +105,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="nameOrIndex">object NameOrIndex</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.VisioApi.IVDocument this[object nameOrIndex]
 		{
@@ -123,10 +123,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 Count
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVEventList EventList
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 PersistsEvents
 		{
 			get
@@ -169,11 +169,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.VisioApi.IVDocument get_ItemFromID(Int32 objectID)
 		{		
@@ -184,11 +184,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Alias for get_ItemFromID
 		/// </summary>
 		/// <param name="objectID">Int32 ObjectID</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument ItemFromID(Int32 objectID)
 		{
 			return get_ItemFromID(objectID);
@@ -199,10 +199,10 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument Add(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -212,10 +212,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument Open(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -225,11 +225,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="flags">Int16 Flags</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument OpenEx(string fileName, Int16 flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, flags);
@@ -239,10 +239,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="nameArray">String[] NameArray</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void GetNames(out String[] nameArray)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -253,10 +253,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool CanCheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -265,10 +265,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void CheckOut(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -276,13 +276,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		/// <param name="langID">optional Int32 LangID = 0</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem, Int32 flags, Int32 langID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem, flags, langID);
@@ -292,11 +292,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -306,12 +306,12 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem);
@@ -321,13 +321,13 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem, Int32 flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem, flags);
@@ -341,9 +341,9 @@ namespace NetOffice.VisioApi
        #region IEnumerable<NetOffice.VisioApi.IVDocument> Member
         
         /// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14
+		/// SupportByVersionAttribute Visio, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
        public IEnumerator<NetOffice.VisioApi.IVDocument> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -356,9 +356,9 @@ namespace NetOffice.VisioApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute Visio, 11,12,14
+		/// SupportByVersionAttribute Visio, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.SendRuleAction objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.SendRuleAction array</returns>
+		public static NetOffice.OutlookApi.SendRuleAction[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","SendRuleAction");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SendRuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SendRuleAction>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.SendRuleAction(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SendRuleAction object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.SendRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.SendRuleAction GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SendRuleAction", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SendRuleAction(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SendRuleAction object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.SendRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.SendRuleAction GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SendRuleAction", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SendRuleAction(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

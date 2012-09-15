@@ -99,6 +99,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.Section objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.Section array</returns>
+		public static NetOffice.AccessApi.Section[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Section");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Section> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Section>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.Section(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.Section object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.Section object or null</returns>
+		public static NetOffice.AccessApi.Section GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Section", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Section(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.Section object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.Section object or null</returns>
+		public static NetOffice.AccessApi.Section GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Section", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Section(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

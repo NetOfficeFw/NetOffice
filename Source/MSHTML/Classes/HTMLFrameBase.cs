@@ -155,6 +155,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLFrameBase objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLFrameBase array</returns>
+		public static NetOffice.MSHTMLApi.HTMLFrameBase[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLFrameBase");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLFrameBase> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLFrameBase>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLFrameBase(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLFrameBase object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLFrameBase object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLFrameBase GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLFrameBase", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLFrameBase(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLFrameBase object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLFrameBase object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLFrameBase GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLFrameBase", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLFrameBase(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

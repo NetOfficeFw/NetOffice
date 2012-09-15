@@ -155,6 +155,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLAnchorElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLAnchorElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLAnchorElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLAnchorElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLAnchorElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLAnchorElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLAnchorElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLAnchorElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLAnchorElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLAnchorElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLAnchorElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLAnchorElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLAnchorElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLAnchorElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLAnchorElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLAnchorElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLAnchorElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

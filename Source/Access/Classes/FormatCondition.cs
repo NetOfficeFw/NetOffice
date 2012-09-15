@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.FormatCondition objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.FormatCondition array</returns>
+		public static NetOffice.AccessApi.FormatCondition[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","FormatCondition");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.FormatCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.FormatCondition>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.FormatCondition(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.FormatCondition object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.FormatCondition object or null</returns>
+		public static NetOffice.AccessApi.FormatCondition GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","FormatCondition", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.FormatCondition(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.FormatCondition object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.FormatCondition object or null</returns>
+		public static NetOffice.AccessApi.FormatCondition GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","FormatCondition", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.FormatCondition(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

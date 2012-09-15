@@ -106,6 +106,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.OlkTimeControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.OlkTimeControl array</returns>
+		public static NetOffice.OutlookApi.OlkTimeControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OlkTimeControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OlkTimeControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.OlkTimeControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OlkTimeControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.OlkTimeControl object or null</returns>
+		public static NetOffice.OutlookApi.OlkTimeControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkTimeControl", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OlkTimeControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OlkTimeControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.OlkTimeControl object or null</returns>
+		public static NetOffice.OutlookApi.OlkTimeControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OlkTimeControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OlkTimeControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

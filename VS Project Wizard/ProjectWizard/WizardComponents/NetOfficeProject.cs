@@ -163,6 +163,13 @@ namespace NetOffice.ProjectWizard
                     AddToList(list, "MSDATASRCApi");
                     AddToList(list, "MSComctlLibApi");
                     break;
+                case "Project":
+                    AddToList(list, "OfficeApi");
+                    AddToList(list, "MSHTMLApi");
+                    break;
+                case "Visio":
+                    // fun fact: viso is a standalone application
+                    break;
                 default:
                     break;
             }
@@ -188,8 +195,16 @@ namespace NetOffice.ProjectWizard
             {
                 if (item.Attributes[0].Value.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    AddToList(namesList, item.Name + "Api");
-                    SetDependencyAssemblyReferences(namesList, item.Name);
+                    if (item.Name == "Project")
+                    {
+                        AddToList(namesList, "MS" + item.Name + "Api");
+                        SetDependencyAssemblyReferences(namesList, item.Name);
+                    }
+                    else
+                    { 
+                        AddToList(namesList, item.Name + "Api");
+                        SetDependencyAssemblyReferences(namesList, item.Name);
+                    }
                 }
             }
 
@@ -200,10 +215,32 @@ namespace NetOffice.ProjectWizard
             _addDictionary.Add("$assemblyReferences$", Environment.NewLine + references);
             namesList.ToArray();
         }
- 
+
+        private Control GetControl(string name)
+        {
+            foreach (Control item in _listControls)
+	        {
+                if (item.Name == name)
+                    return item;
+	        }
+            throw new ArgumentOutOfRangeException("name");
+        }
+
+        private bool IsOnlyVisioSelected
+        {
+            get 
+            {
+                HostControl hostControl = GetControl("HostControl") as HostControl;
+                return hostControl.IsOnlyVisioSelected;
+            }
+        }
+
         protected internal string GetDefaultUsings()
         {
             string usingItems = "";
+            if (IsOnlyVisioSelected)
+                return "";
+
             if (TargetProgrammLanguage == TargetProgrammingLanguage.CSharp)
             {
                 usingItems = string.Format("using NetOffice;{0}", Environment.NewLine);
@@ -231,11 +268,15 @@ namespace NetOffice.ProjectWizard
                    
             foreach (string item in _neededNetOfficeAssemblies)
             {
-                string destinationAssemblyFile = Path.Combine(destinationAssemblyFolder, item + ".dll");
-                string destinationDocuFile = Path.Combine(destinationAssemblyFolder, item + ".xml");
+                string validatedItem = item;
+                if (validatedItem == "ProjectApi")
+                    validatedItem = "MSProjectApi";
 
-                string sourceAssemblyFile = string.Format("{2}\\{0}\\{1}", _targetRuntime, item + ".dll", rootPath);
-                string sourceDocuFile = string.Format("{2}\\DocuFiles\\{1}", _targetRuntime, item + ".xml", rootPath);
+                string destinationAssemblyFile = Path.Combine(destinationAssemblyFolder, validatedItem + ".dll");
+                string destinationDocuFile = Path.Combine(destinationAssemblyFolder, validatedItem + ".xml");
+
+                string sourceAssemblyFile = string.Format("{2}\\{0}\\{1}", _targetRuntime, validatedItem + ".dll", rootPath);
+                string sourceDocuFile = string.Format("{2}\\DocuFiles\\{1}", _targetRuntime, validatedItem + ".xml", rootPath);
 
                 File.Copy(sourceAssemblyFile, destinationAssemblyFile);
                 File.Copy(sourceDocuFile, destinationDocuFile);
@@ -262,8 +303,8 @@ namespace NetOffice.ProjectWizard
         }
 
         internal virtual void FinishAction()
-        { 
-
+        {
+            throw new InvalidOperationException("Pure virtual function call."); 
         }
          
         #endregion

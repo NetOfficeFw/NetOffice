@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.MacroError objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.MacroError array</returns>
+		public static NetOffice.AccessApi.MacroError[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","MacroError");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.MacroError> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.MacroError>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.MacroError(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.MacroError object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.MacroError object or null</returns>
+		public static NetOffice.AccessApi.MacroError GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","MacroError", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.MacroError(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.MacroError object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.MacroError object or null</returns>
+		public static NetOffice.AccessApi.MacroError GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","MacroError", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.MacroError(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

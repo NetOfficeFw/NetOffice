@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass MouseEvent 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MouseEvent : IVMouseEvent
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.MouseEvent objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.MouseEvent array</returns>
+		public static NetOffice.VisioApi.MouseEvent[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","MouseEvent");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MouseEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MouseEvent>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.MouseEvent(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.MouseEvent object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.MouseEvent object or null</returns>
+		public static NetOffice.VisioApi.MouseEvent GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MouseEvent", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MouseEvent(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.MouseEvent object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.MouseEvent object or null</returns>
+		public static NetOffice.VisioApi.MouseEvent GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MouseEvent", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MouseEvent(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

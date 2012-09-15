@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.CardView objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.CardView array</returns>
+		public static NetOffice.OutlookApi.CardView[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","CardView");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CardView> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CardView>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.CardView(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CardView object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.CardView object or null</returns>
+		public static NetOffice.OutlookApi.CardView GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CardView", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CardView(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CardView object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.CardView object or null</returns>
+		public static NetOffice.OutlookApi.CardView GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CardView", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CardView(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

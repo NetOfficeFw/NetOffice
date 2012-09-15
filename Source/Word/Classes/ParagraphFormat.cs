@@ -91,6 +91,49 @@ namespace NetOffice.WordApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Word.ParagraphFormat objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Word.ParagraphFormat array</returns>
+		public static NetOffice.WordApi.ParagraphFormat[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Word","ParagraphFormat");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.ParagraphFormat> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.ParagraphFormat>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.WordApi.ParagraphFormat(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Word.ParagraphFormat object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Word.ParagraphFormat object or null</returns>
+		public static NetOffice.WordApi.ParagraphFormat GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","ParagraphFormat", false);
+			if(null != proxy)
+				return new NetOffice.WordApi.ParagraphFormat(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Word.ParagraphFormat object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Word.ParagraphFormat object or null</returns>
+		public static NetOffice.WordApi.ParagraphFormat GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","ParagraphFormat", throwOnError);
+			if(null != proxy)
+				return new NetOffice.WordApi.ParagraphFormat(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

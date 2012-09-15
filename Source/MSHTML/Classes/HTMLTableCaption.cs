@@ -157,6 +157,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLTableCaption objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTableCaption array</returns>
+		public static NetOffice.MSHTMLApi.HTMLTableCaption[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLTableCaption");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTableCaption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLTableCaption>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTableCaption object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLTableCaption object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTableCaption GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTableCaption", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLTableCaption object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLTableCaption object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLTableCaption GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLTableCaption", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLTableCaption(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

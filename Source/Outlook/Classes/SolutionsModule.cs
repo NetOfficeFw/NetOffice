@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.SolutionsModule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.SolutionsModule array</returns>
+		public static NetOffice.OutlookApi.SolutionsModule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","SolutionsModule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SolutionsModule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SolutionsModule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.SolutionsModule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SolutionsModule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.SolutionsModule object or null</returns>
+		public static NetOffice.OutlookApi.SolutionsModule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SolutionsModule", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SolutionsModule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SolutionsModule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.SolutionsModule object or null</returns>
+		public static NetOffice.OutlookApi.SolutionsModule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SolutionsModule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SolutionsModule(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

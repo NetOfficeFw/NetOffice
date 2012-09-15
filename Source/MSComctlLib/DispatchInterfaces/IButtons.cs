@@ -115,6 +115,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IButton value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

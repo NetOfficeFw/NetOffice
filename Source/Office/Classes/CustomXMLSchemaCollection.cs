@@ -91,6 +91,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CustomXMLSchemaCollection objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CustomXMLSchemaCollection array</returns>
+		public static NetOffice.OfficeApi.CustomXMLSchemaCollection[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CustomXMLSchemaCollection");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLSchemaCollection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLSchemaCollection>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomXMLSchemaCollection object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CustomXMLSchemaCollection object or null</returns>
+		public static NetOffice.OfficeApi.CustomXMLSchemaCollection GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLSchemaCollection", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomXMLSchemaCollection object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CustomXMLSchemaCollection object or null</returns>
+		public static NetOffice.OfficeApi.CustomXMLSchemaCollection GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLSchemaCollection", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomXMLSchemaCollection(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

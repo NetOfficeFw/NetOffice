@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVDataColumn 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVDataColumn : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 Stat
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVDataRecordset DataRecordset
 		{
 			get
@@ -152,10 +152,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public string Name
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public string DisplayName
 		{
 			get
@@ -187,10 +187,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public bool Visible
 		{
 			get
@@ -207,10 +207,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public bool Hyperlink
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// </summary>
 		/// <param name="property">NetOffice.VisioApi.Enums.VisDataColumnProperties Property</param>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public object GetProperty(NetOffice.VisioApi.Enums.VisDataColumnProperties property)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property);
@@ -251,11 +251,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// </summary>
 		/// <param name="property">NetOffice.VisioApi.Enums.VisDataColumnProperties Property</param>
 		/// <param name="value">object Value</param>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public void SetProperty(NetOffice.VisioApi.Enums.VisDataColumnProperties property, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(property, value);

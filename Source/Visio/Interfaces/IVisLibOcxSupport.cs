@@ -9,9 +9,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface IVisLibOcxSupport 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IVisLibOcxSupport : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string HostID
 		{
 			get
@@ -93,10 +93,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVWindow Window
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string Src
 		{
 			get
@@ -145,10 +145,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool NegotiateMenus
 		{
 			get
@@ -165,10 +165,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool NegotiateToolbars
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.Enums.VisPageSizingBehaviors PageSizingBehavior
 		{
 			get
@@ -210,9 +210,9 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 About()
 		{
 			object[] paramsArray = null;

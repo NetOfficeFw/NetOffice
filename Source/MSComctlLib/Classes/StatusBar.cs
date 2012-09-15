@@ -105,6 +105,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.StatusBar objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.StatusBar array</returns>
+		public static NetOffice.MSComctlLibApi.StatusBar[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","StatusBar");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.StatusBar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.StatusBar>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.StatusBar(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.StatusBar object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.StatusBar object or null</returns>
+		public static NetOffice.MSComctlLibApi.StatusBar GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","StatusBar", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.StatusBar(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.StatusBar object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.StatusBar object or null</returns>
+		public static NetOffice.MSComctlLibApi.StatusBar GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","StatusBar", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.StatusBar(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

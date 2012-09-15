@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVValidationRule 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVValidationRule : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int16 Stat
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int32 ID
 		{
 			get
@@ -151,10 +151,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public string NameU
 		{
 			get
@@ -171,10 +171,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public string Category
 		{
 			get
@@ -191,10 +191,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public string Description
 		{
 			get
@@ -211,10 +211,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public bool Ignored
 		{
 			get
@@ -231,10 +231,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public string FilterExpression
 		{
 			get
@@ -251,10 +251,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.Enums.VisRuleTargets TargetType
 		{
 			get
@@ -272,10 +272,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public string TestExpression
 		{
 			get
@@ -292,10 +292,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVValidationRuleSet RuleSet
 		{
 			get
@@ -312,9 +312,9 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -322,11 +322,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// </summary>
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape TargetShape</param>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage, NetOffice.VisioApi.IVShape targetShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, targetShape);
@@ -336,10 +336,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue()
 		{
 			object[] paramsArray = null;
@@ -349,11 +349,11 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// </summary>
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);

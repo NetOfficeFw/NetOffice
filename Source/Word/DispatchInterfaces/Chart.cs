@@ -61,6 +61,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -88,6 +89,7 @@ namespace NetOffice.WordApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1, object index2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -110,6 +112,7 @@ namespace NetOffice.WordApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object index2, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -134,6 +137,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -155,6 +159,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);

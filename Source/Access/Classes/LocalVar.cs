@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.LocalVar objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.LocalVar array</returns>
+		public static NetOffice.AccessApi.LocalVar[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","LocalVar");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.LocalVar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.LocalVar>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.LocalVar(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.LocalVar object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.LocalVar object or null</returns>
+		public static NetOffice.AccessApi.LocalVar GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","LocalVar", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.LocalVar(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.LocalVar object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.LocalVar object or null</returns>
+		public static NetOffice.AccessApi.LocalVar GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","LocalVar", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.LocalVar(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

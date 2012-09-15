@@ -119,6 +119,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ContactItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ContactItem array</returns>
+		public static NetOffice.OutlookApi.ContactItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ContactItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ContactItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ContactItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ContactItem object or null</returns>
+		public static NetOffice.OutlookApi.ContactItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactItem", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ContactItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ContactItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ContactItem object or null</returns>
+		public static NetOffice.OutlookApi.ContactItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ContactItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

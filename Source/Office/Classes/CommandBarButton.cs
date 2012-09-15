@@ -93,6 +93,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CommandBarButton objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CommandBarButton array</returns>
+		public static NetOffice.OfficeApi.CommandBarButton[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CommandBarButton");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarButton>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CommandBarButton(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBarButton object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CommandBarButton object or null</returns>
+		public static NetOffice.OfficeApi.CommandBarButton GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBarButton", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBarButton(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBarButton object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CommandBarButton object or null</returns>
+		public static NetOffice.OfficeApi.CommandBarButton GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBarButton", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBarButton(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

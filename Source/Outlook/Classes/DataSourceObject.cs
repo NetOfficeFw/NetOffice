@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.DataSourceObject objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.DataSourceObject array</returns>
+		public static NetOffice.OutlookApi.DataSourceObject[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","DataSourceObject");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DataSourceObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DataSourceObject>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.DataSourceObject(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DataSourceObject object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.DataSourceObject object or null</returns>
+		public static NetOffice.OutlookApi.DataSourceObject GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DataSourceObject", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DataSourceObject(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DataSourceObject object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.DataSourceObject object or null</returns>
+		public static NetOffice.OutlookApi.DataSourceObject GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DataSourceObject", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DataSourceObject(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

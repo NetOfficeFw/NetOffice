@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.SenderInAddressListRuleCondition objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.SenderInAddressListRuleCondition array</returns>
+		public static NetOffice.OutlookApi.SenderInAddressListRuleCondition[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","SenderInAddressListRuleCondition");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SenderInAddressListRuleCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.SenderInAddressListRuleCondition>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.SenderInAddressListRuleCondition(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SenderInAddressListRuleCondition object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.SenderInAddressListRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.SenderInAddressListRuleCondition GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SenderInAddressListRuleCondition", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SenderInAddressListRuleCondition(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.SenderInAddressListRuleCondition object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.SenderInAddressListRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.SenderInAddressListRuleCondition GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","SenderInAddressListRuleCondition", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.SenderInAddressListRuleCondition(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -3,15 +3,15 @@
 namespace NetOffice
 {
     /// <summary>
-    /// signals an exception occured in LateBindingApi, not in corresond latebinded assembly
+    /// signals an exception occured in NetOffice.dll, not in corresonding NetOffice assembly
     /// </summary>
-    public class LateBindingApiException : Exception 
+    public class NetOfficeException : Exception 
     {
         /// <summary>
         /// creates instance
         /// </summary>
         /// <param name="message"></param>
-        public LateBindingApiException(string message): base(message)
+        public NetOfficeException(string message) : base(message)
         { }
     }
 }

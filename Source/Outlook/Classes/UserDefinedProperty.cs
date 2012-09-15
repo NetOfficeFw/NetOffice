@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.UserDefinedProperty objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.UserDefinedProperty array</returns>
+		public static NetOffice.OutlookApi.UserDefinedProperty[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","UserDefinedProperty");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.UserDefinedProperty> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.UserDefinedProperty>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.UserDefinedProperty(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.UserDefinedProperty object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.UserDefinedProperty object or null</returns>
+		public static NetOffice.OutlookApi.UserDefinedProperty GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","UserDefinedProperty", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.UserDefinedProperty(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.UserDefinedProperty object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.UserDefinedProperty object or null</returns>
+		public static NetOffice.OutlookApi.UserDefinedProperty GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","UserDefinedProperty", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.UserDefinedProperty(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

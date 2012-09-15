@@ -9,9 +9,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface LPVISIOMENU 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class LPVISIOMENU : COMObject
 	{
@@ -73,10 +73,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string Default
 		{
@@ -89,10 +89,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string Caption
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Index
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 MDIWindowMenu
 		{
 			get
@@ -144,10 +144,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVMenuItems MenuItems
 		{
 			get
@@ -160,10 +160,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVMenus Parent
 		{
 			get
@@ -176,10 +176,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 CmdNum
 		{
 			get
@@ -196,10 +196,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 HelpContextID
 		{
@@ -217,10 +217,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 IsSeparator
 		{
@@ -233,10 +233,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 IsHierarchical
 		{
 			get
@@ -248,10 +248,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 CntrlType
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 CntrlID
 		{
@@ -289,10 +289,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 TypeSpecific1
 		{
 			get
@@ -309,10 +309,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Priority
 		{
@@ -330,10 +330,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int16 Spacing
 		{
@@ -351,10 +351,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 TypeSpecific2
 		{
 			get
@@ -371,10 +371,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string ActionText
 		{
 			get
@@ -391,10 +391,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string MiniHelp
 		{
@@ -412,10 +412,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string AddOnName
 		{
 			get
@@ -432,10 +432,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string AddOnArgs
 		{
 			get
@@ -452,10 +452,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string HelpFile
 		{
@@ -473,10 +473,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool BuiltIn
 		{
 			get
@@ -488,10 +488,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool Enabled
 		{
 			get
@@ -508,10 +508,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 FaceID
 		{
 			get
@@ -528,10 +528,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 State
 		{
 			get
@@ -548,10 +548,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 Style
 		{
 			get
@@ -568,10 +568,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public bool Visible
 		{
 			get
@@ -588,10 +588,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 Width
 		{
 			get
@@ -608,10 +608,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16 PaletteWidth
 		{
 			get
@@ -632,9 +632,9 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -642,10 +642,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="iconFileName">string IconFileName</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void IconFileName(string iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iconFileName);

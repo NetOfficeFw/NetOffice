@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLStyleFontFace objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleFontFace array</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleFontFace[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLStyleFontFace");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleFontFace> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleFontFace>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleFontFace object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleFontFace object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleFontFace GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleFontFace", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleFontFace object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLStyleFontFace object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleFontFace GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleFontFace", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleFontFace(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

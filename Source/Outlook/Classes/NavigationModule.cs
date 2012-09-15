@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.NavigationModule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.NavigationModule array</returns>
+		public static NetOffice.OutlookApi.NavigationModule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","NavigationModule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationModule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationModule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.NavigationModule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NavigationModule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.NavigationModule object or null</returns>
+		public static NetOffice.OutlookApi.NavigationModule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NavigationModule", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NavigationModule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NavigationModule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.NavigationModule object or null</returns>
+		public static NetOffice.OutlookApi.NavigationModule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NavigationModule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NavigationModule(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

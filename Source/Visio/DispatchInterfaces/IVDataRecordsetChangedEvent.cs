@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVDataRecordsetChangedEvent 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVDataRecordsetChangedEvent : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 Stat
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -120,10 +120,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVDataRecordset DataRecordset
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int32[] DataRowsAdded
 		{
 			get
@@ -151,10 +151,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int32[] DataRowsDeleted
 		{
 			get
@@ -166,10 +166,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public String[] DataColumnsAdded
 		{
 			get
@@ -181,10 +181,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public String[] DataColumnsDeleted
 		{
 			get
@@ -196,10 +196,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 12, 14
+		/// SupportByVersion Visio 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 12,14)]
+		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public String[] DataColumnsChanged
 		{
 			get

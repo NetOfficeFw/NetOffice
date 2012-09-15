@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Curve 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Curve : IVCurve
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Curve objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Curve array</returns>
+		public static NetOffice.VisioApi.Curve[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Curve");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Curve> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Curve>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Curve(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Curve object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Curve object or null</returns>
+		public static NetOffice.VisioApi.Curve GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Curve", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Curve(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Curve object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Curve object or null</returns>
+		public static NetOffice.VisioApi.Curve GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Curve", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Curve(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

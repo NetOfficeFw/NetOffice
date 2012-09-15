@@ -95,6 +95,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.SubReport objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.SubReport array</returns>
+		public static NetOffice.AccessApi.SubReport[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","SubReport");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubReport> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SubReport>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.SubReport(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.SubReport object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.SubReport object or null</returns>
+		public static NetOffice.AccessApi.SubReport GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SubReport", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SubReport(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.SubReport object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.SubReport object or null</returns>
+		public static NetOffice.AccessApi.SubReport GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SubReport", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SubReport(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

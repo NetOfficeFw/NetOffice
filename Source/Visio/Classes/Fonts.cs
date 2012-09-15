@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Fonts 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Fonts : IVFonts
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Fonts objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Fonts array</returns>
+		public static NetOffice.VisioApi.Fonts[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Fonts");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Fonts> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Fonts>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Fonts(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Fonts object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Fonts object or null</returns>
+		public static NetOffice.VisioApi.Fonts GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Fonts", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Fonts(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Fonts object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Fonts object or null</returns>
+		public static NetOffice.VisioApi.Fonts GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Fonts", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Fonts(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

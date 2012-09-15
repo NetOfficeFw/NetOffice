@@ -272,7 +272,10 @@ namespace NetOffice.ProjectWizard
         {
             string projectName = ReplacementsDictionary["$safeprojectname$"];
             string itemName = "Addin";
-            return string.Format("Software\\Microsoft\\Office\\{0}\\Addins\\{1}.{2}", officeApp, projectName, itemName);
+            if(officeApp == "Project")
+                return string.Format("Software\\Microsoft\\Office\\{0}\\Addins\\{1}.{2}", "MS" + officeApp, projectName, itemName);
+            else
+                return string.Format("Software\\Microsoft\\Office\\{0}\\Addins\\{1}.{2}", officeApp, projectName, itemName);
         }
 
         string GetAddinName()
@@ -437,7 +440,10 @@ namespace NetOffice.ProjectWizard
             {
                 if (item.Attributes[0].Value.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    usingItems += UsingCode.Replace("%Name%", item.Name);
+                    if (item.Name == "Project")
+                        usingItems += UsingCode.Replace("%Name%", "MS" + item.Name);
+                    else
+                        usingItems += UsingCode.Replace("%Name%", item.Name);
 
                     string addinName = GetAddinName();
                     string addinDescription = GetAddinDescription();
@@ -451,7 +457,12 @@ namespace NetOffice.ProjectWizard
                     registerValue = registerValue.Replace("%Description%", addinDescription);
                     registerValue = registerValue.Replace("%HiveKey%", addinHiveKey);
                     registerValue = registerValue.Replace("%OfficAddinKey%", addinOfficeKey);
-                    registerValue = registerValue.Replace("%OfficeApp%", item.Name);
+
+                    if (item.Name == "Project")
+                        registerValue = registerValue.Replace("%OfficeApp%", "MS" + item.Name);
+                    else
+                        registerValue = registerValue.Replace("%OfficeApp%", item.Name);
+
                     registerValue = registerValue.Replace("%LoadBehavior%", addinLoadBehvior);
                     registerCode += registerValue + Environment.NewLine;
                     if (_targetProgrammingLanguage == TargetProgrammingLanguage.CSharp)

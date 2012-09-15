@@ -60,6 +60,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ColumnFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -87,6 +88,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_DataFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -114,6 +116,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HiddenFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -141,6 +144,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_PageFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -168,6 +172,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_RowFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -195,6 +200,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_VisibleFields(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

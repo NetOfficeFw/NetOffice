@@ -94,6 +94,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.OutlookBarPane objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.OutlookBarPane array</returns>
+		public static NetOffice.OutlookApi.OutlookBarPane[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OutlookBarPane");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarPane> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarPane>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.OutlookBarPane(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OutlookBarPane object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.OutlookBarPane object or null</returns>
+		public static NetOffice.OutlookApi.OutlookBarPane GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OutlookBarPane", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OutlookBarPane(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OutlookBarPane object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.OutlookBarPane object or null</returns>
+		public static NetOffice.OutlookApi.OutlookBarPane GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OutlookBarPane", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OutlookBarPane(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

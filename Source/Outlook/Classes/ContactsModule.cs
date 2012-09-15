@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ContactsModule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ContactsModule array</returns>
+		public static NetOffice.OutlookApi.ContactsModule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ContactsModule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactsModule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ContactsModule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ContactsModule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ContactsModule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ContactsModule object or null</returns>
+		public static NetOffice.OutlookApi.ContactsModule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactsModule", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ContactsModule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ContactsModule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ContactsModule object or null</returns>
+		public static NetOffice.OutlookApi.ContactsModule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ContactsModule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ContactsModule(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

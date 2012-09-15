@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTCMethodBehavior objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTCMethodBehavior array</returns>
+		public static NetOffice.MSHTMLApi.HTCMethodBehavior[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTCMethodBehavior");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCMethodBehavior> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCMethodBehavior>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCMethodBehavior object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTCMethodBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCMethodBehavior GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCMethodBehavior", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCMethodBehavior object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTCMethodBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCMethodBehavior GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCMethodBehavior", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCMethodBehavior(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -38,17 +38,17 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjProjectData = 3,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjHTMLData = 4,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjUnformattedHTMLData = 5
 	}
 }

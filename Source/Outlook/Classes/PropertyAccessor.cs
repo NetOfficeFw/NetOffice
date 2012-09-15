@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.PropertyAccessor objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.PropertyAccessor array</returns>
+		public static NetOffice.OutlookApi.PropertyAccessor[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","PropertyAccessor");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.PropertyAccessor> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.PropertyAccessor>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.PropertyAccessor(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.PropertyAccessor object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.PropertyAccessor object or null</returns>
+		public static NetOffice.OutlookApi.PropertyAccessor GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","PropertyAccessor", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.PropertyAccessor(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.PropertyAccessor object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.PropertyAccessor object or null</returns>
+		public static NetOffice.OutlookApi.PropertyAccessor GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","PropertyAccessor", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.PropertyAccessor(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

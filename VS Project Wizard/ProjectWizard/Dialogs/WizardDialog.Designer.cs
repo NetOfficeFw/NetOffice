@@ -63,26 +63,28 @@
             // 
             // nextButton
             // 
-            this.nextButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.nextButton.Enabled = false;
+            this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
             this.nextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nextButton.Location = new System.Drawing.Point(447, 290);
+            this.nextButton.Location = new System.Drawing.Point(507, 321);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(92, 23);
+            this.nextButton.Size = new System.Drawing.Size(103, 26);
             this.nextButton.TabIndex = 24;
             this.nextButton.Text = "Weiter ";
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // backButton
             // 
-            this.backButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.backButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.backButton.Enabled = false;
+            this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.backButton.Location = new System.Drawing.Point(345, 290);
+            this.backButton.Location = new System.Drawing.Point(391, 321);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(92, 23);
+            this.backButton.Size = new System.Drawing.Size(103, 26);
             this.backButton.TabIndex = 25;
             this.backButton.Text = " Zurück";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -92,19 +94,21 @@
             this.panelControls.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControls.Location = new System.Drawing.Point(98, 60);
+            this.panelControls.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelControls.Location = new System.Drawing.Point(111, 60);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(466, 214);
+            this.panelControls.Size = new System.Drawing.Size(524, 245);
             this.panelControls.TabIndex = 26;
             // 
             // finishButton
             // 
-            this.finishButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.finishButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.finishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finishButton.Image = ((System.Drawing.Image)(resources.GetObject("finishButton.Image")));
             this.finishButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.finishButton.Location = new System.Drawing.Point(324, 290);
+            this.finishButton.Location = new System.Drawing.Point(507, 323);
             this.finishButton.Name = "finishButton";
-            this.finishButton.Size = new System.Drawing.Size(92, 23);
+            this.finishButton.Size = new System.Drawing.Size(103, 26);
             this.finishButton.TabIndex = 27;
             this.finishButton.Text = "Fertig  ";
             this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
@@ -112,28 +116,31 @@
             // labelCurrentStep
             // 
             this.labelCurrentStep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelCurrentStep.Location = new System.Drawing.Point(2, 247);
+            this.labelCurrentStep.Location = new System.Drawing.Point(2, 279);
             this.labelCurrentStep.Name = "labelCurrentStep";
-            this.labelCurrentStep.Size = new System.Drawing.Size(92, 13);
+            this.labelCurrentStep.Size = new System.Drawing.Size(109, 18);
             this.labelCurrentStep.TabIndex = 28;
             this.labelCurrentStep.Text = "Schritt {0} von {1}";
             this.labelCurrentStep.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelBottomDelimiter
             // 
+            this.labelBottomDelimiter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBottomDelimiter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelBottomDelimiter.Location = new System.Drawing.Point(0, 273);
+            this.labelBottomDelimiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBottomDelimiter.Location = new System.Drawing.Point(0, 305);
             this.labelBottomDelimiter.Name = "labelBottomDelimiter";
-            this.labelBottomDelimiter.Size = new System.Drawing.Size(622, 1);
+            this.labelBottomDelimiter.Size = new System.Drawing.Size(634, 1);
             this.labelBottomDelimiter.TabIndex = 29;
             // 
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDescription.Location = new System.Drawing.Point(30, 34);
+            this.labelDescription.Location = new System.Drawing.Point(30, 36);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(60, 13);
+            this.labelDescription.Size = new System.Drawing.Size(76, 16);
             this.labelDescription.TabIndex = 33;
             this.labelDescription.Text = "Description";
             // 
@@ -141,10 +148,10 @@
             // 
             this.labelCaption.AutoSize = true;
             this.labelCaption.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelCaption.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCaption.Location = new System.Drawing.Point(14, 13);
             this.labelCaption.Name = "labelCaption";
-            this.labelCaption.Size = new System.Drawing.Size(50, 15);
+            this.labelCaption.Size = new System.Drawing.Size(69, 19);
             this.labelCaption.TabIndex = 31;
             this.labelCaption.Text = "Caption";
             // 
@@ -153,7 +160,7 @@
             this.imageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imageBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.imageBox.Image = ((System.Drawing.Image)(resources.GetObject("imageBox.Image")));
-            this.imageBox.Location = new System.Drawing.Point(411, 13);
+            this.imageBox.Location = new System.Drawing.Point(465, 15);
             this.imageBox.Name = "imageBox";
             this.imageBox.Size = new System.Drawing.Size(34, 33);
             this.imageBox.TabIndex = 30;
@@ -167,9 +174,10 @@
             this.panel1.Controls.Add(this.labelCaption);
             this.panel1.Controls.Add(this.imageBox);
             this.panel1.Controls.Add(this.labelDescription);
-            this.panel1.Location = new System.Drawing.Point(98, 0);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(111, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(483, 60);
+            this.panel1.Size = new System.Drawing.Size(524, 60);
             this.panel1.TabIndex = 34;
             // 
             // imageListIcons
@@ -182,36 +190,39 @@
             // cancelButton
             // 
             this.cancelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
             this.cancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cancelButton.Location = new System.Drawing.Point(419, 290);
+            this.cancelButton.Location = new System.Drawing.Point(391, 323);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(92, 23);
+            this.cancelButton.Size = new System.Drawing.Size(103, 26);
             this.cancelButton.TabIndex = 35;
             this.cancelButton.Text = "      Abbrechen ";
             this.cancelButton.Visible = false;
             // 
             // comboBoxLanguage
             // 
-            this.comboBoxLanguage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLanguage.FormattingEnabled = true;
             this.comboBoxLanguage.Items.AddRange(new object[] {
             "English",
             "German"});
-            this.comboBoxLanguage.Location = new System.Drawing.Point(160, 292);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(255, 324);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
-            this.comboBoxLanguage.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxLanguage.Size = new System.Drawing.Size(102, 24);
             this.comboBoxLanguage.TabIndex = 36;
             this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
             // 
             // labelSelectLanguageHeader
             // 
-            this.labelSelectLanguageHeader.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelSelectLanguageHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelSelectLanguageHeader.AutoSize = true;
-            this.labelSelectLanguageHeader.Location = new System.Drawing.Point(101, 295);
+            this.labelSelectLanguageHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSelectLanguageHeader.Location = new System.Drawing.Point(168, 327);
             this.labelSelectLanguageHeader.Name = "labelSelectLanguageHeader";
-            this.labelSelectLanguageHeader.Size = new System.Drawing.Size(55, 13);
+            this.labelSelectLanguageHeader.Size = new System.Drawing.Size(69, 16);
             this.labelSelectLanguageHeader.TabIndex = 37;
             this.labelSelectLanguageHeader.Text = "Language";
             // 
@@ -225,9 +236,10 @@
             this.panelLeftHeader.Controls.Add(this.pictureBox1);
             this.panelLeftHeader.Controls.Add(this.pictureBoxNetOfficeLogo);
             this.panelLeftHeader.Controls.Add(this.labelCurrentStep);
+            this.panelLeftHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLeftHeader.Location = new System.Drawing.Point(0, 0);
             this.panelLeftHeader.Name = "panelLeftHeader";
-            this.panelLeftHeader.Size = new System.Drawing.Size(98, 273);
+            this.panelLeftHeader.Size = new System.Drawing.Size(111, 305);
             this.panelLeftHeader.TabIndex = 38;
             // 
             // pictureBox4
@@ -283,7 +295,8 @@
             // labelMiddleDelimiter
             // 
             this.labelMiddleDelimiter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMiddleDelimiter.Location = new System.Drawing.Point(98, 60);
+            this.labelMiddleDelimiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMiddleDelimiter.Location = new System.Drawing.Point(111, 60);
             this.labelMiddleDelimiter.Name = "labelMiddleDelimiter";
             this.labelMiddleDelimiter.Size = new System.Drawing.Size(524, 1);
             this.labelMiddleDelimiter.TabIndex = 39;
@@ -293,7 +306,7 @@
             this.labelTopDelimiter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTopDelimiter.Location = new System.Drawing.Point(97, 1);
             this.labelTopDelimiter.Name = "labelTopDelimiter";
-            this.labelTopDelimiter.Size = new System.Drawing.Size(524, 1);
+            this.labelTopDelimiter.Size = new System.Drawing.Size(535, 1);
             this.labelTopDelimiter.TabIndex = 40;
             // 
             // WizardDialog
@@ -301,7 +314,7 @@
             this.AcceptButton = this.nextButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 319);
+            this.ClientSize = new System.Drawing.Size(634, 335);
             this.ControlBox = false;
             this.Controls.Add(this.labelTopDelimiter);
             this.Controls.Add(this.labelMiddleDelimiter);
@@ -318,6 +331,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(640, 360);
             this.Name = "WizardDialog";
             this.Padding = new System.Windows.Forms.Padding(9);
             this.ShowIcon = false;

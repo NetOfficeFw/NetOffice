@@ -102,6 +102,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.Scriptlet objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.Scriptlet array</returns>
+		public static NetOffice.MSHTMLApi.Scriptlet[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","Scriptlet");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.Scriptlet> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.Scriptlet>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.Scriptlet(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.Scriptlet object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.Scriptlet object or null</returns>
+		public static NetOffice.MSHTMLApi.Scriptlet GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","Scriptlet", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.Scriptlet(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.Scriptlet object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.Scriptlet object or null</returns>
+		public static NetOffice.MSHTMLApi.Scriptlet GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","Scriptlet", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.Scriptlet(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

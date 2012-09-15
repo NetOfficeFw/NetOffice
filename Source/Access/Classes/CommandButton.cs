@@ -105,6 +105,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.CommandButton objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.CommandButton array</returns>
+		public static NetOffice.AccessApi.CommandButton[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","CommandButton");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CommandButton> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CommandButton>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.CommandButton(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.CommandButton object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.CommandButton object or null</returns>
+		public static NetOffice.AccessApi.CommandButton GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CommandButton", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CommandButton(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.CommandButton object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.CommandButton object or null</returns>
+		public static NetOffice.AccessApi.CommandButton GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CommandButton", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CommandButton(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

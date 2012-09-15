@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLCurrentStyle objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLCurrentStyle array</returns>
+		public static NetOffice.MSHTMLApi.HTMLCurrentStyle[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLCurrentStyle");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLCurrentStyle> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLCurrentStyle>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLCurrentStyle(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLCurrentStyle object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLCurrentStyle object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLCurrentStyle GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLCurrentStyle", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLCurrentStyle(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLCurrentStyle object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLCurrentStyle object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLCurrentStyle GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLCurrentStyle", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLCurrentStyle(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

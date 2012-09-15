@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass AccelTable 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class AccelTable : IVAccelTable
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.AccelTable objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.AccelTable array</returns>
+		public static NetOffice.VisioApi.AccelTable[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","AccelTable");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.AccelTable>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.AccelTable(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.AccelTable object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.AccelTable object or null</returns>
+		public static NetOffice.VisioApi.AccelTable GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","AccelTable", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.AccelTable(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.AccelTable object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.AccelTable object or null</returns>
+		public static NetOffice.VisioApi.AccelTable GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","AccelTable", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.AccelTable(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

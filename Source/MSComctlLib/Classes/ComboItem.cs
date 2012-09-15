@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ComboItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ComboItem array</returns>
+		public static NetOffice.MSComctlLibApi.ComboItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ComboItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ComboItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ComboItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ComboItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ComboItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ComboItem object or null</returns>
+		public static NetOffice.MSComctlLibApi.ComboItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ComboItem", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ComboItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ComboItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ComboItem object or null</returns>
+		public static NetOffice.MSComctlLibApi.ComboItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ComboItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ComboItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

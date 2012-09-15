@@ -95,6 +95,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set__CollectionDefault(object index, NetOffice.MSComctlLibApi.IComboItem value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

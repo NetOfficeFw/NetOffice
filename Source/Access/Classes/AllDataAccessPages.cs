@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.AllDataAccessPages objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.AllDataAccessPages array</returns>
+		public static NetOffice.AccessApi.AllDataAccessPages[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AllDataAccessPages");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllDataAccessPages> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllDataAccessPages>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.AllDataAccessPages(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.AllDataAccessPages object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.AllDataAccessPages object or null</returns>
+		public static NetOffice.AccessApi.AllDataAccessPages GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllDataAccessPages", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllDataAccessPages(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.AllDataAccessPages object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.AllDataAccessPages object or null</returns>
+		public static NetOffice.AccessApi.AllDataAccessPages GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllDataAccessPages", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllDataAccessPages(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

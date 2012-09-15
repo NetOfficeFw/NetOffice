@@ -20,7 +20,7 @@ namespace NetOffice
         private COMObject _eventClass;
         private IConnectionPoint _connectionPoint;
         private int _connectionCookie;
-        private Guid _interfaceId;
+   //     private Guid _interfaceId;
 
         #endregion
 
@@ -135,27 +135,21 @@ namespace NetOffice
             IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
 
             if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".GetConnectionPoint");
-
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".FindConnectionPoint");
+                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint");
 
             string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
 
             if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".FindConnectionPoint sucseed");
+                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
 
             if (null == id)
             {
                 if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".EnumConnectionPoint");
+                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint");
                 id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
                 if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".EnumConnectionPoint sucseed");
+                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
             }
-
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + ".GetConnectionPoint passed.");
 
             if (null != id)
                 return id;
@@ -187,7 +181,7 @@ namespace NetOffice
             {
                 if (true == Settings.EnableEvents)
                 {
-                    connectPoint.GetConnectionInterface(out _interfaceId);
+                    //connectPoint.GetConnectionInterface(out _interfaceId);
                     _connectionPoint = connectPoint;
                     _connectionPoint.Advise(this, out _connectionCookie);
                     _pointList.Add(this);

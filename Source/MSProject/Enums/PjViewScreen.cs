@@ -108,17 +108,24 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjResourceUsage = 15,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
+		 [SupportByVersionAttribute("MSProject", 11,14)]
 		 pjTimeline = 16,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 14
+		 /// SupportByVersion MSProject 11, 14
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByVersionAttribute("MSProject", 14)]
-		 pjResourceScheduling = 17
+		 [SupportByVersionAttribute("MSProject", 11,14)]
+		 pjResourceScheduling = 17,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>9</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjRSVDoNotUse = 9
 	}
 }

@@ -18,9 +18,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Style 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Style : IVStyle,IEventBinding
 	{
@@ -96,17 +96,60 @@ namespace NetOffice.VisioApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Style objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Style array</returns>
+		public static NetOffice.VisioApi.Style[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Style");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Style> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Style>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Style(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Style object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Style object or null</returns>
+		public static NetOffice.VisioApi.Style GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Style", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Style(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Style object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Style object or null</returns>
+		public static NetOffice.VisioApi.Style GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Style", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Style(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Style_StyleChangedEventHandler _StyleChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Style_StyleChangedEventHandler StyleChangedEvent
 		{
 			add
@@ -121,14 +164,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Style_BeforeStyleDeleteEventHandler _BeforeStyleDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Style_BeforeStyleDeleteEventHandler BeforeStyleDeleteEvent
 		{
 			add
@@ -143,14 +186,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Style_QueryCancelStyleDeleteEventHandler _QueryCancelStyleDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Style_QueryCancelStyleDeleteEventHandler QueryCancelStyleDeleteEvent
 		{
 			add
@@ -165,14 +208,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Style_StyleDeleteCanceledEventHandler _StyleDeleteCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Style_StyleDeleteCanceledEventHandler StyleDeleteCanceledEvent
 		{
 			add

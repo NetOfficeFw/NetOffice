@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ColumnHeader objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ColumnHeader array</returns>
+		public static NetOffice.MSComctlLibApi.ColumnHeader[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ColumnHeader");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeader> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ColumnHeader>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ColumnHeader(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ColumnHeader object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ColumnHeader object or null</returns>
+		public static NetOffice.MSComctlLibApi.ColumnHeader GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ColumnHeader", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ColumnHeader(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ColumnHeader object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ColumnHeader object or null</returns>
+		public static NetOffice.MSComctlLibApi.ColumnHeader GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ColumnHeader", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ColumnHeader(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

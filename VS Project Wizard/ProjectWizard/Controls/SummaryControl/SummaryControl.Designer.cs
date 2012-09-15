@@ -37,17 +37,17 @@
             // 
             this.labelSummaryCaption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelSummaryCaption.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSummaryCaption.Location = new System.Drawing.Point(30, 57);
+            this.labelSummaryCaption.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSummaryCaption.Location = new System.Drawing.Point(21, 41);
             this.labelSummaryCaption.Name = "labelSummaryCaption";
-            this.labelSummaryCaption.Size = new System.Drawing.Size(182, 143);
+            this.labelSummaryCaption.Size = new System.Drawing.Size(182, 155);
             this.labelSummaryCaption.TabIndex = 0;
             // 
             // labelSummaryHeader
             // 
             this.labelSummaryHeader.AutoSize = true;
             this.labelSummaryHeader.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSummaryHeader.Location = new System.Drawing.Point(30, 30);
+            this.labelSummaryHeader.Location = new System.Drawing.Point(17, 20);
             this.labelSummaryHeader.Name = "labelSummaryHeader";
             this.labelSummaryHeader.Size = new System.Drawing.Size(246, 15);
             this.labelSummaryHeader.TabIndex = 15;
@@ -58,10 +58,10 @@
             this.labelSummaryValue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSummaryValue.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSummaryValue.Location = new System.Drawing.Point(218, 57);
+            this.labelSummaryValue.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSummaryValue.Location = new System.Drawing.Point(209, 41);
             this.labelSummaryValue.Name = "labelSummaryValue";
-            this.labelSummaryValue.Size = new System.Drawing.Size(299, 143);
+            this.labelSummaryValue.Size = new System.Drawing.Size(303, 155);
             this.labelSummaryValue.TabIndex = 16;
             // 
             // SummaryControl
@@ -72,7 +72,7 @@
             this.Controls.Add(this.labelSummaryHeader);
             this.Controls.Add(this.labelSummaryCaption);
             this.Name = "SummaryControl";
-            this.Size = new System.Drawing.Size(520, 200);
+            this.Size = new System.Drawing.Size(524, 212);
             this.ResumeLayout(false);
             this.PerformLayout();
 

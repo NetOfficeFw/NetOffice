@@ -158,6 +158,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.htmlInputImage objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.htmlInputImage array</returns>
+		public static NetOffice.MSHTMLApi.htmlInputImage[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","htmlInputImage");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.htmlInputImage> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.htmlInputImage>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.htmlInputImage(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.htmlInputImage object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.htmlInputImage object or null</returns>
+		public static NetOffice.MSHTMLApi.htmlInputImage GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","htmlInputImage", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.htmlInputImage(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.htmlInputImage object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.htmlInputImage object or null</returns>
+		public static NetOffice.MSHTMLApi.htmlInputImage GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","htmlInputImage", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.htmlInputImage(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

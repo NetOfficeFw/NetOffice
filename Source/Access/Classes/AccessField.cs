@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.AccessField objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.AccessField array</returns>
+		public static NetOffice.AccessApi.AccessField[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AccessField");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AccessField> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AccessField>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.AccessField(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.AccessField object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.AccessField object or null</returns>
+		public static NetOffice.AccessApi.AccessField GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AccessField", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AccessField(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.AccessField object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.AccessField object or null</returns>
+		public static NetOffice.AccessApi.AccessField GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AccessField", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AccessField(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

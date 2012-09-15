@@ -92,6 +92,49 @@ namespace NetOffice.PowerPointApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running PowerPoint.Presentation objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an PowerPoint.Presentation array</returns>
+		public static NetOffice.PowerPointApi.Presentation[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("PowerPoint","Presentation");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Presentation> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Presentation>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.PowerPointApi.Presentation(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Presentation object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an PowerPoint.Presentation object or null</returns>
+		public static NetOffice.PowerPointApi.Presentation GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Presentation", false);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Presentation(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Presentation object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an PowerPoint.Presentation object or null</returns>
+		public static NetOffice.PowerPointApi.Presentation GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Presentation", throwOnError);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Presentation(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

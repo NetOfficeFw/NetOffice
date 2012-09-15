@@ -186,51 +186,51 @@ namespace NetOffice.MSProjectApi
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(31)]
 		void ApplicationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(32)]
 		void OnUndoOrRedo([In] object bstrLabel, [In] object bstrGUID, [In] object fUndo);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(33)]
 		void AfterCubeBuilt([In] [Out] ref object cubeFileName);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(34)]
 		void LoadWebPane([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In] [Out] ref object targetPage);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(35)]
 		void JobStart([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(36)]
 		void JobCompleted([In] object bstrName, [In] object bstrprojGuid, [In] object bstrjobGuid, [In] object jobType, [In] object lResult);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(37)]
 		void SaveStartingToServer([In] object bstrName, [In] object bstrprojGuid);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(38)]
 		void SaveCompletedToServer([In] object bstrName, [In] object bstrprojGuid);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(39)]
 		void ProjectBeforePublish([In, MarshalAs(UnmanagedType.IDispatch)] object pj, [In] [Out] ref object cancel);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(40)]
 		void PaneActivate();
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(41)]
 		void SecondaryViewChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object prevView, [In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] object success);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(42)]
 		void IsFunctionalitySupported([In] object bstrFunctionality, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(43)]
 		void ConnectionStatusChanged([In] object online);
 	}

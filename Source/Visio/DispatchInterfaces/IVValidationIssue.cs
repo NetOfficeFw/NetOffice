@@ -10,9 +10,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// DispatchInterface IVValidationIssue 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVValidationIssue : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.VisioApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVApplication Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int16 Stat
 		{
 			get
@@ -105,10 +105,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVDocument Document
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int16 ObjectType
 		{
 			get
@@ -136,10 +136,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int32 ID
 		{
 			get
@@ -151,10 +151,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVPage TargetPage
 		{
 			get
@@ -167,10 +167,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int32 TargetPageID
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVShape TargetShape
 		{
 			get
@@ -198,10 +198,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public bool Ignored
 		{
 			get
@@ -218,10 +218,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVValidationRule Rule
 		{
 			get
@@ -238,9 +238,9 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 14)]
+		[SupportByVersionAttribute("Visio", 14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

@@ -27,6 +27,7 @@ namespace NetOffice
         /// <returns></returns>
         public static IEnumerator GetProxyEnumeratorAsProperty(COMObject comObject)
         {
+            Factory.CheckInitialize();
             object enumProxy = Invoker.PropertyGet(comObject, "_NewEnum");
             COMObject enumerator = new COMObject(comObject, enumProxy, true);
             Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
@@ -47,6 +48,7 @@ namespace NetOffice
         /// <returns></returns>
         public static IEnumerator GetProxyEnumeratorAsMethod(COMObject comObject)
         {
+            Factory.CheckInitialize();
             object enumProxy = Invoker.MethodReturn(comObject, "_NewEnum");
             COMObject enumerator = new COMObject(comObject, enumProxy, true);
             Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
@@ -67,6 +69,7 @@ namespace NetOffice
         /// <returns></returns>
         public static IEnumerator GetScalarEnumeratorAsProperty(COMObject comObject)
         {
+            Factory.CheckInitialize();
             object enumProxy = Invoker.PropertyGet(comObject, "_NewEnum");
             COMObject enumerator = new COMObject(comObject, enumProxy, true);
             Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
@@ -86,6 +89,7 @@ namespace NetOffice
         /// <returns></returns>
         public static IEnumerator GetScalarEnumeratorAsMethod(COMObject comObject)
         {
+            Factory.CheckInitialize();
             object enumProxy = Invoker.MethodReturn(comObject, "_NewEnum");
             COMObject enumerator = new COMObject(comObject, enumProxy, true);
             Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);

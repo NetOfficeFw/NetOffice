@@ -17,9 +17,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass DataRecordsets 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataRecordsets : IVDataRecordsets,IEventBinding
 	{
@@ -95,17 +95,60 @@ namespace NetOffice.VisioApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.DataRecordsets objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.DataRecordsets array</returns>
+		public static NetOffice.VisioApi.DataRecordsets[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","DataRecordsets");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordsets> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordsets>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.DataRecordsets(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.DataRecordsets object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.DataRecordsets object or null</returns>
+		public static NetOffice.VisioApi.DataRecordsets GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordsets", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.DataRecordsets(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.DataRecordsets object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.DataRecordsets object or null</returns>
+		public static NetOffice.VisioApi.DataRecordsets GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordsets", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.DataRecordsets(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event DataRecordsets_DataRecordsetAddedEventHandler _DataRecordsetAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event DataRecordsets_DataRecordsetAddedEventHandler DataRecordsetAddedEvent
 		{
 			add
@@ -120,14 +163,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event DataRecordsets_BeforeDataRecordsetDeleteEventHandler _BeforeDataRecordsetDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event DataRecordsets_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent
 		{
 			add
@@ -142,14 +185,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event DataRecordsets_DataRecordsetChangedEventHandler _DataRecordsetChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event DataRecordsets_DataRecordsetChangedEventHandler DataRecordsetChangedEvent
 		{
 			add

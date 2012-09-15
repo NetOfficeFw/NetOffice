@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.CodePane objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.CodePane array</returns>
+		public static NetOffice.VBIDEApi.CodePane[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","CodePane");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePane> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.CodePane>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.CodePane(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.CodePane object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.CodePane object or null</returns>
+		public static NetOffice.VBIDEApi.CodePane GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","CodePane", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.CodePane(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.CodePane object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.CodePane object or null</returns>
+		public static NetOffice.VBIDEApi.CodePane GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","CodePane", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.CodePane(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

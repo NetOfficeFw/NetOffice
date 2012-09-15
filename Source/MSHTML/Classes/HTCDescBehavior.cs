@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTCDescBehavior objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTCDescBehavior array</returns>
+		public static NetOffice.MSHTMLApi.HTCDescBehavior[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTCDescBehavior");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCDescBehavior> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCDescBehavior>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTCDescBehavior(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCDescBehavior object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTCDescBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCDescBehavior GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCDescBehavior", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCDescBehavior(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCDescBehavior object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTCDescBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCDescBehavior GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCDescBehavior", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCDescBehavior(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -6020,10 +6020,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string CurrencyCode
 		{
 			get
@@ -6040,10 +6040,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 TaskErrorCount
 		{
 			get
@@ -6060,10 +6060,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool IsTemplate
 		{
 			get
@@ -6080,10 +6080,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 HyperlinkColorEx
 		{
 			get
@@ -6100,10 +6100,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 FollowedHyperlinkColorEx
 		{
 			get
@@ -6120,10 +6120,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool NewTasksCreatedAsManual
 		{
 			get
@@ -6140,10 +6140,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.TaskGroups2 TaskGroups2
 		{
 			get
@@ -6156,10 +6156,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.ResourceGroups2 ResourceGroups2
 		{
 			get
@@ -6172,10 +6172,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool ManuallyScheduledTasksAutoRespectLinks
 		{
 			get
@@ -6192,10 +6192,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool KeepTaskOnNearestWorkingTimeWhenMadeAutoScheduled
 		{
 			get
@@ -6212,10 +6212,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool ShowTaskWarnings
 		{
 			get
@@ -6232,10 +6232,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool ShowTaskSuggestions
 		{
 			get
@@ -6252,10 +6252,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Tasks DetectCycle
 		{
 			get
@@ -6264,6 +6264,52 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "DetectCycle", paramsArray);
 				NetOffice.MSProjectApi.Tasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tasks.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tasks;
 				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public NetOffice.MSProjectApi.Reports Reports
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Reports", paramsArray);
+				NetOffice.MSProjectApi.Reports newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Reports.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Reports;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public bool IsCheckoutMsgBarVisible
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "IsCheckoutMsgBarVisible", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public bool IsCheckoutOSVisible
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "IsCheckoutOSVisible", paramsArray);
+				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 			}
 		}
 
@@ -6646,11 +6692,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string GetObjectMatchingID(NetOffice.MSProjectApi.Enums.PjOrganizer objectType, string objectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName);
@@ -6659,12 +6705,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
 		/// <param name="matchingID">string MatchingID</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void SetObjectMatchingID(NetOffice.MSProjectApi.Enums.PjOrganizer objectType, string objectName, string matchingID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, objectName, matchingID);
@@ -6672,11 +6718,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="matchingID">string MatchingID</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string GetDisplayNameFromObjectMatchingID(NetOffice.MSProjectApi.Enums.PjOrganizer objectType, string matchingID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, matchingID);
@@ -6685,13 +6731,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableName">string DeliverableName</param>
 		/// <param name="deliverableStartDate">object DeliverableStartDate</param>
 		/// <param name="deliverableFinishDate">object DeliverableFinishDate</param>
 		/// <param name="taskGuid">string TaskGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string DeliverableCreate(string deliverableName, object deliverableStartDate, object deliverableFinishDate, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableName, deliverableStartDate, deliverableFinishDate, taskGuid);
@@ -6700,13 +6746,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="deliverableName">string DeliverableName</param>
 		/// <param name="deliverableStartDate">object DeliverableStartDate</param>
 		/// <param name="deliverableFinishDate">object DeliverableFinishDate</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableUpdate(string deliverableGuid, string deliverableName, object deliverableStartDate, object deliverableFinishDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, deliverableName, deliverableStartDate, deliverableFinishDate);
@@ -6715,10 +6761,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableDelete(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6727,11 +6773,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="taskGuid">string TaskGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableDependencyCreate(string deliverableGuid, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
@@ -6740,10 +6786,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableDependencyDelete(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6752,10 +6798,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">optional object DeliverableGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableRefreshServerCache(object deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6764,10 +6810,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableRefreshServerCache()
 		{
 			object[] paramsArray = null;
@@ -6776,9 +6822,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DeliverablesGetServerCachedXml()
 		{
 			object[] paramsArray = null;
@@ -6788,9 +6834,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DeliverablesGetXml()
 		{
 			object[] paramsArray = null;
@@ -6800,9 +6846,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string GetServerProjectGuid()
 		{
 			object[] paramsArray = null;
@@ -6811,11 +6857,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="taskGuid">string TaskGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableLinkToTask(string deliverableGuid, string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid, taskGuid);
@@ -6824,10 +6870,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableLinkToProject(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6836,9 +6882,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverablesClearAll()
 		{
 			object[] paramsArray = null;
@@ -6847,10 +6893,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverableAcceptChanges(string deliverableGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deliverableGuid);
@@ -6859,9 +6905,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string DeliverablesGetProviderProjects()
 		{
 			object[] paramsArray = null;
@@ -6870,10 +6916,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="projectGuid">string ProjectGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DeliverablesGetByProject(string projectGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectGuid);
@@ -6883,10 +6929,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="taskGuid">string TaskGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 GetTaskIndexByGuid(string taskGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskGuid);
@@ -6895,10 +6941,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="projectGuid">string ProjectGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object ReadWssData(string projectGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectGuid);
@@ -6915,9 +6961,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object GetWinprojURLs()
 		{
 			object[] paramsArray = null;
@@ -6934,9 +6980,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 LocalResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6945,9 +6991,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ImportResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6956,9 +7002,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ResourceErrorCount()
 		{
 			object[] paramsArray = null;
@@ -6967,9 +7013,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 LocalResourceCount()
 		{
 			object[] paramsArray = null;
@@ -6978,9 +7024,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ResourceCount()
 		{
 			object[] paramsArray = null;
@@ -6989,13 +7035,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		/// <param name="destinationResource">optional object DestinationResource</param>
 		/// <param name="destinationTime">optional object DestinationTime</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void RSVDragSimulator(object assignmentToDrag, object destinationResource, object destinationTime)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag, destinationResource, destinationTime);
@@ -7003,12 +7049,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void RSVDragSimulator(object assignmentToDrag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag);
@@ -7016,13 +7062,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		/// <param name="destinationResource">optional object DestinationResource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void RSVDragSimulator(object assignmentToDrag, object destinationResource)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(assignmentToDrag, destinationResource);
@@ -7030,10 +7076,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="customUIXML">string CustomUIXML</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void SetCustomUI(string customUIXML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(customUIXML);
@@ -7041,7 +7087,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7051,7 +7097,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fromDate">optional object FromDate</param>
 		/// <param name="toDate">optional object ToDate</param>
 		/// <param name="fixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate, fixedFormatExtClassPtr);
@@ -7059,11 +7105,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -7071,12 +7117,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
@@ -7084,13 +7130,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		/// <param name="includeDocumentProperties">optional bool IncludeDocumentProperties = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties);
@@ -7098,14 +7144,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		/// <param name="includeDocumentProperties">optional bool IncludeDocumentProperties = true</param>
 		/// <param name="includeDocumentMarkup">optional bool IncludeDocumentMarkup = true</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup);
@@ -7113,7 +7159,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7121,7 +7167,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="includeDocumentMarkup">optional bool IncludeDocumentMarkup = true</param>
 		/// <param name="archiveFormat">optional bool ArchiveFormat = false</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
@@ -7129,7 +7175,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7138,7 +7184,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="archiveFormat">optional bool ArchiveFormat = false</param>
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
@@ -7146,7 +7192,7 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7156,11 +7202,33 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fromDate">optional object FromDate</param>
 		/// <param name="toDate">optional object ToDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public Int32 CheckoutProject()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "CheckoutProject", paramsArray);
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public Int32 HideCheckoutMsgBar()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(this, "HideCheckoutMsgBar", paramsArray);
+			return NetRuntimeSystem.Convert.ToInt32(returnItem);
 		}
 
 		#endregion

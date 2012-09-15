@@ -60,6 +60,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="var">optional object var</param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileName(object var)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(var);
@@ -84,6 +85,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="var">optional object var</param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileType(object var)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(var);
@@ -108,6 +110,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="var">optional object var</param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_FileURL(object var)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(var);

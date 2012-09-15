@@ -8,6 +8,8 @@ using System.Reflection;
 
 namespace NetOffice
 {
+
+
     /// <summary>
     /// Core Settings
     /// </summary>
@@ -42,11 +44,43 @@ namespace NetOffice
         private static bool         _enableThreadSafe = true;
         private static CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
         private static bool         _enableOperatorOverlads = true;
+        private static string       _exceptionMessage = "See inner exception(s) for details.";
+        private static ExceptionMessageHandling _copyInnerExceptionMessage;
 
         #endregion
          
         #region Properties
-         
+
+        /// <summary>
+        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This option can be used to set the exception message
+        /// </summary>
+        public static ExceptionMessageHandling UseExceptionMessage
+        {
+            get
+            {
+                return _copyInnerExceptionMessage;
+            }
+            set
+            {
+                _copyInnerExceptionMessage = value;
+            }
+        }
+
+        /// <summary>
+        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This is the default message for the top level exception 
+        /// </summary>
+        public static string ExceptionMessage
+        {
+            get 
+            {
+                return _exceptionMessage;
+            }
+            set 
+            {
+                _exceptionMessage = value;
+            }
+        }
+
         /// <summary>
         /// Used Thread Culture given in the Invoke Calls. en-US by default
         /// </summary>

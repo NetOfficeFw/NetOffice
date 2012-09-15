@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Paths 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Paths : IVPaths
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Paths objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Paths array</returns>
+		public static NetOffice.VisioApi.Paths[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Paths");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Paths> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Paths>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Paths(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Paths object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Paths object or null</returns>
+		public static NetOffice.VisioApi.Paths GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Paths", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Paths(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Paths object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Paths object or null</returns>
+		public static NetOffice.VisioApi.Paths GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Paths", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Paths(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Shapes 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Shapes : IVShapes
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Shapes objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Shapes array</returns>
+		public static NetOffice.VisioApi.Shapes[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Shapes");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Shapes> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Shapes>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Shapes(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Shapes object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Shapes object or null</returns>
+		public static NetOffice.VisioApi.Shapes GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Shapes", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Shapes(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Shapes object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Shapes object or null</returns>
+		public static NetOffice.VisioApi.Shapes GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Shapes", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Shapes(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

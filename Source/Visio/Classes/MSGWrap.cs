@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass MSGWrap 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MSGWrap : IVMSGWrap
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.MSGWrap objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.MSGWrap array</returns>
+		public static NetOffice.VisioApi.MSGWrap[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","MSGWrap");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MSGWrap> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MSGWrap>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.MSGWrap(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.MSGWrap object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.MSGWrap object or null</returns>
+		public static NetOffice.VisioApi.MSGWrap GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MSGWrap", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MSGWrap(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.MSGWrap object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.MSGWrap object or null</returns>
+		public static NetOffice.VisioApi.MSGWrap GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MSGWrap", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MSGWrap(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

@@ -158,6 +158,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLImg objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLImg array</returns>
+		public static NetOffice.MSHTMLApi.HTMLImg[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLImg");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLImg> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLImg>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLImg(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLImg object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLImg object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLImg GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLImg", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLImg(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLImg object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLImg object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLImg GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLImg", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLImg(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

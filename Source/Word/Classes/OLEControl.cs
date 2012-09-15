@@ -94,6 +94,49 @@ namespace NetOffice.WordApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Word.OLEControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Word.OLEControl array</returns>
+		public static NetOffice.WordApi.OLEControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Word","OLEControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.OLEControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.OLEControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.WordApi.OLEControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Word.OLEControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Word.OLEControl object or null</returns>
+		public static NetOffice.WordApi.OLEControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","OLEControl", false);
+			if(null != proxy)
+				return new NetOffice.WordApi.OLEControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Word.OLEControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Word.OLEControl object or null</returns>
+		public static NetOffice.WordApi.OLEControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","OLEControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.WordApi.OLEControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

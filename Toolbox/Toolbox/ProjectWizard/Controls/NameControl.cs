@@ -20,7 +20,7 @@ namespace NetOffice.DeveloperToolbox
             CreateSettingsDocument();
             Translate();
 
-            if (ProjectWizardControl.CurrentLanguageID == 1031)
+            if (ProjectWizardControl.CurrentLanguageID == 1033)
                 SetEnglishDefaultName();
             else
                 SetGermanDefaultName();
@@ -159,7 +159,7 @@ namespace NetOffice.DeveloperToolbox
             textBoxClassName.Focus();
             if (FirstActivateFlag == false)
             {
-                if (ProjectWizardControl.CurrentLanguageID == 1031)
+                if (ProjectWizardControl.CurrentLanguageID == 1033)
                     SetEnglishDefaultName();
                 else
                     SetGermanDefaultName();

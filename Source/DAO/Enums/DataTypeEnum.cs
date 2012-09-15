@@ -3,157 +3,157 @@ using NetOffice;
 namespace NetOffice.DAOApi.Enums
 {
 	 /// <summary>
-	 /// SupportByVersion DAO 5, 12
+	 /// SupportByVersion DAO 12, 3.6
 	 /// </summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum DataTypeEnum
 	{
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>1</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbBoolean = 1,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbByte = 2,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>3</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbInteger = 3,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>4</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbLong = 4,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>5</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbCurrency = 5,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>6</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbSingle = 6,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>7</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbDouble = 7,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>8</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbDate = 8,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>9</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbBinary = 9,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>10</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbText = 10,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>11</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbLongBinary = 11,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>12</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbMemo = 12,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>15</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbGUID = 15,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>16</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbBigInt = 16,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>17</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbVarBinary = 17,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>18</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbChar = 18,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>19</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbNumeric = 19,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>20</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbDecimal = 20,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>21</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbFloat = 21,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>22</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbTime = 22,
 
 		 /// <summary>
-		 /// SupportByVersion DAO 5, 12
+		 /// SupportByVersion DAO 12, 3.6
 		 /// </summary>
 		 /// <remarks>23</remarks>
-		 [SupportByVersionAttribute("DAO", 5,12)]
+		 [SupportByVersionAttribute("DAO", 12,3.6)]
 		 dbTimeStamp = 23,
 
 		 /// <summary>

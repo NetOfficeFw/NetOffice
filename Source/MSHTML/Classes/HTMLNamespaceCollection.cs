@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLNamespaceCollection objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLNamespaceCollection array</returns>
+		public static NetOffice.MSHTMLApi.HTMLNamespaceCollection[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLNamespaceCollection");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLNamespaceCollection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLNamespaceCollection>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLNamespaceCollection(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLNamespaceCollection object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLNamespaceCollection object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLNamespaceCollection GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLNamespaceCollection", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLNamespaceCollection(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLNamespaceCollection object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLNamespaceCollection object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLNamespaceCollection GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLNamespaceCollection", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLNamespaceCollection(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLAppBehavior objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLAppBehavior array</returns>
+		public static NetOffice.MSHTMLApi.HTMLAppBehavior[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLAppBehavior");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLAppBehavior> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLAppBehavior>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLAppBehavior(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLAppBehavior object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLAppBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLAppBehavior GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLAppBehavior", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLAppBehavior(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLAppBehavior object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLAppBehavior object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLAppBehavior GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLAppBehavior", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLAppBehavior(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

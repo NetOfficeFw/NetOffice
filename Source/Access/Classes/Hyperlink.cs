@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.Hyperlink objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.Hyperlink array</returns>
+		public static NetOffice.AccessApi.Hyperlink[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Hyperlink");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Hyperlink> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Hyperlink>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.Hyperlink(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.Hyperlink object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.Hyperlink object or null</returns>
+		public static NetOffice.AccessApi.Hyperlink GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Hyperlink", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Hyperlink(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.Hyperlink object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.Hyperlink object or null</returns>
+		public static NetOffice.AccessApi.Hyperlink GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Hyperlink", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Hyperlink(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.Control objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.Control array</returns>
+		public static NetOffice.AccessApi.Control[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Control");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Control> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Control>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.Control(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.Control object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.Control object or null</returns>
+		public static NetOffice.AccessApi.Control GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Control", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Control(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.Control object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.Control object or null</returns>
+		public static NetOffice.AccessApi.Control GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Control", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Control(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.AutoFormatRule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.AutoFormatRule array</returns>
+		public static NetOffice.OutlookApi.AutoFormatRule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","AutoFormatRule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AutoFormatRule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AutoFormatRule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.AutoFormatRule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AutoFormatRule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.AutoFormatRule object or null</returns>
+		public static NetOffice.OutlookApi.AutoFormatRule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AutoFormatRule", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AutoFormatRule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AutoFormatRule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.AutoFormatRule object or null</returns>
+		public static NetOffice.OutlookApi.AutoFormatRule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AutoFormatRule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AutoFormatRule(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

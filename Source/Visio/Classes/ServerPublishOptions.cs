@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass ServerPublishOptions 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ServerPublishOptions : IVServerPublishOptions
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.ServerPublishOptions objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.ServerPublishOptions array</returns>
+		public static NetOffice.VisioApi.ServerPublishOptions[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","ServerPublishOptions");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ServerPublishOptions> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ServerPublishOptions>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.ServerPublishOptions(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.ServerPublishOptions object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.ServerPublishOptions object or null</returns>
+		public static NetOffice.VisioApi.ServerPublishOptions GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ServerPublishOptions", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ServerPublishOptions(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.ServerPublishOptions object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.ServerPublishOptions object or null</returns>
+		public static NetOffice.VisioApi.ServerPublishOptions GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ServerPublishOptions", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ServerPublishOptions(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

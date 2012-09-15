@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ListItems objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ListItems array</returns>
+		public static NetOffice.MSComctlLibApi.ListItems[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ListItems");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListItems> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListItems>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ListItems(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListItems object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ListItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListItems GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListItems", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListItems(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListItems object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ListItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListItems GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListItems", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListItems(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

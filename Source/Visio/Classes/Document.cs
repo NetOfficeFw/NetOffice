@@ -53,15 +53,16 @@ namespace NetOffice.VisioApi
 	public delegate void Document_DataRecordsetAddedEventHandler(NetOffice.VisioApi.IVDataRecordset DataRecordset);
 	public delegate void Document_AfterRemoveHiddenInformationEventHandler(NetOffice.VisioApi.IVDocument doc);
 	public delegate void Document_RuleSetValidatedEventHandler(NetOffice.VisioApi.IVValidationRuleSet RuleSet);
+	public delegate void Document_AfterDocumentMergeEventHandler(NetOffice.VisioApi.IVCoauthMergeEvent coauthMergeObjects);
 	#pragma warning restore
 
 	#endregion
 
 	///<summary>
 	/// CoClass Document 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Document : IVDocument,IEventBinding
 	{
@@ -137,17 +138,60 @@ namespace NetOffice.VisioApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Document objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Document array</returns>
+		public static NetOffice.VisioApi.Document[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Document");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Document> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Document>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Document(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Document object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Document object or null</returns>
+		public static NetOffice.VisioApi.Document GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Document", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Document(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Document object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Document object or null</returns>
+		public static NetOffice.VisioApi.Document GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Document", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Document(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentOpenedEventHandler _DocumentOpenedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentOpenedEventHandler DocumentOpenedEvent
 		{
 			add
@@ -162,14 +206,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentCreatedEventHandler _DocumentCreatedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentCreatedEventHandler DocumentCreatedEvent
 		{
 			add
@@ -184,14 +228,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentSavedEventHandler _DocumentSavedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentSavedEventHandler DocumentSavedEvent
 		{
 			add
@@ -206,14 +250,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentSavedAsEventHandler _DocumentSavedAsEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentSavedAsEventHandler DocumentSavedAsEvent
 		{
 			add
@@ -228,14 +272,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentChangedEventHandler _DocumentChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentChangedEventHandler DocumentChangedEvent
 		{
 			add
@@ -250,14 +294,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeDocumentCloseEventHandler _BeforeDocumentCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeDocumentCloseEventHandler BeforeDocumentCloseEvent
 		{
 			add
@@ -272,14 +316,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_StyleAddedEventHandler _StyleAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_StyleAddedEventHandler StyleAddedEvent
 		{
 			add
@@ -294,14 +338,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_StyleChangedEventHandler _StyleChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_StyleChangedEventHandler StyleChangedEvent
 		{
 			add
@@ -316,14 +360,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeStyleDeleteEventHandler _BeforeStyleDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeStyleDeleteEventHandler BeforeStyleDeleteEvent
 		{
 			add
@@ -338,14 +382,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_MasterAddedEventHandler _MasterAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_MasterAddedEventHandler MasterAddedEvent
 		{
 			add
@@ -360,14 +404,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_MasterChangedEventHandler _MasterChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_MasterChangedEventHandler MasterChangedEvent
 		{
 			add
@@ -382,14 +426,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeMasterDeleteEventHandler _BeforeMasterDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeMasterDeleteEventHandler BeforeMasterDeleteEvent
 		{
 			add
@@ -404,14 +448,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_PageAddedEventHandler _PageAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_PageAddedEventHandler PageAddedEvent
 		{
 			add
@@ -426,14 +470,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_PageChangedEventHandler _PageChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_PageChangedEventHandler PageChangedEvent
 		{
 			add
@@ -448,14 +492,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforePageDeleteEventHandler _BeforePageDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforePageDeleteEventHandler BeforePageDeleteEvent
 		{
 			add
@@ -470,14 +514,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_ShapeAddedEventHandler _ShapeAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_ShapeAddedEventHandler ShapeAddedEvent
 		{
 			add
@@ -492,14 +536,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeSelectionDeleteEventHandler _BeforeSelectionDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent
 		{
 			add
@@ -514,14 +558,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_RunModeEnteredEventHandler _RunModeEnteredEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_RunModeEnteredEventHandler RunModeEnteredEvent
 		{
 			add
@@ -536,14 +580,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DesignModeEnteredEventHandler _DesignModeEnteredEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DesignModeEnteredEventHandler DesignModeEnteredEvent
 		{
 			add
@@ -558,14 +602,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeDocumentSaveEventHandler _BeforeDocumentSaveEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeDocumentSaveEventHandler BeforeDocumentSaveEvent
 		{
 			add
@@ -580,14 +624,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeDocumentSaveAsEventHandler _BeforeDocumentSaveAsEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeDocumentSaveAsEventHandler BeforeDocumentSaveAsEvent
 		{
 			add
@@ -602,14 +646,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelDocumentCloseEventHandler _QueryCancelDocumentCloseEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelDocumentCloseEventHandler QueryCancelDocumentCloseEvent
 		{
 			add
@@ -624,14 +668,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_DocumentCloseCanceledEventHandler _DocumentCloseCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_DocumentCloseCanceledEventHandler DocumentCloseCanceledEvent
 		{
 			add
@@ -646,14 +690,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelStyleDeleteEventHandler _QueryCancelStyleDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelStyleDeleteEventHandler QueryCancelStyleDeleteEvent
 		{
 			add
@@ -668,14 +712,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_StyleDeleteCanceledEventHandler _StyleDeleteCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_StyleDeleteCanceledEventHandler StyleDeleteCanceledEvent
 		{
 			add
@@ -690,14 +734,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelMasterDeleteEventHandler _QueryCancelMasterDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelMasterDeleteEventHandler QueryCancelMasterDeleteEvent
 		{
 			add
@@ -712,14 +756,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_MasterDeleteCanceledEventHandler _MasterDeleteCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_MasterDeleteCanceledEventHandler MasterDeleteCanceledEvent
 		{
 			add
@@ -734,14 +778,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelPageDeleteEventHandler _QueryCancelPageDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelPageDeleteEventHandler QueryCancelPageDeleteEvent
 		{
 			add
@@ -756,14 +800,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_PageDeleteCanceledEventHandler _PageDeleteCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_PageDeleteCanceledEventHandler PageDeleteCanceledEvent
 		{
 			add
@@ -778,14 +822,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_ShapeParentChangedEventHandler _ShapeParentChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_ShapeParentChangedEventHandler ShapeParentChangedEvent
 		{
 			add
@@ -800,14 +844,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_BeforeShapeTextEditEventHandler _BeforeShapeTextEditEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent
 		{
 			add
@@ -822,14 +866,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_ShapeExitedTextEditEventHandler _ShapeExitedTextEditEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent
 		{
 			add
@@ -844,14 +888,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelSelectionDeleteEventHandler _QueryCancelSelectionDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent
 		{
 			add
@@ -866,14 +910,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_SelectionDeleteCanceledEventHandler _SelectionDeleteCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent
 		{
 			add
@@ -888,14 +932,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelUngroupEventHandler _QueryCancelUngroupEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelUngroupEventHandler QueryCancelUngroupEvent
 		{
 			add
@@ -910,14 +954,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_UngroupCanceledEventHandler _UngroupCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_UngroupCanceledEventHandler UngroupCanceledEvent
 		{
 			add
@@ -932,14 +976,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_QueryCancelConvertToGroupEventHandler _QueryCancelConvertToGroupEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent
 		{
 			add
@@ -954,14 +998,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Document_ConvertToGroupCanceledEventHandler _ConvertToGroupCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Document_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent
 		{
 			add
@@ -976,14 +1020,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_QueryCancelGroupEventHandler _QueryCancelGroupEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_QueryCancelGroupEventHandler QueryCancelGroupEvent
 		{
 			add
@@ -998,14 +1042,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_GroupCanceledEventHandler _GroupCanceledEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_GroupCanceledEventHandler GroupCanceledEvent
 		{
 			add
@@ -1020,14 +1064,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_ShapeDataGraphicChangedEventHandler _ShapeDataGraphicChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent
 		{
 			add
@@ -1042,14 +1086,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_BeforeDataRecordsetDeleteEventHandler _BeforeDataRecordsetDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent
 		{
 			add
@@ -1064,14 +1108,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_DataRecordsetAddedEventHandler _DataRecordsetAddedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_DataRecordsetAddedEventHandler DataRecordsetAddedEvent
 		{
 			add
@@ -1086,14 +1130,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event Document_AfterRemoveHiddenInformationEventHandler _AfterRemoveHiddenInformationEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event Document_AfterRemoveHiddenInformationEventHandler AfterRemoveHiddenInformationEvent
 		{
 			add
@@ -1108,14 +1152,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 14
+		/// SupportByVersion Visio, 14,15
 		/// </summary>
 		private event Document_RuleSetValidatedEventHandler _RuleSetValidatedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 14
+		/// SupportByVersion Visio 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 14)]
+		[SupportByVersion("Visio", 14,15)]
 		public event Document_RuleSetValidatedEventHandler RuleSetValidatedEvent
 		{
 			add
@@ -1126,6 +1170,28 @@ namespace NetOffice.VisioApi
 			remove
 			{
 				_RuleSetValidatedEvent -= value;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio, 15
+		/// </summary>
+		private event Document_AfterDocumentMergeEventHandler _AfterDocumentMergeEvent;
+
+		/// <summary>
+		/// SupportByVersion Visio 15
+		/// </summary>
+		[SupportByVersion("Visio", 15)]
+		public event Document_AfterDocumentMergeEventHandler AfterDocumentMergeEvent
+		{
+			add
+			{
+				CreateEventBridge();
+				_AfterDocumentMergeEvent += value;
+			}
+			remove
+			{
+				_AfterDocumentMergeEvent -= value;
 			}
 		}
 

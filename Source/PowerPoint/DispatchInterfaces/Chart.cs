@@ -61,6 +61,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1, object index2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -83,6 +84,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object index2, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -107,6 +109,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -128,6 +131,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);

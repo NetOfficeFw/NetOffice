@@ -16,9 +16,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass DataRecordset 
-	/// SupportByVersion Visio, 12,14
+	/// SupportByVersion Visio, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 12,14)]
+	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataRecordset : IVDataRecordset,IEventBinding
 	{
@@ -94,17 +94,60 @@ namespace NetOffice.VisioApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.DataRecordset objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.DataRecordset array</returns>
+		public static NetOffice.VisioApi.DataRecordset[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","DataRecordset");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordset> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.DataRecordset>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.DataRecordset(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.DataRecordset object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.DataRecordset object or null</returns>
+		public static NetOffice.VisioApi.DataRecordset GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordset", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.DataRecordset(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.DataRecordset object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.DataRecordset object or null</returns>
+		public static NetOffice.VisioApi.DataRecordset GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","DataRecordset", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.DataRecordset(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event DataRecordset_DataRecordsetChangedEventHandler _DataRecordsetChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event DataRecordset_DataRecordsetChangedEventHandler DataRecordsetChangedEvent
 		{
 			add
@@ -119,14 +162,14 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio, 12,14
+		/// SupportByVersion Visio, 12,14,15
 		/// </summary>
 		private event DataRecordset_BeforeDataRecordsetDeleteEventHandler _BeforeDataRecordsetDeleteEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 12 14
+		/// SupportByVersion Visio 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 12,14)]
+		[SupportByVersion("Visio", 12,14,15)]
 		public event DataRecordset_BeforeDataRecordsetDeleteEventHandler BeforeDataRecordsetDeleteEvent
 		{
 			add

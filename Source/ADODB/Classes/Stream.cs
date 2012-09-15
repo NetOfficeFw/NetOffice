@@ -91,6 +91,49 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running ADODB.Stream objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an ADODB.Stream array</returns>
+		public static NetOffice.ADODBApi.Stream[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Stream");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Stream>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ADODBApi.Stream(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Stream object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an ADODB.Stream object or null</returns>
+		public static NetOffice.ADODBApi.Stream GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Stream", false);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Stream(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Stream object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an ADODB.Stream object or null</returns>
+		public static NetOffice.ADODBApi.Stream GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Stream", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Stream(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

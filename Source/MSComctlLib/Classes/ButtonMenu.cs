@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ButtonMenu objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ButtonMenu array</returns>
+		public static NetOffice.MSComctlLibApi.ButtonMenu[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ButtonMenu");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ButtonMenu> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ButtonMenu>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ButtonMenu(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ButtonMenu object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ButtonMenu object or null</returns>
+		public static NetOffice.MSComctlLibApi.ButtonMenu GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ButtonMenu", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ButtonMenu(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ButtonMenu object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ButtonMenu object or null</returns>
+		public static NetOffice.MSComctlLibApi.ButtonMenu GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ButtonMenu", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ButtonMenu(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

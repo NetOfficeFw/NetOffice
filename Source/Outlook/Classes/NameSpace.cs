@@ -94,6 +94,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.NameSpace objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.NameSpace array</returns>
+		public static NetOffice.OutlookApi.NameSpace[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","NameSpace");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NameSpace> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NameSpace>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.NameSpace(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NameSpace object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.NameSpace object or null</returns>
+		public static NetOffice.OutlookApi.NameSpace GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NameSpace", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NameSpace(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NameSpace object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.NameSpace object or null</returns>
+		public static NetOffice.OutlookApi.NameSpace GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NameSpace", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NameSpace(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

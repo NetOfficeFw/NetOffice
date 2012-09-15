@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Columns objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Columns array</returns>
+		public static NetOffice.OutlookApi.Columns[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Columns");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Columns> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Columns>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Columns(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Columns object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Columns object or null</returns>
+		public static NetOffice.OutlookApi.Columns GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Columns", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Columns(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Columns object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Columns object or null</returns>
+		public static NetOffice.OutlookApi.Columns GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Columns", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Columns(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

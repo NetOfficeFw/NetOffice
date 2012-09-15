@@ -377,6 +377,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="index">Int16 Index</param>
 		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_SubItems(Int16 index, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

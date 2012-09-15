@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 
 	///<summary>
 	/// CoClass TableDef 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TableDef : _TableDef
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.DAOApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running DAO.TableDef objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an DAO.TableDef array</returns>
+		public static NetOffice.DAOApi.TableDef[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("DAO","TableDef");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.TableDef> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.TableDef>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.DAOApi.TableDef(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running DAO.TableDef object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an DAO.TableDef object or null</returns>
+		public static NetOffice.DAOApi.TableDef GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("DAO","TableDef", false);
+			if(null != proxy)
+				return new NetOffice.DAOApi.TableDef(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running DAO.TableDef object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an DAO.TableDef object or null</returns>
+		public static NetOffice.DAOApi.TableDef GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("DAO","TableDef", throwOnError);
+			if(null != proxy)
+				return new NetOffice.DAOApi.TableDef(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

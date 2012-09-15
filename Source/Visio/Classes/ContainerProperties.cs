@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass ContainerProperties 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ContainerProperties : IVContainerProperties
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.ContainerProperties objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.ContainerProperties array</returns>
+		public static NetOffice.VisioApi.ContainerProperties[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","ContainerProperties");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ContainerProperties> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.ContainerProperties>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.ContainerProperties(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.ContainerProperties object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.ContainerProperties object or null</returns>
+		public static NetOffice.VisioApi.ContainerProperties GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ContainerProperties", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ContainerProperties(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.ContainerProperties object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.ContainerProperties object or null</returns>
+		public static NetOffice.VisioApi.ContainerProperties GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","ContainerProperties", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.ContainerProperties(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

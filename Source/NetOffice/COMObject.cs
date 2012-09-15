@@ -528,11 +528,45 @@ namespace NetOffice
         #region IDisposable Members
 
         /// <summary>
+        /// NetOffice event: these event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public event OnDisposeEventHandler OnDispose;
+         
+        /// <summary>
+        /// Calls the OnDispose event as service for client callers
+        /// </summary>
+        /// <returns></returns>
+        private bool RaiseOnDispose()
+        {
+            bool cancelDispose = false;
+            try
+            {
+                if(null != OnDispose)
+                {
+                    OnDisposeEventArgs eventArgs = new OnDisposeEventArgs(this);
+                    OnDispose(eventArgs);
+                    cancelDispose = eventArgs.Cancel;
+                }
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.WriteException(exception);
+            }
+            return cancelDispose;
+        }
+
+        /// <summary>
         /// NetOffice method: dispose instance and all child instances
         /// </summary>
         /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
         public virtual void Dispose(bool disposeEventBinding)
         {
+            // skip check 
+            bool cancel = RaiseOnDispose();
+            if (cancel)
+                return;
+
             // in case object export events and 
             // disposeEventBinding == true we dont remove the object from parents child list
             bool removeFromParent = true;

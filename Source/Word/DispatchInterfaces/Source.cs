@@ -156,6 +156,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Field(string name, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);

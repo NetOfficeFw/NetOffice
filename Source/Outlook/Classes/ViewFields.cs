@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ViewFields objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ViewFields array</returns>
+		public static NetOffice.OutlookApi.ViewFields[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ViewFields");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewFields> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewFields>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ViewFields(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewFields object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ViewFields object or null</returns>
+		public static NetOffice.OutlookApi.ViewFields GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewFields", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewFields(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewFields object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ViewFields object or null</returns>
+		public static NetOffice.OutlookApi.ViewFields GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewFields", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewFields(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLDialog objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDialog array</returns>
+		public static NetOffice.MSHTMLApi.HTMLDialog[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLDialog");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDialog> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDialog>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLDialog(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDialog object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDialog object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDialog GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDialog", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDialog(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDialog object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLDialog object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDialog GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDialog", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDialog(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

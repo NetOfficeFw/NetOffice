@@ -107,6 +107,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.Slider objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.Slider array</returns>
+		public static NetOffice.MSComctlLibApi.Slider[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","Slider");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Slider> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Slider>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.Slider(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Slider object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.Slider object or null</returns>
+		public static NetOffice.MSComctlLibApi.Slider GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Slider", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Slider(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Slider object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.Slider object or null</returns>
+		public static NetOffice.MSComctlLibApi.Slider GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Slider", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Slider(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

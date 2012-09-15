@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass RelatedShapePairEvent 
-	/// SupportByVersion Visio, 14
+	/// SupportByVersion Visio, 14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 14)]
+	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class RelatedShapePairEvent : IVRelatedShapePairEvent
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.RelatedShapePairEvent objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.RelatedShapePairEvent array</returns>
+		public static NetOffice.VisioApi.RelatedShapePairEvent[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","RelatedShapePairEvent");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.RelatedShapePairEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.RelatedShapePairEvent>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.RelatedShapePairEvent(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.RelatedShapePairEvent object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.RelatedShapePairEvent object or null</returns>
+		public static NetOffice.VisioApi.RelatedShapePairEvent GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","RelatedShapePairEvent", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.RelatedShapePairEvent(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.RelatedShapePairEvent object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.RelatedShapePairEvent object or null</returns>
+		public static NetOffice.VisioApi.RelatedShapePairEvent GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","RelatedShapePairEvent", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.RelatedShapePairEvent(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

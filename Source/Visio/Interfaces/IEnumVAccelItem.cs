@@ -9,9 +9,9 @@ namespace NetOffice.VisioApi
 {
 	///<summary>
 	/// Interface IEnumVAccelItem 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IEnumVAccelItem : COMObject
 	{
@@ -77,12 +77,12 @@ namespace NetOffice.VisioApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		/// <param name="rgelt">NetOffice.VisioApi.IVAccelItem rgelt</param>
 		/// <param name="pceltFetched">Int32 pceltFetched</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Next(Int32 celt, out NetOffice.VisioApi.IVAccelItem rgelt, out Int32 pceltFetched)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
@@ -96,10 +96,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Skip(Int32 celt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(celt);
@@ -108,9 +108,9 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Reset()
 		{
 			object[] paramsArray = null;
@@ -119,10 +119,10 @@ namespace NetOffice.VisioApi
 		}
 
 		/// <summary>
-		/// SupportByVersion Visio 11, 12, 14
+		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="ppenm">NetOffice.VisioApi.IEnumVAccelItem ppenm</param>
-		[SupportByVersionAttribute("Visio", 11,12,14)]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Clone(out NetOffice.VisioApi.IEnumVAccelItem ppenm)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);

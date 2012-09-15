@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.RuleActions objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.RuleActions array</returns>
+		public static NetOffice.OutlookApi.RuleActions[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","RuleActions");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleActions> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleActions>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.RuleActions(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleActions object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.RuleActions object or null</returns>
+		public static NetOffice.OutlookApi.RuleActions GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleActions", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleActions(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleActions object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.RuleActions object or null</returns>
+		public static NetOffice.OutlookApi.RuleActions GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleActions", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleActions(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

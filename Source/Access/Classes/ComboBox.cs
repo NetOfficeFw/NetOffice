@@ -111,6 +111,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.ComboBox objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.ComboBox array</returns>
+		public static NetOffice.AccessApi.ComboBox[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","ComboBox");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ComboBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ComboBox>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.ComboBox(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.ComboBox object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.ComboBox object or null</returns>
+		public static NetOffice.AccessApi.ComboBox GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","ComboBox", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.ComboBox(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.ComboBox object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.ComboBox object or null</returns>
+		public static NetOffice.AccessApi.ComboBox GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","ComboBox", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.ComboBox(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

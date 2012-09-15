@@ -60,6 +60,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Colors(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -81,6 +82,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Colors(object index, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

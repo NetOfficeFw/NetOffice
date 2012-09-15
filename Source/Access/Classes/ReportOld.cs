@@ -99,6 +99,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.ReportOld objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.ReportOld array</returns>
+		public static NetOffice.AccessApi.ReportOld[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","ReportOld");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ReportOld> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.ReportOld>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.ReportOld(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.ReportOld object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.ReportOld object or null</returns>
+		public static NetOffice.AccessApi.ReportOld GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","ReportOld", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.ReportOld(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.ReportOld object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.ReportOld object or null</returns>
+		public static NetOffice.AccessApi.ReportOld GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","ReportOld", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.ReportOld(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

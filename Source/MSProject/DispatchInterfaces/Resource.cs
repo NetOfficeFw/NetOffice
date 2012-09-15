@@ -9983,10 +9983,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string Guid
 		{
 			get
@@ -9998,10 +9998,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string CalendarGuid
 		{
 			get
@@ -10013,10 +10013,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ErrorMessage
 		{
 			get
@@ -10028,10 +10028,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string DefaultAssignmentOwner
 		{
 			get
@@ -10048,10 +10048,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Budget
 		{
 			get
@@ -10076,10 +10076,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object BudgetWork
 		{
 			get
@@ -10104,10 +10104,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object BudgetCost
 		{
 			get
@@ -10132,10 +10132,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Import
 		{
 			get
@@ -10160,10 +10160,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object BaselineBudgetWork
 		{
 			get
@@ -10188,10 +10188,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object BaselineBudgetCost
 		{
 			get
@@ -10216,10 +10216,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline1BudgetWork
 		{
 			get
@@ -10244,10 +10244,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline1BudgetCost
 		{
 			get
@@ -10272,10 +10272,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline2BudgetWork
 		{
 			get
@@ -10300,10 +10300,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline2BudgetCost
 		{
 			get
@@ -10328,10 +10328,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline3BudgetWork
 		{
 			get
@@ -10356,10 +10356,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline3BudgetCost
 		{
 			get
@@ -10384,10 +10384,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline4BudgetWork
 		{
 			get
@@ -10412,10 +10412,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline4BudgetCost
 		{
 			get
@@ -10440,10 +10440,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline5BudgetWork
 		{
 			get
@@ -10468,10 +10468,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline5BudgetCost
 		{
 			get
@@ -10496,10 +10496,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline6BudgetWork
 		{
 			get
@@ -10524,10 +10524,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline6BudgetCost
 		{
 			get
@@ -10552,10 +10552,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline7BudgetWork
 		{
 			get
@@ -10580,10 +10580,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline7BudgetCost
 		{
 			get
@@ -10608,10 +10608,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline8BudgetWork
 		{
 			get
@@ -10636,10 +10636,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline8BudgetCost
 		{
 			get
@@ -10664,10 +10664,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline9BudgetWork
 		{
 			get
@@ -10692,10 +10692,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline9BudgetCost
 		{
 			get
@@ -10720,10 +10720,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline10BudgetWork
 		{
 			get
@@ -10748,10 +10748,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Baseline10BudgetCost
 		{
 			get
@@ -10776,10 +10776,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object IsTeam
 		{
 			get
@@ -10804,10 +10804,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string CostCenter
 		{
 			get

@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass MenuSet 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class MenuSet : IVMenuSet
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.MenuSet objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.MenuSet array</returns>
+		public static NetOffice.VisioApi.MenuSet[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","MenuSet");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MenuSet> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.MenuSet>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.MenuSet(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.MenuSet object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.MenuSet object or null</returns>
+		public static NetOffice.VisioApi.MenuSet GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MenuSet", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MenuSet(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.MenuSet object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.MenuSet object or null</returns>
+		public static NetOffice.VisioApi.MenuSet GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","MenuSet", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.MenuSet(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

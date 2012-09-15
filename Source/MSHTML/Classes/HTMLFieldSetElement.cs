@@ -157,6 +157,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLFieldSetElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLFieldSetElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLFieldSetElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLFieldSetElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLFieldSetElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLFieldSetElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLFieldSetElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLFieldSetElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLFieldSetElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLFieldSetElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLFieldSetElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLFieldSetElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLFieldSetElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLFieldSetElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLFieldSetElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLFieldSetElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLFieldSetElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -24,10 +24,10 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjResourceTypeMaterial = 1,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>2</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTypeCost = 2
 	}
 }

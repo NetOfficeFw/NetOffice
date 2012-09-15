@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.Components objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.Components array</returns>
+		public static NetOffice.VBIDEApi.Components[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","Components");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Components> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.Components>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.Components(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Components object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.Components object or null</returns>
+		public static NetOffice.VBIDEApi.Components GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Components", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Components(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.Components object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.Components object or null</returns>
+		public static NetOffice.VBIDEApi.Components GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","Components", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.Components(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

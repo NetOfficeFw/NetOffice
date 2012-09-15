@@ -121,6 +121,49 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running OWC10.PivotTable objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an OWC10.PivotTable array</returns>
+		public static NetOffice.OWC10Api.PivotTable[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("OWC10","PivotTable");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.PivotTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.PivotTable>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OWC10Api.PivotTable(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running OWC10.PivotTable object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an OWC10.PivotTable object or null</returns>
+		public static NetOffice.OWC10Api.PivotTable GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","PivotTable", false);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.PivotTable(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running OWC10.PivotTable object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an OWC10.PivotTable object or null</returns>
+		public static NetOffice.OWC10Api.PivotTable GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","PivotTable", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.PivotTable(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

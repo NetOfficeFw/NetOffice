@@ -524,6 +524,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Collect(object index, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

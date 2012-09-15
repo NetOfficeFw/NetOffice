@@ -74,6 +74,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_accName(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -111,6 +112,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_accValue(object varChild, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(varChild);
@@ -781,6 +783,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_List(Int32 index, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

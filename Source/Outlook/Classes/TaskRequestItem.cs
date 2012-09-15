@@ -119,6 +119,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.TaskRequestItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.TaskRequestItem array</returns>
+		public static NetOffice.OutlookApi.TaskRequestItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","TaskRequestItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.TaskRequestItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.TaskRequestItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.TaskRequestItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.TaskRequestItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.TaskRequestItem object or null</returns>
+		public static NetOffice.OutlookApi.TaskRequestItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","TaskRequestItem", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.TaskRequestItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.TaskRequestItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.TaskRequestItem object or null</returns>
+		public static NetOffice.OutlookApi.TaskRequestItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","TaskRequestItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.TaskRequestItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.NewItemAlertRuleAction objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.NewItemAlertRuleAction array</returns>
+		public static NetOffice.OutlookApi.NewItemAlertRuleAction[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","NewItemAlertRuleAction");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NewItemAlertRuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NewItemAlertRuleAction>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.NewItemAlertRuleAction(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NewItemAlertRuleAction object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.NewItemAlertRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.NewItemAlertRuleAction GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NewItemAlertRuleAction", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NewItemAlertRuleAction(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NewItemAlertRuleAction object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.NewItemAlertRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.NewItemAlertRuleAction GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NewItemAlertRuleAction", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NewItemAlertRuleAction(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

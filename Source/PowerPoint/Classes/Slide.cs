@@ -92,6 +92,49 @@ namespace NetOffice.PowerPointApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running PowerPoint.Slide objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an PowerPoint.Slide array</returns>
+		public static NetOffice.PowerPointApi.Slide[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("PowerPoint","Slide");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Slide> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Slide>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.PowerPointApi.Slide(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Slide object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an PowerPoint.Slide object or null</returns>
+		public static NetOffice.PowerPointApi.Slide GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Slide", false);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Slide(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Slide object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an PowerPoint.Slide object or null</returns>
+		public static NetOffice.PowerPointApi.Slide GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Slide", throwOnError);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Slide(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

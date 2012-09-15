@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Connect 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Connect : IVConnect
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Connect objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Connect array</returns>
+		public static NetOffice.VisioApi.Connect[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Connect");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Connect> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Connect>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Connect(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Connect object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Connect object or null</returns>
+		public static NetOffice.VisioApi.Connect GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Connect", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Connect(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Connect object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Connect object or null</returns>
+		public static NetOffice.VisioApi.Connect GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Connect", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Connect(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

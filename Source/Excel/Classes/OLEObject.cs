@@ -94,6 +94,49 @@ namespace NetOffice.ExcelApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Excel.OLEObject objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Excel.OLEObject array</returns>
+		public static NetOffice.ExcelApi.OLEObject[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Excel","OLEObject");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.OLEObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.OLEObject>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ExcelApi.OLEObject(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Excel.OLEObject object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Excel.OLEObject object or null</returns>
+		public static NetOffice.ExcelApi.OLEObject GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","OLEObject", false);
+			if(null != proxy)
+				return new NetOffice.ExcelApi.OLEObject(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Excel.OLEObject object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Excel.OLEObject object or null</returns>
+		public static NetOffice.ExcelApi.OLEObject GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","OLEObject", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ExcelApi.OLEObject(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

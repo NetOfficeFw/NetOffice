@@ -28,6 +28,6 @@ namespace NetOffice.OfficeApi
 		#region Properties
 
 		#endregion
-	#pragma warning restore
 	}
 }
+	#pragma warning restore

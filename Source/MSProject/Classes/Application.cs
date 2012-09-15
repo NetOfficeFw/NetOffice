@@ -171,6 +171,49 @@ namespace NetOffice.MSProjectApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSProject.Application objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSProject.Application array</returns>
+		public static NetOffice.MSProjectApi.Application[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSProject","Application");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSProjectApi.Application>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSProjectApi.Application(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSProject.Application object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSProject.Application object or null</returns>
+		public static NetOffice.MSProjectApi.Application GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Application", false);
+			if(null != proxy)
+				return new NetOffice.MSProjectApi.Application(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSProject.Application object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSProject.Application object or null</returns>
+		public static NetOffice.MSProjectApi.Application GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSProject","Application", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSProjectApi.Application(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
@@ -1120,14 +1163,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_OnUndoOrRedoEventHandler _OnUndoOrRedoEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_OnUndoOrRedoEventHandler OnUndoOrRedoEvent
 		{
 			add
@@ -1142,14 +1185,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_AfterCubeBuiltEventHandler _AfterCubeBuiltEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_AfterCubeBuiltEventHandler AfterCubeBuiltEvent
 		{
 			add
@@ -1164,14 +1207,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_LoadWebPaneEventHandler _LoadWebPaneEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_LoadWebPaneEventHandler LoadWebPaneEvent
 		{
 			add
@@ -1186,14 +1229,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_JobStartEventHandler _JobStartEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_JobStartEventHandler JobStartEvent
 		{
 			add
@@ -1208,14 +1251,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_JobCompletedEventHandler _JobCompletedEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_JobCompletedEventHandler JobCompletedEvent
 		{
 			add
@@ -1230,14 +1273,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_SaveStartingToServerEventHandler _SaveStartingToServerEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_SaveStartingToServerEventHandler SaveStartingToServerEvent
 		{
 			add
@@ -1252,14 +1295,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_SaveCompletedToServerEventHandler _SaveCompletedToServerEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_SaveCompletedToServerEventHandler SaveCompletedToServerEvent
 		{
 			add
@@ -1274,14 +1317,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ProjectBeforePublishEventHandler _ProjectBeforePublishEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ProjectBeforePublishEventHandler ProjectBeforePublishEvent
 		{
 			add
@@ -1296,14 +1339,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_PaneActivateEventHandler _PaneActivateEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_PaneActivateEventHandler PaneActivateEvent
 		{
 			add
@@ -1318,14 +1361,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_SecondaryViewChangeEventHandler _SecondaryViewChangeEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_SecondaryViewChangeEventHandler SecondaryViewChangeEvent
 		{
 			add
@@ -1340,14 +1383,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_IsFunctionalitySupportedEventHandler _IsFunctionalitySupportedEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_IsFunctionalitySupportedEventHandler IsFunctionalitySupportedEvent
 		{
 			add
@@ -1362,14 +1405,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject, 12,14
+		/// SupportByVersion MSProject, 11,12,14
 		/// </summary>
 		private event Application_ConnectionStatusChangedEventHandler _ConnectionStatusChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion MSProject 12 14
+		/// SupportByVersion MSProject 11 12 14
 		/// </summary>
-		[SupportByVersion("MSProject", 12,14)]
+		[SupportByVersion("MSProject", 11,12,14)]
 		public event Application_ConnectionStatusChangedEventHandler ConnectionStatusChangedEvent
 		{
 			add

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ViewFont objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ViewFont array</returns>
+		public static NetOffice.OutlookApi.ViewFont[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ViewFont");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewFont> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ViewFont>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ViewFont(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewFont object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ViewFont object or null</returns>
+		public static NetOffice.OutlookApi.ViewFont GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewFont", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewFont(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ViewFont object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ViewFont object or null</returns>
+		public static NetOffice.OutlookApi.ViewFont GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ViewFont", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ViewFont(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLOptionElementFactory objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLOptionElementFactory array</returns>
+		public static NetOffice.MSHTMLApi.HTMLOptionElementFactory[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLOptionElementFactory");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLOptionElementFactory> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLOptionElementFactory>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLOptionElementFactory(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLOptionElementFactory object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLOptionElementFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLOptionElementFactory GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLOptionElementFactory", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLOptionElementFactory(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLOptionElementFactory object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLOptionElementFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLOptionElementFactory GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLOptionElementFactory", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLOptionElementFactory(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

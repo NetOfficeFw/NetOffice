@@ -33,8 +33,8 @@ $classicUICreateCall$
     Public Sub OnDisconnection(ByVal RemoveMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection        
  		
 	'If this is not because of host shutdown(removed by user for example) we call OnBeginShutdown at hand
-    	If Not RemoveMode != ext_DisconnectMode.ext_dm_HostShutdown Then
-        	OnBeginShutdown(ref custom)
+    	If Not RemoveMode = ext_DisconnectMode.ext_dm_HostShutdown Then
+		OnBeginShutdown(custom)
 	End If
 
 $ApplicationDestroy$

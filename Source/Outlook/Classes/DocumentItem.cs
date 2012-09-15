@@ -119,6 +119,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.DocumentItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.DocumentItem array</returns>
+		public static NetOffice.OutlookApi.DocumentItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","DocumentItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DocumentItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.DocumentItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.DocumentItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DocumentItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.DocumentItem object or null</returns>
+		public static NetOffice.OutlookApi.DocumentItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DocumentItem", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DocumentItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.DocumentItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.DocumentItem object or null</returns>
+		public static NetOffice.OutlookApi.DocumentItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","DocumentItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.DocumentItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

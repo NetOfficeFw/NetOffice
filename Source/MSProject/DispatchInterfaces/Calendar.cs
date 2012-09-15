@@ -213,10 +213,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string Guid
 		{
 			get
@@ -228,10 +228,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ResourceGuid
 		{
 			get
@@ -243,10 +243,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Exceptions Exceptions
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.WorkWeeks WorkWeeks
 		{
 			get

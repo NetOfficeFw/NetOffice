@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Container 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Container : _DAO
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Name
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Owner
 		{
 			get
@@ -109,10 +109,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string UserName
 		{
 			get
@@ -129,10 +129,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 Permissions
 		{
 			get
@@ -149,10 +149,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public bool Inherit
 		{
 			get
@@ -169,10 +169,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public NetOffice.DAOApi.Documents Documents
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 AllPermissions
 		{
 			get

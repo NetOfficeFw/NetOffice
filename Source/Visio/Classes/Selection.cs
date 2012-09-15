@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Selection 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Selection : IVSelection
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Selection objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Selection array</returns>
+		public static NetOffice.VisioApi.Selection[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Selection");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Selection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Selection>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Selection(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Selection object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Selection object or null</returns>
+		public static NetOffice.VisioApi.Selection GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Selection", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Selection(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Selection object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Selection object or null</returns>
+		public static NetOffice.VisioApi.Selection GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Selection", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Selection(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

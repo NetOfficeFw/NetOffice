@@ -115,7 +115,7 @@
             // 
             this.panelLeftHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelLeftHeader.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelLeftHeader.BackColor = System.Drawing.Color.White;
             this.panelLeftHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelLeftHeader.Controls.Add(this.pictureBox6);
             this.panelLeftHeader.Controls.Add(this.pictureBox5);
@@ -214,7 +214,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.labelCaption);
             this.panel3.Controls.Add(this.imageBox);

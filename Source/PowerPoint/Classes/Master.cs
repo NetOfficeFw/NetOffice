@@ -92,6 +92,49 @@ namespace NetOffice.PowerPointApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running PowerPoint.Master objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an PowerPoint.Master array</returns>
+		public static NetOffice.PowerPointApi.Master[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("PowerPoint","Master");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Master> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.Master>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.PowerPointApi.Master(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Master object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an PowerPoint.Master object or null</returns>
+		public static NetOffice.PowerPointApi.Master GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Master", false);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Master(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.Master object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an PowerPoint.Master object or null</returns>
+		public static NetOffice.PowerPointApi.Master GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","Master", throwOnError);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.Master(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

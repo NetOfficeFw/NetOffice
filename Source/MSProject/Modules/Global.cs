@@ -2200,10 +2200,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static NetOffice.MSProjectApi.ReportTemplates VisualReportTemplateList
 		{
 			get
@@ -2221,10 +2221,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Use3DLook
 		{
 			get
@@ -2241,10 +2241,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool UseOMIDs
 		{
 			get
@@ -2261,10 +2261,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 UndoLevels
 		{
 			get
@@ -2281,10 +2281,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnableChangeHighlighting
 		{
 			get
@@ -2301,10 +2301,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string VisualReportsAdditionalTemplatePath
 		{
 			get
@@ -2321,10 +2321,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TrustProjectServerAndWSSPages
 		{
 			get
@@ -2341,10 +2341,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static NetOffice.OfficeApi.IAssistance Assistance
 		{
 			get
@@ -2357,10 +2357,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static object TimescaleStart
 		{
 			get
@@ -2385,10 +2385,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static object TimescaleFinish
 		{
 			get
@@ -2413,10 +2413,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static object PanZoomStart
 		{
 			get
@@ -2441,10 +2441,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static object PanZoomFinish
 		{
 			get
@@ -2469,10 +2469,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static string Build
 		{
 			get
@@ -2489,10 +2489,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static string CompareProjectsCurrentVersionName
 		{
 			get
@@ -2509,10 +2509,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static string CompareProjectsPreviousVersionName
 		{
 			get
@@ -2529,10 +2529,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelFreeformTasks
 		{
 			get
@@ -2546,6 +2546,75 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 				object[] paramsArray = Invoker.ValidateParamsArray(value);
 				Invoker.PropertySet(_instance, "LevelFreeformTasks", paramsArray);
 			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static NetOffice.MSProjectApi.Reports GlobalReports
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(_instance, "GlobalReports", paramsArray);
+				NetOffice.MSProjectApi.Reports newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.MSProjectApi.Reports.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Reports;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		/// <param name="projectName">string ProjectName</param>
+		/// <param name="projectJobType">NetOffice.MSProjectApi.Enums.PjJobType ProjectJobType</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public static NetOffice.MSProjectApi.Enums.PjCacheJobState get_GetCacheStatusForProject(string projectName, NetOffice.MSProjectApi.Enums.PjJobType projectJobType)
+		{		
+			object[] paramsArray = Invoker.ValidateParamsArray(projectName, projectJobType);
+			object returnItem = Invoker.PropertyGet(_instance, "GetCacheStatusForProject", paramsArray);
+			int intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);
+			return (NetOffice.MSProjectApi.Enums.PjCacheJobState)intReturnItem;
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Alias for get_GetCacheStatusForProject
+		/// </summary>
+		/// <param name="projectName">string ProjectName</param>
+		/// <param name="projectJobType">NetOffice.MSProjectApi.Enums.PjJobType ProjectJobType</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static NetOffice.MSProjectApi.Enums.PjCacheJobState GetCacheStatusForProject(string projectName, NetOffice.MSProjectApi.Enums.PjJobType projectJobType)
+		{
+			return get_GetCacheStatusForProject(projectName, projectJobType);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		/// <param name="projectName">string ProjectName</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public static bool get_IsCheckedOut(string projectName)
+		{		
+			object[] paramsArray = Invoker.ValidateParamsArray(projectName);
+			object returnItem = Invoker.PropertyGet(_instance, "IsCheckedOut", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Alias for get_IsCheckedOut
+		/// </summary>
+		/// <param name="projectName">string ProjectName</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool IsCheckedOut(string projectName)
+		{
+			return get_IsCheckedOut(projectName);
 		}
 
 		#endregion
@@ -29050,10 +29119,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="field">Int32 Field</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldDelete(Int32 field)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
@@ -29062,11 +29131,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="commitmentDate">optional object CommitmentDate</param>
 		/// <param name="commitmentGuid">optional object CommitmentGuid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ImportCommitment(object commitmentDate, object commitmentGuid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commitmentDate, commitmentGuid);
@@ -29075,10 +29144,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ImportCommitment()
 		{
 			object[] paramsArray = null;
@@ -29087,11 +29156,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="commitmentDate">optional object CommitmentDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ImportCommitment(object commitmentDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commitmentDate);
@@ -29100,9 +29169,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SummaryResourceAssignmentsRefresh()
 		{
 			object[] paramsArray = null;
@@ -29111,10 +29180,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="uniqueID">optional object UniqueID</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditEnterpriseCalendar(object uniqueID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(uniqueID);
@@ -29123,10 +29192,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditEnterpriseCalendar()
 		{
 			object[] paramsArray = null;
@@ -29135,9 +29204,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CreateEnterpriseCalendar()
 		{
 			object[] paramsArray = null;
@@ -29146,11 +29215,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LoadWebPaneControl(string targetPage, object wrapperPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, wrapperPage);
@@ -29159,11 +29228,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LoadWebPaneControl(string targetPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);
@@ -29172,9 +29241,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResourceMappingDialog()
 		{
 			object[] paramsArray = null;
@@ -29183,11 +29252,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="oldName">optional object OldName</param>
 		/// <param name="newName">optional object NewName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeLocalCalendarEnterprise(object oldName, object newName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldName, newName);
@@ -29196,10 +29265,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeLocalCalendarEnterprise()
 		{
 			object[] paramsArray = null;
@@ -29208,11 +29277,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="oldName">optional object OldName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeLocalCalendarEnterprise(object oldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldName);
@@ -29221,10 +29290,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="taskCustomFields">optional object TaskCustomFields</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldMappingDialog(object taskCustomFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskCustomFields);
@@ -29233,10 +29302,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldMappingDialog()
 		{
 			object[] paramsArray = null;
@@ -29245,10 +29314,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckTaskErrors(object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
@@ -29257,10 +29326,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckTaskErrors()
 		{
 			object[] paramsArray = null;
@@ -29269,12 +29338,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		/// <param name="resetImport">optional object ResetImport</param>
 		/// <param name="checkEnterprise">optional object CheckEnterprise</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckResourceErrors(object localRUID, object resetImport, object checkEnterprise)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(localRUID, resetImport, checkEnterprise);
@@ -29283,10 +29352,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckResourceErrors()
 		{
 			object[] paramsArray = null;
@@ -29295,11 +29364,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckResourceErrors(object localRUID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(localRUID);
@@ -29308,12 +29377,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		/// <param name="resetImport">optional object ResetImport</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckResourceErrors(object localRUID, object resetImport)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(localRUID, resetImport);
@@ -29322,9 +29391,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditRedo()
 		{
 			object[] paramsArray = null;
@@ -29333,11 +29402,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="republish">optional object Republish</param>
 		/// <param name="wssUrl">optional object WssUrl</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Publish(object republish, object wssUrl)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(republish, wssUrl);
@@ -29346,10 +29415,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Publish()
 		{
 			object[] paramsArray = null;
@@ -29358,11 +29427,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="republish">optional object Republish</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Publish(object republish)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(republish);
@@ -29371,12 +29440,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="fieldName">optional object FieldName</param>
 		/// <param name="lookupTableName">optional object LookupTableName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeFieldEnterprise(object fieldID, object fieldName, object lookupTableName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, fieldName, lookupTableName);
@@ -29385,10 +29454,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeFieldEnterprise()
 		{
 			object[] paramsArray = null;
@@ -29397,11 +29466,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeFieldEnterprise(object fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID);
@@ -29410,12 +29479,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="fieldName">optional object FieldName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MakeFieldEnterprise(object fieldID, object fieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, fieldName);
@@ -29424,10 +29493,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SaveForSharing(object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -29436,10 +29505,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SaveForSharing()
 		{
 			object[] paramsArray = null;
@@ -29448,9 +29517,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CacheSettings()
 		{
 			object[] paramsArray = null;
@@ -29459,9 +29528,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CleanupCache()
 		{
 			object[] paramsArray = null;
@@ -29470,9 +29539,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CacheStatus()
 		{
 			object[] paramsArray = null;
@@ -29481,10 +29550,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fOffline">optional object fOffline</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WorkOffline(object fOffline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fOffline);
@@ -29493,10 +29562,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WorkOffline()
 		{
 			object[] paramsArray = null;
@@ -29505,9 +29574,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TaskDrivers()
 		{
 			object[] paramsArray = null;
@@ -29516,9 +29585,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ToggleChangeHighlighting()
 		{
 			object[] paramsArray = null;
@@ -29527,10 +29596,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="pjVisualReportsTab">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTab PjVisualReportsTab = 0</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReports(NetOffice.MSProjectApi.Enums.PjVisualReportsTab pjVisualReportsTab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTab);
@@ -29539,10 +29608,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReports()
 		{
 			object[] paramsArray = null;
@@ -29551,11 +29620,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsSaveDatabase(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsDataLevel);
@@ -29564,11 +29633,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsSaveDatabase(object strNamePath)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath);
@@ -29577,13 +29646,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType, reportAllFields, pjVisualReportsDataLevel);
@@ -29592,12 +29661,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType);
@@ -29606,13 +29675,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType, reportAllFields);
@@ -29621,13 +29690,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType, reportAllFields, pjVisualReportsDataLevel);
@@ -29636,11 +29705,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType);
@@ -29649,12 +29718,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType);
@@ -29663,13 +29732,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType, reportAllFields);
@@ -29678,11 +29747,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsView(object strVisualReportTemplateFile, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile, pjVisualReportsDataLevel);
@@ -29691,11 +29760,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsView(object strVisualReportTemplateFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile);
@@ -29704,9 +29773,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CommitmentsPane()
 		{
 			object[] paramsArray = null;
@@ -29715,9 +29784,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DependenciesPane()
 		{
 			object[] paramsArray = null;
@@ -29726,11 +29795,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsEdit(object strVisualReportTemplateFile, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile, pjVisualReportsDataLevel);
@@ -29739,11 +29808,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool VisualReportsEdit(object strVisualReportTemplateFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile);
@@ -29752,7 +29821,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29771,7 +29840,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		/// <param name="xMLName">optional object XMLName</param>
 		/// <param name="doNotLoadFromEnterprise">optional object DoNotLoadFromEnterprise</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName, object doNotLoadFromEnterprise)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended, xMLName, doNotLoadFromEnterprise);
@@ -29780,7 +29849,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29794,7 +29863,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="formatID">object FormatID</param>
 		/// <param name="map">object Map</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map);
@@ -29803,7 +29872,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29818,7 +29887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="map">object Map</param>
 		/// <param name="openPool">optional NetOffice.MSProjectApi.Enums.PjPoolOpen openPool = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool);
@@ -29827,7 +29896,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29843,7 +29912,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="openPool">optional NetOffice.MSProjectApi.Enums.PjPoolOpen openPool = 0</param>
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password);
@@ -29852,7 +29921,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29869,7 +29938,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="password">optional object Password</param>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword);
@@ -29878,7 +29947,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29896,7 +29965,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended);
@@ -29905,7 +29974,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29924,7 +29993,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		/// <param name="xMLName">optional object XMLName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended, xMLName);
@@ -29933,12 +30002,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
 		/// <param name="checkIn">optional object CheckIn</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object noAuto, object checkIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, noAuto, checkIn);
@@ -29947,10 +30016,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseEx()
 		{
 			object[] paramsArray = null;
@@ -29959,11 +30028,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
@@ -29972,12 +30041,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object noAuto)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, noAuto);
@@ -29986,11 +30055,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="checkIn">optional object CheckIn</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseAllEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object checkIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, checkIn);
@@ -29999,10 +30068,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseAllEx()
 		{
 			object[] paramsArray = null;
@@ -30011,11 +30080,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileCloseAllEx(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
@@ -30024,7 +30093,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30046,7 +30115,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fontConversion">optional object FontConversion</param>
 		/// <param name="showStartupWorkpane">optional object ShowStartupWorkpane</param>
 		/// <param name="maxUndoRecords">optional object MaxUndoRecords</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection, object displayRecentFiles, object recentFilesMaximum, object fontConversion, object showStartupWorkpane, object maxUndoRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection, displayRecentFiles, recentFilesMaximum, fontConversion, showStartupWorkpane, maxUndoRecords);
@@ -30055,10 +30124,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx()
 		{
 			object[] paramsArray = null;
@@ -30067,11 +30136,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard);
@@ -30080,12 +30149,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage);
@@ -30094,13 +30163,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
 		/// <param name="wizardErrors">optional object WizardErrors</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors);
@@ -30109,14 +30178,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
 		/// <param name="wizardErrors">optional object WizardErrors</param>
 		/// <param name="wizardScheduling">optional object WizardScheduling</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling);
@@ -30125,7 +30194,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30133,7 +30202,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="wizardScheduling">optional object WizardScheduling</param>
 		/// <param name="showTipOfDay">optional object ShowTipOfDay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay);
@@ -30142,7 +30211,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30151,7 +30220,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showTipOfDay">optional object ShowTipOfDay</param>
 		/// <param name="autoAddResources">optional object AutoAddResources</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources);
@@ -30160,7 +30229,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30170,7 +30239,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="autoAddResources">optional object AutoAddResources</param>
 		/// <param name="standardRate">optional object StandardRate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate);
@@ -30179,7 +30248,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30190,7 +30259,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="standardRate">optional object StandardRate</param>
 		/// <param name="overtimeRate">optional object OvertimeRate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate);
@@ -30199,7 +30268,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30211,7 +30280,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="overtimeRate">optional object OvertimeRate</param>
 		/// <param name="lastFile">optional object LastFile</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile);
@@ -30220,7 +30289,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30233,7 +30302,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lastFile">optional object LastFile</param>
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo);
@@ -30242,7 +30311,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30256,7 +30325,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		/// <param name="userName">optional object UserName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName);
@@ -30265,7 +30334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30280,7 +30349,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="userName">optional object UserName</param>
 		/// <param name="setDefaults">optional object SetDefaults</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults);
@@ -30289,7 +30358,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30305,7 +30374,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="setDefaults">optional object SetDefaults</param>
 		/// <param name="showWelcome">optional object ShowWelcome</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome);
@@ -30314,7 +30383,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30331,7 +30400,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showWelcome">optional object ShowWelcome</param>
 		/// <param name="autoFilter">optional object AutoFilter</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter);
@@ -30340,7 +30409,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30358,7 +30427,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="autoFilter">optional object AutoFilter</param>
 		/// <param name="macroVirusProtection">optional object MacroVirusProtection</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection);
@@ -30367,7 +30436,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30386,7 +30455,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="macroVirusProtection">optional object MacroVirusProtection</param>
 		/// <param name="displayRecentFiles">optional object DisplayRecentFiles</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection, object displayRecentFiles)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection, displayRecentFiles);
@@ -30395,7 +30464,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30415,7 +30484,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayRecentFiles">optional object DisplayRecentFiles</param>
 		/// <param name="recentFilesMaximum">optional object RecentFilesMaximum</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection, object displayRecentFiles, object recentFilesMaximum)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection, displayRecentFiles, recentFilesMaximum);
@@ -30424,7 +30493,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30445,7 +30514,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="recentFilesMaximum">optional object RecentFilesMaximum</param>
 		/// <param name="fontConversion">optional object FontConversion</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection, object displayRecentFiles, object recentFilesMaximum, object fontConversion)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection, displayRecentFiles, recentFilesMaximum, fontConversion);
@@ -30454,7 +30523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30476,7 +30545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fontConversion">optional object FontConversion</param>
 		/// <param name="showStartupWorkpane">optional object ShowStartupWorkpane</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsGeneralEx(object planningWizard, object wizardUsage, object wizardErrors, object wizardScheduling, object showTipOfDay, object autoAddResources, object standardRate, object overtimeRate, object lastFile, object summaryInfo, object userName, object setDefaults, object showWelcome, object autoFilter, object macroVirusProtection, object displayRecentFiles, object recentFilesMaximum, object fontConversion, object showStartupWorkpane)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(planningWizard, wizardUsage, wizardErrors, wizardScheduling, showTipOfDay, autoAddResources, standardRate, overtimeRate, lastFile, summaryInfo, userName, setDefaults, showWelcome, autoFilter, macroVirusProtection, displayRecentFiles, recentFilesMaximum, fontConversion, showStartupWorkpane);
@@ -30485,7 +30554,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30510,7 +30579,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayScreentips">optional object DisplayScreentips</param>
 		/// <param name="calendarType">optional object CalendarType</param>
 		/// <param name="use3DLook">optional object Use3DLook</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo, object acceptNewExternalData, object displayWindowsInTaskbar, object displayScreentips, object calendarType, object use3DLook)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo, acceptNewExternalData, displayWindowsInTaskbar, displayScreentips, calendarType, use3DLook);
@@ -30519,10 +30588,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx()
 		{
 			object[] paramsArray = null;
@@ -30531,11 +30600,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView);
@@ -30544,12 +30613,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat);
@@ -30558,13 +30627,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
 		/// <param name="projectSummary">optional object ProjectSummary</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary);
@@ -30573,14 +30642,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
 		/// <param name="projectSummary">optional object ProjectSummary</param>
 		/// <param name="displayStatusBar">optional object DisplayStatusBar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar);
@@ -30589,7 +30658,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30597,7 +30666,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayStatusBar">optional object DisplayStatusBar</param>
 		/// <param name="displayEntryBar">optional object DisplayEntryBar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar);
@@ -30606,7 +30675,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30615,7 +30684,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayEntryBar">optional object DisplayEntryBar</param>
 		/// <param name="displayScrollBars">optional object DisplayScrollBars</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars);
@@ -30624,7 +30693,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30634,7 +30703,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayScrollBars">optional object DisplayScrollBars</param>
 		/// <param name="currencySymbol">optional object CurrencySymbol</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol);
@@ -30643,7 +30712,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30654,7 +30723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="currencySymbol">optional object CurrencySymbol</param>
 		/// <param name="symbolPlacement">optional object SymbolPlacement</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement);
@@ -30663,7 +30732,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30675,7 +30744,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="symbolPlacement">optional object SymbolPlacement</param>
 		/// <param name="currencyDigits">optional object CurrencyDigits</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits);
@@ -30684,7 +30753,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30697,7 +30766,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="currencyDigits">optional object CurrencyDigits</param>
 		/// <param name="projectCurrency">optional object ProjectCurrency</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency);
@@ -30706,7 +30775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30720,7 +30789,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectCurrency">optional object ProjectCurrency</param>
 		/// <param name="displayOutlineNumber">optional object DisplayOutlineNumber</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber);
@@ -30729,7 +30798,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30744,7 +30813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayOutlineNumber">optional object DisplayOutlineNumber</param>
 		/// <param name="displayOutlineSymbols">optional object DisplayOutlineSymbols</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols);
@@ -30753,7 +30822,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30769,7 +30838,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayOutlineSymbols">optional object DisplayOutlineSymbols</param>
 		/// <param name="displayNameIndent">optional object DisplayNameIndent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent);
@@ -30778,7 +30847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30795,7 +30864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayNameIndent">optional object DisplayNameIndent</param>
 		/// <param name="displaySummaryTasks">optional object DisplaySummaryTasks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks);
@@ -30804,7 +30873,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30822,7 +30891,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displaySummaryTasks">optional object DisplaySummaryTasks</param>
 		/// <param name="displayOLEIndicator">optional object DisplayOLEIndicator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator);
@@ -30831,7 +30900,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30850,7 +30919,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayOLEIndicator">optional object DisplayOLEIndicator</param>
 		/// <param name="displayExternalSuccessors">optional object DisplayExternalSuccessors</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors);
@@ -30859,7 +30928,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30879,7 +30948,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayExternalSuccessors">optional object DisplayExternalSuccessors</param>
 		/// <param name="displayExternalPredecessors">optional object DisplayExternalPredecessors</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors);
@@ -30888,7 +30957,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30909,7 +30978,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayExternalPredecessors">optional object DisplayExternalPredecessors</param>
 		/// <param name="crossProjectLinksInfo">optional object CrossProjectLinksInfo</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo);
@@ -30918,7 +30987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30940,7 +31009,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="crossProjectLinksInfo">optional object CrossProjectLinksInfo</param>
 		/// <param name="acceptNewExternalData">optional object AcceptNewExternalData</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo, object acceptNewExternalData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo, acceptNewExternalData);
@@ -30949,7 +31018,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30972,7 +31041,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="acceptNewExternalData">optional object AcceptNewExternalData</param>
 		/// <param name="displayWindowsInTaskbar">optional object DisplayWindowsInTaskbar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo, object acceptNewExternalData, object displayWindowsInTaskbar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo, acceptNewExternalData, displayWindowsInTaskbar);
@@ -30981,7 +31050,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31005,7 +31074,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayWindowsInTaskbar">optional object DisplayWindowsInTaskbar</param>
 		/// <param name="displayScreentips">optional object DisplayScreentips</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo, object acceptNewExternalData, object displayWindowsInTaskbar, object displayScreentips)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo, acceptNewExternalData, displayWindowsInTaskbar, displayScreentips);
@@ -31014,7 +31083,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31039,7 +31108,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayScreentips">optional object DisplayScreentips</param>
 		/// <param name="calendarType">optional object CalendarType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsViewEx(object defaultView, object dateFormat, object projectSummary, object displayStatusBar, object displayEntryBar, object displayScrollBars, object currencySymbol, object symbolPlacement, object currencyDigits, object projectCurrency, object displayOutlineNumber, object displayOutlineSymbols, object displayNameIndent, object displaySummaryTasks, object displayOLEIndicator, object displayExternalSuccessors, object displayExternalPredecessors, object crossProjectLinksInfo, object acceptNewExternalData, object displayWindowsInTaskbar, object displayScreentips, object calendarType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultView, dateFormat, projectSummary, displayStatusBar, displayEntryBar, displayScrollBars, currencySymbol, symbolPlacement, currencyDigits, projectCurrency, displayOutlineNumber, displayOutlineSymbols, displayNameIndent, displaySummaryTasks, displayOLEIndicator, displayExternalSuccessors, displayExternalPredecessors, crossProjectLinksInfo, acceptNewExternalData, displayWindowsInTaskbar, displayScreentips, calendarType);
@@ -31048,13 +31117,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
 		/// <param name="selectedDate">optional object SelectedDate</param>
 		/// <param name="projectName">optional object ProjectName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ChangeWorkingTimeEx(object calendarName, object locked, object selectedDate, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(calendarName, locked, selectedDate, projectName);
@@ -31063,10 +31132,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ChangeWorkingTimeEx()
 		{
 			object[] paramsArray = null;
@@ -31075,11 +31144,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ChangeWorkingTimeEx(object calendarName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(calendarName);
@@ -31088,12 +31157,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ChangeWorkingTimeEx(object calendarName, object locked)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(calendarName, locked);
@@ -31102,13 +31171,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
 		/// <param name="selectedDate">optional object SelectedDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ChangeWorkingTimeEx(object calendarName, object locked, object selectedDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(calendarName, locked, selectedDate);
@@ -31117,7 +31186,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31128,7 +31197,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor, pattern);
@@ -31137,10 +31206,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx()
 		{
 			object[] paramsArray = null;
@@ -31149,11 +31218,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -31162,12 +31231,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font);
@@ -31176,13 +31245,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size);
@@ -31191,14 +31260,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold);
@@ -31207,7 +31276,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31215,7 +31284,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic);
@@ -31224,7 +31293,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31233,7 +31302,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline);
@@ -31242,7 +31311,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31252,7 +31321,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color);
@@ -31261,7 +31330,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31272,7 +31341,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TextStylesEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor);
@@ -31281,7 +31350,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31292,7 +31361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reset">optional object Reset</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic, object underline, object color, object reset, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset, cellColor, pattern);
@@ -31301,10 +31370,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx()
 		{
 			object[] paramsArray = null;
@@ -31313,11 +31382,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -31326,12 +31395,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size);
@@ -31340,13 +31409,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold);
@@ -31355,14 +31424,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic);
@@ -31371,7 +31440,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31379,7 +31448,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline);
@@ -31388,7 +31457,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31397,7 +31466,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color);
@@ -31406,7 +31475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31416,7 +31485,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="reset">optional object Reset</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic, object underline, object color, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset);
@@ -31425,7 +31494,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31436,7 +31505,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reset">optional object Reset</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FontEx(object name, object size, object bold, object italic, object underline, object color, object reset, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset, cellColor);
@@ -31445,7 +31514,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31453,7 +31522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPreview">optional object ShowPreview</param>
 		/// <param name="daysPerWeek">optional object DaysPerWeek</param>
 		/// <param name="showTitleBeginningEndDates">optional object ShowTitleBeginningEndDates</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle, object weekTitle, object dayTitle, object showPreview, object daysPerWeek, object showTitleBeginningEndDates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle, weekTitle, dayTitle, showPreview, daysPerWeek, showTitleBeginningEndDates);
@@ -31462,10 +31531,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx()
 		{
 			object[] paramsArray = null;
@@ -31474,11 +31543,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle);
@@ -31487,12 +31556,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle, object weekTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle, weekTitle);
@@ -31501,13 +31570,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
 		/// <param name="dayTitle">optional object DayTitle</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle, object weekTitle, object dayTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle, weekTitle, dayTitle);
@@ -31516,14 +31585,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
 		/// <param name="dayTitle">optional object DayTitle</param>
 		/// <param name="showPreview">optional object ShowPreview</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle, object weekTitle, object dayTitle, object showPreview)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle, weekTitle, dayTitle, showPreview);
@@ -31532,7 +31601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31540,7 +31609,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPreview">optional object ShowPreview</param>
 		/// <param name="daysPerWeek">optional object DaysPerWeek</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarWeekHeadingsEx(object monthTitle, object weekTitle, object dayTitle, object showPreview, object daysPerWeek)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(monthTitle, weekTitle, dayTitle, showPreview, daysPerWeek);
@@ -31549,7 +31618,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31565,7 +31634,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupDefault">optional object LookupDefault</param>
 		/// <param name="defaultValue">optional object DefaultValue</param>
 		/// <param name="sortOrder">optional object SortOrder</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue, object sortOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault, defaultValue, sortOrder);
@@ -31574,12 +31643,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level);
@@ -31588,13 +31657,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence);
@@ -31603,14 +31672,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = -1</param>
 		/// <param name="length">optional object Length</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length);
@@ -31619,7 +31688,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31627,7 +31696,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="length">optional object Length</param>
 		/// <param name="separator">optional object Separator</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator);
@@ -31636,7 +31705,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31645,7 +31714,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="separator">optional object Separator</param>
 		/// <param name="onlyLookUpTableCodes">optional object OnlyLookUpTableCodes</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes);
@@ -31654,7 +31723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31664,7 +31733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLookUpTableCodes">optional object OnlyLookUpTableCodes</param>
 		/// <param name="onlyCompleteCodes">optional object OnlyCompleteCodes</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes);
@@ -31673,7 +31742,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31684,7 +31753,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyCompleteCodes">optional object OnlyCompleteCodes</param>
 		/// <param name="lookupTableLink">optional object LookupTableLink</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink);
@@ -31693,7 +31762,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31705,7 +31774,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupTableLink">optional object LookupTableLink</param>
 		/// <param name="onlyLeaves">optional object OnlyLeaves</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves);
@@ -31714,7 +31783,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31727,7 +31796,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLeaves">optional object OnlyLeaves</param>
 		/// <param name="matchGeneric">optional object MatchGeneric</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric);
@@ -31736,7 +31805,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31750,7 +31819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchGeneric">optional object MatchGeneric</param>
 		/// <param name="requiredCode">optional object RequiredCode</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode);
@@ -31759,7 +31828,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31774,7 +31843,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="requiredCode">optional object RequiredCode</param>
 		/// <param name="lookupDefault">optional object LookupDefault</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault);
@@ -31783,7 +31852,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31799,7 +31868,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupDefault">optional object LookupDefault</param>
 		/// <param name="defaultValue">optional object DefaultValue</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault, defaultValue);
@@ -31808,14 +31877,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="code">optional object Code</param>
 		/// <param name="description">optional object Description</param>
 		/// <param name="phonetic">optional object Phonetic</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LookUpTableAddEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object code, object description, object phonetic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, code, description, phonetic);
@@ -31824,11 +31893,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LookUpTableAddEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID);
@@ -31837,12 +31906,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LookUpTableAddEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level);
@@ -31851,13 +31920,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="code">optional object Code</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LookUpTableAddEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object code)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, code);
@@ -31866,14 +31935,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="code">optional object Code</param>
 		/// <param name="description">optional object Description</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LookUpTableAddEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object code, object description)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, code, description);
@@ -31882,7 +31951,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -31890,7 +31959,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		/// <param name="required">optional object Required</param>
 		/// <param name="automaticallyRolldownToAssn">optional object AutomaticallyRolldownToAssn</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators, object required, object automaticallyRolldownToAssn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators, required, automaticallyRolldownToAssn);
@@ -31899,11 +31968,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID);
@@ -31912,12 +31981,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute);
@@ -31926,13 +31995,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
 		/// <param name="summaryCalc">optional NetOffice.MSProjectApi.Enums.PjSummaryCalc SummaryCalc = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc);
@@ -31941,14 +32010,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
 		/// <param name="summaryCalc">optional NetOffice.MSProjectApi.Enums.PjSummaryCalc SummaryCalc = -1</param>
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators);
@@ -31957,7 +32026,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -31965,7 +32034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		/// <param name="required">optional object Required</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators, object required)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators, required);
@@ -31974,7 +32043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -31987,7 +32056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectGuideContent">optional object ProjectGuideContent</param>
 		/// <param name="setAsDefaults">optional object SetAsDefaults</param>
 		/// <param name="useOMIDs">optional object UseOMIDs</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage, object projectGuideFunctionalLayoutPage, object projectGuideUseDefaultContent, object projectGuideContent, object setAsDefaults, object useOMIDs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage, projectGuideFunctionalLayoutPage, projectGuideUseDefaultContent, projectGuideContent, setAsDefaults, useOMIDs);
@@ -31996,10 +32065,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx()
 		{
 			object[] paramsArray = null;
@@ -32008,11 +32077,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators);
@@ -32021,12 +32090,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates);
@@ -32035,13 +32104,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
 		/// <param name="showEditsToWorkUnitsDurationIndicators">optional object ShowEditsToWorkUnitsDurationIndicators</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators);
@@ -32050,14 +32119,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
 		/// <param name="showEditsToWorkUnitsDurationIndicators">optional object ShowEditsToWorkUnitsDurationIndicators</param>
 		/// <param name="showDeletionInNameColumn">optional object ShowDeletionInNameColumn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn);
@@ -32066,7 +32135,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32074,7 +32143,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDeletionInNameColumn">optional object ShowDeletionInNameColumn</param>
 		/// <param name="displayProjectGuide">optional object DisplayProjectGuide</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide);
@@ -32083,7 +32152,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32092,7 +32161,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="displayProjectGuide">optional object DisplayProjectGuide</param>
 		/// <param name="projectGuideUseDefaultFunctionalLayoutPage">optional object ProjectGuideUseDefaultFunctionalLayoutPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage);
@@ -32101,7 +32170,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32111,7 +32180,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectGuideUseDefaultFunctionalLayoutPage">optional object ProjectGuideUseDefaultFunctionalLayoutPage</param>
 		/// <param name="projectGuideFunctionalLayoutPage">optional object ProjectGuideFunctionalLayoutPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage, object projectGuideFunctionalLayoutPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage, projectGuideFunctionalLayoutPage);
@@ -32120,7 +32189,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32131,7 +32200,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectGuideFunctionalLayoutPage">optional object ProjectGuideFunctionalLayoutPage</param>
 		/// <param name="projectGuideUseDefaultContent">optional object ProjectGuideUseDefaultContent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage, object projectGuideFunctionalLayoutPage, object projectGuideUseDefaultContent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage, projectGuideFunctionalLayoutPage, projectGuideUseDefaultContent);
@@ -32140,7 +32209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32152,7 +32221,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectGuideUseDefaultContent">optional object ProjectGuideUseDefaultContent</param>
 		/// <param name="projectGuideContent">optional object ProjectGuideContent</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage, object projectGuideFunctionalLayoutPage, object projectGuideUseDefaultContent, object projectGuideContent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage, projectGuideFunctionalLayoutPage, projectGuideUseDefaultContent, projectGuideContent);
@@ -32161,7 +32230,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32174,7 +32243,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectGuideContent">optional object ProjectGuideContent</param>
 		/// <param name="setAsDefaults">optional object SetAsDefaults</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsInterfaceEx(object showResourceAssignmentIndicators, object showEditToStartFinishDates, object showEditsToWorkUnitsDurationIndicators, object showDeletionInNameColumn, object displayProjectGuide, object projectGuideUseDefaultFunctionalLayoutPage, object projectGuideFunctionalLayoutPage, object projectGuideUseDefaultContent, object projectGuideContent, object setAsDefaults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceAssignmentIndicators, showEditToStartFinishDates, showEditsToWorkUnitsDurationIndicators, showDeletionInNameColumn, displayProjectGuide, projectGuideUseDefaultFunctionalLayoutPage, projectGuideFunctionalLayoutPage, projectGuideUseDefaultContent, projectGuideContent, setAsDefaults);
@@ -32183,11 +32252,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="localRUIDs">optional object LocalRUIDs</param>
 		/// <param name="useImportColumn">optional object UseImportColumn</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseResourcesImportEx(object localRUIDs, object useImportColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(localRUIDs, useImportColumn);
@@ -32196,10 +32265,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseResourcesImportEx()
 		{
 			object[] paramsArray = null;
@@ -32208,11 +32277,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="localRUIDs">optional object LocalRUIDs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseResourcesImportEx(object localRUIDs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(localRUIDs);
@@ -32221,12 +32290,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
 		/// <param name="functionalityName">optional object FunctionalityName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LoadWebBrowserControlEx(string targetPage, object wrapperPage, object functionalityName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, wrapperPage, functionalityName);
@@ -32235,11 +32304,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LoadWebBrowserControlEx(string targetPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);
@@ -32248,12 +32317,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LoadWebBrowserControlEx(string targetPage, object wrapperPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, wrapperPage);
@@ -32262,12 +32331,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		/// <param name="trustWSS">optional object TrustWSS</param>
 		/// <param name="legacyFileFormats">optional object LegacyFileFormats</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsSecurityEx(object removeFileProperties, object trustWSS, object legacyFileFormats)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(removeFileProperties, trustWSS, legacyFileFormats);
@@ -32276,10 +32345,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsSecurityEx()
 		{
 			object[] paramsArray = null;
@@ -32288,11 +32357,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsSecurityEx(object removeFileProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(removeFileProperties);
@@ -32301,12 +32370,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		/// <param name="trustWSS">optional object TrustWSS</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OptionsSecurityEx(object removeFileProperties, object trustWSS)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(removeFileProperties, trustWSS);
@@ -32315,9 +32384,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsUndoingOrRedoing()
 		{
 			object[] paramsArray = null;
@@ -32326,13 +32395,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strFormula">string strFormula</param>
 		/// <param name="localized">optional bool Localized = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string ValidateEnterpriseFormula(Int32 propertyID, string strFormula, bool localized)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strFormula, localized);
@@ -32341,13 +32410,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strFormula">string strFormula</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string ValidateEnterpriseFormula(Int32 propertyID, string strFormula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strFormula);
@@ -32356,9 +32425,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void UndoClear()
 		{
 			object[] paramsArray = null;
@@ -32366,10 +32435,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="howManyUndos">optional Int32 HowManyUndos = 1</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Undo(Int32 howManyUndos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(howManyUndos);
@@ -32378,10 +32447,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Undo()
 		{
 			object[] paramsArray = null;
@@ -32390,10 +32459,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="howManyRedos">optional Int32 HowManyRedos = 1</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Redo(Int32 howManyRedos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(howManyRedos);
@@ -32402,10 +32471,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Redo()
 		{
 			object[] paramsArray = null;
@@ -32414,11 +32483,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="label">string Label</param>
 		/// <param name="guid">optional object Guid</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void OpenUndoTransaction(string label, object guid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label, guid);
@@ -32426,11 +32495,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="label">string Label</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void OpenUndoTransaction(string label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(label);
@@ -32438,9 +32507,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void CloseUndoTransaction()
 		{
 			object[] paramsArray = null;
@@ -32448,13 +32517,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strGraphicalIndicators">string strGraphicalIndicators</param>
 		/// <param name="localized">optional bool Localized = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string ValidateGraphicalIndicators(Int32 propertyID, string strGraphicalIndicators, bool localized)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strGraphicalIndicators, localized);
@@ -32463,13 +32532,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strGraphicalIndicators">string strGraphicalIndicators</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string ValidateGraphicalIndicators(Int32 propertyID, string strGraphicalIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strGraphicalIndicators);
@@ -32478,9 +32547,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 GetUndoListCount()
 		{
 			object[] paramsArray = null;
@@ -32489,9 +32558,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 GetRedoListCount()
 		{
 			object[] paramsArray = null;
@@ -32500,10 +32569,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="itemIndex">Int32 ItemIndex</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string GetUndoListItem(Int32 itemIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemIndex);
@@ -32512,10 +32581,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="itemIndex">Int32 ItemIndex</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string GetRedoListItem(Int32 itemIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemIndex);
@@ -32524,11 +32593,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static NetOffice.MSProjectApi.Cell GetCellInfo(Int32 x, Int32 y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
@@ -32538,9 +32607,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string GetProjectServerSettingsEx()
 		{
 			object[] paramsArray = null;
@@ -32549,9 +32618,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void AfterUnloadWebBrowserControl()
 		{
 			object[] paramsArray = null;
@@ -32559,9 +32628,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsOffline()
 		{
 			object[] paramsArray = null;
@@ -32570,9 +32639,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsReducedFunctionalityMode()
 		{
 			object[] paramsArray = null;
@@ -32581,10 +32650,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="elementType">NetOffice.MSProjectApi.Enums.PjThemeElement elementType</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string GetThemedColor(NetOffice.MSProjectApi.Enums.PjThemeElement elementType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(elementType);
@@ -32593,10 +32662,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="commandName">string CommandName</param>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 IsCommandEnabled(string commandName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandName);
@@ -32605,7 +32674,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="strURL">string strURL</param>
 		/// <param name="strListGuid">string strListGuid</param>
@@ -32614,7 +32683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bstrViewName">string bstrViewName</param>
 		/// <param name="iListID">Int32 iListID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static string LoadTasksFromServer(string strURL, string strListGuid, string strListName, string bstrViewGUID, string bstrViewName, Int32 iListID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strURL, strListGuid, strListName, bstrViewGUID, bstrViewName, iListID);
@@ -32623,11 +32692,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="start">object Start</param>
 		/// <param name="finish">object Finish</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static void PanZoomZoomTo(object start, object finish)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, finish);
@@ -32635,10 +32704,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="start">object Start</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static void PanZoomPanTo(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -32646,11 +32715,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="applyTo">optional object ApplyTo</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewCopy(object name, object applyTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, applyTo);
@@ -32659,10 +32728,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewCopy()
 		{
 			object[] paramsArray = null;
@@ -32671,11 +32740,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewCopy(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -32684,9 +32753,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewReset()
 		{
 			object[] paramsArray = null;
@@ -32695,10 +32764,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableCopy(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -32707,10 +32776,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableCopy()
 		{
 			object[] paramsArray = null;
@@ -32719,9 +32788,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableReset()
 		{
 			object[] paramsArray = null;
@@ -32730,10 +32799,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="onOff">optional object OnOff</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool AutoSaveToGlobal(object onOff)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(onOff);
@@ -32742,10 +32811,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool AutoSaveToGlobal()
 		{
 			object[] paramsArray = null;
@@ -32754,10 +32823,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="applyTo">optional object ApplyTo</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewsEx(object applyTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(applyTo);
@@ -32766,10 +32835,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewsEx()
 		{
 			object[] paramsArray = null;
@@ -32778,14 +32847,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="singlePane">object SinglePane</param>
 		/// <param name="toggle">object Toggle</param>
 		/// <param name="applyTo">object ApplyTo</param>
 		/// <param name="builtInView">optional NetOffice.MSProjectApi.Enums.PjViewType BuiltInView = -1</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewApplyEx(object name, object singlePane, object toggle, object applyTo, NetOffice.MSProjectApi.Enums.PjViewType builtInView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, singlePane, toggle, applyTo, builtInView);
@@ -32794,14 +32863,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="singlePane">object SinglePane</param>
 		/// <param name="toggle">object Toggle</param>
 		/// <param name="applyTo">object ApplyTo</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewApplyEx(object name, object singlePane, object toggle, object applyTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, singlePane, toggle, applyTo);
@@ -32810,10 +32879,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="column">optional object Column</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool WrapText(object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column);
@@ -32822,10 +32891,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool WrapText()
 		{
 			object[] paramsArray = null;
@@ -32834,10 +32903,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="show">optional object Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShowAddNewColumn(object show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(show);
@@ -32846,10 +32915,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShowAddNewColumn()
 		{
 			object[] paramsArray = null;
@@ -32858,11 +32927,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		/// <param name="column">optional object Column</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ChangeColumnDataType(NetOffice.MSProjectApi.Enums.PjFieldTypes type, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, column);
@@ -32871,10 +32940,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ChangeColumnDataType()
 		{
 			object[] paramsArray = null;
@@ -32883,11 +32952,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ChangeColumnDataType(NetOffice.MSProjectApi.Enums.PjFieldTypes type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -32896,10 +32965,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="column">optional object Column</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool AddNewColumn(object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column);
@@ -32908,10 +32977,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool AddNewColumn()
 		{
 			object[] paramsArray = null;
@@ -32920,7 +32989,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -32942,7 +33011,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="headerTextWrap">optional object HeaderTextWrap</param>
 		/// <param name="wrapText">optional object WrapText</param>
 		/// <param name="showAddNewColumn">optional object ShowAddNewColumn</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition, object alignTitle, object headerAutoRowHeightAdjustment, object headerTextWrap, object wrapText, object showAddNewColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition, alignTitle, headerAutoRowHeightAdjustment, headerTextWrap, wrapText, showAddNewColumn);
@@ -32951,12 +33020,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable);
@@ -32965,13 +33034,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
 		/// <param name="create">optional object Create</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create);
@@ -32980,14 +33049,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
 		/// <param name="create">optional object Create</param>
 		/// <param name="overwriteExisting">optional object OverwriteExisting</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting);
@@ -32996,7 +33065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33004,7 +33073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="overwriteExisting">optional object OverwriteExisting</param>
 		/// <param name="newName">optional object NewName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName);
@@ -33013,7 +33082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33022,7 +33091,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="newName">optional object NewName</param>
 		/// <param name="fieldName">optional object FieldName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName);
@@ -33031,7 +33100,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33041,7 +33110,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldName">optional object FieldName</param>
 		/// <param name="newFieldName">optional object NewFieldName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName);
@@ -33050,7 +33119,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33061,7 +33130,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="newFieldName">optional object NewFieldName</param>
 		/// <param name="title">optional object Title</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title);
@@ -33070,7 +33139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33082,7 +33151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="title">optional object Title</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width);
@@ -33091,7 +33160,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33104,7 +33173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="width">optional object Width</param>
 		/// <param name="align">optional object Align</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align);
@@ -33113,7 +33182,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33127,7 +33196,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="align">optional object Align</param>
 		/// <param name="showInMenu">optional object ShowInMenu</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu);
@@ -33136,7 +33205,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33151,7 +33220,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showInMenu">optional object ShowInMenu</param>
 		/// <param name="lockFirstColumn">optional object LockFirstColumn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn);
@@ -33160,7 +33229,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33176,7 +33245,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lockFirstColumn">optional object LockFirstColumn</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat);
@@ -33185,7 +33254,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33202,7 +33271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="dateFormat">optional object DateFormat</param>
 		/// <param name="rowHeight">optional object RowHeight</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight);
@@ -33211,7 +33280,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33229,7 +33298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowHeight">optional object RowHeight</param>
 		/// <param name="columnPosition">optional object ColumnPosition</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition);
@@ -33238,7 +33307,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33257,7 +33326,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnPosition">optional object ColumnPosition</param>
 		/// <param name="alignTitle">optional object AlignTitle</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition, object alignTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition, alignTitle);
@@ -33266,7 +33335,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33286,7 +33355,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignTitle">optional object AlignTitle</param>
 		/// <param name="headerAutoRowHeightAdjustment">optional object HeaderAutoRowHeightAdjustment</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition, object alignTitle, object headerAutoRowHeightAdjustment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition, alignTitle, headerAutoRowHeightAdjustment);
@@ -33295,7 +33364,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33316,7 +33385,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="headerAutoRowHeightAdjustment">optional object HeaderAutoRowHeightAdjustment</param>
 		/// <param name="headerTextWrap">optional object HeaderTextWrap</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition, object alignTitle, object headerAutoRowHeightAdjustment, object headerTextWrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition, alignTitle, headerAutoRowHeightAdjustment, headerTextWrap);
@@ -33325,7 +33394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33347,7 +33416,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="headerTextWrap">optional object HeaderTextWrap</param>
 		/// <param name="wrapText">optional object WrapText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableEditEx(string name, bool taskTable, object create, object overwriteExisting, object newName, object fieldName, object newFieldName, object title, object width, object align, object showInMenu, object lockFirstColumn, object dateFormat, object rowHeight, object columnPosition, object alignTitle, object headerAutoRowHeightAdjustment, object headerTextWrap, object wrapText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, taskTable, create, overwriteExisting, newName, fieldName, newFieldName, title, width, align, showInMenu, lockFirstColumn, dateFormat, rowHeight, columnPosition, alignTitle, headerAutoRowHeightAdjustment, headerTextWrap, wrapText);
@@ -33356,11 +33425,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SynchronizeWithSite(object siteURL, object listName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, listName);
@@ -33369,10 +33438,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SynchronizeWithSite()
 		{
 			object[] paramsArray = null;
@@ -33381,11 +33450,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SynchronizeWithSite(object siteURL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siteURL);
@@ -33394,9 +33463,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ManageSiteColumns()
 		{
 			object[] paramsArray = null;
@@ -33405,11 +33474,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OpenFromSharePoint(object siteURL, object listName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, listName);
@@ -33418,10 +33487,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OpenFromSharePoint()
 		{
 			object[] paramsArray = null;
@@ -33430,11 +33499,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OpenFromSharePoint(object siteURL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(siteURL);
@@ -33443,7 +33512,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33466,7 +33535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="leftText">optional object LeftText</param>
 		/// <param name="rightText">optional object RightText</param>
 		/// <param name="insideText">optional object InsideText</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to, object bottomText, object topText, object leftText, object rightText, object insideText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to, bottomText, topText, leftText, rightText, insideText);
@@ -33475,11 +33544,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -33488,12 +33557,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create);
@@ -33502,13 +33571,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name);
@@ -33517,14 +33586,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
 		/// <param name="name">optional object Name</param>
 		/// <param name="startShape">optional object StartShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape);
@@ -33533,7 +33602,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33541,7 +33610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="startShape">optional object StartShape</param>
 		/// <param name="startType">optional object StartType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType);
@@ -33550,7 +33619,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33559,7 +33628,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="startType">optional object StartType</param>
 		/// <param name="startColor">optional object StartColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor);
@@ -33568,7 +33637,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33578,7 +33647,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="startColor">optional object StartColor</param>
 		/// <param name="middleShape">optional object MiddleShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape);
@@ -33587,7 +33656,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33598,7 +33667,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middleShape">optional object MiddleShape</param>
 		/// <param name="middleColor">optional object MiddleColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor);
@@ -33607,7 +33676,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33619,7 +33688,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middleColor">optional object MiddleColor</param>
 		/// <param name="middlePattern">optional object MiddlePattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern);
@@ -33628,7 +33697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33641,7 +33710,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middlePattern">optional object MiddlePattern</param>
 		/// <param name="endShape">optional object EndShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape);
@@ -33650,7 +33719,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33664,7 +33733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endShape">optional object EndShape</param>
 		/// <param name="endType">optional object EndType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType);
@@ -33673,7 +33742,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33688,7 +33757,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endType">optional object EndType</param>
 		/// <param name="endColor">optional object EndColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor);
@@ -33697,7 +33766,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33713,7 +33782,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endColor">optional object EndColor</param>
 		/// <param name="showFor">optional object ShowFor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor);
@@ -33722,7 +33791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33739,7 +33808,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showFor">optional object ShowFor</param>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row);
@@ -33748,7 +33817,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33766,7 +33835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="row">optional object Row</param>
 		/// <param name="from">optional object From</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from);
@@ -33775,7 +33844,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33794,7 +33863,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to);
@@ -33803,7 +33872,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33823,7 +33892,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="to">optional object To</param>
 		/// <param name="bottomText">optional object BottomText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to, object bottomText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to, bottomText);
@@ -33832,7 +33901,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33853,7 +33922,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomText">optional object BottomText</param>
 		/// <param name="topText">optional object TopText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to, object bottomText, object topText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to, bottomText, topText);
@@ -33862,7 +33931,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33884,7 +33953,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topText">optional object TopText</param>
 		/// <param name="leftText">optional object LeftText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to, object bottomText, object topText, object leftText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to, bottomText, topText, leftText);
@@ -33893,7 +33962,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33916,7 +33985,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="leftText">optional object LeftText</param>
 		/// <param name="rightText">optional object RightText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarEditEx(string item, object create, object name, object startShape, object startType, object startColor, object middleShape, object middleColor, object middlePattern, object endShape, object endType, object endColor, object showFor, object row, object from, object to, object bottomText, object topText, object leftText, object rightText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, create, name, startShape, startType, startColor, middleShape, middleColor, middlePattern, endShape, endType, endColor, showFor, row, from, to, bottomText, topText, leftText, rightText);
@@ -33925,7 +33994,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -33940,7 +34009,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="field4">optional object Field4</param>
 		/// <param name="field5">optional object Field5</param>
 		/// <param name="splitPattern">optional object SplitPattern</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1, object field2, object field3, object field4, object field5, object splitPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1, field2, field3, field4, field5, splitPattern);
@@ -33949,11 +34018,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -33962,12 +34031,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar);
@@ -33976,13 +34045,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern);
@@ -33991,14 +34060,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color);
@@ -34007,7 +34076,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34015,7 +34084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="align">optional object Align</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align);
@@ -34024,7 +34093,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34033,7 +34102,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="align">optional object Align</param>
 		/// <param name="wrap">optional object Wrap</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap);
@@ -34042,7 +34111,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34052,7 +34121,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="wrap">optional object Wrap</param>
 		/// <param name="shadow">optional object Shadow</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow);
@@ -34061,7 +34130,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34072,7 +34141,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="shadow">optional object Shadow</param>
 		/// <param name="field1">optional object Field1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1);
@@ -34081,7 +34150,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34093,7 +34162,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="field1">optional object Field1</param>
 		/// <param name="field2">optional object Field2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1, object field2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1, field2);
@@ -34102,7 +34171,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34115,7 +34184,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="field2">optional object Field2</param>
 		/// <param name="field3">optional object Field3</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1, object field2, object field3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1, field2, field3);
@@ -34124,7 +34193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34138,7 +34207,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="field3">optional object Field3</param>
 		/// <param name="field4">optional object Field4</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1, object field2, object field3, object field4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1, field2, field3, field4);
@@ -34147,7 +34216,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34162,7 +34231,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="field4">optional object Field4</param>
 		/// <param name="field5">optional object Field5</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarBarStylesEditEx(NetOffice.MSProjectApi.Enums.PjBarItem item, object bar, object pattern, object color, object align, object wrap, object shadow, object field1, object field2, object field3, object field4, object field5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, bar, pattern, color, align, wrap, shadow, field1, field2, field3, field4, field5);
@@ -34171,12 +34240,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="color">optional object Color</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateShadingEditEx(NetOffice.MSProjectApi.Enums.PjCalendarShading item, object pattern, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, pattern, color);
@@ -34185,11 +34254,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateShadingEditEx(NetOffice.MSProjectApi.Enums.PjCalendarShading item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -34198,12 +34267,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateShadingEditEx(NetOffice.MSProjectApi.Enums.PjCalendarShading item, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, pattern);
@@ -34212,7 +34281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34222,7 +34291,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomColor">optional object BottomColor</param>
 		/// <param name="topPattern">optional object TopPattern</param>
 		/// <param name="bottomPattern">optional object BottomPattern</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft, object bottomRight, object topColor, object bottomColor, object topPattern, object bottomPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft, bottomRight, topColor, bottomColor, topPattern, bottomPattern);
@@ -34231,10 +34300,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx()
 		{
 			object[] paramsArray = null;
@@ -34243,11 +34312,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft);
@@ -34256,12 +34325,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight);
@@ -34270,13 +34339,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
 		/// <param name="bottomLeft">optional object BottomLeft</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft);
@@ -34285,14 +34354,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
 		/// <param name="bottomLeft">optional object BottomLeft</param>
 		/// <param name="bottomRight">optional object BottomRight</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft, object bottomRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft, bottomRight);
@@ -34301,7 +34370,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34309,7 +34378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomRight">optional object BottomRight</param>
 		/// <param name="topColor">optional object TopColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft, object bottomRight, object topColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft, bottomRight, topColor);
@@ -34318,7 +34387,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34327,7 +34396,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topColor">optional object TopColor</param>
 		/// <param name="bottomColor">optional object BottomColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft, object bottomRight, object topColor, object bottomColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft, bottomRight, topColor, bottomColor);
@@ -34336,7 +34405,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34346,7 +34415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomColor">optional object BottomColor</param>
 		/// <param name="topPattern">optional object TopPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CalendarDateBoxesEx(object topLeft, object topRight, object bottomLeft, object bottomRight, object topColor, object bottomColor, object topPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeft, topRight, bottomLeft, bottomRight, topColor, bottomColor, topPattern);
@@ -34355,7 +34424,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34367,7 +34436,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="strikethrough">optional object Strikethrough</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline, object color, object reset, object cellColor, object pattern, object strikethrough)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset, cellColor, pattern, strikethrough);
@@ -34376,10 +34445,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex()
 		{
 			object[] paramsArray = null;
@@ -34388,11 +34457,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -34401,12 +34470,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size);
@@ -34415,13 +34484,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold);
@@ -34430,14 +34499,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic);
@@ -34446,7 +34515,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34454,7 +34523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline);
@@ -34463,7 +34532,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34472,7 +34541,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color);
@@ -34481,7 +34550,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34491,7 +34560,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="reset">optional object Reset</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline, object color, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset);
@@ -34500,7 +34569,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34511,7 +34580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reset">optional object Reset</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline, object color, object reset, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset, cellColor);
@@ -34520,7 +34589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34532,7 +34601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool Font32Ex(object name, object size, object bold, object italic, object underline, object color, object reset, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, size, bold, italic, underline, color, reset, cellColor, pattern);
@@ -34541,7 +34610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34552,7 +34621,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor, pattern);
@@ -34561,10 +34630,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex()
 		{
 			object[] paramsArray = null;
@@ -34573,11 +34642,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -34586,12 +34655,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font);
@@ -34600,13 +34669,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size);
@@ -34615,14 +34684,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold);
@@ -34631,7 +34700,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34639,7 +34708,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic);
@@ -34648,7 +34717,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34657,7 +34726,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline);
@@ -34666,7 +34735,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34676,7 +34745,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color);
@@ -34685,7 +34754,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34696,7 +34765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TextStyles32Ex(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor);
@@ -34705,13 +34774,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
 		/// <param name="color">optional object Color</param>
 		/// <param name="pattern">optional object Pattern</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimescaleNonWorkingEx(object draw, object calendar, object color, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(draw, calendar, color, pattern);
@@ -34720,10 +34789,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimescaleNonWorkingEx()
 		{
 			object[] paramsArray = null;
@@ -34732,11 +34801,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimescaleNonWorkingEx(object draw)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(draw);
@@ -34745,12 +34814,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimescaleNonWorkingEx(object draw, object calendar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(draw, calendar);
@@ -34759,13 +34828,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimescaleNonWorkingEx(object draw, object calendar, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(draw, calendar, color);
@@ -34774,7 +34843,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34782,7 +34851,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="interval">optional object Interval</param>
 		/// <param name="intervalType">optional object IntervalType</param>
 		/// <param name="intervalColor">optional object IntervalColor</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item, object normalType, object normalColor, object interval, object intervalType, object intervalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, normalType, normalColor, interval, intervalType, intervalColor);
@@ -34791,11 +34860,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -34804,12 +34873,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item, object normalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, normalType);
@@ -34818,13 +34887,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
 		/// <param name="normalColor">optional object NormalColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item, object normalType, object normalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, normalType, normalColor);
@@ -34833,14 +34902,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
 		/// <param name="normalColor">optional object NormalColor</param>
 		/// <param name="interval">optional object Interval</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item, object normalType, object normalColor, object interval)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, normalType, normalColor, interval);
@@ -34849,7 +34918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34857,7 +34926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="interval">optional object Interval</param>
 		/// <param name="intervalType">optional object IntervalType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GridlinesEditEx(NetOffice.MSProjectApi.Enums.PjGridline item, object normalType, object normalColor, object interval, object intervalType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, normalType, normalColor, interval, intervalType);
@@ -34866,7 +34935,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -34889,7 +34958,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="proposedRightShowAs">optional object ProposedRightShowAs</param>
 		/// <param name="proposedRightColor">optional object ProposedRightColor</param>
 		/// <param name="proposedRightPattern">optional object ProposedRightPattern</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs, object proposedLeftColor, object proposedLeftPattern, object proposedRightShowAs, object proposedRightColor, object proposedRightPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs, proposedLeftColor, proposedLeftPattern, proposedRightShowAs, proposedRightColor, proposedRightPattern);
@@ -34898,10 +34967,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx()
 		{
 			object[] paramsArray = null;
@@ -34910,11 +34979,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs);
@@ -34923,12 +34992,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor);
@@ -34937,13 +35006,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
 		/// <param name="topLeftPattern">optional object TopLeftPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern);
@@ -34952,14 +35021,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
 		/// <param name="topLeftPattern">optional object TopLeftPattern</param>
 		/// <param name="bottomLeftShowAs">optional object BottomLeftShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs);
@@ -34968,7 +35037,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -34976,7 +35045,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomLeftShowAs">optional object BottomLeftShowAs</param>
 		/// <param name="bottomLeftColor">optional object BottomLeftColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor);
@@ -34985,7 +35054,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -34994,7 +35063,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomLeftColor">optional object BottomLeftColor</param>
 		/// <param name="bottomLeftPattern">optional object BottomLeftPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern);
@@ -35003,7 +35072,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35013,7 +35082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomLeftPattern">optional object BottomLeftPattern</param>
 		/// <param name="topRightShowAs">optional object TopRightShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs);
@@ -35022,7 +35091,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35033,7 +35102,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topRightShowAs">optional object TopRightShowAs</param>
 		/// <param name="topRightColor">optional object TopRightColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor);
@@ -35042,7 +35111,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35054,7 +35123,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topRightColor">optional object TopRightColor</param>
 		/// <param name="topRightPattern">optional object TopRightPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern);
@@ -35063,7 +35132,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35076,7 +35145,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topRightPattern">optional object TopRightPattern</param>
 		/// <param name="bottomRightShowAs">optional object BottomRightShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs);
@@ -35085,7 +35154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35099,7 +35168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomRightShowAs">optional object BottomRightShowAs</param>
 		/// <param name="bottomRightColor">optional object BottomRightColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor);
@@ -35108,7 +35177,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35123,7 +35192,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomRightColor">optional object BottomRightColor</param>
 		/// <param name="bottomRightPattern">optional object BottomRightPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern);
@@ -35132,7 +35201,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35148,7 +35217,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomRightPattern">optional object BottomRightPattern</param>
 		/// <param name="showValues">optional object ShowValues</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues);
@@ -35157,7 +35226,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35174,7 +35243,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showValues">optional object ShowValues</param>
 		/// <param name="showAvailabilityLine">optional object ShowAvailabilityLine</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine);
@@ -35183,7 +35252,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35201,7 +35270,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showAvailabilityLine">optional object ShowAvailabilityLine</param>
 		/// <param name="percentBarOverlap">optional object PercentBarOverlap</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap);
@@ -35210,7 +35279,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35229,7 +35298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="percentBarOverlap">optional object PercentBarOverlap</param>
 		/// <param name="proposedLeftShowAs">optional object ProposedLeftShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs);
@@ -35238,7 +35307,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35258,7 +35327,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="proposedLeftShowAs">optional object ProposedLeftShowAs</param>
 		/// <param name="proposedLeftColor">optional object ProposedLeftColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs, object proposedLeftColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs, proposedLeftColor);
@@ -35267,7 +35336,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35288,7 +35357,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="proposedLeftColor">optional object ProposedLeftColor</param>
 		/// <param name="proposedLeftPattern">optional object ProposedLeftPattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs, object proposedLeftColor, object proposedLeftPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs, proposedLeftColor, proposedLeftPattern);
@@ -35297,7 +35366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35319,7 +35388,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="proposedLeftPattern">optional object ProposedLeftPattern</param>
 		/// <param name="proposedRightShowAs">optional object ProposedRightShowAs</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs, object proposedLeftColor, object proposedLeftPattern, object proposedRightShowAs)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs, proposedLeftColor, proposedLeftPattern, proposedRightShowAs);
@@ -35328,7 +35397,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35351,7 +35420,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="proposedRightShowAs">optional object ProposedRightShowAs</param>
 		/// <param name="proposedRightColor">optional object ProposedRightColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceGraphBarStylesEx(object topLeftShowAs, object topLeftColor, object topLeftPattern, object bottomLeftShowAs, object bottomLeftColor, object bottomLeftPattern, object topRightShowAs, object topRightColor, object topRightPattern, object bottomRightShowAs, object bottomRightColor, object bottomRightPattern, object showValues, object showAvailabilityLine, object percentBarOverlap, object proposedLeftShowAs, object proposedLeftColor, object proposedLeftPattern, object proposedRightShowAs, object proposedRightColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(topLeftShowAs, topLeftColor, topLeftPattern, bottomLeftShowAs, bottomLeftColor, bottomLeftPattern, topRightShowAs, topRightColor, topRightPattern, bottomRightShowAs, bottomRightColor, bottomRightPattern, showValues, showAvailabilityLine, percentBarOverlap, proposedLeftShowAs, proposedLeftColor, proposedLeftPattern, proposedRightShowAs, proposedRightColor);
@@ -35360,7 +35429,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35371,7 +35440,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
@@ -35380,7 +35449,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35390,7 +35459,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderColor">object BorderColor</param>
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
@@ -35399,7 +35468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35410,7 +35479,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
@@ -35419,7 +35488,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35432,7 +35501,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		/// <param name="reset">optional object Reset</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern, reset);
@@ -35441,7 +35510,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35452,7 +35521,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderColor">object BorderColor</param>
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
@@ -35461,7 +35530,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35473,7 +35542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
@@ -35482,7 +35551,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35495,7 +35564,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
@@ -35504,7 +35573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35521,7 +35590,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabel">object ShowLabel</param>
 		/// <param name="label">object Label</param>
 		/// <param name="dateFormat">optional NetOffice.MSProjectApi.Enums.PjDateFormat DateFormat = -1</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label, NetOffice.MSProjectApi.Enums.PjDateFormat dateFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label, dateFormat);
@@ -35530,7 +35599,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35544,7 +35613,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="horizontalAlignment">optional NetOffice.MSProjectApi.Enums.PjAlignment HorizontalAlignment = -1</param>
 		/// <param name="verticalAlignment">optional NetOffice.MSProjectApi.Enums.PjVerticalAlignment VerticalAlignment = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment);
@@ -35553,7 +35622,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35568,7 +35637,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="verticalAlignment">optional NetOffice.MSProjectApi.Enums.PjVerticalAlignment VerticalAlignment = -1</param>
 		/// <param name="textLineLimit">object TextLineLimit</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit);
@@ -35577,7 +35646,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35593,7 +35662,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="textLineLimit">object TextLineLimit</param>
 		/// <param name="showLabel">object ShowLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel);
@@ -35602,7 +35671,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35619,7 +35688,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabel">object ShowLabel</param>
 		/// <param name="label">object Label</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label);
@@ -35628,7 +35697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35646,7 +35715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showProgressMarks">optional object ShowProgressMarks</param>
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		/// <param name="showIDOnly">optional object ShowIDOnly</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks, object showIDOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks, showIDOnly);
@@ -35655,7 +35724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35664,7 +35733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnAlignment">optional NetOffice.MSProjectApi.Enums.PjAlignment ColumnAlignment = -1</param>
 		/// <param name="rowSpacing">object RowSpacing</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing);
@@ -35673,7 +35742,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35683,7 +35752,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowSpacing">object RowSpacing</param>
 		/// <param name="columnSpacing">object ColumnSpacing</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing);
@@ -35692,7 +35761,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35703,7 +35772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnSpacing">object ColumnSpacing</param>
 		/// <param name="rowHeight">optional NetOffice.MSProjectApi.Enums.PjRowColSize RowHeight = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight);
@@ -35712,7 +35781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35724,7 +35793,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowHeight">optional NetOffice.MSProjectApi.Enums.PjRowColSize RowHeight = -1</param>
 		/// <param name="columnWidth">optional NetOffice.MSProjectApi.Enums.PjRowColSize ColumnWidth = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth);
@@ -35733,7 +35802,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35746,7 +35815,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnWidth">optional NetOffice.MSProjectApi.Enums.PjRowColSize ColumnWidth = -1</param>
 		/// <param name="adjustForPageBreaks">object AdjustForPageBreaks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks);
@@ -35755,7 +35824,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35769,7 +35838,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="adjustForPageBreaks">object AdjustForPageBreaks</param>
 		/// <param name="showSummaryTasks">object ShowSummaryTasks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks);
@@ -35778,7 +35847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35793,7 +35862,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showSummaryTasks">object ShowSummaryTasks</param>
 		/// <param name="viewBackgroundColor">object ViewBackgroundColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor);
@@ -35802,7 +35871,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35818,7 +35887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundColor">object ViewBackgroundColor</param>
 		/// <param name="viewBackgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern ViewBackgroundPattern = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern);
@@ -35827,7 +35896,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35844,7 +35913,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern ViewBackgroundPattern = -1</param>
 		/// <param name="showProgressMarks">optional object ShowProgressMarks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks);
@@ -35853,7 +35922,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35871,7 +35940,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showProgressMarks">optional object ShowProgressMarks</param>
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks);
@@ -35880,7 +35949,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -35888,7 +35957,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="colorMode">optional NetOffice.MSProjectApi.Enums.PjLinkColorMode ColorMode = -1</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
 		/// <param name="noncriticalColor">optional object NoncriticalColor</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, object criticalColor, object noncriticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor, noncriticalColor);
@@ -35897,12 +35966,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows);
@@ -35911,13 +35980,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
 		/// <param name="showLabels">object ShowLabels</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels);
@@ -35926,14 +35995,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
 		/// <param name="showLabels">object ShowLabels</param>
 		/// <param name="colorMode">optional NetOffice.MSProjectApi.Enums.PjLinkColorMode ColorMode = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode);
@@ -35942,7 +36011,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -35950,7 +36019,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="colorMode">optional NetOffice.MSProjectApi.Enums.PjLinkColorMode ColorMode = -1</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, object criticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor);
@@ -35959,7 +36028,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -35982,7 +36051,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="setDefaultsHyperlink">optional object SetDefaultsHyperlink</param>
 		/// <param name="inCellEditing">optional object InCellEditing</param>
 		/// <param name="allowTaskDelegation">optional object AllowTaskDelegation</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor, object followedHyperlinkColor, object underlineHyperlinks, object setDefaultsHyperlink, object inCellEditing, object allowTaskDelegation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor, followedHyperlinkColor, underlineHyperlinks, setDefaultsHyperlink, inCellEditing, allowTaskDelegation);
@@ -35991,10 +36060,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx()
 		{
 			object[] paramsArray = null;
@@ -36003,11 +36072,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn);
@@ -36016,12 +36085,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop);
@@ -36030,13 +36099,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks);
@@ -36045,14 +36114,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
 		/// <param name="copyResourceUsageHeader">optional object CopyResourceUsageHeader</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader);
@@ -36061,7 +36130,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36069,7 +36138,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="copyResourceUsageHeader">optional object CopyResourceUsageHeader</param>
 		/// <param name="phoneticInfo">optional object PhoneticInfo</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo);
@@ -36078,7 +36147,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36087,7 +36156,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="phoneticInfo">optional object PhoneticInfo</param>
 		/// <param name="phoneticType">optional object PhoneticType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType);
@@ -36096,7 +36165,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36106,7 +36175,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="phoneticType">optional object PhoneticType</param>
 		/// <param name="minuteLabelDisplay">optional object MinuteLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay);
@@ -36115,7 +36184,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36126,7 +36195,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="minuteLabelDisplay">optional object MinuteLabelDisplay</param>
 		/// <param name="hourLabelDisplay">optional object HourLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay);
@@ -36135,7 +36204,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36147,7 +36216,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="hourLabelDisplay">optional object HourLabelDisplay</param>
 		/// <param name="dayLabelDisplay">optional object DayLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay);
@@ -36156,7 +36225,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36169,7 +36238,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="dayLabelDisplay">optional object DayLabelDisplay</param>
 		/// <param name="weekLabelDisplay">optional object WeekLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay);
@@ -36178,7 +36247,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36192,7 +36261,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="weekLabelDisplay">optional object WeekLabelDisplay</param>
 		/// <param name="yearLabelDisplay">optional object YearLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay);
@@ -36201,7 +36270,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36216,7 +36285,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="yearLabelDisplay">optional object YearLabelDisplay</param>
 		/// <param name="spaceBeforeTimeLabel">optional object SpaceBeforeTimeLabel</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel);
@@ -36225,7 +36294,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36241,7 +36310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="spaceBeforeTimeLabel">optional object SpaceBeforeTimeLabel</param>
 		/// <param name="setDefaults">optional object SetDefaults</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults);
@@ -36250,7 +36319,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36267,7 +36336,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="setDefaults">optional object SetDefaults</param>
 		/// <param name="monthLabelDisplay">optional object MonthLabelDisplay</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay);
@@ -36276,7 +36345,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36294,7 +36363,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="monthLabelDisplay">optional object MonthLabelDisplay</param>
 		/// <param name="setDefaultsTimeUnits">optional object SetDefaultsTimeUnits</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits);
@@ -36303,7 +36372,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36322,7 +36391,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="setDefaultsTimeUnits">optional object SetDefaultsTimeUnits</param>
 		/// <param name="hyperlinkColor">optional object HyperlinkColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor);
@@ -36331,7 +36400,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36351,7 +36420,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="hyperlinkColor">optional object HyperlinkColor</param>
 		/// <param name="followedHyperlinkColor">optional object FollowedHyperlinkColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor, object followedHyperlinkColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor, followedHyperlinkColor);
@@ -36360,7 +36429,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36381,7 +36450,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="followedHyperlinkColor">optional object FollowedHyperlinkColor</param>
 		/// <param name="underlineHyperlinks">optional object UnderlineHyperlinks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor, object followedHyperlinkColor, object underlineHyperlinks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor, followedHyperlinkColor, underlineHyperlinks);
@@ -36390,7 +36459,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36412,7 +36481,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underlineHyperlinks">optional object UnderlineHyperlinks</param>
 		/// <param name="setDefaultsHyperlink">optional object SetDefaultsHyperlink</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor, object followedHyperlinkColor, object underlineHyperlinks, object setDefaultsHyperlink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor, followedHyperlinkColor, underlineHyperlinks, setDefaultsHyperlink);
@@ -36421,7 +36490,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36444,7 +36513,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="setDefaultsHyperlink">optional object SetDefaultsHyperlink</param>
 		/// <param name="inCellEditing">optional object InCellEditing</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsEditEx(object moveAfterReturn, object dragAndDrop, object updateLinks, object copyResourceUsageHeader, object phoneticInfo, object phoneticType, object minuteLabelDisplay, object hourLabelDisplay, object dayLabelDisplay, object weekLabelDisplay, object yearLabelDisplay, object spaceBeforeTimeLabel, object setDefaults, object monthLabelDisplay, object setDefaultsTimeUnits, object hyperlinkColor, object followedHyperlinkColor, object underlineHyperlinks, object setDefaultsHyperlink, object inCellEditing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveAfterReturn, dragAndDrop, updateLinks, copyResourceUsageHeader, phoneticInfo, phoneticType, minuteLabelDisplay, hourLabelDisplay, dayLabelDisplay, weekLabelDisplay, yearLabelDisplay, spaceBeforeTimeLabel, setDefaults, monthLabelDisplay, setDefaultsTimeUnits, hyperlinkColor, followedHyperlinkColor, underlineHyperlinks, setDefaultsHyperlink, inCellEditing);
@@ -36453,7 +36522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36466,7 +36535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontItalic">optional object LabelFontItalic</param>
 		/// <param name="labelFontUnderline">optional object LabelFontUnderline</param>
 		/// <param name="labelFontColor">optional object LabelFontColor</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline, object labelFontColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline, labelFontColor);
@@ -36475,13 +36544,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
 		/// <param name="legendOn">object LegendOn</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn);
@@ -36490,14 +36559,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
 		/// <param name="legendOn">object LegendOn</param>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment);
@@ -36506,7 +36575,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36514,7 +36583,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		/// <param name="text">optional object Text</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text);
@@ -36523,7 +36592,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36532,7 +36601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="text">optional object Text</param>
 		/// <param name="labelFontName">optional object LabelFontName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName);
@@ -36541,7 +36610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36551,7 +36620,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontName">optional object LabelFontName</param>
 		/// <param name="labelFontSize">optional object LabelFontSize</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize);
@@ -36560,7 +36629,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36571,7 +36640,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontSize">optional object LabelFontSize</param>
 		/// <param name="labelFontBold">optional object LabelFontBold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold);
@@ -36580,7 +36649,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36592,7 +36661,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontBold">optional object LabelFontBold</param>
 		/// <param name="labelFontItalic">optional object LabelFontItalic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic);
@@ -36601,7 +36670,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36614,7 +36683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontItalic">optional object LabelFontItalic</param>
 		/// <param name="labelFontUnderline">optional object LabelFontUnderline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline);
@@ -36623,7 +36692,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36633,7 +36702,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font, size, bold, italic, underline, color);
@@ -36642,10 +36711,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx()
 		{
 			object[] paramsArray = null;
@@ -36654,11 +36723,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -36667,12 +36736,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item);
@@ -36681,13 +36750,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font);
@@ -36696,14 +36765,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font, size);
@@ -36712,7 +36781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36720,7 +36789,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font, size, bold);
@@ -36729,7 +36798,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36738,7 +36807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font, size, bold, italic);
@@ -36747,7 +36816,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36757,7 +36826,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilePageSetupCalendarTextEx(object name, object item, object font, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, item, font, size, bold, italic, underline);
@@ -36766,7 +36835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36776,7 +36845,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="shortcut">optional object Shortcut</param>
 		/// <param name="displayField">optional object DisplayField</param>
 		/// <param name="fontColor">optional object FontColor</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord, object cellBackground, object pattern, object shortcut, object displayField, object fontColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord, cellBackground, pattern, shortcut, displayField, fontColor);
@@ -36785,10 +36854,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx()
 		{
 			object[] paramsArray = null;
@@ -36797,11 +36866,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex);
@@ -36810,12 +36879,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order);
@@ -36824,13 +36893,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
 		/// <param name="fontWord">optional object FontWord</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord);
@@ -36839,14 +36908,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
 		/// <param name="fontWord">optional object FontWord</param>
 		/// <param name="cellBackground">optional object CellBackground</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord, object cellBackground)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord, cellBackground);
@@ -36855,7 +36924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36863,7 +36932,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="cellBackground">optional object CellBackground</param>
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord, object cellBackground, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord, cellBackground, pattern);
@@ -36872,7 +36941,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36881,7 +36950,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="shortcut">optional object Shortcut</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord, object cellBackground, object pattern, object shortcut)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord, cellBackground, pattern, shortcut);
@@ -36890,7 +36959,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36900,7 +36969,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="shortcut">optional object Shortcut</param>
 		/// <param name="displayField">optional object DisplayField</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool UsageViewEntryEx(object curIndex, object order, object fontWord, object cellBackground, object pattern, object shortcut, object displayField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(curIndex, order, fontWord, cellBackground, pattern, shortcut, displayField);
@@ -36909,7 +36978,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -36922,7 +36991,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="showInMenu">optional object ShowInMenu</param>
 		/// <param name="strikethrough">optional object Strikethrough</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor, object pattern, object showInMenu, object strikethrough)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor, pattern, showInMenu, strikethrough);
@@ -36931,10 +37000,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx()
 		{
 			object[] paramsArray = null;
@@ -36943,11 +37012,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -36956,12 +37025,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font);
@@ -36970,13 +37039,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size);
@@ -36985,14 +37054,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="bold">optional object Bold</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold);
@@ -37001,7 +37070,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37009,7 +37078,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bold">optional object Bold</param>
 		/// <param name="italic">optional object Italic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic);
@@ -37018,7 +37087,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37027,7 +37096,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="italic">optional object Italic</param>
 		/// <param name="underline">optional object Underline</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline);
@@ -37036,7 +37105,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37046,7 +37115,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="underline">optional object Underline</param>
 		/// <param name="color">optional object Color</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color);
@@ -37055,7 +37124,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37066,7 +37135,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="color">optional object Color</param>
 		/// <param name="cellColor">optional object CellColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor);
@@ -37075,7 +37144,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37087,7 +37156,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="cellColor">optional object CellColor</param>
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor, pattern);
@@ -37096,7 +37165,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37109,7 +37178,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="showInMenu">optional object ShowInMenu</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailStylesFormatEx(object item, object font, object size, object bold, object italic, object underline, object color, object cellColor, object pattern, object showInMenu)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, font, size, bold, italic, underline, color, cellColor, pattern, showInMenu);
@@ -37118,7 +37187,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37138,7 +37207,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="insideText">optional object InsideText</param>
 		/// <param name="reset">optional object Reset</param>
 		/// <param name="projectName">optional object ProjectName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText, object topText, object bottomText, object insideText, object reset, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText, topText, bottomText, insideText, reset, projectName);
@@ -37147,10 +37216,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx()
 		{
 			object[] paramsArray = null;
@@ -37159,11 +37228,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
@@ -37172,12 +37241,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle);
@@ -37186,13 +37255,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
 		/// <param name="startShape">optional object StartShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape);
@@ -37201,14 +37270,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
 		/// <param name="startShape">optional object StartShape</param>
 		/// <param name="startType">optional object StartType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType);
@@ -37217,7 +37286,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37225,7 +37294,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="startType">optional object StartType</param>
 		/// <param name="startColor">optional object StartColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor);
@@ -37234,7 +37303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37243,7 +37312,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="startColor">optional object StartColor</param>
 		/// <param name="middleShape">optional object MiddleShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape);
@@ -37252,7 +37321,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37262,7 +37331,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middleShape">optional object MiddleShape</param>
 		/// <param name="middlePattern">optional object MiddlePattern</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern);
@@ -37271,7 +37340,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37282,7 +37351,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middlePattern">optional object MiddlePattern</param>
 		/// <param name="middleColor">optional object MiddleColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor);
@@ -37291,7 +37360,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37303,7 +37372,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="middleColor">optional object MiddleColor</param>
 		/// <param name="endShape">optional object EndShape</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape);
@@ -37312,7 +37381,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37325,7 +37394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endShape">optional object EndShape</param>
 		/// <param name="endType">optional object EndType</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType);
@@ -37334,7 +37403,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37348,7 +37417,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endType">optional object EndType</param>
 		/// <param name="endColor">optional object EndColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor);
@@ -37357,7 +37426,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37372,7 +37441,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="endColor">optional object EndColor</param>
 		/// <param name="leftText">optional object LeftText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText);
@@ -37381,7 +37450,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37397,7 +37466,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="leftText">optional object LeftText</param>
 		/// <param name="rightText">optional object RightText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText);
@@ -37406,7 +37475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37423,7 +37492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rightText">optional object RightText</param>
 		/// <param name="topText">optional object TopText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText, object topText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText, topText);
@@ -37432,7 +37501,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37450,7 +37519,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="topText">optional object TopText</param>
 		/// <param name="bottomText">optional object BottomText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText, object topText, object bottomText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText, topText, bottomText);
@@ -37459,7 +37528,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37478,7 +37547,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="bottomText">optional object BottomText</param>
 		/// <param name="insideText">optional object InsideText</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText, object topText, object bottomText, object insideText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText, topText, bottomText, insideText);
@@ -37487,7 +37556,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37507,7 +37576,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="insideText">optional object InsideText</param>
 		/// <param name="reset">optional object Reset</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarFormatEx(object taskID, object ganttStyle, object startShape, object startType, object startColor, object middleShape, object middlePattern, object middleColor, object endShape, object endType, object endColor, object leftText, object rightText, object topText, object bottomText, object insideText, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, ganttStyle, startShape, startType, startColor, middleShape, middlePattern, middleColor, endShape, endType, endColor, leftText, rightText, topText, bottomText, insideText, reset);
@@ -37516,13 +37585,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
 		/// <param name="timelineViewName">optional object TimelineViewName</param>
 		/// <param name="showDialog">optional object ShowDialog</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskOnTimeline(object taskID, object remove, object timelineViewName, object showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, remove, timelineViewName, showDialog);
@@ -37531,10 +37600,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskOnTimeline()
 		{
 			object[] paramsArray = null;
@@ -37543,11 +37612,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskOnTimeline(object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
@@ -37556,12 +37625,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskOnTimeline(object taskID, object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, remove);
@@ -37570,13 +37639,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
 		/// <param name="timelineViewName">optional object TimelineViewName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskOnTimeline(object taskID, object remove, object timelineViewName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, remove, timelineViewName);
@@ -37585,12 +37654,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		/// <param name="isWorkingDuration">optional object IsWorkingDuration</param>
 		/// <param name="moveDays">optional object MoveDays</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMove(object moveForward, object isWorkingDuration, object moveDays)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveForward, isWorkingDuration, moveDays);
@@ -37599,10 +37668,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMove()
 		{
 			object[] paramsArray = null;
@@ -37611,11 +37680,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMove(object moveForward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveForward);
@@ -37624,12 +37693,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		/// <param name="isWorkingDuration">optional object IsWorkingDuration</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMove(object moveForward, object isWorkingDuration)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveForward, isWorkingDuration);
@@ -37638,11 +37707,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveCompleted">optional object MoveCompleted</param>
 		/// <param name="moveIncomplete">optional object MoveIncomplete</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMoveToStatusDate(object moveCompleted, object moveIncomplete)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveCompleted, moveIncomplete);
@@ -37651,10 +37720,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMoveToStatusDate()
 		{
 			object[] paramsArray = null;
@@ -37663,11 +37732,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="moveCompleted">optional object MoveCompleted</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskMoveToStatusDate(object moveCompleted)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(moveCompleted);
@@ -37676,11 +37745,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		/// <param name="moveDeadline">optional object MoveDeadline</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ProjectMove(object date, object moveDeadline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, moveDeadline);
@@ -37689,10 +37758,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ProjectMove()
 		{
 			object[] paramsArray = null;
@@ -37701,11 +37770,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ProjectMove(object date)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date);
@@ -37714,10 +37783,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="resolveMethod">optional NetOffice.MSProjectApi.Enums.PjLevelSelectedOption ResolveMethod = 0</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelSelected(NetOffice.MSProjectApi.Enums.PjLevelSelectedOption resolveMethod)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resolveMethod);
@@ -37726,10 +37795,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelSelected()
 		{
 			object[] paramsArray = null;
@@ -37738,12 +37807,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		/// <param name="fillColor">optional object FillColor</param>
 		/// <param name="borderColor">optional object BorderColor</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool EditTPStyle(NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle style, object fillColor, object borderColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, fillColor, borderColor);
@@ -37752,11 +37821,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool EditTPStyle(NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
@@ -37765,12 +37834,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		/// <param name="fillColor">optional object FillColor</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool EditTPStyle(NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle style, object fillColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, fillColor);
@@ -37779,10 +37848,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResetTPStyle(NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
@@ -37791,10 +37860,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="lineMultiple">Int16 LineMultiple</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectTPLineHeight(Int16 lineMultiple)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineMultiple);
@@ -37803,11 +37872,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjTimelineShowHide Item</param>
 		/// <param name="show">optional object Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineShowHide(NetOffice.MSProjectApi.Enums.PjTimelineShowHide item, object show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, show);
@@ -37816,11 +37885,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjTimelineShowHide Item</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineShowHide(NetOffice.MSProjectApi.Enums.PjTimelineShowHide item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
@@ -37829,10 +37898,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="textOnBar">optional object TextOnBar</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineTextOnBar(object textOnBar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textOnBar);
@@ -37841,10 +37910,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineTextOnBar()
 		{
 			object[] paramsArray = null;
@@ -37853,10 +37922,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjTimelineInsertTaskType Type</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineInsertTask(NetOffice.MSProjectApi.Enums.PjTimelineInsertTaskType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -37865,11 +37934,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="selectionOnly">optional object SelectionOnly</param>
 		/// <param name="exportWidth">optional object ExportWidth</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineExport(object selectionOnly, object exportWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selectionOnly, exportWidth);
@@ -37878,10 +37947,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineExport()
 		{
 			object[] paramsArray = null;
@@ -37890,11 +37959,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="selectionOnly">optional object SelectionOnly</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineExport(object selectionOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selectionOnly);
@@ -37903,10 +37972,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="set">optional object Set</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FontStrikethrough(object set)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(set);
@@ -37915,10 +37984,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FontStrikethrough()
 		{
 			object[] paramsArray = null;
@@ -37927,7 +37996,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -37936,7 +38005,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="operation">optional object Operation</param>
 		/// <param name="test2">optional object Test2</param>
 		/// <param name="criteria2">optional object Criteria2</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation, object test2, object criteria2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation, test2, criteria2);
@@ -37945,11 +38014,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName);
@@ -37958,12 +38027,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType);
@@ -37972,13 +38041,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
 		/// <param name="test1">optional object Test1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1);
@@ -37987,14 +38056,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
 		/// <param name="test1">optional object Test1</param>
 		/// <param name="criteria1">optional object Criteria1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1);
@@ -38003,7 +38072,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38011,7 +38080,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criteria1">optional object Criteria1</param>
 		/// <param name="operation">optional object Operation</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation);
@@ -38020,7 +38089,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38029,7 +38098,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="operation">optional object Operation</param>
 		/// <param name="test2">optional object Test2</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation, object test2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation, test2);
@@ -38038,10 +38107,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjFilterViewType FilterType = 65535</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilterNew(NetOffice.MSProjectApi.Enums.PjFilterViewType filterType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterType);
@@ -38050,10 +38119,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilterNew()
 		{
 			object[] paramsArray = null;
@@ -38062,9 +38131,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilterClear()
 		{
 			object[] paramsArray = null;
@@ -38073,9 +38142,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GroupNew()
 		{
 			object[] paramsArray = null;
@@ -38084,9 +38153,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GroupClear()
 		{
 			object[] paramsArray = null;
@@ -38095,9 +38164,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertTask()
 		{
 			object[] paramsArray = null;
@@ -38106,9 +38175,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertScheduledTask()
 		{
 			object[] paramsArray = null;
@@ -38117,9 +38186,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertManualTask()
 		{
 			object[] paramsArray = null;
@@ -38128,9 +38197,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertMilestoneTask()
 		{
 			object[] paramsArray = null;
@@ -38139,9 +38208,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertBlankRow()
 		{
 			object[] paramsArray = null;
@@ -38150,10 +38219,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="startOnDate">optional NetOffice.MSProjectApi.Enums.PjNewTasksStartOnDate StartOnDate = 0</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool NewTasksStartOn(NetOffice.MSProjectApi.Enums.PjNewTasksStartOnDate startOnDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startOnDate);
@@ -38162,10 +38231,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool NewTasksStartOn()
 		{
 			object[] paramsArray = null;
@@ -38174,10 +38243,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="on">bool On</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GroupMaintainHierarchy(bool on)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(on);
@@ -38186,10 +38255,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="on">bool On</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilterShowSummaryRows(bool on)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(on);
@@ -38198,9 +38267,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTaskDetails()
 		{
 			object[] paramsArray = null;
@@ -38209,9 +38278,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleResourceDetails()
 		{
 			object[] paramsArray = null;
@@ -38220,10 +38289,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="show">optional object Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleCritical(object show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(show);
@@ -38232,10 +38301,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleCritical()
 		{
 			object[] paramsArray = null;
@@ -38244,10 +38313,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="show">optional object Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleSlack(object show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(show);
@@ -38256,10 +38325,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleSlack()
 		{
 			object[] paramsArray = null;
@@ -38268,10 +38337,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="show">optional object Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleLate(object show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(show);
@@ -38280,10 +38349,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleLate()
 		{
 			object[] paramsArray = null;
@@ -38292,11 +38361,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="baseline">Int16 Baseline</param>
 		/// <param name="show">bool Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleBaseline(Int16 baseline, bool show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseline, show);
@@ -38305,11 +38374,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="baseline">Int16 Baseline</param>
 		/// <param name="show">bool Show</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GanttBarStyleSlippage(Int16 baseline, bool show)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(baseline, show);
@@ -38318,9 +38387,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TogglePreventResOveralloc()
 		{
 			object[] paramsArray = null;
@@ -38329,9 +38398,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPAutoExpand()
 		{
 			object[] paramsArray = null;
@@ -38340,9 +38409,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPUnassigned()
 		{
 			object[] paramsArray = null;
@@ -38351,9 +38420,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPUnscheduled()
 		{
 			object[] paramsArray = null;
@@ -38362,11 +38431,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="manual">optional object Manual</param>
 		/// <param name="isStickyDates">optional object IsStickyDates</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskMode(object manual, object isStickyDates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(manual, isStickyDates);
@@ -38375,10 +38444,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskMode()
 		{
 			object[] paramsArray = null;
@@ -38387,11 +38456,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="manual">optional object Manual</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskMode(object manual)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(manual);
@@ -38400,10 +38469,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="makeActive">optional object MakeActive</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InactivateTaskToggle(object makeActive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(makeActive);
@@ -38412,10 +38481,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InactivateTaskToggle()
 		{
 			object[] paramsArray = null;
@@ -38424,7 +38493,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38432,7 +38501,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="projectName">optional object ProjectName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedTasks, object create, object taskID, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedTasks, create, taskID, projectName);
@@ -38441,12 +38510,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value);
@@ -38455,13 +38524,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedTasks">optional object AllSelectedTasks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedTasks);
@@ -38470,14 +38539,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedTasks">optional object AllSelectedTasks</param>
 		/// <param name="create">optional object Create</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedTasks, object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedTasks, create);
@@ -38486,7 +38555,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38494,7 +38563,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTaskFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedTasks, object create, object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedTasks, create, taskID);
@@ -38503,7 +38572,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38511,7 +38580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="resourceID">optional object ResourceID</param>
 		/// <param name="projectName">optional object ProjectName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetResourceFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedResources, object create, object resourceID, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedResources, create, resourceID, projectName);
@@ -38520,12 +38589,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetResourceFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value);
@@ -38534,13 +38603,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedResources">optional object AllSelectedResources</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetResourceFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedResources)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedResources);
@@ -38549,14 +38618,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedResources">optional object AllSelectedResources</param>
 		/// <param name="create">optional object Create</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetResourceFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedResources, object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedResources, create);
@@ -38565,7 +38634,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38573,7 +38642,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="resourceID">optional object ResourceID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetResourceFieldByID(NetOffice.MSProjectApi.Enums.PjField fieldID, string value, object allSelectedResources, object create, object resourceID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, value, allSelectedResources, create, resourceID);
@@ -38582,10 +38651,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="timeline">optional object Timeline</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailsPaneToggle(object timeline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(timeline);
@@ -38594,10 +38663,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DetailsPaneToggle()
 		{
 			object[] paramsArray = null;
@@ -38606,7 +38675,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38616,7 +38685,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="testID">optional object TestID</param>
 		/// <param name="searchAllFields">optional object SearchAllFields</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value, object next, object matchCase, object fieldID, object testID, object searchAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, next, matchCase, fieldID, testID, searchAllFields);
@@ -38625,10 +38694,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx()
 		{
 			object[] paramsArray = null;
@@ -38637,11 +38706,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
@@ -38650,12 +38719,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test);
@@ -38664,13 +38733,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		/// <param name="value">optional object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value);
@@ -38679,14 +38748,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		/// <param name="value">optional object Value</param>
 		/// <param name="next">optional object Next</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value, object next)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, next);
@@ -38695,7 +38764,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38703,7 +38772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="next">optional object Next</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value, object next, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, next, matchCase);
@@ -38712,7 +38781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38721,7 +38790,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="fieldID">optional object FieldID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value, object next, object matchCase, object fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, next, matchCase, fieldID);
@@ -38730,7 +38799,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38740,7 +38809,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="testID">optional object TestID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FindEx(object field, object test, object value, object next, object matchCase, object fieldID, object testID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, next, matchCase, fieldID, testID);
@@ -38749,7 +38818,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38761,7 +38830,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="testID">optional object TestID</param>
 		/// <param name="searchAllFields">optional object SearchAllFields</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll, object next, object matchCase, object fieldID, object testID, object searchAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll, next, matchCase, fieldID, testID, searchAllFields);
@@ -38770,10 +38839,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx()
 		{
 			object[] paramsArray = null;
@@ -38782,11 +38851,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field);
@@ -38795,12 +38864,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test);
@@ -38809,13 +38878,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		/// <param name="value">optional object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value);
@@ -38824,14 +38893,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
 		/// <param name="value">optional object Value</param>
 		/// <param name="replacement">optional object Replacement</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement);
@@ -38840,7 +38909,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38848,7 +38917,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="replacement">optional object Replacement</param>
 		/// <param name="replaceAll">optional object ReplaceAll</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll);
@@ -38857,7 +38926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38866,7 +38935,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="replaceAll">optional object ReplaceAll</param>
 		/// <param name="next">optional object Next</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll, object next)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll, next);
@@ -38875,7 +38944,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38885,7 +38954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="next">optional object Next</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll, object next, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll, next, matchCase);
@@ -38894,7 +38963,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38905,7 +38974,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="fieldID">optional object FieldID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll, object next, object matchCase, object fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll, next, matchCase, fieldID);
@@ -38914,7 +38983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38926,7 +38995,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="testID">optional object TestID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplaceEx(object field, object test, object value, object replacement, object replaceAll, object next, object matchCase, object fieldID, object testID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, test, value, replacement, replaceAll, next, matchCase, fieldID, testID);
@@ -38935,9 +39004,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectToEnd()
 		{
 			object[] paramsArray = null;
@@ -38946,9 +39015,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectTaskAssns()
 		{
 			object[] paramsArray = null;
@@ -38957,10 +39026,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReassignSelectedAssns(object resourceUniqueID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceUniqueID);
@@ -38969,10 +39038,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReassignSelectedAssns()
 		{
 			object[] paramsArray = null;
@@ -38981,7 +39050,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -38989,7 +39058,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="projectName">optional object ProjectName</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTPField(string field, string value, object allSelectedTasks, object create, object taskID, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, value, allSelectedTasks, create, taskID, projectName);
@@ -38998,12 +39067,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTPField(string field, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, value);
@@ -39012,13 +39081,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedTasks">optional object AllSelectedTasks</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTPField(string field, string value, object allSelectedTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, value, allSelectedTasks);
@@ -39027,14 +39096,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
 		/// <param name="allSelectedTasks">optional object AllSelectedTasks</param>
 		/// <param name="create">optional object Create</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTPField(string field, string value, object allSelectedTasks, object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, value, allSelectedTasks, create);
@@ -39043,7 +39112,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39051,7 +39120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="create">optional object Create</param>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetTPField(string field, string value, object allSelectedTasks, object create, object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, value, allSelectedTasks, create, taskID);
@@ -39060,7 +39129,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39069,7 +39138,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="archiveFormat">optional object ArchiveFormat</param>
 		/// <param name="fromDate">optional object FromDate</param>
 		/// <param name="toDate">optional object ToDate</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
@@ -39078,11 +39147,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -39091,12 +39160,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
@@ -39105,13 +39174,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		/// <param name="includeDocumentProperties">optional object IncludeDocumentProperties</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties);
@@ -39120,14 +39189,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		/// <param name="includeDocumentProperties">optional object IncludeDocumentProperties</param>
 		/// <param name="includeDocumentMarkup">optional object IncludeDocumentMarkup</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup);
@@ -39136,7 +39205,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39144,7 +39213,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="includeDocumentMarkup">optional object IncludeDocumentMarkup</param>
 		/// <param name="archiveFormat">optional object ArchiveFormat</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
@@ -39153,7 +39222,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39162,7 +39231,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="archiveFormat">optional object ArchiveFormat</param>
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
@@ -39171,10 +39240,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="create">optional object Create</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDeliverableCreate(object create)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(create);
@@ -39183,10 +39252,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDeliverableCreate()
 		{
 			object[] paramsArray = null;
@@ -39195,9 +39264,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDeliverableSync()
 		{
 			object[] paramsArray = null;
@@ -39206,9 +39275,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDependencySync()
 		{
 			object[] paramsArray = null;
@@ -39217,9 +39286,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskRespectLinks()
 		{
 			object[] paramsArray = null;
@@ -39228,10 +39297,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="set">optional object Set</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetShowTaskWarnings(object set)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(set);
@@ -39240,10 +39309,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetShowTaskWarnings()
 		{
 			object[] paramsArray = null;
@@ -39252,10 +39321,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="set">optional object Set</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetShowTaskSuggestions(object set)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(set);
@@ -39264,10 +39333,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetShowTaskSuggestions()
 		{
 			object[] paramsArray = null;
@@ -39276,9 +39345,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShowIgnoredTaskWarnings()
 		{
 			object[] paramsArray = null;
@@ -39287,10 +39356,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjResourceTypes Type = 0</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertResource(NetOffice.MSProjectApi.Enums.PjResourceTypes type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -39299,10 +39368,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertResource()
 		{
 			object[] paramsArray = null;
@@ -39311,9 +39380,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertSummaryTask()
 		{
 			object[] paramsArray = null;
@@ -39322,10 +39391,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="date">optional object Date</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ChangeStatusDate(object date)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date);
@@ -39334,10 +39403,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ChangeStatusDate()
 		{
 			object[] paramsArray = null;
@@ -39346,7 +39415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39354,7 +39423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="items">optional NetOffice.MSProjectApi.Enums.PjCompareVersionItems Items = 6</param>
 		/// <param name="columns">optional NetOffice.MSProjectApi.Enums.PjCompareVersionColumns Columns = 0</param>
 		/// <param name="showLegend">optional object ShowLegend</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items, NetOffice.MSProjectApi.Enums.PjCompareVersionColumns columns, object showLegend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items, columns, showLegend);
@@ -39363,13 +39432,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
 		/// <param name="resourceTable">object ResourceTable</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable);
@@ -39378,14 +39447,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
 		/// <param name="resourceTable">object ResourceTable</param>
 		/// <param name="items">optional NetOffice.MSProjectApi.Enums.PjCompareVersionItems Items = 6</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items);
@@ -39394,7 +39463,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39402,7 +39471,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="items">optional NetOffice.MSProjectApi.Enums.PjCompareVersionItems Items = 6</param>
 		/// <param name="columns">optional NetOffice.MSProjectApi.Enums.PjCompareVersionColumns Columns = 0</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items, NetOffice.MSProjectApi.Enums.PjCompareVersionColumns columns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items, columns);
@@ -39411,9 +39480,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CompareProjectVersions()
 		{
 			object[] paramsArray = null;
@@ -39422,9 +39491,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskComparison()
 		{
 			object[] paramsArray = null;
@@ -39433,9 +39502,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceComparison()
 		{
 			object[] paramsArray = null;
@@ -39444,9 +39513,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GoToItemInVersions()
 		{
 			object[] paramsArray = null;
@@ -39455,9 +39524,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CloseComparison()
 		{
 			object[] paramsArray = null;
@@ -39466,9 +39535,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CompareProjectsLegendToggle()
 		{
 			object[] paramsArray = null;
@@ -39477,10 +39546,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ClearConstraint(Int32 taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
@@ -39489,9 +39558,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskInspector()
 		{
 			object[] paramsArray = null;
@@ -39500,10 +39569,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="defaultTab">optional NetOffice.MSProjectApi.Enums.PjOptionsSecurityTab DefaultTab = 0</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsSecurityTab(NetOffice.MSProjectApi.Enums.PjOptionsSecurityTab defaultTab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultTab);
@@ -39512,10 +39581,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OptionsSecurityTab()
 		{
 			object[] paramsArray = null;
@@ -39524,11 +39593,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="action">optional object action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplanAssignments(object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
@@ -39537,11 +39606,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ReplanAssignments()
 		{
 			object[] paramsArray = null;
@@ -39550,11 +39619,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetIgnoreWarningsForTask(object set)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(set);
@@ -39563,11 +39632,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SetIgnoreWarningsForTask()
 		{
 			object[] paramsArray = null;
@@ -39576,10 +39645,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="page">optional NetOffice.MSProjectApi.Enums.PjServerPage Page = 0</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OpenServerPage(NetOffice.MSProjectApi.Enums.PjServerPage page)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page);
@@ -39588,10 +39657,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool OpenServerPage()
 		{
 			object[] paramsArray = null;
@@ -39600,11 +39669,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="numLines">optional object NumLines</param>
 		/// <param name="minimized">optional object Minimized</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineFormat(object numLines, object minimized)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numLines, minimized);
@@ -39613,10 +39682,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineFormat()
 		{
 			object[] paramsArray = null;
@@ -39625,11 +39694,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="numLines">optional object NumLines</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineFormat(object numLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numLines);
@@ -39638,7 +39707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39652,7 +39721,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="levelingCanSplit">optional object LevelingCanSplit</param>
 		/// <param name="levelProposedBookings">optional object LevelProposedBookings</param>
 		/// <param name="levelPinnedTasks">optional object LevelPinnedTasks</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate, object periodBasis, object levelIndividualAssignments, object levelingCanSplit, object levelProposedBookings, object levelPinnedTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate, periodBasis, levelIndividualAssignments, levelingCanSplit, levelProposedBookings, levelPinnedTasks);
@@ -39661,10 +39730,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx()
 		{
 			object[] paramsArray = null;
@@ -39673,11 +39742,11 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic);
@@ -39686,12 +39755,12 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack);
@@ -39700,13 +39769,13 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
 		/// <param name="autoClearLeveling">optional object AutoClearLeveling</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling);
@@ -39715,14 +39784,14 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
 		/// <param name="autoClearLeveling">optional object AutoClearLeveling</param>
 		/// <param name="order">optional object Order</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order);
@@ -39731,7 +39800,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39739,7 +39808,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="order">optional object Order</param>
 		/// <param name="levelEntireProject">optional object LevelEntireProject</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject);
@@ -39748,7 +39817,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39757,7 +39826,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="levelEntireProject">optional object LevelEntireProject</param>
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate);
@@ -39766,7 +39835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39776,7 +39845,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fromDate">optional object FromDate</param>
 		/// <param name="toDate">optional object ToDate</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate);
@@ -39785,7 +39854,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39796,7 +39865,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="toDate">optional object ToDate</param>
 		/// <param name="periodBasis">optional object PeriodBasis</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate, object periodBasis)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate, periodBasis);
@@ -39805,7 +39874,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39817,7 +39886,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="periodBasis">optional object PeriodBasis</param>
 		/// <param name="levelIndividualAssignments">optional object LevelIndividualAssignments</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate, object periodBasis, object levelIndividualAssignments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate, periodBasis, levelIndividualAssignments);
@@ -39826,7 +39895,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39839,7 +39908,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="levelIndividualAssignments">optional object LevelIndividualAssignments</param>
 		/// <param name="levelingCanSplit">optional object LevelingCanSplit</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate, object periodBasis, object levelIndividualAssignments, object levelingCanSplit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate, periodBasis, levelIndividualAssignments, levelingCanSplit);
@@ -39848,7 +39917,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39862,7 +39931,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="levelingCanSplit">optional object LevelingCanSplit</param>
 		/// <param name="levelProposedBookings">optional object LevelProposedBookings</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool LevelingOptionsEx(object automatic, object delayInSlack, object autoClearLeveling, object order, object levelEntireProject, object fromDate, object toDate, object periodBasis, object levelIndividualAssignments, object levelingCanSplit, object levelProposedBookings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(automatic, delayInSlack, autoClearLeveling, order, levelEntireProject, fromDate, toDate, periodBasis, levelIndividualAssignments, levelingCanSplit, levelProposedBookings);
@@ -39871,10 +39940,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="color">Int32 Color</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SegmentFillColor(Int32 color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(color);
@@ -39883,10 +39952,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="color">Int32 Color</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SegmentBorderColor(Int32 color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(color);
@@ -39895,9 +39964,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineGotoSelectedTask()
 		{
 			object[] paramsArray = null;
@@ -39906,10 +39975,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPResourceExpand(object resourceUniqueID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resourceUniqueID);
@@ -39918,10 +39987,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPResourceExpand()
 		{
 			object[] paramsArray = null;
@@ -39930,10 +39999,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="filename">optional object Filename</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CleanupProjectFromCache(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
@@ -39942,10 +40011,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CleanupProjectFromCache()
 		{
 			object[] paramsArray = null;
@@ -39954,9 +40023,9 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShareProjectOnline()
 		{
 			object[] paramsArray = null;
@@ -39965,10 +40034,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskUniqueID">optional object TaskUniqueID</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectTPTask(object taskUniqueID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskUniqueID);
@@ -39977,10 +40046,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectTPTask()
 		{
 			object[] paramsArray = null;
@@ -39989,10 +40058,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool RescheduleToNextAvailable(object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID);
@@ -40001,10 +40070,10 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool RescheduleToNextAvailable()
 		{
 			object[] paramsArray = null;
@@ -40013,13 +40082,714 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineViewToggle()
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "TimelineViewToggle", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool Table()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "Table", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ReportsDialog()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ReportsDialog", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="percent">optional object Percent</param>
+		/// <param name="entire">optional object Entire</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ZoomReport(object percent, object entire)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(percent, entire);
+			object returnItem = Invoker.MethodReturn(_instance, "ZoomReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ZoomReport()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ZoomReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="percent">optional object Percent</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ZoomReport(object percent)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(percent);
+			object returnItem = Invoker.MethodReturn(_instance, "ZoomReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="name">optional object Name</param>
+		/// <param name="applyTo">optional object ApplyTo</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ApplyReport(object name, object applyTo)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name, applyTo);
+			object returnItem = Invoker.MethodReturn(_instance, "ApplyReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ApplyReport()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ApplyReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="name">optional object Name</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ApplyReport(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(_instance, "ApplyReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="name">optional object Name</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool FileOpenOrCreate(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(_instance, "FileOpenOrCreate", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool FileOpenOrCreate()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "FileOpenOrCreate", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="name">optional object Name</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ShowOSFTaskPane(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(_instance, "ShowOSFTaskPane", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ShowOSFTaskPane()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ShowOSFTaskPane", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
+		/// <param name="newSiteName">optional object NewSiteName</param>
+		/// <param name="launchBrowser">optional object LaunchBrowser</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool CreateProjectSite(object parentSiteUrl, object newSiteName, object launchBrowser)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(parentSiteUrl, newSiteName, launchBrowser);
+			object returnItem = Invoker.MethodReturn(_instance, "CreateProjectSite", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool CreateProjectSite()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "CreateProjectSite", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool CreateProjectSite(object parentSiteUrl)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(parentSiteUrl);
+			object returnItem = Invoker.MethodReturn(_instance, "CreateProjectSite", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
+		/// <param name="newSiteName">optional object NewSiteName</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool CreateProjectSite(object parentSiteUrl, object newSiteName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(parentSiteUrl, newSiteName);
+			object returnItem = Invoker.MethodReturn(_instance, "CreateProjectSite", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		/// <param name="taskListName">optional object TaskListName</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool LinkToTaskList(object siteURL, object taskListName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, taskListName);
+			object returnItem = Invoker.MethodReturn(_instance, "LinkToTaskList", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool LinkToTaskList()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "LinkToTaskList", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool LinkToTaskList(object siteURL)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL);
+			object returnItem = Invoker.MethodReturn(_instance, "LinkToTaskList", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="uRL">optional object URL</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool OpenBrowser(object uRL)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(uRL);
+			object returnItem = Invoker.MethodReturn(_instance, "OpenBrowser", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool OpenBrowser()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "OpenBrowser", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool PasteAsPicture()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "PasteAsPicture", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool PasteSourceFormatting()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "PasteSourceFormatting", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool PasteDestFormatting()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "PasteDestFormatting", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool CopyReport()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "CopyReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="name">optional object Name</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ProjectCheckOut(object name)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(name);
+			object returnItem = Invoker.MethodReturn(_instance, "ProjectCheckOut", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ProjectCheckOut()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ProjectCheckOut", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SelectTable()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "SelectTable", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool DistributeTableRows()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "DistributeTableRows", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool DistributeTableColumns()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "DistributeTableColumns", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SetRTLTable()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "SetRTLTable", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SetLTRTable()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "SetLTRTable", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AlignTableCellTop()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "AlignTableCellTop", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AlignTableCellVerticalCenter()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "AlignTableCellVerticalCenter", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AlignTableCellBottom()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "AlignTableCellBottom", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="templateId">optional NetOffice.MSProjectApi.Enums.PjReportLayoutTemplateId TemplateId = 0</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ApplyReportLayoutTemplate(NetOffice.MSProjectApi.Enums.PjReportLayoutTemplateId templateId)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(templateId);
+			object returnItem = Invoker.MethodReturn(_instance, "ApplyReportLayoutTemplate", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ApplyReportLayoutTemplate()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ApplyReportLayoutTemplate", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		/// <param name="listName">optional object ListName</param>
+		/// <param name="doSync">optional object DoSync</param>
+		/// <param name="fromSave">optional object FromSave</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SynchronizeWithSiteEx(object siteURL, object listName, object doSync, object fromSave)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, listName, doSync, fromSave);
+			object returnItem = Invoker.MethodReturn(_instance, "SynchronizeWithSiteEx", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SynchronizeWithSiteEx()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "SynchronizeWithSiteEx", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SynchronizeWithSiteEx(object siteURL)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL);
+			object returnItem = Invoker.MethodReturn(_instance, "SynchronizeWithSiteEx", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		/// <param name="listName">optional object ListName</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SynchronizeWithSiteEx(object siteURL, object listName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, listName);
+			object returnItem = Invoker.MethodReturn(_instance, "SynchronizeWithSiteEx", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="siteURL">optional object SiteURL</param>
+		/// <param name="listName">optional object ListName</param>
+		/// <param name="doSync">optional object DoSync</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool SynchronizeWithSiteEx(object siteURL, object listName, object doSync)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(siteURL, listName, doSync);
+			object returnItem = Invoker.MethodReturn(_instance, "SynchronizeWithSiteEx", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="set">optional object Set</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightPredecessors(object set)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(set);
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightPredecessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightPredecessors()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightPredecessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="set">optional object Set</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightDrivingPredecessors(object set)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(set);
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightDrivingPredecessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightDrivingPredecessors()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightDrivingPredecessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="set">optional object Set</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightSuccessors(object set)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(set);
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightSuccessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightSuccessors()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightSuccessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="set">optional object Set</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightDrivenSuccessors(object set)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(set);
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightDrivenSuccessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool HighlightDrivenSuccessors()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "HighlightDrivenSuccessors", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool RemoveHighlight()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "RemoveHighlight", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="show">optional object Show</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ShowReportDataPane(object show)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(show);
+			object returnItem = Invoker.MethodReturn(_instance, "ShowReportDataPane", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool ShowReportDataPane()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "ShowReportDataPane", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool RenameReport()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "RenameReport", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool FileOpenUsingBackstage()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "FileOpenUsingBackstage", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
+		/// <param name="sharePointName">optional object SharePointName</param>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AddSiteColumn(NetOffice.MSProjectApi.Enums.PjField projectField, object sharePointName)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(projectField, sharePointName);
+			object returnItem = Invoker.MethodReturn(_instance, "AddSiteColumn", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AddSiteColumn()
+		{
+			object[] paramsArray = null;
+			object returnItem = Invoker.MethodReturn(_instance, "AddSiteColumn", paramsArray);
+			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
+		}
+
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// </summary>
+		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("MSProject", 11)]
+		public static bool AddSiteColumn(NetOffice.MSProjectApi.Enums.PjField projectField)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(projectField);
+			object returnItem = Invoker.MethodReturn(_instance, "AddSiteColumn", paramsArray);
 			return NetRuntimeSystem.Convert.ToBoolean(returnItem);
 		}
 

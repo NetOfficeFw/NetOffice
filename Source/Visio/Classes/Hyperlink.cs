@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Hyperlink 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Hyperlink : IVHyperlink
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Hyperlink objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Hyperlink array</returns>
+		public static NetOffice.VisioApi.Hyperlink[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Hyperlink");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Hyperlink> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Hyperlink>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Hyperlink(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Hyperlink object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Hyperlink object or null</returns>
+		public static NetOffice.VisioApi.Hyperlink GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Hyperlink", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Hyperlink(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Hyperlink object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Hyperlink object or null</returns>
+		public static NetOffice.VisioApi.Hyperlink GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Hyperlink", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Hyperlink(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

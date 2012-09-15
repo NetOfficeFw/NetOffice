@@ -93,6 +93,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access._ControlInReportEvents objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access._ControlInReportEvents array</returns>
+		public static NetOffice.AccessApi._ControlInReportEvents[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_ControlInReportEvents");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ControlInReportEvents> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ControlInReportEvents>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi._ControlInReportEvents(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access._ControlInReportEvents object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access._ControlInReportEvents object or null</returns>
+		public static NetOffice.AccessApi._ControlInReportEvents GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ControlInReportEvents", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi._ControlInReportEvents(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access._ControlInReportEvents object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access._ControlInReportEvents object or null</returns>
+		public static NetOffice.AccessApi._ControlInReportEvents GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ControlInReportEvents", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi._ControlInReportEvents(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

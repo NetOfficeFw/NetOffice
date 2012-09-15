@@ -186,6 +186,21 @@ namespace NetOffice.MSProjectApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion MSProject 11
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("MSProject", 11)]
+		public string SiteId
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "SiteId", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+		}
+
 		#endregion
 
 		#region Methods

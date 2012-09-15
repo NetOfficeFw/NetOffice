@@ -92,6 +92,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook._InspectorCtrl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook._InspectorCtrl array</returns>
+		public static NetOffice.OutlookApi._InspectorCtrl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","_InspectorCtrl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._InspectorCtrl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._InspectorCtrl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi._InspectorCtrl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook._InspectorCtrl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook._InspectorCtrl object or null</returns>
+		public static NetOffice.OutlookApi._InspectorCtrl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","_InspectorCtrl", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi._InspectorCtrl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook._InspectorCtrl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook._InspectorCtrl object or null</returns>
+		public static NetOffice.OutlookApi._InspectorCtrl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","_InspectorCtrl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi._InspectorCtrl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

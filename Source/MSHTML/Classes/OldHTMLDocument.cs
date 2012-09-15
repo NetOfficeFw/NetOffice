@@ -130,6 +130,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.OldHTMLDocument objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.OldHTMLDocument array</returns>
+		public static NetOffice.MSHTMLApi.OldHTMLDocument[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","OldHTMLDocument");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.OldHTMLDocument> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.OldHTMLDocument>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.OldHTMLDocument object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.OldHTMLDocument object or null</returns>
+		public static NetOffice.MSHTMLApi.OldHTMLDocument GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","OldHTMLDocument", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.OldHTMLDocument object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.OldHTMLDocument object or null</returns>
+		public static NetOffice.MSHTMLApi.OldHTMLDocument GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","OldHTMLDocument", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.OldHTMLDocument(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

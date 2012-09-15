@@ -103,6 +103,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLWindow2 objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWindow2 array</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindow2[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLWindow2");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindow2> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWindow2>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLWindow2(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWindow2 object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWindow2 object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindow2 GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWindow2", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWindow2(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWindow2 object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLWindow2 object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWindow2 GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWindow2", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWindow2(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -29,13 +29,13 @@ namespace NetOffice.OfficeApi
 
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[DispId(2)]
-		COMObject Context{[return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get;}
+		object Context{[return: MarshalAs(UnmanagedType.IDispatch)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(2)] get;}
 
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[DispId(3)]
 		string Tag{[return: MarshalAs(UnmanagedType.BStr)] [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(3)] get;}
 
 		#endregion
-	#pragma warning restore
 	}
 }
+	#pragma warning restore

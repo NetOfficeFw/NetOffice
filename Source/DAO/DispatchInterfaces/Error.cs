@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Error 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Error : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public Int32 Number
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Source
 		{
 			get
@@ -104,10 +104,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		public string Description
 		{
 			get
@@ -119,10 +119,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string HelpFile
 		{
@@ -135,10 +135,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 5, 12
+		/// SupportByVersion DAO 12, 3.6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 5,12)]
+		[SupportByVersionAttribute("DAO", 12,3.6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 HelpContext
 		{

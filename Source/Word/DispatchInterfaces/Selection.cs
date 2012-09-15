@@ -60,6 +60,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="dataOnly">optional bool DataOnly</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_XML(bool dataOnly)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);

@@ -62,6 +62,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="pvarIndex">optional object pvarIndex</param>
 		/// <param name="varIgallery">optional object varIgallery</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object pvarIndex, object varIgallery)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarIndex, varIgallery);
@@ -90,6 +91,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="pvarIndex">optional object pvarIndex</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object pvarIndex)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(pvarIndex);
@@ -117,6 +119,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="axisType">optional object axisType</param>
 		/// <param name="axisGroup">optional object AxisGroup</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object axisType, object axisGroup)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(axisType, axisGroup);
@@ -139,6 +142,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="axisType">optional object axisType</param>
 		/// <param name="axisGroup">optional object AxisGroup</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object axisGroup, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(axisType, axisGroup);
@@ -163,6 +167,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object axisType)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(axisType);
@@ -184,6 +189,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="axisType">optional object axisType</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(axisType);
@@ -207,6 +213,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="fBackWall">optional bool fBackWall</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoWalls get_Walls(bool fBackWall)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fBackWall);

@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTCDefaultDispatch objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTCDefaultDispatch array</returns>
+		public static NetOffice.MSHTMLApi.HTCDefaultDispatch[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTCDefaultDispatch");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCDefaultDispatch> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTCDefaultDispatch>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTCDefaultDispatch(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCDefaultDispatch object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTCDefaultDispatch object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCDefaultDispatch GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCDefaultDispatch", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCDefaultDispatch(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTCDefaultDispatch object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTCDefaultDispatch object or null</returns>
+		public static NetOffice.MSHTMLApi.HTCDefaultDispatch GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTCDefaultDispatch", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTCDefaultDispatch(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

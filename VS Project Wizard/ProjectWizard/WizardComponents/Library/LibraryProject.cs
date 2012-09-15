@@ -98,7 +98,12 @@ namespace NetOffice.ProjectWizard
             foreach (XmlNode item in (ListControls[0] as IWizardControl).SettingsDocument.FirstChild.ChildNodes)
             {
                 if (item.Attributes[0].Value.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
-                    usingItems += UsingCode.Replace("%Name%", item.Name);
+                {
+                    if (item.Name == "Project")
+                        usingItems += UsingCode.Replace("%Name%", "MS" + item.Name);
+                    else
+                        usingItems += UsingCode.Replace("%Name%", item.Name);
+                }
             }
 
             _addDictionary.Add("$usingItems$", usingItems);

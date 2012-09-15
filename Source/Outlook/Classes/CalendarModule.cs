@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.CalendarModule objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.CalendarModule array</returns>
+		public static NetOffice.OutlookApi.CalendarModule[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","CalendarModule");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CalendarModule> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.CalendarModule>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.CalendarModule(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CalendarModule object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.CalendarModule object or null</returns>
+		public static NetOffice.OutlookApi.CalendarModule GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CalendarModule", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CalendarModule(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.CalendarModule object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.CalendarModule object or null</returns>
+		public static NetOffice.OutlookApi.CalendarModule GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","CalendarModule", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.CalendarModule(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -63,6 +63,13 @@ namespace NetOffice.MSProjectApi.Enums
 		 /// </summary>
 		 /// <remarks>7</remarks>
 		 [SupportByVersionAttribute("MSProject", 11,12,14)]
-		 pjProjectTypeEnterpriseResourcesCheckedOut = 7
+		 pjProjectTypeEnterpriseResourcesCheckedOut = 7,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>8</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjProjectTypeBasicProjectSite = 8
 	}
 }

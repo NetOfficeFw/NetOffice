@@ -39,9 +39,10 @@
             // 
             this.radioButtonCurrentUser.AutoSize = true;
             this.radioButtonCurrentUser.Checked = true;
-            this.radioButtonCurrentUser.Location = new System.Drawing.Point(33, 57);
+            this.radioButtonCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCurrentUser.Location = new System.Drawing.Point(33, 47);
             this.radioButtonCurrentUser.Name = "radioButtonCurrentUser";
-            this.radioButtonCurrentUser.Size = new System.Drawing.Size(193, 17);
+            this.radioButtonCurrentUser.Size = new System.Drawing.Size(235, 20);
             this.radioButtonCurrentUser.TabIndex = 12;
             this.radioButtonCurrentUser.TabStop = true;
             this.radioButtonCurrentUser.Text = "Nur für den angemeldeten Benutzer";
@@ -51,9 +52,10 @@
             // radioButtonLocalMachine
             // 
             this.radioButtonLocalMachine.AutoSize = true;
-            this.radioButtonLocalMachine.Location = new System.Drawing.Point(33, 80);
+            this.radioButtonLocalMachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonLocalMachine.Location = new System.Drawing.Point(33, 70);
             this.radioButtonLocalMachine.Name = "radioButtonLocalMachine";
-            this.radioButtonLocalMachine.Size = new System.Drawing.Size(104, 17);
+            this.radioButtonLocalMachine.Size = new System.Drawing.Size(125, 20);
             this.radioButtonLocalMachine.TabIndex = 13;
             this.radioButtonLocalMachine.Text = "Für alle Benutzer";
             this.radioButtonLocalMachine.UseVisualStyleBackColor = true;
@@ -63,7 +65,7 @@
             // 
             this.labelLoadCaption.AutoSize = true;
             this.labelLoadCaption.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoadCaption.Location = new System.Drawing.Point(30, 118);
+            this.labelLoadCaption.Location = new System.Drawing.Point(23, 102);
             this.labelLoadCaption.Name = "labelLoadCaption";
             this.labelLoadCaption.Size = new System.Drawing.Size(292, 15);
             this.labelLoadCaption.TabIndex = 14;
@@ -78,9 +80,9 @@
             "2   = Bei Bedarf laden",
             "1   = Nicht automatisch laden",
             "16 = Beim ersten Start automatisch laden, danach bei Bedarf laden"});
-            this.comboBoxLoadBehavior.Location = new System.Drawing.Point(33, 147);
+            this.comboBoxLoadBehavior.Location = new System.Drawing.Point(33, 132);
             this.comboBoxLoadBehavior.Name = "comboBoxLoadBehavior";
-            this.comboBoxLoadBehavior.Size = new System.Drawing.Size(353, 21);
+            this.comboBoxLoadBehavior.Size = new System.Drawing.Size(344, 21);
             this.comboBoxLoadBehavior.TabIndex = 15;
             this.comboBoxLoadBehavior.SelectedIndexChanged += new System.EventHandler(this.comboBoxLoadBehavior_SelectedIndexChanged);
             // 
@@ -88,7 +90,7 @@
             // 
             this.labelUserCaption.AutoSize = true;
             this.labelUserCaption.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserCaption.Location = new System.Drawing.Point(30, 30);
+            this.labelUserCaption.Location = new System.Drawing.Point(23, 20);
             this.labelUserCaption.Name = "labelUserCaption";
             this.labelUserCaption.Size = new System.Drawing.Size(295, 15);
             this.labelUserCaption.TabIndex = 16;
@@ -104,7 +106,7 @@
             this.Controls.Add(this.radioButtonLocalMachine);
             this.Controls.Add(this.radioButtonCurrentUser);
             this.Name = "AddinLoadControl";
-            this.Size = new System.Drawing.Size(520, 200);
+            this.Size = new System.Drawing.Size(524, 212);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -61,6 +61,7 @@ namespace NetOffice.WordApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -87,6 +88,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("Word", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

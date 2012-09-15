@@ -20,11 +20,13 @@ namespace NetOffice.ProjectWizard
             {
                 checkBoxClassicUISupport.Text = "Ich möchte die klassische Benutzeroberfläche in älteren Office Versionen erweitern";
                 checkBoxRibbonUISupport.Text = "Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern";
+                checkBoxTaskPane.Text = "Ich möchte eine Task Pane zur Verfügung stellen";
             }
             else
             {
-                checkBoxClassicUISupport.Text = "Ich want customize the classic User Interface.";
-                checkBoxRibbonUISupport.Text = "Ich want customize the Ribbon User Interface.";
+                checkBoxClassicUISupport.Text = "I want customize the classic User Interface.";
+                checkBoxRibbonUISupport.Text = "I want customize the Ribbon User Interface.";
+                checkBoxTaskPane.Text = "I want a custom Task Pane";
             }
         }
 
@@ -111,6 +113,18 @@ namespace NetOffice.ProjectWizard
                 result[1] += Environment.NewLine + LocalizedNo;
             }
 
+
+            if (_settings.FirstChild.SelectSingleNode("TaskPane").InnerText.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
+            {
+                result[0] += Environment.NewLine + LocalizedTaskPane;
+                result[1] += Environment.NewLine + LocalizedYes;
+            }
+            else
+            {
+                result[0] += Environment.NewLine + LocalizedTaskPane;
+                result[1] += Environment.NewLine + LocalizedNo;
+            }
+
             return result;
         }
 
@@ -146,6 +160,17 @@ namespace NetOffice.ProjectWizard
             }
         }
 
+        private string LocalizedTaskPane
+        {
+            get
+            {
+                if (NetOfficeProject.TargetLanguage == TargetLanguage.German)
+                    return "Task Pane:";
+                else
+                    return "Task Pane:";
+            }
+        }
+
         private string LocalizedYes
         {
             get
@@ -171,7 +196,8 @@ namespace NetOffice.ProjectWizard
         private void ChangeSettings()
         {
             _settings.FirstChild.SelectSingleNode("UseClassicUI").InnerText = checkBoxClassicUISupport.Checked.ToString();
-            _settings.FirstChild.SelectSingleNode("UseRibbonUI").InnerText = checkBoxRibbonUISupport.Checked.ToString();           
+            _settings.FirstChild.SelectSingleNode("UseRibbonUI").InnerText = checkBoxRibbonUISupport.Checked.ToString();
+            _settings.FirstChild.SelectSingleNode("TaskPane").InnerText = checkBoxTaskPane.Checked.ToString();  
         }
 
         private void CreateSettingsDocument()
@@ -180,6 +206,7 @@ namespace NetOffice.ProjectWizard
             _settings.AppendChild(_settings.CreateElement("Step4Control"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("UseClassicUI"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("UseRibbonUI"));
+            _settings.FirstChild.AppendChild(_settings.CreateElement("TaskPane"));
         }
 
         private void RaiseChangeEvent()

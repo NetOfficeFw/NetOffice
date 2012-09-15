@@ -103,6 +103,49 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running ADODB.Recordset objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an ADODB.Recordset array</returns>
+		public static NetOffice.ADODBApi.Recordset[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Recordset");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Recordset> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Recordset>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ADODBApi.Recordset(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Recordset object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an ADODB.Recordset object or null</returns>
+		public static NetOffice.ADODBApi.Recordset GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Recordset", false);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Recordset(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Recordset object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an ADODB.Recordset object or null</returns>
+		public static NetOffice.ADODBApi.Recordset GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Recordset", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Recordset(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

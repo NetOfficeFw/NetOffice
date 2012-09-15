@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ListImages objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ListImages array</returns>
+		public static NetOffice.MSComctlLibApi.ListImages[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ListImages");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListImages> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListImages>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ListImages(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListImages object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ListImages object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListImages GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListImages", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListImages(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListImages object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ListImages object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListImages GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListImages", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListImages(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

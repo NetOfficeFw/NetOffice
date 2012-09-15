@@ -102,6 +102,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.OptionGroup objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.OptionGroup array</returns>
+		public static NetOffice.AccessApi.OptionGroup[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","OptionGroup");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.OptionGroup> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.OptionGroup>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.OptionGroup(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.OptionGroup object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.OptionGroup object or null</returns>
+		public static NetOffice.AccessApi.OptionGroup GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","OptionGroup", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.OptionGroup(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.OptionGroup object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.OptionGroup object or null</returns>
+		public static NetOffice.AccessApi.OptionGroup GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","OptionGroup", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.OptionGroup(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

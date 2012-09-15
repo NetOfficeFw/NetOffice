@@ -61,6 +61,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -87,6 +88,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

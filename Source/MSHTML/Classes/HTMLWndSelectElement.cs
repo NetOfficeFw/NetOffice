@@ -156,6 +156,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLWndSelectElement objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWndSelectElement array</returns>
+		public static NetOffice.MSHTMLApi.HTMLWndSelectElement[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLWndSelectElement");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWndSelectElement> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLWndSelectElement>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLWndSelectElement(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWndSelectElement object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLWndSelectElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWndSelectElement GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWndSelectElement", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWndSelectElement(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLWndSelectElement object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLWndSelectElement object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLWndSelectElement GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLWndSelectElement", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLWndSelectElement(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -98,6 +98,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.CustomControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.CustomControl array</returns>
+		public static NetOffice.AccessApi.CustomControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","CustomControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CustomControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.CustomControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.CustomControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.CustomControl object or null</returns>
+		public static NetOffice.AccessApi.CustomControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CustomControl", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CustomControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.CustomControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.CustomControl object or null</returns>
+		public static NetOffice.AccessApi.CustomControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CustomControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CustomControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

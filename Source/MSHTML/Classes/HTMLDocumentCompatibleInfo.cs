@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLDocumentCompatibleInfo objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDocumentCompatibleInfo array</returns>
+		public static NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLDocumentCompatibleInfo");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDocumentCompatibleInfo object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDocumentCompatibleInfo object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDocumentCompatibleInfo", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDocumentCompatibleInfo object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLDocumentCompatibleInfo object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDocumentCompatibleInfo", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDocumentCompatibleInfo(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

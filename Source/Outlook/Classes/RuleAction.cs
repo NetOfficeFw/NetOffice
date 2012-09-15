@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.RuleAction objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.RuleAction array</returns>
+		public static NetOffice.OutlookApi.RuleAction[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","RuleAction");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleAction>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.RuleAction(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleAction object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.RuleAction object or null</returns>
+		public static NetOffice.OutlookApi.RuleAction GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleAction", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleAction(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleAction object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.RuleAction object or null</returns>
+		public static NetOffice.OutlookApi.RuleAction GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleAction", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleAction(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

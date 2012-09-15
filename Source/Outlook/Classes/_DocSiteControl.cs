@@ -92,6 +92,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook._DocSiteControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook._DocSiteControl array</returns>
+		public static NetOffice.OutlookApi._DocSiteControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","_DocSiteControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DocSiteControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi._DocSiteControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi._DocSiteControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook._DocSiteControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook._DocSiteControl object or null</returns>
+		public static NetOffice.OutlookApi._DocSiteControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","_DocSiteControl", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi._DocSiteControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook._DocSiteControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook._DocSiteControl object or null</returns>
+		public static NetOffice.OutlookApi._DocSiteControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","_DocSiteControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi._DocSiteControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

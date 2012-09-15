@@ -155,6 +155,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLIFrame objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLIFrame array</returns>
+		public static NetOffice.MSHTMLApi.HTMLIFrame[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLIFrame");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLIFrame> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLIFrame>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLIFrame object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLIFrame object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLIFrame GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLIFrame", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLIFrame object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLIFrame object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLIFrame GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLIFrame", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLIFrame(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

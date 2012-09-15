@@ -157,6 +157,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLSpanFlow objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLSpanFlow array</returns>
+		public static NetOffice.MSHTMLApi.HTMLSpanFlow[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLSpanFlow");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLSpanFlow> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLSpanFlow>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLSpanFlow(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLSpanFlow object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLSpanFlow object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLSpanFlow GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLSpanFlow", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLSpanFlow(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLSpanFlow object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLSpanFlow object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLSpanFlow GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLSpanFlow", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLSpanFlow(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

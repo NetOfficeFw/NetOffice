@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.DependencyInfo objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.DependencyInfo array</returns>
+		public static NetOffice.AccessApi.DependencyInfo[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","DependencyInfo");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DependencyInfo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.DependencyInfo>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.DependencyInfo(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.DependencyInfo object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.DependencyInfo object or null</returns>
+		public static NetOffice.AccessApi.DependencyInfo GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","DependencyInfo", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.DependencyInfo(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.DependencyInfo object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.DependencyInfo object or null</returns>
+		public static NetOffice.AccessApi.DependencyInfo GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","DependencyInfo", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.DependencyInfo(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

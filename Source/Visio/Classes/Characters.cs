@@ -15,9 +15,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Characters 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Characters : IVCharacters,IEventBinding
 	{
@@ -93,17 +93,60 @@ namespace NetOffice.VisioApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Characters objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Characters array</returns>
+		public static NetOffice.VisioApi.Characters[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Characters");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Characters> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Characters>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Characters(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Characters object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Characters object or null</returns>
+		public static NetOffice.VisioApi.Characters GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Characters", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Characters(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Characters object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Characters object or null</returns>
+		public static NetOffice.VisioApi.Characters GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Characters", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Characters(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion Visio, 11,12,14
+		/// SupportByVersion Visio, 11,12,14,15
 		/// </summary>
 		private event Characters_TextChangedEventHandler _TextChangedEvent;
 
 		/// <summary>
-		/// SupportByVersion Visio 11 12 14
+		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
-		[SupportByVersion("Visio", 11,12,14)]
+		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Characters_TextChangedEventHandler TextChangedEvent
 		{
 			add

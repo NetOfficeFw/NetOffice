@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Reminder objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Reminder array</returns>
+		public static NetOffice.OutlookApi.Reminder[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Reminder");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminder> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminder>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Reminder(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Reminder object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Reminder object or null</returns>
+		public static NetOffice.OutlookApi.Reminder GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Reminder", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Reminder(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Reminder object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Reminder object or null</returns>
+		public static NetOffice.OutlookApi.Reminder GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Reminder", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Reminder(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

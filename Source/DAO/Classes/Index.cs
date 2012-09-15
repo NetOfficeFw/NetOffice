@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 
 	///<summary>
 	/// CoClass Index 
-	/// SupportByVersion DAO, 5,12
+	/// SupportByVersion DAO, 12,3.6
 	///</summary>
-	[SupportByVersionAttribute("DAO", 5,12)]
+	[SupportByVersionAttribute("DAO", 12,3.6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Index : _Index
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.DAOApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running DAO.Index objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an DAO.Index array</returns>
+		public static NetOffice.DAOApi.Index[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("DAO","Index");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.Index> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.DAOApi.Index>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.DAOApi.Index(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running DAO.Index object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an DAO.Index object or null</returns>
+		public static NetOffice.DAOApi.Index GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("DAO","Index", false);
+			if(null != proxy)
+				return new NetOffice.DAOApi.Index(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running DAO.Index object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an DAO.Index object or null</returns>
+		public static NetOffice.DAOApi.Index GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("DAO","Index", throwOnError);
+			if(null != proxy)
+				return new NetOffice.DAOApi.Index(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

@@ -93,6 +93,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Inspectors objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Inspectors array</returns>
+		public static NetOffice.OutlookApi.Inspectors[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Inspectors");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspectors> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Inspectors>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Inspectors(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Inspectors object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Inspectors object or null</returns>
+		public static NetOffice.OutlookApi.Inspectors GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Inspectors", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Inspectors(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Inspectors object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Inspectors object or null</returns>
+		public static NetOffice.OutlookApi.Inspectors GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Inspectors", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Inspectors(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

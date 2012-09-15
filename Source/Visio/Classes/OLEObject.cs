@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass OLEObject 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OLEObject : IVOLEObject
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.OLEObject objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.OLEObject array</returns>
+		public static NetOffice.VisioApi.OLEObject[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","OLEObject");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.OLEObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.OLEObject>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.OLEObject(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.OLEObject object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.OLEObject object or null</returns>
+		public static NetOffice.VisioApi.OLEObject GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","OLEObject", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.OLEObject(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.OLEObject object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.OLEObject object or null</returns>
+		public static NetOffice.VisioApi.OLEObject GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","OLEObject", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.OLEObject(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

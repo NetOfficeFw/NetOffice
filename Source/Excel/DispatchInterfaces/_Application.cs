@@ -60,6 +60,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Caller(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -92,6 +93,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ClipboardFormats(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -125,6 +127,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_FileConverters(object index1, object index2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -158,6 +161,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_FileConverters(object index1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);
@@ -190,6 +194,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_International(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -222,6 +227,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_PreviousSelections(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -255,6 +261,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_RegisteredFunctions(object index1, object index2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1, index2);
@@ -288,6 +295,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_RegisteredFunctions(object index1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index1);

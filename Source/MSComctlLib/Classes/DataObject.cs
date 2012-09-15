@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.DataObject objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.DataObject array</returns>
+		public static NetOffice.MSComctlLibApi.DataObject[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","DataObject");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObject>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.DataObject(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.DataObject object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.DataObject object or null</returns>
+		public static NetOffice.MSComctlLibApi.DataObject GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","DataObject", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.DataObject(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.DataObject object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.DataObject object or null</returns>
+		public static NetOffice.MSComctlLibApi.DataObject GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","DataObject", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.DataObject(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

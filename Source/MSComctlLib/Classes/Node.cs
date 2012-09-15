@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.Node objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.Node array</returns>
+		public static NetOffice.MSComctlLibApi.Node[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","Node");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Node> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Node>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.Node(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Node object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.Node object or null</returns>
+		public static NetOffice.MSComctlLibApi.Node GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Node", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Node(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Node object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.Node object or null</returns>
+		public static NetOffice.MSComctlLibApi.Node GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Node", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Node(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

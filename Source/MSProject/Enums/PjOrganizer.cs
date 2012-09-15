@@ -84,6 +84,13 @@ namespace NetOffice.MSProjectApi.Enums
 		 /// </summary>
 		 /// <remarks>10</remarks>
 		 [SupportByVersionAttribute("MSProject", 11,12,14)]
-		 pjGroups = 10
+		 pjGroups = 10,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>11</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjDrawings = 11
 	}
 }

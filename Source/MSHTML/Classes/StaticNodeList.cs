@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.StaticNodeList objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.StaticNodeList array</returns>
+		public static NetOffice.MSHTMLApi.StaticNodeList[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","StaticNodeList");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.StaticNodeList> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.StaticNodeList>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.StaticNodeList(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.StaticNodeList object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.StaticNodeList object or null</returns>
+		public static NetOffice.MSHTMLApi.StaticNodeList GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","StaticNodeList", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.StaticNodeList(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.StaticNodeList object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.StaticNodeList object or null</returns>
+		public static NetOffice.MSHTMLApi.StaticNodeList GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","StaticNodeList", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.StaticNodeList(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

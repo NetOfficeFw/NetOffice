@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ListImage objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ListImage array</returns>
+		public static NetOffice.MSComctlLibApi.ListImage[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ListImage");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListImage> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListImage>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ListImage(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListImage object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ListImage object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListImage GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListImage", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListImage(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListImage object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ListImage object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListImage GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListImage", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListImage(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

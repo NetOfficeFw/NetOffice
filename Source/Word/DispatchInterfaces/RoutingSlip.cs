@@ -60,6 +60,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Recipients(object index)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

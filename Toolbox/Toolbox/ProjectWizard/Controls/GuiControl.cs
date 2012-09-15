@@ -25,9 +25,9 @@ namespace NetOffice.DeveloperToolbox
             }
             else
             {
-                checkBoxClassicUISupport.Text = "Ich want customize the classic User Interface";
-                checkBoxRibbonUISupport.Text = "Ich want customize the Ribbon User Interface";
-                checkBoxTaskPaneSupport.Text = "Ich want a custom Task Pane";
+                checkBoxClassicUISupport.Text = "I want customize the classic User Interface";
+                checkBoxRibbonUISupport.Text = "I want customize the Ribbon User Interface";
+                checkBoxTaskPaneSupport.Text = "I want a custom Task Pane";
             }
         }
 

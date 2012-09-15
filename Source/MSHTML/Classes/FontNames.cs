@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.FontNames objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.FontNames array</returns>
+		public static NetOffice.MSHTMLApi.FontNames[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","FontNames");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.FontNames> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.FontNames>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.FontNames(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.FontNames object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.FontNames object or null</returns>
+		public static NetOffice.MSHTMLApi.FontNames GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","FontNames", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.FontNames(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.FontNames object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.FontNames object or null</returns>
+		public static NetOffice.MSHTMLApi.FontNames GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","FontNames", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.FontNames(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

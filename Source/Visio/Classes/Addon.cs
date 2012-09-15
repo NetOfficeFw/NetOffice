@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Addon 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Addon : IVAddon
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Addon objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Addon array</returns>
+		public static NetOffice.VisioApi.Addon[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Addon");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Addon> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Addon>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Addon(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Addon object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Addon object or null</returns>
+		public static NetOffice.VisioApi.Addon GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Addon", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Addon(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Addon object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Addon object or null</returns>
+		public static NetOffice.VisioApi.Addon GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Addon", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Addon(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

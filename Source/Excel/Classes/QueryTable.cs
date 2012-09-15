@@ -94,6 +94,49 @@ namespace NetOffice.ExcelApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Excel.QueryTable objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Excel.QueryTable array</returns>
+		public static NetOffice.ExcelApi.QueryTable[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Excel","QueryTable");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ExcelApi.QueryTable>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ExcelApi.QueryTable(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Excel.QueryTable object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Excel.QueryTable object or null</returns>
+		public static NetOffice.ExcelApi.QueryTable GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","QueryTable", false);
+			if(null != proxy)
+				return new NetOffice.ExcelApi.QueryTable(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Excel.QueryTable object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Excel.QueryTable object or null</returns>
+		public static NetOffice.ExcelApi.QueryTable GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Excel","QueryTable", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ExcelApi.QueryTable(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

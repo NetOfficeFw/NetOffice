@@ -106,6 +106,49 @@ namespace NetOffice.WordApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Word.Document objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Word.Document array</returns>
+		public static NetOffice.WordApi.Document[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Word","Document");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.Document> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.WordApi.Document>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.WordApi.Document(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Word.Document object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Word.Document object or null</returns>
+		public static NetOffice.WordApi.Document GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","Document", false);
+			if(null != proxy)
+				return new NetOffice.WordApi.Document(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Word.Document object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Word.Document object or null</returns>
+		public static NetOffice.WordApi.Document GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Word","Document", throwOnError);
+			if(null != proxy)
+				return new NetOffice.WordApi.Document(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

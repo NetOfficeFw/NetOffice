@@ -18,12 +18,12 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.0.1")]
-[assembly: AssemblyFileVersion("1.5.0.1")]
+[assembly: AssemblyVersion("1.5.1.2")]
+[assembly: AssemblyFileVersion("1.5.1.2")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSComctlLib")]
 [assembly: Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")]
-[assembly: LateBindingAttribute("1.0")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1")]
 
 /*
 Alias Table

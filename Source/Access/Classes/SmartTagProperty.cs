@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.SmartTagProperty objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.SmartTagProperty array</returns>
+		public static NetOffice.AccessApi.SmartTagProperty[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","SmartTagProperty");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTagProperty> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTagProperty>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.SmartTagProperty(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTagProperty object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.SmartTagProperty object or null</returns>
+		public static NetOffice.AccessApi.SmartTagProperty GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTagProperty", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTagProperty(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTagProperty object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.SmartTagProperty object or null</returns>
+		public static NetOffice.AccessApi.SmartTagProperty GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTagProperty", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTagProperty(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -264,6 +264,7 @@ namespace NetOffice.WordApi
 		/// <param name="section">string Section</param>
 		/// <param name="key">string Key</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ProfileString(string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(section, key);
@@ -306,6 +307,7 @@ namespace NetOffice.WordApi
 		/// <param name="section">string Section</param>
 		/// <param name="key">string Key</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_PrivateProfileString(string fileName, string section, string key, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, section, key);

@@ -93,6 +93,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Accounts objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Accounts array</returns>
+		public static NetOffice.OutlookApi.Accounts[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Accounts");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Accounts> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Accounts>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Accounts(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Accounts object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Accounts object or null</returns>
+		public static NetOffice.OutlookApi.Accounts GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Accounts", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Accounts(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Accounts object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Accounts object or null</returns>
+		public static NetOffice.OutlookApi.Accounts GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Accounts", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Accounts(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

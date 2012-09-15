@@ -3,10 +3,10 @@
 namespace NetOffice
 {
     /// <summary>
-    /// Indicates assembly is a latebinding api assembly
+    /// Indicates assembly is a NetOffice api assembly
     /// </summary>
     [AttributeUsage(AttributeTargets.Assembly)]
-    public class LateBindingAttribute: System.Attribute
+    public class NetOfficeAssemblyAttribute: System.Attribute
     {
         /// <summary>
         /// version
@@ -17,7 +17,7 @@ namespace NetOffice
         /// creates instance
         /// </summary>
         /// <param name="apiVersion"></param>
-        public LateBindingAttribute(string apiVersion)
+        public NetOfficeAssemblyAttribute(string apiVersion)
         {
             this.SupportedApiVersion = apiVersion;
         }

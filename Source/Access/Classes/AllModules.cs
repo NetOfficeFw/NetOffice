@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.AllModules objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.AllModules array</returns>
+		public static NetOffice.AccessApi.AllModules[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AllModules");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllModules> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllModules>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.AllModules(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.AllModules object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.AllModules object or null</returns>
+		public static NetOffice.AccessApi.AllModules GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllModules", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllModules(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.AllModules object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.AllModules object or null</returns>
+		public static NetOffice.AccessApi.AllModules GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllModules", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllModules(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -115,6 +115,7 @@ namespace NetOffice.MSComctlLibApi
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object pvIndex, NetOffice.MSComctlLibApi.ITab value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pvIndex);

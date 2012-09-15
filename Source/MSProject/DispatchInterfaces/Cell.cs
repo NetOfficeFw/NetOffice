@@ -185,10 +185,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor CellColor
 		{
 			get
@@ -206,10 +206,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor FontColor
 		{
 			get
@@ -227,10 +227,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Enums.PjBackgroundPattern Pattern
 		{
 			get
@@ -248,10 +248,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 CellColorEx
 		{
 			get
@@ -268,10 +268,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 FontColorEx
 		{
 			get
@@ -288,10 +288,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Assignment Assignment
 		{
 			get

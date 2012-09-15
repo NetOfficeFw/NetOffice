@@ -172,7 +172,7 @@ namespace NetOffice
         private static void AppendToLogFile(string message)
         {
             if (null == FileName)
-                throw new LateBindingApiException("FileName not set.");
+                throw new NetOfficeException("FileName not set.");
 
             System.IO.File.AppendAllText(FileName, message + Environment.NewLine, Encoding.UTF8);
         }

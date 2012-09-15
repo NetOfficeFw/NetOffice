@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.PlaySoundRuleAction objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.PlaySoundRuleAction array</returns>
+		public static NetOffice.OutlookApi.PlaySoundRuleAction[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","PlaySoundRuleAction");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.PlaySoundRuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.PlaySoundRuleAction>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.PlaySoundRuleAction(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.PlaySoundRuleAction object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.PlaySoundRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.PlaySoundRuleAction GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","PlaySoundRuleAction", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.PlaySoundRuleAction(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.PlaySoundRuleAction object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.PlaySoundRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.PlaySoundRuleAction GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","PlaySoundRuleAction", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.PlaySoundRuleAction(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.Tab objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.Tab array</returns>
+		public static NetOffice.MSComctlLibApi.Tab[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","Tab");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Tab> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Tab>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.Tab(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Tab object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.Tab object or null</returns>
+		public static NetOffice.MSComctlLibApi.Tab GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Tab", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Tab(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Tab object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.Tab object or null</returns>
+		public static NetOffice.MSComctlLibApi.Tab GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Tab", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Tab(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -60,6 +60,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Moniker(object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(relativeTo);

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.RuleConditions objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.RuleConditions array</returns>
+		public static NetOffice.OutlookApi.RuleConditions[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","RuleConditions");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleConditions> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.RuleConditions>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.RuleConditions(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleConditions object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.RuleConditions object or null</returns>
+		public static NetOffice.OutlookApi.RuleConditions GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleConditions", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleConditions(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.RuleConditions object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.RuleConditions object or null</returns>
+		public static NetOffice.OutlookApi.RuleConditions GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","RuleConditions", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.RuleConditions(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

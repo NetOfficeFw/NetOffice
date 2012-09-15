@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLDOMTextNode objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDOMTextNode array</returns>
+		public static NetOffice.MSHTMLApi.HTMLDOMTextNode[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLDOMTextNode");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDOMTextNode> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLDOMTextNode>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLDOMTextNode(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDOMTextNode object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLDOMTextNode object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDOMTextNode GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDOMTextNode", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDOMTextNode(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLDOMTextNode object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLDOMTextNode object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLDOMTextNode GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLDOMTextNode", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLDOMTextNode(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

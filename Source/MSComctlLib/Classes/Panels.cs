@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.Panels objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.Panels array</returns>
+		public static NetOffice.MSComctlLibApi.Panels[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","Panels");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Panels> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Panels>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.Panels(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Panels object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.Panels object or null</returns>
+		public static NetOffice.MSComctlLibApi.Panels GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Panels", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Panels(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Panels object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.Panels object or null</returns>
+		public static NetOffice.MSComctlLibApi.Panels GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Panels", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Panels(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

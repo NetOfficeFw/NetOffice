@@ -318,171 +318,346 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjResourceTimescaledActualOvertimeWorkProtected = 721,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>754</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBudgetWork = 754,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>755</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBudgetCost = 755,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>757</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaselineBudgetWork = 757,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>758</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaselineBudgetCost = 758,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>761</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline1BudgetWork = 761,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>762</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline1BudgetCost = 762,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>765</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline2BudgetWork = 765,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>766</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline2BudgetCost = 766,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>769</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline3BudgetWork = 769,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>770</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline3BudgetCost = 770,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>773</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline4BudgetWork = 773,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>774</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline4BudgetCost = 774,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>777</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline5BudgetWork = 777,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>778</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline5BudgetCost = 778,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>781</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline6BudgetWork = 781,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>782</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline6BudgetCost = 782,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>785</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline7BudgetWork = 785,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>786</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline7BudgetCost = 786,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>789</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline8BudgetWork = 789,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>790</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline8BudgetCost = 790,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>793</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline9BudgetWork = 793,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>794</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline9BudgetCost = 794,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>797</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjResourceTimescaledBaseline10BudgetWork = 797,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>798</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
-		 pjResourceTimescaledBaseline10BudgetCost = 798
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
+		 pjResourceTimescaledBaseline10BudgetCost = 798,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>811</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledCumulativeActualWork = 811,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>812</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledRemainingCumulativeActualWork = 812,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>813</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledRemainingCumulativeWork = 813,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>814</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaselineRemainingCumulativeWork = 814,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>815</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline1RemainingCumulativeWork = 815,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>816</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline2RemainingCumulativeWork = 816,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>817</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline3RemainingCumulativeWork = 817,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>818</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline4RemainingCumulativeWork = 818,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>819</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline5RemainingCumulativeWork = 819,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>820</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline6RemainingCumulativeWork = 820,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>821</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline7RemainingCumulativeWork = 821,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>822</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline8RemainingCumulativeWork = 822,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>823</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline9RemainingCumulativeWork = 823,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>824</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline10RemainingCumulativeWork = 824,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>825</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaselineCumulativeWork = 825,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>826</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline1CumulativeWork = 826,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>827</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline2CumulativeWork = 827,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>828</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline3CumulativeWork = 828,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>829</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline4CumulativeWork = 829,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>830</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline5CumulativeWork = 830,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>831</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline6CumulativeWork = 831,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>832</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline7CumulativeWork = 832,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>833</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline8CumulativeWork = 833,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>834</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline9CumulativeWork = 834,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>835</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjResourceTimescaledBaseline10CumulativeWork = 835
 	}
 }

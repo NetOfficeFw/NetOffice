@@ -101,6 +101,49 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running ADODB.Connection objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an ADODB.Connection array</returns>
+		public static NetOffice.ADODBApi.Connection[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Connection");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Connection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Connection>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ADODBApi.Connection(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Connection object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an ADODB.Connection object or null</returns>
+		public static NetOffice.ADODBApi.Connection GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Connection", false);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Connection(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Connection object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an ADODB.Connection object or null</returns>
+		public static NetOffice.ADODBApi.Connection GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Connection", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Connection(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLStyleSheet objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheet array</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheet[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLStyleSheet");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheet> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheet>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLStyleSheet(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheet object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheet object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheet GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheet", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheet(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheet object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLStyleSheet object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheet GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheet", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheet(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

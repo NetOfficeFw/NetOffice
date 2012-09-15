@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLStyleSheetRulesCollection objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheetRulesCollection array</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLStyleSheetRulesCollection");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheetRulesCollection object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLStyleSheetRulesCollection object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheetRulesCollection", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLStyleSheetRulesCollection object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLStyleSheetRulesCollection object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLStyleSheetRulesCollection", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLStyleSheetRulesCollection(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

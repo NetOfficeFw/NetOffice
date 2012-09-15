@@ -206,6 +206,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IsSelected(Int32 index, NetOffice.OfficeApi.Enums.MsoTriState value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);

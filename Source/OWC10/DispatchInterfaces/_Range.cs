@@ -65,6 +65,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -93,6 +94,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute);
@@ -118,6 +120,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute);
@@ -145,6 +148,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -174,6 +178,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="referenceStyle">optional NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
@@ -202,6 +207,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="rowOffset">optional object RowOffset</param>
 		/// <param name="columnOffset">optional object ColumnOffset</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api._Range get_Offset(object rowOffset, object columnOffset)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset, columnOffset);
@@ -228,6 +234,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="rowOffset">optional object RowOffset</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OWC10Api._Range get_Offset(object rowOffset)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset);
@@ -253,6 +260,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="rangeValueDataType">optional object RangeValueDataType</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Value(object rangeValueDataType)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
@@ -274,6 +282,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="rangeValueDataType">optional object RangeValueDataType</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Value(object rangeValueDataType, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);

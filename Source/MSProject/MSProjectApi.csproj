@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>MSProjectApi_v4.0.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -217,6 +218,9 @@
     <Compile Include="Enums\PjServerPage.cs" />
     <Compile Include="Enums\PjFilterViewType.cs" />
     <Compile Include="Enums\PjOverallocationType.cs" />
+    <Compile Include="Enums\PjReportLayoutTemplateId.cs" />
+    <Compile Include="Enums\PjCacheJobState.cs" />
+    <Compile Include="Enums\PjJobType.cs" />
     <Compile Include="DispatchInterfaces\Task.cs" />
     <Compile Include="DispatchInterfaces\Resource.cs" />
     <Compile Include="DispatchInterfaces\Calendar.cs" />
@@ -307,6 +311,13 @@
     <Compile Include="DispatchInterfaces\GroupCriterion2.cs" />
     <Compile Include="DispatchInterfaces\Groups2.cs" />
     <Compile Include="DispatchInterfaces\OverAllocatedAssignments.cs" />
+    <Compile Include="DispatchInterfaces\Reports.cs" />
+    <Compile Include="DispatchInterfaces\Report.cs" />
+    <Compile Include="DispatchInterfaces\Shape.cs" />
+    <Compile Include="DispatchInterfaces\Shapes.cs" />
+    <Compile Include="DispatchInterfaces\ShapeRange.cs" />
+    <Compile Include="DispatchInterfaces\Chart.cs" />
+    <Compile Include="DispatchInterfaces\ReportTable.cs" />
     <Compile Include="Classes\Project.cs" />
     <Compile Include="Classes\Application.cs" />
     <Compile Include="EventInterfaces\_EProjectDoc.cs" />

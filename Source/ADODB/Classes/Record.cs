@@ -91,6 +91,49 @@ namespace NetOffice.ADODBApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running ADODB.Record objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an ADODB.Record array</returns>
+		public static NetOffice.ADODBApi.Record[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("ADODB","Record");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Record> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.ADODBApi.Record>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.ADODBApi.Record(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Record object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an ADODB.Record object or null</returns>
+		public static NetOffice.ADODBApi.Record GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Record", false);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Record(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running ADODB.Record object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an ADODB.Record object or null</returns>
+		public static NetOffice.ADODBApi.Record GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("ADODB","Record", throwOnError);
+			if(null != proxy)
+				return new NetOffice.ADODBApi.Record(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

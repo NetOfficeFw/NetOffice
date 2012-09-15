@@ -194,6 +194,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="lRow">Int32 lRow</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Selected(Int32 lRow, Int32 value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lRow);

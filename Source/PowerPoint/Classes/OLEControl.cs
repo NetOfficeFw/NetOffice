@@ -94,6 +94,49 @@ namespace NetOffice.PowerPointApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running PowerPoint.OLEControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an PowerPoint.OLEControl array</returns>
+		public static NetOffice.PowerPointApi.OLEControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("PowerPoint","OLEControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.PowerPointApi.OLEControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.PowerPointApi.OLEControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.OLEControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an PowerPoint.OLEControl object or null</returns>
+		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","OLEControl", false);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running PowerPoint.OLEControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an PowerPoint.OLEControl object or null</returns>
+		public static NetOffice.PowerPointApi.OLEControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("PowerPoint","OLEControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.PowerPointApi.OLEControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -1385,6 +1385,7 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_checked(bool value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);

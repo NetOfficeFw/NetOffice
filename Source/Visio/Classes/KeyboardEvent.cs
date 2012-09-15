@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass KeyboardEvent 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class KeyboardEvent : IVKeyboardEvent
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.KeyboardEvent objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.KeyboardEvent array</returns>
+		public static NetOffice.VisioApi.KeyboardEvent[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","KeyboardEvent");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.KeyboardEvent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.KeyboardEvent>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.KeyboardEvent(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.KeyboardEvent object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.KeyboardEvent object or null</returns>
+		public static NetOffice.VisioApi.KeyboardEvent GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","KeyboardEvent", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.KeyboardEvent(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.KeyboardEvent object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.KeyboardEvent object or null</returns>
+		public static NetOffice.VisioApi.KeyboardEvent GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","KeyboardEvent", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.KeyboardEvent(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

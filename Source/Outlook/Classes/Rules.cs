@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Rules objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Rules array</returns>
+		public static NetOffice.OutlookApi.Rules[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Rules");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Rules> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Rules>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Rules(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Rules object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Rules object or null</returns>
+		public static NetOffice.OutlookApi.Rules GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Rules", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Rules(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Rules object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Rules object or null</returns>
+		public static NetOffice.OutlookApi.Rules GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Rules", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Rules(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

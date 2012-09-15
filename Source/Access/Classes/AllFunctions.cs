@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.AllFunctions objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.AllFunctions array</returns>
+		public static NetOffice.AccessApi.AllFunctions[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","AllFunctions");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllFunctions> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.AllFunctions>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.AllFunctions(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.AllFunctions object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.AllFunctions object or null</returns>
+		public static NetOffice.AccessApi.AllFunctions GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllFunctions", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllFunctions(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.AllFunctions object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.AllFunctions object or null</returns>
+		public static NetOffice.AccessApi.AllFunctions GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","AllFunctions", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.AllFunctions(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

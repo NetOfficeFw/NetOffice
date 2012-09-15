@@ -130,6 +130,7 @@ namespace NetOffice.MSHTMLApi
 		/// Get/Set
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_event(string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);

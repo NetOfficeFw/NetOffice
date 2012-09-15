@@ -204,6 +204,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="subtotals">Int32 Subtotals</param>
 		[SupportByVersionAttribute("OWC10", 1)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Subtotals(Int32 subtotals, bool value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(subtotals);

@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.NavigationFolders objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.NavigationFolders array</returns>
+		public static NetOffice.OutlookApi.NavigationFolders[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","NavigationFolders");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationFolders> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.NavigationFolders>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.NavigationFolders(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NavigationFolders object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.NavigationFolders object or null</returns>
+		public static NetOffice.OutlookApi.NavigationFolders GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NavigationFolders", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NavigationFolders(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.NavigationFolders object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.NavigationFolders object or null</returns>
+		public static NetOffice.OutlookApi.NavigationFolders GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","NavigationFolders", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.NavigationFolders(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

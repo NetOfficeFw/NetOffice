@@ -91,6 +91,49 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running OWC10.NumberFormat objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an OWC10.NumberFormat array</returns>
+		public static NetOffice.OWC10Api.NumberFormat[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("OWC10","NumberFormat");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.NumberFormat> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.NumberFormat>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OWC10Api.NumberFormat(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running OWC10.NumberFormat object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an OWC10.NumberFormat object or null</returns>
+		public static NetOffice.OWC10Api.NumberFormat GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","NumberFormat", false);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.NumberFormat(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running OWC10.NumberFormat object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an OWC10.NumberFormat object or null</returns>
+		public static NetOffice.OWC10Api.NumberFormat GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","NumberFormat", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.NumberFormat(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

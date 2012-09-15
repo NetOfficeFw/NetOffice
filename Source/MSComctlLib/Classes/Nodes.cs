@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.Nodes objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.Nodes array</returns>
+		public static NetOffice.MSComctlLibApi.Nodes[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","Nodes");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Nodes> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.Nodes>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.Nodes(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Nodes object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.Nodes object or null</returns>
+		public static NetOffice.MSComctlLibApi.Nodes GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Nodes", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Nodes(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.Nodes object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.Nodes object or null</returns>
+		public static NetOffice.MSComctlLibApi.Nodes GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","Nodes", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.Nodes(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

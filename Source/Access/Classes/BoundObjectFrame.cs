@@ -108,6 +108,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.BoundObjectFrame objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.BoundObjectFrame array</returns>
+		public static NetOffice.AccessApi.BoundObjectFrame[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","BoundObjectFrame");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.BoundObjectFrame> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.BoundObjectFrame>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.BoundObjectFrame(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.BoundObjectFrame object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.BoundObjectFrame object or null</returns>
+		public static NetOffice.AccessApi.BoundObjectFrame GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","BoundObjectFrame", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.BoundObjectFrame(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.BoundObjectFrame object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.BoundObjectFrame object or null</returns>
+		public static NetOffice.AccessApi.BoundObjectFrame GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","BoundObjectFrame", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.BoundObjectFrame(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

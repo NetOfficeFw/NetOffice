@@ -119,6 +119,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ReportItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ReportItem array</returns>
+		public static NetOffice.OutlookApi.ReportItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ReportItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ReportItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ReportItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ReportItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ReportItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ReportItem object or null</returns>
+		public static NetOffice.OutlookApi.ReportItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ReportItem", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ReportItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ReportItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ReportItem object or null</returns>
+		public static NetOffice.OutlookApi.ReportItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ReportItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ReportItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

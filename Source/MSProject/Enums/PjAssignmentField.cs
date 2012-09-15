@@ -2936,213 +2936,213 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjAssignmentCreated = 255853178,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255852830</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentWBS = 255852830,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853180</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentGuid = 255853180,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853181</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentTaskGuid = 255853181,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853182</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentResourceGuid = 255853182,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853190</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentSummary = 255853190,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853212</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentOwner = 255853212,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853213</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBudgetWork = 255853213,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853214</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBudgetCost = 255853214,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853217</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaselineBudgetWork = 255853217,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853218</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaselineBudgetCost = 255853218,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853221</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline1BudgetWork = 255853221,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853222</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline1BudgetCost = 255853222,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853225</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline2BudgetWork = 255853225,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853226</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline2BudgetCost = 255853226,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853229</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline3BudgetWork = 255853229,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853230</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline3BudgetCost = 255853230,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853233</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline4BudgetWork = 255853233,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853234</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline4BudgetCost = 255853234,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853237</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline5BudgetWork = 255853237,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853238</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline5BudgetCost = 255853238,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853241</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline6BudgetWork = 255853241,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853242</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline6BudgetCost = 255853242,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853245</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline7BudgetWork = 255853245,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853246</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline7BudgetCost = 255853246,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853249</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline8BudgetWork = 255853249,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853250</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline8BudgetCost = 255853250,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853253</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline9BudgetWork = 255853253,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853254</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline9BudgetCost = 255853254,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853257</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline10BudgetWork = 255853257,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>255853258</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjAssignmentBaseline10BudgetCost = 255853258
 	}
 }

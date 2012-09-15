@@ -62,6 +62,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -88,6 +89,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -114,6 +116,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -140,6 +143,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -166,6 +170,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -192,6 +197,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -218,6 +224,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -244,6 +251,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -270,6 +278,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -296,6 +305,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -322,6 +332,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -348,6 +359,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -374,6 +386,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start, Int32 length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -400,6 +413,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

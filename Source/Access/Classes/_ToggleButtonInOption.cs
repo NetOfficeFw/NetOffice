@@ -107,6 +107,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access._ToggleButtonInOption objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access._ToggleButtonInOption array</returns>
+		public static NetOffice.AccessApi._ToggleButtonInOption[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","_ToggleButtonInOption");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi._ToggleButtonInOption>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi._ToggleButtonInOption(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access._ToggleButtonInOption object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access._ToggleButtonInOption object or null</returns>
+		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ToggleButtonInOption", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access._ToggleButtonInOption object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access._ToggleButtonInOption object or null</returns>
+		public static NetOffice.AccessApi._ToggleButtonInOption GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","_ToggleButtonInOption", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi._ToggleButtonInOption(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

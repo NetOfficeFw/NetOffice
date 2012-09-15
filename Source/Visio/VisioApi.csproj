@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>VisioApi_v4.0.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -199,6 +200,10 @@
     <Compile Include="Enums\VisRoleSelectionTypes.cs" />
     <Compile Include="Enums\VisDeleteFlags.cs" />
     <Compile Include="Enums\VisDiagramServices.cs" />
+    <Compile Include="Enums\VisQuickStyleMatrixIndices.cs" />
+    <Compile Include="Enums\VisQuickStyleColors.cs" />
+    <Compile Include="Enums\VisSVGExportFormat.cs" />
+    <Compile Include="Enums\VisReplaceFlags.cs" />
     <Compile Include="Interfaces\IEnumVMenuItem.cs" />
     <Compile Include="Interfaces\IEnumVMenu.cs" />
     <Compile Include="Interfaces\IEnumVMenuSet.cs" />
@@ -305,6 +310,8 @@
     <Compile Include="Interfaces\LPVISIOVALIDATIONRULE.cs" />
     <Compile Include="Interfaces\LPVISIOVALIDATIONISSUES.cs" />
     <Compile Include="Interfaces\LPVISIOVALIDATIONISSUE.cs" />
+    <Compile Include="Interfaces\LPVISIOREPLACESHAPESEVENT.cs" />
+    <Compile Include="Interfaces\LPVISIOCOAUTHMERGEEVENT.cs" />
     <Compile Include="DispatchInterfaces\IVApplication.cs" />
     <Compile Include="DispatchInterfaces\IVDocument.cs" />
     <Compile Include="DispatchInterfaces\IVMasters.cs" />
@@ -393,6 +400,10 @@
     <Compile Include="DispatchInterfaces\IVValidationIssues.cs" />
     <Compile Include="DispatchInterfaces\IVRelatedShapePairEvent.cs" />
     <Compile Include="DispatchInterfaces\IVMovedSelectionEvent.cs" />
+    <Compile Include="DispatchInterfaces\IVComments.cs" />
+    <Compile Include="DispatchInterfaces\IVComment.cs" />
+    <Compile Include="DispatchInterfaces\IVReplaceShapesEvent.cs" />
+    <Compile Include="DispatchInterfaces\IVCoauthMergeEvent.cs" />
     <Compile Include="Classes\Application.cs" />
     <Compile Include="Classes\Document.cs" />
     <Compile Include="Classes\Documents.cs" />
@@ -478,6 +489,10 @@
     <Compile Include="Classes\ValidationRule.cs" />
     <Compile Include="Classes\ValidationIssues.cs" />
     <Compile Include="Classes\ValidationIssue.cs" />
+    <Compile Include="Classes\ReplaceShapesEvent.cs" />
+    <Compile Include="Classes\CoauthMergeEvent.cs" />
+    <Compile Include="Classes\Comments.cs" />
+    <Compile Include="Classes\Comment.cs" />
     <Compile Include="EventInterfaces\EDocument.cs" />
     <Compile Include="EventInterfaces\EApplication.cs" />
     <Compile Include="EventInterfaces\EWindows.cs" />

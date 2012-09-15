@@ -95,6 +95,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.OutlookBarGroups objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.OutlookBarGroups array</returns>
+		public static NetOffice.OutlookApi.OutlookBarGroups[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","OutlookBarGroups");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarGroups> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.OutlookBarGroups>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.OutlookBarGroups(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OutlookBarGroups object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.OutlookBarGroups object or null</returns>
+		public static NetOffice.OutlookApi.OutlookBarGroups GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OutlookBarGroups", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OutlookBarGroups(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.OutlookBarGroups object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.OutlookBarGroups object or null</returns>
+		public static NetOffice.OutlookApi.OutlookBarGroups GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","OutlookBarGroups", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.OutlookBarGroups(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.SmartTag objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.SmartTag array</returns>
+		public static NetOffice.AccessApi.SmartTag[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","SmartTag");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTag> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTag>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.SmartTag(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTag object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.SmartTag object or null</returns>
+		public static NetOffice.AccessApi.SmartTag GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTag", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTag(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTag object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.SmartTag object or null</returns>
+		public static NetOffice.AccessApi.SmartTag GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTag", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTag(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ListItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ListItem array</returns>
+		public static NetOffice.MSComctlLibApi.ListItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ListItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ListItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ListItem object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListItem", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ListItem object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListItem(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

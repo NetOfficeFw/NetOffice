@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ListSubItems objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ListSubItems array</returns>
+		public static NetOffice.MSComctlLibApi.ListSubItems[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ListSubItems");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListSubItems> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ListSubItems>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ListSubItems(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListSubItems object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ListSubItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListSubItems GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListSubItems", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListSubItems(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ListSubItems object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ListSubItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ListSubItems GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ListSubItems", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ListSubItems(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

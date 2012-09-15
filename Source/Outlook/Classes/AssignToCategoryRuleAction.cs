@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.AssignToCategoryRuleAction objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.AssignToCategoryRuleAction array</returns>
+		public static NetOffice.OutlookApi.AssignToCategoryRuleAction[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","AssignToCategoryRuleAction");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AssignToCategoryRuleAction> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AssignToCategoryRuleAction>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.AssignToCategoryRuleAction(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AssignToCategoryRuleAction object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.AssignToCategoryRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.AssignToCategoryRuleAction GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AssignToCategoryRuleAction", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AssignToCategoryRuleAction(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AssignToCategoryRuleAction object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.AssignToCategoryRuleAction object or null</returns>
+		public static NetOffice.OutlookApi.AssignToCategoryRuleAction GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AssignToCategoryRuleAction", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AssignToCategoryRuleAction(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

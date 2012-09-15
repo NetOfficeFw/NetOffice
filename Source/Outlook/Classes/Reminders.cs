@@ -98,6 +98,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.Reminders objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.Reminders array</returns>
+		public static NetOffice.OutlookApi.Reminders[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","Reminders");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminders> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.Reminders>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.Reminders(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Reminders object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.Reminders object or null</returns>
+		public static NetOffice.OutlookApi.Reminders GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Reminders", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Reminders(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.Reminders object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.Reminders object or null</returns>
+		public static NetOffice.OutlookApi.Reminders GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","Reminders", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.Reminders(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

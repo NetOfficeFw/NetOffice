@@ -115,6 +115,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.Application objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.Application array</returns>
+		public static NetOffice.AccessApi.Application[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Application");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Application> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Application>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.Application(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.Application object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.Application object or null</returns>
+		public static NetOffice.AccessApi.Application GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Application", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Application(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.Application object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.Application object or null</returns>
+		public static NetOffice.AccessApi.Application GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Application", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Application(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass Toolbar 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Toolbar : IVToolbar
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.Toolbar objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.Toolbar array</returns>
+		public static NetOffice.VisioApi.Toolbar[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","Toolbar");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Toolbar> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.Toolbar>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.Toolbar(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.Toolbar object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.Toolbar object or null</returns>
+		public static NetOffice.VisioApi.Toolbar GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Toolbar", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Toolbar(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.Toolbar object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.Toolbar object or null</returns>
+		public static NetOffice.VisioApi.Toolbar GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","Toolbar", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.Toolbar(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

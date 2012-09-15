@@ -91,6 +91,49 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running OWC10.OfflineInfo objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an OWC10.OfflineInfo array</returns>
+		public static NetOffice.OWC10Api.OfflineInfo[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("OWC10","OfflineInfo");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.OfflineInfo> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.OfflineInfo>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OWC10Api.OfflineInfo(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running OWC10.OfflineInfo object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an OWC10.OfflineInfo object or null</returns>
+		public static NetOffice.OWC10Api.OfflineInfo GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","OfflineInfo", false);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.OfflineInfo(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running OWC10.OfflineInfo object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an OWC10.OfflineInfo object or null</returns>
+		public static NetOffice.OWC10Api.OfflineInfo GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","OfflineInfo", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.OfflineInfo(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -61,6 +61,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoCharacters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -87,6 +88,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.OfficeApi.IMsoCharacters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);

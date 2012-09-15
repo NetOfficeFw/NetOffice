@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.HTMLPopup objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.HTMLPopup array</returns>
+		public static NetOffice.MSHTMLApi.HTMLPopup[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","HTMLPopup");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLPopup> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.HTMLPopup>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.HTMLPopup(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLPopup object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.HTMLPopup object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLPopup GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLPopup", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLPopup(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.HTMLPopup object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.HTMLPopup object or null</returns>
+		public static NetOffice.MSHTMLApi.HTMLPopup GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","HTMLPopup", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.HTMLPopup(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

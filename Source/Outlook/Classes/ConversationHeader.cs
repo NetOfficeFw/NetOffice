@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ConversationHeader objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ConversationHeader array</returns>
+		public static NetOffice.OutlookApi.ConversationHeader[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ConversationHeader");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ConversationHeader> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ConversationHeader>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ConversationHeader(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ConversationHeader object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ConversationHeader object or null</returns>
+		public static NetOffice.OutlookApi.ConversationHeader GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ConversationHeader", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ConversationHeader(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ConversationHeader object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ConversationHeader object or null</returns>
+		public static NetOffice.OutlookApi.ConversationHeader GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ConversationHeader", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ConversationHeader(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

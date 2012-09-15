@@ -65,6 +65,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -93,6 +94,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute);
@@ -118,6 +120,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute);
@@ -145,6 +148,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -174,6 +178,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
@@ -205,6 +210,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
@@ -233,6 +239,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_AddressLocal(object rowAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute);
@@ -258,6 +265,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="rowAbsolute">optional object RowAbsolute</param>
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute);
@@ -285,6 +293,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
@@ -314,6 +323,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
@@ -342,6 +352,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
@@ -368,6 +379,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -394,6 +406,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="rowOffset">optional object RowOffset</param>
 		/// <param name="columnOffset">optional object ColumnOffset</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Offset(object rowOffset, object columnOffset)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset, columnOffset);
@@ -420,6 +433,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rowOffset">optional object RowOffset</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Offset(object rowOffset)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowOffset);
@@ -446,6 +460,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="cell1">object Cell1</param>
 		/// <param name="cell2">optional object Cell2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1, cell2);
@@ -472,6 +487,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="cell1">object Cell1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Range(object cell1)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1);
@@ -498,6 +514,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="rowSize">optional object RowSize</param>
 		/// <param name="columnSize">optional object ColumnSize</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Resize(object rowSize, object columnSize)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowSize, columnSize);
@@ -524,6 +541,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rowSize">optional object RowSize</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range get_Resize(object rowSize)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowSize);
@@ -549,6 +567,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rangeValueDataType">optional object RangeValueDataType</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_Value(object rangeValueDataType)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);
@@ -570,6 +589,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="rangeValueDataType">optional object RangeValueDataType</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Value(object rangeValueDataType, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rangeValueDataType);

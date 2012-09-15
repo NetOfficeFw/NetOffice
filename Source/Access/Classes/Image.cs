@@ -98,6 +98,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.Image objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.Image array</returns>
+		public static NetOffice.AccessApi.Image[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","Image");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Image> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.Image>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.Image(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.Image object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.Image object or null</returns>
+		public static NetOffice.AccessApi.Image GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Image", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Image(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.Image object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.Image object or null</returns>
+		public static NetOffice.AccessApi.Image GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","Image", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.Image(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

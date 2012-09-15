@@ -14,9 +14,9 @@ namespace NetOffice.VisioApi
 
 	///<summary>
 	/// CoClass StatusBarItem 
-	/// SupportByVersion Visio, 11,12,14
+	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("Visio", 11,12,14)]
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class StatusBarItem : IVStatusBarItem
 	{
@@ -89,6 +89,49 @@ namespace NetOffice.VisioApi
 			
 		}
 
+		#endregion
+
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Visio.StatusBarItem objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Visio.StatusBarItem array</returns>
+		public static NetOffice.VisioApi.StatusBarItem[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Visio","StatusBarItem");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.StatusBarItem> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VisioApi.StatusBarItem>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VisioApi.StatusBarItem(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Visio.StatusBarItem object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Visio.StatusBarItem object or null</returns>
+		public static NetOffice.VisioApi.StatusBarItem GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","StatusBarItem", false);
+			if(null != proxy)
+				return new NetOffice.VisioApi.StatusBarItem(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Visio.StatusBarItem object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Visio.StatusBarItem object or null</returns>
+		public static NetOffice.VisioApi.StatusBarItem GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Visio","StatusBarItem", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VisioApi.StatusBarItem(null, proxy);
+			else
+				return null;
+		}
 		#endregion
 
 		#region Events

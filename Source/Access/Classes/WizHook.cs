@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.WizHook objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.WizHook array</returns>
+		public static NetOffice.AccessApi.WizHook[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","WizHook");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WizHook> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.WizHook>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.WizHook(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.WizHook object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.WizHook object or null</returns>
+		public static NetOffice.AccessApi.WizHook GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","WizHook", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.WizHook(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.WizHook object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.WizHook object or null</returns>
+		public static NetOffice.AccessApi.WizHook GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","WizHook", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.WizHook(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

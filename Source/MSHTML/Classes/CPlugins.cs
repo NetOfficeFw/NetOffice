@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.CPlugins objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.CPlugins array</returns>
+		public static NetOffice.MSHTMLApi.CPlugins[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","CPlugins");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.CPlugins> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.CPlugins>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.CPlugins(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.CPlugins object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.CPlugins object or null</returns>
+		public static NetOffice.MSHTMLApi.CPlugins GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","CPlugins", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.CPlugins(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.CPlugins object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.CPlugins object or null</returns>
+		public static NetOffice.MSHTMLApi.CPlugins GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","CPlugins", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.CPlugins(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

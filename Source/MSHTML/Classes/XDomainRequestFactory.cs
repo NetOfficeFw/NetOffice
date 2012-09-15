@@ -91,6 +91,49 @@ namespace NetOffice.MSHTMLApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSHTML.XDomainRequestFactory objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSHTML.XDomainRequestFactory array</returns>
+		public static NetOffice.MSHTMLApi.XDomainRequestFactory[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSHTML","XDomainRequestFactory");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.XDomainRequestFactory> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSHTMLApi.XDomainRequestFactory>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSHTMLApi.XDomainRequestFactory(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.XDomainRequestFactory object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSHTML.XDomainRequestFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.XDomainRequestFactory GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","XDomainRequestFactory", false);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.XDomainRequestFactory(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSHTML.XDomainRequestFactory object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSHTML.XDomainRequestFactory object or null</returns>
+		public static NetOffice.MSHTMLApi.XDomainRequestFactory GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSHTML","XDomainRequestFactory", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSHTMLApi.XDomainRequestFactory(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

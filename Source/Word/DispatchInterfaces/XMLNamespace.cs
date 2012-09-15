@@ -60,6 +60,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Location(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -73,6 +74,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -96,6 +98,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public string get_Alias(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -109,6 +112,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -132,6 +136,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
@@ -146,6 +151,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DefaultTransform(bool allUsers, NetOffice.WordApi.XSLTransform value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);

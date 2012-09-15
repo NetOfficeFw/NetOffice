@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.CurrentProject objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.CurrentProject array</returns>
+		public static NetOffice.AccessApi.CurrentProject[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","CurrentProject");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CurrentProject> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.CurrentProject>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.CurrentProject(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.CurrentProject object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.CurrentProject object or null</returns>
+		public static NetOffice.AccessApi.CurrentProject GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CurrentProject", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CurrentProject(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.CurrentProject object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.CurrentProject object or null</returns>
+		public static NetOffice.AccessApi.CurrentProject GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","CurrentProject", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.CurrentProject(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

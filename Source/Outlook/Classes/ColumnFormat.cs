@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.ColumnFormat objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.ColumnFormat array</returns>
+		public static NetOffice.OutlookApi.ColumnFormat[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","ColumnFormat");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ColumnFormat> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.ColumnFormat>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.ColumnFormat(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ColumnFormat object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.ColumnFormat object or null</returns>
+		public static NetOffice.OutlookApi.ColumnFormat GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ColumnFormat", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ColumnFormat(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.ColumnFormat object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.ColumnFormat object or null</returns>
+		public static NetOffice.OutlookApi.ColumnFormat GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","ColumnFormat", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.ColumnFormat(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

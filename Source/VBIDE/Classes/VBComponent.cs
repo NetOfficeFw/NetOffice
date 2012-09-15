@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.VBComponent objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.VBComponent array</returns>
+		public static NetOffice.VBIDEApi.VBComponent[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","VBComponent");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.VBComponent> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.VBComponent>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.VBComponent(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.VBComponent object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.VBComponent object or null</returns>
+		public static NetOffice.VBIDEApi.VBComponent GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","VBComponent", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.VBComponent(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.VBComponent object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.VBComponent object or null</returns>
+		public static NetOffice.VBIDEApi.VBComponent GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","VBComponent", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.VBComponent(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

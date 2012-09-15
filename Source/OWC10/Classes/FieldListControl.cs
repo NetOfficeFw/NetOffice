@@ -91,6 +91,49 @@ namespace NetOffice.OWC10Api
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running OWC10.FieldListControl objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an OWC10.FieldListControl array</returns>
+		public static NetOffice.OWC10Api.FieldListControl[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("OWC10","FieldListControl");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.FieldListControl> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OWC10Api.FieldListControl>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OWC10Api.FieldListControl(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running OWC10.FieldListControl object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an OWC10.FieldListControl object or null</returns>
+		public static NetOffice.OWC10Api.FieldListControl GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","FieldListControl", false);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.FieldListControl(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running OWC10.FieldListControl object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an OWC10.FieldListControl object or null</returns>
+		public static NetOffice.OWC10Api.FieldListControl GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("OWC10","FieldListControl", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OWC10Api.FieldListControl(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.DataObjectFiles objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.DataObjectFiles array</returns>
+		public static NetOffice.MSComctlLibApi.DataObjectFiles[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","DataObjectFiles");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObjectFiles> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.DataObjectFiles>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.DataObjectFiles object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.DataObjectFiles object or null</returns>
+		public static NetOffice.MSComctlLibApi.DataObjectFiles GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","DataObjectFiles", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.DataObjectFiles object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.DataObjectFiles object or null</returns>
+		public static NetOffice.MSComctlLibApi.DataObjectFiles GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","DataObjectFiles", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.DataObjectFiles(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

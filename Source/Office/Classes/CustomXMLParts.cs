@@ -95,6 +95,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CustomXMLParts objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CustomXMLParts array</returns>
+		public static NetOffice.OfficeApi.CustomXMLParts[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CustomXMLParts");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLParts> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomXMLParts>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CustomXMLParts(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomXMLParts object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CustomXMLParts object or null</returns>
+		public static NetOffice.OfficeApi.CustomXMLParts GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLParts", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomXMLParts(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomXMLParts object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CustomXMLParts object or null</returns>
+		public static NetOffice.OfficeApi.CustomXMLParts GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomXMLParts", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomXMLParts(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -91,6 +91,49 @@ namespace NetOffice.AccessApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Access.SmartTags objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Access.SmartTags array</returns>
+		public static NetOffice.AccessApi.SmartTags[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Access","SmartTags");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTags> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.AccessApi.SmartTags>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.AccessApi.SmartTags(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTags object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Access.SmartTags object or null</returns>
+		public static NetOffice.AccessApi.SmartTags GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTags", false);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTags(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Access.SmartTags object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Access.SmartTags object or null</returns>
+		public static NetOffice.AccessApi.SmartTags GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Access","SmartTags", throwOnError);
+			if(null != proxy)
+				return new NetOffice.AccessApi.SmartTags(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

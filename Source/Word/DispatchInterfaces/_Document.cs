@@ -991,6 +991,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="type">NetOffice.WordApi.Enums.WdCompatibility Type</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Compatibility(NetOffice.WordApi.Enums.WdCompatibility type, bool value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -1576,6 +1577,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="languageID">object LanguageID</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ActiveWritingStyle(object languageID, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(languageID);

@@ -91,6 +91,49 @@ namespace NetOffice.MSComctlLibApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running MSComctlLib.ComboItems objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an MSComctlLib.ComboItems array</returns>
+		public static NetOffice.MSComctlLibApi.ComboItems[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("MSComctlLib","ComboItems");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ComboItems> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.MSComctlLibApi.ComboItems>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.MSComctlLibApi.ComboItems(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ComboItems object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an MSComctlLib.ComboItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ComboItems GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ComboItems", false);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ComboItems(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running MSComctlLib.ComboItems object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an MSComctlLib.ComboItems object or null</returns>
+		public static NetOffice.MSComctlLibApi.ComboItems GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("MSComctlLib","ComboItems", throwOnError);
+			if(null != proxy)
+				return new NetOffice.MSComctlLibApi.ComboItems(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

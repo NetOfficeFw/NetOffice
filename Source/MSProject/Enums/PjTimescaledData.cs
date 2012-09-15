@@ -395,171 +395,437 @@ namespace NetOffice.MSProjectApi.Enums
 		 pjActualOvertimeWorkProtected = 53,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>54</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBudgetWork = 54,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>55</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBudgetCost = 55,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>56</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaselineBudgetWork = 56,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>57</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaselineBudgetCost = 57,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>58</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline1BudgetWork = 58,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>59</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline1BudgetCost = 59,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>60</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline2BudgetWork = 60,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>61</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline2BudgetCost = 61,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>62</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline3BudgetWork = 62,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>63</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline3BudgetCost = 63,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>64</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline4BudgetWork = 64,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>65</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline4BudgetCost = 65,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>66</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline5BudgetWork = 66,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>67</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline5BudgetCost = 67,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>68</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline6BudgetWork = 68,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>69</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline6BudgetCost = 69,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>70</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline7BudgetWork = 70,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>71</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline7BudgetCost = 71,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>72</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline8BudgetWork = 72,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>73</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline8BudgetCost = 73,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>74</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline9BudgetWork = 74,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>75</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline9BudgetCost = 75,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>76</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
 		 pjBaseline10BudgetWork = 76,
 
 		 /// <summary>
-		 /// SupportByVersion MSProject 12, 14
+		 /// SupportByVersion MSProject 11, 12, 14
 		 /// </summary>
 		 /// <remarks>77</remarks>
-		 [SupportByVersionAttribute("MSProject", 12,14)]
-		 pjBaseline10BudgetCost = 77
+		 [SupportByVersionAttribute("MSProject", 11,12,14)]
+		 pjBaseline10BudgetCost = 77,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>78</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjCumulativeActualWork = 78,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>79</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjRemainingCumulativeActualWork = 79,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>80</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjRemainingCumulativeWork = 80,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>81</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjRemainingTasks = 81,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>82</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjRemainingActualTasks = 82,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>83</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaselineRemainingCumulativeWork = 83,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>84</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline1RemainingCumulativeWork = 84,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>85</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline2RemainingCumulativeWork = 85,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>86</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline3RemainingCumulativeWork = 86,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>87</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline4RemainingCumulativeWork = 87,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>88</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline5RemainingCumulativeWork = 88,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>89</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline6RemainingCumulativeWork = 89,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>90</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline7RemainingCumulativeWork = 90,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>91</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline8RemainingCumulativeWork = 91,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>92</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline9RemainingCumulativeWork = 92,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>93</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline10RemainingCumulativeWork = 93,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>94</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaselineRemainingTasks = 94,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>95</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline1RemainingTasks = 95,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>96</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline2RemainingTasks = 96,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>97</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline3RemainingTasks = 97,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>98</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline4RemainingTasks = 98,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>99</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline5RemainingTasks = 99,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>100</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline6RemainingTasks = 100,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>101</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline7RemainingTasks = 101,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>102</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline8RemainingTasks = 102,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>103</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline9RemainingTasks = 103,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>104</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline10RemainingTasks = 104,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>105</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaselineCumulativeWork = 105,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>106</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline1CumulativeWork = 106,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>107</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline2CumulativeWork = 107,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>108</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline3CumulativeWork = 108,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>109</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline4CumulativeWork = 109,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>110</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline5CumulativeWork = 110,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>111</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline6CumulativeWork = 111,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>112</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline7CumulativeWork = 112,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>113</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline8CumulativeWork = 113,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>114</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline9CumulativeWork = 114,
+
+		 /// <summary>
+		 /// SupportByVersion MSProject 11
+		 /// </summary>
+		 /// <remarks>115</remarks>
+		 [SupportByVersionAttribute("MSProject", 11)]
+		 pjBaseline10CumulativeWork = 115
 	}
 }

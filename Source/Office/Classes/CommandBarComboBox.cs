@@ -93,6 +93,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CommandBarComboBox objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CommandBarComboBox array</returns>
+		public static NetOffice.OfficeApi.CommandBarComboBox[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CommandBarComboBox");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarComboBox> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBarComboBox>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CommandBarComboBox(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBarComboBox object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CommandBarComboBox object or null</returns>
+		public static NetOffice.OfficeApi.CommandBarComboBox GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBarComboBox", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBarComboBox(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBarComboBox object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CommandBarComboBox object or null</returns>
+		public static NetOffice.OfficeApi.CommandBarComboBox GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBarComboBox", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBarComboBox(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

@@ -94,6 +94,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CustomTaskPane objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CustomTaskPane array</returns>
+		public static NetOffice.OfficeApi.CustomTaskPane[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CustomTaskPane");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomTaskPane> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CustomTaskPane>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CustomTaskPane(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomTaskPane object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CustomTaskPane object or null</returns>
+		public static NetOffice.OfficeApi.CustomTaskPane GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomTaskPane", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomTaskPane(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CustomTaskPane object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CustomTaskPane object or null</returns>
+		public static NetOffice.OfficeApi.CustomTaskPane GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CustomTaskPane", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CustomTaskPane(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>

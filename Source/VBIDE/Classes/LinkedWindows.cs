@@ -91,6 +91,49 @@ namespace NetOffice.VBIDEApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running VBIDE.LinkedWindows objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an VBIDE.LinkedWindows array</returns>
+		public static NetOffice.VBIDEApi.LinkedWindows[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("VBIDE","LinkedWindows");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.LinkedWindows> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.VBIDEApi.LinkedWindows>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.VBIDEApi.LinkedWindows(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.LinkedWindows object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an VBIDE.LinkedWindows object or null</returns>
+		public static NetOffice.VBIDEApi.LinkedWindows GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","LinkedWindows", false);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.LinkedWindows(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running VBIDE.LinkedWindows object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an VBIDE.LinkedWindows object or null</returns>
+		public static NetOffice.VBIDEApi.LinkedWindows GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("VBIDE","LinkedWindows", throwOnError);
+			if(null != proxy)
+				return new NetOffice.VBIDEApi.LinkedWindows(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

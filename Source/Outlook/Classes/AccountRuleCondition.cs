@@ -91,6 +91,49 @@ namespace NetOffice.OutlookApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Outlook.AccountRuleCondition objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Outlook.AccountRuleCondition array</returns>
+		public static NetOffice.OutlookApi.AccountRuleCondition[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Outlook","AccountRuleCondition");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountRuleCondition> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OutlookApi.AccountRuleCondition>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OutlookApi.AccountRuleCondition(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AccountRuleCondition object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Outlook.AccountRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.AccountRuleCondition GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AccountRuleCondition", false);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AccountRuleCondition(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Outlook.AccountRuleCondition object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Outlook.AccountRuleCondition object or null</returns>
+		public static NetOffice.OutlookApi.AccountRuleCondition GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Outlook","AccountRuleCondition", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OutlookApi.AccountRuleCondition(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		#endregion

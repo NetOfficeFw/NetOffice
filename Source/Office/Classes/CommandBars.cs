@@ -93,6 +93,49 @@ namespace NetOffice.OfficeApi
 
 		#endregion
 
+		#region Static CoClass Methods
+
+		/// <summary>
+        /// returns all running Office.CommandBars objects from the running object table(ROT)
+        /// </summary>
+        /// <returns>an Office.CommandBars array</returns>
+		public static NetOffice.OfficeApi.CommandBars[] GetActiveInstances()
+		{		
+			NetRuntimeSystem.Collections.Generic.List<object> proxyList = NetOffice.RunningObjectTable.GetActiveProxiesFromROT("Office","CommandBars");
+			NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBars> resultList = new NetRuntimeSystem.Collections.Generic.List<NetOffice.OfficeApi.CommandBars>();
+			foreach(object proxy in proxyList)
+				resultList.Add( new NetOffice.OfficeApi.CommandBars(null, proxy) );
+			return resultList.ToArray();
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBars object from the running object table(ROT). the method takes the first element from the table
+        /// </summary>
+        /// <returns>an Office.CommandBars object or null</returns>
+		public static NetOffice.OfficeApi.CommandBars GetActiveInstance()
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBars", false);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBars(null, proxy);
+			else
+				return null;
+		}
+
+		/// <summary>
+        /// returns a running Office.CommandBars object from the running object table(ROT).  the method takes the first element from the table
+        /// </summary>
+	    /// <param name="throwOnError">throw an exception if no object was found</param>
+        /// <returns>an Office.CommandBars object or null</returns>
+		public static NetOffice.OfficeApi.CommandBars GetActiveInstance(bool throwOnError)
+		{
+			object proxy = NetOffice.RunningObjectTable.GetActiveProxyFromROT("Office","CommandBars", throwOnError);
+			if(null != proxy)
+				return new NetOffice.OfficeApi.CommandBars(null, proxy);
+			else
+				return null;
+		}
+		#endregion
+
 		#region Events
 
 		/// <summary>
