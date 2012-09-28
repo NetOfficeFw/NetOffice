@@ -176,19 +176,19 @@ namespace NetOffice.AccessApi
 
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2389)]
-		void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+		void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2390)]
-		void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
+		void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
 
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2391)]
-		void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
+		void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
 
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2392)]
-		void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command);
+		void CommandExecute([In] object command);
 
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2394)]
@@ -878,7 +878,7 @@ namespace NetOffice.AccessApi
 			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
 		}
 
-		public void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
+		public void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandBeforeExecute");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -895,7 +895,7 @@ namespace NetOffice.AccessApi
 			_eventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
 		}
 
-		public void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
+		public void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandChecked");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -912,7 +912,7 @@ namespace NetOffice.AccessApi
 			_eventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
 		}
 
-		public void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
+		public void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandEnabled");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -929,7 +929,7 @@ namespace NetOffice.AccessApi
 			_eventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
 		}
 
-		public void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command)
+		public void CommandExecute([In] object command)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandExecute");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

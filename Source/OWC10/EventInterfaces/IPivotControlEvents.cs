@@ -72,23 +72,23 @@ namespace NetOffice.OWC10Api
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1000)]
-		void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
+		void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1001)]
-		void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
+		void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
-		void CommandTipText([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
+		void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
-		void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+		void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1004)]
-		void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In] object succeeded);
+		void CommandExecute([In] object command, [In] object succeeded);
 
 		[SupportByVersionAttribute("OWC10", 1)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
@@ -380,7 +380,7 @@ namespace NetOffice.OWC10Api
 			_eventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
 		}
 
-		public void CommandEnabled([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
+		public void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandEnabled");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -397,7 +397,7 @@ namespace NetOffice.OWC10Api
 			_eventBinding.RaiseCustomEvent("CommandEnabled", ref paramsArray);
 		}
 
-		public void CommandChecked([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
+		public void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandChecked");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -414,7 +414,7 @@ namespace NetOffice.OWC10Api
 			_eventBinding.RaiseCustomEvent("CommandChecked", ref paramsArray);
 		}
 
-		public void CommandTipText([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption)
+		public void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandTipText");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -431,7 +431,7 @@ namespace NetOffice.OWC10Api
 			_eventBinding.RaiseCustomEvent("CommandTipText", ref paramsArray);
 		}
 
-		public void CommandBeforeExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
+		public void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandBeforeExecute");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -448,7 +448,7 @@ namespace NetOffice.OWC10Api
 			_eventBinding.RaiseCustomEvent("CommandBeforeExecute", ref paramsArray);
 		}
 
-		public void CommandExecute([In, MarshalAs(UnmanagedType.IDispatch)] object command, [In] object succeeded)
+		public void CommandExecute([In] object command, [In] object succeeded)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("CommandExecute");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

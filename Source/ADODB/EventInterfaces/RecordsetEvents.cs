@@ -16,11 +16,11 @@ namespace NetOffice.ADODBApi
 	{
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
-		void WillChangeField([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
+		void WillChangeField([In] object cFields, [In] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
-		void FieldChangeComplete([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
+		void FieldChangeComplete([In] object cFields, [In] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset);
 
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
@@ -92,7 +92,7 @@ namespace NetOffice.ADODBApi
 		
 		#region RecordsetEvents Members
 		
-		public void WillChangeField([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
+		public void WillChangeField([In] object cFields, [In] object fields, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("WillChangeField");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -113,7 +113,7 @@ namespace NetOffice.ADODBApi
 			_eventBinding.RaiseCustomEvent("WillChangeField", ref paramsArray);
 		}
 
-		public void FieldChangeComplete([In] object cFields, [In, MarshalAs(UnmanagedType.IDispatch)] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
+		public void FieldChangeComplete([In] object cFields, [In] object fields, [In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pRecordset)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("FieldChangeComplete");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

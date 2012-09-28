@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
-		void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel);
+		void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
@@ -72,7 +72,7 @@ namespace NetOffice.OutlookApi
 
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64016)]
-		void BeforeItemPaste([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
+		void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64633)]
@@ -173,7 +173,7 @@ namespace NetOffice.OutlookApi
 			_eventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
 		}
 
-		public void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel)
+		public void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeViewSwitch");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -326,7 +326,7 @@ namespace NetOffice.OutlookApi
 			cancel = (bool)paramsArray[0];
 		}
 
-		public void BeforeItemPaste([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
+		public void BeforeItemPaste([In] [Out] ref object clipboardContent, [In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeItemPaste");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

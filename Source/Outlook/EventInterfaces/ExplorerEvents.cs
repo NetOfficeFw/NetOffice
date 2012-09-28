@@ -32,7 +32,7 @@ namespace NetOffice.OutlookApi
 
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
-		void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel);
+		void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
@@ -137,7 +137,7 @@ namespace NetOffice.OutlookApi
 			_eventBinding.RaiseCustomEvent("ViewSwitch", ref paramsArray);
 		}
 
-		public void BeforeViewSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object newView, [In] [Out] ref object cancel)
+		public void BeforeViewSwitch([In] object newView, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeViewSwitch");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

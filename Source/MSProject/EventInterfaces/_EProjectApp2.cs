@@ -32,15 +32,15 @@ namespace NetOffice.MSProjectApi
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
-		void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel);
+		void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
-		void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel);
+		void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
-		void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel);
+		void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
@@ -76,7 +76,7 @@ namespace NetOffice.MSProjectApi
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(16)]
-		void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In, MarshalAs(UnmanagedType.IDispatch)] object selType);
+		void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(17)]
@@ -160,15 +160,15 @@ namespace NetOffice.MSProjectApi
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741833)]
-		void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
+		void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741834)]
-		void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
+		void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741835)]
-		void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
+		void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info);
 
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1073741836)]
@@ -337,7 +337,7 @@ namespace NetOffice.MSProjectApi
 			cancel = (bool)paramsArray[1];
 		}
 
-		public void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel)
+		public void ProjectBeforeTaskChange([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskChange");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -359,7 +359,7 @@ namespace NetOffice.MSProjectApi
 			cancel = (bool)paramsArray[3];
 		}
 
-		public void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel)
+		public void ProjectBeforeResourceChange([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceChange");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -381,7 +381,7 @@ namespace NetOffice.MSProjectApi
 			cancel = (bool)paramsArray[3];
 		}
 
-		public void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In] [Out] ref object cancel)
+		public void ProjectBeforeAssignmentChange([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentChange");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -545,7 +545,7 @@ namespace NetOffice.MSProjectApi
 			_eventBinding.RaiseCustomEvent("WindowGoalAreaChange", ref paramsArray);
 		}
 
-		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In, MarshalAs(UnmanagedType.IDispatch)] object selType)
+		public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object window, [In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] object selType)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("WindowSelectionChange");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -931,7 +931,7 @@ namespace NetOffice.MSProjectApi
 			_eventBinding.RaiseCustomEvent("ProjectBeforeAssignmentDelete2", ref paramsArray);
 		}
 
-		public void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+		public void ProjectBeforeTaskChange2([In, MarshalAs(UnmanagedType.IDispatch)] object tsk, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeTaskChange2");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -952,7 +952,7 @@ namespace NetOffice.MSProjectApi
 			_eventBinding.RaiseCustomEvent("ProjectBeforeTaskChange2", ref paramsArray);
 		}
 
-		public void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+		public void ProjectBeforeResourceChange2([In, MarshalAs(UnmanagedType.IDispatch)] object res, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeResourceChange2");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -973,7 +973,7 @@ namespace NetOffice.MSProjectApi
 			_eventBinding.RaiseCustomEvent("ProjectBeforeResourceChange2", ref paramsArray);
 		}
 
-		public void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In, MarshalAs(UnmanagedType.IDispatch)] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
+		public void ProjectBeforeAssignmentChange2([In, MarshalAs(UnmanagedType.IDispatch)] object asg, [In] object field, [In] object newVal, [In, MarshalAs(UnmanagedType.IDispatch)] object info)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("ProjectBeforeAssignmentChange2");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

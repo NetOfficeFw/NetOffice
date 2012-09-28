@@ -16,7 +16,7 @@ namespace NetOffice.MSHTMLApi
 	{
 		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-		void onscriptletevent([In] object name, [In, MarshalAs(UnmanagedType.IDispatch)] object eventData);
+		void onscriptletevent([In] object name, [In] object eventData);
 
 		[SupportByVersionAttribute("MSHTML", 4)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-609)]
@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 		
 		#region DWebBridgeEvents Members
 		
-		public void onscriptletevent([In] object name, [In, MarshalAs(UnmanagedType.IDispatch)] object eventData)
+		public void onscriptletevent([In] object name, [In] object eventData)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("onscriptletevent");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )

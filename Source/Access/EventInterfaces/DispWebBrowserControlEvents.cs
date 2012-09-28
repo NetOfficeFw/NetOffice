@@ -84,11 +84,11 @@ namespace NetOffice.AccessApi
 
 		[SupportByVersionAttribute("Access", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2524)]
-		void BeforeNavigate2([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object flags, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object targetFrameName, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object postData, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object headers, [In] [Out] ref object cancel);
+		void BeforeNavigate2([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object flags, [In] [Out] ref object targetFrameName, [In] [Out] ref object postData, [In] [Out] ref object headers, [In] [Out] ref object cancel);
 
 		[SupportByVersionAttribute("Access", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2528)]
-		void DocumentComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL);
+		void DocumentComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL);
 
 		[SupportByVersionAttribute("Access", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2515)]
@@ -96,7 +96,7 @@ namespace NetOffice.AccessApi
 
 		[SupportByVersionAttribute("Access", 14,15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2510)]
-		void NavigateError([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object targetFrameName, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object statusCode, [In] [Out] ref object cancel);
+		void NavigateError([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object targetFrameName, [In] [Out] ref object statusCode, [In] [Out] ref object cancel);
 	}
 	
 	#endregion
@@ -408,7 +408,7 @@ namespace NetOffice.AccessApi
 			shift = (Int16)paramsArray[1];
 		}
 
-		public void BeforeNavigate2([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object flags, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object targetFrameName, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object postData, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object headers, [In] [Out] ref object cancel)
+		public void BeforeNavigate2([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object flags, [In] [Out] ref object targetFrameName, [In] [Out] ref object postData, [In] [Out] ref object headers, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("BeforeNavigate2");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -436,7 +436,7 @@ namespace NetOffice.AccessApi
 			cancel = (bool)paramsArray[6];
 		}
 
-		public void DocumentComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL)
+		public void DocumentComplete([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("DocumentComplete");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
@@ -471,7 +471,7 @@ namespace NetOffice.AccessApi
 			_eventBinding.RaiseCustomEvent("ProgressChange", ref paramsArray);
 		}
 
-		public void NavigateError([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object uRL, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object targetFrameName, [In] [Out, MarshalAs(UnmanagedType.IDispatch)] object statusCode, [In] [Out] ref object cancel)
+		public void NavigateError([In, MarshalAs(UnmanagedType.IDispatch)] object pDisp, [In] [Out] ref object uRL, [In] [Out] ref object targetFrameName, [In] [Out] ref object statusCode, [In] [Out] ref object cancel)
 		{
 			Delegate[] recipients = _eventBinding.GetEventRecipients("NavigateError");
 			if( (true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
