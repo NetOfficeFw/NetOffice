@@ -246,7 +246,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		/// <param name="value">optional object value</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI, object value)
+		public bool execCommand(string cmdID, object showUI, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI, value);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
@@ -273,7 +273,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI)
+		public bool execCommand(string cmdID, object showUI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);

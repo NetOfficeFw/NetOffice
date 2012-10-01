@@ -284,7 +284,7 @@ namespace NetOffice.VisioApi
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem, Int32 flags, Int32 langID)
+		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem, object flags, object langID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem, flags, langID);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
@@ -313,7 +313,7 @@ namespace NetOffice.VisioApi
 		/// <param name="measurementSystem">optional NetOffice.VisioApi.Enums.VisMeasurementSystem MeasurementSystem = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem)
+		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);
@@ -329,7 +329,7 @@ namespace NetOffice.VisioApi
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public NetOffice.VisioApi.IVDocument AddEx(string fileName, NetOffice.VisioApi.Enums.VisMeasurementSystem measurementSystem, Int32 flags)
+		public NetOffice.VisioApi.IVDocument AddEx(string fileName, object measurementSystem, object flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, measurementSystem, flags);
 			object returnItem = Invoker.MethodReturn(this, "AddEx", paramsArray);

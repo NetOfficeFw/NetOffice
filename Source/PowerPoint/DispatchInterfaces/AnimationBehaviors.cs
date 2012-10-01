@@ -133,7 +133,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">NetOffice.PowerPointApi.Enums.MsoAnimType Type</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type, Int32 index)
+		public NetOffice.PowerPointApi.AnimationBehavior Add(NetOffice.PowerPointApi.Enums.MsoAnimType type, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

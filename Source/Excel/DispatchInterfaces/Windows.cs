@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="syncHorizontal">optional object SyncHorizontal</param>
 		/// <param name="syncVertical">optional object SyncVertical</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
+		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal, object syncVertical)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook, syncHorizontal, syncVertical);
 			object returnItem = Invoker.MethodReturn(this, "Arrange", paramsArray);
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="arrangeStyle">optional NetOffice.ExcelApi.Enums.XlArrangeStyle ArrangeStyle = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle)
+		public object Arrange(object arrangeStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
 			object returnItem = Invoker.MethodReturn(this, "Arrange", paramsArray);
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="activeWorkbook">optional object ActiveWorkbook</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle, object activeWorkbook)
+		public object Arrange(object arrangeStyle, object activeWorkbook)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook);
 			object returnItem = Invoker.MethodReturn(this, "Arrange", paramsArray);
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="syncHorizontal">optional object SyncHorizontal</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Arrange(NetOffice.ExcelApi.Enums.XlArrangeStyle arrangeStyle, object activeWorkbook, object syncHorizontal)
+		public object Arrange(object arrangeStyle, object activeWorkbook, object syncHorizontal)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle, activeWorkbook, syncHorizontal);
 			object returnItem = Invoker.MethodReturn(this, "Arrange", paramsArray);

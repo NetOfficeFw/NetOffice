@@ -232,7 +232,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodeType Type = 1</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.SmartArtNode AddNode(NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition position, NetOffice.OfficeApi.Enums.MsoSmartArtNodeType type)
+		public NetOffice.OfficeApi.SmartArtNode AddNode(object position, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, type);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="position">optional NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition Position = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.SmartArtNode AddNode(NetOffice.OfficeApi.Enums.MsoSmartArtNodePosition position)
+		public NetOffice.OfficeApi.SmartArtNode AddNode(object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);

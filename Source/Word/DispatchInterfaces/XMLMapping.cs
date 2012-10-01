@@ -209,7 +209,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="source">optional NetOffice.OfficeApi.CustomXMLPart Source = 0</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public bool SetMapping(string xPath, string prefixMapping, NetOffice.OfficeApi.CustomXMLPart source)
+		public bool SetMapping(string xPath, object prefixMapping, object source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, source);
 			object returnItem = Invoker.MethodReturn(this, "SetMapping", paramsArray);
@@ -236,7 +236,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public bool SetMapping(string xPath, string prefixMapping)
+		public bool SetMapping(string xPath, object prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SetMapping", paramsArray);

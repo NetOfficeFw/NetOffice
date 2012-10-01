@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="reportType">optional NetOffice.ExcelApi.Enums.XlSummaryReportType ReportType = 1</param>
 		/// <param name="resultCells">optional object ResultCells</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreateSummary(NetOffice.ExcelApi.Enums.XlSummaryReportType reportType, object resultCells)
+		public object CreateSummary(object reportType, object resultCells)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportType, resultCells);
 			object returnItem = Invoker.MethodReturn(this, "CreateSummary", paramsArray);
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="reportType">optional NetOffice.ExcelApi.Enums.XlSummaryReportType ReportType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreateSummary(NetOffice.ExcelApi.Enums.XlSummaryReportType reportType)
+		public object CreateSummary(object reportType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportType);
 			object returnItem = Invoker.MethodReturn(this, "CreateSummary", paramsArray);

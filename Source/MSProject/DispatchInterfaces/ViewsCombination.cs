@@ -85,7 +85,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="bottomView">object BottomView</param>
 		/// <param name="showInMenu">optional bool ShowInMenu = false</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, bool showInMenu)
+		public NetOffice.MSProjectApi.ViewCombination Add(string name, object topView, object bottomView, object showInMenu)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, topView, bottomView, showInMenu);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

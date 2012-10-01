@@ -692,7 +692,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		/// <param name="calendarID">optional Int32 CalendarID = -1</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public void AddFieldEx(NetOffice.VisioApi.Enums.VisFieldCategories category, NetOffice.VisioApi.Enums.VisFieldCodes code, NetOffice.VisioApi.Enums.VisFieldFormats format, Int32 langID, Int32 calendarID)
+		public void AddFieldEx(NetOffice.VisioApi.Enums.VisFieldCategories category, NetOffice.VisioApi.Enums.VisFieldCodes code, NetOffice.VisioApi.Enums.VisFieldFormats format, object langID, object calendarID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(category, code, format, langID, calendarID);
 			Invoker.Method(this, "AddFieldEx", paramsArray);
@@ -721,7 +721,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public void AddFieldEx(NetOffice.VisioApi.Enums.VisFieldCategories category, NetOffice.VisioApi.Enums.VisFieldCodes code, NetOffice.VisioApi.Enums.VisFieldFormats format, Int32 langID)
+		public void AddFieldEx(NetOffice.VisioApi.Enums.VisFieldCategories category, NetOffice.VisioApi.Enums.VisFieldCodes code, NetOffice.VisioApi.Enums.VisFieldFormats format, object langID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(category, code, format, langID);
 			Invoker.Method(this, "AddFieldEx", paramsArray);

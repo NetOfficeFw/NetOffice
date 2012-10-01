@@ -102,7 +102,7 @@ namespace NetOffice.ADODBApi
 			}
 
 			Int32 newcFields = (Int32)cFields;
-			object newFields = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, fields) as object;
+			object newFields = (object)fields;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
 			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
@@ -123,7 +123,7 @@ namespace NetOffice.ADODBApi
 			}
 
 			Int32 newcFields = (Int32)cFields;
-			object newFields = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, fields) as object;
+			object newFields = (object)fields;
 			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
 			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;

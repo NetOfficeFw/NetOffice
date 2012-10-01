@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="errorText">optional string ErrorText = </param>
 		/// <param name="clearedOnUpdate">optional bool ClearedOnUpdate = true</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText, bool clearedOnUpdate)
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText, clearedOnUpdate);
 			Invoker.Method(this, "Add", paramsArray);
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="errorText">optional string ErrorText = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, string errorText)
+		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(node, errorName, errorText);
 			Invoker.Method(this, "Add", paramsArray);

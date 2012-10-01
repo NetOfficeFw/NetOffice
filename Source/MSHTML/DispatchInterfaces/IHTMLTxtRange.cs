@@ -165,7 +165,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="fStart">optional bool fStart = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void scrollIntoView(bool fStart)
+		public void scrollIntoView(object fStart)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fStart);
 			Invoker.Method(this, "scrollIntoView", paramsArray);
@@ -187,7 +187,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="start">optional bool Start = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void collapse(bool start)
+		public void collapse(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			Invoker.Method(this, "collapse", paramsArray);
@@ -222,7 +222,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 move(string unit, Int32 count)
+		public Int32 move(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "move", paramsArray);
@@ -248,7 +248,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 moveStart(string unit, Int32 count)
+		public Int32 moveStart(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "moveStart", paramsArray);
@@ -274,7 +274,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="unit">string Unit</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 moveEnd(string unit, Int32 count)
+		public Int32 moveEnd(string unit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(unit, count);
 			object returnItem = Invoker.MethodReturn(this, "moveEnd", paramsArray);
@@ -358,7 +358,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="count">optional Int32 Count = 1073741823</param>
 		/// <param name="flags">optional Int32 Flags = 0</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool findText(string _string, Int32 count, Int32 flags)
+		public bool findText(string _string, object count, object flags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, count, flags);
 			object returnItem = Invoker.MethodReturn(this, "findText", paramsArray);
@@ -385,7 +385,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="count">optional Int32 Count = 1073741823</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool findText(string _string, Int32 count)
+		public bool findText(string _string, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_string, count);
 			object returnItem = Invoker.MethodReturn(this, "findText", paramsArray);
@@ -514,7 +514,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		/// <param name="value">optional object value</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI, object value)
+		public bool execCommand(string cmdID, object showUI, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI, value);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
@@ -541,7 +541,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, bool showUI)
+		public bool execCommand(string cmdID, object showUI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);

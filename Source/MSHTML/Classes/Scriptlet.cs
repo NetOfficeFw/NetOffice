@@ -8,7 +8,7 @@ namespace NetOffice.MSHTMLApi
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Scriptlet_onscriptleteventEventHandler(string name, COMObject eventData);
+	public delegate void Scriptlet_onscriptleteventEventHandler(string name, object eventData);
 	public delegate void Scriptlet_onreadystatechangeEventHandler();
 	public delegate void Scriptlet_onclickEventHandler();
 	public delegate void Scriptlet_ondblclickEventHandler();

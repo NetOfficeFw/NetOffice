@@ -511,7 +511,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="name">string Name</param>
 		/// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
-		public NetOffice.OutlookApi.View Copy(string name, NetOffice.OutlookApi.Enums.OlViewSaveOption saveOption)
+		public NetOffice.OutlookApi.View Copy(string name, object saveOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, saveOption);
 			object returnItem = Invoker.MethodReturn(this, "Copy", paramsArray);

@@ -92,7 +92,7 @@ Public Class Test06
                 If (Not _sheetDeactivateEvent) Then errorMessage += "WorkbookDeactivateEvent failed "
                 If (Not _workbookActivateEvent) Then errorMessage += "SheetActivateEvent failed "
                 If (Not _workbookDeactivateEvent) Then errorMessage += "SheetDeactivateEvent failed "
-                Return New TestResult(True, DateTime.Now.Subtract(startTime), "", Nothing, "")
+                Return New TestResult(True, DateTime.Now.Subtract(startTime), errorMessage, Nothing, "")
             End If
 
         Catch ex As Exception

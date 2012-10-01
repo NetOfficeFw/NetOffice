@@ -326,7 +326,7 @@ namespace NetOffice.VisioApi
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape TargetShape</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
-		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage, NetOffice.VisioApi.IVShape targetShape)
+		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage, object targetShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage, targetShape);
 			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);
@@ -353,7 +353,7 @@ namespace NetOffice.VisioApi
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14,15)]
-		public NetOffice.VisioApi.IVValidationIssue AddIssue(NetOffice.VisioApi.IVPage targetPage)
+		public NetOffice.VisioApi.IVValidationIssue AddIssue(object targetPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetPage);
 			object returnItem = Invoker.MethodReturn(this, "AddIssue", paramsArray);

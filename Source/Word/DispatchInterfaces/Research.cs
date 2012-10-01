@@ -154,7 +154,7 @@ namespace NetOffice.WordApi
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection, bool launchQuery)
+		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
 		/// <param name="queryString">optional string QueryString = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public object Query(string serviceID, string queryString)
+		public object Query(string serviceID, object queryString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -220,7 +220,7 @@ namespace NetOffice.WordApi
 		/// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage)
+		public object Query(string serviceID, object queryString, object queryLanguage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);
@@ -244,7 +244,7 @@ namespace NetOffice.WordApi
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public object Query(string serviceID, string queryString, NetOffice.WordApi.Enums.WdLanguageID queryLanguage, bool useSelection)
+		public object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection);
 			object returnItem = Invoker.MethodReturn(this, "Query", paramsArray);

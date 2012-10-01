@@ -1444,7 +1444,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="cancel">optional bool Cancel = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void EndUndo(bool cancel)
+		public void EndUndo(object cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cancel);
 			Invoker.Method(this, "EndUndo", paramsArray);
@@ -1509,7 +1509,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
 		/// <param name="format">optional NetOffice.OWC10Api.Enums.SheetExportFormat Format = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Export(string filename, NetOffice.OWC10Api.Enums.SheetExportActionEnum action, NetOffice.OWC10Api.Enums.SheetExportFormat format)
+		public void Export(object filename, object action, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, action, format);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1532,7 +1532,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Export(string filename)
+		public void Export(object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1545,7 +1545,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Export(string filename, NetOffice.OWC10Api.Enums.SheetExportActionEnum action)
+		public void Export(object filename, object action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, action);
 			Invoker.Method(this, "Export", paramsArray);

@@ -3686,7 +3686,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="attributeValue">object AttributeValue</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setAttribute(string strAttributeName, object attributeValue, Int32 lFlags)
+		public void setAttribute(string strAttributeName, object attributeValue, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, attributeValue, lFlags);
 			Invoker.Method(this, "setAttribute", paramsArray);
@@ -3711,7 +3711,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object getAttribute(string strAttributeName, Int32 lFlags)
+		public object getAttribute(string strAttributeName, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
@@ -3753,7 +3753,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool removeAttribute(string strAttributeName, Int32 lFlags)
+		public bool removeAttribute(string strAttributeName, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
 			object returnItem = Invoker.MethodReturn(this, "removeAttribute", paramsArray);
@@ -3857,7 +3857,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="containerCapture">optional bool containerCapture = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setCapture(bool containerCapture)
+		public void setCapture(object containerCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(containerCapture);
 			Invoker.Method(this, "setCapture", paramsArray);
@@ -3950,7 +3950,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="expression">string expression</param>
 		/// <param name="language">optional string language = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setExpression(string propname, string expression, string language)
+		public void setExpression(string propname, string expression, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, expression, language);
 			Invoker.Method(this, "setExpression", paramsArray);
@@ -4398,7 +4398,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="fDeep">optional bool fDeep = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLDOMNode removeNode(bool fDeep)
+		public NetOffice.MSHTMLApi.IHTMLDOMNode removeNode(object fDeep)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fDeep);
 			object returnItem = Invoker.MethodReturn(this, "removeNode", paramsArray);

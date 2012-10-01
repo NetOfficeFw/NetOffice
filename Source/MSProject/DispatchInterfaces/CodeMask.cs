@@ -150,7 +150,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="length">optional object Length</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.CodeMaskLevel Add(NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator)
+		public NetOffice.MSProjectApi.CodeMaskLevel Add(object sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sequence, length, separator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -177,7 +177,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.CodeMaskLevel Add(NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence)
+		public NetOffice.MSProjectApi.CodeMaskLevel Add(object sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sequence);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -192,7 +192,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="length">optional object Length</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.CodeMaskLevel Add(NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length)
+		public NetOffice.MSProjectApi.CodeMaskLevel Add(object sequence, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sequence, length);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

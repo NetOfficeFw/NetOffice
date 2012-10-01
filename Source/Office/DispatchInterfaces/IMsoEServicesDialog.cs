@@ -148,7 +148,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="applyWebComponentChanges">optional bool ApplyWebComponentChanges = false</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Close(bool applyWebComponentChanges)
+		public void Close(object applyWebComponentChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(applyWebComponentChanges);
 			Invoker.Method(this, "Close", paramsArray);

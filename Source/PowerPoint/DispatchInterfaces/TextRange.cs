@@ -315,7 +315,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Paragraphs(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Paragraphs(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
@@ -342,7 +342,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Paragraphs(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Paragraphs(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Paragraphs", paramsArray);
@@ -356,7 +356,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Sentences(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Sentences(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
@@ -383,7 +383,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Sentences(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Sentences(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Sentences", paramsArray);
@@ -397,7 +397,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Words(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Words(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
@@ -424,7 +424,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Words(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Words(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Words", paramsArray);
@@ -438,7 +438,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Characters(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Characters(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
@@ -465,7 +465,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Characters(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Characters(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Characters", paramsArray);
@@ -479,7 +479,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Lines(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Lines(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
@@ -506,7 +506,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Lines(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Lines(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Lines", paramsArray);
@@ -520,7 +520,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		/// <param name="length">optional Int32 Length = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Runs(Int32 start, Int32 length)
+		public NetOffice.PowerPointApi.TextRange Runs(object start, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
@@ -547,7 +547,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="start">optional Int32 Start = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Runs(Int32 start)
+		public NetOffice.PowerPointApi.TextRange Runs(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.MethodReturn(this, "Runs", paramsArray);
@@ -572,7 +572,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange InsertAfter(string newText)
+		public NetOffice.PowerPointApi.TextRange InsertAfter(object newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
@@ -598,7 +598,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange InsertBefore(string newText)
+		public NetOffice.PowerPointApi.TextRange InsertBefore(object newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
@@ -625,7 +625,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dateTimeFormat">NetOffice.PowerPointApi.Enums.PpDateTimeFormat DateTimeFormat</param>
 		/// <param name="insertAsField">optional NetOffice.OfficeApi.Enums.MsoTriState InsertAsField = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange InsertDateTime(NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat, NetOffice.OfficeApi.Enums.MsoTriState insertAsField)
+		public NetOffice.PowerPointApi.TextRange InsertDateTime(NetOffice.PowerPointApi.Enums.PpDateTimeFormat dateTimeFormat, object insertAsField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dateTimeFormat, insertAsField);
 			object returnItem = Invoker.MethodReturn(this, "InsertDateTime", paramsArray);
@@ -666,7 +666,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="charNumber">Int32 CharNumber</param>
 		/// <param name="unicode">optional NetOffice.OfficeApi.Enums.MsoTriState Unicode = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber, NetOffice.OfficeApi.Enums.MsoTriState unicode)
+		public NetOffice.PowerPointApi.TextRange InsertSymbol(string fontName, Int32 charNumber, object unicode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
 			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
@@ -780,7 +780,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after, object matchCase, object wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -809,7 +809,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Find(string findWhat, Int32 after)
+		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -825,7 +825,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
+		public NetOffice.PowerPointApi.TextRange Find(string findWhat, object after, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -842,7 +842,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after, object matchCase, object wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -873,7 +873,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, Int32 after)
+		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -890,7 +890,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
+		public NetOffice.PowerPointApi.TextRange Replace(string findWhat, string replaceWhat, object after, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -963,7 +963,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -990,7 +990,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1005,7 +1005,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1021,7 +1021,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1038,7 +1038,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1056,7 +1056,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.TextRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel)
+		public NetOffice.PowerPointApi.TextRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);

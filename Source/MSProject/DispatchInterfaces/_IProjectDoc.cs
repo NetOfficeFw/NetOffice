@@ -6336,7 +6336,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearResourceRates">optional object ClearResourceRates</param>
 		/// <param name="clearFixedCosts">optional object ClearFixedCosts</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6361,7 +6361,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format)
+		public void SaveAs(object name, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6375,7 +6375,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="backup">optional object Backup</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup)
+		public void SaveAs(object name, object format, object backup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6390,7 +6390,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly)
+		public void SaveAs(object name, object format, object backup, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6406,7 +6406,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="taskInformation">optional object TaskInformation</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6423,7 +6423,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filtered">optional object Filtered</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6441,7 +6441,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="table">optional object Table</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6460,7 +6460,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="userID">optional object UserID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6480,7 +6480,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="databasePassWord">optional object DatabasePassWord</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6501,7 +6501,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="formatID">optional object FormatID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6523,7 +6523,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="map">optional object Map</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6546,7 +6546,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearBaseline">optional object ClearBaseline</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6570,7 +6570,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearActuals">optional object ClearActuals</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -6595,7 +6595,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="clearResourceRates">optional object ClearResourceRates</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void SaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates)
+		public void SaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object clearBaseline, object clearActuals, object clearResourceRates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, clearBaseline, clearActuals, clearResourceRates);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -7098,7 +7098,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="toDate">optional object ToDate</param>
 		/// <param name="fixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate, fixedFormatExtClassPtr);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7123,7 +7123,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType)
+		public void ExportAsFixedFormat(string filename, object fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7137,7 +7137,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="includeDocumentProperties">optional bool IncludeDocumentProperties = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7152,7 +7152,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="includeDocumentMarkup">optional bool IncludeDocumentMarkup = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7168,7 +7168,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="archiveFormat">optional bool ArchiveFormat = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7185,7 +7185,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -7203,7 +7203,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="toDate">optional object ToDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public void ExportAsFixedFormat(string filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, bool includeDocumentProperties, bool includeDocumentMarkup, bool archiveFormat, object fromDate, object toDate)
+		public void ExportAsFixedFormat(string filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);

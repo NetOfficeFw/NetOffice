@@ -96,7 +96,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="index">optional Int32 index = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(Int32 index)
+		public NetOffice.VBIDEApi.VBComponent AddMTDesigner(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "AddMTDesigner", paramsArray);

@@ -182,7 +182,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newNewView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newView) as object;
+			object newNewView = (object)newView;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewView;
 			paramsArray.SetValue(cancel, 1);

@@ -53,10 +53,10 @@ namespace NetOffice.AccessApi
 	public delegate void Form_QueryEventHandler();
 	public delegate void Form_BeforeQueryEventHandler();
 	public delegate void Form_SelectionChangeEventHandler();
-	public delegate void Form_CommandBeforeExecuteEventHandler(COMObject Command, COMObject Cancel);
-	public delegate void Form_CommandCheckedEventHandler(COMObject Command, COMObject Checked);
-	public delegate void Form_CommandEnabledEventHandler(COMObject Command, COMObject Enabled);
-	public delegate void Form_CommandExecuteEventHandler(COMObject Command);
+	public delegate void Form_CommandBeforeExecuteEventHandler(object Command, COMObject Cancel);
+	public delegate void Form_CommandCheckedEventHandler(object Command, COMObject Checked);
+	public delegate void Form_CommandEnabledEventHandler(object Command, COMObject Enabled);
+	public delegate void Form_CommandExecuteEventHandler(object Command);
 	public delegate void Form_DataSetChangeEventHandler();
 	public delegate void Form_BeforeScreenTipEventHandler(COMObject ScreenTipText, COMObject SourceObject);
 	public delegate void Form_BeforeRenderEventHandler(COMObject drawObject, COMObject chartObject, COMObject Cancel);

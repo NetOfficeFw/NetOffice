@@ -150,7 +150,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>
 		/// <param name="lag">optional object Lag</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, NetOffice.MSProjectApi.Enums.PjTaskLinkType type, object lag)
+		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, object type, object lag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type, lag);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -179,7 +179,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, NetOffice.MSProjectApi.Enums.PjTaskLinkType type)
+		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

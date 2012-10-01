@@ -175,7 +175,7 @@ namespace NetOffice.WordApi
 		/// <param name="value">optional string Value = </param>
 		/// <param name="index">optional Int32 Index = 0</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.ContentControlListEntry Add(string text, string value, Int32 index)
+		public NetOffice.WordApi.ContentControlListEntry Add(string text, object value, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -204,7 +204,7 @@ namespace NetOffice.WordApi
 		/// <param name="value">optional string Value = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.ContentControlListEntry Add(string text, string value)
+		public NetOffice.WordApi.ContentControlListEntry Add(string text, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

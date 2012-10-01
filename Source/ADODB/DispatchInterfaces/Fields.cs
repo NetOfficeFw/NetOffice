@@ -129,7 +129,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "Append", paramsArray);
@@ -144,7 +144,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		/// <param name="fieldValue">optional object FieldValue</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib, object fieldValue)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib, object fieldValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib, fieldValue);
 			Invoker.Method(this, "Append", paramsArray);
@@ -171,7 +171,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize)
+		public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize);
 			Invoker.Method(this, "Append", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Resync(NetOffice.ADODBApi.Enums.ResyncEnum resyncValues)
+		public void Resync(object resyncValues)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resyncValues);
 			Invoker.Method(this, "Resync", paramsArray);

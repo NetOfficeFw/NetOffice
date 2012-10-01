@@ -152,7 +152,7 @@ namespace NetOffice.AccessApi
 		/// <param name="expression1">optional object Expression1</param>
 		/// <param name="expression2">optional object Expression2</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1, object expression2)
+		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1, object expression2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1, expression2);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -181,7 +181,7 @@ namespace NetOffice.AccessApi
 		/// <param name="_operator">optional NetOffice.AccessApi.Enums.AcFormatConditionOperator Operator = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator)
+		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -197,7 +197,7 @@ namespace NetOffice.AccessApi
 		/// <param name="expression1">optional object Expression1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, NetOffice.AccessApi.Enums.AcFormatConditionOperator _operator, object expression1)
+		public NetOffice.AccessApi._FormatCondition Add(NetOffice.AccessApi.Enums.AcFormatConditionType type, object _operator, object expression1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, _operator, expression1);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

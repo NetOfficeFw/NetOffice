@@ -280,7 +280,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="index">optional Int32 index = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object insertCell(Int32 index)
+		public object insertCell(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "insertCell", paramsArray);
@@ -306,7 +306,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="index">optional Int32 index = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void deleteCell(Int32 index)
+		public void deleteCell(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "deleteCell", paramsArray);

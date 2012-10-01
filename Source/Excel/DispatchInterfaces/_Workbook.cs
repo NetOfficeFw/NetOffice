@@ -2637,7 +2637,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="newName">string NewName</param>
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlLinkType Type = 1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void ChangeLink(string name, string newName, NetOffice.ExcelApi.Enums.XlLinkType type)
+		public void ChangeLink(string name, string newName, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, newName, type);
 			Invoker.Method(this, "ChangeLink", paramsArray);
@@ -3354,7 +3354,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textCodepage">optional object TextCodepage</param>
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru, textCodepage, textVisualLayout);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3376,7 +3376,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		/// <param name="local">optional object Local</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout, object local)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout, object local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru, textCodepage, textVisualLayout, local);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3492,7 +3492,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="accessMode">optional NetOffice.ExcelApi.Enums.XlSaveAsAccessMode AccessMode = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3511,7 +3511,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="conflictResolution">optional object ConflictResolution</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3531,7 +3531,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="addToMru">optional object AddToMru</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3552,7 +3552,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textCodepage">optional object TextCodepage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru, object textCodepage)
+		public void SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru, object textCodepage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru, textCodepage);
 			Invoker.Method(this, "SaveAs", paramsArray);
@@ -3624,7 +3624,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="fileFormat">optional object FileFormat</param>
 		/// <param name="priority">optional NetOffice.ExcelApi.Enums.XlPriority Priority = -4143</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void SendMailer(object fileFormat, NetOffice.ExcelApi.Enums.XlPriority priority)
+		public void SendMailer(object fileFormat, object priority)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileFormat, priority);
 			Invoker.Method(this, "SendMailer", paramsArray);
@@ -4667,7 +4667,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout)
+		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru, object textCodepage, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru, textCodepage, textVisualLayout);
 			Invoker.Method(this, "_SaveAs", paramsArray);
@@ -4791,7 +4791,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode)
+		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode);
 			Invoker.Method(this, "_SaveAs", paramsArray);
@@ -4811,7 +4811,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution)
+		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution);
 			Invoker.Method(this, "_SaveAs", paramsArray);
@@ -4832,7 +4832,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru)
+		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru);
 			Invoker.Method(this, "_SaveAs", paramsArray);
@@ -4854,7 +4854,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, NetOffice.ExcelApi.Enums.XlSaveAsAccessMode accessMode, object conflictResolution, object addToMru, object textCodepage)
+		public void _SaveAs(object filename, object fileFormat, object password, object writeResPassword, object readOnlyRecommended, object createBackup, object accessMode, object conflictResolution, object addToMru, object textCodepage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileFormat, password, writeResPassword, readOnlyRecommended, createBackup, accessMode, conflictResolution, addToMru, textCodepage);
 			Invoker.Method(this, "_SaveAs", paramsArray);

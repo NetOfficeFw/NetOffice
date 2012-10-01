@@ -376,7 +376,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addImport(string bstrUrl, Int32 lIndex)
+		public Int32 addImport(string bstrUrl, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrUrl, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addImport", paramsArray);
@@ -403,7 +403,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		public Int32 addRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addRule", paramsArray);
@@ -453,7 +453,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrStyle">string bstrStyle</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public Int32 addPageRule(string bstrSelector, string bstrStyle, Int32 lIndex)
+		public Int32 addPageRule(string bstrSelector, string bstrStyle, object lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSelector, bstrStyle, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "addPageRule", paramsArray);

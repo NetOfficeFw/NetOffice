@@ -1430,7 +1430,7 @@ namespace NetOffice.WordApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="scale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom Scale = 0</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom scale)
+		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			Invoker.Method(this, "ScaleHeight", paramsArray);
@@ -1456,7 +1456,7 @@ namespace NetOffice.WordApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="scale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom Scale = 0</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom scale)
+		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, scale);
 			Invoker.Method(this, "ScaleWidth", paramsArray);

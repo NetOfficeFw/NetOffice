@@ -348,7 +348,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newtsk;
 			paramsArray[1] = newField;
@@ -370,7 +370,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newres;
 			paramsArray[1] = newField;
@@ -392,7 +392,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newasg;
 			paramsArray[1] = newField;
@@ -556,7 +556,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			NetOffice.MSProjectApi.Selection newsel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.MSProjectApi.Selection;
-			object newselType = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selType) as object;
+			object newselType = (object)selType;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newsel;
@@ -942,7 +942,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newtsk;
@@ -963,7 +963,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newres;
@@ -984,7 +984,7 @@ namespace NetOffice.MSProjectApi
 
 			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
-			object newNewVal = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newVal) as object;
+			object newNewVal = (object)newVal;
 			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newasg;

@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersionAttribute("Excel", 15)]
-		public Int32 Show(NetOffice.ExcelApi.Enums.XlQuickAnalysisMode xlQuickAnalysisMode)
+		public Int32 Show(object xlQuickAnalysisMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xlQuickAnalysisMode);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="xlQuickAnalysisMode">optional NetOffice.ExcelApi.Enums.XlQuickAnalysisMode XlQuickAnalysisMode = 0</param>
 		[SupportByVersionAttribute("Excel", 15)]
-		public Int32 Hide(NetOffice.ExcelApi.Enums.XlQuickAnalysisMode xlQuickAnalysisMode)
+		public Int32 Hide(object xlQuickAnalysisMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xlQuickAnalysisMode);
 			object returnItem = Invoker.MethodReturn(this, "Hide", paramsArray);

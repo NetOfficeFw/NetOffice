@@ -440,7 +440,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="option">optional Int32 Option = 0</param>
 		[SupportByVersionAttribute("DAO", 12,3.6)]
-		public static void CommitTrans(Int32 option)
+		public static void CommitTrans(object option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
 			Invoker.Method(_instance, "CommitTrans", paramsArray);

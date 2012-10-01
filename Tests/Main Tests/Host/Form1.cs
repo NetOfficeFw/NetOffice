@@ -190,10 +190,7 @@ namespace Host
                         TestResult result = item.DoTest();
                         AddResult(item, result);
                     }
-                }
 
-                if (checkBoxAccess.Checked)
-                {
                     AccessTestsCSharp.TestAssembly accessCSharp = new AccessTestsCSharp.TestAssembly();
                     foreach (ITestPackage item in accessCSharp.LoadTestPackages())
                     {
@@ -205,6 +202,28 @@ namespace Host
 
                 #endregion
 
+                #region Project
+
+                if (checkBoxProject.Checked)
+                {
+                    ProjectTestsVB.TestAssembly projectVB = new ProjectTestsVB.TestAssembly();
+                    foreach (ITestPackage item in projectVB.LoadTestPackages())
+                    {
+                        ShowCurrent(item);
+                        TestResult result = item.DoTest();
+                        AddResult(item, result);
+                    }
+
+                    ProjectTestsCSharp.TestAssembly projectCSharp = new ProjectTestsCSharp.TestAssembly();
+                    foreach (ITestPackage item in projectCSharp.LoadTestPackages())
+                    {
+                        ShowCurrent(item);
+                        TestResult result = item.DoTest();
+                        AddResult(item, result);
+                    }
+                }
+
+                #endregion
             }
             catch (Exception exception)
             {

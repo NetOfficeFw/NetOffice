@@ -182,7 +182,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="viewType">NetOffice.OutlookApi.Enums.OlViewType ViewType</param>
 		/// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption</param>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
-		public NetOffice.OutlookApi.View Add(string name, NetOffice.OutlookApi.Enums.OlViewType viewType, NetOffice.OutlookApi.Enums.OlViewSaveOption saveOption)
+		public NetOffice.OutlookApi.View Add(string name, NetOffice.OutlookApi.Enums.OlViewType viewType, object saveOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, viewType, saveOption);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

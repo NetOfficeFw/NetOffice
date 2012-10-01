@@ -12,9 +12,9 @@ namespace NetOffice.MSProjectApi
 	public delegate void Application_ProjectBeforeTaskDeleteEventHandler(NetOffice.MSProjectApi.Task tsk, ref bool Cancel);
 	public delegate void Application_ProjectBeforeResourceDeleteEventHandler(NetOffice.MSProjectApi.Resource res, ref bool Cancel);
 	public delegate void Application_ProjectBeforeAssignmentDeleteEventHandler(NetOffice.MSProjectApi.Assignment asg, ref bool Cancel);
-	public delegate void Application_ProjectBeforeTaskChangeEventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, COMObject NewVal, ref bool Cancel);
-	public delegate void Application_ProjectBeforeResourceChangeEventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, COMObject NewVal, ref bool Cancel);
-	public delegate void Application_ProjectBeforeAssignmentChangeEventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, COMObject NewVal, ref bool Cancel);
+	public delegate void Application_ProjectBeforeTaskChangeEventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, ref bool Cancel);
+	public delegate void Application_ProjectBeforeResourceChangeEventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, ref bool Cancel);
+	public delegate void Application_ProjectBeforeAssignmentChangeEventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, object NewVal, ref bool Cancel);
 	public delegate void Application_ProjectBeforeTaskNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
 	public delegate void Application_ProjectBeforeResourceNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
 	public delegate void Application_ProjectBeforeAssignmentNewEventHandler(NetOffice.MSProjectApi.Project pj, ref bool Cancel);
@@ -23,7 +23,7 @@ namespace NetOffice.MSProjectApi
 	public delegate void Application_ProjectBeforeSaveEventHandler(NetOffice.MSProjectApi.Project pj, bool SaveAsUi, ref bool Cancel);
 	public delegate void Application_ProjectCalculateEventHandler(NetOffice.MSProjectApi.Project pj);
 	public delegate void Application_WindowGoalAreaChangeEventHandler(NetOffice.MSProjectApi.Window Window, Int32 goalArea);
-	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.Selection sel, COMObject selType);
+	public delegate void Application_WindowSelectionChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.Selection sel, object selType);
 	public delegate void Application_WindowBeforeViewChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool projectHasViewWindow, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_WindowViewChangeEventHandler(NetOffice.MSProjectApi.Window Window, NetOffice.MSProjectApi.View prevView, NetOffice.MSProjectApi.View newView, bool success);
 	public delegate void Application_WindowActivateEventHandler(NetOffice.MSProjectApi.Window activatedWindow);
@@ -44,9 +44,9 @@ namespace NetOffice.MSProjectApi
 	public delegate void Application_ProjectBeforeTaskDelete2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_ProjectBeforeResourceDelete2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_ProjectBeforeAssignmentDelete2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeTaskChange2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, COMObject NewVal, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeResourceChange2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, COMObject NewVal, NetOffice.MSProjectApi.EventInfo Info);
-	public delegate void Application_ProjectBeforeAssignmentChange2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, COMObject NewVal, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeTaskChange2EventHandler(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeResourceChange2EventHandler(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
+	public delegate void Application_ProjectBeforeAssignmentChange2EventHandler(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField Field, object NewVal, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_ProjectBeforeTaskNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_ProjectBeforeResourceNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);
 	public delegate void Application_ProjectBeforeAssignmentNew2EventHandler(NetOffice.MSProjectApi.Project pj, NetOffice.MSProjectApi.EventInfo Info);

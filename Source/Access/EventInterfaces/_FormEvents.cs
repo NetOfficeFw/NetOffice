@@ -991,7 +991,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			object newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -1008,7 +1008,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			object newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -1025,7 +1025,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			object newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -1042,7 +1042,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCommand;
 			_eventBinding.RaiseCustomEvent("CommandExecute", ref paramsArray);

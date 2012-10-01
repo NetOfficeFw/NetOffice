@@ -703,7 +703,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlCopyPictureFormat format)
+		public object CopyPicture(object appearance, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);
@@ -744,7 +744,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
+		public object CopyPicture(object appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);
@@ -911,7 +911,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="verb">optional NetOffice.ExcelApi.Enums.XlOLEVerb Verb = 1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Verb(NetOffice.ExcelApi.Enums.XlOLEVerb verb)
+		public object Verb(object verb)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(verb);
 			object returnItem = Invoker.MethodReturn(this, "Verb", paramsArray);

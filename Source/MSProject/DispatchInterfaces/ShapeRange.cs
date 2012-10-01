@@ -1145,7 +1145,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom fScale)
+		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, fScale);
 			Invoker.Method(this, "ScaleHeight", paramsArray);
@@ -1171,7 +1171,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom fScale)
+		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, fScale);
 			Invoker.Method(this, "ScaleWidth", paramsArray);
@@ -1319,7 +1319,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="mergeCmd">NetOffice.OfficeApi.Enums.MsoMergeCmd MergeCmd</param>
 		/// <param name="primaryShape">optional NetOffice.MSProjectApi.Shape PrimaryShape = 0</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void MergeShapes(NetOffice.OfficeApi.Enums.MsoMergeCmd mergeCmd, NetOffice.MSProjectApi.Shape primaryShape)
+		public void MergeShapes(NetOffice.OfficeApi.Enums.MsoMergeCmd mergeCmd, object primaryShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mergeCmd, primaryShape);
 			Invoker.Method(this, "MergeShapes", paramsArray);

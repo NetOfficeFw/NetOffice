@@ -196,7 +196,7 @@ namespace NetOffice.WordApi
 		/// <param name="index">optional object Index = -1</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public NetOffice.WordApi.DiagramNode AddNode(object index, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.WordApi.DiagramNode AddNode(object index, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);

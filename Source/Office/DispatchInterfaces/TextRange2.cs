@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Paragraphs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Paragraphs(object start, object length)
 		{
 			return get_Paragraphs(start, length);
 		}
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Paragraphs(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Paragraphs", paramsArray);
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Paragraphs(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Paragraphs(object start)
 		{
 			return get_Paragraphs(start);
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Sentences(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Sentences(object start, object length)
 		{
 			return get_Sentences(start, length);
 		}
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Sentences(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Sentences(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Sentences", paramsArray);
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Sentences(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Sentences(object start)
 		{
 			return get_Sentences(start);
 		}
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Words(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Words(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Words(object start, object length)
 		{
 			return get_Words(start, length);
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Words(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Words(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Words", paramsArray);
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Words(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Words(object start)
 		{
 			return get_Words(start);
 		}
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Characters(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
@@ -240,7 +240,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Characters(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Characters(object start, object length)
 		{
 			return get_Characters(start, length);
 		}
@@ -252,7 +252,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Characters(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Characters(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Characters(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Characters(object start)
 		{
 			return get_Characters(start);
 		}
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Lines(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Lines(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Lines(object start, object length)
 		{
 			return get_Lines(start, length);
 		}
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Lines(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Lines(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Lines", paramsArray);
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Lines(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Lines(object start)
 		{
 			return get_Lines(start);
 		}
@@ -333,7 +333,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_Runs(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "Runs", paramsArray);
@@ -348,7 +348,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Runs(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 Runs(object start, object length)
 		{
 			return get_Runs(start, length);
 		}
@@ -360,7 +360,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_Runs(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_Runs(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "Runs", paramsArray);
@@ -374,7 +374,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Runs(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 Runs(object start)
 		{
 			return get_Runs(start);
 		}
@@ -387,7 +387,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start, object length)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start, length);
 			object returnItem = Invoker.PropertyGet(this, "MathZones", paramsArray);
@@ -402,7 +402,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		/// <param name="length">optional Int32 Length</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.TextRange2 MathZones(Int32 start, Int32 length)
+		public NetOffice.OfficeApi.TextRange2 MathZones(object start, object length)
 		{
 			return get_MathZones(start, length);
 		}
@@ -414,7 +414,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.TextRange2 get_MathZones(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 get_MathZones(object start)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
 			object returnItem = Invoker.PropertyGet(this, "MathZones", paramsArray);
@@ -428,7 +428,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="start">optional Int32 Start</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.TextRange2 MathZones(Int32 start)
+		public NetOffice.OfficeApi.TextRange2 MathZones(object start)
 		{
 			return get_MathZones(start);
 		}
@@ -851,7 +851,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 InsertAfter(string newText)
+		public NetOffice.OfficeApi.TextRange2 InsertAfter(object newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertAfter", paramsArray);
@@ -877,7 +877,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="newText">optional string NewText = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 InsertBefore(string newText)
+		public NetOffice.OfficeApi.TextRange2 InsertBefore(object newText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newText);
 			object returnItem = Invoker.MethodReturn(this, "InsertBefore", paramsArray);
@@ -905,7 +905,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="charNumber">Int32 CharNumber</param>
 		/// <param name="unicode">optional NetOffice.OfficeApi.Enums.MsoTriState Unicode = 0</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, NetOffice.OfficeApi.Enums.MsoTriState unicode)
+		public NetOffice.OfficeApi.TextRange2 InsertSymbol(string fontName, Int32 charNumber, object unicode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName, charNumber, unicode);
 			object returnItem = Invoker.MethodReturn(this, "InsertSymbol", paramsArray);
@@ -1032,7 +1032,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase, object wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1061,7 +1061,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after)
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1077,7 +1077,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
+		public NetOffice.OfficeApi.TextRange2 Find(string findWhat, object after, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -1094,7 +1094,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		/// <param name="wholeWords">optional NetOffice.OfficeApi.Enums.MsoTriState WholeWords = 0</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase, NetOffice.OfficeApi.Enums.MsoTriState wholeWords)
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase, object wholeWords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase, wholeWords);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1125,7 +1125,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="after">optional Int32 After = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after)
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1142,7 +1142,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="matchCase">optional NetOffice.OfficeApi.Enums.MsoTriState MatchCase = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, Int32 after, NetOffice.OfficeApi.Enums.MsoTriState matchCase)
+		public NetOffice.OfficeApi.TextRange2 Replace(string findWhat, string replaceWhat, object after, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(findWhat, replaceWhat, after, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Replace", paramsArray);
@@ -1212,7 +1212,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="formula">optional string Formula = </param>
 		/// <param name="position">optional Int32 Position = -1</param>
 		[SupportByVersionAttribute("Office", 15)]
-		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, string formula, Int32 position)
+		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, object formula, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartFieldType, formula, position);
 			object returnItem = Invoker.MethodReturn(this, "InsertChartField", paramsArray);
@@ -1241,7 +1241,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="formula">optional string Formula = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 15)]
-		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, string formula)
+		public NetOffice.OfficeApi.TextRange2 InsertChartField(NetOffice.OfficeApi.Enums.MsoChartFieldType chartFieldType, object formula)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(chartFieldType, formula);
 			object returnItem = Invoker.MethodReturn(this, "InsertChartField", paramsArray);

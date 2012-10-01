@@ -298,7 +298,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -335,7 +335,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -488,7 +488,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -515,7 +515,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -530,7 +530,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -546,7 +546,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -563,7 +563,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">optional Single Height = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -581,7 +581,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="className">optional string ClassName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -600,7 +600,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="fileName">optional string FileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -620,7 +620,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName, object displayAsIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName, displayAsIcon);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -641,7 +641,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName, object displayAsIcon, object iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName, displayAsIcon, iconFileName);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -663,7 +663,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName, displayAsIcon, iconFileName, iconIndex);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -686,7 +686,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddOLEObject(Single left, Single top, Single width, Single height, string className, string fileName, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel)
+		public NetOffice.PowerPointApi.Shape AddOLEObject(object left, object top, object width, object height, object className, object fileName, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, className, fileName, displayAsIcon, iconFileName, iconIndex, iconLabel);
 			object returnItem = Invoker.MethodReturn(this, "AddOLEObject", paramsArray);
@@ -702,7 +702,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = 145.25</param>
 		/// <param name="height">optional Single Height = 145.25</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddComment(Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddComment(object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddComment", paramsArray);
@@ -729,7 +729,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = 1.25</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddComment(Single left)
+		public NetOffice.PowerPointApi.Shape AddComment(object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left);
 			object returnItem = Invoker.MethodReturn(this, "AddComment", paramsArray);
@@ -744,7 +744,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = 1.25</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddComment(Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddComment(object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddComment", paramsArray);
@@ -760,7 +760,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = 145.25</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddComment(Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddComment(object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddComment", paramsArray);
@@ -777,7 +777,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPlaceholder", paramsArray);
@@ -806,7 +806,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, Single left)
+		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left);
 			object returnItem = Invoker.MethodReturn(this, "AddPlaceholder", paramsArray);
@@ -822,7 +822,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddPlaceholder", paramsArray);
@@ -839,7 +839,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddPlaceholder(NetOffice.PowerPointApi.Enums.PpPlaceholderType type, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddPlaceholder", paramsArray);
@@ -856,7 +856,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject", paramsArray);
@@ -885,7 +885,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, Single left)
+		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, left);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject", paramsArray);
@@ -901,7 +901,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject", paramsArray);
@@ -918,7 +918,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddMediaObject(string fileName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject", paramsArray);
@@ -948,7 +948,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
@@ -979,7 +979,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left)
+		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left);
 			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
@@ -996,7 +996,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
@@ -1014,7 +1014,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddTable(Int32 numRows, Int32 numColumns, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
@@ -1032,7 +1032,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1059,7 +1059,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1074,7 +1074,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType, object displayAsIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1090,7 +1090,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1107,7 +1107,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1125,7 +1125,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel)
+		public NetOffice.PowerPointApi.ShapeRange PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -1176,7 +1176,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddChart(object type, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -1203,7 +1203,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type)
+		public NetOffice.PowerPointApi.Shape AddChart(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -1218,7 +1218,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, Single left)
+		public NetOffice.PowerPointApi.Shape AddChart(object type, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -1234,7 +1234,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddChart(object type, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -1251,7 +1251,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddChart(object type, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -1270,7 +1270,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1299,7 +1299,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="linkToFile">optional NetOffice.OfficeApi.Enums.MsoTriState LinkToFile = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1315,7 +1315,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="saveWithDocument">optional NetOffice.OfficeApi.Enums.MsoTriState SaveWithDocument = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile, object saveWithDocument)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1332,7 +1332,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile, object saveWithDocument, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1350,7 +1350,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile, object saveWithDocument, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1369,7 +1369,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddMediaObject2(string fileName, object linkToFile, object saveWithDocument, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObject2", paramsArray);
@@ -1386,7 +1386,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(embedTag, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObjectFromEmbedTag", paramsArray);
@@ -1415,7 +1415,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, Single left)
+		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(embedTag, left);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObjectFromEmbedTag", paramsArray);
@@ -1431,7 +1431,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(embedTag, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObjectFromEmbedTag", paramsArray);
@@ -1448,7 +1448,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddMediaObjectFromEmbedTag(string embedTag, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(embedTag, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddMediaObjectFromEmbedTag", paramsArray);
@@ -1465,7 +1465,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
@@ -1494,7 +1494,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, Single left)
+		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
@@ -1510,7 +1510,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
@@ -1527,7 +1527,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layout, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddSmartArt", paramsArray);
@@ -1546,7 +1546,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">optional Single Height = -1</param>
 		/// <param name="newLayout">optional bool NewLayout = false</param>
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width, Single height, bool newLayout)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type, object left, object top, object width, object height, object newLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height, newLayout);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1573,7 +1573,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="style">optional Int32 Style = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1588,7 +1588,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1604,7 +1604,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1621,7 +1621,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1639,7 +1639,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -1658,7 +1658,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">optional Single Height = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public NetOffice.PowerPointApi.Shape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width, Single height)
+		public NetOffice.PowerPointApi.Shape AddChart2(object style, object type, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);

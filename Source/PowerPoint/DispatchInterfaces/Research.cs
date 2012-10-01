@@ -119,7 +119,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void Query(string serviceID, object queryString, object queryLanguage, bool useSelection, bool launchQuery)
+		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection, launchQuery);
 			Invoker.Method(this, "Query", paramsArray);
@@ -173,7 +173,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void Query(string serviceID, object queryString, object queryLanguage, bool useSelection)
+		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serviceID, queryString, queryLanguage, useSelection);
 			Invoker.Method(this, "Query", paramsArray);

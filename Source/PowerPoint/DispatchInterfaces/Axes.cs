@@ -148,7 +148,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="axisGroup">optional NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.PowerPointApi.Axis this[NetOffice.PowerPointApi.Enums.XlAxisType type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.PowerPointApi.Axis this[NetOffice.PowerPointApi.Enums.XlAxisType type, object axisGroup]
 		{
 			get
 			{

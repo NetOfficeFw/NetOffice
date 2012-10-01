@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
 		/// <param name="existingResults">optional NetOffice.OfficeApi.PickerResults ExistingResults = 0</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PickerResults Show(bool isMultiSelect, NetOffice.OfficeApi.PickerResults existingResults)
+		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect, existingResults);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PickerResults Show(bool isMultiSelect)
+		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(isMultiSelect);
 			object returnItem = Invoker.MethodReturn(this, "Show", paramsArray);

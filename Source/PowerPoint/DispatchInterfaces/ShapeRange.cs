@@ -1330,7 +1330,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom fScale)
+		public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, fScale);
 			Invoker.Method(this, "ScaleHeight", paramsArray);
@@ -1356,7 +1356,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
 		/// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, NetOffice.OfficeApi.Enums.MsoScaleFrom fScale)
+		public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(factor, relativeToOriginalSize, fScale);
 			Invoker.Method(this, "ScaleWidth", paramsArray);
@@ -1433,7 +1433,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="replace">optional NetOffice.OfficeApi.Enums.MsoTriState Replace = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Select(NetOffice.OfficeApi.Enums.MsoTriState replace)
+		public void Select(object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(replace);
 			Invoker.Method(this, "Select", paramsArray);
@@ -1576,7 +1576,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="exportMode">optional NetOffice.PowerPointApi.Enums.PpExportMode ExportMode = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, Int32 scaleWidth, Int32 scaleHeight, NetOffice.PowerPointApi.Enums.PpExportMode exportMode)
+		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth, object scaleHeight, object exportMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, filter, scaleWidth, scaleHeight, exportMode);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1605,7 +1605,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, Int32 scaleWidth)
+		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, filter, scaleWidth);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1621,7 +1621,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, Int32 scaleWidth, Int32 scaleHeight)
+		public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth, object scaleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pathName, filter, scaleWidth, scaleHeight);
 			Invoker.Method(this, "Export", paramsArray);
@@ -1722,7 +1722,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="mergeCmd">NetOffice.OfficeApi.Enums.MsoMergeCmd MergeCmd</param>
 		/// <param name="primaryShape">optional NetOffice.PowerPointApi.Shape PrimaryShape = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 15)]
-		public void MergeShapes(NetOffice.OfficeApi.Enums.MsoMergeCmd mergeCmd, NetOffice.PowerPointApi.Shape primaryShape)
+		public void MergeShapes(NetOffice.OfficeApi.Enums.MsoMergeCmd mergeCmd, object primaryShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(mergeCmd, primaryShape);
 			Invoker.Method(this, "MergeShapes", paramsArray);

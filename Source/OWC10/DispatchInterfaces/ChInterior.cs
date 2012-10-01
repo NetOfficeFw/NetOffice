@@ -388,7 +388,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="stackUnit">optional Double stackUnit = 0</param>
 		/// <param name="texturePlacement">optional NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum TexturePlacement = 7</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetTextured(object textureFile, NetOffice.OWC10Api.Enums.ChartTextureFormatEnum textureFormat, Double stackUnit, NetOffice.OWC10Api.Enums.ChartTexturePlacementEnum texturePlacement)
+		public void SetTextured(object textureFile, object textureFormat, object stackUnit, object texturePlacement)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textureFile, textureFormat, stackUnit, texturePlacement);
 			Invoker.Method(this, "SetTextured", paramsArray);
@@ -413,7 +413,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="textureFormat">optional NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat = 4</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetTextured(object textureFile, NetOffice.OWC10Api.Enums.ChartTextureFormatEnum textureFormat)
+		public void SetTextured(object textureFile, object textureFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textureFile, textureFormat);
 			Invoker.Method(this, "SetTextured", paramsArray);
@@ -427,7 +427,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="stackUnit">optional Double stackUnit = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetTextured(object textureFile, NetOffice.OWC10Api.Enums.ChartTextureFormatEnum textureFormat, Double stackUnit)
+		public void SetTextured(object textureFile, object textureFormat, object stackUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(textureFile, textureFormat, stackUnit);
 			Invoker.Method(this, "SetTextured", paramsArray);

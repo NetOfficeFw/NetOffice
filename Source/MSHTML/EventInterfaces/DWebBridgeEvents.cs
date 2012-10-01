@@ -98,7 +98,7 @@ namespace NetOffice.MSHTMLApi
 			}
 
 			string newname = (string)name;
-			object neweventData = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, eventData) as object;
+			object neweventData = (object)eventData;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;
 			paramsArray[1] = neweventData;

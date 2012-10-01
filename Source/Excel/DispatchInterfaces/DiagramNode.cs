@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType = 1</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public NetOffice.ExcelApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.ExcelApi.DiagramNode AddNode(object pos, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public NetOffice.ExcelApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.ExcelApi.DiagramNode AddNode(object pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="swapChildren">optional bool swapChildren = true</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, bool swapChildren)
+		public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, object swapChildren)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pTargetNode, swapChildren);
 			Invoker.Method(this, "SwapNode", paramsArray);
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, object pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, pTargetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);

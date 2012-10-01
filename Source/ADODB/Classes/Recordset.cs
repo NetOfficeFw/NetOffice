@@ -8,8 +8,8 @@ namespace NetOffice.ADODBApi
 	#region Delegates
 
 	#pragma warning disable
-	public delegate void Recordset_WillChangeFieldEventHandler(Int32 cFields, COMObject Fields, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
-	public delegate void Recordset_FieldChangeCompleteEventHandler(Int32 cFields, COMObject Fields, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_WillChangeFieldEventHandler(Int32 cFields, object Fields, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
+	public delegate void Recordset_FieldChangeCompleteEventHandler(Int32 cFields, object Fields, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
 	public delegate void Recordset_WillChangeRecordEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
 	public delegate void Recordset_RecordChangeCompleteEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
 	public delegate void Recordset_WillChangeRecordsetEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);

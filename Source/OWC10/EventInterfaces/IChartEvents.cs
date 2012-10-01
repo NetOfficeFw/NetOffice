@@ -414,7 +414,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			NetOffice.OWC10Api.ByRef newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -431,7 +431,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			NetOffice.OWC10Api.ByRef newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -448,7 +448,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			NetOffice.OWC10Api.ByRef newCaption = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -465,7 +465,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
@@ -482,7 +482,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, command) as object;
+			object newCommand = (object)command;
 			bool newSucceeded = (bool)succeeded;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;

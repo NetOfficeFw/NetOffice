@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="openKind">optional NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen OpenKind = 0</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public void Open(NetOffice.OfficeApi.Enums.MsoHTMLProjectOpen openKind)
+		public void Open(object openKind)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(openKind);
 			Invoker.Method(this, "Open", paramsArray);

@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
 		/// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, bool showWithDelay)
+		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay);
 			Invoker.Method(this, "Show", paramsArray);

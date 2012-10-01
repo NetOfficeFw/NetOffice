@@ -242,7 +242,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="flag">optional bool flag = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void reload(bool flag)
+		public void reload(object flag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(flag);
 			Invoker.Method(this, "reload", paramsArray);

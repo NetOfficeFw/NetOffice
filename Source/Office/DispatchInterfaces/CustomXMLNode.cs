@@ -363,7 +363,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		/// <param name="nodeValue">optional string NodeValue = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void AppendChildNode(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void AppendChildNode(object name, object namespaceURI, object nodeType, object nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType, nodeValue);
 			Invoker.Method(this, "AppendChildNode", paramsArray);
@@ -386,7 +386,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void AppendChildNode(string name)
+		public void AppendChildNode(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "AppendChildNode", paramsArray);
@@ -399,7 +399,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void AppendChildNode(string name, string namespaceURI)
+		public void AppendChildNode(object name, object namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI);
 			Invoker.Method(this, "AppendChildNode", paramsArray);
@@ -413,7 +413,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void AppendChildNode(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType)
+		public void AppendChildNode(object name, object namespaceURI, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType);
 			Invoker.Method(this, "AppendChildNode", paramsArray);
@@ -460,7 +460,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeValue">optional string NodeValue = </param>
 		/// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertNodeBefore(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue, NetOffice.OfficeApi.CustomXMLNode nextSibling)
+		public void InsertNodeBefore(object name, object namespaceURI, object nodeType, object nodeValue, object nextSibling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType, nodeValue, nextSibling);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -483,7 +483,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertNodeBefore(string name)
+		public void InsertNodeBefore(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -496,7 +496,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertNodeBefore(string name, string namespaceURI)
+		public void InsertNodeBefore(object name, object namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -510,7 +510,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertNodeBefore(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType)
+		public void InsertNodeBefore(object name, object namespaceURI, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -525,7 +525,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeValue">optional string NodeValue = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertNodeBefore(string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void InsertNodeBefore(object name, object namespaceURI, object nodeType, object nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, namespaceURI, nodeType, nodeValue);
 			Invoker.Method(this, "InsertNodeBefore", paramsArray);
@@ -537,7 +537,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="xML">string XML</param>
 		/// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void InsertSubtreeBefore(string xML, NetOffice.OfficeApi.CustomXMLNode nextSibling)
+		public void InsertSubtreeBefore(string xML, object nextSibling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, nextSibling);
 			Invoker.Method(this, "InsertSubtreeBefore", paramsArray);
@@ -575,7 +575,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		/// <param name="nodeValue">optional string NodeValue = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType, string nodeValue)
+		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI, object nodeType, object nodeValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, name, namespaceURI, nodeType, nodeValue);
 			Invoker.Method(this, "ReplaceChildNode", paramsArray);
@@ -600,7 +600,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, string name)
+		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, name);
 			Invoker.Method(this, "ReplaceChildNode", paramsArray);
@@ -614,7 +614,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, string name, string namespaceURI)
+		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, name, namespaceURI);
 			Invoker.Method(this, "ReplaceChildNode", paramsArray);
@@ -629,7 +629,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, string name, string namespaceURI, NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType nodeType)
+		public void ReplaceChildNode(NetOffice.OfficeApi.CustomXMLNode oldNode, object name, object namespaceURI, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(oldNode, name, namespaceURI, nodeType);
 			Invoker.Method(this, "ReplaceChildNode", paramsArray);

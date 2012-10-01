@@ -117,7 +117,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="elementID">string ElementID</param>
 		/// <param name="failIfThere">optional bool FailIfThere = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.ElementExtension Add(string elementID, bool failIfThere)
+		public NetOffice.OWC10Api.ElementExtension Add(string elementID, object failIfThere)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(elementID, failIfThere);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -22,11 +22,11 @@ namespace NetOffice.OWC10Api
 	public delegate void PivotTable_MouseWheelEventHandler(bool Page, Int32 Count);
 	public delegate void PivotTable_ClickEventHandler();
 	public delegate void PivotTable_DblClickEventHandler();
-	public delegate void PivotTable_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
-	public delegate void PivotTable_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
-	public delegate void PivotTable_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
-	public delegate void PivotTable_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void PivotTable_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
+	public delegate void PivotTable_CommandEnabledEventHandler(object Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void PivotTable_CommandCheckedEventHandler(object Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void PivotTable_CommandTipTextEventHandler(object Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void PivotTable_CommandBeforeExecuteEventHandler(object Command, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void PivotTable_CommandExecuteEventHandler(object Command, bool Succeeded);
 	public delegate void PivotTable_KeyDownEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void PivotTable_KeyUpEventHandler(Int32 KeyCode, Int32 Shift);
 	public delegate void PivotTable_KeyPressEventHandler(Int32 KeyAscii);

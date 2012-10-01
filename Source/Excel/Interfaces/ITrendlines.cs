@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type)
+		public NetOffice.ExcelApi.Trendline Add(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -196,7 +196,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order">optional object Order</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="period">optional object Period</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -247,7 +247,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="backward">optional object Backward</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="intercept">optional object Intercept</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayEquation">optional object DisplayEquation</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Trendline Add(NetOffice.ExcelApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
+		public NetOffice.ExcelApi.Trendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

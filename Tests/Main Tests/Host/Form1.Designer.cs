@@ -44,6 +44,7 @@
             this.checkBoxPowerPoint = new System.Windows.Forms.CheckBox();
             this.checkBoxAccess = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxProject = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonTest
@@ -142,8 +143,6 @@
             // 
             this.checkBoxWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxWord.AutoSize = true;
-            this.checkBoxWord.Checked = true;
-            this.checkBoxWord.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxWord.Location = new System.Drawing.Point(677, 83);
             this.checkBoxWord.Name = "checkBoxWord";
             this.checkBoxWord.Size = new System.Drawing.Size(52, 17);
@@ -155,8 +154,6 @@
             // 
             this.checkBoxOutlook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxOutlook.AutoSize = true;
-            this.checkBoxOutlook.Checked = true;
-            this.checkBoxOutlook.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxOutlook.Location = new System.Drawing.Point(677, 106);
             this.checkBoxOutlook.Name = "checkBoxOutlook";
             this.checkBoxOutlook.Size = new System.Drawing.Size(63, 17);
@@ -197,11 +194,23 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Choose tests";
             // 
+            // checkBoxProject
+            // 
+            this.checkBoxProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxProject.AutoSize = true;
+            this.checkBoxProject.Location = new System.Drawing.Point(677, 176);
+            this.checkBoxProject.Name = "checkBoxProject";
+            this.checkBoxProject.Size = new System.Drawing.Size(59, 17);
+            this.checkBoxProject.TabIndex = 16;
+            this.checkBoxProject.Text = "Project";
+            this.checkBoxProject.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 407);
+            this.Controls.Add(this.checkBoxProject);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxAccess);
             this.Controls.Add(this.checkBoxPowerPoint);
@@ -236,6 +245,7 @@
         private System.Windows.Forms.CheckBox checkBoxPowerPoint;
         private System.Windows.Forms.CheckBox checkBoxAccess;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxProject;
     }
 }
 

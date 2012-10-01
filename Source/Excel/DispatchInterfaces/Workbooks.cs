@@ -528,7 +528,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -555,7 +555,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -630,7 +630,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -648,7 +648,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -667,7 +667,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -687,7 +687,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -708,7 +708,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -730,7 +730,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -753,7 +753,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -777,7 +777,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -802,7 +802,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -829,7 +829,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
+		public void _OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator);
 			Invoker.Method(this, "_OpenText", paramsArray);
@@ -855,7 +855,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -883,7 +883,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="trailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		/// <param name="local">optional object Local</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers, local);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -953,7 +953,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -970,7 +970,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="consecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -988,7 +988,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="tab">optional object Tab</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1007,7 +1007,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="semicolon">optional object Semicolon</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1027,7 +1027,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="comma">optional object Comma</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1048,7 +1048,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="space">optional object Space</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1070,7 +1070,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="other">optional object Other</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1093,7 +1093,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="otherChar">optional object OtherChar</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1117,7 +1117,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="fieldInfo">optional object FieldInfo</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1142,7 +1142,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1168,7 +1168,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1196,7 +1196,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="trailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
+		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
 			Invoker.Method(this, "OpenText", paramsArray);
@@ -1493,7 +1493,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, textVisualLayout);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1568,7 +1568,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1586,7 +1586,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1605,7 +1605,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1625,7 +1625,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1646,7 +1646,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1668,7 +1668,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1691,7 +1691,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1715,7 +1715,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
 			Invoker.Method(this, "__OpenText", paramsArray);
@@ -1740,7 +1740,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void __OpenText(string filename, object origin, object startRow, object dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		public void __OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, origin, startRow, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
 			Invoker.Method(this, "__OpenText", paramsArray);

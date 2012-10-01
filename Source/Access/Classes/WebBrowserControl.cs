@@ -25,10 +25,10 @@ namespace NetOffice.AccessApi
 	public delegate void WebBrowserControl_KeyDownEventHandler(ref Int16 KeyCode, ref Int16 Shift);
 	public delegate void WebBrowserControl_KeyPressEventHandler(ref Int16 KeyAscii);
 	public delegate void WebBrowserControl_KeyUpEventHandler(ref Int16 KeyCode, ref Int16 Shift);
-	public delegate void WebBrowserControl_BeforeNavigate2EventHandler(COMObject pDisp, ref COMObject URL, ref COMObject flags, ref COMObject TargetFrameName, ref COMObject PostData, ref COMObject Headers, ref bool Cancel);
-	public delegate void WebBrowserControl_DocumentCompleteEventHandler(COMObject pDisp, ref COMObject URL);
+	public delegate void WebBrowserControl_BeforeNavigate2EventHandler(COMObject pDisp, ref object URL, ref object flags, ref object TargetFrameName, ref object PostData, ref object Headers, ref bool Cancel);
+	public delegate void WebBrowserControl_DocumentCompleteEventHandler(COMObject pDisp, ref object URL);
 	public delegate void WebBrowserControl_ProgressChangeEventHandler(Int32 Progress, Int32 ProgressMax);
-	public delegate void WebBrowserControl_NavigateErrorEventHandler(COMObject pDisp, ref COMObject URL, ref COMObject TargetFrameName, ref COMObject StatusCode, ref bool Cancel);
+	public delegate void WebBrowserControl_NavigateErrorEventHandler(COMObject pDisp, ref object URL, ref object TargetFrameName, ref object StatusCode, ref bool Cancel);
 	#pragma warning restore
 
 	#endregion

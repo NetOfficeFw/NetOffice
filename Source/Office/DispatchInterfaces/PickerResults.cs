@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="itemData">optional object ItemData</param>
 		/// <param name="subItems">optional object SubItems</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData, object subItems)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData, subItems);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sIPId">optional string SIPId = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="itemData">optional object ItemData</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, string sIPId, object itemData)
+		public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(id, displayName, type, sIPId, itemData);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

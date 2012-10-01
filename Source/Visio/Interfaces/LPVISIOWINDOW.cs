@@ -60,7 +60,7 @@ namespace NetOffice.VisioApi
 		/// <param name="reviewerID">optional Int32 ReviewerID</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public bool get_ReviewerMarkupVisible(Int32 reviewerID)
+		public bool get_ReviewerMarkupVisible(object reviewerID)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(reviewerID);
 			object returnItem = Invoker.PropertyGet(this, "ReviewerMarkupVisible", paramsArray);
@@ -74,7 +74,7 @@ namespace NetOffice.VisioApi
 		/// <param name="reviewerID">optional Int32 ReviewerID</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_ReviewerMarkupVisible(Int32 reviewerID, bool value)
+		public void set_ReviewerMarkupVisible(object reviewerID, bool value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reviewerID);
 			Invoker.PropertySet(this, "ReviewerMarkupVisible", paramsArray, value);
@@ -86,7 +86,7 @@ namespace NetOffice.VisioApi
 		/// </summary>
 		/// <param name="reviewerID">optional Int32 ReviewerID</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public bool ReviewerMarkupVisible(Int32 reviewerID)
+		public bool ReviewerMarkupVisible(object reviewerID)
 		{
 			return get_ReviewerMarkupVisible(reviewerID);
 		}

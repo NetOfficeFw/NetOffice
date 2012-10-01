@@ -454,7 +454,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="detailLeftOffset">Int32 DetailLeftOffset</param>
 		/// <param name="update">optional bool Update = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void MoveDetailLeft(Int32 detailLeft, Int32 detailLeftOffset, bool update)
+		public void MoveDetailLeft(Int32 detailLeft, Int32 detailLeftOffset, object update)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(detailLeft, detailLeftOffset, update);
 			Invoker.Method(this, "MoveDetailLeft", paramsArray);

@@ -23,11 +23,11 @@ namespace NetOffice.OWC10Api
 	public delegate void ChartSpace_MouseWheelEventHandler(bool Page, Int32 Count);
 	public delegate void ChartSpace_SelectionChangeEventHandler();
 	public delegate void ChartSpace_BeforeScreenTipEventHandler(NetOffice.OWC10Api.ByRef TipText, COMObject ContextObject);
-	public delegate void ChartSpace_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
-	public delegate void ChartSpace_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
-	public delegate void ChartSpace_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
-	public delegate void ChartSpace_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void ChartSpace_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
+	public delegate void ChartSpace_CommandEnabledEventHandler(object Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void ChartSpace_CommandCheckedEventHandler(object Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void ChartSpace_CommandTipTextEventHandler(object Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void ChartSpace_CommandBeforeExecuteEventHandler(object Command, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void ChartSpace_CommandExecuteEventHandler(object Command, bool Succeeded);
 	public delegate void ChartSpace_BeforeContextMenuEventHandler(Int32 x, Int32 y, NetOffice.OWC10Api.ByRef Menu, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void ChartSpace_BeforeRenderEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject, COMObject chartObject, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void ChartSpace_AfterRenderEventHandler(NetOffice.OWC10Api.ChChartDraw drawObject, COMObject chartObject);

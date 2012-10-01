@@ -10994,7 +10994,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timeScaleUnit">optional NetOffice.MSProjectApi.Enums.PjTimescaleUnit TimeScaleUnit = 3</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjAssignmentTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, Int32 count)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type, object timeScaleUnit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit, count);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
@@ -11025,7 +11025,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjAssignmentTimescaledData Type = 8</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjAssignmentTimescaledData type)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
@@ -11042,7 +11042,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timeScaleUnit">optional NetOffice.MSProjectApi.Enums.PjTimescaleUnit TimeScaleUnit = 3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjAssignmentTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type, object timeScaleUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);

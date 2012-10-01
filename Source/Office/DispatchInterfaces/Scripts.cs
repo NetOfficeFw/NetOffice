@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="extended">optional string Extended = </param>
 		/// <param name="scriptText">optional string ScriptText = </param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended, string scriptText)
+		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended, object scriptText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id, extended, scriptText);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location)
+		public NetOffice.OfficeApi.Script Add(object anchor, object location)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="language">optional NetOffice.OfficeApi.Enums.MsoScriptLanguage Language = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language)
+		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="id">optional string Id = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id)
+		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="extended">optional string Extended = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public NetOffice.OfficeApi.Script Add(object anchor, NetOffice.OfficeApi.Enums.MsoScriptLocation location, NetOffice.OfficeApi.Enums.MsoScriptLanguage language, string id, string extended)
+		public NetOffice.OfficeApi.Script Add(object anchor, object location, object language, object id, object extended)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(anchor, location, language, id, extended);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

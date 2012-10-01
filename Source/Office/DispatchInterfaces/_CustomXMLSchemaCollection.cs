@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fileName">optional string FileName = </param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName, bool installForAllUsers)
+		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI)
+		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="alias">optional string Alias = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias)
+		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fileName">optional string FileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLSchema Add(string namespaceURI, string alias, string fileName)
+		public NetOffice.OfficeApi.CustomXMLSchema Add(object namespaceURI, object alias, object fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

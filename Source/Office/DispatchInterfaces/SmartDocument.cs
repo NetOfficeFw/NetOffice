@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="considerAllSchemas">optional bool ConsiderAllSchemas = false</param>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
-		public void PickSolution(bool considerAllSchemas)
+		public void PickSolution(object considerAllSchemas)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(considerAllSchemas);
 			Invoker.Method(this, "PickSolution", paramsArray);

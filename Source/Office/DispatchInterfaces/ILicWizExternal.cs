@@ -258,7 +258,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="date">DateTime date</param>
 		/// <param name="pFormat">optional string pFormat = </param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public string FormatDate(DateTime date, string pFormat)
+		public string FormatDate(DateTime date, object pFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(date, pFormat);
 			object returnItem = Invoker.MethodReturn(this, "FormatDate", paramsArray);

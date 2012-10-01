@@ -653,7 +653,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+		public object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
@@ -696,7 +696,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type)
+		public object _ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
@@ -719,7 +719,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey)
+		public object _ApplyDataLabels(object type, object iMsoLegendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
@@ -743,7 +743,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText)
+		public object _ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
 			object returnItem = Invoker.MethodReturn(this, "_ApplyDataLabels", paramsArray);
@@ -867,7 +867,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -908,7 +908,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type)
+		public object ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -930,7 +930,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey)
+		public object ApplyDataLabels(object type, object iMsoLegendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -953,7 +953,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -977,7 +977,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1002,7 +1002,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1028,7 +1028,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1055,7 +1055,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showValue">optional object ShowValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1083,7 +1083,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1112,7 +1112,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public object ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		public object ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			object returnItem = Invoker.MethodReturn(this, "ApplyDataLabels", paramsArray);
@@ -1133,7 +1133,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="loc">NetOffice.OfficeApi.Enums.XlPieSliceLocation loc</param>
 		/// <param name="index">optional NetOffice.OfficeApi.Enums.XlPieSliceIndex Index = 2</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc, NetOffice.OfficeApi.Enums.XlPieSliceIndex index)
+		public Double PieSliceLocation(NetOffice.OfficeApi.Enums.XlPieSliceLocation loc, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(loc, index);
 			object returnItem = Invoker.MethodReturn(this, "PieSliceLocation", paramsArray);

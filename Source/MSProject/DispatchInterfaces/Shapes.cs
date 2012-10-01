@@ -277,7 +277,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="height">optional Single Height = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
+		public NetOffice.MSProjectApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -316,7 +316,7 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width)
+		public NetOffice.MSProjectApi.Shape AddPicture(string filename, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -440,7 +440,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="height">optional Single Height = -1</param>
 		/// <param name="newLayout">optional bool NewLayout = true</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width, Single height, bool newLayout)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type, object left, object top, object width, object height, object newLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height, newLayout);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -467,7 +467,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="style">optional Int32 Style = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style)
+		public NetOffice.MSProjectApi.Shape AddChart(object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -482,7 +482,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -498,7 +498,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="left">optional Single Left = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -515,7 +515,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="top">optional Single Top = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -533,7 +533,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -552,7 +552,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="height">optional Single Height = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.MSProjectApi.Shape AddChart(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, Single left, Single top, Single width, Single height)
+		public NetOffice.MSProjectApi.Shape AddChart(object style, object type, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);

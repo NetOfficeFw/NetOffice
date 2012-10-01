@@ -12,7 +12,7 @@ namespace NetOffice.OutlookApi
 	public delegate void Explorer_FolderSwitchEventHandler();
 	public delegate void Explorer_BeforeFolderSwitchEventHandler(COMObject NewFolder, ref bool Cancel);
 	public delegate void Explorer_ViewSwitchEventHandler();
-	public delegate void Explorer_BeforeViewSwitchEventHandler(COMObject NewView, ref bool Cancel);
+	public delegate void Explorer_BeforeViewSwitchEventHandler(object NewView, ref bool Cancel);
 	public delegate void Explorer_DeactivateEventHandler();
 	public delegate void Explorer_SelectionChangeEventHandler();
 	public delegate void Explorer_CloseEventHandler();
@@ -22,7 +22,7 @@ namespace NetOffice.OutlookApi
 	public delegate void Explorer_BeforeSizeEventHandler(ref bool Cancel);
 	public delegate void Explorer_BeforeItemCopyEventHandler(ref bool Cancel);
 	public delegate void Explorer_BeforeItemCutEventHandler(ref bool Cancel);
-	public delegate void Explorer_BeforeItemPasteEventHandler(ref COMObject ClipboardContent, NetOffice.OutlookApi.MAPIFolder Target, ref bool Cancel);
+	public delegate void Explorer_BeforeItemPasteEventHandler(ref object ClipboardContent, NetOffice.OutlookApi.MAPIFolder Target, ref bool Cancel);
 	public delegate void Explorer_AttachmentSelectionChangeEventHandler();
 	public delegate void Explorer_InlineResponseEventHandler(COMObject Item);
 	#pragma warning restore

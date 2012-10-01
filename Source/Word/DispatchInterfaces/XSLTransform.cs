@@ -61,7 +61,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Alias(bool allUsers)
+		public string get_Alias(object allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
@@ -75,7 +75,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_Alias(bool allUsers, string value)
+		public void set_Alias(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Alias", paramsArray, value);
@@ -87,7 +87,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string Alias(bool allUsers)
+		public string Alias(object allUsers)
 		{
 			return get_Alias(allUsers);
 		}
@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Location(bool allUsers)
+		public string get_Location(object allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_Location(bool allUsers, string value)
+		public void set_Location(object allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Location", paramsArray, value);
@@ -125,7 +125,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string Location(bool allUsers)
+		public string Location(object allUsers)
 		{
 			return get_Location(allUsers);
 		}

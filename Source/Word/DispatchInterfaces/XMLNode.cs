@@ -61,7 +61,7 @@ namespace NetOffice.WordApi
 		/// <param name="dataOnly">optional bool DataOnly</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_XML(bool dataOnly)
+		public string get_XML(object dataOnly)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);
 			object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
@@ -74,7 +74,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="dataOnly">optional bool DataOnly</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string XML(bool dataOnly)
+		public string XML(object dataOnly)
 		{
 			return get_XML(dataOnly);
 		}
@@ -86,7 +86,7 @@ namespace NetOffice.WordApi
 		/// <param name="advanced">optional bool Advanced</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_ValidationErrorText(bool advanced)
+		public string get_ValidationErrorText(object advanced)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(advanced);
 			object returnItem = Invoker.PropertyGet(this, "ValidationErrorText", paramsArray);
@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="advanced">optional bool Advanced</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string ValidationErrorText(bool advanced)
+		public string ValidationErrorText(object advanced)
 		{
 			return get_ValidationErrorText(advanced);
 		}
@@ -610,7 +610,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="fastSearchSkippingTextNodes">optional bool FastSearchSkippingTextNodes = true</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, string prefixMapping, bool fastSearchSkippingTextNodes)
+		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, object prefixMapping, object fastSearchSkippingTextNodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
@@ -639,7 +639,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, string prefixMapping)
+		public NetOffice.WordApi.XMLNode SelectSingleNode(string xPath, object prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SelectSingleNode", paramsArray);
@@ -654,7 +654,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		/// <param name="fastSearchSkippingTextNodes">optional bool FastSearchSkippingTextNodes = true</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, string prefixMapping, bool fastSearchSkippingTextNodes)
+		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, object prefixMapping, object fastSearchSkippingTextNodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping, fastSearchSkippingTextNodes);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
@@ -683,7 +683,7 @@ namespace NetOffice.WordApi
 		/// <param name="prefixMapping">optional string PrefixMapping = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, string prefixMapping)
+		public NetOffice.WordApi.XMLNodes SelectNodes(string xPath, object prefixMapping)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xPath, prefixMapping);
 			object returnItem = Invoker.MethodReturn(this, "SelectNodes", paramsArray);
@@ -749,7 +749,7 @@ namespace NetOffice.WordApi
 		/// <param name="errorText">optional object ErrorText</param>
 		/// <param name="clearedAutomatically">optional bool ClearedAutomatically = true</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText, bool clearedAutomatically)
+		public void SetValidationError(NetOffice.WordApi.Enums.WdXMLValidationStatus status, object errorText, object clearedAutomatically)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(status, errorText, clearedAutomatically);
 			Invoker.Method(this, "SetValidationError", paramsArray);

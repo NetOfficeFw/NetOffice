@@ -13,11 +13,11 @@ namespace NetOffice.OWC10Api
 	public delegate void Spreadsheet_BeforeKeyPressEventHandler(Int32 KeyAscii, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void Spreadsheet_BeforeKeyUpEventHandler(Int32 KeyCode, Int32 Shift, NetOffice.OWC10Api.ByRef Cancel);
 	public delegate void Spreadsheet_ClickEventHandler();
-	public delegate void Spreadsheet_CommandEnabledEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Enabled);
-	public delegate void Spreadsheet_CommandCheckedEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Checked);
-	public delegate void Spreadsheet_CommandTipTextEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Caption);
-	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(COMObject Command, NetOffice.OWC10Api.ByRef Cancel);
-	public delegate void Spreadsheet_CommandExecuteEventHandler(COMObject Command, bool Succeeded);
+	public delegate void Spreadsheet_CommandEnabledEventHandler(object Command, NetOffice.OWC10Api.ByRef Enabled);
+	public delegate void Spreadsheet_CommandCheckedEventHandler(object Command, NetOffice.OWC10Api.ByRef Checked);
+	public delegate void Spreadsheet_CommandTipTextEventHandler(object Command, NetOffice.OWC10Api.ByRef Caption);
+	public delegate void Spreadsheet_CommandBeforeExecuteEventHandler(object Command, NetOffice.OWC10Api.ByRef Cancel);
+	public delegate void Spreadsheet_CommandExecuteEventHandler(object Command, bool Succeeded);
 	public delegate void Spreadsheet_DblClickEventHandler();
 	public delegate void Spreadsheet_EndEditEventHandler(bool Accept, NetOffice.OWC10Api.ByRef FinalValue, NetOffice.OWC10Api.ByRef Cancel, NetOffice.OWC10Api.ByRef ErrorDescription);
 	public delegate void Spreadsheet_InitializeEventHandler();

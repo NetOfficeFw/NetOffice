@@ -61,7 +61,7 @@ namespace NetOffice.WordApi
 		/// <param name="dataOnly">optional bool DataOnly</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_XML(bool dataOnly)
+		public string get_XML(object dataOnly)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(dataOnly);
 			object returnItem = Invoker.PropertyGet(this, "XML", paramsArray);
@@ -74,7 +74,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="dataOnly">optional bool DataOnly</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string XML(bool dataOnly)
+		public string XML(object dataOnly)
 		{
 			return get_XML(dataOnly);
 		}
@@ -4921,7 +4921,7 @@ namespace NetOffice.WordApi
 		/// <param name="fontSize">optional Int32 FontSize = 0</param>
 		/// <param name="fontName">optional string FontName = </param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void PhoneticGuide(string text, NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType alignment, Int32 raise, Int32 fontSize, string fontName)
+		public void PhoneticGuide(string text, object alignment, object raise, object fontSize, object fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise, fontSize, fontName);
 			Invoker.Method(this, "PhoneticGuide", paramsArray);
@@ -4946,7 +4946,7 @@ namespace NetOffice.WordApi
 		/// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void PhoneticGuide(string text, NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType alignment)
+		public void PhoneticGuide(string text, object alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment);
 			Invoker.Method(this, "PhoneticGuide", paramsArray);
@@ -4960,7 +4960,7 @@ namespace NetOffice.WordApi
 		/// <param name="raise">optional Int32 Raise = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void PhoneticGuide(string text, NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType alignment, Int32 raise)
+		public void PhoneticGuide(string text, object alignment, object raise)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise);
 			Invoker.Method(this, "PhoneticGuide", paramsArray);
@@ -4975,7 +4975,7 @@ namespace NetOffice.WordApi
 		/// <param name="fontSize">optional Int32 FontSize = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void PhoneticGuide(string text, NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType alignment, Int32 raise, Int32 fontSize)
+		public void PhoneticGuide(string text, object alignment, object raise, object fontSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, alignment, raise, fontSize);
 			Invoker.Method(this, "PhoneticGuide", paramsArray);
@@ -5843,7 +5843,7 @@ namespace NetOffice.WordApi
 		/// <param name="commonTerms">optional bool CommonTerms = false</param>
 		/// <param name="useVariants">optional bool UseVariants = false</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void TCSCConverter(NetOffice.WordApi.Enums.WdTCSCConverterDirection wdTCSCConverterDirection, bool commonTerms, bool useVariants)
+		public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms, object useVariants)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection, commonTerms, useVariants);
 			Invoker.Method(this, "TCSCConverter", paramsArray);
@@ -5866,7 +5866,7 @@ namespace NetOffice.WordApi
 		/// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void TCSCConverter(NetOffice.WordApi.Enums.WdTCSCConverterDirection wdTCSCConverterDirection)
+		public void TCSCConverter(object wdTCSCConverterDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection);
 			Invoker.Method(this, "TCSCConverter", paramsArray);
@@ -5879,7 +5879,7 @@ namespace NetOffice.WordApi
 		/// <param name="commonTerms">optional bool CommonTerms = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public void TCSCConverter(NetOffice.WordApi.Enums.WdTCSCConverterDirection wdTCSCConverterDirection, bool commonTerms)
+		public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(wdTCSCConverterDirection, commonTerms);
 			Invoker.Method(this, "TCSCConverter", paramsArray);
@@ -6102,7 +6102,7 @@ namespace NetOffice.WordApi
 		/// <param name="alignment">Int32 Alignment</param>
 		/// <param name="relativeTo">optional Int32 RelativeTo = 0</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void InsertAlignmentTab(Int32 alignment, Int32 relativeTo)
+		public void InsertAlignmentTab(Int32 alignment, object relativeTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alignment, relativeTo);
 			Invoker.Method(this, "InsertAlignmentTab", paramsArray);
@@ -6126,7 +6126,7 @@ namespace NetOffice.WordApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="matchDestination">optional bool MatchDestination = false</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ImportFragment(string fileName, bool matchDestination)
+		public void ImportFragment(string fileName, object matchDestination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, matchDestination);
 			Invoker.Method(this, "ImportFragment", paramsArray);
@@ -6161,7 +6161,7 @@ namespace NetOffice.WordApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		/// <param name="fixedFormatExtClassPtr">optional object FixedFormatExtClassPtr</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1, object fixedFormatExtClassPtr)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object fixedFormatExtClassPtr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6188,7 +6188,7 @@ namespace NetOffice.WordApi
 		/// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6203,7 +6203,7 @@ namespace NetOffice.WordApi
 		/// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6219,7 +6219,7 @@ namespace NetOffice.WordApi
 		/// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6236,7 +6236,7 @@ namespace NetOffice.WordApi
 		/// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6254,7 +6254,7 @@ namespace NetOffice.WordApi
 		/// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6273,7 +6273,7 @@ namespace NetOffice.WordApi
 		/// <param name="keepIRM">optional bool KeepIRM = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6293,7 +6293,7 @@ namespace NetOffice.WordApi
 		/// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6314,7 +6314,7 @@ namespace NetOffice.WordApi
 		/// <param name="docStructureTags">optional bool DocStructureTags = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6336,7 +6336,7 @@ namespace NetOffice.WordApi
 		/// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);
@@ -6359,7 +6359,7 @@ namespace NetOffice.WordApi
 		/// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, bool openAfterExport, NetOffice.WordApi.Enums.WdExportOptimizeFor optimizeFor, bool exportCurrentPage, NetOffice.WordApi.Enums.WdExportItem item, bool includeDocProps, bool keepIRM, NetOffice.WordApi.Enums.WdExportCreateBookmarks createBookmarks, bool docStructureTags, bool bitmapMissingFonts, bool useISO19005_1)
+		public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1);
 			Invoker.Method(this, "ExportAsFixedFormat", paramsArray);

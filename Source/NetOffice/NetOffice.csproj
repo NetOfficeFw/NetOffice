@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice</RootNamespace>
     <AssemblyName>NetOffice</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -60,7 +60,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>NetOffice_v2.0.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -113,7 +113,7 @@
     <EmbeddedResource Include="KeyTokens.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NetOffice_v2.0.snk" />
+    <None Include="NetOffice_v4.0.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

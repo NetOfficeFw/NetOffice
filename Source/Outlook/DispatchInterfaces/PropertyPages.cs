@@ -181,7 +181,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="page">object Page</param>
 		/// <param name="title">optional string Title</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
-		public void Add(object page, string title)
+		public void Add(object page, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, title);
 			Invoker.Method(this, "Add", paramsArray);

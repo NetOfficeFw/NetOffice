@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="axisGroup">optional NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.ExcelApi.Axis this[NetOffice.ExcelApi.Enums.XlAxisType type, NetOffice.ExcelApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.ExcelApi.Axis this[NetOffice.ExcelApi.Enums.XlAxisType type, object axisGroup]
 		{
 			get
 			{

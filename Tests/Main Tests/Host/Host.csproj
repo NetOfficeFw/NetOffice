@@ -135,6 +135,14 @@
       <Project>{B5DB7C5C-BBB1-4E10-939E-687FEC1FEB44}</Project>
       <Name>PowerPointTestsVB</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProjectTestsCSharp\ProjectTestsCSharp.csproj">
+      <Project>{D83EC3BE-1306-408B-8542-762705C976F4}</Project>
+      <Name>ProjectTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectTestsVB\ProjectTestsVB.vbproj">
+      <Project>{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}</Project>
+      <Name>ProjectTestsVB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tests.Core\Tests.Core.csproj">
       <Project>{9907200C-7CFD-4B1B-89F3-42DE866B194F}</Project>
       <Name>Tests.Core</Name>

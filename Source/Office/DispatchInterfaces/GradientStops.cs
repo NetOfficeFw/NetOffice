@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void Delete(Int32 index)
+		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void Insert(Int32 rGB, Single position, Single transparency, Int32 index)
+		public void Insert(Int32 rGB, Single position, object transparency, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void Insert(Int32 rGB, Single position, Single transparency)
+		public void Insert(Int32 rGB, Single position, object transparency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency);
 			Invoker.Method(this, "Insert", paramsArray);
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="index">optional Int32 Index = -1</param>
 		/// <param name="brightness">optional Single Brightness = 0</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public void Insert2(Int32 rGB, Single position, Single transparency, Int32 index, Single brightness)
+		public void Insert2(Int32 rGB, Single position, object transparency, object index, object brightness)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index, brightness);
 			Invoker.Method(this, "Insert2", paramsArray);
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="transparency">optional Single Transparency = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public void Insert2(Int32 rGB, Single position, Single transparency)
+		public void Insert2(Int32 rGB, Single position, object transparency)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency);
 			Invoker.Method(this, "Insert2", paramsArray);
@@ -225,7 +225,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="index">optional Int32 Index = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
-		public void Insert2(Int32 rGB, Single position, Single transparency, Int32 index)
+		public void Insert2(Int32 rGB, Single position, object transparency, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rGB, position, transparency, index);
 			Invoker.Method(this, "Insert2", paramsArray);

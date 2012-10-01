@@ -84,7 +84,7 @@ namespace ExcelTestsCSharp
                     if (!_workbookDeactivateEvent)
                         errorMessage += "SheetDeactivateEvent failed ";
 
-                    return new TestResult(true, DateTime.Now.Subtract(startTime), "", null, "");
+                    return new TestResult(true, DateTime.Now.Subtract(startTime), errorMessage, null, "");
                 }
             }
             catch (Exception exception)

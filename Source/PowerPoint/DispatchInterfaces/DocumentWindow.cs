@@ -447,7 +447,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		/// <param name="toLeft">optional Int32 ToLeft = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void LargeScroll(Int32 down, Int32 up, Int32 toRight, Int32 toLeft)
+		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -470,7 +470,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="down">optional Int32 Down = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void LargeScroll(Int32 down)
+		public void LargeScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -483,7 +483,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="up">optional Int32 Up = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void LargeScroll(Int32 down, Int32 up)
+		public void LargeScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -497,7 +497,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void LargeScroll(Int32 down, Int32 up, Int32 toRight)
+		public void LargeScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
 			Invoker.Method(this, "LargeScroll", paramsArray);
@@ -511,7 +511,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		/// <param name="toLeft">optional Int32 ToLeft = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void SmallScroll(Int32 down, Int32 up, Int32 toRight, Int32 toLeft)
+		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight, toLeft);
 			Invoker.Method(this, "SmallScroll", paramsArray);
@@ -534,7 +534,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="down">optional Int32 Down = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void SmallScroll(Int32 down)
+		public void SmallScroll(object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down);
 			Invoker.Method(this, "SmallScroll", paramsArray);
@@ -547,7 +547,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="up">optional Int32 Up = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void SmallScroll(Int32 down, Int32 up)
+		public void SmallScroll(object down, object up)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up);
 			Invoker.Method(this, "SmallScroll", paramsArray);
@@ -561,7 +561,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="toRight">optional Int32 ToRight = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void SmallScroll(Int32 down, Int32 up, Int32 toRight)
+		public void SmallScroll(object down, object up, object toRight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(down, up, toRight);
 			Invoker.Method(this, "SmallScroll", paramsArray);
@@ -636,7 +636,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="height">Single Height</param>
 		/// <param name="start">optional NetOffice.OfficeApi.Enums.MsoTriState Start = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void ScrollIntoView(Single left, Single top, Single width, Single height, NetOffice.OfficeApi.Enums.MsoTriState start)
+		public void ScrollIntoView(Single left, Single top, Single width, Single height, object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, top, width, height, start);
 			Invoker.Method(this, "ScrollIntoView", paramsArray);

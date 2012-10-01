@@ -62,7 +62,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="level">optional Int32 Level</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Int32 get_ItemCount(Int32 level)
+		public Int32 get_ItemCount(object level)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(level);
 			object returnItem = Invoker.PropertyGet(this, "ItemCount", paramsArray);
@@ -75,7 +75,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="level">optional Int32 Level</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public Int32 ItemCount(Int32 level)
+		public Int32 ItemCount(object level)
 		{
 			return get_ItemCount(level);
 		}
@@ -207,7 +207,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="level">optional Int32 Level</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OWC10Api.ChCategoryLabel this[object index, Int32 level]
+		public NetOffice.OWC10Api.ChCategoryLabel this[object index, object level]
 		{
 			get
 {			

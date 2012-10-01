@@ -132,7 +132,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="before">optional object Before</param>
 		/// <param name="remove">optional bool Remove = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, bool remove)
+		public void InsertFieldSet(NetOffice.OWC10Api.PivotFieldSet fieldSet, object before, object remove)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldSet, before, remove);
 			Invoker.Method(this, "InsertFieldSet", paramsArray);

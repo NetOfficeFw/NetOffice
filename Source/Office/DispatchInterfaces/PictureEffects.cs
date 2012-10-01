@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="effectType">NetOffice.OfficeApi.Enums.MsoPictureEffectType EffectType</param>
 		/// <param name="position">optional Int32 Position = -1</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, Int32 position)
+		public NetOffice.OfficeApi.PictureEffect Insert(NetOffice.OfficeApi.Enums.MsoPictureEffectType effectType, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectType, position);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
@@ -144,7 +144,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("Office", 14,15)]
-		public void Delete(Int32 index)
+		public void Delete(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "Delete", paramsArray);

@@ -153,7 +153,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.AnimationPoint Add(Int32 index)
+		public NetOffice.PowerPointApi.AnimationPoint Add(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

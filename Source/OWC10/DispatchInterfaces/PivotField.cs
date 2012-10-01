@@ -1352,7 +1352,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="varChildMembers">object varChildMembers</param>
 		/// <param name="bstrCaption">optional string bstrCaption = </param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotMember AddCustomGroupMember(object parent, object varChildMembers, string bstrCaption)
+		public NetOffice.OWC10Api.PivotMember AddCustomGroupMember(object parent, object varChildMembers, object bstrCaption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parent, varChildMembers, bstrCaption);
 			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupMember", paramsArray);

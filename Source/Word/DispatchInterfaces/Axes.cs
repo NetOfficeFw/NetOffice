@@ -150,7 +150,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.WordApi.Axis this[NetOffice.WordApi.Enums.XlAxisType type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.WordApi.Axis this[NetOffice.WordApi.Enums.XlAxisType type, object axisGroup]
 		{
 			get
 			{
