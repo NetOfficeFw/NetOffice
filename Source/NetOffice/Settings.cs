@@ -5,11 +5,12 @@ using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace NetOffice
 {
-
-
     /// <summary>
     /// Core Settings
     /// </summary>
@@ -29,12 +30,23 @@ namespace NetOffice
 
         #endregion
 
+        #region Ctor
+        
+        /// <summary>
+        /// Static Type Constructor 
+        /// </summary>
+        static Settings()
+        {
+            _messageFilter = new RetryMessageFilter();
+        }
+
+        #endregion
+
         #region Fields
 
         private static CultureInfo  _cultureInfo;
         private static bool         _eventsEnabled = true;
-        private static bool         _enableMessageFilter;
-        private static IntPtr       _messageFilter;
+        private static RetryMessageFilter  _messageFilter;
         private static bool         _enableAutomaticQuit;
         private static bool         _enableAdHocLoading = true;
         private static bool         _enableDeepLoading = true;
@@ -127,26 +139,13 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the Message Filter is enabled. false by default
+        /// A predefined implementation of IMessageFilter
         /// </summary>
-        public static bool EnableMessageFilter
+        public static RetryMessageFilter MessageFilter
         {
             get
             {
-                return _enableMessageFilter;
-            }
-            set
-            {
-                if ((value == true) && (IntPtr.Zero == _messageFilter))
-                {
-                    CoRegisterMessageFilter((IntPtr)0, ref _messageFilter);
-                }
-                else if ((value == false) && (IntPtr.Zero != _messageFilter))
-                {
-                    IntPtr filter = IntPtr.Zero;
-                    CoRegisterMessageFilter(_messageFilter, ref filter);
-                }
-                _enableMessageFilter = value;
+                return _messageFilter;
             }
         }
 

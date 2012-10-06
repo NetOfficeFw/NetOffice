@@ -19,7 +19,7 @@ namespace ProjectTestsCSharp
 
         public string Description
         {
-            get { return "Add a new project and add 10 tasks."; }
+            get { return "Test events"; }
         }
 
         public string OfficeProduct
@@ -34,6 +34,7 @@ namespace ProjectTestsCSharp
 
         public TestResult DoTest()
         {
+            NetOffice.Settings.MessageFilter.Enabled = true;
             MSProject.Application application = null;
             DateTime startTime = DateTime.Now;
             try
@@ -76,6 +77,8 @@ namespace ProjectTestsCSharp
             }
             finally
             {
+                NetOffice.Settings.MessageFilter.Enabled = false;
+
                 if (null != application)
                 {
                     application.Quit(false);

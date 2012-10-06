@@ -7,7 +7,7 @@ Public Class Test02
 
     Public ReadOnly Property Description As String Implements Tests.Core.ITestPackage.Description
         Get
-            Return "Add a new project and add 10 tasks."
+            Return "Test events."
         End Get
     End Property
 
@@ -59,6 +59,8 @@ Public Class Test02
         Dim application As MSProject.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
+            NetOffice.Settings.MessageFilter.Enabled = True
+
             application = New MSProject.Application()
 
             Dim taskNewHandler As MSProject.Application_ProjectTaskNewEventHandler = AddressOf Me.ApplicationProjectTaskNewEvent
@@ -101,6 +103,8 @@ Public Class Test02
             Return New TestResult(False, DateTime.Now.Subtract(startTime), ex.Message, ex, "")
 
         Finally
+
+            NetOffice.Settings.MessageFilter.Enabled = False
 
             If Not IsNothing(application) Then
                 application.Quit(False)
