@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IControls 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IControls : COMObject ,IEnumerable<object>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -90,12 +90,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public object this[Int32 index]
 		{
@@ -117,9 +117,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<object> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
        public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -132,9 +132,9 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

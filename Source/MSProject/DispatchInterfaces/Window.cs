@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Window 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Window : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public string Caption
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public bool Visible
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Enums.PjWindowState WindowState
 		{
 			get
@@ -135,10 +135,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Left
 		{
 			get
@@ -155,10 +155,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Top
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Width
 		{
 			get
@@ -195,10 +195,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Height
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -231,11 +231,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -248,10 +248,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public object Index
 		{
 			get
@@ -271,10 +271,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Pane ActivePane
 		{
 			get
@@ -287,10 +287,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Pane TopPane
 		{
 			get
@@ -303,10 +303,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Pane BottomPane
 		{
 			get
@@ -323,9 +323,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void Close()
 		{
 			object[] paramsArray = null;
@@ -333,9 +333,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void Activate()
 		{
 			object[] paramsArray = null;
@@ -343,9 +343,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSHTMLApi.IHTMLDocument2 WebBrowserControlWindow()
 		{
 			object[] paramsArray = null;
@@ -355,10 +355,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="frameName">object FrameName</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSHTMLApi.IHTMLDocument2 WebBrowserControlFrame(object frameName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(frameName);
@@ -368,9 +368,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void Refresh()
 		{
 			object[] paramsArray = null;

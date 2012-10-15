@@ -23,12 +23,12 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.2")]
-[assembly: AssemblyFileVersion("1.5.1.2")]
+[assembly: AssemblyVersion("1.5.1.3")]
+[assembly: AssemblyFileVersion("1.5.1.3")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Access")]
 [assembly: Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")]
-[assembly: NetOfficeAssemblyAttribute("1.5.1")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1.3")]
 
 /*
 Alias Table

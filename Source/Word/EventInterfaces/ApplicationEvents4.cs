@@ -470,8 +470,8 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.Document newDoc = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			Int32 newStartRecord = (Int32)startRecord;
-			Int32 newEndRecord = (Int32)endRecord;
+			Int32 newStartRecord = Convert.ToInt32(startRecord);
+			Int32 newEndRecord = Convert.ToInt32(endRecord);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newStartRecord;
@@ -651,15 +651,15 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.Document newDoc = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			Int32 newcpDeliveryAddrStart = (Int32)cpDeliveryAddrStart;
-			Int32 newcpDeliveryAddrEnd = (Int32)cpDeliveryAddrEnd;
-			Int32 newcpReturnAddrStart = (Int32)cpReturnAddrStart;
-			Int32 newcpReturnAddrEnd = (Int32)cpReturnAddrEnd;
-			Int32 newxaWidth = (Int32)xaWidth;
-			Int32 newyaHeight = (Int32)yaHeight;
-			string newbstrPrinterName = (string)bstrPrinterName;
-			string newbstrPaperFeed = (string)bstrPaperFeed;
-			bool newfPrint = (bool)fPrint;
+			Int32 newcpDeliveryAddrStart = Convert.ToInt32(cpDeliveryAddrStart);
+			Int32 newcpDeliveryAddrEnd = Convert.ToInt32(cpDeliveryAddrEnd);
+			Int32 newcpReturnAddrStart = Convert.ToInt32(cpReturnAddrStart);
+			Int32 newcpReturnAddrEnd = Convert.ToInt32(cpReturnAddrEnd);
+			Int32 newxaWidth = Convert.ToInt32(xaWidth);
+			Int32 newyaHeight = Convert.ToInt32(yaHeight);
+			string newbstrPrinterName = Convert.ToString(bstrPrinterName);
+			string newbstrPaperFeed = Convert.ToString(bstrPaperFeed);
+			bool newfPrint = Convert.ToBoolean(fPrint);
 			object[] paramsArray = new object[11];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newcpDeliveryAddrStart;
@@ -738,7 +738,7 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.ProtectedViewWindow newPvWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
-			Int32 newCloseReason = (Int32)closeReason;
+			Int32 newCloseReason = Convert.ToInt32(closeReason);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newPvWindow;
 			paramsArray[1] = newCloseReason;

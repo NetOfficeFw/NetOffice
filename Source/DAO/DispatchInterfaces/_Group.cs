@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _Group 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 3.6,12.0
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 3.6,12.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _Group : _DAO
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string Name
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string PID
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Users Users
 		{
 			get
@@ -134,12 +134,12 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="pID">optional object PID</param>
 		/// <param name="password">optional object Password</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID, password);
@@ -149,10 +149,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.User CreateUser()
 		{
 			object[] paramsArray = null;
@@ -162,11 +162,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.User CreateUser(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -176,12 +176,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="pID">optional object PID</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.User CreateUser(object name, object pID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);

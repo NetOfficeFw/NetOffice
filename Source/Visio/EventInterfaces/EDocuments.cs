@@ -1098,8 +1098,8 @@ namespace NetOffice.VisioApi
 			}
 
 			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			Int32 newDataRecordsetID = (Int32)dataRecordsetID;
-			Int32 newDataRowID = (Int32)dataRowID;
+			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
+			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newShape;
 			paramsArray[1] = newDataRecordsetID;
@@ -1117,8 +1117,8 @@ namespace NetOffice.VisioApi
 			}
 
 			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
-			Int32 newDataRecordsetID = (Int32)dataRecordsetID;
-			Int32 newDataRowID = (Int32)dataRowID;
+			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
+			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newShape;
 			paramsArray[1] = newDataRecordsetID;

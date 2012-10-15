@@ -164,7 +164,7 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.XMLNode newNewXMLNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewXMLNode;
 			paramsArray[1] = newInUndoRedo;
@@ -182,7 +182,7 @@ namespace NetOffice.WordApi
 
 			NetOffice.WordApi.Range newDeletedRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, deletedRange) as NetOffice.WordApi.Range;
 			NetOffice.WordApi.XMLNode newOldXMLNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newDeletedRange;
 			paramsArray[1] = newOldXMLNode;
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.ContentControl newNewContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newContentControl) as NetOffice.WordApi.ContentControl;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewContentControl;
 			paramsArray[1] = newInUndoRedo;
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.ContentControl newOldContentControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldContentControl) as NetOffice.WordApi.ContentControl;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newOldContentControl;
 			paramsArray[1] = newInUndoRedo;
@@ -303,10 +303,10 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.Range newRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.WordApi.Range;
-			string newName = (string)name;
-			string newCategory = (string)category;
-			string newBlockType = (string)blockType;
-			string newTemplate = (string)template;
+			string newName = Convert.ToString(name);
+			string newCategory = Convert.ToString(category);
+			string newBlockType = Convert.ToString(blockType);
+			string newTemplate = Convert.ToString(template);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newRange;
 			paramsArray[1] = newName;

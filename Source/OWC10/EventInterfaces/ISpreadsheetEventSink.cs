@@ -181,8 +181,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			NetOffice.OWC10Api.ByRef newMenu = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
@@ -202,8 +202,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newShift = (Int32)shift;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newShift = Convert.ToInt32(shift);
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
@@ -221,7 +221,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyAscii = (Int32)keyAscii;
+			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
@@ -238,8 +238,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newShift = (Int32)shift;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newShift = Convert.ToInt32(shift);
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
@@ -339,7 +339,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			bool newSucceeded = (bool)succeeded;
+			bool newSucceeded = Convert.ToBoolean(succeeded);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newSucceeded;
@@ -368,7 +368,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			bool newAccept = (bool)accept;
+			bool newAccept = Convert.ToBoolean(accept);
 			NetOffice.OWC10Api.ByRef newFinalValue = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, finalValue) as NetOffice.OWC10Api.ByRef;
 			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			NetOffice.OWC10Api.ByRef newErrorDescription = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, errorDescription) as NetOffice.OWC10Api.ByRef;
@@ -402,8 +402,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newShift = (Int32)shift;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newShift = Convert.ToInt32(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -419,7 +419,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyAscii = (Int32)keyAscii;
+			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newKeyAscii;
 			_eventBinding.RaiseCustomEvent("KeyPress", ref paramsArray);
@@ -434,8 +434,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newShift = (Int32)shift;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newShift = Convert.ToInt32(shift);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -464,10 +464,10 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -485,8 +485,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
 			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newButton;
@@ -504,8 +504,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
 			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newButton;
@@ -523,10 +523,10 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -544,8 +544,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			bool newPage = (bool)page;
-			Int32 newCount = (Int32)count;
+			bool newPage = Convert.ToBoolean(page);
+			Int32 newCount = Convert.ToInt32(count);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;

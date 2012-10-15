@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Profiles 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Profiles : COMObject ,IEnumerable<NetOffice.MSProjectApi.Profile>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Profile this[object index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Profile DefaultProfile
 		{
 			get
@@ -129,10 +129,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Profile ActiveProfile
 		{
 			get
@@ -149,13 +149,13 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="server">string Server</param>
 		/// <param name="loginType">optional NetOffice.MSProjectApi.Enums.PjLoginType LoginType = 1</param>
 		/// <param name="userName">optional string UserName = </param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Profile Add(string name, string server, object loginType, object userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType, userName);
@@ -165,12 +165,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="server">string Server</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Profile Add(string name, string server)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server);
@@ -180,13 +180,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="server">string Server</param>
 		/// <param name="loginType">optional NetOffice.MSProjectApi.Enums.PjLoginType LoginType = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Profile Add(string name, string server, object loginType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType);
@@ -200,9 +200,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.Profile> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
        public IEnumerator<NetOffice.MSProjectApi.Profile> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -215,9 +215,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

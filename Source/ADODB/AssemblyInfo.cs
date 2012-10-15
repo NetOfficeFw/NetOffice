@@ -19,12 +19,12 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.2")]
-[assembly: AssemblyFileVersion("1.5.1.2")]
+[assembly: AssemblyVersion("1.5.1.3")]
+[assembly: AssemblyFileVersion("1.5.1.3")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("ADODB")]
 [assembly: Guid("00000201-0000-0010-8000-00AA006D2EA4")]
-[assembly: NetOfficeAssemblyAttribute("1.5.1")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1.3")]
 
 /*
 Alias Table

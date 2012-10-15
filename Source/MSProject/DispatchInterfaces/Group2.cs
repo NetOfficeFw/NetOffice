@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Group2 
-	/// SupportByVersion MSProject, 11,14
+	/// SupportByVersion MSProject, 14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,14)]
+	[SupportByVersionAttribute("MSProject", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Group2 : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public string Name
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public Int32 Index
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public NetOffice.MSProjectApi.GroupCriteria2 GroupCriteria
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public bool ShowSummary
 		{
 			get
@@ -182,10 +182,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public bool GroupAssignments
 		{
 			get
@@ -202,10 +202,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public bool MaintainHierarchy
 		{
 			get
@@ -226,9 +226,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

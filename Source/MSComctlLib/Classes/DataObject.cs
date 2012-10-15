@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass DataObject 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataObject : IVBDataObject
 	{

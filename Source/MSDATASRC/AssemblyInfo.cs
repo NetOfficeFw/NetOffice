@@ -6,7 +6,7 @@ using NetOffice;
 /*
     Contains the following Type Libraries:
 	Name - Description - SupportByVersion
-	MSDATASRC - Microsoft Data Source Interfaces - 1
+	MSDATASRC - Microsoft Data Source Interfaces - 4
 
 */
 
@@ -18,17 +18,17 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.2")]
-[assembly: AssemblyFileVersion("1.5.1.2")]
+[assembly: AssemblyVersion("1.5.1.3")]
+[assembly: AssemblyFileVersion("1.5.1.3")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSDATASRC")]
 [assembly: Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED")]
-[assembly: NetOfficeAssemblyAttribute("1.5.1")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1.3")]
 
 /*
 Alias Table
  
-[SupportByVersionAttribute("MSDATASRC", 1)]
+[SupportByVersionAttribute("MSDATASRC", 4)]
 DataMember as string
 
 */

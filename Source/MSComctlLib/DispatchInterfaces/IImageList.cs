@@ -10,9 +10,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IImageList 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IImageList : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int16 ImageHeight
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int16 ImageWidth
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int32 MaskColor
 		{
 			get
@@ -134,10 +134,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public bool UseMaskColor
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IImages ListImages
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Int32 hImageList
 		{
@@ -196,10 +196,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int32 BackColor
 		{
 			get
@@ -220,11 +220,11 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="key1">object Key1</param>
 		/// <param name="key2">object Key2</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public stdole.Picture Overlay(object key1, object key2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, key2);
@@ -234,10 +234,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void AboutBox()
 		{
 			object[] paramsArray = null;

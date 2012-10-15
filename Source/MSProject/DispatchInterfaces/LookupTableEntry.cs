@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface LookupTableEntry 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class LookupTableEntry : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public string Name
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.OutlineCode Parent
 		{
 			get
@@ -126,10 +126,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.LookupTableEntry ParentEntry
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Level
 		{
 			get
@@ -162,10 +162,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 UniqueID
 		{
 			get
@@ -177,10 +177,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Index
 		{
 			get
@@ -192,10 +192,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public string Description
 		{
 			get
@@ -212,10 +212,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public bool IsValid
 		{
 			get
@@ -227,10 +227,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public string FullName
 		{
 			get
@@ -242,10 +242,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public string Cookie
 		{
 			get
@@ -257,10 +257,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public string LocalizedCookie
 		{
 			get
@@ -276,9 +276,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

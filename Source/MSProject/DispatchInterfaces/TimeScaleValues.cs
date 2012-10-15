@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface TimeScaleValues 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TimeScaleValues : COMObject ,IEnumerable<NetOffice.MSProjectApi.TimeScaleValue>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.TimeScaleValue this[Int32 index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -124,11 +124,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public object Parent
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="value">object Value</param>
 		/// <param name="position">optional object Position</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.TimeScaleValue Add(object value, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value, position);
@@ -159,11 +159,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="value">object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.TimeScaleValue Add(object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(value);
@@ -177,9 +177,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.TimeScaleValue> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
        public IEnumerator<NetOffice.MSProjectApi.TimeScaleValue> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -192,9 +192,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

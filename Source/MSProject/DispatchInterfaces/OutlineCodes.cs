@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface OutlineCodes 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OutlineCodes : COMObject ,IEnumerable<NetOffice.MSProjectApi.OutlineCode>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -106,11 +106,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.OutlineCode this[object index]
 		{
@@ -124,10 +124,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.OutlineCode Add(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, name);
@@ -162,9 +162,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.OutlineCode> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
        public IEnumerator<NetOffice.MSProjectApi.OutlineCode> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -177,9 +177,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

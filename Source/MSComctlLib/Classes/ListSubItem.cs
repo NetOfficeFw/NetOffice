@@ -14,9 +14,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass ListSubItem 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ListSubItem : IListSubItem
 	{

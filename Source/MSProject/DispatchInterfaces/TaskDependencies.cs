@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface TaskDependencies 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TaskDependencies : COMObject ,IEnumerable<NetOffice.MSProjectApi.TaskDependency>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.TaskDependency this[Int32 index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Task Parent
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -144,12 +144,12 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>
 		/// <param name="lag">optional object Lag</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, object type, object lag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type, lag);
@@ -159,11 +159,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
@@ -173,12 +173,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public NetOffice.MSProjectApi.TaskDependency Add(NetOffice.MSProjectApi.Task from, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, type);
@@ -192,9 +192,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.TaskDependency> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
        public IEnumerator<NetOffice.MSProjectApi.TaskDependency> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -207,9 +207,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14
+		/// SupportByVersionAttribute MSProject, 11,12,14,15
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

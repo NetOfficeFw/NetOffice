@@ -278,8 +278,8 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newTargetPivotTable;
 			paramsArray[1] = newValueChangeStart;
@@ -300,8 +300,8 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newTargetPivotTable;
 			paramsArray[1] = newValueChangeStart;
@@ -322,8 +322,8 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newTargetPivotTable;
 			paramsArray[1] = newValueChangeStart;

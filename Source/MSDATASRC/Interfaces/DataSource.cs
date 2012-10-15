@@ -9,9 +9,9 @@ namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
 	/// Interface DataSource 
-	/// SupportByVersion MSDATASRC, 1
+	/// SupportByVersion MSDATASRC, 4
 	///</summary>
-	[SupportByVersionAttribute("MSDATASRC", 1)]
+	[SupportByVersionAttribute("MSDATASRC", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSource : COMObject
 	{
@@ -77,12 +77,12 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		/// <param name="riid">Guid riid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public object getDataMember(string bstrDM, Guid riid)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM, riid);
@@ -92,11 +92,11 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public string getDataMemberName(Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
@@ -105,10 +105,10 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 getDataMemberCount()
 		{
 			object[] paramsArray = null;
@@ -117,11 +117,11 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);
@@ -130,11 +130,11 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pDSL);

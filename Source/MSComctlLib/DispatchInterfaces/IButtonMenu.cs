@@ -10,9 +10,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IButtonMenu 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IButtonMenu : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public string _ObjectDefault
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public bool Enabled
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int16 Index
 		{
 			get
@@ -134,10 +134,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public string Key
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IButton Parent
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public object Tag
 		{
 			get
@@ -203,10 +203,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public string Text
 		{
 			get
@@ -223,10 +223,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public bool Visible
 		{
 			get

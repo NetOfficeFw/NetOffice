@@ -47,64 +47,64 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{EF3D5B39-D8F7-4E5F-92BF-3B70DBE06540}</Project>
-      <Name>OfficeApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Excel\ExcelApi.csproj">
-      <Project>{FB03C0C0-932C-413C-8CC2-EBFA2A835A7D}</Project>
+      <Project>{43C2FFD2-1680-490A-B0CF-BE425D6EEC7C}</Project>
       <Name>ExcelApi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
-      <Project>{A71FA893-A49C-4C48-8B10-0559BFA67374}</Project>
+      <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
       <Name>VBIDEApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Word\WordApi.csproj">
-      <Project>{C89716B0-05AF-4BBD-A174-1837D410E357}</Project>
+      <Project>{5C457066-D488-4BC1-B7F8-1E90F2A80648}</Project>
       <Name>WordApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Outlook\OutlookApi.csproj">
-      <Project>{6BACBE04-E2AF-4082-95E2-4A98D6D4BD7A}</Project>
+      <Project>{98DE103A-F036-4814-A740-9B4DE13001FF}</Project>
       <Name>OutlookApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj">
-      <Project>{DAFA8EF6-F6A6-4EE5-885B-94D38A9A3688}</Project>
+      <Project>{D2DF07D1-46EA-4578-9183-9ABB368547E5}</Project>
       <Name>PowerPointApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Access\AccessApi.csproj">
-      <Project>{38C25476-4236-4FEC-9A59-1E9A9A87149E}</Project>
+      <Project>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</Project>
       <Name>AccessApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAO\DAOApi.csproj">
-      <Project>{F5E53D98-E101-4AC0-A6F7-962227710C19}</Project>
+      <Project>{9F9E1AA6-516C-4121-87A9-241C80528866}</Project>
       <Name>DAOApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\ADODB\ADODBApi.csproj">
-      <Project>{FA4352D2-0E28-4E53-9157-41C70D3A7694}</Project>
+      <Project>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</Project>
       <Name>ADODBApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\OWC10\OWC10Api.csproj">
-      <Project>{05954ED3-D0FB-47BF-813B-41E934853077}</Project>
+      <Project>{AE08E748-9569-4538-8BB1-F9E7AF0FCB3C}</Project>
       <Name>OWC10Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj">
-      <Project>{FAE34075-FACB-408E-828F-11BAD4FBFDAB}</Project>
+      <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
       <Name>MSDATASRCApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj">
-      <Project>{45AAEFB9-9582-46D4-8196-EB5EBDBC1B9E}</Project>
+      <Project>{76A38510-A8E7-4B6F-A90B-10384D845F42}</Project>
       <Name>MSComctlLibApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSProject\MSProjectApi.csproj">
-      <Project>{F2C6ABEB-4318-48B0-A88A-1E1E0905C20C}</Project>
+      <Project>{6C715072-6B0D-43D5-B620-2AC997CEF2CA}</Project>
       <Name>MSProjectApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\MSHTML\MSHTMLApi.csproj">
-      <Project>{1211CBB3-9C9E-41AD-AB40-AF9A7E7435F5}</Project>
+      <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
       <Name>MSHTMLApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Visio\VisioApi.csproj">
-      <Project>{353CF21B-650A-4A50-8AE0-B1B1C0E92F34}</Project>
+      <Project>{581B0DB6-8146-4729-9AE6-61B27F53B3E6}</Project>
       <Name>VisioApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj">

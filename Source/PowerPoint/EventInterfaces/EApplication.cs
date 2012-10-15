@@ -683,8 +683,8 @@ namespace NetOffice.PowerPointApi
 			}
 
 			NetOffice.PowerPointApi.Slide newSld = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
-			Single newX = (Single)x;
-			Single newY = (Single)y;
+			Single newX = Convert.ToSingle(x);
+			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newSld;
 			paramsArray[1] = newX;

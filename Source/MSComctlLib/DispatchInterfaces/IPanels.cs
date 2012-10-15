@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IPanels 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IPanels : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IPanel>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int16 Count
 		{
 			get
@@ -95,11 +95,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IPanel get_ControlDefault(object index)
 		{		
@@ -110,11 +110,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IPanel value)
 		{
@@ -123,22 +123,22 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IPanel this[object index]
 		{
@@ -161,14 +161,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		/// <param name="style">optional object Style</param>
 		/// <param name="picture">optional object Picture</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style, object picture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style, picture);
@@ -178,10 +178,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add()
 		{
 			object[] paramsArray = null;
@@ -191,11 +191,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -205,12 +205,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
@@ -220,13 +220,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
@@ -236,14 +236,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		/// <param name="style">optional object Style</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, style);
@@ -253,9 +253,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -263,10 +263,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -278,9 +278,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IPanel> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IPanel> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -293,9 +293,9 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

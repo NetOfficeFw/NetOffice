@@ -87,9 +87,9 @@ namespace NetOffice.OutlookApi
 			}
 
 			NetOffice.OutlookApi.Enums.OlSyncState newState = (NetOffice.OutlookApi.Enums.OlSyncState)state;
-			string newDescription = (string)description;
-			Int32 newValue = (Int32)value;
-			Int32 newMax = (Int32)max;
+			string newDescription = Convert.ToString(description);
+			Int32 newValue = Convert.ToInt32(value);
+			Int32 newMax = Convert.ToInt32(max);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newState;
 			paramsArray[1] = newDescription;
@@ -107,8 +107,8 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			Int32 newCode = (Int32)code;
-			string newDescription = (string)description;
+			Int32 newCode = Convert.ToInt32(code);
+			string newDescription = Convert.ToString(description);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCode;
 			paramsArray[1] = newDescription;

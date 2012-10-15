@@ -426,8 +426,8 @@ namespace NetOffice.WordApi
 			}
 
 			NetOffice.WordApi.Document newDoc = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-			Int32 newStartRecord = (Int32)startRecord;
-			Int32 newEndRecord = (Int32)endRecord;
+			Int32 newStartRecord = Convert.ToInt32(startRecord);
+			Int32 newEndRecord = Convert.ToInt32(endRecord);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newStartRecord;

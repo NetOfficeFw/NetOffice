@@ -10,9 +10,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IImage 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IImage : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int16 Index
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public string Key
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public object Tag
 		{
 			get
@@ -142,10 +142,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public stdole.Picture Picture
 		{
 			get
@@ -167,13 +167,13 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
 		/// <param name="y">optional object y</param>
 		/// <param name="style">optional object Style</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC, object x, object y, object style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y, style);
@@ -181,11 +181,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC);
@@ -193,12 +193,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC, object x)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x);
@@ -206,13 +206,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
 		/// <param name="y">optional object y</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Draw(Int32 hDC, object x, object y)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hDC, x, y);
@@ -220,9 +220,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public stdole.Picture ExtractIcon()
 		{
 			object[] paramsArray = null;

@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IColumnHeaders 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IColumnHeaders : COMObject ,IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -95,11 +95,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSComctlLibApi.IColumnHeader get_ControlDefault(object index)
 		{		
@@ -110,22 +110,22 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Alias for get_ControlDefault
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader ControlDefault(object index)
 		{
 			return get_ControlDefault(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSComctlLibApi.IColumnHeader this[object index]
 		{
@@ -143,7 +143,7 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
@@ -151,7 +151,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="alignment">optional object Alignment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
@@ -161,11 +161,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98()
 		{
 			object[] paramsArray = null;
@@ -175,12 +175,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -190,13 +190,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
@@ -206,14 +206,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
@@ -223,7 +223,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
@@ -231,7 +231,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object Width</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width);
@@ -241,9 +241,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -251,10 +251,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Remove(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -262,7 +262,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
@@ -270,7 +270,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="alignment">optional object Alignment</param>
 		/// <param name="icon">optional object Icon</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment, icon);
@@ -280,10 +280,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add()
 		{
 			object[] paramsArray = null;
@@ -293,11 +293,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
@@ -307,12 +307,12 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key);
@@ -322,13 +322,13 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text);
@@ -338,14 +338,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
 		/// <param name="text">optional object Text</param>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width);
@@ -355,7 +355,7 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="key">optional object Key</param>
@@ -363,7 +363,7 @@ namespace NetOffice.MSComctlLibApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="alignment">optional object Alignment</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, key, text, width, alignment);
@@ -377,9 +377,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<NetOffice.MSComctlLibApi.IColumnHeader> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
        public IEnumerator<NetOffice.MSComctlLibApi.IColumnHeader> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -392,9 +392,9 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface ComplexType 
-	/// SupportByVersion DAO, 12
+	/// SupportByVersion DAO, 12.0
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12)]
+	[SupportByVersionAttribute("DAO", 12.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ComplexType : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get

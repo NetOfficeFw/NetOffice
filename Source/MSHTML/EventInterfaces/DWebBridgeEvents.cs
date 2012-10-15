@@ -97,7 +97,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			}
 
-			string newname = (string)name;
+			string newname = Convert.ToString(name);
 			object neweventData = (object)eventData;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newname;

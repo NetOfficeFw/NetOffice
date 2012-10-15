@@ -9,9 +9,9 @@ namespace NetOffice.MSDATASRCApi
 {
 	///<summary>
 	/// Interface DataSourceListener 
-	/// SupportByVersion MSDATASRC, 1
+	/// SupportByVersion MSDATASRC, 4
 	///</summary>
-	[SupportByVersionAttribute("MSDATASRC", 1)]
+	[SupportByVersionAttribute("MSDATASRC", 4)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DataSourceListener : COMObject
 	{
@@ -77,11 +77,11 @@ namespace NetOffice.MSDATASRCApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 dataMemberChanged(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
@@ -90,11 +90,11 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 dataMemberAdded(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);
@@ -103,11 +103,11 @@ namespace NetOffice.MSDATASRCApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSDATASRC 1
+		/// SupportByVersion MSDATASRC 4
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersionAttribute("MSDATASRC", 1)]
+		[SupportByVersionAttribute("MSDATASRC", 4)]
 		public Int32 dataMemberRemoved(string bstrDM)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM);

@@ -158,7 +158,6 @@ namespace NetOffice
         /// write exception log message
         /// </summary>
         /// <param name="exception"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static void WriteException(Exception exception)
         {
             string message = CreateExecptionLog(exception);

@@ -11,9 +11,9 @@ namespace NetOffice.MSComctlLibApi
 {
 	///<summary>
 	/// DispatchInterface IVBDataObjectFiles 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBDataObjectFiles : COMObject ,IEnumerable<string>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSComctlLibApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public string this[Int32 lIndex]
 		{
@@ -92,10 +92,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public Int32 Count
 		{
 			get
@@ -111,11 +111,11 @@ namespace NetOffice.MSComctlLibApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		/// <param name="vIndex">optional object vIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Add(string bstrFilename, object vIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename, vIndex);
@@ -123,11 +123,11 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Add(string bstrFilename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrFilename);
@@ -135,9 +135,9 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
 		{
 			object[] paramsArray = null;
@@ -145,10 +145,10 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
 		/// <param name="vIndex">object vIndex</param>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Remove(object vIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(vIndex);
@@ -160,9 +160,9 @@ namespace NetOffice.MSComctlLibApi
        #region IEnumerable<string> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
        public IEnumerator<string> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -175,9 +175,9 @@ namespace NetOffice.MSComctlLibApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSComctlLib, 2
+		/// SupportByVersionAttribute MSComctlLib, 6
 		/// </summary>
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);

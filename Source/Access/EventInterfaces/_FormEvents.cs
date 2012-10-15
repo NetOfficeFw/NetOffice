@@ -937,7 +937,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			Int32 newReason = (Int32)reason;
+			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
 			_eventBinding.RaiseCustomEvent("PivotTableChange", ref paramsArray);
@@ -1153,8 +1153,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			bool newPage = (bool)page;
-			Int32 newCount = (Int32)count;
+			bool newPage = Convert.ToBoolean(page);
+			Int32 newCount = Convert.ToInt32(count);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;
@@ -1170,7 +1170,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			Int32 newReason = (Int32)reason;
+			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
 			_eventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);
@@ -1185,7 +1185,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			Int32 newReason = (Int32)reason;
+			Int32 newReason = Convert.ToInt32(reason);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReason;
 			_eventBinding.RaiseCustomEvent("DataChange", ref paramsArray);

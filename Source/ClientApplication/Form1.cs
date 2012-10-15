@@ -7,8 +7,8 @@ using System.Windows.Forms;
 using stdole;
 
 using NetOffice;
-using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
+using Office = NetOffice.OfficeApi;
 using VBIDE = NetOffice.VBIDEApi;
 using Word = NetOffice.WordApi;
 using Outlook = NetOffice.OutlookApi;

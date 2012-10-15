@@ -463,8 +463,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			Int32 newProgress = (Int32)progress;
-			Int32 newProgressMax = (Int32)progressMax;
+			Int32 newProgress = Convert.ToInt32(progress);
+			Int32 newProgressMax = Convert.ToInt32(progressMax);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newProgress;
 			paramsArray[1] = newProgressMax;

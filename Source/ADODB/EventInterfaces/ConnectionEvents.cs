@@ -112,7 +112,7 @@ namespace NetOffice.ADODBApi
 				return;
 			}
 
-			Int32 newTransactionLevel = (Int32)transactionLevel;
+			Int32 newTransactionLevel = Convert.ToInt32(transactionLevel);
 			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
 			NetOffice.ADODBApi._Connection newpConnection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;
@@ -201,7 +201,7 @@ namespace NetOffice.ADODBApi
 				return;
 			}
 
-			Int32 newRecordsAffected = (Int32)recordsAffected;
+			Int32 newRecordsAffected = Convert.ToInt32(recordsAffected);
 			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
 			NetOffice.ADODBApi._Command newpCommand = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pCommand) as NetOffice.ADODBApi._Command;

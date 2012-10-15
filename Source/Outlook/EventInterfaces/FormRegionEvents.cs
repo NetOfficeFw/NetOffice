@@ -65,7 +65,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			bool newExpand = (bool)expand;
+			bool newExpand = Convert.ToBoolean(expand);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newExpand;
 			_eventBinding.RaiseCustomEvent("Expanded", ref paramsArray);

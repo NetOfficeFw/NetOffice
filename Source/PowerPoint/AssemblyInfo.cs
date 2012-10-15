@@ -23,12 +23,12 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.2")]
-[assembly: AssemblyFileVersion("1.5.1.2")]
+[assembly: AssemblyVersion("1.5.1.3")]
+[assembly: AssemblyFileVersion("1.5.1.3")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("PowerPoint")]
 [assembly: Guid("91493440-5A91-11CF-8700-00AA0060263B")]
-[assembly: NetOfficeAssemblyAttribute("1.5.1")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1.3")]
 
 /*
 Alias Table

@@ -14,9 +14,9 @@ namespace NetOffice.DAOApi
 
 	///<summary>
 	/// CoClass Relation 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 3.6,12.0
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 3.6,12.0)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Relation : _Relation
 	{

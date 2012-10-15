@@ -141,8 +141,8 @@ namespace NetOffice.OutlookApi
 
 			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = (Single)x;
-			Single newY = (Single)y;
+			Single newX = Convert.ToSingle(x);
+			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -162,8 +162,8 @@ namespace NetOffice.OutlookApi
 
 			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = (Single)x;
-			Single newY = (Single)y;
+			Single newX = Convert.ToSingle(x);
+			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -183,8 +183,8 @@ namespace NetOffice.OutlookApi
 
 			NetOffice.OutlookApi.Enums.OlMouseButton newButton = (NetOffice.OutlookApi.Enums.OlMouseButton)button;
 			NetOffice.OutlookApi.Enums.OlShiftState newShift = (NetOffice.OutlookApi.Enums.OlShiftState)shift;
-			Single newX = (Single)x;
-			Single newY = (Single)y;
+			Single newX = Convert.ToSingle(x);
+			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;

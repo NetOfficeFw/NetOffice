@@ -67,9 +67,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tools\AttributeHelper.cs" />
+    <Compile Include="Tools\COMAddinAttribute.cs" />
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
+    <Compile Include="Tools\CustomUIAttribute.cs" />
+    <Compile Include="Tools\ErrorHandlerFunctionAttribute.cs" />
     <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
+    <Compile Include="Tools\RegisterFunctionAttribute.cs" />
+    <Compile Include="Tools\RegistryLocationAttribute.cs" />
+    <Compile Include="Tools\UnRegisterFunctionAttribute.cs" />
     <Compile Include="CacheOptions.cs" />
     <Compile Include="DebugConsole.cs" />
     <Compile Include="Attributes\EntityTypeAttribute.cs" />
@@ -90,6 +97,9 @@
     <Compile Include="Attributes\SupportByVersionAttribute.cs" />
     <Compile Include="Interfaces\IEventBinding.cs" />
     <Compile Include="SupportEntityType.cs" />
+    <Compile Include="Tools\COMAddinEventHandler.cs" />
+    <Compile Include="Tools\IDTExtensibility2.cs" />
+    <Compile Include="Tools\IErrorHandler.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

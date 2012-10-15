@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi
 			}
 
 			NetOffice.OfficeApi.CustomXMLNode newNewNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newNode) as NetOffice.OfficeApi.CustomXMLNode;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewNode;
 			paramsArray[1] = newInUndoRedo;
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi
 			NetOffice.OfficeApi.CustomXMLNode newOldNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldNode) as NetOffice.OfficeApi.CustomXMLNode;
 			NetOffice.OfficeApi.CustomXMLNode newOldParentNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldParentNode) as NetOffice.OfficeApi.CustomXMLNode;
 			NetOffice.OfficeApi.CustomXMLNode newOldNextSibling = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldNextSibling) as NetOffice.OfficeApi.CustomXMLNode;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newOldParentNode;
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi
 
 			NetOffice.OfficeApi.CustomXMLNode newOldNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldNode) as NetOffice.OfficeApi.CustomXMLNode;
 			NetOffice.OfficeApi.CustomXMLNode newNewNode = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newNode) as NetOffice.OfficeApi.CustomXMLNode;
-			bool newInUndoRedo = (bool)inUndoRedo;
+			bool newInUndoRedo = Convert.ToBoolean(inUndoRedo);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newOldNode;
 			paramsArray[1] = newNewNode;

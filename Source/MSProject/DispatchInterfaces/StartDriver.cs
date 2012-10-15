@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface StartDriver 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class StartDriver : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.ActualStartDrivers ActualStartDrivers
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.PredecessorDrivers PredecessorDrivers
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.ChildDrivers ChildTaskDrivers
 		{
 			get
@@ -122,10 +122,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.CalendarDrivers CalendarDrivers
 		{
 			get
@@ -138,10 +138,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.Task Parent
 		{
 			get
@@ -154,10 +154,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 12, 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 12,14,15)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -170,10 +170,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public Int32 Suggestions
 		{
 			get
@@ -185,10 +185,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public Int32 Warnings
 		{
 			get
@@ -200,11 +200,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="overallocationType">NetOffice.MSProjectApi.Enums.PjOverallocationType overallocationType</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSProjectApi.OverAllocatedAssignments get_OverAllocatedAssignments(NetOffice.MSProjectApi.Enums.PjOverallocationType overallocationType)
 		{		
@@ -215,23 +215,23 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Alias for get_OverAllocatedAssignments
 		/// </summary>
 		/// <param name="overallocationType">NetOffice.MSProjectApi.Enums.PjOverallocationType overallocationType</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public NetOffice.MSProjectApi.OverAllocatedAssignments OverAllocatedAssignments(NetOffice.MSProjectApi.Enums.PjOverallocationType overallocationType)
 		{
 			return get_OverAllocatedAssignments(overallocationType);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="finishDate">object FinishDate</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_EffectiveDateDifference(object startDate, object finishDate)
 		{		
@@ -249,24 +249,24 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Alias for get_EffectiveDateDifference
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="finishDate">object FinishDate</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public object EffectiveDateDifference(object startDate, object finishDate)
 		{
 			return get_EffectiveDateDifference(startDate, finishDate);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="date">object Date</param>
 		/// <param name="duration">object Duration</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_EffectiveDateAdd(object date, object duration)
 		{		
@@ -284,24 +284,24 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Alias for get_EffectiveDateAdd
 		/// </summary>
 		/// <param name="date">object Date</param>
 		/// <param name="duration">object Duration</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public object EffectiveDateAdd(object date, object duration)
 		{
 			return get_EffectiveDateAdd(date, duration);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Get
 		/// </summary>
 		/// <param name="date">object Date</param>
 		/// <param name="duration">object Duration</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_EffectiveDateSubtract(object date, object duration)
 		{		
@@ -319,12 +319,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 14
+		/// SupportByVersion MSProject 14, 15
 		/// Alias for get_EffectiveDateSubtract
 		/// </summary>
 		/// <param name="date">object Date</param>
 		/// <param name="duration">object Duration</param>
-		[SupportByVersionAttribute("MSProject", 11,14)]
+		[SupportByVersionAttribute("MSProject", 14,15)]
 		public object EffectiveDateSubtract(object date, object duration)
 		{
 			return get_EffectiveDateSubtract(date, duration);

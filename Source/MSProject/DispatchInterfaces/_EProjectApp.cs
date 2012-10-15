@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface _EProjectApp 
-	/// SupportByVersion MSProject, 11,12,14
+	/// SupportByVersion MSProject, 11,12,14,15
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14)]
+	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _EProjectApp : _MSProject
 	{
@@ -78,10 +78,10 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void NewProject(NetOffice.MSProjectApi.Project pj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj);
@@ -89,11 +89,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="tsk">NetOffice.MSProjectApi.Task tsk</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeTaskDelete(NetOffice.MSProjectApi.Task tsk, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tsk, cancel);
@@ -101,11 +101,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="res">NetOffice.MSProjectApi.Resource res</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeResourceDelete(NetOffice.MSProjectApi.Resource res, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(res, cancel);
@@ -113,11 +113,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="asg">NetOffice.MSProjectApi.Assignment asg</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeAssignmentDelete(NetOffice.MSProjectApi.Assignment asg, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(asg, cancel);
@@ -125,13 +125,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="tsk">NetOffice.MSProjectApi.Task tsk</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="newVal">object NewVal</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeTaskChange(NetOffice.MSProjectApi.Task tsk, NetOffice.MSProjectApi.Enums.PjField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tsk, field, newVal, cancel);
@@ -139,13 +139,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="res">NetOffice.MSProjectApi.Resource res</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="newVal">object NewVal</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeResourceChange(NetOffice.MSProjectApi.Resource res, NetOffice.MSProjectApi.Enums.PjField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(res, field, newVal, cancel);
@@ -153,13 +153,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="asg">NetOffice.MSProjectApi.Assignment asg</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjAssignmentField Field</param>
 		/// <param name="newVal">object NewVal</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeAssignmentChange(NetOffice.MSProjectApi.Assignment asg, NetOffice.MSProjectApi.Enums.PjAssignmentField field, object newVal, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(asg, field, newVal, cancel);
@@ -167,11 +167,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeTaskNew(NetOffice.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -179,11 +179,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeResourceNew(NetOffice.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -191,11 +191,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeAssignmentNew(NetOffice.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -203,11 +203,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeClose(NetOffice.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -215,11 +215,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforePrint(NetOffice.MSProjectApi.Project pj, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, cancel);
@@ -227,12 +227,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="saveAsUi">bool SaveAsUi</param>
 		/// <param name="cancel">bool Cancel</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectBeforeSave(NetOffice.MSProjectApi.Project pj, bool saveAsUi, bool cancel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj, saveAsUi, cancel);
@@ -240,10 +240,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14
+		/// SupportByVersion MSProject 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14)]
+		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
 		public void ProjectCalculate(NetOffice.MSProjectApi.Project pj)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pj);

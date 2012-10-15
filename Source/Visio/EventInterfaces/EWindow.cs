@@ -290,10 +290,10 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newKeyButtonState = (Int32)keyButtonState;
-			Double newx = (Double)x;
-			Double newy = (Double)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
+			Double newx = Convert.ToDouble(x);
+			Double newy = Convert.ToDouble(y);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newKeyButtonState;
@@ -314,10 +314,10 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newKeyButtonState = (Int32)keyButtonState;
-			Double newx = (Double)x;
-			Double newy = (Double)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
+			Double newx = Convert.ToDouble(x);
+			Double newy = Convert.ToDouble(y);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newKeyButtonState;
@@ -338,10 +338,10 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newKeyButtonState = (Int32)keyButtonState;
-			Double newx = (Double)x;
-			Double newy = (Double)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
+			Double newx = Convert.ToDouble(x);
+			Double newy = Convert.ToDouble(y);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newKeyButtonState;
@@ -362,8 +362,8 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newKeyButtonState = (Int32)keyButtonState;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newKeyButtonState;
@@ -382,7 +382,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newKeyAscii = (Int32)keyAscii;
+			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray.SetValue(cancelDefault, 1);
@@ -400,8 +400,8 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			Int32 newKeyCode = (Int32)keyCode;
-			Int32 newKeyButtonState = (Int32)keyButtonState;
+			Int32 newKeyCode = Convert.ToInt32(keyCode);
+			Int32 newKeyButtonState = Convert.ToInt32(keyButtonState);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newKeyButtonState;

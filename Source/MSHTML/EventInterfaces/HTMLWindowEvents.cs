@@ -166,9 +166,9 @@ namespace NetOffice.MSHTMLApi
 				return;
 			}
 
-			string newdescription = (string)description;
-			string newurl = (string)url;
-			Int32 newline = (Int32)line;
+			string newdescription = Convert.ToString(description);
+			string newurl = Convert.ToString(url);
+			Int32 newline = Convert.ToInt32(line);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdescription;
 			paramsArray[1] = newurl;

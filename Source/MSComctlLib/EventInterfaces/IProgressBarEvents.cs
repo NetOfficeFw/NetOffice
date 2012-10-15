@@ -10,47 +10,47 @@ namespace NetOffice.MSComctlLibApi
 	
 	#region SinkPoint Interface
 
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[ComImport, Guid("35053A21-8589-11D1-B16A-00C0F0283628"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
 	public interface IProgressBarEvents
 	{
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
 		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
 		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
 		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
 		void Click();
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
 		void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
 		void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
 		void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
 		void OLECompleteDrag([In] [Out] ref object effect);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
 		void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
 
-		[SupportByVersionAttribute("MSComctlLib", 2)]
+		[SupportByVersionAttribute("MSComctlLib", 6)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
 		void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 	}
@@ -97,10 +97,10 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			Int16 newButton = (Int16)button;
-			Int16 newShift = (Int16)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int16 newButton = Convert.ToInt16(button);
+			Int16 newShift = Convert.ToInt16(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -118,10 +118,10 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			Int16 newButton = (Int16)button;
-			Int16 newShift = (Int16)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int16 newButton = Convert.ToInt16(button);
+			Int16 newShift = Convert.ToInt16(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -139,10 +139,10 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			Int16 newButton = (Int16)button;
-			Int16 newShift = (Int16)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int16 newButton = Convert.ToInt16(button);
+			Int16 newShift = Convert.ToInt16(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;

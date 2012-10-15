@@ -443,7 +443,7 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-			bool newSaveAsUI = (bool)saveAsUI;
+			bool newSaveAsUI = Convert.ToBoolean(saveAsUI);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWb;
 			paramsArray[1] = newSaveAsUI;
@@ -665,8 +665,8 @@ namespace NetOffice.ExcelApi
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
 			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
-			string newUrl = (string)url;
-			bool newIsRefresh = (bool)isRefresh;
+			string newUrl = Convert.ToString(url);
+			bool newIsRefresh = Convert.ToBoolean(isRefresh);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newWb;
 			paramsArray[1] = newMap;
@@ -689,7 +689,7 @@ namespace NetOffice.ExcelApi
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
 			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
-			bool newIsRefresh = (bool)isRefresh;
+			bool newIsRefresh = Convert.ToBoolean(isRefresh);
 			NetOffice.ExcelApi.Enums.XlXmlImportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlImportResult)result;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWb;
@@ -710,7 +710,7 @@ namespace NetOffice.ExcelApi
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
 			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
-			string newUrl = (string)url;
+			string newUrl = Convert.ToString(url);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWb;
 			paramsArray[1] = newMap;
@@ -732,7 +732,7 @@ namespace NetOffice.ExcelApi
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
 			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
-			string newUrl = (string)url;
+			string newUrl = Convert.ToString(url);
 			NetOffice.ExcelApi.Enums.XlXmlExportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlExportResult)result;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWb;
@@ -752,9 +752,9 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-			string newDescription = (string)description;
-			string newSheet = (string)sheet;
-			bool newSuccess = (bool)success;
+			string newDescription = Convert.ToString(description);
+			string newSheet = Convert.ToString(sheet);
+			bool newSuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWb;
 			paramsArray[1] = newDescription;
@@ -806,8 +806,8 @@ namespace NetOffice.ExcelApi
 
 			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -830,8 +830,8 @@ namespace NetOffice.ExcelApi
 
 			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -854,8 +854,8 @@ namespace NetOffice.ExcelApi
 
 			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			Int32 newValueChangeStart = (Int32)valueChangeStart;
-			Int32 newValueChangeEnd = (Int32)valueChangeEnd;
+			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
+			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -972,7 +972,7 @@ namespace NetOffice.ExcelApi
 			}
 
 			NetOffice.ExcelApi.Workbook newWb = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wb) as NetOffice.ExcelApi.Workbook;
-			bool newSuccess = (bool)success;
+			bool newSuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWb;
 			paramsArray[1] = newSuccess;

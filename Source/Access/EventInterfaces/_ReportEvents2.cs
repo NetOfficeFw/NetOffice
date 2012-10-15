@@ -536,8 +536,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			bool newPage = (bool)page;
-			Int32 newCount = (Int32)count;
+			bool newPage = Convert.ToBoolean(page);
+			Int32 newCount = Convert.ToInt32(count);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPage;
 			paramsArray[1] = newCount;

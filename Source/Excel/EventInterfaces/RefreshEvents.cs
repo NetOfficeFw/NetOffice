@@ -81,7 +81,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			bool newSuccess = (bool)success;
+			bool newSuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSuccess;
 			_eventBinding.RaiseCustomEvent("AfterRefresh", ref paramsArray);

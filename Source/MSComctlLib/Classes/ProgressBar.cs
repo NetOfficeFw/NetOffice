@@ -24,9 +24,9 @@ namespace NetOffice.MSComctlLibApi
 
 	///<summary>
 	/// CoClass ProgressBar 
-	/// SupportByVersion MSComctlLib, 2
+	/// SupportByVersion MSComctlLib, 6
 	///</summary>
-	[SupportByVersionAttribute("MSComctlLib", 2)]
+	[SupportByVersionAttribute("MSComctlLib", 6)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ProgressBar : IProgressBar,IEventBinding
 	{
@@ -148,14 +148,14 @@ namespace NetOffice.MSComctlLibApi
 		#region Events
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_MouseDownEventHandler _MouseDownEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_MouseDownEventHandler MouseDownEvent
 		{
 			add
@@ -170,14 +170,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_MouseMoveEventHandler _MouseMoveEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_MouseMoveEventHandler MouseMoveEvent
 		{
 			add
@@ -192,14 +192,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_MouseUpEventHandler _MouseUpEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_MouseUpEventHandler MouseUpEvent
 		{
 			add
@@ -214,14 +214,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_ClickEventHandler _ClickEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_ClickEventHandler ClickEvent
 		{
 			add
@@ -236,14 +236,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLEStartDragEventHandler _OLEStartDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLEStartDragEventHandler OLEStartDragEvent
 		{
 			add
@@ -258,14 +258,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLEGiveFeedbackEventHandler _OLEGiveFeedbackEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLEGiveFeedbackEventHandler OLEGiveFeedbackEvent
 		{
 			add
@@ -280,14 +280,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLESetDataEventHandler _OLESetDataEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLESetDataEventHandler OLESetDataEvent
 		{
 			add
@@ -302,14 +302,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLECompleteDragEventHandler _OLECompleteDragEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLECompleteDragEventHandler OLECompleteDragEvent
 		{
 			add
@@ -324,14 +324,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLEDragOverEventHandler _OLEDragOverEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLEDragOverEventHandler OLEDragOverEvent
 		{
 			add
@@ -346,14 +346,14 @@ namespace NetOffice.MSComctlLibApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib, 2
+		/// SupportByVersion MSComctlLib, 6
 		/// </summary>
 		private event ProgressBar_OLEDragDropEventHandler _OLEDragDropEvent;
 
 		/// <summary>
-		/// SupportByVersion MSComctlLib 2
+		/// SupportByVersion MSComctlLib 6
 		/// </summary>
-		[SupportByVersion("MSComctlLib", 2)]
+		[SupportByVersion("MSComctlLib", 6)]
 		public event ProgressBar_OLEDragDropEventHandler OLEDragDropEvent
 		{
 			add

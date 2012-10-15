@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface _TableDef 
-	/// SupportByVersion DAO, 12,3.6
+	/// SupportByVersion DAO, 3.6,12.0
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12,3.6)]
+	[SupportByVersionAttribute("DAO", 3.6,12.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class _TableDef : _DAO
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public Int32 Attributes
 		{
 			get
@@ -94,10 +94,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string Connect
 		{
 			get
@@ -114,10 +114,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public object DateCreated
 		{
 			get
@@ -137,10 +137,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public object LastUpdated
 		{
 			get
@@ -160,10 +160,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string Name
 		{
 			get
@@ -180,10 +180,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string SourceTableName
 		{
 			get
@@ -200,10 +200,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public bool Updatable
 		{
 			get
@@ -215,10 +215,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string ValidationText
 		{
 			get
@@ -235,10 +235,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string ValidationRule
 		{
 			get
@@ -255,10 +255,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public Int32 RecordCount
 		{
 			get
@@ -270,10 +270,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Fields Fields
 		{
 			get
@@ -286,10 +286,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Indexes Indexes
 		{
 			get
@@ -302,10 +302,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public string ConflictTable
 		{
 			get
@@ -317,10 +317,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public object ReplicaFilter
 		{
 			get
@@ -349,11 +349,11 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="options">optional object Options</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, options);
@@ -363,10 +363,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset()
 		{
 			object[] paramsArray = null;
@@ -376,11 +376,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset OpenRecordset(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
@@ -390,9 +390,9 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public void RefreshLink()
 		{
 			object[] paramsArray = null;
@@ -400,12 +400,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="size">optional object Size</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, size);
@@ -415,10 +415,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField()
 		{
 			object[] paramsArray = null;
@@ -428,11 +428,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -442,12 +442,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Field CreateField(object name, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -457,10 +457,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Index CreateIndex(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -470,10 +470,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Index CreateIndex()
 		{
 			object[] paramsArray = null;
@@ -483,13 +483,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
 		/// <param name="dDL">optional object DDL</param>
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value, object dDL)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value, dDL);
@@ -499,10 +499,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Property CreateProperty()
 		{
 			object[] paramsArray = null;
@@ -512,11 +512,11 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Property CreateProperty(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -526,12 +526,12 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Property CreateProperty(object name, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
@@ -541,13 +541,13 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12, 3.6
+		/// SupportByVersion DAO 3.6, 12.0
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("DAO", 12,3.6)]
+		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Property CreateProperty(object name, object type, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, value);

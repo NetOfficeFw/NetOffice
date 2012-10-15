@@ -263,7 +263,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			string newEntryIDCollection = (string)entryIDCollection;
+			string newEntryIDCollection = Convert.ToString(entryIDCollection);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newEntryIDCollection;
 			_eventBinding.RaiseCustomEvent("NewMailEx", ref paramsArray);

@@ -10,9 +10,9 @@ namespace NetOffice.DAOApi
 {
 	///<summary>
 	/// DispatchInterface Field2 
-	/// SupportByVersion DAO, 12
+	/// SupportByVersion DAO, 12.0
 	///</summary>
-	[SupportByVersionAttribute("DAO", 12)]
+	[SupportByVersionAttribute("DAO", 12.0)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Field2 : _Field
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.DAOApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public NetOffice.DAOApi.Properties Properties
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public NetOffice.DAOApi.ComplexType ComplexType
 		{
 			get
@@ -106,10 +106,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public bool IsComplex
 		{
 			get
@@ -121,10 +121,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public bool AppendOnly
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public string Expression
 		{
 			get
@@ -165,10 +165,10 @@ namespace NetOffice.DAOApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public void LoadFromFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
@@ -176,10 +176,10 @@ namespace NetOffice.DAOApi
 		}
 
 		/// <summary>
-		/// SupportByVersion DAO 12
+		/// SupportByVersion DAO 12.0
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		[SupportByVersionAttribute("DAO", 12)]
+		[SupportByVersionAttribute("DAO", 12.0)]
 		public void SaveToFile(string fileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);

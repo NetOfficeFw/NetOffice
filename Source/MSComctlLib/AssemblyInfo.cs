@@ -6,7 +6,7 @@ using NetOffice;
 /*
     Contains the following Type Libraries:
 	Name - Description - SupportByVersion
-	MSComctlLib - Microsoft Windows Common Controls 6.0 - 2
+	MSComctlLib - Microsoft Windows Common Controls 6.0 - 6
 
 */
 
@@ -18,12 +18,12 @@ using NetOffice;
 [assembly: AssemblyCopyright("Sebastian Lange")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.5.1.2")]
-[assembly: AssemblyFileVersion("1.5.1.2")]
+[assembly: AssemblyVersion("1.5.1.3")]
+[assembly: AssemblyFileVersion("1.5.1.3")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSComctlLib")]
 [assembly: Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")]
-[assembly: NetOfficeAssemblyAttribute("1.5.1")]
+[assembly: NetOfficeAssemblyAttribute("1.5.1.3")]
 
 /*
 Alias Table

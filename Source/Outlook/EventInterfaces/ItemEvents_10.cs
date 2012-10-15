@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			string newName = (string)name;
+			string newName = Convert.ToString(name);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newName;
 			_eventBinding.RaiseCustomEvent("CustomPropertyChange", ref paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			string newName = (string)name;
+			string newName = Convert.ToString(name);
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newName;
 			_eventBinding.RaiseCustomEvent("PropertyChange", ref paramsArray);

@@ -148,10 +148,10 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -169,10 +169,10 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -190,10 +190,10 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newButton = (Int32)button;
-			Int32 newShift = (Int32)shift;
-			Int32 newx = (Int32)x;
-			Int32 newy = (Int32)y;
+			Int32 newButton = Convert.ToInt32(button);
+			Int32 newShift = Convert.ToInt32(shift);
+			Int32 newx = Convert.ToInt32(x);
+			Int32 newy = Convert.ToInt32(y);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -253,9 +253,9 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newElementID = (Int32)elementID;
-			Int32 newArg1 = (Int32)arg1;
-			Int32 newArg2 = (Int32)arg2;
+			Int32 newElementID = Convert.ToInt32(elementID);
+			Int32 newArg1 = Convert.ToInt32(arg1);
+			Int32 newArg2 = Convert.ToInt32(arg2);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newElementID;
 			paramsArray[1] = newArg1;
@@ -275,9 +275,9 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newElementID = (Int32)elementID;
-			Int32 newArg1 = (Int32)arg1;
-			Int32 newArg2 = (Int32)arg2;
+			Int32 newElementID = Convert.ToInt32(elementID);
+			Int32 newArg1 = Convert.ToInt32(arg1);
+			Int32 newArg2 = Convert.ToInt32(arg2);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newElementID;
 			paramsArray[1] = newArg1;
@@ -294,8 +294,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			Int32 newSeriesIndex = (Int32)seriesIndex;
-			Int32 newPointIndex = (Int32)pointIndex;
+			Int32 newSeriesIndex = Convert.ToInt32(seriesIndex);
+			Int32 newPointIndex = Convert.ToInt32(pointIndex);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSeriesIndex;
 			paramsArray[1] = newPointIndex;
