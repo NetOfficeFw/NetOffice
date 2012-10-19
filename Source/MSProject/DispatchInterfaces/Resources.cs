@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Resources 
-	/// SupportByVersion MSProject, 11,12,14,15
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Resources : COMObject ,IEnumerable<NetOffice.MSProjectApi.Resource>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -91,10 +91,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -107,10 +107,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -122,11 +122,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.MSProjectApi.Resource get_UniqueID(Int32 index)
 		{		
@@ -137,22 +137,22 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Alias for get_UniqueID
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource UniqueID(Int32 index)
 		{
 			return get_UniqueID(index);
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Resource this[object index]
 		{
@@ -170,11 +170,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="before">optional object Before</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource Add(object name, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, before);
@@ -184,10 +184,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource Add()
 		{
 			object[] paramsArray = null;
@@ -197,11 +197,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource Add(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -215,9 +215,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.Resource> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14,15
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
        public IEnumerator<NetOffice.MSProjectApi.Resource> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -230,9 +230,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14,15
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

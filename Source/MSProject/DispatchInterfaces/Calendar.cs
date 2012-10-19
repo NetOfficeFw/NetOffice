@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Calendar 
-	/// SupportByVersion MSProject, 11,12,14,15
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Calendar : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string Name
 		{
 			get
@@ -94,11 +94,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Parent
 		{
 			get
@@ -111,10 +111,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -127,10 +127,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Years Years
 		{
 			get
@@ -143,10 +143,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.WeekDays WeekDays
 		{
 			get
@@ -159,10 +159,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Calendar BaseCalendar
 		{
 			get
@@ -175,10 +175,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -190,10 +190,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Enterprise
 		{
 			get
@@ -213,10 +213,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string Guid
 		{
 			get
@@ -228,10 +228,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string ResourceGuid
 		{
 			get
@@ -243,10 +243,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Exceptions Exceptions
 		{
 			get
@@ -259,10 +259,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.WorkWeeks WorkWeeks
 		{
 			get
@@ -279,11 +279,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="start">object Start</param>
 		/// <param name="finish">optional object Finish</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Period Period(object start, object finish)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start, finish);
@@ -293,11 +293,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="start">object Start</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Period Period(object start)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(start);
@@ -307,9 +307,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Reset()
 		{
 			object[] paramsArray = null;
@@ -317,9 +317,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

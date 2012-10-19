@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface SplitParts 
-	/// SupportByVersion MSProject, 11,12,14,15
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SplitParts : COMObject ,IEnumerable<NetOffice.MSProjectApi.SplitPart>
 	{
@@ -75,10 +75,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 Count
 		{
 			get
@@ -90,11 +90,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.SplitPart this[Int32 index]
 		{
@@ -108,11 +108,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object Parent
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -145,11 +145,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
 		/// <param name="startSplitPartOn">object StartSplitPartOn</param>
 		/// <param name="endSplitPartOn">object EndSplitPartOn</param>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Add(object startSplitPartOn, object endSplitPartOn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startSplitPartOn, endSplitPartOn);
@@ -161,9 +161,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.SplitPart> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14,15
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
        public IEnumerator<NetOffice.MSProjectApi.SplitPart> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -176,9 +176,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 11,12,14,15
+		/// SupportByVersionAttribute MSProject, 11,12,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

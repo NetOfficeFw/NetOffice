@@ -36,11 +36,11 @@ namespace ClientApplication
         {
             InitializeComponent();
 
-            /*Initialize Api COMObject Support*/
-            NetOffice.Factory.Initialize();
-
-            
-            /*>> your testcode here <<*/
+            Excel.Application app = new Excel.Application();
+            app.DisplayAlerts = false;
+            app.Workbooks.Add();
+            app.Quit();
+            app.Dispose();
         }
 
         /// <summary>

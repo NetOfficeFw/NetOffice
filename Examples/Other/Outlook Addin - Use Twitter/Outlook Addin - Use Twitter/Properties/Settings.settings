@@ -14,12 +14,11 @@
     <Setting Name="AccessSecret" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Alerts" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@netoffice
-@twitter</Value>
-    </Setting>
     <Setting Name="RefreshInterval" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">90</Value>
+    </Setting>
+    <Setting Name="Enabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

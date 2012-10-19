@@ -15,6 +15,7 @@ namespace NetOffice.VisioApi.Tools
     /// <summary>
     /// The class provides a lot of essential functionality for an MS-Project COMAddin
     /// </summary>
+	[ComVisible(true)]
     public abstract class COMAddin : IDTExtensibility2
     {
         #region Fields

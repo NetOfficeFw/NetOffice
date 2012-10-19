@@ -35,7 +35,11 @@
             this.linklabelFavorite = new System.Windows.Forms.LinkLabel();
             this.labelUserName = new System.Windows.Forms.Label();
             this.labelCreated = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBoxMessage
@@ -44,7 +48,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxMessage.Location = new System.Drawing.Point(49, 24);
+            this.richTextBoxMessage.Location = new System.Drawing.Point(49, 36);
             this.richTextBoxMessage.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMessage.Name = "richTextBoxMessage";
             this.richTextBoxMessage.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -56,7 +60,7 @@
             // 
             // pictureBoxImage
             // 
-            this.pictureBoxImage.Location = new System.Drawing.Point(-1, 24);
+            this.pictureBoxImage.Location = new System.Drawing.Point(-1, 36);
             this.pictureBoxImage.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxImage.Name = "pictureBoxImage";
             this.pictureBoxImage.Size = new System.Drawing.Size(48, 48);
@@ -67,7 +71,7 @@
             // 
             this.linkLabelReply.AutoSize = true;
             this.linkLabelReply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelReply.Location = new System.Drawing.Point(12, 94);
+            this.linkLabelReply.Location = new System.Drawing.Point(19, 111);
             this.linkLabelReply.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelReply.Name = "linkLabelReply";
             this.linkLabelReply.Size = new System.Drawing.Size(49, 20);
@@ -80,7 +84,7 @@
             // 
             this.linkLabelRetweet.AutoSize = true;
             this.linkLabelRetweet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelRetweet.Location = new System.Drawing.Point(82, 93);
+            this.linkLabelRetweet.Location = new System.Drawing.Point(89, 110);
             this.linkLabelRetweet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabelRetweet.Name = "linkLabelRetweet";
             this.linkLabelRetweet.Size = new System.Drawing.Size(69, 20);
@@ -93,7 +97,7 @@
             // 
             this.linklabelFavorite.AutoSize = true;
             this.linklabelFavorite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklabelFavorite.Location = new System.Drawing.Point(176, 93);
+            this.linklabelFavorite.Location = new System.Drawing.Point(183, 110);
             this.linklabelFavorite.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linklabelFavorite.Name = "linklabelFavorite";
             this.linklabelFavorite.Size = new System.Drawing.Size(66, 20);
@@ -106,7 +110,7 @@
             // 
             this.labelUserName.AutoSize = true;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserName.Location = new System.Drawing.Point(4, 2);
+            this.labelUserName.Location = new System.Drawing.Point(4, 14);
             this.labelUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(102, 16);
@@ -118,12 +122,28 @@
             this.labelCreated.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCreated.AutoSize = true;
             this.labelCreated.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCreated.Location = new System.Drawing.Point(153, 4);
+            this.labelCreated.Location = new System.Drawing.Point(153, 16);
             this.labelCreated.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCreated.Name = "labelCreated";
             this.labelCreated.Size = new System.Drawing.Size(106, 13);
             this.labelCreated.TabIndex = 27;
             this.labelCreated.Text = "10.10.2010 10:10:10";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 19);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(24, 84);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 19);
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
             // 
             // TweetPane
             // 
@@ -131,6 +151,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelCreated);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.linklabelFavorite);
@@ -141,8 +163,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TweetPane";
-            this.Size = new System.Drawing.Size(260, 115);
+            this.Size = new System.Drawing.Size(260, 140);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +181,7 @@
         private System.Windows.Forms.LinkLabel linklabelFavorite;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label labelCreated;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

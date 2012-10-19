@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Report 
-	/// SupportByVersion MSProject, 15
+	/// SupportByVersion MSProject, 11
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 15)]
+	[SupportByVersionAttribute("MSProject", 11)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Report : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public string Name
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 Index
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Shapes Shapes
 		{
 			get
@@ -161,9 +161,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void Delete()
 		{
 			object[] paramsArray = null;
@@ -171,9 +171,9 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void Apply()
 		{
 			object[] paramsArray = null;

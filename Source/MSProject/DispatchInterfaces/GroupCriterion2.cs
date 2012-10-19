@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface GroupCriterion2 
-	/// SupportByVersion MSProject, 14,15
+	/// SupportByVersion MSProject, 11,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 14,15)]
+	[SupportByVersionAttribute("MSProject", 11,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupCriterion2 : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -90,10 +90,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public string FieldName
 		{
 			get
@@ -110,10 +110,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 Index
 		{
 			get
@@ -125,10 +125,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Group2 Parent
 		{
 			get
@@ -141,10 +141,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool Ascending
 		{
 			get
@@ -161,10 +161,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public string FontName
 		{
 			get
@@ -181,10 +181,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 FontSize
 		{
 			get
@@ -201,10 +201,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool FontBold
 		{
 			get
@@ -221,10 +221,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool FontItalic
 		{
 			get
@@ -241,10 +241,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool FontUnderLine
 		{
 			get
@@ -261,10 +261,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor FontColor
 		{
 			get
@@ -282,10 +282,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Enums.PjColor CellColor
 		{
 			get
@@ -303,10 +303,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Enums.PjBackgroundPattern Pattern
 		{
 			get
@@ -324,10 +324,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Enums.PjGroupOn GroupOn
 		{
 			get
@@ -345,10 +345,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public object StartAt
 		{
 			get
@@ -373,10 +373,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public object GroupInterval
 		{
 			get
@@ -401,10 +401,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public bool Assignment
 		{
 			get
@@ -421,10 +421,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 FontColorEx
 		{
 			get
@@ -441,10 +441,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 CellColorEx
 		{
 			get
@@ -465,9 +465,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

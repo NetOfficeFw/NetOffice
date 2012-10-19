@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface PayRate 
-	/// SupportByVersion MSProject, 11,12,14,15
+	/// SupportByVersion MSProject, 11,12,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PayRate : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 Index
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object EffectiveDate
 		{
 			get
@@ -112,10 +112,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object StandardRate
 		{
 			get
@@ -140,10 +140,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object OvertimeRate
 		{
 			get
@@ -168,10 +168,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get/Set
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object CostPerUse
 		{
 			get
@@ -196,10 +196,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Resource Parent
 		{
 			get
@@ -212,10 +212,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -232,9 +232,9 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 11, 12, 14, 15
+		/// SupportByVersion MSProject 11, 12, 14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 11,12,14,15)]
+		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Delete()
 		{
 			object[] paramsArray = null;

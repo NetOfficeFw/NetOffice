@@ -913,7 +913,7 @@ namespace NetOffice
                 if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
                 {
                     Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
-                    IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as IFactoryInfo;
+                    NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
                   
                     bool exists = false;
                     foreach (IFactoryInfo itemFactory in _factoryList)

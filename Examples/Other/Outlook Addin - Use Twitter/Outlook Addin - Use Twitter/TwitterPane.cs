@@ -6,45 +6,36 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NetOffice.OutlookApi.Tools;
 
 namespace Sample.Addin
 {
-    public partial class TwitterPane : UserControl
+    public partial class TwitterPane : UserControl, ITaskPane
     {
         internal static TwitterTimer Client { get; set; }
+        internal static Properties.Settings Config { get; set; }
 
         public TwitterPane()
         {
+            Config = new Properties.Settings();
             InitializeComponent();
-            InitializeTaskPane();
-            Client = new TwitterTimer(this);
-            tweetGrid.DataSource = Client;
-           
-          
-            string result = Client.Logon();
-            if(string.Empty == result)
-                Client.Enabled = true;
         }
-
+       
         internal void InitializeTaskPane()
         {
-            tweetGrid.Visible = false;
-            tweetGrid.Location = new Point(0, 0);
-            tweetGrid.Size = new Size(this.Width, this.Height - buttonMain.Height);
-            tweetGrid.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+            tweetGrid.Visible = false;           
             buttonMain.Tag = tweetGrid;
-
+          
             settingsPane.Visible = false;
             settingsPane.Location = new Point(0, 0);
-            settingsPane.Size = new Size(this.Width, this.Height - buttonMain.Height);
+            settingsPane.Size = new Size(this.Width, this.Height - (splitContainerButtons.Height + errorPane.Height));
             settingsPane.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             buttonAddinSettings.Tag = settingsPane;
-
-            button_Click(buttonMain, new EventArgs());
         }
 
         private void button_Click(object sender, EventArgs e)
         {
+            errorPane.ClearError();
             tweetGrid.Visible = false;
             settingsPane.Visible = false;
             buttonMain.BackColor = Color.LightSteelBlue;
@@ -55,5 +46,43 @@ namespace Sample.Addin
             panel.Visible = true;
             selectedButton.BackColor = Color.Goldenrod;
         }
+
+        void Client_Error(Exception exception)
+        {
+            settingsPane.SetEnabled(false);
+            errorPane.ShowError(exception);
+        }
+
+        #region ITaskPane Member
+
+        public void OnConnection(NetOffice.OutlookApi.Application application, object[] customArguments)
+        {
+            InitializeTaskPane();
+            Client = new TwitterTimer(this, Client_Error);
+            Client.EnabledChanegd += new EnabledChangedEventHanlder(Client_EnabledChanegd);
+            settingsPane.Initialize(Client);
+            tweetGrid.DataSource = Client;
+            button_Click(buttonMain, new EventArgs());
+            if (Config.Enabled)
+            {
+                tweetGrid.Enabled = true;
+                Client.Enabled = true;
+            }
+            else
+            {
+                tweetGrid.Enabled = false;
+            }
+        }
+
+        void Client_EnabledChanegd(bool value)
+        {
+            tweetGrid.Enabled = value;
+        }
+        
+        public void OnDisconnection()
+        {
+            Config.Save(); 
+        }
+        #endregion
     }
 }

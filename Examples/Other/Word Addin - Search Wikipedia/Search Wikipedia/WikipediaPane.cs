@@ -133,7 +133,12 @@ namespace Sample.Addin
         {
             application.WindowSelectionChangeEvent += new NetOffice.WordApi.Application_WindowSelectionChangeEventHandler(Application_WindowSelectionChangeEvent);
         }
-      
+
+        public void OnDisconnection()
+        { 
+        
+        }
+
         #endregion
 
         #region Methods

@@ -13,17 +13,14 @@ namespace Sample.Addin
     /// The main addin for MS-Word. The Addin use the base class COMAddin from NetOffice.WordApi.Tools.
     /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
     /// </summary>
-    [GuidAttribute("60875BD5-C5A5-4315-8954-BEEF3112DA82"), ProgId("Sample.TwitterAddin"), ComVisible(true)]
+    [ProgId("Sample.TwitterAddin"), GuidAttribute("60875BD5-C5A5-4315-8954-BEEF3112DA82")]
     [COMAddin("Outlook Twitter Addin", "This Addin provides Twitter functionality", 3)]
     public class ThisAddin : COMAddin
     {
         public ThisAddin()
         {
-            NetOffice.DebugConsole.FileName = @"C:\LogFile.txt";
-            NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.LogFile;
-
             // we create the taskpane
-            TaskPanes.Add(typeof(TwitterPane), "Twitter - NetOffice Sample");
+            TaskPanes.Add(typeof(TwitterPane), "Twitter (powered by Linq2Twitter)");
             TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
             TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal;
             TaskPanes[0].Width = 300;

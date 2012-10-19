@@ -14,6 +14,7 @@ namespace NetOffice.OfficeApi.Tools
     /// <summary>
     /// The class provides a lot of essential functionality for an MS-Excel COMAddin
     /// </summary>
+	[ComVisible(true)]
     public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         #region Fields
@@ -35,6 +36,7 @@ namespace NetOffice.OfficeApi.Tools
             try
             {
                 TaskPanes = new CustomTaskPaneCollection();
+				TaskPaneInstances = new List<ITaskPane>();
                 Type = this.GetType();
             }
             catch (System.Exception exception)
@@ -70,6 +72,11 @@ namespace NetOffice.OfficeApi.Tools
         /// TaskPaneFactory from CTPFactoryAvailable
         /// </summary>
         protected Office.ICTPFactory TaskPaneFactory { get; set; }
+
+		/// <summary>
+        /// ITaskPane Instances
+        /// </summary>
+		protected List<ITaskPane> TaskPaneInstances { get; set; }
 
         #endregion
 
@@ -238,6 +245,18 @@ namespace NetOffice.OfficeApi.Tools
             RaiseShutdown(RemoveMode, ref custom);
             try
             {
+				foreach(ITaskPane item in TaskPaneInstances)
+				{
+					try
+					{
+						item.OnDisconnection();
+					}
+					catch(System.Exception exception)
+					{
+						NetOffice.DebugConsole.WriteException(exception);
+					}
+				}
+
                 foreach (var item in TaskPanes)
                 {
 					if(!item.Pane.IsDisposed)
@@ -326,6 +345,7 @@ namespace NetOffice.OfficeApi.Tools
                         ITaskPane pane = taskPane.ContentControl as ITaskPane;
                         if (null != pane)
 						{
+							TaskPaneInstances.Add(pane);
 							object[] argumentArray = new object[0];
 
 							if(item.Arguments != null)

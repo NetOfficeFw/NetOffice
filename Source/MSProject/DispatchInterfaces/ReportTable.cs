@@ -10,9 +10,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface ReportTable 
-	/// SupportByVersion MSProject, 15
+	/// SupportByVersion MSProject, 11
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 15)]
+	[SupportByVersionAttribute("MSProject", 11)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ReportTable : COMObject
 	{
@@ -74,10 +74,10 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 RowsCount
 		{
 			get
@@ -89,10 +89,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 ColumnsCount
 		{
 			get
@@ -108,14 +108,14 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
 		/// <param name="safeArrayOfPjField">optional object SafeArrayOfPjField</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel, object safeArrayOfPjField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel, safeArrayOfPjField);
@@ -123,11 +123,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void UpdateTableData(bool task)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task);
@@ -135,12 +135,12 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName);
@@ -148,13 +148,13 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName);
@@ -162,14 +162,14 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
 		/// <param name="filterName">optional string FilterName = </param>
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
 		[CustomMethodAttribute]
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel);
@@ -177,11 +177,11 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="col">Int32 Col</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public string GetCellText(Int32 row, Int32 col)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(row, col);

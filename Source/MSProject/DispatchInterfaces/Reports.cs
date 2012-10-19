@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface Reports 
-	/// SupportByVersion MSProject, 15
+	/// SupportByVersion MSProject, 11
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 15)]
+	[SupportByVersionAttribute("MSProject", 11)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Reports : COMObject ,IEnumerable<NetOffice.MSProjectApi.Report>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
 		/// <param name="index">object Index</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Report this[object index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Project Parent
 		{
 			get
@@ -124,10 +124,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -144,11 +144,11 @@ namespace NetOffice.MSProjectApi
 		#region Methods
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="newName">string NewName</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Report Copy(object source, string newName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, newName);
@@ -158,10 +158,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Report Add(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -171,10 +171,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 15
+		/// SupportByVersion MSProject 11
 		/// </summary>
 		/// <param name="name">string Name</param>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		public bool IsPresent(string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -187,9 +187,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.Report> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 15
+		/// SupportByVersionAttribute MSProject, 11
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
        public IEnumerator<NetOffice.MSProjectApi.Report> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -202,9 +202,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 15
+		/// SupportByVersionAttribute MSProject, 11
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 15)]
+		[SupportByVersionAttribute("MSProject", 11)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

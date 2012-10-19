@@ -56,6 +56,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserControls\PongPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\ErrorPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ErrorPane.Designer.cs">
+      <DependentUpon>ErrorPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,15 +95,19 @@
     <Compile Include="UserControls\TweetPane.Designer.cs">
       <DependentUpon>TweetPane.cs</DependentUpon>
     </Compile>
-    <Compile Include="TwitterTimer.cs" />
+    <Compile Include="Twitter\TwitterTimer.cs" />
     <Compile Include="TwitterPane.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TwitterPane.Designer.cs">
       <DependentUpon>TwitterPane.cs</DependentUpon>
     </Compile>
+    <Compile Include="Twitter\WebImageCollection.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="UserControls\ErrorPane.resx">
+      <DependentUpon>ErrorPane.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

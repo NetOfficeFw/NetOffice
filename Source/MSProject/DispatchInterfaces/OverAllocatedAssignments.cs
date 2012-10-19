@@ -11,9 +11,9 @@ namespace NetOffice.MSProjectApi
 {
 	///<summary>
 	/// DispatchInterface OverAllocatedAssignments 
-	/// SupportByVersion MSProject, 14,15
+	/// SupportByVersion MSProject, 11,14
 	///</summary>
-	[SupportByVersionAttribute("MSProject", 14,15)]
+	[SupportByVersionAttribute("MSProject", 11,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OverAllocatedAssignments : COMObject ,IEnumerable<NetOffice.MSProjectApi.Assignment>
 	{
@@ -75,11 +75,11 @@ namespace NetOffice.MSProjectApi
 		#region Properties
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
 		public NetOffice.MSProjectApi.Assignment this[Int32 index]
 		{
@@ -93,10 +93,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 Count
 		{
 			get
@@ -108,10 +108,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public Int32 TotalDetectedCount
 		{
 			get
@@ -123,10 +123,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Task Parent
 		{
 			get
@@ -139,10 +139,10 @@ namespace NetOffice.MSProjectApi
 		}
 
 		/// <summary>
-		/// SupportByVersion MSProject 14, 15
+		/// SupportByVersion MSProject 11, 14
 		/// Get
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		public NetOffice.MSProjectApi.Application Application
 		{
 			get
@@ -163,9 +163,9 @@ namespace NetOffice.MSProjectApi
        #region IEnumerable<NetOffice.MSProjectApi.Assignment> Member
         
         /// <summary>
-		/// SupportByVersionAttribute MSProject, 14,15
+		/// SupportByVersionAttribute MSProject, 11,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
        public IEnumerator<NetOffice.MSProjectApi.Assignment> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
@@ -178,9 +178,9 @@ namespace NetOffice.MSProjectApi
 		#region IEnumerable Members
        
 		/// <summary>
-		/// SupportByVersionAttribute MSProject, 14,15
+		/// SupportByVersionAttribute MSProject, 11,14
 		/// </summary>
-		[SupportByVersionAttribute("MSProject", 14,15)]
+		[SupportByVersionAttribute("MSProject", 11,14)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
 			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);

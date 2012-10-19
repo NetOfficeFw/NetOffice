@@ -11,23 +11,55 @@ using Twitter = LinqToTwitter;
 namespace Sample.Addin
 {
     public delegate void TweetReplyEventHandler(Twitter.Status tweet);
-    public delegate void TweetFavorizeEventHandler(Twitter.Status tweet, ref bool sucseed);
-    public delegate void TweetRetweetEventHandler(Twitter.Status tweet, ref bool sucseed);
-
+   
     public partial class TweetPane : UserControl
     {
-        private static WebImageCollection WebImages = new WebImageCollection();
+        #region Properties
 
         /// <summary>
-        /// windows forms designer
+        /// Image Cache
+        /// </summary>
+        private static WebImageCollection WebImages = new WebImageCollection();
+        
+        /// <summary>
+        /// Handled Tweet
+        /// </summary>
+        private Twitter.Status Tweet { get; set; }
+      
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates instance from class - windows forms designer ctor
         /// </summary>
         public TweetPane()
         {
             InitializeComponent();
         }
 
-        private Twitter.Status Tweet { get; set; }
+        /// <summary>
+        /// Creates instance from class 
+        /// </summary>
+        /// <param name="tweet">handled tweet</param>
+        public TweetPane(Twitter.Status tweet)
+        {
+            InitializeComponent();
+            Tweet = tweet;
+            richTextBoxMessage.Text = tweet.Text;
+            labelCreated.Text = tweet.CreatedAt.ToString();
+            labelUserName.Text = tweet.User.Name;
+            pictureBoxImage.Image = WebImages[tweet.User.ProfileImageUrlHttps];
+            linklabelFavorite.Enabled = !tweet.Favorited;
+            linkLabelRetweet.Enabled = !tweet.Retweeted;
+        }
+        #endregion
+         
+        #region Events
 
+        /// <summary>
+        /// Signal to the pane the user want reply to the message
+        /// </summary>
         public event TweetReplyEventHandler Reply;
 
         private void RaiseReply()
@@ -38,29 +70,9 @@ namespace Sample.Addin
             }
         }
 
-        public event TweetRetweetEventHandler Retweet;
-        
-        private void RaiseRetweet()
-        {
-            if (null != Retweet)
-            {
-                bool sucseed = false;
-                Retweet(Tweet, ref sucseed);
-                linkLabelRetweet.Enabled = !sucseed;
-            }
-        }
+        #endregion
 
-        public event TweetFavorizeEventHandler Favorize;
-
-        private void RaiseFavorize()
-        {
-            if (null != Favorize)
-            {
-                bool sucseed = false;
-                Favorize(Tweet, ref sucseed);
-                linklabelFavorite.Enabled = !sucseed;
-            }
-        }
+        #region UI Trigger
 
         private void linkLabelReply_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -69,24 +81,12 @@ namespace Sample.Addin
 
         private void linkLabelRetweet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RaiseRetweet();
+            linkLabelRetweet.Enabled = TwitterPane.Client.CreateRetweet(Tweet);
         }
 
         private void linklabelFavorite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RaiseFavorize();
-        }
-
-        public TweetPane(Twitter.Status tweet)
-        {
-            InitializeComponent();
-            Tweet = tweet;
-            richTextBoxMessage.Text = tweet.Text;
-            labelCreated.Text = tweet.CreatedAt.ToString();
-            labelUserName.Text = tweet.User.Name;
-            pictureBoxImage.Image =  WebImages[tweet.User.ProfileImageUrlHttps];
-            linklabelFavorite.Enabled = !tweet.Favorited;
-            linkLabelRetweet.Enabled = !tweet.Retweeted;
+            linklabelFavorite.Enabled = TwitterPane.Client.CreateFavourite(Tweet);
         }
 
         private void richTextBoxMessage_KeyPress(object sender, KeyPressEventArgs e)
@@ -96,7 +96,17 @@ namespace Sample.Addin
 
         private void richTextBoxMessage_LinkClicked(object sender, LinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(e.LinkText);
+            try
+            {
+                System.Diagnostics.Process.Start(e.LinkText);
+            }
+            catch
+            {
+                // no worries
+            }
+
         }
+
+        #endregion
     }
 }

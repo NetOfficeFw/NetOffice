@@ -12,9 +12,9 @@ namespace Sample.ExcelAddin
     /// The main addin for MS-Excel. The Addin use the base class COMAddin from NetOffice.ExcelApi.Tools.
     /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
     /// </summary>
-    [GuidAttribute("fa65093e-8fd1-4e24-825a-11c00f1bcadf"), ProgId("Sample.ExcelAddin"), ComVisible(true)]
+    [GuidAttribute("fa65093e-8fd1-4e24-825a-11c00f1bcadf"), ProgId("Sample.ExcelAddin")]
     [COMAddin("Google Translation Addin", "This Addin provides Google Translation functionality", 3)]
-    public class ThisAddIn : COMAddin
+    public class ThisAddIn : COMAddin, IErrorHandler 
     {
         /// <summary>
         /// Creates an instance of the class
@@ -53,6 +53,12 @@ namespace Sample.ExcelAddin
         void ThisAddIn_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             
+        }
+
+
+        public bool OnError(Exception exception)
+        {
+            return false;
         }
     }
 }

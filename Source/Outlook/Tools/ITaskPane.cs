@@ -14,5 +14,10 @@ namespace NetOffice.OutlookApi.Tools
         /// <param name="application">Host Application Instance</param>
 		/// <param name="customArguments">optional arguments</param>
         void OnConnection(Outlook.Application application, object[] customArguments);
+
+		/// <summary>
+        /// Called from the COMAddin class while OnDisconnection
+        /// </summary>
+		void OnDisconnection();
     }
 }
