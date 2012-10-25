@@ -12,7 +12,7 @@ OutlookApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=460328a05e6c843b
 OWC10Api, Version=1.5.1.2, Culture=neutral, PublicKeyToken=d1149e7bfb441e2c
 PowerPointApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=b20ee04b8e2fa16a
 VBIDEApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=856d3723dd1af5d0
-VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=4bc3478d4bd09a0c
+VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=580e821f1f5b357e
 WordApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=7958c9297f5caeff
 
 ; Net 3.0
@@ -29,7 +29,7 @@ OutlookApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=e403fc9f0fc97a12
 OWC10Api, Version=1.5.1.2, Culture=neutral, PublicKeyToken=802f97d972f5f8ef
 PowerPointApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=105c37b64ff74c60
 VBIDEApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=228423eb462131d3
-VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=3367f78c0be2c028
+VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=34b1c8cb8940fbc3
 WordApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=1a54e18d08420be8
 
 ; Net 3.5
@@ -46,7 +46,7 @@ OutlookApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=ab91c198d7b96dca
 OWC10Api, Version=1.5.1.2, Culture=neutral, PublicKeyToken=179606fbb8e4a0c1
 PowerPointApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=e888c77e9ddab5e6
 VBIDEApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=6040f8ab492f76a1
-VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=e17a5c25ae2e718a
+VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=fe4ae256de44f5fc
 WordApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=4ce962cc9e5644e3
 
 ; Net 4.0
@@ -63,7 +63,7 @@ OutlookApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=b118031aaa1097f3
 OWC10Api, Version=1.5.1.2, Culture=neutral, PublicKeyToken=a2b945645f1c78b9
 PowerPointApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2
 VBIDEApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=931cec8882205047
-VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=c1894510a676566c
+VisioApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=bfcd37a3a83f1609
 WordApi, Version=1.5.1.2, Culture=neutral, PublicKeyToken=f66d74591aaf8089
 
 ; Net 4.5
