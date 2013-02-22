@@ -275,7 +275,7 @@
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(110, 24);
             this.comboBoxLanguage.TabIndex = 7;
-            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxLanguage_SelectedIndexChanged);
+            this.comboBoxLanguage.SelectedIndexChanged += new System.EventHandler(this.ComboBoxLanguage_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -300,7 +300,7 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 5;
             this.pictureBoxLogo.TabStop = false;
-            this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
+            this.pictureBoxLogo.Click += new System.EventHandler(this.PictureBoxLogo_Click);
             // 
             // panelMainRight
             // 
@@ -342,7 +342,7 @@
             this.linkLabelMailMe.TabIndex = 80;
             this.linkLabelMailMe.TabStop = true;
             this.linkLabelMailMe.Text = "mailto:public.sebastian@web.de";
-            this.linkLabelMailMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMain_LinkClicked);
+            this.linkLabelMailMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelMain_LinkClicked);
             // 
             // labelQuestion
             // 
@@ -366,7 +366,7 @@
             this.linkLabelNetOfficeQuestions.TabIndex = 78;
             this.linkLabelNetOfficeQuestions.TabStop = true;
             this.linkLabelNetOfficeQuestions.Text = "http://netoffice.codeplex.com/discussions";
-            this.linkLabelNetOfficeQuestions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMain_LinkClicked);
+            this.linkLabelNetOfficeQuestions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelMain_LinkClicked);
             // 
             // labelUpdate
             // 
@@ -411,7 +411,7 @@
             this.linkLabelNetOfficeIssues.TabIndex = 10;
             this.linkLabelNetOfficeIssues.TabStop = true;
             this.linkLabelNetOfficeIssues.Text = "http://netoffice.codeplex.com/issues";
-            this.linkLabelNetOfficeIssues.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMain_LinkClicked);
+            this.linkLabelNetOfficeIssues.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelMain_LinkClicked);
             // 
             // labelIWant
             // 
@@ -434,7 +434,7 @@
             this.linkLabelNetOfficeUpdates.TabIndex = 12;
             this.linkLabelNetOfficeUpdates.TabStop = true;
             this.linkLabelNetOfficeUpdates.Text = "http://netoffice.codeplex.com/releases";
-            this.linkLabelNetOfficeUpdates.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMain_LinkClicked);
+            this.linkLabelNetOfficeUpdates.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelMain_LinkClicked);
             // 
             // tabControlMain
             // 
@@ -447,7 +447,7 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(932, 523);
             this.tabControlMain.TabIndex = 0;
-            this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControlMain_SelectedIndexChanged);
+            this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.TabControlMain_SelectedIndexChanged);
             // 
             // tabPageAbout
             // 
@@ -510,7 +510,7 @@
             this.linkLabelMono.TabIndex = 99;
             this.linkLabelMono.TabStop = true;
             this.linkLabelMono.Text = "http://mono-project.com";
-            this.linkLabelMono.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelMono.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // labelHotKey
             // 
@@ -542,7 +542,7 @@
             this.linkLabelHotKey.TabIndex = 97;
             this.linkLabelHotKey.TabStop = true;
             this.linkLabelHotKey.Text = "http://mycsharp.de/wbb2/thread.php?threadid=65760";
-            this.linkLabelHotKey.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelHotKey.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -574,7 +574,7 @@
             this.linkLabelHexBox.TabIndex = 95;
             this.linkLabelHexBox.TabStop = true;
             this.linkLabelHexBox.Text = "http://sourceforge.net/projects/hexbox";
-            this.linkLabelHexBox.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelHexBox.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // panelYouLike
             // 
@@ -633,7 +633,7 @@
             this.linkLabelZyan.TabIndex = 96;
             this.linkLabelZyan.TabStop = true;
             this.linkLabelZyan.Text = "http://zyan.codeplex.com";
-            this.linkLabelZyan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelZyan.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // linkLabelClosedXml
             // 
@@ -645,7 +645,7 @@
             this.linkLabelClosedXml.TabIndex = 95;
             this.linkLabelClosedXml.TabStop = true;
             this.linkLabelClosedXml.Text = "http://closedxml.codeplex.com";
-            this.linkLabelClosedXml.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelClosedXml.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // linkLabelExcelDna
             // 
@@ -657,7 +657,7 @@
             this.linkLabelExcelDna.TabIndex = 94;
             this.linkLabelExcelDna.TabStop = true;
             this.linkLabelExcelDna.Text = "http://exceldna.codeplex.com";
-            this.linkLabelExcelDna.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelExcelDna.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // labelYouLike
             // 
@@ -703,7 +703,7 @@
             this.linkLabelCompany.TabIndex = 94;
             this.linkLabelCompany.TabStop = true;
             this.linkLabelCompany.Text = "linkLabelCompany";
-            this.linkLabelCompany.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAbout_LinkClicked);
+            this.linkLabelCompany.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelAbout_LinkClicked);
             // 
             // labelCopyrightText
             // 

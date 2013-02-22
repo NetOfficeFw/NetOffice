@@ -8,13 +8,6 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox
 {
-    public enum ErrorCategory
-    { 
-        NonCritical = 0,
-        Critical = 1,
-        Penalty = 2
-    }
-
     partial class ErrorForm : Form
     {
         #region Fields
@@ -48,7 +41,7 @@ namespace NetOffice.DeveloperToolbox
                 labelExitMessage.Visible = true;
             DisplayException(exception);
             currentLanguageID = ValidateLanguageID(currentLanguageID);
-            Translator.TranslateControls(this, "ErrorFormMessageTable.txt", currentLanguageID);
+            Translator.TranslateControls(this, "Ressources.ErrorFormMessageTable.txt", currentLanguageID);
             this.Height = buttonOK.Top + buttonOK.Height + 40;
         }
 
@@ -114,10 +107,16 @@ namespace NetOffice.DeveloperToolbox
 
         #region Methods
 
-        public static void ShowError(Exception exception)
+        public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category, int currentLanguageID)
+        {
+            ErrorForm form = new ErrorForm(exception, category, currentLanguageID);
+            form.ShowDialog(parent);
+        }
+
+        public static void ShowError(IWin32Window parent, Exception exception)
         {
             ErrorForm form = new ErrorForm(exception, ErrorCategory.NonCritical, ProjectWizardControl.CurrentLanguageID);
-            form.ShowDialog();
+            form.ShowDialog(parent);
         }
 
         private int ValidateLanguageID(int currentLanguageID)

@@ -43,6 +43,7 @@ namespace WordTestsCSharp
                 _listPackages.Add(new Test05());
                 _listPackages.Add(new Test06());
                 _listPackages.Add(new Test07());
+                _listPackages.Add(new Test08());
             }
             return _listPackages.ToArray();
         }

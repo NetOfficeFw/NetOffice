@@ -1,0 +1,56 @@
+﻿[1031]
+labelBeginTitle = Einstieg...
+labelBeginTop = Die NetOffice Developer Toolbox unterstützt den .NET Office Entwickler in seiner täglichen Arbeit mit einer Reihe von hilfreichen Funktionen.
+labelBeginBottom = In jeder Registerkarte finden Sie in der oberen rechten Ecke einen Hilfe Button. Wenn Sie Fragen, Anregungen, Kommentare oder Wünsche zur Developer Toolbox haben freue ich mich auf Ihre Nachricht.
+checkBoxMinimizeToTray = Bei Minimierung in den Tray Bereich(rechts unten) verschieben
+checkBoxStartAppWithWindows = Mit Windows starten
+checkBoxStartAppMinimized = Minimiert starten
+labelIWant = Ich möchte ...
+labelBug = einen Bug melden
+labelUpdate = auf ein Update prüfen
+labelQuestion = eine Frage stellen
+labelMailMe = einen Verbesserungsvorschlag machen
+labelLanguage = Sprache
+labelAboutNetOffice = Über NetOffice.DeveloperToolbox
+labelStallmanSays = "Freie Software bedeutet den Benutzer nicht hinters Licht zu führen und ihm alle Möglichkeiten der Kontrolle zu überlassen".
+labelNetOfficeIsFree = NetOffice ist freie Software.
+labelAboutWarranty = Verpflichtungserklärung.
+labelWarranty1 = NetOffice.DeveloperToolbox unternimmt keinerlei Versuche eine Internetverbindung oder Netzerwerkverbindung aufzubauen.
+labelWarranty2 = Es werden keinerlei Daten gesammelt oder gespeichert mit Ausnahme einer Konfigurationsdatei im Anwendungsordner.
+labelWarranty3 = Wenn Sie Facebook Nutzer sind erscheint Ihnen das am Anfang vielleicht ungewohnt.
+labelTechnicalDetails = Technische Details
+labelYouLike =Vielleicht mögen Sie auch folgende Open Source Projekte
+labelExcelDna = Excel-DNA - Excel Makros schnell und einfach in .NET
+labelClosedXml = Closed XML - Der einfache Weg für Open XML
+labelZyan = Zyan - Verteilte Anwendungen in .NET so leicht wie nie
+labelContainsExistingWorks = Dieses Programm enthält Code von anderen Open Source Projekten
+labelHotKey = Systemweite Hotkey-Klasse
+[End]
+[1033]
+labelBeginTitle = Welcome...
+labelBeginTop = The NetOffice Developer Toolbox supports .NET Office developers in his daily work with a set of helpful functions.
+labelBeginBottom = You can find a help button in the upper right corner of every tab. I am looking forward to your message if you have any questions, suggestions, comments or requests regarding the Developer Toolbox.
+checkBoxMinimizeToTray = Send to tray (lower right corner) at minimize
+checkBoxStartAppWithWindows = Start with Windows
+checkBoxStartAppMinimized = Start minimized
+labelIWant = I want to...
+labelBug = report a bug
+labelUpdate = check for an update
+labelQuestion = ask a question
+labelMailMe = make a suggestion
+labelLanguage = Language
+labelAboutNetOffice = About NetOffice.DeveloperToolbox
+labelStallmanSays = "free software means to be honest with your users and allow them to be free by giving them all possible control."
+labelNetOfficeIsFree = NetOffice is free software.
+labelAboutWarranty = Privacy Policy
+labelWarranty1 = NetOffice.DeveloperToolbox does not try to establish a connection to the internet or a local network.
+labelWarranty2 = There is no data being collected or stored except a configuration file in the application folder.
+labelWarranty3 = If you are using Facebook this might be unfamiliar to you.
+labelTechnicalDetails = Technical Details
+labelYouLike = You might also like the following open source projects
+labelExcelDna = Excel-DNA - Fast and easy .NET functions for Excel
+labelClosedXml = Closed XML - The easy way to Open XML
+labelZyan = Zyan - distributed applications in .NET easier than ever
+labelContainsExistingWorks = This program contains code from other open source projects
+labelHotKey = systemwide hotkey-class
+[End]

@@ -57,7 +57,7 @@
             "16 = Beim ersten Start automatisch laden, danach bei Bedarf laden"});
             this.comboBoxLoadBehavior.Location = new System.Drawing.Point(46, 148);
             this.comboBoxLoadBehavior.Name = "comboBoxLoadBehavior";
-            this.comboBoxLoadBehavior.Size = new System.Drawing.Size(353, 24);
+            this.comboBoxLoadBehavior.Size = new System.Drawing.Size(477, 24);
             this.comboBoxLoadBehavior.TabIndex = 20;
             this.comboBoxLoadBehavior.SelectedIndexChanged += new System.EventHandler(this.comboBoxLoadBehavior_SelectedIndexChanged);
             // 

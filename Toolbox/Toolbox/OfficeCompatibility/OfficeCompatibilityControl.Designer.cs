@@ -1420,9 +1420,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(565, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 16);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 95;
-            this.label2.Text = "1.5.1";
+            this.label2.Text = "1.5.1 / 1.5.2";
             // 
             // OfficeCompatibilityControl
             // 

@@ -11,6 +11,7 @@ using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 using VBIDE = NetOffice.VBIDEApi;
 using Word = NetOffice.WordApi;
+using NetOffice.WordApi.Enums;
 using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
@@ -38,7 +39,13 @@ namespace ClientApplication
 
             Excel.Application app = new Excel.Application();
             app.DisplayAlerts = false;
-            app.Workbooks.Add();
+            Excel.Workbook book = app.Workbooks.Add();
+            Excel.Worksheet sheet = book.Sheets[1] as Excel.Worksheet;
+            Excel.Range range = sheet.Range("A1");
+
+            var v = range.Activate();
+            sheet.Activate();
+            
             app.Quit();
             app.Dispose();
         }

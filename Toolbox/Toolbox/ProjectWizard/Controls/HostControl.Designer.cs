@@ -41,7 +41,7 @@
             // 
             this.checkBoxAccess.AutoSize = true;
             this.checkBoxAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAccess.Location = new System.Drawing.Point(40, 124);
+            this.checkBoxAccess.Location = new System.Drawing.Point(40, 130);
             this.checkBoxAccess.Name = "checkBoxAccess";
             this.checkBoxAccess.Size = new System.Drawing.Size(72, 20);
             this.checkBoxAccess.TabIndex = 9;
@@ -53,7 +53,7 @@
             // 
             this.checkBoxPowerPoint.AutoSize = true;
             this.checkBoxPowerPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPowerPoint.Location = new System.Drawing.Point(40, 101);
+            this.checkBoxPowerPoint.Location = new System.Drawing.Point(40, 107);
             this.checkBoxPowerPoint.Name = "checkBoxPowerPoint";
             this.checkBoxPowerPoint.Size = new System.Drawing.Size(98, 20);
             this.checkBoxPowerPoint.TabIndex = 8;
@@ -65,7 +65,7 @@
             // 
             this.checkBoxOutlook.AutoSize = true;
             this.checkBoxOutlook.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOutlook.Location = new System.Drawing.Point(40, 78);
+            this.checkBoxOutlook.Location = new System.Drawing.Point(40, 82);
             this.checkBoxOutlook.Name = "checkBoxOutlook";
             this.checkBoxOutlook.Size = new System.Drawing.Size(73, 20);
             this.checkBoxOutlook.TabIndex = 7;
@@ -77,7 +77,7 @@
             // 
             this.checkBoxWord.AutoSize = true;
             this.checkBoxWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxWord.Location = new System.Drawing.Point(40, 55);
+            this.checkBoxWord.Location = new System.Drawing.Point(40, 57);
             this.checkBoxWord.Name = "checkBoxWord";
             this.checkBoxWord.Size = new System.Drawing.Size(60, 20);
             this.checkBoxWord.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.checkBoxProject.AutoSize = true;
             this.checkBoxProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxProject.Location = new System.Drawing.Point(40, 147);
+            this.checkBoxProject.Location = new System.Drawing.Point(40, 153);
             this.checkBoxProject.Name = "checkBoxProject";
             this.checkBoxProject.Size = new System.Drawing.Size(69, 20);
             this.checkBoxProject.TabIndex = 10;
@@ -113,7 +113,7 @@
             // 
             this.checkBoxVisio.AutoSize = true;
             this.checkBoxVisio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxVisio.Location = new System.Drawing.Point(40, 170);
+            this.checkBoxVisio.Location = new System.Drawing.Point(40, 176);
             this.checkBoxVisio.Name = "checkBoxVisio";
             this.checkBoxVisio.Size = new System.Drawing.Size(57, 20);
             this.checkBoxVisio.TabIndex = 11;

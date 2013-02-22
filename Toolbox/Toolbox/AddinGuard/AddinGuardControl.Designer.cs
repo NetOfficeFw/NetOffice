@@ -50,14 +50,6 @@
             this.labelTrayhint = new System.Windows.Forms.Label();
             this.labelMessageCaption = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelDeactivatedElements = new System.Windows.Forms.Panel();
-            this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
-            this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
-            this.labelDisabledRegistryValue = new System.Windows.Forms.Label();
-            this.labelOfficeProduct = new System.Windows.Forms.Label();
-            this.labelRegistryKey = new System.Windows.Forms.Label();
-            this.labelFilePath = new System.Windows.Forms.Label();
-            this.labelOfficeProductVersion = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
             this.pictureBoxNoAdmin = new System.Windows.Forms.PictureBox();
@@ -67,6 +59,14 @@
             this.radioButtonActivate = new System.Windows.Forms.RadioButton();
             this.radioButtonDeactivate = new System.Windows.Forms.RadioButton();
             this.labelNoAdminHintIcon = new System.Windows.Forms.Label();
+            this.panelDeactivatedElements = new System.Windows.Forms.Panel();
+            this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
+            this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
+            this.labelDisabledRegistryValue = new System.Windows.Forms.Label();
+            this.labelOfficeProduct = new System.Windows.Forms.Label();
+            this.labelRegistryKey = new System.Windows.Forms.Label();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.labelOfficeProductVersion = new System.Windows.Forms.Label();
             this.panelRegistryValues = new System.Windows.Forms.Panel();
             this.panelInfos = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -107,10 +107,10 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panelDeactivatedElements.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoAdmin)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelDeactivatedElements.SuspendLayout();
             this.panelRegistryValues.SuspendLayout();
             this.panelInfos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -323,6 +323,112 @@
             this.label3.Size = new System.Drawing.Size(136, 33);
             this.label3.TabIndex = 71;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.labelNoAdminHint);
+            this.panel4.Controls.Add(this.pictureBoxNoAdmin);
+            this.panel4.Controls.Add(this.checkBoxRestoreLoadBehavior);
+            this.panel4.Controls.Add(this.labelStatusCaption);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Controls.Add(this.labelNoAdminHintIcon);
+            this.panel4.Location = new System.Drawing.Point(1, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(608, 76);
+            this.panel4.TabIndex = 69;
+            // 
+            // labelNoAdminHint
+            // 
+            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoAdminHint.Location = new System.Drawing.Point(263, 47);
+            this.labelNoAdminHint.Name = "labelNoAdminHint";
+            this.labelNoAdminHint.Size = new System.Drawing.Size(257, 26);
+            this.labelNoAdminHint.TabIndex = 68;
+            this.labelNoAdminHint.Text = "Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addin" +
+                "s verfügbar.";
+            this.labelNoAdminHint.Visible = false;
+            // 
+            // pictureBoxNoAdmin
+            // 
+            this.pictureBoxNoAdmin.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxNoAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoAdmin.Image")));
+            this.pictureBoxNoAdmin.Location = new System.Drawing.Point(244, 47);
+            this.pictureBoxNoAdmin.Name = "pictureBoxNoAdmin";
+            this.pictureBoxNoAdmin.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxNoAdmin.TabIndex = 67;
+            this.pictureBoxNoAdmin.TabStop = false;
+            this.pictureBoxNoAdmin.Visible = false;
+            // 
+            // checkBoxRestoreLoadBehavior
+            // 
+            this.checkBoxRestoreLoadBehavior.AutoSize = true;
+            this.checkBoxRestoreLoadBehavior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
+            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(242, 29);
+            this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
+            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(344, 20);
+            this.checkBoxRestoreLoadBehavior.TabIndex = 49;
+            this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
+            this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
+            this.checkBoxRestoreLoadBehavior.CheckedChanged += new System.EventHandler(this.checkBoxRestoreLoadBehavior_CheckedChanged);
+            // 
+            // labelStatusCaption
+            // 
+            this.labelStatusCaption.AutoSize = true;
+            this.labelStatusCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatusCaption.Location = new System.Drawing.Point(3, 3);
+            this.labelStatusCaption.Name = "labelStatusCaption";
+            this.labelStatusCaption.Size = new System.Drawing.Size(51, 16);
+            this.labelStatusCaption.TabIndex = 58;
+            this.labelStatusCaption.Text = "Status";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButtonActivate);
+            this.panel1.Controls.Add(this.radioButtonDeactivate);
+            this.panel1.Location = new System.Drawing.Point(6, 19);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(208, 36);
+            this.panel1.TabIndex = 64;
+            // 
+            // radioButtonActivate
+            // 
+            this.radioButtonActivate.AutoSize = true;
+            this.radioButtonActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
+            this.radioButtonActivate.Name = "radioButtonActivate";
+            this.radioButtonActivate.Size = new System.Drawing.Size(73, 20);
+            this.radioButtonActivate.TabIndex = 57;
+            this.radioButtonActivate.Text = "Aktiviert";
+            this.radioButtonActivate.UseVisualStyleBackColor = true;
+            this.radioButtonActivate.CheckedChanged += new System.EventHandler(this.radioButtonActivate_CheckedChanged);
+            // 
+            // radioButtonDeactivate
+            // 
+            this.radioButtonDeactivate.AutoSize = true;
+            this.radioButtonDeactivate.Checked = true;
+            this.radioButtonDeactivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
+            this.radioButtonDeactivate.Name = "radioButtonDeactivate";
+            this.radioButtonDeactivate.Size = new System.Drawing.Size(90, 20);
+            this.radioButtonDeactivate.TabIndex = 53;
+            this.radioButtonDeactivate.TabStop = true;
+            this.radioButtonDeactivate.Text = "Deaktiviert";
+            this.radioButtonDeactivate.UseVisualStyleBackColor = true;
+            // 
+            // labelNoAdminHintIcon
+            // 
+            this.labelNoAdminHintIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHintIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelNoAdminHintIcon.Location = new System.Drawing.Point(244, 47);
+            this.labelNoAdminHintIcon.Name = "labelNoAdminHintIcon";
+            this.labelNoAdminHintIcon.Size = new System.Drawing.Size(136, 26);
+            this.labelNoAdminHintIcon.TabIndex = 72;
+            // 
             // panelDeactivatedElements
             // 
             this.panelDeactivatedElements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -404,112 +510,6 @@
             this.labelOfficeProductVersion.Size = new System.Drawing.Size(113, 13);
             this.labelOfficeProductVersion.TabIndex = 63;
             this.labelOfficeProductVersion.Text = "Office Produkt Version";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.labelNoAdminHint);
-            this.panel4.Controls.Add(this.pictureBoxNoAdmin);
-            this.panel4.Controls.Add(this.checkBoxRestoreLoadBehavior);
-            this.panel4.Controls.Add(this.labelStatusCaption);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Controls.Add(this.labelNoAdminHintIcon);
-            this.panel4.Location = new System.Drawing.Point(1, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(608, 76);
-            this.panel4.TabIndex = 69;
-            // 
-            // labelNoAdminHint
-            // 
-            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
-            this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoAdminHint.Location = new System.Drawing.Point(230, 47);
-            this.labelNoAdminHint.Name = "labelNoAdminHint";
-            this.labelNoAdminHint.Size = new System.Drawing.Size(257, 26);
-            this.labelNoAdminHint.TabIndex = 68;
-            this.labelNoAdminHint.Text = "Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addin" +
-                "s verfügbar.";
-            this.labelNoAdminHint.Visible = false;
-            // 
-            // pictureBoxNoAdmin
-            // 
-            this.pictureBoxNoAdmin.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxNoAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoAdmin.Image")));
-            this.pictureBoxNoAdmin.Location = new System.Drawing.Point(211, 47);
-            this.pictureBoxNoAdmin.Name = "pictureBoxNoAdmin";
-            this.pictureBoxNoAdmin.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxNoAdmin.TabIndex = 67;
-            this.pictureBoxNoAdmin.TabStop = false;
-            this.pictureBoxNoAdmin.Visible = false;
-            // 
-            // checkBoxRestoreLoadBehavior
-            // 
-            this.checkBoxRestoreLoadBehavior.AutoSize = true;
-            this.checkBoxRestoreLoadBehavior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
-            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(213, 29);
-            this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
-            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(344, 20);
-            this.checkBoxRestoreLoadBehavior.TabIndex = 49;
-            this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
-            this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
-            this.checkBoxRestoreLoadBehavior.CheckedChanged += new System.EventHandler(this.checkBoxRestoreLoadBehavior_CheckedChanged);
-            // 
-            // labelStatusCaption
-            // 
-            this.labelStatusCaption.AutoSize = true;
-            this.labelStatusCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusCaption.Location = new System.Drawing.Point(3, 3);
-            this.labelStatusCaption.Name = "labelStatusCaption";
-            this.labelStatusCaption.Size = new System.Drawing.Size(51, 16);
-            this.labelStatusCaption.TabIndex = 58;
-            this.labelStatusCaption.Text = "Status";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.radioButtonActivate);
-            this.panel1.Controls.Add(this.radioButtonDeactivate);
-            this.panel1.Location = new System.Drawing.Point(6, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 36);
-            this.panel1.TabIndex = 64;
-            // 
-            // radioButtonActivate
-            // 
-            this.radioButtonActivate.AutoSize = true;
-            this.radioButtonActivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
-            this.radioButtonActivate.Name = "radioButtonActivate";
-            this.radioButtonActivate.Size = new System.Drawing.Size(73, 20);
-            this.radioButtonActivate.TabIndex = 57;
-            this.radioButtonActivate.Text = "Aktiviert";
-            this.radioButtonActivate.UseVisualStyleBackColor = true;
-            this.radioButtonActivate.CheckedChanged += new System.EventHandler(this.radioButtonActivate_CheckedChanged);
-            // 
-            // radioButtonDeactivate
-            // 
-            this.radioButtonDeactivate.AutoSize = true;
-            this.radioButtonDeactivate.Checked = true;
-            this.radioButtonDeactivate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
-            this.radioButtonDeactivate.Name = "radioButtonDeactivate";
-            this.radioButtonDeactivate.Size = new System.Drawing.Size(90, 20);
-            this.radioButtonDeactivate.TabIndex = 53;
-            this.radioButtonDeactivate.TabStop = true;
-            this.radioButtonDeactivate.Text = "Deaktiviert";
-            this.radioButtonDeactivate.UseVisualStyleBackColor = true;
-            // 
-            // labelNoAdminHintIcon
-            // 
-            this.labelNoAdminHintIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Khaki;
-            this.labelNoAdminHintIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelNoAdminHintIcon.Location = new System.Drawing.Point(211, 47);
-            this.labelNoAdminHintIcon.Name = "labelNoAdminHintIcon";
-            this.labelNoAdminHintIcon.Size = new System.Drawing.Size(136, 26);
-            this.labelNoAdminHintIcon.TabIndex = 72;
             // 
             // panelRegistryValues
             // 
@@ -882,13 +882,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelDeactivatedElements.ResumeLayout(false);
-            this.panelDeactivatedElements.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoAdmin)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelDeactivatedElements.ResumeLayout(false);
+            this.panelDeactivatedElements.PerformLayout();
             this.panelRegistryValues.ResumeLayout(false);
             this.panelRegistryValues.PerformLayout();
             this.panelInfos.ResumeLayout(false);

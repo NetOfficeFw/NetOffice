@@ -46,6 +46,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelFolder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxUseTools = new System.Windows.Forms.CheckBox();
+            this.linkLabelNSTOInfo = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
@@ -113,7 +115,7 @@
             this.radioButtonAutomationAddin.AutoSize = true;
             this.radioButtonAutomationAddin.Checked = true;
             this.radioButtonAutomationAddin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonAutomationAddin.Location = new System.Drawing.Point(73, 58);
+            this.radioButtonAutomationAddin.Location = new System.Drawing.Point(73, 59);
             this.radioButtonAutomationAddin.Name = "radioButtonAutomationAddin";
             this.radioButtonAutomationAddin.Size = new System.Drawing.Size(131, 20);
             this.radioButtonAutomationAddin.TabIndex = 94;
@@ -196,11 +198,13 @@
             // radioButtonUserFolder
             // 
             this.radioButtonUserFolder.AutoSize = true;
+            this.radioButtonUserFolder.Checked = true;
             this.radioButtonUserFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonUserFolder.Location = new System.Drawing.Point(40, 78);
+            this.radioButtonUserFolder.Location = new System.Drawing.Point(40, 53);
             this.radioButtonUserFolder.Name = "radioButtonUserFolder";
             this.radioButtonUserFolder.Size = new System.Drawing.Size(119, 20);
             this.radioButtonUserFolder.TabIndex = 106;
+            this.radioButtonUserFolder.TabStop = true;
             this.radioButtonUserFolder.Text = "Eigene Dateien";
             this.radioButtonUserFolder.UseVisualStyleBackColor = true;
             this.radioButtonUserFolder.CheckedChanged += new System.EventHandler(this.radioButtonProjectFolder_CheckedChanged);
@@ -208,13 +212,11 @@
             // radioButtonApplicationData
             // 
             this.radioButtonApplicationData.AutoSize = true;
-            this.radioButtonApplicationData.Checked = true;
             this.radioButtonApplicationData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonApplicationData.Location = new System.Drawing.Point(40, 50);
+            this.radioButtonApplicationData.Location = new System.Drawing.Point(40, 79);
             this.radioButtonApplicationData.Name = "radioButtonApplicationData";
             this.radioButtonApplicationData.Size = new System.Drawing.Size(125, 20);
             this.radioButtonApplicationData.TabIndex = 105;
-            this.radioButtonApplicationData.TabStop = true;
             this.radioButtonApplicationData.Text = "Application Data";
             this.radioButtonApplicationData.UseVisualStyleBackColor = true;
             this.radioButtonApplicationData.CheckedChanged += new System.EventHandler(this.radioButtonProjectFolder_CheckedChanged);
@@ -252,15 +254,39 @@
             this.panel1.Controls.Add(this.radioButtonApplicationData);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.labelFolder);
-            this.panel1.Location = new System.Drawing.Point(25, 86);
+            this.panel1.Location = new System.Drawing.Point(25, 157);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 177);
             this.panel1.TabIndex = 113;
+            // 
+            // checkBoxUseTools
+            // 
+            this.checkBoxUseTools.AutoSize = true;
+            this.checkBoxUseTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUseTools.Location = new System.Drawing.Point(73, 95);
+            this.checkBoxUseTools.Name = "checkBoxUseTools";
+            this.checkBoxUseTools.Size = new System.Drawing.Size(292, 20);
+            this.checkBoxUseTools.TabIndex = 114;
+            this.checkBoxUseTools.Text = "NetOffice Service Tools für Office verwenden";
+            this.checkBoxUseTools.UseVisualStyleBackColor = true;
+            // 
+            // linkLabelNSTOInfo
+            // 
+            this.linkLabelNSTOInfo.AutoSize = true;
+            this.linkLabelNSTOInfo.Location = new System.Drawing.Point(374, 98);
+            this.linkLabelNSTOInfo.Name = "linkLabelNSTOInfo";
+            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(84, 13);
+            this.linkLabelNSTOInfo.TabIndex = 115;
+            this.linkLabelNSTOInfo.TabStop = true;
+            this.linkLabelNSTOInfo.Text = "Was ist NSTO ?";
+            this.linkLabelNSTOInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNSTOInfo_LinkClicked);
             // 
             // ProjectControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkLabelNSTOInfo);
+            this.Controls.Add(this.checkBoxUseTools);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.radioButtonClassLibrary);
@@ -269,7 +295,7 @@
             this.Controls.Add(this.labelProjectType);
             this.Controls.Add(this.radioButtonAutomationAddin);
             this.Name = "ProjectControl";
-            this.Size = new System.Drawing.Size(744, 279);
+            this.Size = new System.Drawing.Size(744, 342);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -298,5 +324,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelFolder;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBoxUseTools;
+        private System.Windows.Forms.LinkLabel linkLabelNSTOInfo;
     }
 }

@@ -18,37 +18,39 @@ using NetOffice.DeveloperToolbox.OutlookSecurity;
 
 namespace NetOffice.DeveloperToolbox
 {
+    /// <summary>
+    /// mainform in the application
+    /// </summary>
     public partial class MainForm : Form
     {
-        #region Fields
-        
-        NotifyIcon  _notify;
-        string[]    _args;
-        XmlDocument _configFile;
-        List<IToolboxControl> _controls = new List<IToolboxControl>();
-        int _currentLanguageID;
-
-        #endregion
-
         #region Construction
 
+        /// <summary>
+        /// Designtime Ctor
+        /// </summary>
         public MainForm(): this(new string[0])
         {
-             
+            InitializeComponent();
         } 
 
+        /// <summary>
+        /// Runtime Ctor
+        /// </summary>
+        /// <param name="args">commandline argument array</param>
         public MainForm(string[] args)
         {
             try
             {
                 InitializeComponent();
+                
+                ToolboxControls = new List<IToolboxControl>();
                 ResizeControls();
-
+                
                 // setup about
-                labelVersionText.Text = String.Format("Version {0}", AssemblyVersion);
-                labelVersionHint.Text = String.Format("Version {0}", AssemblyVersion);
-                labelCopyrightText.Text = AssemblyCopyright;
-                linkLabelCompany.Text = AssemblyCompany;
+                labelVersionText.Text = String.Format("Version {0}", AssemblyInfo.AssemblyVersion);
+                labelVersionHint.Text = String.Format("Version {0}", AssemblyInfo.AssemblyVersion);
+                labelCopyrightText.Text = AssemblyInfo.AssemblyCopyright;
+                linkLabelCompany.Text = AssemblyInfo.AssemblyCompany;
 
                 // load controls
                 IntPtr dummyTabPageInsertDoesntWorkWithout = this.tabControlMain.Handle;
@@ -59,7 +61,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl1.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl1.Dock = DockStyle.Fill;
-                _controls.Add(newControl1);
+                ToolboxControls.Add(newControl1);
 
                 ApplicationObserverControl newControl2 = new ApplicationObserverControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl2.ControlCaption);
@@ -68,7 +70,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl2.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl2.Dock = DockStyle.Fill;
-                _controls.Add(newControl2);
+                ToolboxControls.Add(newControl2);
 
                 RegistryEditorControl newControl3 = new RegistryEditorControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl3.ControlCaption);
@@ -77,7 +79,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl3.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl3.Dock = DockStyle.Fill;
-                _controls.Add(newControl3);
+                ToolboxControls.Add(newControl3);
 
                 AddinGuardControl newControl4 = new AddinGuardControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl4.ControlCaption);
@@ -86,7 +88,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl4.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl4.Dock = DockStyle.Fill;
-                _controls.Add(newControl4);
+                ToolboxControls.Add(newControl4);
 
                 OfficeUIControl newControl6 = new OfficeUIControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl6.ControlCaption);
@@ -95,7 +97,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl6.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl6.Dock = DockStyle.Fill;
-                _controls.Add(newControl6);
+                ToolboxControls.Add(newControl6);
 
                 OutlookSecurityControl newControl5 = new OutlookSecurityControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl5.ControlCaption);
@@ -104,7 +106,7 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl5.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl5.Dock = DockStyle.Fill;
-                _controls.Add(newControl5);
+                ToolboxControls.Add(newControl5);
 
                 ProjectWizardControl newControl7 = new ProjectWizardControl();
                 tabControlMain.TabPages.Insert(tabControlMain.TabPages.Count - 1, newControl7.ControlCaption);
@@ -113,110 +115,62 @@ namespace NetOffice.DeveloperToolbox
                 imageListTabMain.Images.Add(newControl7.Icon);
                 tabControlMain.TabPages[tabControlMain.TabPages.Count - 2].ImageIndex = imageListTabMain.Images.Count - 1;
                 newControl7.Dock = DockStyle.Fill;
-                _controls.Add(newControl7);
+                ToolboxControls.Add(newControl7);
 
 
                 // load configuration
                 LoadConfiguration();
                 SetupTrayIcon(true);
-                _args = args;
+                CommandLineArgs = args;
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.Critical, _currentLanguageID);
+                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.Critical, CurrentLanguageID);
                 errorForm.ShowDialog(this);
             }
         }
 
         #endregion
+  
+        #region Properties
 
-        #region Assemblyattributaccessoren
+        /// <summary>
+        /// represents the tray icon in the right bottom area
+        /// </summary>
+        private NotifyIcon TrayIcon{get; set;}
 
-        public string AssemblyTitle
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
-        }
+        /// <summary>
+        /// given commandline arguments from the application
+        /// </summary>
+        private string[] CommandLineArgs { get; set; }
 
-        public string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
+        /// <summary>
+        /// represents the LCID from the current ui language
+        /// </summary>
+        private int CurrentLanguageID { get; set; }
 
-        public string AssemblyDescription
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-            }
-        }
+        /// <summary>
+        /// represents the configuration file (old XmlDocument based because the first toolbox version was compiled in .NET2)
+        /// </summary>
+        private XmlDocument ConfigFile { get; set; }
 
-        public string AssemblyProduct
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
-        }
-
-        public string AssemblyCopyright
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-            }
-        }
-
-        public string AssemblyCompany
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
-        }
+        /// <summary>
+        /// the currenty loaded toolbox controls
+        /// </summary>
+        private List<IToolboxControl> ToolboxControls { get; set; }
 
         #endregion
 
-        #region Config Methods
+        #region Methods
 
+        /// <summary>
+        /// validate the version entry in the configuration file match with current assembly version
+        /// </summary>
+        /// <returns>true if match otherwise false</returns>
         private bool ValidateConfigFileVersion()
         {
             XmlAttribute versionAttribute = null;
-            foreach (XmlAttribute item in _configFile.DocumentElement.Attributes)
+            foreach (XmlAttribute item in ConfigFile.DocumentElement.Attributes)
             {
                 if (item.Name == "Version")
                 {
@@ -228,94 +182,80 @@ namespace NetOffice.DeveloperToolbox
             if (null == versionAttribute)
                 return false;
 
-            return (versionAttribute.Value == AssemblyVersion);
+            return (versionAttribute.Value == AssemblyInfo.AssemblyVersion);
         }
 
+        /// <summary>
+        /// Load the configuration file from LocalApplicationData folder or load the Ressources.DefaultConfiguration.xml(embedded ressource)
+        /// </summary>
         private void LoadConfiguration()
         {
             try
             {
                 string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DeveloperToolbox.Settings.xml");
-                _configFile = new XmlDocument();
+                ConfigFile = new XmlDocument();
                 if (File.Exists(filePath))
                 {
-                    _configFile.Load(filePath);
+                    ConfigFile.Load(filePath);
                     if (!ValidateConfigFileVersion())
                     {
                         File.Delete(filePath);
                         string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                        _configFile.Load(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".DefaultConfiguration.xml"));
+                        ConfigFile.Load(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".DefaultConfiguration.xml"));
                     }
                 }
                 else
                 {
                     string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                    _configFile.Load(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".DefaultConfiguration.xml"));
+                    ConfigFile.Load(this.GetType().Assembly.GetManifestResourceStream(assemblyName + ".DefaultConfiguration.xml"));
                 }
 
-                XmlNode appNode = _configFile.SelectSingleNode("Application");
+                XmlNode appNode = ConfigFile.SelectSingleNode("Application");
                 checkBoxStartAppMinimized.Checked = Convert.ToBoolean(appNode.Attributes.Item(0).Value);
                 checkBoxMinimizeToTray.Checked = Convert.ToBoolean(appNode.Attributes.Item(1).Value);
                 checkBoxStartAppWithWindows.Checked = Convert.ToBoolean(appNode.Attributes.Item(2).Value);
                 comboBoxLanguage.SelectedIndex = Convert.ToInt32((appNode.Attributes.Item(3).Value));
-                 
-                foreach (IToolboxControl item in _controls)
-                { 
-                    item.LoadConfiguration(_configFile.SelectSingleNode("Application/Controls/" + item.ControlName));
+
+                foreach (IToolboxControl item in ToolboxControls)
+                {
+                    item.LoadConfiguration(ConfigFile.SelectSingleNode("Application/Controls/" + item.ControlName));
                     item.SetLanguage(IndexToLanguageID(comboBoxLanguage.SelectedIndex));
                 }
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
+        /// <summary>
+        /// Save the configuration to LocalApplicationData folder
+        /// </summary>
         private void SaveConfiguration()
         {
             try
             {
-                XmlNode appNode = _configFile.SelectSingleNode("Application");
+                XmlNode appNode = ConfigFile.SelectSingleNode("Application");
                 appNode.Attributes.Item(0).Value = checkBoxStartAppMinimized.Checked.ToString();
                 appNode.Attributes.Item(1).Value = checkBoxMinimizeToTray.Checked.ToString();
                 appNode.Attributes.Item(2).Value = checkBoxStartAppWithWindows.Checked.ToString();
                 appNode.Attributes.Item(3).Value = comboBoxLanguage.SelectedIndex.ToString();
 
-                foreach (IToolboxControl item in _controls)
-                    item.SaveConfiguration(_configFile.SelectSingleNode("Application/Controls/" + item.ControlName));
+                foreach (IToolboxControl item in ToolboxControls)
+                    item.SaveConfiguration(ConfigFile.SelectSingleNode("Application/Controls/" + item.ControlName));
 
                 string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "DeveloperToolbox.Settings.xml");
-                _configFile.Save(filePath);
+                ConfigFile.Save(filePath);
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
-        #endregion
-
-        #region Methods
-
-        private static int LanguageIDToIndex(string language)
-        {
-            int lang = Convert.ToInt32(language);
-            if (lang == 1031)
-                return 1;
-            else
-                return 0;
-        }
-
-        private static int IndexToLanguageID(int index)
-        {
-            if (0 == index)
-                return 1033;
-            else
-                return 1031;
-        }
-
+        /// <summary>
+        /// Create autorun key in the registry or delete them
+        /// </summary>
         private void SetupAutoRunEntry()
         {
             string runEntryKey = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
@@ -339,41 +279,91 @@ namespace NetOffice.DeveloperToolbox
             }
         }
 
+        /// <summary>
+        /// Create a TrayIcon(rightBottom corner)
+        /// </summary>
+        /// <param name="init">true means create the icon otherwise it means destroy the current tray icon</param>
         private void SetupTrayIcon(bool init)
         {
             if (true == init)
             {
-                _notify = new NotifyIcon();
-                _notify.Icon = this.Icon;
-                _notify.Text = "DeveloperToolbox";
-                _notify.Click += new EventHandler(_notify_Click);
+                TrayIcon = new NotifyIcon();
+                TrayIcon.Icon = this.Icon;
+                TrayIcon.Text = "DeveloperToolbox";
+                TrayIcon.Click += new EventHandler(TrayNotifyIcon_Click);
             }
             else
             {
-                _notify.Visible = false;
-                _notify.Dispose();
-                _notify = null;
+                TrayIcon.Visible = false;
+                TrayIcon.Dispose();
+                TrayIcon = null;
             }
+        }
+      
+        /// <summary>
+        /// center the about page an title label
+        /// </summary>
+        private void ResizeControls()
+        {
+            colorLabelTitle.Top = (pictureBoxLogo.Top / 2) - (colorLabelTitle.Height / 2);
+            colorLabelTitle.Left = (tabPageApplication.Width / 2) - (colorLabelTitle.Width / 2);
+
+            panelAbout.Left = (tabPageAbout.Width / 2) - (panelAbout.Width / 2);
+            panelAbout.Top = (tabPageAbout.Height / 2) - (panelAbout.Height / 2);
+        }
+
+        /// <summary>
+        /// converts the language LCID parameter to a number and returns the language combobox index 
+        /// </summary>
+        /// <param name="language">language(must be a supported LCID)</param>
+        /// <returns>combo box index</returns>
+        private static int LanguageIDToIndex(string language)
+        {
+            int lang = Convert.ToInt32(language);
+            if (lang == 1031)
+                return 1;
+            else
+                return 0;
+        }
+
+        /// <summary>
+        /// await a index from the language combobox and returns the corresonding LCID
+        /// </summary>
+        /// <param name="index">combo box index</param>
+        /// <returns>coressponding LCID from index</returns>
+        private static int IndexToLanguageID(int index)
+        {
+            if (0 == index)
+                return 1033;
+            else
+                return 1031;
         }
 
         #endregion
 
-        #region Trigger
+        #region UI Trigger
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            foreach (var item in _controls)
+            try
             {
-                Control winControl = item as Control;
-                if (winControl.Visible)
+                foreach (var item in ToolboxControls)
                 {
-                    item.KeyDown(e);
-                    return;
+                    Control winControl = item as Control;
+                    if (winControl.Visible)
+                    {
+                        item.KeyDown(e);
+                        return;
+                    }
                 }
+            }
+            catch (Exception exception)
+            {
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
-        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        private void PictureBoxLogo_Click(object sender, EventArgs e)
         {
             try
             {
@@ -381,27 +371,24 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
-        private void comboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBoxLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 int languageID = IndexToLanguageID(comboBoxLanguage.SelectedIndex);
-                _currentLanguageID = languageID;
-                Translator.TranslateControls(this, "MessageTable.txt", languageID);
-                foreach (IToolboxControl item in _controls)
+                CurrentLanguageID = languageID;
+                Translator.TranslateControls(this, "Ressources.MessageTable.txt", languageID);
+                foreach (IToolboxControl item in ToolboxControls)
                     item.SetLanguage(languageID);
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
-            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -409,7 +396,7 @@ namespace NetOffice.DeveloperToolbox
             try
             {
                 SaveConfiguration();
-                foreach (IToolboxControl item in _controls)
+                foreach (IToolboxControl item in ToolboxControls)
                     item.Dispose();
 
                 SetupTrayIcon(false);
@@ -417,25 +404,22 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-               ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-               errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
-        
         }
-        
-        void _notify_Click(object sender, EventArgs e)
+
+        private void TrayNotifyIcon_Click(object sender, EventArgs e)
         {
             try
             {
                 this.Show();
-                _notify.Visible = false;
+                TrayIcon.Visible = false;
                 this.WindowState = FormWindowState.Normal;
                 this.Activate();
             }
             catch (Exception exception)
             {
-               ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-               errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
@@ -445,30 +429,20 @@ namespace NetOffice.DeveloperToolbox
             {
                 if ((FormWindowState.Minimized == this.WindowState) && (true == checkBoxMinimizeToTray.Checked))
                 {
-                    _notify.Visible = true;
+                    TrayIcon.Visible = true;
                     this.Hide();
                 }
                 else
                 {
-                    _notify.Visible = false;
+                    TrayIcon.Visible = false;
                     ResizeControls();
                 }
 
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);                
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);              
             }
-        }
-
-        private void ResizeControls()
-        {
-            colorLabelTitle.Top = (pictureBoxLogo.Top / 2) - (colorLabelTitle.Height / 2);
-            colorLabelTitle.Left = (tabPageApplication.Width / 2) - (colorLabelTitle.Width / 2);
-
-            panelAbout.Left = (tabPageAbout.Width / 2) - (panelAbout.Width / 2);
-            panelAbout.Top = (tabPageAbout.Height / 2) - (panelAbout.Height / 2);
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -480,9 +454,9 @@ namespace NetOffice.DeveloperToolbox
                 if (true == checkBoxStartAppMinimized.Checked)
                     minimize = true;
 
-                if (null != _args)
+                if (null != CommandLineArgs)
                 {
-                    foreach (string item in _args)
+                    foreach (string item in CommandLineArgs)
                         if (true == item.Trim().ToLower().Equals("-min", StringComparison.InvariantCultureIgnoreCase))
                             minimize = true;
                 }
@@ -492,12 +466,11 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);             
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);      
             }
         }
 
-        private void tabControlMain_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControlMain_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -508,12 +481,11 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-               ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-               errorForm.ShowDialog(this);             
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);        
             }
         }
 
-        private void linkLabelAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabelAbout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
@@ -522,12 +494,11 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 
-        private void linkLabelMain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LinkLabelMain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
@@ -536,8 +507,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);     
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);   
             }           
         }
        
@@ -545,13 +515,12 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
-                foreach (IToolboxControl item in _controls)
+                foreach (IToolboxControl item in ToolboxControls)
                     item.LoadComplete();
             }
             catch (Exception exception)
             {
-                ErrorForm errorForm = new ErrorForm(exception, ErrorCategory.NonCritical, _currentLanguageID);
-                errorForm.ShowDialog(this);     
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, CurrentLanguageID);
             }
         }
 

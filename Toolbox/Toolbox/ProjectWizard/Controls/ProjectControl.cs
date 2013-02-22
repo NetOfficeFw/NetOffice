@@ -158,6 +158,17 @@ namespace NetOffice.DeveloperToolbox
             throw new IndexOutOfRangeException("SelectedProjectFolderType");
         }
 
+        internal bool UseTools
+        { 
+            get
+            {
+                if (checkBoxUseTools.Checked && radioButtonAutomationAddin.Checked)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        
         internal string SelectedFolder
         {
             get
@@ -196,6 +207,8 @@ namespace NetOffice.DeveloperToolbox
 
         private void radioButtonProjectType_CheckedChanged(object sender, EventArgs e)
         {
+            checkBoxUseTools.Enabled = radioButtonAutomationAddin.Checked;
+
             ChangeSettings();
             RaiseChangeEvent();
         }
@@ -230,6 +243,29 @@ namespace NetOffice.DeveloperToolbox
             WindowsIdentity myWindowsIdentity = WindowsIdentity.GetCurrent();
             WindowsPrincipal myWindowsPrincipal = new WindowsPrincipal(myWindowsIdentity);
             return myWindowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
+        private void linkLabelNSTOInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                switch (ProjectWizardControl.CurrentLanguageID)
+                {
+                    case 1049:
+                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_RSs");
+                        break;
+                    case 1031:
+                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_DE");
+                        break;
+                    default:
+                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_EN");
+                        break;
+                }
+            }
+            catch (Exception exception)
+            {
+                ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical, 1033);
+            }
         }
     }
 }

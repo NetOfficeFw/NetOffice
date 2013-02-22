@@ -25,6 +25,7 @@ Public Class TestAssembly
             _listPackages.Add(New Test05())
             _listPackages.Add(New Test06())
             _listPackages.Add(New Test07())
+            _listPackages.Add(New Test08())
 
         End If
 

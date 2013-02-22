@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application StartMinimized="false" MinimizeToTray="true" StartWithWindows="false" Language ="0"  Version="1.2.0.0" >
+  <Controls>
+    <ApplicationObserver>      
+    </ApplicationObserver>
+    <RegistryEditor>      
+    </RegistryEditor>
+    <AddinGuard>
+    </AddinGuard>
+    <OfficeCompatibility>
+    </OfficeCompatibility>
+    <OutlookSecurity>
+    </OutlookSecurity>
+</Controls>
+</Application>

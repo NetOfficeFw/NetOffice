@@ -133,7 +133,7 @@ namespace NetOffice
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
-            if (!Object.ReferenceEquals(parentObject, null))
+            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -155,7 +155,7 @@ namespace NetOffice
             _isEnumerator = isEnumerator;
             _instanceType = comProxy.GetType();
 
-            if (!Object.ReferenceEquals(parentObject, null))
+            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -176,8 +176,8 @@ namespace NetOffice
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _instanceType = comProxyType;
-            
-            if(!Object.ReferenceEquals(parentObject, null))
+
+            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);

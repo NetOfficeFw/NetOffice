@@ -44,6 +44,8 @@
             this.radioButtonVS2008 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelNet45Hint = new System.Windows.Forms.Label();
+            this.radioButtonVS2012 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,10 +121,11 @@
             "3.0",
             "3.5",
             "4.0 (Client Profile)",
-            "4.0"});
+            "4.0",
+            "4.5"});
             this.comboBoxNetRuntime.Location = new System.Drawing.Point(135, 209);
             this.comboBoxNetRuntime.Name = "comboBoxNetRuntime";
-            this.comboBoxNetRuntime.Size = new System.Drawing.Size(104, 24);
+            this.comboBoxNetRuntime.Size = new System.Drawing.Size(199, 24);
             this.comboBoxNetRuntime.TabIndex = 101;
             this.comboBoxNetRuntime.SelectedIndexChanged += new System.EventHandler(this.comboBoxNetRuntime_SelectedIndexChanged);
             // 
@@ -152,11 +155,12 @@
             this.labelNet4Hint.AutoSize = true;
             this.labelNet4Hint.BackColor = System.Drawing.Color.DarkKhaki;
             this.labelNet4Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNet4Hint.Location = new System.Drawing.Point(466, 35);
+            this.labelNet4Hint.Location = new System.Drawing.Point(241, 6);
             this.labelNet4Hint.Name = "labelNet4Hint";
-            this.labelNet4Hint.Size = new System.Drawing.Size(222, 16);
+            this.labelNet4Hint.Size = new System.Drawing.Size(290, 16);
             this.labelNet4Hint.TabIndex = 103;
-            this.labelNet4Hint.Text = ".NET 4.0 benötigt Visual Studio 2010";
+            this.labelNet4Hint.Text = ".NET 4.0 benötigt Visual Studio 2010 oder höher";
+            this.labelNet4Hint.Visible = false;
             // 
             // pictureBox1
             // 
@@ -218,6 +222,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labelNet45Hint);
+            this.panel2.Controls.Add(this.radioButtonVS2012);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.radioButtonVS2010);
             this.panel2.Controls.Add(this.labelEnvironment);
@@ -227,6 +233,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(721, 58);
             this.panel2.TabIndex = 109;
+            // 
+            // labelNet45Hint
+            // 
+            this.labelNet45Hint.AutoSize = true;
+            this.labelNet45Hint.BackColor = System.Drawing.Color.DarkKhaki;
+            this.labelNet45Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNet45Hint.Location = new System.Drawing.Point(474, 6);
+            this.labelNet45Hint.Name = "labelNet45Hint";
+            this.labelNet45Hint.Size = new System.Drawing.Size(222, 16);
+            this.labelNet45Hint.TabIndex = 109;
+            this.labelNet45Hint.Text = ".NET 4.5 benötigt Visual Studio 2012";
+            this.labelNet45Hint.Visible = false;
+            // 
+            // radioButtonVS2012
+            // 
+            this.radioButtonVS2012.AutoSize = true;
+            this.radioButtonVS2012.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVS2012.Location = new System.Drawing.Point(460, 33);
+            this.radioButtonVS2012.Name = "radioButtonVS2012";
+            this.radioButtonVS2012.Size = new System.Drawing.Size(195, 20);
+            this.radioButtonVS2012.TabIndex = 108;
+            this.radioButtonVS2012.Text = "Visual Studio 2012 (Express)";
+            this.radioButtonVS2012.UseVisualStyleBackColor = true;
             // 
             // EnvironmentControl
             // 
@@ -269,5 +298,7 @@
         private System.Windows.Forms.RadioButton radioButtonVS2008;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButtonVS2012;
+        private System.Windows.Forms.Label labelNet45Hint;
     }
 }

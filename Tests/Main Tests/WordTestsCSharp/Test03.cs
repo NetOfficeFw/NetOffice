@@ -59,6 +59,7 @@ namespace WordTestsCSharp
                 levels[1].NumberStyle = WdListNumberStyle.wdListNumberStyleArabic;
                 levels[1].NumberPosition = 0;
                 levels[1].Alignment = WdListLevelAlignment.wdListLevelAlignLeft;
+
                 levels[1].TextPosition = application.CentimetersToPoints(0.63F);
                 levels[1].TabPosition = application.CentimetersToPoints(0.63F);
                 levels[1].ResetOnHigher = 0;

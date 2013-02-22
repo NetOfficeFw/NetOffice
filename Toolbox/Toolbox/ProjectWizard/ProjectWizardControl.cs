@@ -337,7 +337,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(exception);
+                ErrorForm.ShowError(this, exception);
             }
         }
 
@@ -400,7 +400,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(exception);
+                ErrorForm.ShowError(this, exception);
             }
         }
 
@@ -413,7 +413,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(exception);
+                ErrorForm.ShowError(this, exception);
             }
         }
 
@@ -430,13 +430,11 @@ namespace NetOffice.DeveloperToolbox
                 string resultFolder = ProjectConverter.ConvertProjectTemplate(_listControls);
                 FinishDialog dialog = new FinishDialog(resultFolder);
                 dialog.ShowDialog(this);
-                //MessageBox.Show(this, message, "Developer Toolbox", MessageBoxButtons.OK, MessageBoxIcon.Information);              
-//                System.Diagnostics.Process.Start(resultFolder);
                 Reset();
             }
             catch (Exception exception)
             {
-                ErrorForm.ShowError(exception);
+                ErrorForm.ShowError(this, exception);
             }
         }
 

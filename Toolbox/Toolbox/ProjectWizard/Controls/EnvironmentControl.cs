@@ -109,8 +109,10 @@ namespace NetOffice.DeveloperToolbox
             {
                 if (radioButtonVS2008.Checked)
                     return "2008";
-                else
+                else if (radioButtonVS2010.Checked)
                     return "2010";
+                else
+                    return "2012";
             }
         }
 
@@ -160,16 +162,35 @@ namespace NetOffice.DeveloperToolbox
         {
             ChangeSettings();
             RaiseChangeEvent();
-            if (comboBoxNetRuntime.SelectedIndex >= 3)
+            if (comboBoxNetRuntime.SelectedIndex == 3 || comboBoxNetRuntime.SelectedIndex == 4)
             {
+                // .net 4 / 4(client)
                 labelNet4Hint.Visible = true;
+                labelNet45Hint.Visible = false;
                 radioButtonVS2008.Enabled = false;
+                radioButtonVS2010.Enabled = true;
+                radioButtonVS2012.Enabled = true;
                 radioButtonVS2010.Checked = true;
+                 
+            }
+            else if (comboBoxNetRuntime.SelectedIndex == 5)
+            {
+                // .net 4.5
+                labelNet4Hint.Visible = false;
+                labelNet45Hint.Visible = true;
+                radioButtonVS2008.Enabled = false;
+                radioButtonVS2010.Enabled = false;
+                radioButtonVS2012.Enabled = true;
+                radioButtonVS2012.Checked = true;
             }
             else
             {
+                // else
                 labelNet4Hint.Visible = false;
+                labelNet45Hint.Visible = false;
                 radioButtonVS2008.Enabled = true;
+                radioButtonVS2010.Enabled = true;
+                radioButtonVS2012.Enabled = true;
             }
         }
     }

@@ -50,7 +50,7 @@ namespace NetOffice
                 if( (Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name,SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
             {
@@ -73,7 +73,7 @@ namespace NetOffice
                 if (comObject.IsDisposed)
                     throw new InvalidComObjectException();
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
             {
@@ -95,7 +95,7 @@ namespace NetOffice
                 if ((comObject as COMObject).IsDisposed)
                     throw new InvalidComObjectException();
 
-                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, comObject, paramsArray, Settings.ThreadCulture);
             }
             catch (Exception throwedException)
             {
@@ -121,7 +121,7 @@ namespace NetOffice
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
