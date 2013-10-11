@@ -34,7 +34,7 @@ namespace NetOffice.DeveloperToolbox
                 case "ICSharpCode.SharpZipLib.dll":
                 case "Mono.Cecil.dll":
                 case "NetOffice.OutlookSecurity.dll":
-                    assemblyFullPath = string.Format("{0}\\Dependencies\\Bin\\{1}", Application.StartupPath, assemblyName);
+                    assemblyFullPath = string.Format("{0}\\Bin\\{1}", Application.StartupPath, assemblyName);
                     return System.Reflection.Assembly.LoadFile(assemblyFullPath);
                 case "AccessApi.dll":
                 case "ADODBApi.dll":
@@ -52,7 +52,7 @@ namespace NetOffice.DeveloperToolbox
                 case "VBIDEApi.dll":
                 case "VisioApi.dll":
                 case "WordApi.dll":
-                    assemblyFullPath = string.Format("{0}\\Dependencies\\Project Wizard\\NetOffice Assemblies\\4.0\\{1}", Application.StartupPath, assemblyName);
+                    assemblyFullPath = string.Format("{0}\\Project Wizard\\NetOffice Assemblies\\4.0\\{1}", Application.StartupPath, assemblyName);
                     return System.Reflection.Assembly.LoadFile(assemblyFullPath);
                 default:
                     break;

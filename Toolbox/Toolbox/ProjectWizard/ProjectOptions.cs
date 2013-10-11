@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Win32;
+using System.Globalization;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -11,7 +12,8 @@ namespace NetOffice.DeveloperToolbox
         Addin = 0,
         WindowsForms =1,
         ClassLibrary = 2,
-        Console = 3
+        Console = 3,
+        ToolsAddin = 4
     }
 
     public enum ProgrammingLanguage
@@ -31,7 +33,7 @@ namespace NetOffice.DeveloperToolbox
         public ProjectOptions(List<IWizardControl> controls)
         {
             ProjectControl projectControl = GetProjectControl(controls);
-            ProjectType = ToProjectType(projectControl.SelectedProjectType(1033));
+            ProjectType = ToProjectType(projectControl.SelectedProjectType(1033), projectControl.UseTools);
             ProjectFolderType = projectControl.SelectedProjectFolderType(1033);
             ProjectFolder = GetSelectedFolder(ProjectFolderType);
 
@@ -103,7 +105,7 @@ namespace NetOffice.DeveloperToolbox
                 return 4.0;
             }
             else
-                return Convert.ToDouble(value);
+                return Convert.ToDouble(value, CultureInfo.InvariantCulture);
         }
 
         private bool ToRuntimeUseClient(string value)
@@ -189,12 +191,17 @@ namespace NetOffice.DeveloperToolbox
                 return IDE.VS2010;
         }
 
-        private ProjectType ToProjectType(string value)
+        private ProjectType ToProjectType(string value, bool useTools)
         {
             switch (value)
             {
                 case "AutomationAddin":
+                {
+                    if (useTools)
+                        return ProjectType.ToolsAddin;
+                    else
                     return ProjectType.Addin;
+                }
                 case "WindowsForms":
                     return ProjectType.WindowsForms;
                 case "Console":

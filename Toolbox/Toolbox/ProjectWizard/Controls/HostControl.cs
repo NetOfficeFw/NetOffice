@@ -107,7 +107,24 @@ namespace NetOffice.DeveloperToolbox
 
         public void Activate()
         {
+            foreach (var item in ProjectWizardControl.Singleton.WizardControls)
+            {
+                ProjectControl ctrl = item as ProjectControl;
+                if (null != ctrl)
+                {
 
+                    if (ctrl.IsToolAddinProject)
+                    {
+                        checkBoxVisio.Checked = false;
+                        checkBoxVisio.Enabled = false;
+                    }
+                    else
+                    {
+                        checkBoxVisio.Enabled = true;
+                    }
+                    return;
+                }
+            }
         }
 
         public string[] GetSettingsSummary()

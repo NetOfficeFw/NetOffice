@@ -262,23 +262,25 @@
             // checkBoxUseTools
             // 
             this.checkBoxUseTools.AutoSize = true;
+            this.checkBoxUseTools.Checked = true;
+            this.checkBoxUseTools.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxUseTools.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxUseTools.Location = new System.Drawing.Point(73, 95);
             this.checkBoxUseTools.Name = "checkBoxUseTools";
-            this.checkBoxUseTools.Size = new System.Drawing.Size(292, 20);
+            this.checkBoxUseTools.Size = new System.Drawing.Size(189, 20);
             this.checkBoxUseTools.TabIndex = 114;
-            this.checkBoxUseTools.Text = "NetOffice Service Tools für Office verwenden";
+            this.checkBoxUseTools.Text = "NetOffice Tools verwenden";
             this.checkBoxUseTools.UseVisualStyleBackColor = true;
             // 
             // linkLabelNSTOInfo
             // 
             this.linkLabelNSTOInfo.AutoSize = true;
-            this.linkLabelNSTOInfo.Location = new System.Drawing.Point(374, 98);
+            this.linkLabelNSTOInfo.Location = new System.Drawing.Point(91, 125);
             this.linkLabelNSTOInfo.Name = "linkLabelNSTOInfo";
-            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(84, 13);
+            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(309, 13);
             this.linkLabelNSTOInfo.TabIndex = 115;
             this.linkLabelNSTOInfo.TabStop = true;
-            this.linkLabelNSTOInfo.Text = "Was ist NSTO ?";
+            this.linkLabelNSTOInfo.Text = "Gewusst wie: Verwenden der NetOffice Tools für Addin Projekte";
             this.linkLabelNSTOInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNSTOInfo_LinkClicked);
             // 
             // ProjectControl

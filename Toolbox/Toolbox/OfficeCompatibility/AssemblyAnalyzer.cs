@@ -819,6 +819,9 @@ namespace NetOffice.DeveloperToolbox.OfficeCompatibility
                         string typeName = GetNameFromNewObjMethodReference(methodReference);
                         string componentName = NetOfficeSupportTable.GetLibrary(typeName);
 
+                        string[] testArray = typeName.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                        if (testArray.Length >= 3 && testArray[2] == "Tools")
+                            continue;
                         if ((typeName.StartsWith(_apiName)) && !typeName.Equals(_apiName + ".dll", StringComparison.InvariantCultureIgnoreCase) &&
                             CountOf(typeName, ".") > 1 && (!typeName.StartsWith("NetOffice.DeveloperToolbox")))
                         {

@@ -19,11 +19,12 @@ namespace NetOffice.DeveloperToolbox
         {
             get 
             {
-                string processName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
-                if (processName.EndsWith("VSHost", StringComparison.InvariantCultureIgnoreCase) || (processName == "devenv"))
-                    return true;
-                else
-                    return false;
+                return false;
+                //string processName = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
+                //if (processName.EndsWith("VSHost", StringComparison.InvariantCultureIgnoreCase) || (processName == "devenv"))
+                //    return true;
+                //else
+                //    return false;
             }
         }
 
@@ -237,14 +238,80 @@ namespace NetOffice.DeveloperToolbox
                 fileContent = fileContent.Replace("$safeitemname$", "Addin");
                 fileContent = fileContent.Replace("$assemblyGuid$", Guid.NewGuid().ToString());
 
+                if (_projectOptions.ProjectType == ProjectType.ToolsAddin)
+                {
+                    fileContent = fileContent.Replace("$name$", GetName());
+                    fileContent = fileContent.Replace("$description$", GetDescription());
+                    fileContent = fileContent.Replace("$loadbeahviour$", GetLoadBehaviour());
+
+                    if (IsMultiHost())
+                    {
+                        if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+                        {
+                            fileContent = fileContent.Replace(" : COMAddin", " : NetOffice.OfficeApi.Tools.COMAddin");
+                            fileContent = fileContent.Replace("$multiRegister$", ",MultiRegister(" + GetHostApplications() +")");
+                        }
+                        else
+                        {
+                            fileContent = fileContent.Replace("Inherits COMAddin", "Inherits NetOffice.OfficeApi.Tools.COMAddin");
+                            fileContent = fileContent.Replace("$multiRegister$", ",MultiRegister(" + GetHostApplications() + ")");
+                        }
+                    }
+                    else
+                    { 
+                        fileContent = fileContent.Replace("$multiRegister$", "");
+                    }
+
+                    //
+                    if (UseRibbonUI())
+                    {
+                        if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+                            fileContent = fileContent.Replace("$ribbon$", ", CustomUI(\"" + _projectOptions.AssemblyName +  ".RibbonUI.xml\")");
+                        else
+                            fileContent = fileContent.Replace("$ribbon$", ", CustomUI(\"" + _projectOptions.AssemblyName + ".RibbonUI.xml\")");
+                    }
+                    else
+                        fileContent = fileContent.Replace("$ribbon$", "");
+
+                    string hiveKey = GetHiveKey();
+                    if (hiveKey == "LocalMachine")
+                    {
+                        if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+                            fileContent = fileContent.Replace("$registry$", ", RegistryLocation(RegistrySaveLocation.LocalMachine)");
+                        else
+                            fileContent = fileContent.Replace("$registry$", ", RegistryLocation(RegistrySaveLocation.LocalMachine)");
+                    }
+                    else
+                        fileContent = fileContent.Replace("$registry$", "");
+
+                    if (_projectOptions.UseClassicUI)
+                    {
+                        fileContent = fileContent.Replace("$classicUICreateCall$", CodeTemplates.ClassicUICall(_projectOptions.Language));
+                        fileContent = fileContent.Replace("$classicUIRemoveCall$", CodeTemplates.ClassicUIRemoveCall(_projectOptions.Language).Replace("\r\n",""));
+                        string uiMethods ="\r\n" + CodeTemplates.ClassicUIMethod(_projectOptions.Language) + CodeTemplates.ClassicUIRemoveMethod(_projectOptions.Language);
+                        uiMethods = uiMethods.Substring(0, uiMethods.Length - 2);
+                        fileContent = fileContent.Replace("$classicUICreateRemoveMethod$", uiMethods);
+                    }
+                    else
+                    {
+                        fileContent = fileContent.Replace("$classicUICreateCall$", "");
+                        fileContent = fileContent.Replace("$classicUIRemoveCall$", "");
+                        fileContent = fileContent.Replace("$classicUICreateRemoveMethod$", "");
+                    }
+                }
+
                 if (IsAddinProject())
                 {
                     if (_projectOptions.UseRibbonUI)
                     {
                         fileContent = fileContent.Replace("$ribbonFileReference$", CodeTemplates.RibbonReference);
                         fileContent = fileContent.Replace("$ribbonImplement$", CodeTemplates.RibbonImplement(_projectOptions.Language));
-                        string ribbonImplement = CodeTemplates.RibbonImplementCode(_projectOptions.Language)+ "\r\n";
-                        fileContent = fileContent.Replace("$ribbonUIImplementMethod$", ribbonImplement);
+                     
+                        if (_projectOptions.ProjectType == ProjectType.ToolsAddin)
+                            fileContent = fileContent.Replace("$ribbonUIImplementMethod$", CodeTemplates.RibbonImplementToolsCode(_projectOptions.Language));
+                        else
+                            fileContent = fileContent.Replace("$ribbonUIImplementMethod$", CodeTemplates.RibbonImplementCode(_projectOptions.Language) + "\r\n");
+
                         fileContent = fileContent.Replace("$helperCode$", CodeTemplates.HelperCode(_projectOptions.Language));
                     }
                     else
@@ -255,7 +322,7 @@ namespace NetOffice.DeveloperToolbox
                         fileContent = fileContent.Replace("$helperCode$", "");
                     }
 
-                    if (_projectOptions.UseClassicUI)
+                    if (_projectOptions.UseClassicUI && _projectOptions.ProjectType != ProjectType.ToolsAddin)
                     {
                         fileContent = fileContent.Replace("$classicUICreateCall$", CodeTemplates.ClassicUICall(_projectOptions.Language));
                         fileContent = fileContent.Replace("$classicUIRemoveCall$", CodeTemplates.ClassicUIRemoveCall(_projectOptions.Language));
@@ -270,11 +337,18 @@ namespace NetOffice.DeveloperToolbox
 
                     if (_projectOptions.UseTaskPane)
                     {
-                        fileContent = fileContent.Replace("$TaskPaneImplement$", _projectOptions.Language == ProgrammingLanguage.CSharp ? ", Office.ICustomTaskPaneConsumer" : ", Office.ICustomTaskPaneConsumer");
-                        fileContent = fileContent.Replace("$TaskPaneField$", _projectOptions.Language == ProgrammingLanguage.CSharp ? "        private static TaskPaneControl _taskPaneControl;\r\n" : "\r\n    Shared _taskPaneControl As TaskPaneControl");
-                        fileContent = fileContent.Replace("$TaskPaneMethod$", CodeTemplates.TaskPaneMethod(_projectOptions.Language));
-                        if(_projectOptions.Language == ProgrammingLanguage.CSharp)
-                            fileContent = fileContent.Replace("<Compile Include=\"Addin.cs\" />\r\n",  "<Compile Include=\"Addin.cs\" />" + "\r\n" + CodeTemplates.TaskPaneCompile(_projectOptions.Language));
+                        if (_projectOptions.ProjectType == ProjectType.ToolsAddin)
+                        {
+                            fileContent = fileContent.Replace("$TaskPaneImplement$", CodeTemplates.TaskPaneToolsMethod(_projectOptions.Language));
+                        }
+                        else
+                        { 
+                            fileContent = fileContent.Replace("$TaskPaneImplement$", _projectOptions.Language == ProgrammingLanguage.CSharp ? ", Office.ICustomTaskPaneConsumer" : ", Office.ICustomTaskPaneConsumer");
+                            fileContent = fileContent.Replace("$TaskPaneField$", _projectOptions.Language == ProgrammingLanguage.CSharp ? "        private TaskPaneControl _taskPaneControl;\r\n" : "\r\n    Shared _taskPaneControl As TaskPaneControl");
+                            fileContent = fileContent.Replace("$TaskPaneMethod$", CodeTemplates.TaskPaneMethod(_projectOptions.Language));
+                        }
+                        if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+                            fileContent = fileContent.Replace("<Compile Include=\"Addin.cs\" />\r\n", "<Compile Include=\"Addin.cs\" />" + "\r\n" + CodeTemplates.TaskPaneCompile(_projectOptions.Language));
                         else
                             fileContent = fileContent.Replace("<Compile Include=\"Addin.vb\" />\r\n", "<Compile Include=\"Addin.vb\" />" + "\r\n" + CodeTemplates.TaskPaneCompile(_projectOptions.Language));
                     }
@@ -375,11 +449,94 @@ namespace NetOffice.DeveloperToolbox
                     File.Delete(targetFile);   
             }
         }
-
   
         private static bool IsAddinProject()
         {
-            return (_projectOptions.ProjectType == ProjectType.Addin);
+            return (_projectOptions.ProjectType == ProjectType.Addin || _projectOptions.ProjectType == ProjectType.ToolsAddin);
+        }
+
+        private static string GetName()
+        {
+            foreach (Control item in _listControls)
+            {
+                NameControl nameControl = item as NameControl;
+                if (null != nameControl)
+                {
+                    return nameControl.AssemblyName;
+                }
+            }
+            throw new ArgumentOutOfRangeException("NameControl");
+        }
+
+        private static string GetDescription()
+        {
+            foreach (Control item in _listControls)
+            {
+                NameControl nameControl = item as NameControl;
+                if (null != nameControl)
+                {
+                    return nameControl.AssemblyDescription;
+                }
+            }
+            throw new ArgumentOutOfRangeException("NameControl");
+        }
+
+        private static string GetHostApplications()
+        {
+            foreach (Control item in _listControls)
+            {
+                HostControl loadControl = item as HostControl;
+                if (null != loadControl)
+                {
+                    string result = "";
+                    foreach (var app in loadControl.HostApplications)
+                    {
+                        result += "RegisterIn." + app + ", ";   
+                    }
+                    result = result.Substring(0, result.Length - 2);
+                    return result;
+                }
+            }
+            throw new ArgumentOutOfRangeException("HostControl");
+        }
+
+        private static bool IsMultiHost()
+        {
+            foreach (Control item in _listControls)
+            {
+                HostControl loadControl = item as HostControl;
+                if (null != loadControl)
+                {
+                    return loadControl.HostApplications.Count > 1;
+                }
+            }
+            throw new ArgumentOutOfRangeException("HostControl");
+        }
+
+        private static string GetHiveKey()
+        {
+            foreach (Control item in _listControls)
+            {
+                LoadControl loadControl = item as LoadControl;
+                if (null != loadControl)
+                {
+                    return loadControl.Hivekey;
+                }
+            }
+            throw new ArgumentOutOfRangeException("LoadControl");
+        }
+
+        private static bool UseRibbonUI()
+        {
+            foreach (Control item in _listControls)
+            {
+                GuiControl loadControl = item as GuiControl;
+                if (null != loadControl)
+                {
+                    return loadControl.RibbonUIEnabled;
+                }
+            }
+            throw new ArgumentOutOfRangeException("GuiControl");
         }
 
         private static string GetLoadBehaviour()
@@ -436,10 +593,11 @@ namespace NetOffice.DeveloperToolbox
 
         private static string GetUsings()
         {
+            HostControl hostControl = null;
             string result = "";
             foreach (Control item in _listControls)
             {
-                HostControl hostControl = item as HostControl;
+                hostControl = item as HostControl;
                 if (null != hostControl)
                 {
                     List<string> hostApps = hostControl.HostApplications;
@@ -453,10 +611,38 @@ namespace NetOffice.DeveloperToolbox
                     foreach (string app in hostApps)
                         result += CodeTemplates.Using(_projectOptions.Language).Replace("%Alias%", app).Replace("%Name%", app) + Environment.NewLine;
 
-                    return result;
+                    break;
                 }
             }
-            throw new ArgumentOutOfRangeException("HostControl");
+
+            if (_projectOptions.ProjectType == ProjectType.ToolsAddin)
+            {
+                if (_projectOptions.Language == ProgrammingLanguage.CSharp)
+                {
+                    result += "using NetOffice.Tools;" + Environment.NewLine;
+                    if (hostControl.HostApplications.Count > 1)
+                    {
+                        result += "using NetOffice.OfficeApi.Tools;" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        result += "using NetOffice."  + hostControl.HostApplications[0] +  "Api.Tools;" + Environment.NewLine;
+                    }
+                }
+                else
+                {
+                    result += "Imports NetOffice.Tools" + Environment.NewLine;
+                    if (hostControl.HostApplications.Count > 1)
+                    {
+                        result += "Imports NetOffice.OfficeApi.Tools" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        result += "Imports NetOffice." + hostControl.HostApplications[0] + "Api.Tools" + Environment.NewLine;
+                    }
+                }
+            }
+            return result;
         }
 
         private static string GetAssemblyReferences()
@@ -549,6 +735,8 @@ namespace NetOffice.DeveloperToolbox
                     { 
                         case ProjectType.Addin:
                             return "Automation Addin C#.zip";
+                        case ProjectType.ToolsAddin:
+                            return "Tools Automation Addin C#.zip";
                         case ProjectType.WindowsForms:
                             return "WindowsForms Application C#.zip";
                         case ProjectType.ClassLibrary:
@@ -561,6 +749,8 @@ namespace NetOffice.DeveloperToolbox
                     { 
                         case ProjectType.Addin:
                             return "Automation Addin VB.zip";
+                        case ProjectType.ToolsAddin:
+                            return "Tools Automation Addin VB.zip";
                         case ProjectType.WindowsForms:
                             return "WindowsForms Application VB.zip";
                         case ProjectType.ClassLibrary:

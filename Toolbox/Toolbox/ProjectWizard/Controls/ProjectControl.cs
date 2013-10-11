@@ -111,6 +111,14 @@ namespace NetOffice.DeveloperToolbox
 
         #endregion
 
+        internal bool IsToolAddinProject
+        {
+            get
+            {
+                return checkBoxUseTools.Checked;
+            }
+        }
+
         internal string CalculatedFolder
         { 
             get
@@ -252,7 +260,7 @@ namespace NetOffice.DeveloperToolbox
                 switch (ProjectWizardControl.CurrentLanguageID)
                 {
                     case 1049:
-                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_RSs");
+                        System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_RS");
                         break;
                     case 1031:
                         System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_DE");

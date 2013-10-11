@@ -17,6 +17,9 @@ namespace NetOffice.DeveloperToolbox
         static string _ribbonImplementCodeCSharp;
         static string _ribbonImplementCodeVB;
 
+        static string _ribbonImplementToolsCodeCSharp;
+        static string _ribbonImplementToolsCodeVB;
+
         static string _registerCodeCSharp;
         static string _registerCodeVB;
         
@@ -31,7 +34,6 @@ namespace NetOffice.DeveloperToolbox
 
         static string _classicUIMethodCallCSharp;
         static string _classicUIMethodCallVB;
-
 
         static string _classicUIRemoveMethodCallCSharp;
         static string _classicUIRemoveMethodCallVB;
@@ -56,6 +58,9 @@ namespace NetOffice.DeveloperToolbox
 
         static string _taskPaneMethodCS;
         static string _taskPaneMethodVB;
+
+        static string _taskPaneToolsMethodCS;
+        static string _taskPaneToolsMethodVB;
 
         static string _taskPaneCompileCS;
         static string _taskPaneCompileVB;
@@ -286,6 +291,22 @@ namespace NetOffice.DeveloperToolbox
                 return _registerCodeVB;
             }
         }
+         
+        public static string RibbonImplementToolsCode(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _ribbonImplementToolsCodeCSharp)
+                    _ribbonImplementToolsCodeCSharp = Translator.ReadString("ProjectWizard.CodeTemplates.RibbonImplementToolsCodeCSharp.txt");
+                return _ribbonImplementToolsCodeCSharp;
+            }
+            else
+            {
+                if (null == _ribbonImplementToolsCodeVB)
+                    _ribbonImplementToolsCodeVB = Translator.ReadString("ProjectWizard.CodeTemplates.RibbonImplementToolsCodeVB.txt");
+                return _ribbonImplementToolsCodeVB;
+            }
+        }
 
         public static string RibbonImplementCode(ProgrammingLanguage language)
         {
@@ -334,6 +355,23 @@ namespace NetOffice.DeveloperToolbox
                 return _usingVB;
             }
         }
+
+        public static string TaskPaneToolsMethod(ProgrammingLanguage language)
+        {
+            if (language == ProgrammingLanguage.CSharp)
+            {
+                if (null == _taskPaneToolsMethodCS)
+                    _taskPaneToolsMethodCS = Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneToolsMethodCS.txt");
+                return _taskPaneToolsMethodCS;
+            }
+            else
+            {
+                if (null == _taskPaneToolsMethodVB)
+                    _taskPaneToolsMethodVB = Environment.NewLine + Translator.ReadString("ProjectWizard.CodeTemplates.TaskPaneToolsMethodVB.txt");
+                return _taskPaneToolsMethodVB;
+            }
+        }
+
 
         public static string TaskPaneMethod(ProgrammingLanguage language)
         {

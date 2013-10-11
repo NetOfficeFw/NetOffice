@@ -105,7 +105,7 @@ namespace NetOffice.DeveloperToolbox
         public void Activate()
         {
 
-            if (ProjectWizardControl.Singleton.IsSingleMSProjectProject)
+            if (ProjectWizardControl.Singleton.IsSingleVisioProject)
             {
                 checkBoxClassicUISupport.Checked = false;
                 checkBoxRibbonUISupport.Checked = false;

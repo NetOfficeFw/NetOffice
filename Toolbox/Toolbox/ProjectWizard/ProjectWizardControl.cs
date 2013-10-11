@@ -22,6 +22,14 @@ namespace NetOffice.DeveloperToolbox
             Singleton = this;
         }
 
+        public List<IWizardControl> WizardControls
+        {
+            get
+            {
+                return _listControls;
+            }
+        }
+
         public static int CurrentLanguageID
         {
             get
@@ -92,8 +100,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         #endregion
- 
-         
+  
         private void CreateNewProject()
         {
             Reset();
@@ -186,7 +193,7 @@ namespace NetOffice.DeveloperToolbox
             return false;
         }
 
-        internal bool IsSingleMSProjectProject
+        internal bool IsSingleVisioProject
         {
             get
             {
