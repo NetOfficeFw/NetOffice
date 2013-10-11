@@ -10,6 +10,9 @@ Public Class Tutorial12
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this example demonstrate the global helper module(static class)
+        ' the module is a vba compatibility workarround and contains static methods and properties from the coresponding Application class.
+
         ' start excel and add a new workbook
         Dim application As New Excel.Application()
         application.Visible = False
@@ -17,6 +20,7 @@ Public Class Tutorial12
         application.Workbooks.Add()
 
         ' GlobalModule contains the well known globals and is located in NetOffice.ExcelApi.GlobalHelperModules
+        ' In VB.NET you can do now: ActiveCell.Value = "ActiveCellValue" and this is helpful to bring code from VBA to NetOffice
         ' see the imports statement
         ActiveCell.Value = "ActiveCellValue"
           

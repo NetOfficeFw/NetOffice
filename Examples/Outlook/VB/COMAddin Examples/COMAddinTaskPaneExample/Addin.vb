@@ -7,7 +7,7 @@ Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OutlookApi.Enums
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("771D0E35-236C-48A6-9A84-97B120173ED1"), ProgIdAttribute("OutlookAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<GuidAttribute("185F1857-97D9-45E3-9D1F-2180F942A4AB"), ProgIdAttribute("OutlookAddinVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 

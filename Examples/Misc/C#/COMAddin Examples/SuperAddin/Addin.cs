@@ -17,12 +17,12 @@ using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
 
-namespace SuperAddinCSharp
+namespace SuperAddinCSharpCS4
 { 
     /// <summary>
     /// the addin class
     /// </summary>
-    [GuidAttribute("8ED7D7E2-D084-4ba7-999E-5657147460DD"), ProgId("SuperAddinCS4.Addin"), ComVisible(true)]
+    [Guid("39AA1CDE-F186-456B-ADF6-30D03352C131"), ProgId("SuperAddinCS4.Addin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _progId                  = "SuperAddinCS4.Addin";

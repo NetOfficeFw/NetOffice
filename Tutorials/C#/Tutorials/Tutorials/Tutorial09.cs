@@ -20,16 +20,17 @@ namespace TutorialsCS4
 
         public void Run()
         {
-            // In some situations you want use NetOffice with an existing proxy, its typical for COM Addins.
-            // this examples show you how its possible
+            // In some situations you want use NetOffice with a already running application.
+            // this examples show you how its possible.
 
-            // we create a native Excel proxy
-            Type excelType = Type.GetTypeFromProgID("Excel.Application");
-            object excelProxy = Activator.CreateInstance(excelType);
-            
-            // we create an Excel Application object with the proxy as parameter,
-            // excel is now under control by NetOffice
-            Excel.Application excelApplication = new Excel.Application(null, excelProxy);
+            // GetActiveInstance take the first instance in memory
+            Excel.Application excelApplication = Excel.Application.GetActiveInstance();
+
+            // another method is GetActiveInstances:
+            // 
+            // GetActiveInstances takes all instances in memory. dont forget to dispose the instances.
+            //            
+            // Excel.Application[] excelApplications = Excel.Application.GetActiveInstances();
 
             excelApplication.Quit();
             excelApplication.Dispose();
@@ -62,10 +63,9 @@ namespace TutorialsCS4
             get { return "Tutorial09"; }
         }
 
-
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create a NetOffice Application with given COM Proxy" : "Eine NetOffice Application basierend auf einem COM Proxy erstellen"; }
+            get { return _hostApplication.LCID == 1033 ? "Create a NetOffice Excel Application Object with given COM Proxy" : "Ein NetOffice Excel Objekt Application basierend auf einem COM Proxy erstellen"; }
         }
 
         public UserControl Panel

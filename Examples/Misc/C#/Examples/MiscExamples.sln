@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscExamples CSharp", "MiscExamples\MiscExamples CSharp.csproj", "{30C85D67-193F-4E46-BE81-FD6EBE90CBC3}"
 EndProject
 Global

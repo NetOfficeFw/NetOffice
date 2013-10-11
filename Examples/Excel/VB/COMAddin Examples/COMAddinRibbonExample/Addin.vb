@@ -8,7 +8,7 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("1D8EC143-E930-4fb1-BD5A-A0F744D5E91F"), ProgIdAttribute("ExcelAddinVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("96B32EF6-9E59-4361-B5C2-BF59CEF0BCDD"), ProgIdAttribute("ExcelAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 

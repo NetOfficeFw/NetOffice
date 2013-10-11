@@ -14,9 +14,15 @@ namespace TutorialsCS4
 {
     public partial class Tutorial03 : UserControl, ITutorial
     {
+        #region Fields
+        
         IHost _hostApplication;
         Excel.Application _application;
 
+        #endregion
+
+        #region Ctor
+        
         public Tutorial03()
         {
             InitializeComponent();
@@ -25,11 +31,17 @@ namespace TutorialsCS4
             NetOffice.Factory.ProxyCountChanged += new Factory.ProxyCountChangedHandler(ProxyCountChanged);
         }
 
+        #endregion
+
         #region ITutorial Member
 
         public void Run()
         { 
-        
+            // this example shows you both ways in NetOffice to see how many com proxies
+            // was currently alive in your application
+            //
+            // 1.) the static property: int NetOffice.Factory.ProxyCount
+            // 2.) the static event: NetOffice.Factory.ProxyCountChanged
         }
 
         public void Connect(IHost hostApplication)

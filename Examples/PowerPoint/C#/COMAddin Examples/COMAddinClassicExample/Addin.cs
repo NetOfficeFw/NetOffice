@@ -13,7 +13,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("E464A171-2E60-43a2-A2CD-E1C83FF0F4BA"), ProgId("PPointAddinCS4.SimpleAddin"), ComVisible(true)]
+    [GuidAttribute("629BC55C-7C01-4065-932A-4BB88F7B8C59"), ProgId("PPointAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";

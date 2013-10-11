@@ -20,6 +20,9 @@ namespace TutorialsCS4
 
         public void Run()
         {
+            // this example demonstrate the global helper module(static class)
+            // the module is a vba compatibility workarround and contains static methods and properties from the coresponding Application class.
+
             // start excel and add a new workbook
             Excel.Application application = new Excel.Application();
             application.Visible = false;
@@ -27,6 +30,7 @@ namespace TutorialsCS4
             application.Workbooks.Add();
 
             // GlobalModule contains the well known globals and is located in NetOffice.ExcelApi.GlobalHelperModules
+            // In VB.NET you can do now: ActiveCell.Value = "ActiveCellValue" and this is helpful to bring code from VBA to NetOffice
             GlobalModule.ActiveCell.Value = "ActiveCellValue";
 
             // quit and dispose excel

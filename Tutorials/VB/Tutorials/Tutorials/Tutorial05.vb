@@ -11,6 +11,8 @@ Public Class Tutorial05
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this is a simple demonstration how i can convert unkown types at runtime
+
         ' start application
         Dim application As New Excel.Application()
         application.Visible = False

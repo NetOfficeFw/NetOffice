@@ -11,6 +11,8 @@ Public Class Tutorial08
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this example demonstrate the NetOffice low-level interface for latebinding calls
+
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False

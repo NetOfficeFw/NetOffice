@@ -10,7 +10,7 @@ Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("43AB5EE0-BCD7-4CDE-AB22-8501484EB112"), ProgIdAttribute("PPointAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<GuidAttribute("AD5FBAB7-D362-4492-8FBC-6DDEE1E76237"), ProgIdAttribute("PPointAddinVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 

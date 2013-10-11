@@ -14,11 +14,11 @@ Imports PowerPoint = NetOffice.PowerPointApi
 Imports Access = NetOffice.AccessApi
 
 
-<GuidAttribute("76345C06-E899-4762-8F75-C54F49D813B9"), ProgIdAttribute("SuperAddinCS4.Addin"), ComVisible(True)> _
+<Guid("C7E206D5-C681-4460-825E-6D44817BAD18"), ProgId("SuperAddinVB4.Addin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 
-    Private Shared ReadOnly _progId As String = "SuperAddinCS4.Addin"
+    Private Shared ReadOnly _progId As String = "SuperAddinVB4.Addin"
     Private Shared ReadOnly _addinFriendlyName As String = "NetOffice Sample Addin in VB"
     Private Shared ReadOnly _addinDescription As String = "NetOffice Sample Addin for multipe Office Applications"
 
@@ -26,7 +26,7 @@ Public Class Addin
     Private _hostApplicationName As String
 
 #Region "IDTExtensibility2 Members"
-     
+
     Public Sub OnConnection(ByVal Application As Object, ByVal ConnectMode As Extensibility.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Implements Extensibility.IDTExtensibility2.OnConnection
 
         Try

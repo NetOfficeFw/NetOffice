@@ -20,6 +20,9 @@ namespace TutorialsCS4
 
         public void Run()
         {
+            // this example shows you how i still can recieve events from an disposed proxy.
+            // you have to use th Dispose oder DisposeChildInstances method with a parameter.
+
             // start application
             Excel.Application application = new Excel.Application();
             application.DisplayAlerts = false;

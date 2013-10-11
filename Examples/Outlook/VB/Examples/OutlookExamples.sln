@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Basic Express 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "OutlookExamples VB", "OutlookExamples\OutlookExamples VB.vbproj", "{29C33836-4E48-4DB7-8E2B-5890DB288FBF}"
 EndProject
 Global

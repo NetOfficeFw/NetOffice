@@ -9,6 +9,11 @@ Public Class Tutorial07
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this examples shows a special method to ask at runtime for a particular method oder property
+        ' morevover you can enable the option NetOffice.Settings.EnableSafeMode. 
+        ' NetOffice checks(cache supported) for any method or property you call and
+        ' throws a EntitiyNotSupportedException if missing
+
         ' create new instance
         Dim application As New Excel.Application()
 

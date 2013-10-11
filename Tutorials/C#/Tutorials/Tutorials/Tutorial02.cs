@@ -20,6 +20,9 @@ namespace TutorialsCS4
 
         public void Run()
         {
+            // this example shows you another dispose method: DisposeChildInstances
+            // this means all child proxies from an instance
+
             // start application
             Excel.Application application = new Excel.Application();
             application.DisplayAlerts = false;
@@ -38,7 +41,7 @@ namespace TutorialsCS4
             */
 
 
-            // we dispose the child instances of book
+            // we dispose the child instances from book
             book.DisposeChildInstances();
 
             /*

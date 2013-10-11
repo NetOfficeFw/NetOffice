@@ -3,7 +3,7 @@ using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuperAddinCSharp
+namespace SuperAddinCSharpCS4
 {
     /// <summary>
     /// office addin keys and create/delete methods

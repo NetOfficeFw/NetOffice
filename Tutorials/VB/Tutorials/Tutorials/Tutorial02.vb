@@ -9,6 +9,9 @@ Public Class Tutorial02
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this example shows you another dispose method: DisposeChildInstances
+        ' this means all child proxies from an instance
+
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False

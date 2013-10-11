@@ -22,12 +22,10 @@
 
 
         ' this property allows to enable a COM Message filter
-        ' if you have a long time operation while office automation then the host application
-        ' shows a MessageBox("Office Application is waiting for an OLE Task" 
-        ' the enabled message filter suspress this dialog, as negativ side effect you cant use
-        ' the SendKeys feature to signals an office application any user input
-        Dim messageFilter As Boolean = NetOffice.Settings.EnableMessageFilter
-
+        ' you may know the problem with RPC_Rejected exceptions(the host application is currently busy)
+        ' the message filter is waiting for you(shortly) and try the call again
+        Dim messageFilter As Boolean = NetOffice.Settings.MessageFilter.Enabled
+         
 
         ' the safemode is a feature that checks automaticly at runtime the methods oder properties you use are
         ' available in current office version. if it doesnt an EntityNotSupportedException was thrown

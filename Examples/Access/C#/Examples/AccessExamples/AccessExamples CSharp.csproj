@@ -46,9 +46,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
-    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -80,9 +78,6 @@
     <Reference Include="ExampleBase">
       <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
     </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
     <Reference Include="MSComctlLibApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -90,6 +85,9 @@
     <Reference Include="MSDATASRCApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>

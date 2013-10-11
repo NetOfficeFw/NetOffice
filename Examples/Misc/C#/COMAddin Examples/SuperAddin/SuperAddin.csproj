@@ -53,9 +53,6 @@
       <HintPath>..\..\..\..\..\Programme\Gemeinsame Dateien\Microsoft Shared\MSEnv\PublicAssemblies\extensibility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
     <Reference Include="MSComctlLibApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -71,6 +68,9 @@
     <Reference Include="MSProjectApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NetOffice">
+      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>
     <Reference Include="OfficeApi">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>

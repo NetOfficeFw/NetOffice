@@ -13,7 +13,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExample
 {
-    [GuidAttribute("37AED73E-B93D-4a86-A021-DC19BE4782E3"), ProgId("OutlookAddinCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("85E0BBAF-11E7-4F70-957D-5682602A0933"), ProgId("OutlookAddinCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\AddIns\\";

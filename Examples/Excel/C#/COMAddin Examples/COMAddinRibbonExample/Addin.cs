@@ -13,7 +13,7 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("182f0e9a-07db-4375-8372-77e1637d4891"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("32883BAD-012A-4B48-A972-3F918C2D54CD"), ProgId("ExcelAddinCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";

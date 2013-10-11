@@ -42,7 +42,7 @@ namespace TutorialsCS4
             *     + Workbook  
             * 
             * any object in NetOffice implements the IDisposible Interface.
-            * use the Dispose() Method to release an object. the method release all created child proxies too.
+            * use the Dispose() method to release an object. the method release all created child proxies too.
             */
 
             application.Quit();

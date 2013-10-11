@@ -9,6 +9,9 @@ Public Class Tutorial04
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this example shows you how i still can recieve events from an disposed proxy.
+        ' you have to use th Dispose oder DisposeChildInstances method with a parameter.
+
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False

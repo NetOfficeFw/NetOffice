@@ -9,7 +9,7 @@ Imports NetOffice.WordApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("CEED1136-9063-4621-8BEB-A4DA8B35D89B"), ProgIdAttribute("WordAddinVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("68401E64-EE67-4907-8217-6A84C7F4B779"), ProgIdAttribute("WordAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 

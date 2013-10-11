@@ -13,7 +13,7 @@ using NetOffice.AccessApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("996EFBAE-F872-45A4-B88E-78F286F7B47E"), ProgId("AccessAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("4975A488-98EA-4318-8EF6-409C5B0389E0"), ProgId("AccessAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";

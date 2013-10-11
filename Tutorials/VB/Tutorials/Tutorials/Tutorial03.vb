@@ -21,6 +21,12 @@ Public Class Tutorial03
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this example shows you both ways in NetOffice to see how many com proxies
+        ' was currently alive in your application
+        '
+        ' 1.) the static property: int NetOffice.Factory.ProxyCount
+        ' 2.) the static event: NetOffice.Factory.ProxyCountChanged
+
     End Sub
 
     Public ReadOnly Property Caption As String Implements TutorialsBase.ITutorial.Caption

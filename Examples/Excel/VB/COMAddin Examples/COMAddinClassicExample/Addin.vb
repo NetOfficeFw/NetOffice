@@ -8,7 +8,7 @@ Imports NetOffice.ExcelApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("E4D04E40-5759-4cec-9868-FE475C051DC8"), ProgIdAttribute("ExcelAddinVB4.SimpleAddin"), ComVisible(True)> _
+<GuidAttribute("12C5CABD-5058-4AD6-8C5B-E3ABDEC91943"), ProgIdAttribute("ExcelAddinVB4.SimpleAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2
 

@@ -9,7 +9,7 @@ Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("54E927E8-7697-4ce4-8106-C05D5B387FB7"), ProgIdAttribute("PPointAddinVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("0737A154-B18D-4328-8DAC-B7B8EECAB032"), ProgIdAttribute("PPointAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 

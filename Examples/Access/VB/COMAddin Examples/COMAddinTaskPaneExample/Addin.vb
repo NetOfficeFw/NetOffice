@@ -8,7 +8,7 @@ Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("8A9ACFD2-77C2-4AE4-BBC4-9DD91D9C7E26"), ProgIdAttribute("AccessAddinVB4.TaskPaneAddin"), ComVisible(True)> _
+<GuidAttribute("9085C483-DF17-45F6-8F53-F3DC8D88C9D2"), ProgIdAttribute("AccessAddinVB4.TaskPaneAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.ICustomTaskPaneConsumer
 

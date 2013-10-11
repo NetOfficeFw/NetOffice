@@ -13,7 +13,7 @@ using NetOffice.ExcelApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("91099EB3-3CD7-4906-BF19-2076EF16DE07"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("8596A742-EB30-443D-96E0-AADA305B589B"), ProgId("ExcelAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";

@@ -9,7 +9,7 @@ Imports NetOffice.PowerPointApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("61F0B22C-20C6-46f9-A1BA-BE294B7FEA4E"), ProgIdAttribute("PPointAddinVB4.SimpleAddin"), ComVisible(True)> _
+<GuidAttribute("C994BD16-0CD3-4058-8BF4-B91A3D2975F9"), ProgIdAttribute("PPointAddinVB4.SimpleAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2
 

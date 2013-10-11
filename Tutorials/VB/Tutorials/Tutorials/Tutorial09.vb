@@ -9,16 +9,17 @@ Public Class Tutorial09
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
-        ' In some situations you want use NetOffice with an existing proxy, its typical for COM Addins.
-        ' this examples show you how its possible
+        ' In some situations you want use NetOffice with a already running application.
+        ' this examples show you how its possible.
 
-        ' we create a native Excel proxy
-        Dim excelType As Type = Type.GetTypeFromProgID("Excel.Application")
-        Dim excelProxy As Object = Activator.CreateInstance(excelType)
+        ' GetActiveInstance take the first instance in memory
+        Dim excelApplication As Excel.Application = Excel.Application.GetActiveInstance()
 
-        ' we create an Excel Application object with the proxy as parameter,
-        ' excel is now under control by NetOffice
-        Dim excelApplication As Excel.Application = New Excel.Application(Nothing, excelProxy)
+        ' another method is GetActiveInstances:
+        ' 
+        ' GetActiveInstances takes all instances in memory. dont forget to dispose the instances.
+        '            
+        ' Dim excelApplications() As Excel.Application = Excel.Application.GetActiveInstance()
 
         excelApplication.Quit()
         excelApplication.Dispose()
@@ -35,7 +36,7 @@ Public Class Tutorial09
 
     Public ReadOnly Property Description As String Implements TutorialsBase.ITutorial.Description
         Get
-            Return IIf(_hostApplication.LCID = 1033, "Create a NetOffice Application with given COM Proxy", "Eine NetOffice Application basierend auf einem COM Proxy erstellen")
+            Return IIf(_hostApplication.LCID = 1033, "Create a NetOffice Excel Application Object with given COM Proxy", "Eine NetOffice Excel Application Objekt basierend auf einem COM Proxy erstellen")
         End Get
     End Property
 

@@ -9,7 +9,7 @@ Imports NetOffice.OutlookApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("A04F2505-72EF-487d-9FA0-16DA1C44B2FB"), ProgIdAttribute("OutlookAddinVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("D3898317-C21D-4140-88BE-5BC9026319A7"), ProgIdAttribute("OutlookAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 

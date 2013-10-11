@@ -48,7 +48,6 @@
             this.buttonOptions = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.linkLabelProjectWizard = new System.Windows.Forms.LinkLabel();
             this.linkLabelDeveloperToolbox = new System.Windows.Forms.LinkLabel();
             this.linkLabelTutorialOverview = new System.Windows.Forms.LinkLabel();
             this.linkLabelTecFaq = new System.Windows.Forms.LinkLabel();
@@ -234,7 +233,6 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.linkLabelProjectWizard);
             this.panel2.Controls.Add(this.linkLabelDeveloperToolbox);
             this.panel2.Controls.Add(this.linkLabelTutorialOverview);
             this.panel2.Controls.Add(this.linkLabelTecFaq);
@@ -255,19 +253,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
-            // 
-            // linkLabelProjectWizard
-            // 
-            this.linkLabelProjectWizard.AutoSize = true;
-            this.linkLabelProjectWizard.Location = new System.Drawing.Point(10, 140);
-            this.linkLabelProjectWizard.Name = "linkLabelProjectWizard";
-            this.linkLabelProjectWizard.Size = new System.Drawing.Size(140, 13);
-            this.linkLabelProjectWizard.TabIndex = 22;
-            this.linkLabelProjectWizard.TabStop = true;
-            this.linkLabelProjectWizard.Tag = "/wikipage?title=ProjectWizardScreenshots_English#/wikipage?title=ProjectWizardScr" +
-                "eenshots_German";
-            this.linkLabelProjectWizard.Text = "Visual Studio Project Wizard";
-            this.linkLabelProjectWizard.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
             // 
             // linkLabelDeveloperToolbox
             // 
@@ -395,7 +380,6 @@
         private System.Windows.Forms.Button buttonOptions;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.LinkLabel linkLabelProjectWizard;
         private System.Windows.Forms.LinkLabel linkLabelDeveloperToolbox;
         private System.Windows.Forms.LinkLabel linkLabelTutorialOverview;
         private System.Windows.Forms.LinkLabel linkLabelTecFaq;

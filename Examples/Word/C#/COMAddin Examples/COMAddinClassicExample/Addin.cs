@@ -13,7 +13,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinClassicExampleCS4
 {
-    [GuidAttribute("23C4F5E6-FA99-44e8-8A0D-28EC373D5B50"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
+    [GuidAttribute("1C401FCE-7D5E-4C6D-AE88-71BF01FC159B"), ProgId("WordAddinCS4.SimpleAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\AddIns\\";

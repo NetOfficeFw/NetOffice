@@ -58,7 +58,7 @@ namespace ExcelExamplesCS4
                 string fileExtension = GetDefaultExtension(excelApplication);
                 XlFileFormat fileFormat = GetFileFormat(excelApplication);
                 workbookFile = string.Format("{0}\\Example07{1}", _hostApplication.RootDirectory, fileExtension);
-                workBook.SaveAs(workbookFile);
+                workBook.SaveAs(workbookFile, fileFormat);
 
             }
             catch (System.Runtime.InteropServices.COMException throwedException)

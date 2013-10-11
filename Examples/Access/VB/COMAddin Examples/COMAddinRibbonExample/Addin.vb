@@ -9,7 +9,7 @@ Imports NetOffice.AccessApi.Enums
 Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
-<GuidAttribute("563AF4E0-8310-494f-A35A-31A10EFF83FA"), ProgIdAttribute("AccessAddinVB4.RibbonAddin"), ComVisible(True)> _
+<GuidAttribute("8430EA50-AE45-40A2-8122-F528ED8E032C"), ProgIdAttribute("AccessAddinVB4.RibbonAddin"), ComVisible(True)> _
 Public Class Addin
     Implements IDTExtensibility2, Office.IRibbonExtensibility
 
@@ -87,7 +87,7 @@ Public Class Addin
 
 #End Region
 
-#Region "Ribbon Gui Trigger"
+#Region "Ribbon UI Trigger"
 
     Public Sub OnAction(ByVal control As Office.IRibbonControl)
         Try

@@ -10,40 +10,32 @@ Public Class Tutorial06
 
     Public Sub Run() Implements TutorialsBase.ITutorial.Run
 
+        ' this examples shows how i can use variant types(object in NetOffice) at runtime
+        ' the reason for the most variant definitions in office is a more flexible value set.(95%)
+        ' here is the code to demonstrate this
+
         ' start application
         Dim application As New Excel.Application()
         application.DisplayAlerts = False
 
+        ' create new Workbook and a new named style
         Dim book As Excel.Workbook = application.Workbooks.Add()
         Dim sheet As Excel.Worksheet = book.Worksheets(1)
         Dim range As Excel.Range = sheet.Cells(1, 1)
+        Dim myStyle As Excel.Style = book.Styles.Add("myUniqueStyle")
 
-        ' Style is defined as Variant in Excel and represents as object in NetOffice
-        '  You can cast them at runtime without problems
+        ' Range.Style is defined as Variant in Excel and represents as object in NetOffice
+        ' You got always an Excel.Style instance if you ask for
         Dim style As Excel.Style = range.Style
 
-        'variant types can be a scalar type at runtime
-        'another example way to use is 
-        If (TypeName(range.Style) = "String") Then
+        'and here comes the magic. both sets are valid because the variants was very flexible in the setter
+        range.Style = "myUniqueStyle"
+        range.Style = myStyle
 
-            Dim myStyle As String = range.Style
-
-        ElseIf (TypeName(range.Style) = "Style") Then
-
-            Dim myStyle As Excel.Style = range.Style
-        End If
-
-        ' Name, Bold, Size are bool but defined as Variant and also converted to object
+        ' Name, Bold, Size are string, bool and double but defined as Variant 
         style.Font.Name = "Arial"
-        style.Font.Bold = True
+        style.Font.Bold = True ' you can also set "True" and it works. variants makes it possible
         style.Font.Size = 14
-
-
-        ' Please note: the reason for the most variant definition is a more flexible value set.
-        ' the Style property from Range returns always a Style object
-        ' but if you have a new named style created with the name "myStyle" you can set range.Style = myNewStyleObject; or range.Style = "myStyle"
-        ' this kind of flexibility is the primary reason for Variants in Office
-        ' in any case, you dont lost the COM Proxy management from NetOffice for Variants. 
 
         ' quit & dipose
         application.Quit()

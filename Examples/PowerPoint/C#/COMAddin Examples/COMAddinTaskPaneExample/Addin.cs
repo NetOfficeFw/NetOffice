@@ -13,7 +13,7 @@ using NetOffice.PowerPointApi.Enums;
 
 namespace COMAddinTaskPaneExampleCS4
 {
-    [GuidAttribute("4B22C663-4362-4093-A0E0-1D33A4543F2C"), ProgId("PPointAddinCS4.TaskPaneAddin"), ComVisible(true)]
+    [GuidAttribute("40C8F944-BD8D-41D7-8314-2C99343F148C"), ProgId("PPointAddinCS4.TaskPaneAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.ICustomTaskPaneConsumer
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\PowerPoint\\AddIns\\";

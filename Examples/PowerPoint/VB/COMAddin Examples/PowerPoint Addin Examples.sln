@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Basic Express 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "COMAddinClassicExample", "COMAddinClassicExample\COMAddinClassicExample.vbproj", "{00DA9107-98EC-49F5-8D76-9C5F04809ABE}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "COMAddinRibbonExample", "COMAddinRibbonExample\COMAddinRibbonExample.vbproj", "{5C713DD1-D595-43DD-B543-6850802E9108}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "COMAddinTaskPaneExample", "COMAddinTaskPaneExample\COMAddinTaskPaneExample.vbproj", "{3B0E189F-C9D0-4A4C-BC1C-393955EB1790}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NetOffice Tools - Simple", "NetOffice Tools - Simple\NetOffice Tools - Simple.vbproj", "{DC0530D6-6BE4-4437-91BF-565509E583FB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NetOffice Tools - Extended", "NetOffice Tools - Extended\NetOffice Tools - Extended.vbproj", "{92D0523D-C51B-446E-8A15-A149F20C1C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,14 @@ Global
 		{3B0E189F-C9D0-4A4C-BC1C-393955EB1790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B0E189F-C9D0-4A4C-BC1C-393955EB1790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B0E189F-C9D0-4A4C-BC1C-393955EB1790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0530D6-6BE4-4437-91BF-565509E583FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0530D6-6BE4-4437-91BF-565509E583FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0530D6-6BE4-4437-91BF-565509E583FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0530D6-6BE4-4437-91BF-565509E583FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92D0523D-C51B-446E-8A15-A149F20C1C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D0523D-C51B-446E-8A15-A149F20C1C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D0523D-C51B-446E-8A15-A149F20C1C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D0523D-C51B-446E-8A15-A149F20C1C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

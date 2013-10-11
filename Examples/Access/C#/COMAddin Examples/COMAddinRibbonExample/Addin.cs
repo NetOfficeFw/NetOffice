@@ -13,7 +13,7 @@ using NetOffice.OfficeApi.Enums;
 
 namespace COMAddinRibbonExampleCS4
 {
-    [GuidAttribute("B45E5A48-9A73-4dc5-A574-F56757C4A145"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
+    [GuidAttribute("44665894-708B-45B2-B2D8-6D2C8D2CA0A6"), ProgId("AccessAddinCS4.RibbonAddin"), ComVisible(true)]
     public class Addin : IDTExtensibility2, Office.IRibbonExtensibility
     {
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Access\\AddIns\\";
@@ -88,7 +88,7 @@ namespace COMAddinRibbonExampleCS4
 
         #endregion
 
-        #region Ribbon Gui Trigger
+        #region Ribbon UI Trigger
 
         public void OnAction(Office.IRibbonControl control)
         {

@@ -48,7 +48,6 @@
             this.buttonOptions = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.linkLabelProjectWizard = new System.Windows.Forms.LinkLabel();
             this.linkLabelAccess = new System.Windows.Forms.LinkLabel();
             this.linkLabelDeveloperToolbox = new System.Windows.Forms.LinkLabel();
             this.linkLabelTutorialOverview = new System.Windows.Forms.LinkLabel();
@@ -261,7 +260,6 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.linkLabelProjectWizard);
             this.panel2.Controls.Add(this.linkLabelAccess);
             this.panel2.Controls.Add(this.linkLabelDeveloperToolbox);
             this.panel2.Controls.Add(this.linkLabelTutorialOverview);
@@ -288,23 +286,10 @@
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
             // 
-            // linkLabelProjectWizard
-            // 
-            this.linkLabelProjectWizard.AutoSize = true;
-            this.linkLabelProjectWizard.Location = new System.Drawing.Point(10, 140);
-            this.linkLabelProjectWizard.Name = "linkLabelProjectWizard";
-            this.linkLabelProjectWizard.Size = new System.Drawing.Size(140, 13);
-            this.linkLabelProjectWizard.TabIndex = 22;
-            this.linkLabelProjectWizard.TabStop = true;
-            this.linkLabelProjectWizard.Tag = "/wikipage?title=ProjectWizardScreenshots_English#/wikipage?title=ProjectWizardScr" +
-                "eenshots_German";
-            this.linkLabelProjectWizard.Text = "Visual Studio Project Wizard";
-            this.linkLabelProjectWizard.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMultiLanguage_LinkClicked);
-            // 
             // linkLabelAccess
             // 
             this.linkLabelAccess.AutoSize = true;
-            this.linkLabelAccess.Location = new System.Drawing.Point(10, 241);
+            this.linkLabelAccess.Location = new System.Drawing.Point(10, 223);
             this.linkLabelAccess.Name = "linkLabelAccess";
             this.linkLabelAccess.Size = new System.Drawing.Size(90, 13);
             this.linkLabelAccess.TabIndex = 21;
@@ -340,7 +325,7 @@
             // linkLabelPowerPoint
             // 
             this.linkLabelPowerPoint.AutoSize = true;
-            this.linkLabelPowerPoint.Location = new System.Drawing.Point(10, 221);
+            this.linkLabelPowerPoint.Location = new System.Drawing.Point(10, 203);
             this.linkLabelPowerPoint.Name = "linkLabelPowerPoint";
             this.linkLabelPowerPoint.Size = new System.Drawing.Size(109, 13);
             this.linkLabelPowerPoint.TabIndex = 14;
@@ -374,7 +359,7 @@
             // linkLabelOutlook
             // 
             this.linkLabelOutlook.AutoSize = true;
-            this.linkLabelOutlook.Location = new System.Drawing.Point(10, 201);
+            this.linkLabelOutlook.Location = new System.Drawing.Point(10, 183);
             this.linkLabelOutlook.Name = "linkLabelOutlook";
             this.linkLabelOutlook.Size = new System.Drawing.Size(92, 13);
             this.linkLabelOutlook.TabIndex = 13;
@@ -399,7 +384,7 @@
             // linkLabelExcel
             // 
             this.linkLabelExcel.AutoSize = true;
-            this.linkLabelExcel.Location = new System.Drawing.Point(10, 160);
+            this.linkLabelExcel.Location = new System.Drawing.Point(10, 142);
             this.linkLabelExcel.Name = "linkLabelExcel";
             this.linkLabelExcel.Size = new System.Drawing.Size(81, 13);
             this.linkLabelExcel.TabIndex = 15;
@@ -411,7 +396,7 @@
             // linkLabelWord
             // 
             this.linkLabelWord.AutoSize = true;
-            this.linkLabelWord.Location = new System.Drawing.Point(10, 181);
+            this.linkLabelWord.Location = new System.Drawing.Point(10, 163);
             this.linkLabelWord.Name = "linkLabelWord";
             this.linkLabelWord.Size = new System.Drawing.Size(81, 13);
             this.linkLabelWord.TabIndex = 16;
@@ -532,7 +517,6 @@
         private System.Windows.Forms.Button buttonRunTutorial;
         private System.Windows.Forms.Panel panelShowTutorialLink;
         private System.Windows.Forms.Label labelOffHint;
-        private System.Windows.Forms.LinkLabel linkLabelProjectWizard;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
