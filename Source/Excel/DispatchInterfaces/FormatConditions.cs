@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi
 	///</summary>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class FormatConditions : COMObject ,IEnumerable<NetOffice.ExcelApi.FormatCondition>
+	public class FormatConditions : COMObject ,IEnumerable<object>
 	{
 		#pragma warning disable
 		#region Type Information
@@ -389,7 +389,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersionAttribute Excel, 9,10,11,12,14,15
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-       public IEnumerator<NetOffice.ExcelApi.FormatCondition> GetEnumerator()  
+       public IEnumerator<object> GetEnumerator()  
        {
            NetRuntimeSystem.Collections.IEnumerable innerEnumerator = (this as NetRuntimeSystem.Collections.IEnumerable);
            foreach (NetOffice.ExcelApi.FormatCondition item in innerEnumerator)

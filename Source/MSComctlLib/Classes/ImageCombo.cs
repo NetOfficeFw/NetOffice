@@ -53,7 +53,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ImageCombo);
-                    
                 return _type;
             }
         }

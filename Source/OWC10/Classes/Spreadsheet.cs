@@ -72,7 +72,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(Spreadsheet);
-                    
                 return _type;
             }
         }

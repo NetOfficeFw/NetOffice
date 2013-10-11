@@ -64,16 +64,32 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMObjectExpandableObjectConverter.cs" />
+    <Compile Include="NamedPipes\ClientPipeConnection.cs" />
+    <Compile Include="NamedPipes\InterProcessConnectionState.cs" />
+    <Compile Include="NamedPipes\NamedPipeNative.cs" />
+    <Compile Include="NamedPipes\NamedPipeWrapper.cs" />
+    <Compile Include="NamedPipes\PipeClient.cs" />
+    <Compile Include="NamedPipes\PipeConnection.cs" />
+    <Compile Include="NamedPipes\PipeHandle.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tools\AttributeHelper.cs" />
     <Compile Include="Tools\COMAddinAttribute.cs" />
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
     <Compile Include="Tools\CustomUIAttribute.cs" />
-    <Compile Include="Tools\ErrorHandlerFunctionAttribute.cs" />
     <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
+    <Compile Include="Tools\ErrorHandlerAttribute.cs" />
+    <Compile Include="Tools\RegisterErrorHandlerAttribute.cs" />
     <Compile Include="Tools\RegisterFunctionAttribute.cs" />
     <Compile Include="Tools\RegistryLocationAttribute.cs" />
     <Compile Include="Tools\UnRegisterFunctionAttribute.cs" />
@@ -99,7 +115,6 @@
     <Compile Include="SupportEntityType.cs" />
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\IDTExtensibility2.cs" />
-    <Compile Include="Tools\IErrorHandler.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +136,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="KeyTokens.txt" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="NetOffice_v4.0.snk" />

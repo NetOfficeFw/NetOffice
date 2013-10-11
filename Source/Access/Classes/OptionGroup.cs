@@ -51,7 +51,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(OptionGroup);
-                    
                 return _type;
             }
         }

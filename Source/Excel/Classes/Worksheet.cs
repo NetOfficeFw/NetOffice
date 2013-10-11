@@ -58,7 +58,6 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(Worksheet);
-                    
                 return _type;
             }
         }

@@ -41,7 +41,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(EmptyCell);
-                    
                 return _type;
             }
         }

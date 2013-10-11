@@ -105,7 +105,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLScriptElement);
-                    
                 return _type;
             }
         }

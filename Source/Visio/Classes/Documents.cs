@@ -106,7 +106,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Documents);
-                    
                 return _type;
             }
         }

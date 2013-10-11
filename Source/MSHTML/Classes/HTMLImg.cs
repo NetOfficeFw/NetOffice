@@ -107,7 +107,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLImg);
-                    
                 return _type;
             }
         }

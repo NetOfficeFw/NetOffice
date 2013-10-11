@@ -44,7 +44,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(Folders);
-                    
                 return _type;
             }
         }

@@ -43,7 +43,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(OLEControl);
-                    
                 return _type;
             }
         }

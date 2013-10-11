@@ -40,7 +40,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(TempVar);
-                    
                 return _type;
             }
         }

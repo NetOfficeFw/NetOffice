@@ -43,7 +43,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLXMLHttpRequest);
-                    
                 return _type;
             }
         }

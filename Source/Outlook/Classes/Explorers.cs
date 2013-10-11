@@ -42,7 +42,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(Explorers);
-                    
                 return _type;
             }
         }

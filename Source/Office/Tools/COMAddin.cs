@@ -1,4 +1,5 @@
 using System;
+using NetRunTimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -20,7 +21,7 @@ namespace NetOffice.OfficeApi.Tools
         #region Fields
 
         /// <summary>
-        /// MS-Excel Registry Path 
+        /// MS-Office Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\{0}\\AddIns\\";
 
@@ -33,20 +34,9 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         public COMAddin()
         {
-            try
-            {
-                TaskPanes = new CustomTaskPaneCollection();
-				TaskPaneInstances = new List<ITaskPane>();
-                Type = this.GetType();
-            }
-            catch (System.Exception exception)
-            {
-				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if(!handled)
-                    throw exception;
-            }
+            TaskPanes = new CustomTaskPaneCollection();
+			TaskPaneInstances = new List<ITaskPane>();
+            Type = this.GetType();
         }
 
         #endregion
@@ -78,9 +68,19 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
 		protected List<ITaskPane> TaskPaneInstances { get; set; }
 
+		/// <summary>
+        /// Cached Error Method Delegate
+        /// </summary>
+		private MethodInfo ErrorMethod { get; set; }
+
+		/// <summary>
+        /// Cached Register Error Method Delegate
+        /// </summary>
+		private static MethodInfo RegisterErrorMethod { get; set; }
+
         #endregion
 
-        #region (IDTExtensibility2) Events 
+        #region IDTExtensibility2 Events 
 
         /// <summary>
         /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup. 
@@ -136,30 +136,24 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (System.Exception exception)
+            catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
 
-        private void RaiseShutdown(ext_DisconnectMode RemoveMode, ref Array custom)
+        private void RaiseOnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
             {
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (System.Exception exception)
+            catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.OnDisconnection, exception);
             }
         }
 
@@ -170,13 +164,10 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (System.Exception exception)
+            catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.OnConnection, exception);
             }
         }
 
@@ -187,13 +178,10 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (System.Exception exception)
+            catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
 
@@ -204,13 +192,10 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
-            catch (System.Exception exception)
+            catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.OnBeginShutdown, exception);
             }
         }
 
@@ -225,58 +210,58 @@ namespace NetOffice.OfficeApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            try
-            {
-                this.Application = NetOffice.Factory.CreateObjectFromComProxy(null, Application);
-            }
-            catch (System.Exception exception)
-            {
-				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
-            } 
-            RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+			this.Application = NetOffice.Factory.CreateObjectFromComProxy(null, Application);
+			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
-            RaiseShutdown(RemoveMode, ref custom);
-            try
-            {
-				foreach(ITaskPane item in TaskPaneInstances)
+            RaiseOnDisconnection(RemoveMode, ref custom);
+
+			foreach(ITaskPane item in TaskPaneInstances)
+			{
+				try
 				{
-					try
-					{
-						item.OnDisconnection();
-					}
-					catch(System.Exception exception)
-					{
-						NetOffice.DebugConsole.WriteException(exception);
-					}
+					item.OnDisconnection();
 				}
+				catch(System.Exception exception)
+				{
+					NetOffice.DebugConsole.WriteException(exception);
+				}			
+			}
 
-                foreach (var item in TaskPanes)
-                {
-					if(!item.Pane.IsDisposed)
+			foreach (var item in TaskPanes)
+            {
+				try
+				{
+					if(null != item.Pane && !item.Pane.IsDisposed)
 	                    item.Pane.Dispose();
-                }
-                
-                if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
-                    TaskPaneFactory.Dispose();
-
-                if (!Application.IsDisposed)
-                    Application.Dispose();
+				}
+				catch(System.Exception exception)
+				{
+					NetOffice.DebugConsole.WriteException(exception);
+				}		
             }
-            catch (System.Exception exception)
-            {	
+             
+			try
+			{
+				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
+					TaskPaneFactory.Dispose();
+			}
+			catch(System.Exception exception)
+			{
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
-            } 
+			}	
+			
+			try
+			{
+				if (!Application.IsDisposed)
+					Application.Dispose();
+			}
+			catch(System.Exception exception)
+			{
+				NetOffice.DebugConsole.WriteException(exception);
+			}	
         }
 
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
@@ -311,12 +296,8 @@ namespace NetOffice.OfficeApi.Tools
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
-                else
-                    return string.Empty;
+                RaiseErrorHandlerMethod(ErrorMethodKind.GetCustomUI, exception);
+				return string.Empty;
             } 
         }
 
@@ -334,7 +315,7 @@ namespace NetOffice.OfficeApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Application, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -351,7 +332,7 @@ namespace NetOffice.OfficeApi.Tools
 							if(item.Arguments != null)
 								argumentArray = item.Arguments;
 
-							pane.OnConnection(Application, argumentArray);
+							pane.OnConnection(Application, taskPane, argumentArray);
 						}
 
                         foreach (KeyValuePair<string, object> property in item.ChangedProperties)
@@ -364,10 +345,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseErrorHandlerMethod(exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseErrorHandlerMethod(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
         }
 
@@ -379,29 +357,25 @@ namespace NetOffice.OfficeApi.Tools
         /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
         /// </summary>
         /// <param name="type">type information for the class wtih static method </param>
+       /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        /// <param name="handled">must set to true when the error is handled by the client other the exception was thrown</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, System.Exception exception, ref bool handled)
+        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
         {
-            MethodInfo registerMethod = null;
-            ErrorHandlerFunctionAttribute registerAttribute = null;
-            bool methodPresent = AttributeHelper.GetErrorAttribute(type, ref registerMethod, ref registerAttribute);
-            if (methodPresent)
-                handled = (bool)registerMethod.Invoke(null, new object[] { exception });
+			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
+            if (null != errorMethod)
+                errorMethod.Invoke(null, new object[] { methodKind, exception });
         }
 
         /// <summary>
-        /// checks for IErrorHandler implementation and call OnError, otherwhise redirect to RaiseStaticErrorHandlerMethod
+        /// redirect to errorhandler method if exists
         /// </summary>
+	    /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        /// <param name="handled">must set to true when the error is handled by the client other the exception was thrown</param>
-        private void RaiseErrorHandlerMethod(System.Exception exception, ref bool handled)
+        private void RaiseErrorHandlerMethod(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
         {
-            IErrorHandler handler = this as IErrorHandler;
-            if (handler != null)
-                handled = handler.OnError(exception);
-            else
-                RaiseStaticErrorHandlerMethod(Type, exception, ref handled);
+            MethodInfo errorMethod = AttributeHelper.GetErrorMethod(this);
+            if (null != errorMethod)
+                errorMethod.Invoke(this, new object[] { methodKind, exception });
         }
         
         #endregion
@@ -434,11 +408,7 @@ namespace NetOffice.OfficeApi.Tools
 				MultiRegisterAttribute attribute = MultiRegisterAttribute.GetAttribute(type);
 
                 Assembly thisAssembly = Assembly.GetAssembly(type);
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\1.0.0.0");
-                key.SetValue("CodeBase", thisAssembly.CodeBase);
-                key.Close();
-                
-                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + GetAssemblyVersionString(type.Assembly));
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
@@ -453,9 +423,12 @@ namespace NetOffice.OfficeApi.Tools
 				foreach(RegisterIn item in attribute.Products)
 				{
 					 // register addin in Excel
-					Registry.CurrentUser.CreateSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) +  progId.Value);
+					if(location.Value == RegistrySaveLocation.LocalMachine)
+						Registry.LocalMachine.CreateSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) +  progId.Value);
+					else
+						Registry.CurrentUser.CreateSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) +  progId.Value);
+					
 					RegistryKey regKeyProduct = null;
-                
 					if(location.Value == RegistrySaveLocation.LocalMachine)
 						regKeyProduct = Registry.LocalMachine.OpenSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progId.Value, true);
 					else
@@ -470,18 +443,13 @@ namespace NetOffice.OfficeApi.Tools
 					regKeyProduct.Close();
 				}
 
-               
-
                  if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                         registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseStaticErrorHandlerMethod(type, exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
             }
         }
 
@@ -526,10 +494,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                bool handled = false;
-                RaiseStaticErrorHandlerMethod(type, exception, ref handled);
-                if (!handled)
-                    throw exception;
+                RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
             }
         }
 
@@ -564,6 +529,23 @@ namespace NetOffice.OfficeApi.Tools
         #endregion
 
         #region Private Helper Methods
+		
+		/// <summary>
+        /// Returns the Addin Version String
+        /// </summary>
+        /// <param name="assembly">Addin Assembly</param>
+        /// <returns>Version String</returns>
+		private static string GetAssemblyVersionString(Assembly assembly)
+        {
+            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyVersionAttribute), false);
+            if (attributes.Length > 0)
+            {
+                AssemblyVersionAttribute titleAttribute = (AssemblyVersionAttribute)attributes[0];
+                if (titleAttribute.Version != "")
+                    return titleAttribute.Version;
+            }
+            return "1.0.0.0";
+        }
 
         /// <summary>
         /// reads text file from ressource

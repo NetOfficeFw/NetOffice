@@ -44,7 +44,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(CustomXMLParts);
-                    
                 return _type;
             }
         }

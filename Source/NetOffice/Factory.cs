@@ -160,6 +160,14 @@ namespace NetOffice
 
                 DebugConsole.WriteLine("NetOffice.Factory.Initialize() DeepLevel:{0}", Settings.EnableDeepLoading);
 
+                TryLoadAssembly("ExcelApi.dll");
+                TryLoadAssembly("WordApi.dll");
+                TryLoadAssembly("OutlookApi.dll");
+                TryLoadAssembly("PowerPointApi.dll");
+                TryLoadAssembly("AccessApi.dll");
+                TryLoadAssembly("VisioApi.dll");
+                TryLoadAssembly("MSProjectApi.dll");
+
                 if (!_assemblyResolveEventConnected)
                 {
                     AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
@@ -169,7 +177,8 @@ namespace NetOffice
                 ClearCache();
                 AddNetOfficeAssemblies(Settings.EnableDeepLoading);
                 AddDependentNetOfficeAssemblies();
-              
+
+                DebugConsole.WriteLine("Factory contains {0} assemblies", _factoryList.Count);
                 DebugConsole.WriteLine("NetOffice.Factory.Initialize() passed");
             }
             catch (Exception throwedException)
@@ -909,7 +918,6 @@ namespace NetOffice
             foreach (object itemAttribute in attributes)
             {
                 string fullnameAttribute = itemAttribute.GetType().FullName;
-                DebugConsole.WriteLine("Attribute:{0}", fullnameAttribute);
                 if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
                 {
                     Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
@@ -918,8 +926,6 @@ namespace NetOffice
                     bool exists = false;
                     foreach (IFactoryInfo itemFactory in _factoryList)
                     {
-                        DebugConsole.WriteLine("IFactoryInfo:{0}:{1}", itemFactory.Assembly.FullName, factoryInfo.Assembly.FullName);
-
                         if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
                         {
                             exists = true;
@@ -927,7 +933,10 @@ namespace NetOffice
                         }
                     }
                     if (!exists)
+                    { 
                         _factoryList.Add(factoryInfo);
+                        DebugConsole.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                    }
 
                     foreach (string itemDependency in factoryInfo.Dependencies)
                     {
@@ -1008,8 +1017,7 @@ namespace NetOffice
         {
             if (_factoryList.Count == 0)
             {
-                string notInitMessage = "Factory is initialized with NetOffice assemblies." + Environment.NewLine;
-                notInitMessage = "Please call NetOffice.Factory.Initialize()";
+                string notInitMessage = "Factory is not initialized with NetOffice assemblies.";
                 throw new NetOfficeException(notInitMessage);
             }
 
@@ -1037,6 +1045,12 @@ namespace NetOffice
             throw new NetOfficeException(message);
         }
 
+        /// <summary>
+        /// AssemblyResolver Event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        /// <returns></returns>
         private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             try
@@ -1047,17 +1061,64 @@ namespace NetOffice
                 string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
                 if (System.IO.File.Exists(fullFileName))
                 {
-                    DebugConsole.WriteLine(string.Format("Try to resolve Assembly", args.Name));
+                    DebugConsole.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
                     Assembly assembly = System.Reflection.Assembly.Load(args.Name);
                     return assembly;
                 }
                 else
                 {
-                    DebugConsole.WriteLine(string.Format("Failed to resolve Assembly", args.Name));
+                    DebugConsole.WriteLine(string.Format("Unable to resolve assembly {0}. The file file doesnt exists in current codebase.", args.Name));
                     return null;
                 }
             }
             catch(Exception exception)
+            {
+                DebugConsole.WriteException(exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Assembly loader for multitargeting(host) scenarios
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        private static Assembly TryLoadAssembly(string fileName)
+        {
+            try
+            {
+                string directoryName = _thisAssembly.CodeBase.Substring(0, _thisAssembly.CodeBase.LastIndexOf("/"));
+                directoryName = directoryName.Replace("/", "\\").Substring(8);
+                string fullFileName = System.IO.Path.Combine(directoryName, fileName);
+                if (System.IO.File.Exists(fullFileName))
+                {
+                    
+                    Assembly assembly = System.Reflection.Assembly.LoadFrom(fullFileName);
+                    Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);
+                    NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
+                    bool exists = false;
+                    foreach (IFactoryInfo itemFactory in _factoryList)
+                    {
+                        if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                        {
+                            exists = true;
+                            break;
+                        }
+                    }
+                    if (!exists)
+                    { 
+                        _factoryList.Add(factoryInfo);
+                        DebugConsole.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                    }
+                    return assembly;
+                }
+                else
+                {
+                    DebugConsole.WriteLine(string.Format("Unable to resolve assembly {0}. The assembly doesnt exists in current codebase.", fileName));
+                    return null;
+                }
+            }
+            catch (Exception exception)
             {
                 DebugConsole.WriteException(exception);
                 return null;

@@ -53,7 +53,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(NavigationButton);
-                    
                 return _type;
             }
         }

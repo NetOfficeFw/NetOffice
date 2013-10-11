@@ -1,5 +1,6 @@
 using System;
 using NetRuntimeSystem = System;
+using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Reflection;
@@ -8,114 +9,31 @@ using NetOffice;
 namespace NetOffice.OutlookApi
 {
 	///<summary>
-	/// Interface PropertyPage 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// Interface PropertyPage SupportByVersionAttribute Outlook, 9,10,11,12,14,15
 	///</summary>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+	[ComImport, ComVisible(true), Guid("0006307E-0000-0000-C000-000000000046"), TypeLibType((short) 4096)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
-	public class PropertyPage : COMObject
+	public interface PropertyPage
 	{
-		#pragma warning disable
-		#region Type Information
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(PropertyPage);
-                    
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Construction
-
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PropertyPage(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PropertyPage(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PropertyPage(COMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PropertyPage() : base()
-		{
-		}
-		
-		/// <param name="progId">registered ProgID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PropertyPage(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
-		/// Get
-		/// </summary>
-		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
-		public bool Dirty
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "Dirty", paramsArray);
-				return NetRuntimeSystem.Convert.ToBoolean(returnItem);
-			}
-		}
-
-		#endregion
-
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
-		/// </summary>
-		/// <param name="helpFile">string HelpFile</param>
-		/// <param name="helpContext">Int32 HelpContext</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
-		public Int32 GetPageInfo(string helpFile, Int32 helpContext)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, helpContext);
-			object returnItem = Invoker.MethodReturn(this, "GetPageInfo", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
-		}
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8448)]
+		Int32 GetPageInfo([In, MarshalAs(UnmanagedType.BStr)]string HelpFile, [In] Int32 HelpContext);
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
-		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
-		public Int32 Apply()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Apply", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
-		}
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8450)]
+		Int32 Apply();
 
 		#endregion
-		#pragma warning restore
+
+		#region Properties
+
+		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
+		[DispId(8449)]
+		bool Dirty{[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8449)] get;}
+
+		#endregion
 	}
 }

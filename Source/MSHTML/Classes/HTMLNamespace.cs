@@ -42,7 +42,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLNamespace);
-                    
                 return _type;
             }
         }

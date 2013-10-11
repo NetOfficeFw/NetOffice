@@ -68,7 +68,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(DocumentItem);
-                    
                 return _type;
             }
         }

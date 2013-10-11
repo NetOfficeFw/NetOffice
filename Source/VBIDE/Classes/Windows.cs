@@ -40,7 +40,6 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(Windows);
-                    
                 return _type;
             }
         }

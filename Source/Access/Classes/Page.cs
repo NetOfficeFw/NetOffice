@@ -47,7 +47,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(Page);
-                    
                 return _type;
             }
         }

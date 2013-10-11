@@ -11,7 +11,6 @@ using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 using VBIDE = NetOffice.VBIDEApi;
 using Word = NetOffice.WordApi;
-using NetOffice.WordApi.Enums;
 using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
@@ -37,17 +36,11 @@ namespace ClientApplication
         {
             InitializeComponent();
 
-            Excel.Application app = new Excel.Application();
-            app.DisplayAlerts = false;
-            Excel.Workbook book = app.Workbooks.Add();
-            Excel.Worksheet sheet = book.Sheets[1] as Excel.Worksheet;
-            Excel.Range range = sheet.Range("A1");
+            /*Initialize Api COMObject Support*/
+            NetOffice.Factory.Initialize();
 
-            var v = range.Activate();
-            sheet.Activate();
             
-            app.Quit();
-            app.Dispose();
+            /*>> your testcode here <<*/
         }
 
         /// <summary>

@@ -50,7 +50,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(_PageHdrFtrInReport);
-                    
                 return _type;
             }
         }

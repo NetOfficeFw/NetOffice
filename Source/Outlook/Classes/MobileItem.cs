@@ -67,7 +67,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(MobileItem);
-                    
                 return _type;
             }
         }

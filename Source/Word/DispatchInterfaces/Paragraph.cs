@@ -37,10 +37,6 @@ namespace NetOffice.WordApi
         
 		#region Construction
 
-        static Paragraph()
-        { 
-        }
-
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

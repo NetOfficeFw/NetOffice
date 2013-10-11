@@ -70,7 +70,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(PivotTable);
-                    
                 return _type;
             }
         }

@@ -40,7 +40,6 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(Command);
-                    
                 return _type;
             }
         }

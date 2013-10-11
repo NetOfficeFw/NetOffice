@@ -43,7 +43,6 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(OLEObject);
-                    
                 return _type;
             }
         }

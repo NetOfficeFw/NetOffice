@@ -11,6 +11,7 @@ namespace NetOffice
     /// <summary>
     /// represents a managed COM proxy 
     /// </summary>
+    [TypeConverter(typeof(COMObjectExpandableObjectConverter))]
     public class COMObject : IDisposable
     {
         #region Fields
@@ -214,11 +215,32 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns the native wrapped proxy
         /// </summary>
+        [Browsable(false)]
         public object UnderlyingObject
         {
             get
             {
                 return _underlyingObject;
+            }
+        }
+
+        /// <summary>
+        /// NetOffice property: returns friendly name for the instance type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        public string FriendlyTypeName
+        {
+            get
+            {
+                string fullname = InstanceType.FullName;
+                if (!String.IsNullOrEmpty(fullname))
+                {
+                    if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
+                        fullname = fullname.Replace("NetOffice.", "");
+                    if (fullname.StartsWith("Api.", StringComparison.InvariantCultureIgnoreCase))
+                        fullname = fullname.Replace("Api.", "");
+                }
+                return fullname;
             }
         }
 
@@ -379,23 +401,23 @@ namespace NetOffice
             switch (searchType)
             {
                 case SupportEntityType.Method:
-                {
+                    {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
                         string outValue = null;
                         return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                }
+                    }
                 case SupportEntityType.Property:
-                {
+                    {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
                         string outValue = null;
                         return _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
-                }
+                    }
                 default:
-                {
+                    {
                         if (null == _listSupportedEntities)
                             _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
@@ -405,7 +427,7 @@ namespace NetOffice
                             return true;
 
                         return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                }
+                    }
             }
         }
 
@@ -488,9 +510,9 @@ namespace NetOffice
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void ReleaseCOMProxy()
-        {            
+        {
             // release himself from COM Runtime System
-            if(!Object.ReferenceEquals(_underlyingObject, null))
+            if (!Object.ReferenceEquals(_underlyingObject, null))
             {
                 if (_isEnumerator)
                 {
@@ -532,7 +554,7 @@ namespace NetOffice
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public event OnDisposeEventHandler OnDispose;
-         
+
         /// <summary>
         /// Calls the OnDispose event as service for client callers
         /// </summary>
@@ -542,7 +564,7 @@ namespace NetOffice
             bool cancelDispose = false;
             try
             {
-                if(null != OnDispose)
+                if (null != OnDispose)
                 {
                     OnDisposeEventArgs eventArgs = new OnDisposeEventArgs(this);
                     OnDispose(eventArgs);
@@ -589,7 +611,7 @@ namespace NetOffice
 
             // child proxy dispose
             DisposeChildInstances(disposeEventBinding);
-            
+
 
             // remove himself from parent childlist
             if ((!Object.ReferenceEquals(_parentObject, null)) && (true == removeFromParent))
@@ -670,7 +692,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override string ToString()
         {
-            return base.ToString();
+            return GetType().Name;
         }
 
         /// <summary>
@@ -696,7 +718,7 @@ namespace NetOffice
 
             if (Object.ReferenceEquals(obj, null))
                 return false;
-           
+
             IntPtr outValueA = IntPtr.Zero;
             IntPtr outValueB = IntPtr.Zero;
             IntPtr ptrA = IntPtr.Zero;
@@ -731,7 +753,7 @@ namespace NetOffice
                     Marshal.Release(outValueB);
             }
         }
-         
+
         /// <summary>
         /// Gets a Type object that represents the specified type.
         /// </summary>
@@ -760,7 +782,7 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return objectA.EqualsOnServer(objectB); 
+                return objectA.EqualsOnServer(objectB);
             else
                 return false;
         }

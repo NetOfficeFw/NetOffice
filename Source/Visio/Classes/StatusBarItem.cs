@@ -40,7 +40,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(StatusBarItem);
-                    
                 return _type;
             }
         }

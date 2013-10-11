@@ -49,7 +49,6 @@ namespace NetOffice.MSProjectApi
             {
                 if (null == _type)
                     _type = typeof(Project);
-                    
                 return _type;
             }
         }

@@ -13,21 +13,63 @@ namespace NetOffice.Tools
     public static class AttributeHelper
     {
         /// <summary>
-        /// Looks for a method with the ErrorHandlerFunctionAttribute
+        /// Anyalyze first parameter and returns the error method delegate if exists
+        /// </summary>
+        /// <param name="comAddin">target addin</param>
+        /// <returns>delegate or null</returns>
+        public static MethodInfo GetErrorMethod(object comAddin)
+        {
+            foreach (MethodInfo item in comAddin.GetType().GetMethods(BindingFlags.Instance | BindingFlags.Public))
+            {
+                object[] array = item.GetCustomAttributes(typeof(ErrorHandlerAttribute), false);
+                if (array.Length == 1)
+                {
+                    ParameterInfo[] paramInfo = item.GetParameters();
+                    if (paramInfo.Length == 2 && paramInfo[0].ParameterType == typeof(ErrorMethodKind) && paramInfo[1].ParameterType == typeof(Exception))
+                        return item;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Anyalyze first parameter and returns the register error method delegate if exists
+        /// </summary>
+        /// <param name="type">Type of target addin</param>
+        /// <returns>delegate or null</returns>
+        public static MethodInfo GetRegisterErrorMethod(Type type)
+        {
+            foreach (MethodInfo item in type.GetMethods(BindingFlags.Static | BindingFlags.Public))
+            {
+                object[] array = item.GetCustomAttributes(typeof(RegisterErrorHandlerAttribute), false);
+                if (array.Length == 1)
+                {
+                    ParameterInfo[] paramInfo = item.GetParameters();
+                    if (paramInfo.Length == 2 && paramInfo[0].ParameterType == typeof(RegisterErrorMethodKind) && paramInfo[1].ParameterType == typeof(Exception))
+                        return item;
+                }
+            }
+
+            return null;
+        }
+         
+        /// <summary>
+        /// Looks for a method with the RegisterErrorHandlerFunctionAttribute
         /// </summary>
         /// <param name="type">the type you want looking for the method</param>
         /// <param name="method">the method when its found</param>
         /// <param name="attribute">the attribute when its found</param>
         /// <returns>true when the method was found</returns>
-        public static bool GetErrorAttribute(Type type, ref MethodInfo method, ref ErrorHandlerFunctionAttribute attribute)
+        public static bool GetRegisterErrorAttribute(Type type, ref MethodInfo method, ref RegisterErrorHandlerAttribute attribute)
         {
             foreach (MethodInfo item in type.GetMethods(BindingFlags.Static | BindingFlags.Public))
             {
-                object[] array = item.GetCustomAttributes(typeof(ErrorHandlerFunctionAttribute), false);
+                object[] array = item.GetCustomAttributes(typeof(RegisterErrorHandlerAttribute), false);
                 if (array.Length == 1)
                 {
                     method = item;
-                    attribute = array[0] as ErrorHandlerFunctionAttribute;
+                    attribute = array[0] as RegisterErrorHandlerAttribute;
                     return true;
                 }
             }
@@ -98,6 +140,7 @@ namespace NetOffice.Tools
         /// <returns>GuidAttribute</returns>
         public static GuidAttribute GetGuidAttribute(Type type)
         {
+         
             object[] array = type.GetCustomAttributes(typeof(GuidAttribute), false);
             if (array.Length == 0)
                 throw new ArgumentNullException("GuidAttribute is missing");

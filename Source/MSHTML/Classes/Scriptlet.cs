@@ -51,7 +51,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(Scriptlet);
-                    
                 return _type;
             }
         }

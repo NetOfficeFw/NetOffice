@@ -51,7 +51,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ProgressBar);
-                    
                 return _type;
             }
         }

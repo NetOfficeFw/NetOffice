@@ -87,7 +87,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Document);
-                    
                 return _type;
             }
         }

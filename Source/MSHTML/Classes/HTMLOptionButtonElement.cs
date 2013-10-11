@@ -109,7 +109,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLOptionButtonElement);
-                    
                 return _type;
             }
         }

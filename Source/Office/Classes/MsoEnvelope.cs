@@ -43,7 +43,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(MsoEnvelope);
-                    
                 return _type;
             }
         }

@@ -60,7 +60,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(ComboBox);
-                    
                 return _type;
             }
         }

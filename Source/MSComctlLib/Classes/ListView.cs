@@ -60,7 +60,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ListView);
-                    
                 return _type;
             }
         }

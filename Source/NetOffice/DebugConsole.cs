@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
+using NetOffice.NamedPipes;
 
 namespace NetOffice
 {
@@ -37,10 +38,23 @@ namespace NetOffice
     }
 
     /// <summary>
+    /// Shared output connection technique
+    /// </summary>
+    public enum SharedOutputMode
+    {
+        /// <summary>
+        /// IPC named pipes
+        /// </summary>
+        LocalNamedPipes = 0
+    }
+
+    /// <summary>
     /// offers various debug, log and diagnostic functionality
     /// </summary>
     public static class DebugConsole
     {
+        private static object _sharedLock = new object();
+
         private static List<string> _messageList = new List<string>();
 
         /// <summary>
@@ -52,6 +66,21 @@ namespace NetOffice
         /// operation mode
         /// </summary>
         public static ConsoleMode Mode { get; set; }
+
+        /// <summary>
+        /// send a all messages to a named pipe. Use the NOTools.ConsoleMonitor to observe the console
+        /// </summary>
+        public static bool EnableSharedOutput { get; set; }
+
+        /// <summary>
+        /// Specify the shared output connection technique (currently ipc named pipes only. for future use to enable network and db logging)
+        /// </summary>
+        public static SharedOutputMode SharedOutputMode { get; set; }
+
+        /// <summary>
+        /// PipeConnection to NOTools.ConsoleMonitor
+        /// </summary>
+        private static PipeClient Pipe { get; set; }
 
         /// <summary>
         /// name full file path and name of a logfile, must be set if Mode == LogFile
@@ -89,7 +118,7 @@ namespace NetOffice
                 output = output.Replace("{" + i.ToString() + "}", replaceValue);
                 i++;
             }
- 
+
             if (ConsoleMode.Console == Mode || ConsoleMode.Trace == Mode)
                 output = "NetOffice: " + output;
 
@@ -116,6 +145,8 @@ namespace NetOffice
                 default:
                     throw new ArgumentOutOfRangeException("Unkown Log Mode.");
             }
+
+            InternalSendNamedPipeMessage(output, null);
         }
 
         /// <summary>
@@ -152,6 +183,8 @@ namespace NetOffice
                 default:
                     throw new ArgumentOutOfRangeException("Unkown Log Mode.");
             }
+
+            InternalSendNamedPipeMessage(output, null);
         }
 
         /// <summary>
@@ -162,6 +195,136 @@ namespace NetOffice
         {
             string message = CreateExecptionLog(exception);
             WriteLine(message);
+        }
+
+        /// <summary>
+        /// Send a message to the NOTools.Console monitor pipe
+        /// </summary>
+        /// <param name="console">name for the console(must exclude the '?' char) or null for default console</param>
+        /// <param name="message">the given message as any</param>
+        /// <returns>entry id for the log message if arrived, otherwise null</returns>
+        public static string SendPipeConsoleMessage(string console, string message)
+        {
+            try
+            {
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendConsoleMessage(console, message, null);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Send a message to the NOTools.Console monitor pipe
+        /// </summary>
+        /// <param name="console">name for the console(must exclude the '?' char) or null for default console</param>
+        /// <param name="message">the given message as any</param>
+        /// <param name="parentEntryID">parent message id. the console monitor can show a hierarchy with these info</param>
+        /// <returns>entry id for the log message if arrived, otherwise null</returns>
+        public static string SendPipeConsoleMessage(string console, string message, string parentEntryID)
+        {
+            try
+            {
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendConsoleMessage(console, message, parentEntryID);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Send a channel message to the NOTools.Console monitor pipe
+        /// </summary>
+        /// <param name="channel">channel id string. the argument must exclude the '?' character</param>
+        /// <param name="message">the given message as any</param>
+        /// <returns>entry id for the log message if arrived, otherwise null</returns>
+        public static string SendPipeChannelMessage(string channel, string message)
+        {
+            try
+            {
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendChannelMessage(channel, message);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
+        }
+   
+        /// <summary>
+        /// Send a message to the NOTools.Console monitor pipe
+        /// </summary>
+        /// <param name="message">given message as any</param>
+        /// <param name="parentEntryID">parent loghandle</param>
+        /// <returns>entry id for the log message if arrived, otherwise null</returns>
+        internal static string InternalSendNamedPipeMessage(string message, string parentEntryID)
+        {
+            try
+            {
+                if (!EnableSharedOutput)
+                    return null;
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendConsoleMessage(null, message, parentEntryID);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Send a channel message to the NOTools.Console monitor pipe
+        /// </summary>
+        /// <param name="channel">channel id string. the argument must exclude the '?' character</param>
+        /// <param name="message">the given message as any</param>
+        /// <returns>true if send</returns>
+        internal static string InternalSendNamedPipeChannelMessage(string channel, string message)
+        {
+            try
+            {
+                if (!EnableSharedOutput)
+                    return null;
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendChannelMessage(channel, message);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
         }
 
         /// <summary>

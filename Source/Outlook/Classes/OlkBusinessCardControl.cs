@@ -46,7 +46,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(OlkBusinessCardControl);
-                    
                 return _type;
             }
         }

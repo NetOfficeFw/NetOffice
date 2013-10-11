@@ -40,7 +40,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(ListItem);
-                    
                 return _type;
             }
         }

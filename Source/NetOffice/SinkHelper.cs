@@ -20,7 +20,6 @@ namespace NetOffice
         private COMObject _eventClass;
         private IConnectionPoint _connectionPoint;
         private int _connectionCookie;
-   //     private Guid _interfaceId;
 
         #endregion
 
@@ -158,6 +157,44 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// get supported connection point from comProxy in reverse order to GetConnectionPoint
+        /// </summary>
+        /// <param name="comProxy"></param>
+        /// <param name="point"></param>
+        /// <param name="sinkIds"></param>
+        /// <returns></returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static string GetConnectionPoint2(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
+        {
+            if (null == sinkIds)
+                return null;
+
+            IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
+
+            if (Settings.EnableEventDebugOutput)
+                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+
+            string id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
+            
+            if (Settings.EnableEventDebugOutput)
+                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+
+            if (null == id)
+            {
+                if (Settings.EnableEventDebugOutput)
+                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint");
+                id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
+                if (Settings.EnableEventDebugOutput)
+                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+            }
+
+            if (null != id)
+                return id;
+            else
+                throw new COMException("Specified instance doesnt implement the target event interface.");
+        }
+
+        /// <summary>
         /// Dispose all active event bridges
         /// </summary>
         public static void DisposeAll()
@@ -181,7 +218,6 @@ namespace NetOffice
             {
                 if (true == Settings.EnableEvents)
                 {
-                    //connectPoint.GetConnectionInterface(out _interfaceId);
                     _connectionPoint = connectPoint;
                     _connectionPoint.Advise(this, out _connectionCookie);
                     _pointList.Add(this);

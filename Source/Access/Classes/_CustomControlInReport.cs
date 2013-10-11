@@ -42,7 +42,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(_CustomControlInReport);
-                    
                 return _type;
             }
         }

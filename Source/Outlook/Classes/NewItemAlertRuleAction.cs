@@ -40,7 +40,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(NewItemAlertRuleAction);
-                    
                 return _type;
             }
         }

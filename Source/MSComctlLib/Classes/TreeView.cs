@@ -61,7 +61,6 @@ namespace NetOffice.MSComctlLibApi
             {
                 if (null == _type)
                     _type = typeof(TreeView);
-                    
                 return _type;
             }
         }

@@ -78,7 +78,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Application);
-                    
                 return _type;
             }
         }
@@ -985,7 +984,7 @@ namespace NetOffice.WordApi
 				return;
 	
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, ApplicationEvents2_SinkHelper.Id,ApplicationEvents3_SinkHelper.Id,ApplicationEvents4_SinkHelper.Id);
+				_activeSinkId = SinkHelper.GetConnectionPoint2(this, ref _connectPoint, ApplicationEvents2_SinkHelper.Id,ApplicationEvents3_SinkHelper.Id,ApplicationEvents4_SinkHelper.Id);
 
 
 			if(ApplicationEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))

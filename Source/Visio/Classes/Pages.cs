@@ -78,7 +78,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Pages);
-                    
                 return _type;
             }
         }

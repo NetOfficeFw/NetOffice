@@ -106,7 +106,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLLegendElement);
-                    
                 return _type;
             }
         }

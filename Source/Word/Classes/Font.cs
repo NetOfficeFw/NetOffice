@@ -40,7 +40,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(Font);
-                    
                 return _type;
             }
         }

@@ -47,7 +47,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(Rectangle);
-                    
                 return _type;
             }
         }

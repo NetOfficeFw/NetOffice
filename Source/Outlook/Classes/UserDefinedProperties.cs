@@ -40,7 +40,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(UserDefinedProperties);
-                    
                 return _type;
             }
         }

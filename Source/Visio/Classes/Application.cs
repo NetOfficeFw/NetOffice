@@ -147,7 +147,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Application);
-                    
                 return _type;
             }
         }

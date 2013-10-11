@@ -79,7 +79,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(OldHTMLDocument);
-                    
                 return _type;
             }
         }

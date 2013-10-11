@@ -40,7 +40,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLElementCollection);
-                    
                 return _type;
             }
         }

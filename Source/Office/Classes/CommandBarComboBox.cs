@@ -42,7 +42,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(CommandBarComboBox);
-                    
                 return _type;
             }
         }

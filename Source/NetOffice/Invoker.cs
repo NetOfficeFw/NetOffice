@@ -238,6 +238,232 @@ namespace NetOffice
 
         #endregion
 
+        #region Method (BindingFlags.InvokeMethod)
+
+        /// <summary>
+        /// perform method as latebind call without parameters 
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        public static void SingleMethod(COMObject comObject, string name)
+        {
+            SingleMethod(comObject, name, null);
+        }
+
+        /// <summary>
+        /// perform method as latebind call without parameters 
+        /// </summary>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of method</param>
+        public static void SingleMethod(object comObject, string name)
+        {
+            SingleMethod(comObject, name, null);
+        }
+
+        /// <summary>
+        /// perform method as latebind call with parameters
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        public static void SingleMethod(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with parameters
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static void SingleMethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with parameters 
+        /// </summary>
+        /// <param name="comObject">target proxy</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        public static void SingleMethod(object comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if ((comObject as COMObject).IsDisposed)
+                    throw new InvalidComObjectException();
+
+                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with parameters and parameter modifiers to use ref parameter(s)
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        public static void SingleMethod(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <returns>any return value</returns>
+        public static object SingleMethodReturn(COMObject comObject, string name)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
+        public static object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <returns>any return value</returns>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static object SingleMethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        /// <summary>
+        /// perform method as latebind call with return value
+        /// </summary>
+        /// <param name="comObject">target object</param>
+        /// <param name="name">name of method</param>
+        /// <param name="paramsArray">array with parameters</param>
+        /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
+        /// <returns>any return value</returns>
+        public static object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        {
+            try
+            {
+                if (comObject.IsDisposed)
+                    throw new InvalidComObjectException();
+
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                    throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
+
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                return returnValue;
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.WriteException(throwedException);
+                throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
+            }
+        }
+
+        #endregion
+
         #region Property
 
         /// <summary>

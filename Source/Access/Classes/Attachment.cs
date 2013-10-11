@@ -58,7 +58,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(Attachment);
-                    
                 return _type;
             }
         }

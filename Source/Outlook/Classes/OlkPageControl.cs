@@ -41,7 +41,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(OlkPageControl);
-                    
                 return _type;
             }
         }

@@ -45,7 +45,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Style);
-                    
                 return _type;
             }
         }

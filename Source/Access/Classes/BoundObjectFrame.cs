@@ -57,7 +57,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(BoundObjectFrame);
-                    
                 return _type;
             }
         }

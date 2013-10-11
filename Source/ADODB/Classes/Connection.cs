@@ -50,7 +50,6 @@ namespace NetOffice.ADODBApi
             {
                 if (null == _type)
                     _type = typeof(Connection);
-                    
                 return _type;
             }
         }

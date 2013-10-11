@@ -40,7 +40,6 @@ namespace NetOffice.WordApi
             {
                 if (null == _type)
                     _type = typeof(LetterContent);
-                    
                 return _type;
             }
         }

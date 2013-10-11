@@ -99,7 +99,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(FormOldV10);
-                    
                 return _type;
             }
         }

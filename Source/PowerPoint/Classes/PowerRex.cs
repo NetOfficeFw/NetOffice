@@ -40,7 +40,6 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(PowerRex);
-                    
                 return _type;
             }
         }

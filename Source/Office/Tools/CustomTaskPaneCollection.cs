@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPaneType">new child</param>
         /// <param name="title">title(caption) of the child</param>
-        public void Add(Type taskPaneType, string title = null)
+        public void Add(Type taskPaneType, string title)
         {
             InnerList.Add(new TaskPaneInfo(taskPaneType, title));  
         }

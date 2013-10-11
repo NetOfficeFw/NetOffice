@@ -40,7 +40,6 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(QueryDef);
-                    
                 return _type;
             }
         }

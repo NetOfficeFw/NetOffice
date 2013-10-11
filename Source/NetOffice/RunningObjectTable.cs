@@ -58,6 +58,12 @@ namespace NetOffice
                     // query com proxy info      
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
+                    if (null == comInstance)
+                    {
+                        if (bindInfo.GetType().IsCOMObject)
+                            Marshal.ReleaseComObject(bindInfo);
+                        continue;
+                    }
 
                     // get class name and component name
                     string name = TypeDescriptor.GetClassName(comInstance);
@@ -69,7 +75,8 @@ namespace NetOffice
 
                     if (componentNameEqual && classNameEqual)
                     {
-                        Marshal.ReleaseComObject(bindInfo);
+                        if (bindInfo.GetType().IsCOMObject)
+                            Marshal.ReleaseComObject(bindInfo);
                         return comInstance;
                     }
                     else
@@ -81,10 +88,15 @@ namespace NetOffice
                             return comInstance;
                         }
                         else
-                            Marshal.ReleaseComObject(comInstance);
+                        { 
+                            if (comInstance.GetType().IsCOMObject)
+                                Marshal.ReleaseComObject(comInstance);
+                        }
+                            
                     }
 
-                    Marshal.ReleaseComObject(bindInfo);
+                    if (bindInfo.GetType().IsCOMObject)
+                        Marshal.ReleaseComObject(bindInfo);
                 }
 
                 if (throwOnError)
@@ -136,6 +148,12 @@ namespace NetOffice
                     // query com proxy info      
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
+                    if (null == comInstance)
+                    {
+                        if (bindInfo.GetType().IsCOMObject)
+                            Marshal.ReleaseComObject(bindInfo);
+                        continue;
+                    }
 
                     // get class name and component name
                     string name = TypeDescriptor.GetClassName(comInstance);
@@ -157,10 +175,15 @@ namespace NetOffice
                             resultList.Add(comInstance);
                         }
                         else
-                            Marshal.ReleaseComObject(comInstance);
+                        { 
+                              if (comInstance.GetType().IsCOMObject)
+                                  Marshal.ReleaseComObject(comInstance);
+                        }
+                           
                     }
- 
-                    Marshal.ReleaseComObject(bindInfo);
+
+                    if (bindInfo.GetType().IsCOMObject)
+                        Marshal.ReleaseComObject(bindInfo);
                 }
 
                 return resultList;

@@ -81,7 +81,6 @@ namespace NetOffice.ExcelApi
             {
                 if (null == _type)
                     _type = typeof(Workbook);
-                    
                 return _type;
             }
         }

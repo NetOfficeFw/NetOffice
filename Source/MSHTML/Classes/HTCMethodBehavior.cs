@@ -40,7 +40,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTCMethodBehavior);
-                    
                 return _type;
             }
         }

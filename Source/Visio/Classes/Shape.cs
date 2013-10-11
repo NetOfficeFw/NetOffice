@@ -63,7 +63,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Shape);
-                    
                 return _type;
             }
         }

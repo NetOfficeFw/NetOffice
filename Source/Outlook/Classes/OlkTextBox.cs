@@ -54,7 +54,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(OlkTextBox);
-                    
                 return _type;
             }
         }

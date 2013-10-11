@@ -40,7 +40,6 @@ namespace NetOffice.OWC10Api
             {
                 if (null == _type)
                     _type = typeof(OfflineInfo);
-                    
                 return _type;
             }
         }

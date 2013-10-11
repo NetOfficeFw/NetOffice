@@ -54,7 +54,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(CommandButton);
-                    
                 return _type;
             }
         }

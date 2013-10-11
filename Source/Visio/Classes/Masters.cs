@@ -68,7 +68,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Masters);
-                    
                 return _type;
             }
         }

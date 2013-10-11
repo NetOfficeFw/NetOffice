@@ -40,7 +40,6 @@ namespace NetOffice.DAOApi
             {
                 if (null == _type)
                     _type = typeof(Index);
-                    
                 return _type;
             }
         }

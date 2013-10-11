@@ -106,7 +106,6 @@ namespace NetOffice.MSHTMLApi
             {
                 if (null == _type)
                     _type = typeof(HTMLTableCell);
-                    
                 return _type;
             }
         }

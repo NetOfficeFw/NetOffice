@@ -69,7 +69,7 @@ namespace NetOffice
         /// </summary>
         public static bool EnableProxyManagement
         {
-            get
+            get 
             {
                 return _enableProxyManagement;
             }
@@ -80,7 +80,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This option can be used to set the exception message
+        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This option can be used to set the top level exception message
         /// </summary>
         public static ExceptionMessageHandling UseExceptionMessage
         {
@@ -272,7 +272,6 @@ namespace NetOffice
             }
         }
 
-
         /// <summary>
         /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
         /// </summary>
@@ -305,7 +304,6 @@ namespace NetOffice
             }
         }
         
-
         #endregion
     }
 }

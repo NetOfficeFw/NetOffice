@@ -58,7 +58,6 @@ namespace NetOffice.VisioApi
             {
                 if (null == _type)
                     _type = typeof(Window);
-                    
                 return _type;
             }
         }

@@ -40,7 +40,6 @@ namespace NetOffice.OfficeApi
             {
                 if (null == _type)
                     _type = typeof(CustomXMLSchemaCollection);
-                    
                 return _type;
             }
         }

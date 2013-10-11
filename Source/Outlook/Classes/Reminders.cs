@@ -47,7 +47,6 @@ namespace NetOffice.OutlookApi
             {
                 if (null == _type)
                     _type = typeof(Reminders);
-                    
                 return _type;
             }
         }

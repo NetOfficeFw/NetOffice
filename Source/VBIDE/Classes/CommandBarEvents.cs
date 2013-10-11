@@ -42,7 +42,6 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(CommandBarEvents);
-                    
                 return _type;
             }
         }

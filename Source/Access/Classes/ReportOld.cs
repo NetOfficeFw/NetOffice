@@ -48,7 +48,6 @@ namespace NetOffice.AccessApi
             {
                 if (null == _type)
                     _type = typeof(ReportOld);
-                    
                 return _type;
             }
         }

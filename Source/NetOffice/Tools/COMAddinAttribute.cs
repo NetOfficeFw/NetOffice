@@ -58,6 +58,5 @@ namespace NetOffice.Tools
             LoadBehavior = loadBehavior;
             CommandLineSafe = commandLineSafe;
         }
-
     }
 }

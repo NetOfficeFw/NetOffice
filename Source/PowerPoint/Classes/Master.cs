@@ -41,7 +41,6 @@ namespace NetOffice.PowerPointApi
             {
                 if (null == _type)
                     _type = typeof(Master);
-                    
                 return _type;
             }
         }

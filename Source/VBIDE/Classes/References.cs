@@ -43,7 +43,6 @@ namespace NetOffice.VBIDEApi
             {
                 if (null == _type)
                     _type = typeof(References);
-                    
                 return _type;
             }
         }
