@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdminMessage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxAbout = new System.Windows.Forms.PictureBox();
@@ -56,10 +57,10 @@
             // 
             // pictureBoxAbout
             // 
-            this.pictureBoxAbout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxAbout.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAbout.Image")));
             this.pictureBoxAbout.Location = new System.Drawing.Point(32, 25);
             this.pictureBoxAbout.Name = "pictureBoxAbout";
-            this.pictureBoxAbout.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxAbout.Size = new System.Drawing.Size(33, 33);
             this.pictureBoxAbout.TabIndex = 9;
             this.pictureBoxAbout.TabStop = false;
             // 

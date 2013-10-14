@@ -5,9 +5,12 @@ using System.Text;
 
 namespace NOTools.ConsoleMonitor
 {
+    /// <summary>
+    /// Represents a single Channel View Item
+    /// </summary>
     internal class ChannelViewItem
     {
-                /// <summary>
+        /// <summary>
         /// Creates an instance of the class
         /// </summary>
         /// unique name of the display channel

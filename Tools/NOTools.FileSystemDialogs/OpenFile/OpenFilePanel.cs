@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Custom OpenFile dialog as usercontrol
+    /// </summary>
     [Designer(typeof(OpenFilePanelDesigner)), ToolboxBitmap(typeof(OpenFileDialog)), Description("Custom OpenFile dialog as usercontrol.")]
     public partial class OpenFilePanel : UserControl
     {
@@ -159,6 +162,11 @@ namespace NOTools.FileSystemDialogs
           
         internal void ShowAll()
         {
+            if (!IsAlreadyLoaded && !IsInDesignMode)
+            { 
+                return;
+            }
+            Console.WriteLine("ShowAll");
             bool[] expanded = GetExpandedStates();
             TreeNode node = TryGetCurrentSelectedRootNode();
             ClearView();
@@ -1208,7 +1216,7 @@ namespace NOTools.FileSystemDialogs
 
         private void MiscSettings_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            ApplyMiscSettings(e.PropertyName);
+             ApplyMiscSettings(e.PropertyName);
         }
 
         private void DefaultableSettings_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -1223,6 +1231,7 @@ namespace NOTools.FileSystemDialogs
         private void OpenFilePanel_Load(object sender, EventArgs e)
         {
             IsAlreadyLoaded = true;
+            ShowAll();
         }
 
         private void OpenFilePanel_Resize(object sender, EventArgs e)
@@ -1434,6 +1443,8 @@ namespace NOTools.FileSystemDialogs
 
         private void comboBoxFileTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!IsInDesignMode && !IsAlreadyLoaded)
+                return;
             Misc.CurrentFilter = comboBoxFileTypes.SelectedItem as FileFilterItem;
             if (null != TreeView1.SelectedNode)
             {

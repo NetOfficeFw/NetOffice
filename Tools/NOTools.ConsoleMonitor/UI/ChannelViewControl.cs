@@ -9,8 +9,13 @@ using System.Windows.Forms;
 
 namespace NOTools.ConsoleMonitor
 {
+    /// <summary>
+    /// Control to display incoming channel messages
+    /// </summary>
     public partial class ChannelViewControl : UserControl, IApplicationControl
     {
+        #region Ctor
+
         public ChannelViewControl()
         {
             InitializeComponent();
@@ -24,6 +29,8 @@ namespace NOTools.ConsoleMonitor
             Items = new ChannelViewItemCollection();
             ControlName = consoleName;
         }
+
+        #endregion
 
         #region Properties
 

@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace NOTools.ConsoleMonitor
 {
+    /// <summary>
+    /// Represents a Console
+    /// </summary>
     public partial class ConsoleViewControl : UserControl, IApplicationControl
     {
         #region Ctor
@@ -44,9 +47,6 @@ namespace NOTools.ConsoleMonitor
 
         #region Properties
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string ControlName { get; private set; }
 
         public IApplicationHost Host { get; internal set; }

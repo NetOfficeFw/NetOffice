@@ -6,7 +6,7 @@ using System.Text;
 namespace NOTools.ConsoleMonitor
 {
     /// <summary>
-    /// 
+    /// ChannelViewControl Helper to collect channel notifications
     /// </summary>
     internal class ChannelViewItemCollection : List<ChannelViewItem>
     {
@@ -20,6 +20,11 @@ namespace NOTools.ConsoleMonitor
         
         #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Clears the Collection
+        /// </summary>
         public new void Clear()
         {
             _idCounter = 0;
@@ -80,5 +85,7 @@ namespace NOTools.ConsoleMonitor
             Add(newItem);
             return _idCounter.ToString();
         }
+
+        #endregion
     }
 }
