@@ -38,6 +38,7 @@ namespace NetOffice.OutlookApi.Tools
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
             Type = this.GetType();
+            Tweaks.EnableTweaks(Type, "Outlook");
         }
 
         #endregion
@@ -140,7 +141,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnStartupComplete, exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
 
@@ -154,7 +155,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnDisconnection, exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
             }
         }
 
@@ -168,7 +169,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnConnection, exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
             }
         }
 
@@ -182,7 +183,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnAddInsUpdate, exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
 
@@ -196,7 +197,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnBeginShutdown, exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
             }
         }
 
@@ -297,7 +298,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.GetCustomUI, exception);
+                OnError(ErrorMethodKind.GetCustomUI, exception);
 				return string.Empty;
             } 
         }
@@ -345,7 +346,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.CTPFactoryAvailable, exception);
+                OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
         }
 
@@ -367,15 +368,13 @@ namespace NetOffice.OutlookApi.Tools
         }
 
         /// <summary>
-        /// redirect to errorhandler method if exists
+        /// Custom error handler
         /// </summary>
-	    /// <param name="methodKind">origin method where the error comes from</param>
+        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private void RaiseErrorHandlerMethod(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
         {
-            MethodInfo errorMethod = AttributeHelper.GetErrorMethod(this);
-            if (null != errorMethod)
-                errorMethod.Invoke(this, new object[] { methodKind, exception });
+
         }
         
         #endregion

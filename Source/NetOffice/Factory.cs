@@ -551,7 +551,6 @@ namespace NetOffice
                 }
 
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
-
                 string className = TypeDescriptor.GetClassName(comProxy);
                 string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
@@ -978,7 +977,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comProxy"></param>
         /// <returns></returns>
-        private static Guid GetParentLibraryGuid(object comProxy)
+        public static Guid GetParentLibraryGuid(object comProxy)
         {
             IDispatch dispatcher = comProxy as IDispatch;
             COMTypes.ITypeInfo typeInfo = dispatcher.GetTypeInfo(0, 0);

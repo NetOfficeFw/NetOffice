@@ -92,6 +92,8 @@
     <Compile Include="Tools\RegisterErrorHandlerAttribute.cs" />
     <Compile Include="Tools\RegisterFunctionAttribute.cs" />
     <Compile Include="Tools\RegistryLocationAttribute.cs" />
+    <Compile Include="Tools\TweakAttribute.cs" />
+    <Compile Include="Tools\Tweaks.cs" />
     <Compile Include="Tools\UnRegisterFunctionAttribute.cs" />
     <Compile Include="CacheOptions.cs" />
     <Compile Include="DebugConsole.cs" />

@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnStartupComplete, exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
 
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnDisconnection, exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
             }
         }
 
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnConnection, exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
             }
         }
 
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnAddInsUpdate, exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
 
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (NetRunTimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.OnBeginShutdown, exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
             }
         }
 
@@ -210,6 +210,13 @@ namespace NetOffice.OfficeApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
+            if (AttributeHelper.GetTweakAttribute(Type).Enabled == true)
+            {
+                string registryEndPoint = TryDetectHostRegistryKey(Application);
+                if(null != registryEndPoint)
+                    Tweaks.EnableTweaks(Type, registryEndPoint);
+            }             
+
 			this.Application = NetOffice.Factory.CreateObjectFromComProxy(null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
@@ -296,7 +303,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.GetCustomUI, exception);
+                OnError(ErrorMethodKind.GetCustomUI, exception);
 				return string.Empty;
             } 
         }
@@ -345,7 +352,7 @@ namespace NetOffice.OfficeApi.Tools
             catch (System.Exception exception)
             {
 				NetOffice.DebugConsole.WriteException(exception);
-                RaiseErrorHandlerMethod(ErrorMethodKind.CTPFactoryAvailable, exception);
+                OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
         }
 
@@ -367,15 +374,13 @@ namespace NetOffice.OfficeApi.Tools
         }
 
         /// <summary>
-        /// redirect to errorhandler method if exists
+        /// Custom error handler
         /// </summary>
-	    /// <param name="methodKind">origin method where the error comes from</param>
+        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private void RaiseErrorHandlerMethod(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
         {
-            MethodInfo errorMethod = AttributeHelper.GetErrorMethod(this);
-            if (null != errorMethod)
-                errorMethod.Invoke(this, new object[] { methodKind, exception });
+
         }
         
         #endregion
@@ -568,6 +573,38 @@ namespace NetOffice.OfficeApi.Tools
             textStreamReader.Close();
             return text;
         }
+
+        /// <summary>
+        /// Try to detect the registry end for the current loaded host application(unkown)
+        /// </summary>
+        /// <param name="applicationProxy">application proy</param>
+        /// <returns>Application name or null if failed</returns>
+        private static string TryDetectHostRegistryKey(object applicationProxy)
+        {
+            Guid libGuid = Factory.GetParentLibraryGuid(applicationProxy);
+            if (Guid.Empty == libGuid)
+                return null;
+            string stringGuid = libGuid.ToString();
+
+            switch (stringGuid)
+            {
+                case "00020813-0000-0000-C000-000000000046":
+                    return "Excel";
+                case "00020905-0000-0000-C000-000000000046":
+                    return "Word";
+                case "00062FFF-0000-0000-C000-000000000046":
+                    return "Outlook";
+                case "91493440-5A91-11CF-8700-00AA0060263B":
+                    return "PowerPoint";
+                case "4AFFC9A0-5F99-101B-AF4E-00AA003F0F07":
+                    return "Access";
+                case "A7107640-94DF-1068-855E-00DD01075445":
+                    return "MSProject";
+                default:
+                    return null;
+            }
+        }
+
 
         #endregion
     }
