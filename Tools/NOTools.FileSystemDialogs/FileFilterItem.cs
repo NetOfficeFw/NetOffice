@@ -5,6 +5,9 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Represents an available filter in the file type combo box
+    /// </summary>
     internal class FileFilterItem
     {
         internal FileFilterItem(string name, string filter)
@@ -13,10 +16,22 @@ namespace NOTools.FileSystemDialogs
             Filter = filter;
         }
 
+        /// <summary>
+        /// The first argument
+        /// </summary>
         public string Name { get; private set; }
+
+        /// <summary>
+        /// The second argument
+        /// </summary>
         public string Filter { get; private set; }
 
-        public static FileFilterItem[] CreateFromFilterString(string filterString)
+         /// <summary>
+         /// Creates a filterfilter array from string
+         /// </summary>
+         /// <param name="filterString">given string as any</param>
+         /// <returns>new created array</returns>
+        internal static FileFilterItem[] CreateFromFilterString(string filterString)
         {
             if (String.IsNullOrWhiteSpace(filterString))
                 return new FileFilterItem[1] { new FileFilterItem("", "*.*") };

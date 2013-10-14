@@ -11,14 +11,21 @@ namespace NOTools.FileSystemDialogs
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class DesktopSettings : DefaultableSettings
     {
+        #region Ctor
+
         internal DesktopSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
-        {
-            
+        {            
         }
+        
+        #endregion
+
+        #region Override
 
         public override string ToString()
         {
             return "Desktop";
         }
+
+        #endregion
     }
 }

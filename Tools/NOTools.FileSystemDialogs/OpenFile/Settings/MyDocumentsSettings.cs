@@ -11,10 +11,14 @@ namespace NOTools.FileSystemDialogs
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MyDocumentsSettings : DefaultableSettings
     {
-        public MyDocumentsSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
+        #region Ctor
+        
+        internal MyDocumentsSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
         {
           
         }
+
+        #endregion
 
         #region Overrides
 

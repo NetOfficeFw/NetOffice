@@ -15,6 +15,8 @@ namespace NOTools.FileSystemDialogs
     /// <typeparam name="TValue">value</typeparam>
     public class PropertyBagCollection<TValue> : Dictionary<string, TValue>
     {
+        #region Ctor
+        
         /// <summary>
         /// Creates am instance of the class
         /// </summary>
@@ -28,13 +30,17 @@ namespace NOTools.FileSystemDialogs
                     this[item.Key] = item.Value;
         }
 
+        #endregion
+
+        #region Properties
+
         /// <summary>
         /// Target default valaue
         /// </summary>
         internal TValue DefaultValue { get; set; }
 
         /// <summary>
-        /// 
+        /// Atached PropertyChanged Event
         /// </summary>
         internal PropertyChangedHandler PropertyChangedHandler { get; set; }
 
@@ -60,5 +66,7 @@ namespace NOTools.FileSystemDialogs
                     PropertyChangedHandler(key);
             }
         }
+
+        #endregion
     }
 }

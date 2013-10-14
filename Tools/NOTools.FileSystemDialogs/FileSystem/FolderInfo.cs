@@ -6,12 +6,20 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// FolderItem
+    /// </summary>
     public class FolderInfo : FileSystemInfo
     {
-        internal FolderInfo(FileSystemManager parent, string name, string path, bool loadDirectories = false, bool loadFiles = false)
-            : base(parent, name, path, loadDirectories, loadFiles)
+        #region Ctor
+
+        internal FolderInfo(FileSystemManager parent, string name, string path, bool loadDirectories = false, bool loadFiles = false) : base(parent, name, path, loadDirectories, loadFiles)
         {
         }
+
+        #endregion
+
+        #region Overrides
 
         public override bool Exists
         {
@@ -130,5 +138,8 @@ namespace NOTools.FileSystemDialogs
                 IsDirectoriesLoaded = true;
             }
         }
+
+        #endregion
+
     }
 }

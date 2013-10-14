@@ -12,10 +12,16 @@ namespace NOTools.FileSystemDialogs
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MyComputerSettings : DefaultableSettings
     {
-        public MyComputerSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
+        #region Ctor
+
+        internal MyComputerSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
         {
             DerivedPropertyBag = new PropertyBagCollection<bool>(true, RaisePropertyChanged);
         }
+
+        #endregion
+
+        #region Properties
 
         [Category("Drives"), Description("Get or set unready drives are visible.")]
         public bool ShowUnreadyDrives
@@ -77,6 +83,10 @@ namespace NOTools.FileSystemDialogs
         /// Dynamic property bag to hold property values
         /// </summary>
         private PropertyBagCollection<bool> DerivedPropertyBag { get; set; }
+        
+        #endregion
+
+        #region Methods
 
         private bool IsAllowedDrive(DrvInfo drive)
         {
@@ -103,6 +113,10 @@ namespace NOTools.FileSystemDialogs
                     throw new ArgumentOutOfRangeException("DriveType");
             }
         }
+
+        #endregion
+
+        #region Overrides
 
         public override bool HasAllowedSubFolders(FileSystemInfo fsInfo)
         {
@@ -140,5 +154,7 @@ namespace NOTools.FileSystemDialogs
         {
             return "MyComputer";
         }
+
+        #endregion
     }
 }

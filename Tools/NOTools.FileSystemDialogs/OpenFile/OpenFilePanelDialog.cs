@@ -9,8 +9,13 @@ using System.Windows.Forms;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// OpenFilePanel Wrapper Dialog
+    /// </summary>
     public partial class OpenFilePanelDialog : Form
     {
+        #region Ctor
+        
         public OpenFilePanelDialog()
         {
             InitializeComponent();
@@ -21,6 +26,13 @@ namespace NOTools.FileSystemDialogs
             InitializeComponent();
         }
 
+        #endregion
+        
+        #region Properties
+
+        /// <summary>
+        /// Inner wrapped panel
+        /// </summary>
         public OpenFilePanel Panel
         {
             get
@@ -29,6 +41,9 @@ namespace NOTools.FileSystemDialogs
             }
         }
 
+        /// <summary>
+        /// Filter(for example "All(*.*)|*.*")
+        /// </summary>
         public string FileFilter
         {
             get
@@ -41,6 +56,9 @@ namespace NOTools.FileSystemDialogs
             }
         }
 
+        /// <summary>
+        /// User selected file
+        /// </summary>
         public string SelectedFile
         {
             get
@@ -49,6 +67,9 @@ namespace NOTools.FileSystemDialogs
             }
         }
 
+        /// <summary>
+        /// User selected files (if multiselect allowed)
+        /// </summary>
         public string[] SelectedFiles
         {
             get
@@ -57,6 +78,17 @@ namespace NOTools.FileSystemDialogs
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Simple static Show method for easy use
+        /// </summary>
+        /// <param name="parent">parent window</param>
+        /// <param name="fileFilter">file filter (for example "All(*.*)|*.*")</param>
+        /// <param name="language">additional language setting</param>
+        /// <returns>Dialog result Ok Or Cancel with selected file</returns>
         public static StaticOpenFilePanelDialogResult Show(IWin32Window parent, string fileFilter,OpenFilePanelDialogLanguage language = OpenFilePanelDialogLanguage.English)
         {
             if (null == parent)
@@ -77,6 +109,10 @@ namespace NOTools.FileSystemDialogs
                 InnerOpenFilePanel.Localization.Set1031Default(this, new EventArgs());
             }
         }
+
+        #endregion
+
+        #region Trigger
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
@@ -100,5 +136,7 @@ namespace NOTools.FileSystemDialogs
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        #endregion
     }
 }

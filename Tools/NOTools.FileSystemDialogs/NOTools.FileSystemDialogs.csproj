@@ -85,8 +85,6 @@
     <Compile Include="OpenFile\Settings\SpecialFoldersSettings.cs" />
     <Compile Include="OpenFile\Settings\TemplateFoldersSettings.cs" />
     <Compile Include="FileSystem\SpecialFolderRoot.cs" />
-    <Compile Include="FileSystem\SpecialFolderInfo.cs" />
-    <Compile Include="FileSystem\TemplateFolderInfo.cs" />
     <Compile Include="FileSystem\TemplateFolderRoot.cs" />
     <Compile Include="Win32.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -95,7 +93,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="PropertyBagCollection.cs" />
-    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="OpenFile\OpenFilePanelDialog.resx">

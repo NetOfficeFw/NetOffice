@@ -8,9 +8,18 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Designtime helper to the IDE
+    /// </summary>
     internal class OpenFilePanelDesigner : ControlDesigner
     {
+        #region Fields
+
         private OpenFilePanel _panel;
+        
+        #endregion
+
+        #region Overrides
 
         public override void Initialize(IComponent component)
         {
@@ -31,6 +40,10 @@ namespace NOTools.FileSystemDialogs
                 return verbs;
             }
         }
+
+        #endregion
+
+        #region Methods
 
         private void Set1033Default(object sender, System.EventArgs e)
         {
@@ -65,5 +78,7 @@ namespace NOTools.FileSystemDialogs
                 transaction.Commit();
            }
         }
+
+        #endregion
     }
 }

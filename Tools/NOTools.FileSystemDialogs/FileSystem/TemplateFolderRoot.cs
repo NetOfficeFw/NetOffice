@@ -5,8 +5,13 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// TemplateFolders Collection Item
+    /// </summary>
     internal class TemplateFolderRoot : FileSystemInfo
     {
+        #region Ctor
+        
         internal TemplateFolderRoot(FileSystemManager parent, string name, string path, TemplateFolderDescription[] description, bool loadDirectories = false, bool loadFiles = false)  : base(parent, name, path, loadDirectories, loadFiles)
         {
             if (null != description)
@@ -15,7 +20,18 @@ namespace NOTools.FileSystemDialogs
                 Description = new TemplateFolderDescription[0];
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Source Definition
+        /// </summary>
         internal TemplateFolderDescription[] Description { get; private set; }
+
+        #endregion
+
+        #region Overrides
 
         public override bool Exists
         {
@@ -81,5 +97,7 @@ namespace NOTools.FileSystemDialogs
                 IsDirectoriesLoaded = true;
             }
         }
+     
+        #endregion
     }
 }

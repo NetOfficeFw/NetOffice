@@ -6,8 +6,13 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Descripton Item for a custom folder
+    /// </summary>
     public class TemplateFolderDescription
     {
+        #region Ctor
+        
         public TemplateFolderDescription()
         { 
         }
@@ -18,7 +23,10 @@ namespace NOTools.FileSystemDialogs
             Path = path;
         }
 
+        #endregion
 
+        #region Overrides
+        
         [DisplayName("Name"), Category("Default"), Description("The shown display name.")]
         public string DisplayName { get; set; }
 
@@ -27,6 +35,10 @@ namespace NOTools.FileSystemDialogs
 
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         internal TemplateFolderDescriptionCollection Parent { get; set; }
+    
+        #endregion
+
+        #region Overrides
 
         public override string ToString()
         {
@@ -35,5 +47,7 @@ namespace NOTools.FileSystemDialogs
             else
                 return "TemplateFolderDescription";
         }
+
+        #endregion
     }
 }

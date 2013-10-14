@@ -5,12 +5,19 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    ///  SelectionChanged event arguments
+    /// </summary>
     public class SelectionChangedEventArgs : EventArgs
     {
         internal SelectionChangedEventArgs(string[] files)
         {
             Files = files;
         }
+
+        /// <summary>
+        /// User selected files
+        /// </summary>
         public string[] Files { get; private set; }
     }
 

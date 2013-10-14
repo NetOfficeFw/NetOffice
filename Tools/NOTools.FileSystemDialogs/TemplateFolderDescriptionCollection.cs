@@ -6,15 +6,24 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// TemplateFolderDescription Colllection Parent
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class TemplateFolderDescriptionCollection : BindingList<TemplateFolderDescription> , INotifyPropertyChanged
     {
+        #region Ctor
+
         public TemplateFolderDescriptionCollection(PropertyChangedEventHandler eventHandler = null)
         {
             base.RaiseListChangedEvents = true;
             if (null != eventHandler)
                 PropertyChanged += eventHandler;
         }
+
+        #endregion
+
+        #region Overrides
 
         protected override void OnListChanged(ListChangedEventArgs e)
         {
@@ -81,7 +90,10 @@ namespace NOTools.FileSystemDialogs
         {
             return String.Format("{0} Items", Count);
         }
+        #endregion
 
+        #region INotifyPropertyChanged
+        
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -90,5 +102,7 @@ namespace NOTools.FileSystemDialogs
             if (null != PropertyChanged)
                 PropertyChanged(this, new PropertyChangedEventArgs(""));
         }
+
+        #endregion
     }
 }

@@ -7,8 +7,13 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Represents an Item in local filesystem
+    /// </summary>
     public abstract class FileSystemInfo
     {
+        #region Ctor
+        
         internal FileSystemInfo(FileSystemManager parent, string name, string path, bool loadDirectories = false, bool loadFiles = false)
         {
             Parent = parent;
@@ -22,6 +27,10 @@ namespace NOTools.FileSystemDialogs
             if (loadFiles)
                 LoadFiles();
         }
+
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// Parent FileSystemManager instance
@@ -44,15 +53,18 @@ namespace NOTools.FileSystemDialogs
         public abstract bool Exists { get; }
 
         /// <summary>
-        /// Returns the instance is already loaded from the filesystem
+        /// Returns the instance has already loaded folders from the filesystem
         /// </summary>
         public abstract bool IsDirectoriesLoaded { get; internal set; }
 
         /// <summary>
-        /// Returns the instance is already loaded from the filesystem
+        /// Returns the instance has already loaded files from the filesystem
         /// </summary>
         public abstract bool IsFilesLoaded { get; internal set; }
 
+        /// <summary>
+        /// Returns the instance has already loaded drives from the filesystem
+        /// </summary>
         public abstract bool IsDrivesLoaded { get; internal set; }
 
         /// <summary>
@@ -76,28 +88,16 @@ namespace NOTools.FileSystemDialogs
         /// </summary>
         public virtual bool HasErrors { get; internal set; }
 
-        /// <summary>
-        /// Returns the instance has an own display image
-        /// </summary>
-        public virtual bool SupportsDisplayImage { get; internal set; }
 
         /// <summary>
-        /// Display Image(16x16) (if SupportsDisplayImage is okay)
+        /// Drives if exists
         /// </summary>
-        public virtual Icon DisplayImageSmall { get; internal set; }
-
-        /// <summary>
-        /// Display Image(32x32) (if SupportsDisplayImage is okay)
-        /// </summary>
-        public virtual Icon DisplayImageLarge { get; internal set; }
-
-
         public DrvInfo[] Drives
         {
             get
             {
                 //if (!IsDrivesLoaded)
-                    LoadDrives();
+                LoadDrives();
                 return _drives;
             }
             internal set
@@ -115,7 +115,7 @@ namespace NOTools.FileSystemDialogs
             get
             {
                 //if (!IsDirectoriesLoaded)
-                    LoadDirectories();
+                LoadDirectories();
                 return _directories;
             }
             internal set
@@ -133,7 +133,7 @@ namespace NOTools.FileSystemDialogs
             get
             {
                 //if (!IsFilesLoaded)
-                    LoadFiles();
+                LoadFiles();
                 return _files;
             }
             internal set
@@ -173,96 +173,25 @@ namespace NOTools.FileSystemDialogs
             }
         }
 
+        #endregion
+
+        #region Methods
+
         /// <summary>
-        /// Load or reload infos from filesystem
+        /// Load or reload files from filesystem
         /// </summary>
         public abstract void LoadFiles();
 
         /// <summary>
-        /// Load or reload infos from filesystem
+        /// Load or reload folders from filesystem
         /// </summary>
         public abstract void LoadDirectories();
 
+        /// <summary>
+        ///  Load or reload drives from filesystem
+        /// </summary>
         public abstract void LoadDrives();
 
-        //protected virtual bool HasFiles
-        //{
-        //    get
-        //    {
-        //        if (!IsLoaded)
-        //            RefreshFiles();
-        //        return Files.Count() > 0;
-        //    }
-        //}
-
-        //protected virtual bool HasDirectories
-        //{
-        //    get
-        //    {
-        //        if (!IsLoaded)
-        //            RefreshDirectories();
-        //        return Directories.Count() > 0;
-        //    }
-        //}
-
-        //{
-        //    get 
-        //    {
-        //        return Directory.Exists(Path);
-        //    }
-        //}
-        //internal string Name
-        //{
-        //    get
-        //    {
-        //        string result = System.IO.Path.GetDirectoryName(Path);
-        //        if (null != result)
-        //            return result;
-
-        //        result = Path;
-        //        if (result.EndsWith("\\", StringComparison.InvariantCultureIgnoreCase))
-        //            result = result.Substring(0, result.Length - 1);
-
-        //        return result;
-        //    }
-        //}
-
-
-        //public virtual void RefreshDirectories()
-        //{
-
-        //}
-
-        //public virtual void RefreshFiles()
-        //{ 
-
-        //}
-
-        //public virtual void Refresh()
-        //{
-        //    try
-        //    {
-        //        if (Exists)
-        //        {
-        //            DirectoryInfo dirInfo = new DirectoryInfo(Path); 
-        //            Directories = dirInfo.GetDirectories("*.*", SearchOption.TopDirectoryOnly);
-        //            Files = dirInfo.GetFiles(String.IsNullOrWhiteSpace(Parent.FileSearchPattern) != true ? Parent.FileSearchPattern : "*.*", SearchOption.TopDirectoryOnly);
-        //        }
-        //        else 
-        //        {
-        //            Directories = new DirectoryInfo[0];
-        //            Files = new FileInfo[0];
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        IsLoaded = true;
-        //    }
-        //}
+        #endregion
     }
 }

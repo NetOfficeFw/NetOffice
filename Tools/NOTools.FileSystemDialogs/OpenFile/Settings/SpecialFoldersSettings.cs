@@ -10,12 +10,16 @@ namespace NOTools.FileSystemDialogs
     /// </summary>
     public class SpecialFoldersSettings : DefaultableSettings
     {
-        public SpecialFoldersSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
+        #region Ctor
+        
+        internal SpecialFoldersSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
         {
             DontFireEvents = true;
             PropertyBag.Add("Visible", DefaultBoolean.False);
             DontFireEvents = false;
         }
+
+        #endregion
 
         #region Overrides
 

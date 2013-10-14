@@ -5,7 +5,10 @@ using System.Linq;
 using System.Text;
 
 namespace NOTools.FileSystemDialogs
-{
+{ 
+    /// <summary>
+    /// win32 helper to resolve volume labels
+    /// </summary>
     static class Win32
     {
         [Flags]

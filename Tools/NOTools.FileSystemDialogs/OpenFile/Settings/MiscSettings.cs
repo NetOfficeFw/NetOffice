@@ -11,11 +11,17 @@ namespace NOTools.FileSystemDialogs
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class MiscSettings : INotifyPropertyChanged
     {
-        public MiscSettings(PropertyChangedEventHandler eventHandler = null)
+        #region Ctor
+        
+        internal MiscSettings(PropertyChangedEventHandler eventHandler = null)
         {
             if (null != eventHandler)
                 this.InternalPropertyChanged += eventHandler;
         }
+
+        #endregion
+
+        #region Properties
 
         [Category("Misc"), Description("Get or set a message box appears and askt the user to confirm a delete action.")]
         public bool AskBeforeDelete
@@ -115,7 +121,6 @@ namespace NOTools.FileSystemDialogs
         }
         private int _categoryPanelWidth;
 
-
         [Category("Misc"), Description("File extenstion filter. identically to the windowsforms openfiledialog.")]
         [RefreshProperties(RefreshProperties.All)]
         public string FileFilter
@@ -140,7 +145,14 @@ namespace NOTools.FileSystemDialogs
         }
         private FileFilterItem[] _filters;
 
+        /// <summary>
+        /// Available Filters
+        /// </summary>
         internal FileFilterItem CurrentFilter { get; set; }
+     
+        #endregion
+
+        #region Methods
 
         internal void SetSelectedCategory(RootCategory category)
         {
@@ -178,6 +190,8 @@ namespace NOTools.FileSystemDialogs
             RaisePropertyChanged("SelectedFiles");
             RaisePropertyChanged("SelectedFile");
         }
+
+        #endregion
 
         #region INotifyPropertyChanged
 

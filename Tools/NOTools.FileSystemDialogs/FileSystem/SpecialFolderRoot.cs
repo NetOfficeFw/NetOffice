@@ -5,11 +5,20 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// SpecialFolders Collection Item
+    /// </summary>
     internal class SpecialFolderRoot : FileSystemInfo
     {
+        #region Ctor
+
         internal SpecialFolderRoot(FileSystemManager parent, string name, string path, bool loadDirectories = false, bool loadFiles = false) : base(parent, name, path, loadDirectories, loadFiles)
         {
         }
+
+        #endregion
+
+        #region Overrides
 
         public override bool Exists
         {
@@ -77,5 +86,7 @@ namespace NOTools.FileSystemDialogs
                 IsDirectoriesLoaded = true;
             }
         }
+
+        #endregion
     }
 }

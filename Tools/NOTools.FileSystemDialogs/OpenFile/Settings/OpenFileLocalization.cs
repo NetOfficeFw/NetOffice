@@ -6,6 +6,9 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// OpenFilePanel Localization 
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class OpenFileLocalization : INotifyPropertyChanged
     {

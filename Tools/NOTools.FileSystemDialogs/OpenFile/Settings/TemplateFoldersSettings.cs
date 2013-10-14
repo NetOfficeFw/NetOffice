@@ -10,7 +10,9 @@ namespace NOTools.FileSystemDialogs
     /// </summary>
     public class TemplateFoldersSettings : DefaultableSettings
     {
-        public TemplateFoldersSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
+        #region Ctor
+        
+        internal TemplateFoldersSettings(DefaultSettings defaultSettings, PropertyChangedEventHandler eventHandler = null) : base(defaultSettings, eventHandler)
         {
             FolderTemplates = new TemplateFolderDescriptionCollection();
             DontFireEvents = true;
@@ -18,8 +20,14 @@ namespace NOTools.FileSystemDialogs
             DontFireEvents = false;
         }
 
+        #endregion
+
+        #region Properties
+
         [DisplayName("Custom Folders"), Description("Allows to add custom folders."), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public TemplateFolderDescriptionCollection FolderTemplates { get; private set; }
+
+        #endregion
 
         #region Overrides
 

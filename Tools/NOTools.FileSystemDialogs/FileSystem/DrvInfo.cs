@@ -6,19 +6,38 @@ using System.Text;
 
 namespace NOTools.FileSystemDialogs
 {
+    /// <summary>
+    /// Drive Item
+    /// </summary>
     public class DrvInfo : FileSystemInfo
     {
+        #region Ctor
+
         internal DrvInfo(FileSystemManager parent, string name, string label, string path, DriveType type, bool isReady, bool loadDirectories = false, bool loadFiles = false) : base(parent, name, path, loadDirectories, loadFiles)
         {
             Type = type;
             Label = label;
             IsReady = isReady;
         }
+     
+        #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Drive type
+        /// </summary>
         public DriveType Type { get; private set; }
 
+        /// <summary>
+        /// Volume Label
+        /// </summary>
         public string Label { get; internal set; }
-       
+
+        #endregion
+
+        #region Overrides
+        
         public override bool IsReady { get; internal set; }
 
         public override bool Exists
@@ -139,6 +158,7 @@ namespace NOTools.FileSystemDialogs
                 IsDirectoriesLoaded = true;
             }
         }
-    }
 
+        #endregion
+    }
 }
