@@ -1,0 +1,9 @@
+﻿%Usings%
+namespace %Namespace%
+{
+	public class %Name% %Interfaces%
+	{
+%Properties%
+%Methods%
+	}
+}
