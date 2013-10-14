@@ -31,9 +31,9 @@ Partial Class SampleControl
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(20, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 13)
+        Me.Label1.Size = New System.Drawing.Size(142, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "This is a sample control(VB)"
+        Me.Label1.Text = "NOToolsMain.ExcelAddinVB"
         '
         'Button1
         '

@@ -118,6 +118,7 @@
             // 
             this.labelRunningInstances.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelRunningInstances.AutoSize = true;
+            this.labelRunningInstances.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelRunningInstances.ForeColor = System.Drawing.Color.Red;
             this.labelRunningInstances.Location = new System.Drawing.Point(412, 8);
             this.labelRunningInstances.Name = "labelRunningInstances";
@@ -125,6 +126,7 @@
             this.labelRunningInstances.TabIndex = 9;
             this.labelRunningInstances.Text = "Warning: one or more office application is running";
             this.labelRunningInstances.Visible = false;
+            this.labelRunningInstances.Click += new System.EventHandler(this.labelRunningInstances_Click);
             // 
             // checkBoxExcel
             // 
@@ -223,6 +225,7 @@
             this.Controls.Add(this.listViewResults);
             this.Controls.Add(this.buttonTest);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NetOffice Host for test applications";
             this.ResumeLayout(false);
             this.PerformLayout();

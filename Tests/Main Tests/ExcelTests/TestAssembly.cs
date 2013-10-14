@@ -34,6 +34,7 @@ namespace ExcelTestsCSharp
             if (null == _listPackages)
             {
                 NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console;
+                NetOffice.DebugConsole.EnableSharedOutput = true;
 
                 _listPackages = new List<ITestPackage>();
                 _listPackages.Add(new Test01());

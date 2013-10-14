@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ExcelAddinCSharp
 {
-    public partial class SampleControl : UserControl
+    public partial class SampleControl : UserControl, NetOffice.ExcelApi.Tools.ITaskPane
     {
         public SampleControl()
         {
@@ -19,6 +19,17 @@ namespace ExcelAddinCSharp
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello");
+        }
+
+        void NetOffice.ExcelApi.Tools.ITaskPane.OnConnection(NetOffice.ExcelApi.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments)
+        {
+            TestAddin addin = customArguments[0] as TestAddin;
+            addin.TaskPaneOkay = true;
+        }
+
+        void NetOffice.ExcelApi.Tools.ITaskPane.OnDisconnection()
+        {
+             
         }
     }
 }

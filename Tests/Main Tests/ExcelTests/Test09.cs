@@ -45,24 +45,24 @@ namespace ExcelTestsCSharp
                 application.Workbooks.Add();
                 Excel.Worksheet sheet = application.Workbooks[1].Sheets[1] as Excel.Worksheet;
 
-                Office.COMAddIn addin = (from a in application.COMAddIns where a.ProgId == "ExcelAddinCSharp.TestAddin" select a).FirstOrDefault();
+                Office.COMAddIn addin = (from a in application.COMAddIns where a.ProgId == "NOTestsMain.ExcelTestAddinCSharp" select a).FirstOrDefault();
                 if(null == addin)
-                    return new TestResult(false, DateTime.Now.Subtract(startTime), "COMAddin ExcelAddinCSharp.TestAddin not found.", null, "");
+                    return new TestResult(false, DateTime.Now.Subtract(startTime), "NOTestsMain.ExcelTestAddinCSharp not found.", null, "");
 
-                bool ribbonIsOkay = false;
-                bool taskPaneIsOkay = false;
+                bool addinStatusOkay = false;
+                string errorDescription = string.Empty;
                 if (null != addin.Object)
                 { 
                     COMObject addinProxy = new COMObject(null, addin.Object);
-                    ribbonIsOkay = (bool)Invoker.PropertyGet(addinProxy, "RibbonUIPassed");
-                    taskPaneIsOkay = (bool)Invoker.PropertyGet(addinProxy, "TaskPanePassed");
+                    addinStatusOkay = (bool)Invoker.PropertyGet(addinProxy, "StatusOkay");
+                    errorDescription = (string)Invoker.PropertyGet(addinProxy, "StatusDescription");
                     addinProxy.Dispose();
                 }
 
-                if( ribbonIsOkay && taskPaneIsOkay)
+                if (addinStatusOkay)
                     return new TestResult(true, DateTime.Now.Subtract(startTime), "", null, "");
                 else
-                    return new TestResult(false, DateTime.Now.Subtract(startTime), string.Format("Ribbon:{0} TaskPane:{1}", ribbonIsOkay, taskPaneIsOkay), null, "");
+                    return new TestResult(false, DateTime.Now.Subtract(startTime), string.Format("NOTestsMain.ExcelTestAddinCSharp Addin Status {0}", errorDescription), null, "");
             }
             catch (Exception exception)
             {

@@ -13,19 +13,44 @@ namespace Host
 {
     public partial class Form1 : Form
     {
+        #region Ctor
+
         public Form1()
         {
             InitializeComponent();
             ShowAdminPrivileges();
-            CheckRunningInstances();
+            ShowRunningInstances();
         }
-        
-        private void CheckRunningInstances()
+
+        #endregion
+
+        #region Properties
+
+        private bool IsAdministrator       
+        {
+            get
+            {
+                WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void ShowRunningInstances()
         {
             bool found = false;
             foreach (Process item in Process.GetProcesses())
             {
-                if (item.ProcessName.Equals("excel", StringComparison.InvariantCultureIgnoreCase))
+                if (item.ProcessName.Equals("excel", StringComparison.InvariantCultureIgnoreCase) ||
+                   item.ProcessName.Equals("word", StringComparison.InvariantCultureIgnoreCase) ||
+                    item.ProcessName.Equals("outlook", StringComparison.InvariantCultureIgnoreCase) ||
+                    item.ProcessName.Equals("ppoint", StringComparison.InvariantCultureIgnoreCase) ||
+                    item.ProcessName.Equals("access", StringComparison.InvariantCultureIgnoreCase) ||
+                    item.ProcessName.Equals("msproject", StringComparison.InvariantCultureIgnoreCase))
                 {
                     found = true;
                     break;
@@ -37,7 +62,7 @@ namespace Host
 
         private void ShowAdminPrivileges()
         {
-            if (IsAdministrator())
+            if (IsAdministrator)
             {
                 labelAdmin.ForeColor = Color.Green;
                 labelAdmin.Text = "Program runs with Administrator Privileges.";
@@ -49,14 +74,121 @@ namespace Host
             }
         }
 
-        private bool IsAdministrator()
+        private void RunExcelTests()
         {
-           WindowsIdentity identity =  WindowsIdentity.GetCurrent();
-           WindowsPrincipal principal = new WindowsPrincipal (identity);
-           return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            ExcelTestsVB.TestAssembly excelVB = new ExcelTestsVB.TestAssembly();
+            foreach (ITestPackage item in excelVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            ExcelTestsCSharp.TestAssembly excelCSharp = new ExcelTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in excelCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
         }
-       
-        private void AddResult(ITestPackage package, TestResult result)
+
+        private void RunOutlookTests()
+        {
+            OutlookTestsVB.TestAssembly outlookVB = new OutlookTestsVB.TestAssembly();
+            foreach (ITestPackage item in outlookVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            OutlookTestsCSharp.TestAssembly outlookCSharp = new OutlookTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in outlookCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+        }
+
+        private void RunWordTests()
+        {
+            WordTestsVB.TestAssembly wordVB = new WordTestsVB.TestAssembly();
+            foreach (ITestPackage item in wordVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            WordTestsCSharp.TestAssembly wordCSharp = new WordTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in wordCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+        }
+
+        private void RunPowerPointTests()
+        {
+            PowerPointTestsVB.TestAssembly powerVB = new PowerPointTestsVB.TestAssembly();
+            foreach (ITestPackage item in powerVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            PowerPointTestsCSharp.TestAssembly powerCSharp = new PowerPointTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in powerCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+        }
+
+        private void RunAccessTests()
+        {
+            AccessTestsVB.TestAssembly accessVB = new AccessTestsVB.TestAssembly();
+            foreach (ITestPackage item in accessVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            AccessTestsCSharp.TestAssembly accessCSharp = new AccessTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in accessCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+        }
+
+        private void RunProjectTests()
+        {
+            ProjectTestsVB.TestAssembly projectVB = new ProjectTestsVB.TestAssembly();
+            foreach (ITestPackage item in projectVB.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+
+            ProjectTestsCSharp.TestAssembly projectCSharp = new ProjectTestsCSharp.TestAssembly();
+            foreach (ITestPackage item in projectCSharp.LoadTestPackages())
+            {
+                ShowCurrentTestPackge(item);
+                TestResult result = item.DoTest();
+                AddTestResult(item, result);
+            }
+        }
+
+        private void AddTestResult(ITestPackage package, TestResult result)
         {
             if (result.Sucseed)
             {
@@ -74,156 +206,55 @@ namespace Host
             listViewResults.Refresh();
         }
 
-        private void ShowCurrent(ITestPackage package)
+        private void ShowCurrentTestPackge(ITestPackage package)
         {
             labelCurrentTest.Text = "Do Test: " + string.Format("{0} {1} {2} {3}", package.OfficeProduct, package.Name, package.Language, package.Description);
             labelCurrentTest.Refresh();
         }
+       
+        #endregion
 
-        void buttonTest_Click(object sender, EventArgs e)
+        #region Trigger
+
+        private void listViewResults_DoubleClick(object sender, EventArgs e)
+        {
+            if ((listViewResults.SelectedItems.Count > 0) && (listViewResults.SelectedItems[0].Tag is Exception))
+            {
+                Exception exception = listViewResults.SelectedItems[0].Tag as Exception;
+                ExceptionDialog dialog = new ExceptionDialog(exception);
+                dialog.ShowDialog(this);
+            }
+        }
+
+        private void labelRunningInstances_Click(object sender, EventArgs e)
+        {
+            ShowRunningInstances();
+        }
+
+        private void buttonTest_Click(object sender, EventArgs e)
         {
             try
             {   
                 buttonTest.Enabled =false;
                 listViewResults.Items.Clear();
-                
-                #region Excel
 
                 if (checkBoxExcel.Checked)
-                { 
-                    ExcelTestsVB.TestAssembly excelVB = new ExcelTestsVB.TestAssembly();
-                    foreach (ITestPackage item in excelVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    ExcelTestsCSharp.TestAssembly excelCSharp = new ExcelTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in excelCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
-
-                #region Outlook
+                    RunExcelTests();
 
                 if (checkBoxOutlook.Checked)
-                { 
-                    OutlookTestsVB.TestAssembly outlookVB = new OutlookTestsVB.TestAssembly();
-                    foreach (ITestPackage item in outlookVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    OutlookTestsCSharp.TestAssembly outlookCSharp = new OutlookTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in outlookCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
-
-                #region Word
+                    RunOutlookTests();
 
                 if (checkBoxWord.Checked)
-                {
-                    WordTestsVB.TestAssembly wordVB = new WordTestsVB.TestAssembly();
-                    foreach (ITestPackage item in wordVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    WordTestsCSharp.TestAssembly wordCSharp = new WordTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in wordCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
-
-                #region PowerPoint
+                    RunWordTests();
 
                 if (checkBoxPowerPoint.Checked)
-                {
-                    PowerPointTestsVB.TestAssembly powerVB = new PowerPointTestsVB.TestAssembly();
-                    foreach (ITestPackage item in powerVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    PowerPointTestsCSharp.TestAssembly powerCSharp = new PowerPointTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in powerCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
-
-                #region AccessPoint
+                    RunPowerPointTests();
 
                 if (checkBoxAccess.Checked)
-                {
-                    AccessTestsVB.TestAssembly accessVB = new AccessTestsVB.TestAssembly();
-                    foreach (ITestPackage item in accessVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    AccessTestsCSharp.TestAssembly accessCSharp = new AccessTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in accessCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
-
-                #region Project
+                    RunAccessTests();
 
                 if (checkBoxProject.Checked)
-                {
-                    ProjectTestsVB.TestAssembly projectVB = new ProjectTestsVB.TestAssembly();
-                    foreach (ITestPackage item in projectVB.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-
-                    ProjectTestsCSharp.TestAssembly projectCSharp = new ProjectTestsCSharp.TestAssembly();
-                    foreach (ITestPackage item in projectCSharp.LoadTestPackages())
-                    {
-                        ShowCurrent(item);
-                        TestResult result = item.DoTest();
-                        AddResult(item, result);
-                    }
-                }
-
-                #endregion
+                    RunProjectTests();
             }
             catch (Exception exception)
             {
@@ -236,15 +267,7 @@ namespace Host
                 buttonTest.Enabled = true;
             }
         }
-       
-        private void listViewResults_DoubleClick(object sender, EventArgs e)
-        {
-            if( (listViewResults.SelectedItems.Count > 0) && (listViewResults.SelectedItems[0].Tag is Exception) )
-            {
-                Exception exception = listViewResults.SelectedItems[0].Tag as Exception;
-                ExceptionDialog dialog = new ExceptionDialog(exception);
-                dialog.ShowDialog(this);
-            }
-        }
+
+        #endregion
     }
 }

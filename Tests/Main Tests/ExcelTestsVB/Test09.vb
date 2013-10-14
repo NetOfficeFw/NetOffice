@@ -44,7 +44,7 @@ Public Class Test09
 
             For Each item As Office.COMAddIn In application.COMAddIns
 
-                If item.ProgId = "ExcelAddinVB.TestAddin" Then
+                If item.ProgId = "NOTestsMain.ExcelTestAddinVB" Then
                     addIn = item
                     Exit For
                 End If
@@ -52,18 +52,18 @@ Public Class Test09
             Next
 
             If IsNothing(addIn) Then
-                Return New TestResult(False, DateTime.Now.Subtract(startTime), "COMAddin ExcelAddinVB.TestAddin not found.", Nothing, "")
+                Return New TestResult(False, DateTime.Now.Subtract(startTime), "COMAddin NOTestsMain.ExcelTestAddinVB not found.", Nothing, "")
             End If
 
             Dim addinProxy As COMObject = New COMObject(Nothing, addIn.Object)
-            Dim ribbonIsOkay As Boolean = Invoker.PropertyGet(addinProxy, "RibbonUIPassed")
-            Dim taskPaneIsOkay As Boolean = Invoker.PropertyGet(addinProxy, "TaskPanePassed")
+            Dim addinStatusOkay As Boolean = Invoker.PropertyGet(addinProxy, "StatusOkay")
+            Dim addinStatusDescription As String = Invoker.PropertyGet(addinProxy, "StatusDescription")
             addinProxy.Dispose()
 
-            If ribbonIsOkay = True And taskPaneIsOkay = True Then
+            If addinStatusOkay = True Then
                 Return New TestResult(True, DateTime.Now.Subtract(startTime), "", Nothing, "")
             Else
-                Return New TestResult(False, DateTime.Now.Subtract(startTime), String.Format("Ribbon:{0} TaskPane:{1}", ribbonIsOkay, taskPaneIsOkay), Nothing, "")
+                Return New TestResult(False, DateTime.Now.Subtract(startTime), String.Format("NOTestsMain.ExcelTestAddinVB Addin Status {0}", addinStatusDescription), Nothing, "")
             End If
 
         Catch ex As Exception

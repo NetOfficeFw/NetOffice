@@ -57,19 +57,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AccessApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\AccessApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ADODBApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\ADODBApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="DAOApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\DAOApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ExcelApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\ExcelApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
@@ -80,39 +80,39 @@
       <HintPath>..\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="MSComctlLibApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSDATASRCApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSHTMLApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="MSProjectApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="NetOffice">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\NetOffice.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OfficeApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OutlookApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\OutlookApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OWC10Api">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\OWC10Api.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="PowerPointApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -127,15 +127,15 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="VBIDEApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="VisioApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\VisioApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\VisioApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="WordApi">
-      <HintPath>..\..\NetOffice 1.6.0\NET 4.0\Assemblies\Any CPU\WordApi.dll</HintPath>
+      <HintPath>..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
   </ItemGroup>
