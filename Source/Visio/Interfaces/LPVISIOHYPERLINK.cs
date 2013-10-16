@@ -1,0 +1,404 @@
+using System;
+using NetRuntimeSystem = System;
+using System.Runtime.InteropServices;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Reflection;
+using System.Collections.Generic;
+using NetOffice;
+namespace NetOffice.VisioApi
+{
+	///<summary>
+	/// Interface LPVISIOHYPERLINK 
+	/// SupportByVersion Visio, 11,12,14,15
+	///</summary>
+	[SupportByVersionAttribute("Visio", 11,12,14,15)]
+	[EntityTypeAttribute(EntityType.IsInterface)]
+	public class LPVISIOHYPERLINK : COMObject
+	{
+		#pragma warning disable
+		#region Type Information
+
+        private static Type _type;
+
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public static Type LateBindingApiWrapperType
+        {
+            get
+            {
+                if (null == _type)
+                    _type = typeof(LPVISIOHYPERLINK);
+                    
+                return _type;
+            }
+        }
+        
+        #endregion
+        
+		#region Construction
+
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="comProxy">inner wrapped COM proxy</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public LPVISIOHYPERLINK(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
+		{
+		}
+		
+		/// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="comProxy">inner wrapped COM proxy</param>
+        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public LPVISIOHYPERLINK(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+		{
+		}
+		
+		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public LPVISIOHYPERLINK(COMObject replacedObject) : base(replacedObject)
+		{
+		}
+		
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public LPVISIOHYPERLINK() : base()
+		{
+		}
+		
+		/// <param name="progId">registered ProgID</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public LPVISIOHYPERLINK(string progId) : base(progId)
+		{
+		}
+		
+		#endregion
+		
+		#region Properties
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string Description
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Description", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Description", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public NetOffice.VisioApi.IVApplication Application
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public NetOffice.VisioApi.IVShape Shape
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Shape", paramsArray);
+				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+				return newObject;
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public Int16 ObjectType
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ObjectType", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public Int16 Stat
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Stat", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string Address
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Address", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string SubAddress
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "SubAddress", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "SubAddress", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public Int16 NewWindow
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "NewWindow", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "NewWindow", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string ExtraInfo
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "ExtraInfo", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "ExtraInfo", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string Frame
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Frame", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Frame", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public Int16 Row
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Row", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public Int16 IsDefaultLink
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "IsDefaultLink", paramsArray);
+				return NetRuntimeSystem.Convert.ToInt16(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "IsDefaultLink", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string Name
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "Name", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "Name", paramsArray);
+			}
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// Get/Set
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string NameU
+		{
+			get
+			{
+				object[] paramsArray = null;
+				object returnItem = Invoker.PropertyGet(this, "NameU", paramsArray);
+				return NetRuntimeSystem.Convert.ToString(returnItem);
+			}
+			set
+			{
+				object[] paramsArray = Invoker.ValidateParamsArray(value);
+				Invoker.PropertySet(this, "NameU", paramsArray);
+			}
+		}
+
+		#endregion
+
+		#region Methods
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		/// <param name="favoritesTitle">optional object FavoritesTitle</param>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public void AddToFavorites(object favoritesTitle)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(favoritesTitle);
+			Invoker.Method(this, "AddToFavorites", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		[CustomMethodAttribute]
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public void AddToFavorites()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "AddToFavorites", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public void Follow()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Follow", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public void Delete()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Delete", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public void Copy()
+		{
+			object[] paramsArray = null;
+			Invoker.Method(this, "Copy", paramsArray);
+		}
+
+		/// <summary>
+		/// SupportByVersion Visio 11, 12, 14, 15
+		/// </summary>
+		/// <param name="canonicalForm">Int16 CanonicalForm</param>
+		[SupportByVersionAttribute("Visio", 11,12,14,15)]
+		public string CreateURL(Int16 canonicalForm)
+		{
+			object[] paramsArray = Invoker.ValidateParamsArray(canonicalForm);
+			object returnItem = Invoker.MethodReturn(this, "CreateURL", paramsArray);
+			return NetRuntimeSystem.Convert.ToString(returnItem);
+		}
+
+		#endregion
+		#pragma warning restore
+	}
+}

@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2DF07D1-46EA-4578-9183-9ABB368547E5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
+    <AssemblyName>PowerPointApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PowerPointApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PowerPointApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    
+    		<Compile Include="Enums\PpWindowState.cs" />
+		<Compile Include="Enums\PpArrangeStyle.cs" />
+		<Compile Include="Enums\PpViewType.cs" />
+		<Compile Include="Enums\PpColorSchemeIndex.cs" />
+		<Compile Include="Enums\PpSlideSizeType.cs" />
+		<Compile Include="Enums\PpSaveAsFileType.cs" />
+		<Compile Include="Enums\PpTextStyleType.cs" />
+		<Compile Include="Enums\PpSlideLayout.cs" />
+		<Compile Include="Enums\PpEntryEffect.cs" />
+		<Compile Include="Enums\PpTextLevelEffect.cs" />
+		<Compile Include="Enums\PpTextUnitEffect.cs" />
+		<Compile Include="Enums\PpChartUnitEffect.cs" />
+		<Compile Include="Enums\PpAfterEffect.cs" />
+		<Compile Include="Enums\PpAdvanceMode.cs" />
+		<Compile Include="Enums\PpSoundEffectType.cs" />
+		<Compile Include="Enums\PpFollowColors.cs" />
+		<Compile Include="Enums\PpUpdateOption.cs" />
+		<Compile Include="Enums\PpParagraphAlignment.cs" />
+		<Compile Include="Enums\PpBaselineAlignment.cs" />
+		<Compile Include="Enums\PpTabStopType.cs" />
+		<Compile Include="Enums\PpIndentControl.cs" />
+		<Compile Include="Enums\PpChangeCase.cs" />
+		<Compile Include="Enums\PpDialogMode.cs" />
+		<Compile Include="Enums\PpDialogStyle.cs" />
+		<Compile Include="Enums\PpDialogPositioning.cs" />
+		<Compile Include="Enums\PpDialogFontStyle.cs" />
+		<Compile Include="Enums\PpScrollBarStyle.cs" />
+		<Compile Include="Enums\PpListBoxSelectionStyle.cs" />
+		<Compile Include="Enums\PpListBoxAbbreviationStyle.cs" />
+		<Compile Include="Enums\PpAlertType.cs" />
+		<Compile Include="Enums\PpAlertButton.cs" />
+		<Compile Include="Enums\PpAlertIcon.cs" />
+		<Compile Include="Enums\PpSlideShowPointerType.cs" />
+		<Compile Include="Enums\PpSlideShowState.cs" />
+		<Compile Include="Enums\PpSlideShowAdvanceMode.cs" />
+		<Compile Include="Enums\PpFileDialogType.cs" />
+		<Compile Include="Enums\PpFileDialogView.cs" />
+		<Compile Include="Enums\PpPrintOutputType.cs" />
+		<Compile Include="Enums\PpPrintHandoutOrder.cs" />
+		<Compile Include="Enums\PpPrintColorType.cs" />
+		<Compile Include="Enums\PpSelectionType.cs" />
+		<Compile Include="Enums\PpDirection.cs" />
+		<Compile Include="Enums\PpDateTimeFormat.cs" />
+		<Compile Include="Enums\PpTransitionSpeed.cs" />
+		<Compile Include="Enums\PpMouseActivation.cs" />
+		<Compile Include="Enums\PpActionType.cs" />
+		<Compile Include="Enums\PpPlaceholderType.cs" />
+		<Compile Include="Enums\PpSlideShowType.cs" />
+		<Compile Include="Enums\PpPrintRangeType.cs" />
+		<Compile Include="Enums\PpAutoSize.cs" />
+		<Compile Include="Enums\PpMediaType.cs" />
+		<Compile Include="Enums\PpSoundFormatType.cs" />
+		<Compile Include="Enums\PpFarEastLineBreakLevel.cs" />
+		<Compile Include="Enums\PpSlideShowRangeType.cs" />
+		<Compile Include="Enums\PpFrameColors.cs" />
+		<Compile Include="Enums\PpBorderType.cs" />
+		<Compile Include="Enums\PpHTMLVersion.cs" />
+		<Compile Include="Enums\PpPublishSourceType.cs" />
+		<Compile Include="Enums\PpBulletType.cs" />
+		<Compile Include="Enums\PpNumberedBulletStyle.cs" />
+		<Compile Include="Enums\PpMarkerType.cs" />
+		<Compile Include="Enums\PpShapeFormat.cs" />
+		<Compile Include="Enums\PpExportMode.cs" />
+		<Compile Include="Enums\PpPasteDataType.cs" />
+		<Compile Include="Enums\MsoAnimEffect.cs" />
+		<Compile Include="Enums\MsoAnimateByLevel.cs" />
+		<Compile Include="Enums\MsoAnimTriggerType.cs" />
+		<Compile Include="Enums\MsoAnimAfterEffect.cs" />
+		<Compile Include="Enums\MsoAnimTextUnitEffect.cs" />
+		<Compile Include="Enums\MsoAnimEffectRestart.cs" />
+		<Compile Include="Enums\MsoAnimEffectAfter.cs" />
+		<Compile Include="Enums\MsoAnimDirection.cs" />
+		<Compile Include="Enums\MsoAnimType.cs" />
+		<Compile Include="Enums\MsoAnimAdditive.cs" />
+		<Compile Include="Enums\MsoAnimAccumulate.cs" />
+		<Compile Include="Enums\MsoAnimProperty.cs" />
+		<Compile Include="Enums\PpAlertLevel.cs" />
+		<Compile Include="Enums\PpRevisionInfo.cs" />
+		<Compile Include="Enums\MsoAnimCommandType.cs" />
+		<Compile Include="Enums\MsoAnimFilterEffectType.cs" />
+		<Compile Include="Enums\MsoAnimFilterEffectSubtype.cs" />
+		<Compile Include="Enums\PpRemoveDocInfoType.cs" />
+		<Compile Include="Enums\PpCheckInVersionType.cs" />
+		<Compile Include="Enums\MsoClickState.cs" />
+		<Compile Include="Enums\PpFixedFormatType.cs" />
+		<Compile Include="Enums\PpFixedFormatIntent.cs" />
+		<Compile Include="Enums\XlBackground.cs" />
+		<Compile Include="Enums\XlChartGallery.cs" />
+		<Compile Include="Enums\XlChartPicturePlacement.cs" />
+		<Compile Include="Enums\XlDataLabelSeparator.cs" />
+		<Compile Include="Enums\XlPattern.cs" />
+		<Compile Include="Enums\XlPictureAppearance.cs" />
+		<Compile Include="Enums\XlCopyPictureFormat.cs" />
+		<Compile Include="Enums\XlRgbColor.cs" />
+		<Compile Include="Enums\XlLineStyle.cs" />
+		<Compile Include="Enums\XlAxisCrosses.cs" />
+		<Compile Include="Enums\XlAxisGroup.cs" />
+		<Compile Include="Enums\XlAxisType.cs" />
+		<Compile Include="Enums\XlBarShape.cs" />
+		<Compile Include="Enums\XlBorderWeight.cs" />
+		<Compile Include="Enums\XlCategoryType.cs" />
+		<Compile Include="Enums\XlChartElementPosition.cs" />
+		<Compile Include="Enums\XlChartItem.cs" />
+		<Compile Include="Enums\XlOrientation.cs" />
+		<Compile Include="Enums\XlChartPictureType.cs" />
+		<Compile Include="Enums\XlChartSplitType.cs" />
+		<Compile Include="Enums\XlColorIndex.cs" />
+		<Compile Include="Enums\XlConstants.cs" />
+		<Compile Include="Enums\XlDataLabelPosition.cs" />
+		<Compile Include="Enums\XlDataLabelsType.cs" />
+		<Compile Include="Enums\XlDisplayBlanksAs.cs" />
+		<Compile Include="Enums\XlDisplayUnit.cs" />
+		<Compile Include="Enums\XlEndStyleCap.cs" />
+		<Compile Include="Enums\XlErrorBarDirection.cs" />
+		<Compile Include="Enums\XlErrorBarInclude.cs" />
+		<Compile Include="Enums\XlErrorBarType.cs" />
+		<Compile Include="Enums\XlHAlign.cs" />
+		<Compile Include="Enums\XlLegendPosition.cs" />
+		<Compile Include="Enums\XlMarkerStyle.cs" />
+		<Compile Include="Enums\XlPivotFieldOrientation.cs" />
+		<Compile Include="Enums\XlReadingOrder.cs" />
+		<Compile Include="Enums\XlRowCol.cs" />
+		<Compile Include="Enums\XlScaleType.cs" />
+		<Compile Include="Enums\XlSizeRepresents.cs" />
+		<Compile Include="Enums\XlTickLabelOrientation.cs" />
+		<Compile Include="Enums\XlTickLabelPosition.cs" />
+		<Compile Include="Enums\XlTickMark.cs" />
+		<Compile Include="Enums\XlTimeUnit.cs" />
+		<Compile Include="Enums\XlTrendlineType.cs" />
+		<Compile Include="Enums\XlUnderlineStyle.cs" />
+		<Compile Include="Enums\XlVAlign.cs" />
+		<Compile Include="Enums\PpResampleMediaProfile.cs" />
+		<Compile Include="Enums\PpMediaTaskStatus.cs" />
+		<Compile Include="Enums\PpPlayerState.cs" />
+		<Compile Include="Enums\XlPieSliceLocation.cs" />
+		<Compile Include="Enums\XlPieSliceIndex.cs" />
+		<Compile Include="Enums\PpProtectedViewCloseReason.cs" />
+		<Compile Include="Enums\XlCategoryLabelLevel.cs" />
+		<Compile Include="Enums\XlSeriesNameLevel.cs" />
+		<Compile Include="Enums\PpGuideOrientation.cs" />
+
+    		<Compile Include="Interfaces\MouseTracker.cs" />
+		<Compile Include="Interfaces\MouseDownHandler.cs" />
+
+    		<Compile Include="DispatchInterfaces\Collection.cs" />
+		<Compile Include="DispatchInterfaces\_Application.cs" />
+		<Compile Include="DispatchInterfaces\ColorFormat.cs" />
+		<Compile Include="DispatchInterfaces\SlideShowWindow.cs" />
+		<Compile Include="DispatchInterfaces\Selection.cs" />
+		<Compile Include="DispatchInterfaces\DocumentWindows.cs" />
+		<Compile Include="DispatchInterfaces\SlideShowWindows.cs" />
+		<Compile Include="DispatchInterfaces\DocumentWindow.cs" />
+		<Compile Include="DispatchInterfaces\View.cs" />
+		<Compile Include="DispatchInterfaces\SlideShowView.cs" />
+		<Compile Include="DispatchInterfaces\SlideShowSettings.cs" />
+		<Compile Include="DispatchInterfaces\NamedSlideShows.cs" />
+		<Compile Include="DispatchInterfaces\NamedSlideShow.cs" />
+		<Compile Include="DispatchInterfaces\PrintOptions.cs" />
+		<Compile Include="DispatchInterfaces\PrintRanges.cs" />
+		<Compile Include="DispatchInterfaces\PrintRange.cs" />
+		<Compile Include="DispatchInterfaces\AddIns.cs" />
+		<Compile Include="DispatchInterfaces\AddIn.cs" />
+		<Compile Include="DispatchInterfaces\Presentations.cs" />
+		<Compile Include="DispatchInterfaces\Hyperlinks.cs" />
+		<Compile Include="DispatchInterfaces\Hyperlink.cs" />
+		<Compile Include="DispatchInterfaces\PageSetup.cs" />
+		<Compile Include="DispatchInterfaces\Fonts.cs" />
+		<Compile Include="DispatchInterfaces\ExtraColors.cs" />
+		<Compile Include="DispatchInterfaces\Slides.cs" />
+		<Compile Include="DispatchInterfaces\_Slide.cs" />
+		<Compile Include="DispatchInterfaces\SlideRange.cs" />
+		<Compile Include="DispatchInterfaces\_Master.cs" />
+		<Compile Include="DispatchInterfaces\ColorSchemes.cs" />
+		<Compile Include="DispatchInterfaces\ColorScheme.cs" />
+		<Compile Include="DispatchInterfaces\RGBColor.cs" />
+		<Compile Include="DispatchInterfaces\SlideShowTransition.cs" />
+		<Compile Include="DispatchInterfaces\SoundEffect.cs" />
+		<Compile Include="DispatchInterfaces\SoundFormat.cs" />
+		<Compile Include="DispatchInterfaces\HeadersFooters.cs" />
+		<Compile Include="DispatchInterfaces\Shapes.cs" />
+		<Compile Include="DispatchInterfaces\Placeholders.cs" />
+		<Compile Include="DispatchInterfaces\PlaceholderFormat.cs" />
+		<Compile Include="DispatchInterfaces\FreeformBuilder.cs" />
+		<Compile Include="DispatchInterfaces\Shape.cs" />
+		<Compile Include="DispatchInterfaces\ShapeRange.cs" />
+		<Compile Include="DispatchInterfaces\GroupShapes.cs" />
+		<Compile Include="DispatchInterfaces\Adjustments.cs" />
+		<Compile Include="DispatchInterfaces\PictureFormat.cs" />
+		<Compile Include="DispatchInterfaces\FillFormat.cs" />
+		<Compile Include="DispatchInterfaces\LineFormat.cs" />
+		<Compile Include="DispatchInterfaces\ShadowFormat.cs" />
+		<Compile Include="DispatchInterfaces\ConnectorFormat.cs" />
+		<Compile Include="DispatchInterfaces\TextEffectFormat.cs" />
+		<Compile Include="DispatchInterfaces\ThreeDFormat.cs" />
+		<Compile Include="DispatchInterfaces\TextFrame.cs" />
+		<Compile Include="DispatchInterfaces\CalloutFormat.cs" />
+		<Compile Include="DispatchInterfaces\ShapeNodes.cs" />
+		<Compile Include="DispatchInterfaces\ShapeNode.cs" />
+		<Compile Include="DispatchInterfaces\OLEFormat.cs" />
+		<Compile Include="DispatchInterfaces\LinkFormat.cs" />
+		<Compile Include="DispatchInterfaces\ObjectVerbs.cs" />
+		<Compile Include="DispatchInterfaces\AnimationSettings.cs" />
+		<Compile Include="DispatchInterfaces\ActionSettings.cs" />
+		<Compile Include="DispatchInterfaces\ActionSetting.cs" />
+		<Compile Include="DispatchInterfaces\PlaySettings.cs" />
+		<Compile Include="DispatchInterfaces\TextRange.cs" />
+		<Compile Include="DispatchInterfaces\Ruler.cs" />
+		<Compile Include="DispatchInterfaces\RulerLevels.cs" />
+		<Compile Include="DispatchInterfaces\RulerLevel.cs" />
+		<Compile Include="DispatchInterfaces\TabStops.cs" />
+		<Compile Include="DispatchInterfaces\TabStop.cs" />
+		<Compile Include="DispatchInterfaces\Font.cs" />
+		<Compile Include="DispatchInterfaces\ParagraphFormat.cs" />
+		<Compile Include="DispatchInterfaces\BulletFormat.cs" />
+		<Compile Include="DispatchInterfaces\TextStyles.cs" />
+		<Compile Include="DispatchInterfaces\TextStyle.cs" />
+		<Compile Include="DispatchInterfaces\TextStyleLevels.cs" />
+		<Compile Include="DispatchInterfaces\TextStyleLevel.cs" />
+		<Compile Include="DispatchInterfaces\HeaderFooter.cs" />
+		<Compile Include="DispatchInterfaces\_Presentation.cs" />
+		<Compile Include="DispatchInterfaces\PPDialogs.cs" />
+		<Compile Include="DispatchInterfaces\PPAlert.cs" />
+		<Compile Include="DispatchInterfaces\PPDialog.cs" />
+		<Compile Include="DispatchInterfaces\PPTabSheet.cs" />
+		<Compile Include="DispatchInterfaces\PPControls.cs" />
+		<Compile Include="DispatchInterfaces\PPTabSheets.cs" />
+		<Compile Include="DispatchInterfaces\PPControl.cs" />
+		<Compile Include="DispatchInterfaces\PPPushButton.cs" />
+		<Compile Include="DispatchInterfaces\PPToggleButton.cs" />
+		<Compile Include="DispatchInterfaces\PPBitmapButton.cs" />
+		<Compile Include="DispatchInterfaces\PPListBox.cs" />
+		<Compile Include="DispatchInterfaces\PPStrings.cs" />
+		<Compile Include="DispatchInterfaces\PPCheckBox.cs" />
+		<Compile Include="DispatchInterfaces\PPRadioCluster.cs" />
+		<Compile Include="DispatchInterfaces\PPStaticText.cs" />
+		<Compile Include="DispatchInterfaces\PPEditText.cs" />
+		<Compile Include="DispatchInterfaces\PPIcon.cs" />
+		<Compile Include="DispatchInterfaces\PPBitmap.cs" />
+		<Compile Include="DispatchInterfaces\PPSpinner.cs" />
+		<Compile Include="DispatchInterfaces\PPScrollBar.cs" />
+		<Compile Include="DispatchInterfaces\PPGroupBox.cs" />
+		<Compile Include="DispatchInterfaces\PPFrame.cs" />
+		<Compile Include="DispatchInterfaces\PPTabControl.cs" />
+		<Compile Include="DispatchInterfaces\PPDropDown.cs" />
+		<Compile Include="DispatchInterfaces\PPDropDownEdit.cs" />
+		<Compile Include="DispatchInterfaces\PPSlideMiniature.cs" />
+		<Compile Include="DispatchInterfaces\PPRadioButton.cs" />
+		<Compile Include="DispatchInterfaces\Tags.cs" />
+		<Compile Include="DispatchInterfaces\FileDialogFileList.cs" />
+		<Compile Include="DispatchInterfaces\FileDialogExtension.cs" />
+		<Compile Include="DispatchInterfaces\FileDialogExtensionList.cs" />
+		<Compile Include="DispatchInterfaces\FileDialog.cs" />
+		<Compile Include="DispatchInterfaces\OCXExtender.cs" />
+		<Compile Include="DispatchInterfaces\Table.cs" />
+		<Compile Include="DispatchInterfaces\Columns.cs" />
+		<Compile Include="DispatchInterfaces\Column.cs" />
+		<Compile Include="DispatchInterfaces\Rows.cs" />
+		<Compile Include="DispatchInterfaces\Row.cs" />
+		<Compile Include="DispatchInterfaces\CellRange.cs" />
+		<Compile Include="DispatchInterfaces\Cell.cs" />
+		<Compile Include="DispatchInterfaces\Borders.cs" />
+		<Compile Include="DispatchInterfaces\Panes.cs" />
+		<Compile Include="DispatchInterfaces\Pane.cs" />
+		<Compile Include="DispatchInterfaces\DefaultWebOptions.cs" />
+		<Compile Include="DispatchInterfaces\WebOptions.cs" />
+		<Compile Include="DispatchInterfaces\PublishObjects.cs" />
+		<Compile Include="DispatchInterfaces\PublishObject.cs" />
+		<Compile Include="DispatchInterfaces\Marker.cs" />
+		<Compile Include="DispatchInterfaces\_PowerRex.cs" />
+		<Compile Include="DispatchInterfaces\Comments.cs" />
+		<Compile Include="DispatchInterfaces\Comment.cs" />
+		<Compile Include="DispatchInterfaces\Designs.cs" />
+		<Compile Include="DispatchInterfaces\Design.cs" />
+		<Compile Include="DispatchInterfaces\DiagramNode.cs" />
+		<Compile Include="DispatchInterfaces\DiagramNodeChildren.cs" />
+		<Compile Include="DispatchInterfaces\DiagramNodes.cs" />
+		<Compile Include="DispatchInterfaces\Diagram.cs" />
+		<Compile Include="DispatchInterfaces\TimeLine.cs" />
+		<Compile Include="DispatchInterfaces\Sequences.cs" />
+		<Compile Include="DispatchInterfaces\Sequence.cs" />
+		<Compile Include="DispatchInterfaces\Effect.cs" />
+		<Compile Include="DispatchInterfaces\Timing.cs" />
+		<Compile Include="DispatchInterfaces\EffectParameters.cs" />
+		<Compile Include="DispatchInterfaces\EffectInformation.cs" />
+		<Compile Include="DispatchInterfaces\AnimationBehaviors.cs" />
+		<Compile Include="DispatchInterfaces\AnimationBehavior.cs" />
+		<Compile Include="DispatchInterfaces\MotionEffect.cs" />
+		<Compile Include="DispatchInterfaces\ColorEffect.cs" />
+		<Compile Include="DispatchInterfaces\ScaleEffect.cs" />
+		<Compile Include="DispatchInterfaces\RotationEffect.cs" />
+		<Compile Include="DispatchInterfaces\PropertyEffect.cs" />
+		<Compile Include="DispatchInterfaces\AnimationPoints.cs" />
+		<Compile Include="DispatchInterfaces\AnimationPoint.cs" />
+		<Compile Include="DispatchInterfaces\CanvasShapes.cs" />
+		<Compile Include="DispatchInterfaces\AutoCorrect.cs" />
+		<Compile Include="DispatchInterfaces\Options.cs" />
+		<Compile Include="DispatchInterfaces\CommandEffect.cs" />
+		<Compile Include="DispatchInterfaces\FilterEffect.cs" />
+		<Compile Include="DispatchInterfaces\SetEffect.cs" />
+		<Compile Include="DispatchInterfaces\CustomLayouts.cs" />
+		<Compile Include="DispatchInterfaces\CustomLayout.cs" />
+		<Compile Include="DispatchInterfaces\TableStyle.cs" />
+		<Compile Include="DispatchInterfaces\CustomerData.cs" />
+		<Compile Include="DispatchInterfaces\Research.cs" />
+		<Compile Include="DispatchInterfaces\TableBackground.cs" />
+		<Compile Include="DispatchInterfaces\TextFrame2.cs" />
+		<Compile Include="DispatchInterfaces\FileConverters.cs" />
+		<Compile Include="DispatchInterfaces\FileConverter.cs" />
+		<Compile Include="DispatchInterfaces\Axes.cs" />
+		<Compile Include="DispatchInterfaces\Axis.cs" />
+		<Compile Include="DispatchInterfaces\AxisTitle.cs" />
+		<Compile Include="DispatchInterfaces\Chart.cs" />
+		<Compile Include="DispatchInterfaces\ChartBorder.cs" />
+		<Compile Include="DispatchInterfaces\ChartCharacters.cs" />
+		<Compile Include="DispatchInterfaces\ChartArea.cs" />
+		<Compile Include="DispatchInterfaces\ChartColorFormat.cs" />
+		<Compile Include="DispatchInterfaces\ChartData.cs" />
+		<Compile Include="DispatchInterfaces\ChartFillFormat.cs" />
+		<Compile Include="DispatchInterfaces\ChartFormat.cs" />
+		<Compile Include="DispatchInterfaces\ChartGroup.cs" />
+		<Compile Include="DispatchInterfaces\ChartGroups.cs" />
+		<Compile Include="DispatchInterfaces\ChartTitle.cs" />
+		<Compile Include="DispatchInterfaces\Corners.cs" />
+		<Compile Include="DispatchInterfaces\DataLabel.cs" />
+		<Compile Include="DispatchInterfaces\DataLabels.cs" />
+		<Compile Include="DispatchInterfaces\DataTable.cs" />
+		<Compile Include="DispatchInterfaces\DisplayUnitLabel.cs" />
+		<Compile Include="DispatchInterfaces\DownBars.cs" />
+		<Compile Include="DispatchInterfaces\DropLines.cs" />
+		<Compile Include="DispatchInterfaces\ErrorBars.cs" />
+		<Compile Include="DispatchInterfaces\Floor.cs" />
+		<Compile Include="DispatchInterfaces\ChartFont.cs" />
+		<Compile Include="DispatchInterfaces\Gridlines.cs" />
+		<Compile Include="DispatchInterfaces\HiLoLines.cs" />
+		<Compile Include="DispatchInterfaces\Interior.cs" />
+		<Compile Include="DispatchInterfaces\LeaderLines.cs" />
+		<Compile Include="DispatchInterfaces\Legend.cs" />
+		<Compile Include="DispatchInterfaces\LegendEntries.cs" />
+		<Compile Include="DispatchInterfaces\LegendEntry.cs" />
+		<Compile Include="DispatchInterfaces\LegendKey.cs" />
+		<Compile Include="DispatchInterfaces\PlotArea.cs" />
+		<Compile Include="DispatchInterfaces\Point.cs" />
+		<Compile Include="DispatchInterfaces\Points.cs" />
+		<Compile Include="DispatchInterfaces\Series.cs" />
+		<Compile Include="DispatchInterfaces\SeriesCollection.cs" />
+		<Compile Include="DispatchInterfaces\SeriesLines.cs" />
+		<Compile Include="DispatchInterfaces\TickLabels.cs" />
+		<Compile Include="DispatchInterfaces\Trendline.cs" />
+		<Compile Include="DispatchInterfaces\Trendlines.cs" />
+		<Compile Include="DispatchInterfaces\UpBars.cs" />
+		<Compile Include="DispatchInterfaces\Walls.cs" />
+		<Compile Include="DispatchInterfaces\MediaFormat.cs" />
+		<Compile Include="DispatchInterfaces\SectionProperties.cs" />
+		<Compile Include="DispatchInterfaces\Player.cs" />
+		<Compile Include="DispatchInterfaces\ResampleMediaTask.cs" />
+		<Compile Include="DispatchInterfaces\ResampleMediaTasks.cs" />
+		<Compile Include="DispatchInterfaces\MediaBookmark.cs" />
+		<Compile Include="DispatchInterfaces\MediaBookmarks.cs" />
+		<Compile Include="DispatchInterfaces\Coauthoring.cs" />
+		<Compile Include="DispatchInterfaces\Broadcast.cs" />
+		<Compile Include="DispatchInterfaces\ProtectedViewWindows.cs" />
+		<Compile Include="DispatchInterfaces\ProtectedViewWindow.cs" />
+		<Compile Include="DispatchInterfaces\FullSeriesCollection.cs" />
+		<Compile Include="DispatchInterfaces\ChartCategory.cs" />
+		<Compile Include="DispatchInterfaces\CategoryCollection.cs" />
+		<Compile Include="DispatchInterfaces\ThemeVariant.cs" />
+		<Compile Include="DispatchInterfaces\ThemeVariants.cs" />
+		<Compile Include="DispatchInterfaces\Theme.cs" />
+		<Compile Include="DispatchInterfaces\SlideNavigation.cs" />
+		<Compile Include="DispatchInterfaces\Guides.cs" />
+		<Compile Include="DispatchInterfaces\Guide.cs" />
+
+    		<Compile Include="Classes\Application.cs" />
+		<Compile Include="Classes\Presentation.cs" />
+		<Compile Include="Classes\Slide.cs" />
+		<Compile Include="Classes\OLEControl.cs" />
+		<Compile Include="Classes\Master.cs" />
+		<Compile Include="Classes\PowerRex.cs" />
+
+    		<Compile Include="EventInterfaces\PresEvents.cs" />
+		<Compile Include="EventInterfaces\SldEvents.cs" />
+		<Compile Include="EventInterfaces\OCXExtenderEvents.cs" />
+		<Compile Include="EventInterfaces\EApplication.cs" />
+		<Compile Include="EventInterfaces\MasterEvents.cs" />
+
+    		<Compile Include="Modules\Global.cs" />
+
+    
+    		<Compile Include="Tools\COMAddin.cs" />
+		<Compile Include="Tools\ITaskPane.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
+      <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

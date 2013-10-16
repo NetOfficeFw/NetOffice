@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F9E1AA6-516C-4121-87A9-241C80528866}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.DAOApi</RootNamespace>
+    <AssemblyName>DAOApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>DAOApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DAOApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DAOApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    		<Compile Include="Constants\LanguageConstants.cs" />
+
+    		<Compile Include="Enums\RecordsetTypeEnum.cs" />
+		<Compile Include="Enums\EditModeEnum.cs" />
+		<Compile Include="Enums\RecordsetOptionEnum.cs" />
+		<Compile Include="Enums\LockTypeEnum.cs" />
+		<Compile Include="Enums\UpdateCriteriaEnum.cs" />
+		<Compile Include="Enums\FieldAttributeEnum.cs" />
+		<Compile Include="Enums\DataTypeEnum.cs" />
+		<Compile Include="Enums\RelationAttributeEnum.cs" />
+		<Compile Include="Enums\TableDefAttributeEnum.cs" />
+		<Compile Include="Enums\QueryDefTypeEnum.cs" />
+		<Compile Include="Enums\QueryDefStateEnum.cs" />
+		<Compile Include="Enums\DatabaseTypeEnum.cs" />
+		<Compile Include="Enums\CollatingOrderEnum.cs" />
+		<Compile Include="Enums\IdleEnum.cs" />
+		<Compile Include="Enums\PermissionEnum.cs" />
+		<Compile Include="Enums\SynchronizeTypeEnum.cs" />
+		<Compile Include="Enums\ReplicaTypeEnum.cs" />
+		<Compile Include="Enums\WorkspaceTypeEnum.cs" />
+		<Compile Include="Enums\CursorDriverEnum.cs" />
+		<Compile Include="Enums\DriverPromptEnum.cs" />
+		<Compile Include="Enums\SetOptionEnum.cs" />
+		<Compile Include="Enums\ParameterDirectionEnum.cs" />
+		<Compile Include="Enums\UpdateTypeEnum.cs" />
+		<Compile Include="Enums\RecordStatusEnum.cs" />
+		<Compile Include="Enums\CommitTransOptionsEnum.cs" />
+		<Compile Include="Enums\_DAOSuppHelp.cs" />
+
+    
+    		<Compile Include="DispatchInterfaces\_DBEngine.cs" />
+		<Compile Include="DispatchInterfaces\_DAO.cs" />
+		<Compile Include="DispatchInterfaces\Properties.cs" />
+		<Compile Include="DispatchInterfaces\_DynaCollection.cs" />
+		<Compile Include="DispatchInterfaces\_Collection.cs" />
+		<Compile Include="DispatchInterfaces\Property.cs" />
+		<Compile Include="DispatchInterfaces\Workspaces.cs" />
+		<Compile Include="DispatchInterfaces\Workspace.cs" />
+		<Compile Include="DispatchInterfaces\Databases.cs" />
+		<Compile Include="DispatchInterfaces\Database.cs" />
+		<Compile Include="DispatchInterfaces\TableDefs.cs" />
+		<Compile Include="DispatchInterfaces\_TableDef.cs" />
+		<Compile Include="DispatchInterfaces\Fields.cs" />
+		<Compile Include="DispatchInterfaces\_Field.cs" />
+		<Compile Include="DispatchInterfaces\Indexes.cs" />
+		<Compile Include="DispatchInterfaces\_Index.cs" />
+		<Compile Include="DispatchInterfaces\Recordset.cs" />
+		<Compile Include="DispatchInterfaces\_QueryDef.cs" />
+		<Compile Include="DispatchInterfaces\Parameters.cs" />
+		<Compile Include="DispatchInterfaces\Parameter.cs" />
+		<Compile Include="DispatchInterfaces\Connection.cs" />
+		<Compile Include="DispatchInterfaces\QueryDefs.cs" />
+		<Compile Include="DispatchInterfaces\Recordsets.cs" />
+		<Compile Include="DispatchInterfaces\Relations.cs" />
+		<Compile Include="DispatchInterfaces\_Relation.cs" />
+		<Compile Include="DispatchInterfaces\Containers.cs" />
+		<Compile Include="DispatchInterfaces\Container.cs" />
+		<Compile Include="DispatchInterfaces\Documents.cs" />
+		<Compile Include="DispatchInterfaces\Document.cs" />
+		<Compile Include="DispatchInterfaces\Users.cs" />
+		<Compile Include="DispatchInterfaces\_User.cs" />
+		<Compile Include="DispatchInterfaces\Groups.cs" />
+		<Compile Include="DispatchInterfaces\_Group.cs" />
+		<Compile Include="DispatchInterfaces\Connections.cs" />
+		<Compile Include="DispatchInterfaces\Errors.cs" />
+		<Compile Include="DispatchInterfaces\Error.cs" />
+		<Compile Include="DispatchInterfaces\IndexFields.cs" />
+		<Compile Include="DispatchInterfaces\ComplexType.cs" />
+		<Compile Include="DispatchInterfaces\Recordset2.cs" />
+		<Compile Include="DispatchInterfaces\Field2.cs" />
+
+    		<Compile Include="Classes\TableDef.cs" />
+		<Compile Include="Classes\Field.cs" />
+		<Compile Include="Classes\Index.cs" />
+		<Compile Include="Classes\QueryDef.cs" />
+		<Compile Include="Classes\Relation.cs" />
+		<Compile Include="Classes\User.cs" />
+		<Compile Include="Classes\Group.cs" />
+		<Compile Include="Classes\DBEngine.cs" />
+		<Compile Include="Classes\PrivDBEngine.cs" />
+
+    
+    		<Compile Include="Modules\Global.cs" />
+
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

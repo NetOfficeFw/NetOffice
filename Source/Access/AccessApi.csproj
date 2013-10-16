@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.AccessApi</RootNamespace>
+    <AssemblyName>AccessApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>AccessApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\AccessApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\AccessApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    		<Compile Include="Constants\OldConstants.cs" />
+		<Compile Include="Constants\Constants.cs" />
+
+    		<Compile Include="Enums\AcModuleType.cs" />
+		<Compile Include="Enums\AcCloseSave.cs" />
+		<Compile Include="Enums\AcQuitOption.cs" />
+		<Compile Include="Enums\AcSection.cs" />
+		<Compile Include="Enums\AcControlType.cs" />
+		<Compile Include="Enums\AcDataObjectType.cs" />
+		<Compile Include="Enums\AcDataTransferType.cs" />
+		<Compile Include="Enums\AcSendObjectType.cs" />
+		<Compile Include="Enums\AcObjectType.cs" />
+		<Compile Include="Enums\AcFindField.cs" />
+		<Compile Include="Enums\AcFindMatch.cs" />
+		<Compile Include="Enums\AcFormView.cs" />
+		<Compile Include="Enums\AcDataAccessPageView.cs" />
+		<Compile Include="Enums\AcOpenDataMode.cs" />
+		<Compile Include="Enums\AcFormOpenDataMode.cs" />
+		<Compile Include="Enums\AcOutputObjectType.cs" />
+		<Compile Include="Enums\AcPrintQuality.cs" />
+		<Compile Include="Enums\AcPrintRange.cs" />
+		<Compile Include="Enums\AcRecord.cs" />
+		<Compile Include="Enums\AcSearchDirection.cs" />
+		<Compile Include="Enums\AcSysCmdAction.cs" />
+		<Compile Include="Enums\AcTextTransferType.cs" />
+		<Compile Include="Enums\AcView.cs" />
+		<Compile Include="Enums\AcWindowMode.cs" />
+		<Compile Include="Enums\AcFilterType.cs" />
+		<Compile Include="Enums\AcSpreadSheetType.cs" />
+		<Compile Include="Enums\AcImeMode.cs" />
+		<Compile Include="Enums\AcImeSentenceMode.cs" />
+		<Compile Include="Enums\AcHyperlinkPart.cs" />
+		<Compile Include="Enums\AcProjectType.cs" />
+		<Compile Include="Enums\AcCommand.cs" />
+		<Compile Include="Enums\AcShowToolbar.cs" />
+		<Compile Include="Enums\AcFormatConditionType.cs" />
+		<Compile Include="Enums\AcFormatConditionOperator.cs" />
+		<Compile Include="Enums\AcColorIndex.cs" />
+		<Compile Include="Enums\RefKind.cs" />
+		<Compile Include="Enums\ProcKind.cs" />
+		<Compile Include="Enums\AcDefView.cs" />
+		<Compile Include="Enums\AcCurrentView.cs" />
+		<Compile Include="Enums\AcFileFormat.cs" />
+		<Compile Include="Enums\AcExportXMLObjectType.cs" />
+		<Compile Include="Enums\AcExportXMLSchemaFormat.cs" />
+		<Compile Include="Enums\AcExportXMLEncoding.cs" />
+		<Compile Include="Enums\AcPrintColor.cs" />
+		<Compile Include="Enums\AcPrintDuplex.cs" />
+		<Compile Include="Enums\AcPrintOrientation.cs" />
+		<Compile Include="Enums\AcPrintObjQuality.cs" />
+		<Compile Include="Enums\AcPrintPaperBin.cs" />
+		<Compile Include="Enums\AcPrintPaperSize.cs" />
+		<Compile Include="Enums\AcPrintItemLayout.cs" />
+		<Compile Include="Enums\AcImportXMLOption.cs" />
+		<Compile Include="Enums\AcExportXMLOtherFlags.cs" />
+		<Compile Include="Enums\AcTransformXMLScriptOption.cs" />
+		<Compile Include="Enums\AcSplitFormPrinting.cs" />
+		<Compile Include="Enums\AcSplitFormOrientation.cs" />
+		<Compile Include="Enums\AcSplitFormDatasheet.cs" />
+		<Compile Include="Enums\AcLayoutType.cs" />
+		<Compile Include="Enums\AcTextFormat.cs" />
+		<Compile Include="Enums\AcSeparatorCharacters.cs" />
+		<Compile Include="Enums\AcHorizontalAnchor.cs" />
+		<Compile Include="Enums\AcVerticalAnchor.cs" />
+		<Compile Include="Enums\AcDisplayAs.cs" />
+		<Compile Include="Enums\AcExportQuality.cs" />
+		<Compile Include="Enums\AcDefReportView.cs" />
+		<Compile Include="Enums\AcSharePointListTransferType.cs" />
+		<Compile Include="Enums\AcProperty.cs" />
+		<Compile Include="Enums\AcNewDatabaseFormat.cs" />
+		<Compile Include="Enums\AcCursorOnHover.cs" />
+		<Compile Include="Enums\AcDisplayAsHyperlink.cs" />
+		<Compile Include="Enums\AcPictureCaptionArrangement.cs" />
+		<Compile Include="Enums\AcWebBrowserState.cs" />
+		<Compile Include="Enums\AcWebBrowserScrollBars.cs" />
+		<Compile Include="Enums\AcFormatBarLimits.cs" />
+		<Compile Include="Enums\AcBrowseToObjectType.cs" />
+		<Compile Include="Enums\AcWebUserDisplay.cs" />
+		<Compile Include="Enums\AcWebUserGroupsDisplay.cs" />
+		<Compile Include="Enums\AcResourceType.cs" />
+		<Compile Include="Enums\AcNavigationSpan.cs" />
+
+    		<Compile Include="Interfaces\__Help.cs" />
+
+    		<Compile Include="DispatchInterfaces\DoCmd.cs" />
+		<Compile Include="DispatchInterfaces\_RecordsetEvents.cs" />
+		<Compile Include="DispatchInterfaces\_AccessProperty.cs" />
+		<Compile Include="DispatchInterfaces\Properties.cs" />
+		<Compile Include="DispatchInterfaces\_FormatCondition.cs" />
+		<Compile Include="DispatchInterfaces\FormatConditions.cs" />
+		<Compile Include="DispatchInterfaces\_ItemsSelected.cs" />
+		<Compile Include="DispatchInterfaces\Children.cs" />
+		<Compile Include="DispatchInterfaces\_AccessField.cs" />
+		<Compile Include="DispatchInterfaces\_Hyperlink.cs" />
+		<Compile Include="DispatchInterfaces\Pages.cs" />
+		<Compile Include="DispatchInterfaces\_Control.cs" />
+		<Compile Include="DispatchInterfaces\Controls.cs" />
+		<Compile Include="DispatchInterfaces\_Label.cs" />
+		<Compile Include="DispatchInterfaces\_Rectangle.cs" />
+		<Compile Include="DispatchInterfaces\_Line.cs" />
+		<Compile Include="DispatchInterfaces\_Image.cs" />
+		<Compile Include="DispatchInterfaces\_CommandButton.cs" />
+		<Compile Include="DispatchInterfaces\_OptionButton.cs" />
+		<Compile Include="DispatchInterfaces\_Checkbox.cs" />
+		<Compile Include="DispatchInterfaces\_OptionGroup.cs" />
+		<Compile Include="DispatchInterfaces\_BoundObjectFrame.cs" />
+		<Compile Include="DispatchInterfaces\_Textbox.cs" />
+		<Compile Include="DispatchInterfaces\_ListBox.cs" />
+		<Compile Include="DispatchInterfaces\_Combobox.cs" />
+		<Compile Include="DispatchInterfaces\_ObjectFrame.cs" />
+		<Compile Include="DispatchInterfaces\_PageBreak.cs" />
+		<Compile Include="DispatchInterfaces\_ToggleButton.cs" />
+		<Compile Include="DispatchInterfaces\_PaletteButton.cs" />
+		<Compile Include="DispatchInterfaces\_SubForm.cs" />
+		<Compile Include="DispatchInterfaces\_SubReport.cs" />
+		<Compile Include="DispatchInterfaces\_CustomControl.cs" />
+		<Compile Include="DispatchInterfaces\_TabControl.cs" />
+		<Compile Include="DispatchInterfaces\_Page.cs" />
+		<Compile Include="DispatchInterfaces\_Section.cs" />
+		<Compile Include="DispatchInterfaces\_GroupLevel.cs" />
+		<Compile Include="DispatchInterfaces\Module.cs" />
+		<Compile Include="DispatchInterfaces\Modules.cs" />
+		<Compile Include="DispatchInterfaces\_Form.cs" />
+		<Compile Include="DispatchInterfaces\Forms.cs" />
+		<Compile Include="DispatchInterfaces\_Report.cs" />
+		<Compile Include="DispatchInterfaces\Reports.cs" />
+		<Compile Include="DispatchInterfaces\Screen.cs" />
+		<Compile Include="DispatchInterfaces\_Application.cs" />
+		<Compile Include="DispatchInterfaces\Reference.cs" />
+		<Compile Include="DispatchInterfaces\_References.cs" />
+		<Compile Include="DispatchInterfaces\_Dummy.cs" />
+		<Compile Include="DispatchInterfaces\_DataAccessPage.cs" />
+		<Compile Include="DispatchInterfaces\DataAccessPages.cs" />
+		<Compile Include="DispatchInterfaces\AllObjects.cs" />
+		<Compile Include="DispatchInterfaces\AccessObjectProperty.cs" />
+		<Compile Include="DispatchInterfaces\AccessObjectProperties.cs" />
+		<Compile Include="DispatchInterfaces\_CurrentProject.cs" />
+		<Compile Include="DispatchInterfaces\_CurrentData.cs" />
+		<Compile Include="DispatchInterfaces\AccessObject.cs" />
+		<Compile Include="DispatchInterfaces\_WizHook.cs" />
+		<Compile Include="DispatchInterfaces\_DefaultWebOptions.cs" />
+		<Compile Include="DispatchInterfaces\_WebOptions.cs" />
+		<Compile Include="DispatchInterfaces\_Printer.cs" />
+		<Compile Include="DispatchInterfaces\Printers.cs" />
+		<Compile Include="DispatchInterfaces\_Form2.cs" />
+		<Compile Include="DispatchInterfaces\_Report2.cs" />
+		<Compile Include="DispatchInterfaces\_AdditionalData.cs" />
+		<Compile Include="DispatchInterfaces\_AutoCorrect.cs" />
+		<Compile Include="DispatchInterfaces\_DependencyObjects.cs" />
+		<Compile Include="DispatchInterfaces\_DependencyInfo.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTags.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTagAction.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTagActions.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTagProperty.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTagProperties.cs" />
+		<Compile Include="DispatchInterfaces\_SmartTag.cs" />
+		<Compile Include="DispatchInterfaces\ImportExportSpecification.cs" />
+		<Compile Include="DispatchInterfaces\ImportExportSpecifications.cs" />
+		<Compile Include="DispatchInterfaces\_Form3.cs" />
+		<Compile Include="DispatchInterfaces\_Report3.cs" />
+		<Compile Include="DispatchInterfaces\_Attachment.cs" />
+		<Compile Include="DispatchInterfaces\_MacroError.cs" />
+		<Compile Include="DispatchInterfaces\_TempVar.cs" />
+		<Compile Include="DispatchInterfaces\_TempVars.cs" />
+		<Compile Include="DispatchInterfaces\_EmptyCell.cs" />
+		<Compile Include="DispatchInterfaces\_WebBrowserControl.cs" />
+		<Compile Include="DispatchInterfaces\WebServices.cs" />
+		<Compile Include="DispatchInterfaces\WebService.cs" />
+		<Compile Include="DispatchInterfaces\Entities.cs" />
+		<Compile Include="DispatchInterfaces\Entity.cs" />
+		<Compile Include="DispatchInterfaces\Operations.cs" />
+		<Compile Include="DispatchInterfaces\Operation.cs" />
+		<Compile Include="DispatchInterfaces\WSParameters.cs" />
+		<Compile Include="DispatchInterfaces\WSParameter.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationButton.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationControl.cs" />
+		<Compile Include="DispatchInterfaces\_LocalVar.cs" />
+		<Compile Include="DispatchInterfaces\_LocalVars.cs" />
+		<Compile Include="DispatchInterfaces\SharedResources.cs" />
+		<Compile Include="DispatchInterfaces\SharedResource.cs" />
+		<Compile Include="DispatchInterfaces\_ReturnVar.cs" />
+		<Compile Include="DispatchInterfaces\_ReturnVars.cs" />
+		<Compile Include="DispatchInterfaces\_DesignerReceiver.cs" />
+		<Compile Include="DispatchInterfaces\_AddTileUIReceiver.cs" />
+		<Compile Include="DispatchInterfaces\_SqmProxyReceiver.cs" />
+
+    		<Compile Include="Classes\FormatCondition.cs" />
+		<Compile Include="Classes\AccessField.cs" />
+		<Compile Include="Classes\Hyperlink.cs" />
+		<Compile Include="Classes\Page.cs" />
+		<Compile Include="Classes\Control.cs" />
+		<Compile Include="Classes\_ControlInReportEvents.cs" />
+		<Compile Include="Classes\Label.cs" />
+		<Compile Include="Classes\_ChildLabel.cs" />
+		<Compile Include="Classes\Rectangle.cs" />
+		<Compile Include="Classes\Line.cs" />
+		<Compile Include="Classes\Image.cs" />
+		<Compile Include="Classes\CommandButton.cs" />
+		<Compile Include="Classes\OptionButton.cs" />
+		<Compile Include="Classes\_OptionButtonInOption.cs" />
+		<Compile Include="Classes\CheckBox.cs" />
+		<Compile Include="Classes\_CheckBoxInOption.cs" />
+		<Compile Include="Classes\OptionGroup.cs" />
+		<Compile Include="Classes\BoundObjectFrame.cs" />
+		<Compile Include="Classes\TextBox.cs" />
+		<Compile Include="Classes\ListBox.cs" />
+		<Compile Include="Classes\ComboBox.cs" />
+		<Compile Include="Classes\ObjectFrame.cs" />
+		<Compile Include="Classes\PageBreak.cs" />
+		<Compile Include="Classes\ToggleButton.cs" />
+		<Compile Include="Classes\_ToggleButtonInOption.cs" />
+		<Compile Include="Classes\PaletteButton.cs" />
+		<Compile Include="Classes\SubForm.cs" />
+		<Compile Include="Classes\SubReport.cs" />
+		<Compile Include="Classes\CustomControl.cs" />
+		<Compile Include="Classes\_CustomControlInReport.cs" />
+		<Compile Include="Classes\TabControl.cs" />
+		<Compile Include="Classes\Section.cs" />
+		<Compile Include="Classes\GroupLevel.cs" />
+		<Compile Include="Classes\_SectionInReport.cs" />
+		<Compile Include="Classes\_PageHdrFtrInReport.cs" />
+		<Compile Include="Classes\Form.cs" />
+		<Compile Include="Classes\Report.cs" />
+		<Compile Include="Classes\Application.cs" />
+		<Compile Include="Classes\References.cs" />
+		<Compile Include="Classes\DataAccessPage.cs" />
+		<Compile Include="Classes\AllForms.cs" />
+		<Compile Include="Classes\AllReports.cs" />
+		<Compile Include="Classes\AllMacros.cs" />
+		<Compile Include="Classes\AllModules.cs" />
+		<Compile Include="Classes\AllDataAccessPages.cs" />
+		<Compile Include="Classes\AllTables.cs" />
+		<Compile Include="Classes\AllQueries.cs" />
+		<Compile Include="Classes\AllViews.cs" />
+		<Compile Include="Classes\AllStoredProcedures.cs" />
+		<Compile Include="Classes\AllDatabaseDiagrams.cs" />
+		<Compile Include="Classes\CurrentProject.cs" />
+		<Compile Include="Classes\CurrentData.cs" />
+		<Compile Include="Classes\CodeProject.cs" />
+		<Compile Include="Classes\CodeData.cs" />
+		<Compile Include="Classes\WizHook.cs" />
+		<Compile Include="Classes\DefaultWebOptions.cs" />
+		<Compile Include="Classes\WebOptions.cs" />
+		<Compile Include="Classes\Class.cs" />
+		<Compile Include="Classes\FormOld.cs" />
+		<Compile Include="Classes\ReportOld.cs" />
+		<Compile Include="Classes\AllFunctions.cs" />
+		<Compile Include="Classes\Printer.cs" />
+		<Compile Include="Classes\AdditionalData.cs" />
+		<Compile Include="Classes\AutoCorrect.cs" />
+		<Compile Include="Classes\DependencyObjects.cs" />
+		<Compile Include="Classes\DependencyInfo.cs" />
+		<Compile Include="Classes\SmartTags.cs" />
+		<Compile Include="Classes\SmartTagAction.cs" />
+		<Compile Include="Classes\SmartTagActions.cs" />
+		<Compile Include="Classes\SmartTagProperty.cs" />
+		<Compile Include="Classes\SmartTagProperties.cs" />
+		<Compile Include="Classes\SmartTag.cs" />
+		<Compile Include="Classes\FormOldV10.cs" />
+		<Compile Include="Classes\ReportOldV10.cs" />
+		<Compile Include="Classes\Attachment.cs" />
+		<Compile Include="Classes\MacroError.cs" />
+		<Compile Include="Classes\TempVar.cs" />
+		<Compile Include="Classes\TempVars.cs" />
+		<Compile Include="Classes\EmptyCell.cs" />
+		<Compile Include="Classes\WebBrowserControl.cs" />
+		<Compile Include="Classes\NavigationButton.cs" />
+		<Compile Include="Classes\NavigationControl.cs" />
+		<Compile Include="Classes\LocalVar.cs" />
+		<Compile Include="Classes\LocalVars.cs" />
+		<Compile Include="Classes\ReturnVar.cs" />
+		<Compile Include="Classes\ReturnVars.cs" />
+
+    		<Compile Include="EventInterfaces\_References_Events.cs" />
+		<Compile Include="EventInterfaces\_FormEvents2.cs" />
+		<Compile Include="EventInterfaces\_ReportEvents2.cs" />
+		<Compile Include="EventInterfaces\DispAttachmentEvents.cs" />
+		<Compile Include="EventInterfaces\DispCommandButtonEvents.cs" />
+		<Compile Include="EventInterfaces\DispBoundObjectFrameEvents.cs" />
+		<Compile Include="EventInterfaces\DispObjectFrameEvents.cs" />
+		<Compile Include="EventInterfaces\DispCustomControlEvents.cs" />
+		<Compile Include="EventInterfaces\DispCheckBoxEvents.cs" />
+		<Compile Include="EventInterfaces\DispOptionButtonEvents.cs" />
+		<Compile Include="EventInterfaces\DispToggleButtonEvents.cs" />
+		<Compile Include="EventInterfaces\DispRectangleEvents.cs" />
+		<Compile Include="EventInterfaces\DispImageEvents.cs" />
+		<Compile Include="EventInterfaces\DispListBoxEvents.cs" />
+		<Compile Include="EventInterfaces\DispOptionGroupEvents.cs" />
+		<Compile Include="EventInterfaces\DispTextBoxEvents.cs" />
+		<Compile Include="EventInterfaces\DispComboBoxEvents.cs" />
+		<Compile Include="EventInterfaces\DispSubFormEvents.cs" />
+		<Compile Include="EventInterfaces\DispSubReportEvents.cs" />
+		<Compile Include="EventInterfaces\DispLineEvents.cs" />
+		<Compile Include="EventInterfaces\DispPageBreakEvents.cs" />
+		<Compile Include="EventInterfaces\DispSectionEvents.cs" />
+		<Compile Include="EventInterfaces\DispSectionInReportEvents.cs" />
+		<Compile Include="EventInterfaces\_DispControlInReportEvents.cs" />
+		<Compile Include="EventInterfaces\DispCustomControlInReportEvents.cs" />
+		<Compile Include="EventInterfaces\DispPaletteButtonEvents.cs" />
+		<Compile Include="EventInterfaces\DispPageHdrFtrInReportEvents.cs" />
+		<Compile Include="EventInterfaces\DispTabControlEvents.cs" />
+		<Compile Include="EventInterfaces\DispPageEvents.cs" />
+		<Compile Include="EventInterfaces\DispLabelEvents.cs" />
+		<Compile Include="EventInterfaces\DispChildLabelEvents.cs" />
+		<Compile Include="EventInterfaces\DispEmptyCellEvents.cs" />
+		<Compile Include="EventInterfaces\DispWebBrowserControlEvents.cs" />
+		<Compile Include="EventInterfaces\DispNavigationButtonEvents.cs" />
+		<Compile Include="EventInterfaces\DispNavigationControlEvents.cs" />
+		<Compile Include="EventInterfaces\__ControlInReportEvents.cs" />
+		<Compile Include="EventInterfaces\_LabelEvents.cs" />
+		<Compile Include="EventInterfaces\_ChildLabelEvents.cs" />
+		<Compile Include="EventInterfaces\_RectangleEvents.cs" />
+		<Compile Include="EventInterfaces\_LineEvents.cs" />
+		<Compile Include="EventInterfaces\_ImageEvents.cs" />
+		<Compile Include="EventInterfaces\_CommandButtonEvents.cs" />
+		<Compile Include="EventInterfaces\_OptionButtonEvents.cs" />
+		<Compile Include="EventInterfaces\_OptionButtonInOptionEvents.cs" />
+		<Compile Include="EventInterfaces\_CheckBoxEvents.cs" />
+		<Compile Include="EventInterfaces\_CheckBoxInOptionEvents.cs" />
+		<Compile Include="EventInterfaces\_OptionGroupEvents.cs" />
+		<Compile Include="EventInterfaces\_BoundObjectFrameEvents.cs" />
+		<Compile Include="EventInterfaces\_TextBoxEvents.cs" />
+		<Compile Include="EventInterfaces\_ListBoxEvents.cs" />
+		<Compile Include="EventInterfaces\_ComboBoxEvents.cs" />
+		<Compile Include="EventInterfaces\_ObjectFrameEvents.cs" />
+		<Compile Include="EventInterfaces\_PageBreakEvents.cs" />
+		<Compile Include="EventInterfaces\_ToggleButtonEvents.cs" />
+		<Compile Include="EventInterfaces\_ToggleButtonInOptionEvents.cs" />
+		<Compile Include="EventInterfaces\_PaletteButtonEvents.cs" />
+		<Compile Include="EventInterfaces\_SubFormEvents.cs" />
+		<Compile Include="EventInterfaces\_SubReportEvents.cs" />
+		<Compile Include="EventInterfaces\_CustomControlEvents.cs" />
+		<Compile Include="EventInterfaces\_CustomControlInReportEvents.cs" />
+		<Compile Include="EventInterfaces\_TabControlEvents.cs" />
+		<Compile Include="EventInterfaces\_PageEvents.cs" />
+		<Compile Include="EventInterfaces\_SectionEvents.cs" />
+		<Compile Include="EventInterfaces\_SectionInReportEvents.cs" />
+		<Compile Include="EventInterfaces\_PageHdrFtrInReportEvents.cs" />
+		<Compile Include="EventInterfaces\_FormEvents.cs" />
+		<Compile Include="EventInterfaces\_ReportEvents.cs" />
+		<Compile Include="EventInterfaces\_DummyEvents.cs" />
+
+    		<Compile Include="Modules\Global.cs" />
+
+    
+    		<Compile Include="Tools\COMAddin.cs" />
+		<Compile Include="Tools\ITaskPane.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAOApi.csproj">
+      <Project>{9F9E1AA6-516C-4121-87A9-241C80528866}</Project>
+      <Name>DAOApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBIDE\VBIDEApi.csproj">
+      <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ADODB\ADODBApi.csproj">
+      <Project>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</Project>
+      <Name>ADODBApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OWC10\OWC10Api.csproj">
+      <Project>{AE08E748-9569-4538-8BB1-F9E7AF0FCB3C}</Project>
+      <Name>OWC10Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98DE103A-F036-4814-A740-9B4DE13001FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.OutlookApi</RootNamespace>
+    <AssemblyName>OutlookApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>OutlookApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\OutlookApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\OutlookApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    
+    		<Compile Include="Enums\OlActionCopyLike.cs" />
+		<Compile Include="Enums\OlActionReplyStyle.cs" />
+		<Compile Include="Enums\OlActionResponseStyle.cs" />
+		<Compile Include="Enums\OlActionShowOn.cs" />
+		<Compile Include="Enums\OlAttachmentType.cs" />
+		<Compile Include="Enums\OlBusyStatus.cs" />
+		<Compile Include="Enums\OlDaysOfWeek.cs" />
+		<Compile Include="Enums\OlDefaultFolders.cs" />
+		<Compile Include="Enums\OlDisplayType.cs" />
+		<Compile Include="Enums\OlEditorType.cs" />
+		<Compile Include="Enums\OlFlagStatus.cs" />
+		<Compile Include="Enums\OlFolderDisplayMode.cs" />
+		<Compile Include="Enums\OlFormRegistry.cs" />
+		<Compile Include="Enums\OlGender.cs" />
+		<Compile Include="Enums\OlImportance.cs" />
+		<Compile Include="Enums\OlInspectorClose.cs" />
+		<Compile Include="Enums\OlItemType.cs" />
+		<Compile Include="Enums\OlJournalRecipientType.cs" />
+		<Compile Include="Enums\OlMailingAddress.cs" />
+		<Compile Include="Enums\OlMailRecipientType.cs" />
+		<Compile Include="Enums\OlMeetingRecipientType.cs" />
+		<Compile Include="Enums\OlMeetingResponse.cs" />
+		<Compile Include="Enums\OlMeetingStatus.cs" />
+		<Compile Include="Enums\OlNetMeetingType.cs" />
+		<Compile Include="Enums\OlNoteColor.cs" />
+		<Compile Include="Enums\OlObjectClass.cs" />
+		<Compile Include="Enums\OlOutlookBarViewType.cs" />
+		<Compile Include="Enums\OlPane.cs" />
+		<Compile Include="Enums\OlRecurrenceState.cs" />
+		<Compile Include="Enums\OlRecurrenceType.cs" />
+		<Compile Include="Enums\OlRemoteStatus.cs" />
+		<Compile Include="Enums\OlResponseStatus.cs" />
+		<Compile Include="Enums\OlSaveAsType.cs" />
+		<Compile Include="Enums\OlSensitivity.cs" />
+		<Compile Include="Enums\OlSortOrder.cs" />
+		<Compile Include="Enums\OlTaskDelegationState.cs" />
+		<Compile Include="Enums\OlTaskOwnership.cs" />
+		<Compile Include="Enums\OlTaskRecipientType.cs" />
+		<Compile Include="Enums\OlTaskResponse.cs" />
+		<Compile Include="Enums\OlTaskStatus.cs" />
+		<Compile Include="Enums\OlTrackingStatus.cs" />
+		<Compile Include="Enums\OlUserPropertyType.cs" />
+		<Compile Include="Enums\OlWindowState.cs" />
+		<Compile Include="Enums\OlSyncState.cs" />
+		<Compile Include="Enums\OlBodyFormat.cs" />
+		<Compile Include="Enums\OlDownloadState.cs" />
+		<Compile Include="Enums\OlOfficeDocItemsType.cs" />
+		<Compile Include="Enums\OlViewSaveOption.cs" />
+		<Compile Include="Enums\OlViewType.cs" />
+		<Compile Include="Enums\OlFlagIcon.cs" />
+		<Compile Include="Enums\OlExchangeConnectionMode.cs" />
+		<Compile Include="Enums\OlShowItemCount.cs" />
+		<Compile Include="Enums\OlStoreType.cs" />
+		<Compile Include="Enums\OlPermission.cs" />
+		<Compile Include="Enums\OlPermissionService.cs" />
+		<Compile Include="Enums\OlMousePointer.cs" />
+		<Compile Include="Enums\OlScrollBars.cs" />
+		<Compile Include="Enums\OlBackStyle.cs" />
+		<Compile Include="Enums\OlBorderStyle.cs" />
+		<Compile Include="Enums\OlEnterFieldBehavior.cs" />
+		<Compile Include="Enums\OlDragBehavior.cs" />
+		<Compile Include="Enums\OlComboBoxStyle.cs" />
+		<Compile Include="Enums\OlAlignment.cs" />
+		<Compile Include="Enums\OlMultiSelect.cs" />
+		<Compile Include="Enums\OlTextAlign.cs" />
+		<Compile Include="Enums\OlMatchEntry.cs" />
+		<Compile Include="Enums\OlPageType.cs" />
+		<Compile Include="Enums\OlTimeStyle.cs" />
+		<Compile Include="Enums\OlShiftState.cs" />
+		<Compile Include="Enums\OlMouseButton.cs" />
+		<Compile Include="Enums\OlPictureAlignment.cs" />
+		<Compile Include="Enums\OlAppointmentTimeField.cs" />
+		<Compile Include="Enums\OlHorizontalLayout.cs" />
+		<Compile Include="Enums\OlVerticalLayout.cs" />
+		<Compile Include="Enums\OlAttachmentBlockLevel.cs" />
+		<Compile Include="Enums\OlNavigationModuleType.cs" />
+		<Compile Include="Enums\OlSearchScope.cs" />
+		<Compile Include="Enums\OlExchangeStoreType.cs" />
+		<Compile Include="Enums\OlRuleType.cs" />
+		<Compile Include="Enums\OlRuleActionType.cs" />
+		<Compile Include="Enums\OlMarkInterval.cs" />
+		<Compile Include="Enums\OlRuleConditionType.cs" />
+		<Compile Include="Enums\OlAccountType.cs" />
+		<Compile Include="Enums\OlAddressListType.cs" />
+		<Compile Include="Enums\OlSpecialFolders.cs" />
+		<Compile Include="Enums\OlStorageIdentifierType.cs" />
+		<Compile Include="Enums\OlCalendarMailFormat.cs" />
+		<Compile Include="Enums\OlCalendarDetail.cs" />
+		<Compile Include="Enums\OlContactPhoneNumber.cs" />
+		<Compile Include="Enums\OlBusinessCardType.cs" />
+		<Compile Include="Enums\OlAddressEntryUserType.cs" />
+		<Compile Include="Enums\OlRecipientSelectors.cs" />
+		<Compile Include="Enums\OlDefaultSelectNamesDisplayMode.cs" />
+		<Compile Include="Enums\OlCategoryColor.cs" />
+		<Compile Include="Enums\OlCategoryShortcutKey.cs" />
+		<Compile Include="Enums\OlSharingProvider.cs" />
+		<Compile Include="Enums\OlSharingMsgType.cs" />
+		<Compile Include="Enums\OlAutoDiscoverConnectionMode.cs" />
+		<Compile Include="Enums\OlReferenceType.cs" />
+		<Compile Include="Enums\OlFormRegionMode.cs" />
+		<Compile Include="Enums\OlFormRegionSize.cs" />
+		<Compile Include="Enums\OlRuleExecuteOption.cs" />
+		<Compile Include="Enums\OlDefaultExpandCollapseSetting.cs" />
+		<Compile Include="Enums\OlMultiLine.cs" />
+		<Compile Include="Enums\OlGridLineStyle.cs" />
+		<Compile Include="Enums\OlIconViewType.cs" />
+		<Compile Include="Enums\OlIconViewPlacement.cs" />
+		<Compile Include="Enums\OlCalendarViewMode.cs" />
+		<Compile Include="Enums\OlDayWeekTimeScale.cs" />
+		<Compile Include="Enums\OlTimelineViewMode.cs" />
+		<Compile Include="Enums\OlAutoPreview.cs" />
+		<Compile Include="Enums\OlColor.cs" />
+		<Compile Include="Enums\OlAlign.cs" />
+		<Compile Include="Enums\OlFormatCurrency.cs" />
+		<Compile Include="Enums\OlFormatDateTime.cs" />
+		<Compile Include="Enums\OlFormatDuration.cs" />
+		<Compile Include="Enums\OlFormatInteger.cs" />
+		<Compile Include="Enums\OlFormatKeywords.cs" />
+		<Compile Include="Enums\OlFormatNumber.cs" />
+		<Compile Include="Enums\OlFormatPercent.cs" />
+		<Compile Include="Enums\OlFormatYesNo.cs" />
+		<Compile Include="Enums\OlFormatEnumeration.cs" />
+		<Compile Include="Enums\OlFormatSmartFrom.cs" />
+		<Compile Include="Enums\OlContextMenu.cs" />
+		<Compile Include="Enums\OlFormatText.cs" />
+		<Compile Include="Enums\OlGroupType.cs" />
+		<Compile Include="Enums\OlTableContents.cs" />
+		<Compile Include="Enums\OlFormRegionIcon.cs" />
+		<Compile Include="Enums\OlSelectionLocation.cs" />
+		<Compile Include="Enums\OlSelectionContents.cs" />
+		<Compile Include="Enums\OlAlwaysDeleteConversation.cs" />
+		<Compile Include="Enums\OlSolutionScope.cs" />
+		<Compile Include="Enums\OlMobileFormat.cs" />
+		<Compile Include="Enums\OlAppointmentCopyOptions.cs" />
+
+    		<Compile Include="Interfaces\PropertyPage.cs" />
+		<Compile Include="Interfaces\_IRecipientControl.cs" />
+		<Compile Include="Interfaces\_IDocSiteControl.cs" />
+		<Compile Include="Interfaces\_IPageWrapCtrl.cs" />
+		<Compile Include="Interfaces\_IInspectorCtrl.cs" />
+
+    		<Compile Include="DispatchInterfaces\Action.cs" />
+		<Compile Include="DispatchInterfaces\_Application.cs" />
+		<Compile Include="DispatchInterfaces\_NameSpace.cs" />
+		<Compile Include="DispatchInterfaces\Recipient.cs" />
+		<Compile Include="DispatchInterfaces\AddressEntry.cs" />
+		<Compile Include="DispatchInterfaces\AddressEntries.cs" />
+		<Compile Include="DispatchInterfaces\_Folders.cs" />
+		<Compile Include="DispatchInterfaces\MAPIFolder.cs" />
+		<Compile Include="DispatchInterfaces\_Items.cs" />
+		<Compile Include="DispatchInterfaces\_Explorer.cs" />
+		<Compile Include="DispatchInterfaces\Panes.cs" />
+		<Compile Include="DispatchInterfaces\Selection.cs" />
+		<Compile Include="DispatchInterfaces\AddressLists.cs" />
+		<Compile Include="DispatchInterfaces\AddressList.cs" />
+		<Compile Include="DispatchInterfaces\SyncObjects.cs" />
+		<Compile Include="DispatchInterfaces\_SyncObject.cs" />
+		<Compile Include="DispatchInterfaces\_Inspector.cs" />
+		<Compile Include="DispatchInterfaces\_Explorers.cs" />
+		<Compile Include="DispatchInterfaces\_Inspectors.cs" />
+		<Compile Include="DispatchInterfaces\Actions.cs" />
+		<Compile Include="DispatchInterfaces\PropertyPages.cs" />
+		<Compile Include="DispatchInterfaces\_AppointmentItem.cs" />
+		<Compile Include="DispatchInterfaces\Attachments.cs" />
+		<Compile Include="DispatchInterfaces\Attachment.cs" />
+		<Compile Include="DispatchInterfaces\FormDescription.cs" />
+		<Compile Include="DispatchInterfaces\UserProperties.cs" />
+		<Compile Include="DispatchInterfaces\UserProperty.cs" />
+		<Compile Include="DispatchInterfaces\Recipients.cs" />
+		<Compile Include="DispatchInterfaces\_MailItem.cs" />
+		<Compile Include="DispatchInterfaces\Links.cs" />
+		<Compile Include="DispatchInterfaces\Link.cs" />
+		<Compile Include="DispatchInterfaces\RecurrencePattern.cs" />
+		<Compile Include="DispatchInterfaces\Exceptions.cs" />
+		<Compile Include="DispatchInterfaces\Exception.cs" />
+		<Compile Include="DispatchInterfaces\_MeetingItem.cs" />
+		<Compile Include="DispatchInterfaces\_ContactItem.cs" />
+		<Compile Include="DispatchInterfaces\_DistListItem.cs" />
+		<Compile Include="DispatchInterfaces\_DocumentItem.cs" />
+		<Compile Include="DispatchInterfaces\_JournalItem.cs" />
+		<Compile Include="DispatchInterfaces\_NoteItem.cs" />
+		<Compile Include="DispatchInterfaces\OutlookBarGroup.cs" />
+		<Compile Include="DispatchInterfaces\_OutlookBarShortcuts.cs" />
+		<Compile Include="DispatchInterfaces\OutlookBarShortcut.cs" />
+		<Compile Include="DispatchInterfaces\_OutlookBarGroups.cs" />
+		<Compile Include="DispatchInterfaces\_OutlookBarPane.cs" />
+		<Compile Include="DispatchInterfaces\OutlookBarStorage.cs" />
+		<Compile Include="DispatchInterfaces\PropertyPageSite.cs" />
+		<Compile Include="DispatchInterfaces\Pages.cs" />
+		<Compile Include="DispatchInterfaces\_PostItem.cs" />
+		<Compile Include="DispatchInterfaces\_RemoteItem.cs" />
+		<Compile Include="DispatchInterfaces\_ReportItem.cs" />
+		<Compile Include="DispatchInterfaces\_TaskItem.cs" />
+		<Compile Include="DispatchInterfaces\_TaskRequestAcceptItem.cs" />
+		<Compile Include="DispatchInterfaces\_TaskRequestDeclineItem.cs" />
+		<Compile Include="DispatchInterfaces\_TaskRequestItem.cs" />
+		<Compile Include="DispatchInterfaces\_TaskRequestUpdateItem.cs" />
+		<Compile Include="DispatchInterfaces\_DRecipientControl.cs" />
+		<Compile Include="DispatchInterfaces\_DDocSiteControl.cs" />
+		<Compile Include="DispatchInterfaces\View.cs" />
+		<Compile Include="DispatchInterfaces\_Views.cs" />
+		<Compile Include="DispatchInterfaces\Search.cs" />
+		<Compile Include="DispatchInterfaces\_Results.cs" />
+		<Compile Include="DispatchInterfaces\_Reminders.cs" />
+		<Compile Include="DispatchInterfaces\_Reminder.cs" />
+		<Compile Include="DispatchInterfaces\ItemProperties.cs" />
+		<Compile Include="DispatchInterfaces\ItemProperty.cs" />
+		<Compile Include="DispatchInterfaces\_IDpxCtrl.cs" />
+		<Compile Include="DispatchInterfaces\_DPageWrapCtrl.cs" />
+		<Compile Include="DispatchInterfaces\_DInspectorCtrl.cs" />
+		<Compile Include="DispatchInterfaces\DDataSourceObject.cs" />
+		<Compile Include="DispatchInterfaces\Conflicts.cs" />
+		<Compile Include="DispatchInterfaces\Conflict.cs" />
+		<Compile Include="DispatchInterfaces\OlkControl.cs" />
+		<Compile Include="DispatchInterfaces\_OlkTextBox.cs" />
+		<Compile Include="DispatchInterfaces\_OlkLabel.cs" />
+		<Compile Include="DispatchInterfaces\_OlkCommandButton.cs" />
+		<Compile Include="DispatchInterfaces\_OlkCheckBox.cs" />
+		<Compile Include="DispatchInterfaces\_OlkOptionButton.cs" />
+		<Compile Include="DispatchInterfaces\_OlkComboBox.cs" />
+		<Compile Include="DispatchInterfaces\_OlkListBox.cs" />
+		<Compile Include="DispatchInterfaces\_OlkInfoBar.cs" />
+		<Compile Include="DispatchInterfaces\_OlkContactPhoto.cs" />
+		<Compile Include="DispatchInterfaces\_OlkBusinessCardControl.cs" />
+		<Compile Include="DispatchInterfaces\_OlkPageControl.cs" />
+		<Compile Include="DispatchInterfaces\_OlkDateControl.cs" />
+		<Compile Include="DispatchInterfaces\_OlkTimeControl.cs" />
+		<Compile Include="DispatchInterfaces\_OlkCategory.cs" />
+		<Compile Include="DispatchInterfaces\_OlkFrameHeader.cs" />
+		<Compile Include="DispatchInterfaces\_OlkSenderPhoto.cs" />
+		<Compile Include="DispatchInterfaces\_TimeZone.cs" />
+		<Compile Include="DispatchInterfaces\_PropertyAccessor.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationPane.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationModule.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationModules.cs" />
+		<Compile Include="DispatchInterfaces\_Store.cs" />
+		<Compile Include="DispatchInterfaces\_Rules.cs" />
+		<Compile Include="DispatchInterfaces\_Rule.cs" />
+		<Compile Include="DispatchInterfaces\_RuleActions.cs" />
+		<Compile Include="DispatchInterfaces\_RuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_MoveOrCopyRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_SendRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_AssignToCategoryRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_PlaySoundRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_MarkAsTaskRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_NewItemAlertRuleAction.cs" />
+		<Compile Include="DispatchInterfaces\_RuleConditions.cs" />
+		<Compile Include="DispatchInterfaces\_RuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_ImportanceRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_AccountRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_Account.cs" />
+		<Compile Include="DispatchInterfaces\_TextRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_CategoryRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_FormNameRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_ToOrFromRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_AddressRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_SenderInAddressListRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_FromRssFeedRuleCondition.cs" />
+		<Compile Include="DispatchInterfaces\_StorageItem.cs" />
+		<Compile Include="DispatchInterfaces\_Table.cs" />
+		<Compile Include="DispatchInterfaces\_Row.cs" />
+		<Compile Include="DispatchInterfaces\_Columns.cs" />
+		<Compile Include="DispatchInterfaces\_Column.cs" />
+		<Compile Include="DispatchInterfaces\_CalendarSharing.cs" />
+		<Compile Include="DispatchInterfaces\_UserDefinedProperties.cs" />
+		<Compile Include="DispatchInterfaces\_UserDefinedProperty.cs" />
+		<Compile Include="DispatchInterfaces\_ExchangeUser.cs" />
+		<Compile Include="DispatchInterfaces\_ExchangeDistributionList.cs" />
+		<Compile Include="DispatchInterfaces\_Accounts.cs" />
+		<Compile Include="DispatchInterfaces\_Stores.cs" />
+		<Compile Include="DispatchInterfaces\_SelectNamesDialog.cs" />
+		<Compile Include="DispatchInterfaces\_Categories.cs" />
+		<Compile Include="DispatchInterfaces\_Category.cs" />
+		<Compile Include="DispatchInterfaces\_SharingItem.cs" />
+		<Compile Include="DispatchInterfaces\_TimeZones.cs" />
+		<Compile Include="DispatchInterfaces\_OlkTimeZoneControl.cs" />
+		<Compile Include="DispatchInterfaces\_AttachmentSelection.cs" />
+		<Compile Include="DispatchInterfaces\_FormRegion.cs" />
+		<Compile Include="DispatchInterfaces\_TableView.cs" />
+		<Compile Include="DispatchInterfaces\_ViewFields.cs" />
+		<Compile Include="DispatchInterfaces\_ViewField.cs" />
+		<Compile Include="DispatchInterfaces\_ColumnFormat.cs" />
+		<Compile Include="DispatchInterfaces\_OrderFields.cs" />
+		<Compile Include="DispatchInterfaces\_OrderField.cs" />
+		<Compile Include="DispatchInterfaces\_ViewFont.cs" />
+		<Compile Include="DispatchInterfaces\_AutoFormatRules.cs" />
+		<Compile Include="DispatchInterfaces\_AutoFormatRule.cs" />
+		<Compile Include="DispatchInterfaces\_IconView.cs" />
+		<Compile Include="DispatchInterfaces\_CardView.cs" />
+		<Compile Include="DispatchInterfaces\_CalendarView.cs" />
+		<Compile Include="DispatchInterfaces\_TimelineView.cs" />
+		<Compile Include="DispatchInterfaces\_MailModule.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationGroups.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationGroup.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationFolders.cs" />
+		<Compile Include="DispatchInterfaces\_NavigationFolder.cs" />
+		<Compile Include="DispatchInterfaces\_CalendarModule.cs" />
+		<Compile Include="DispatchInterfaces\_ContactsModule.cs" />
+		<Compile Include="DispatchInterfaces\_TasksModule.cs" />
+		<Compile Include="DispatchInterfaces\_JournalModule.cs" />
+		<Compile Include="DispatchInterfaces\_NotesModule.cs" />
+		<Compile Include="DispatchInterfaces\_BusinessCardView.cs" />
+		<Compile Include="DispatchInterfaces\_FormRegionStartup.cs" />
+		<Compile Include="DispatchInterfaces\_AccountSelector.cs" />
+		<Compile Include="DispatchInterfaces\_Conversation.cs" />
+		<Compile Include="DispatchInterfaces\_SimpleItems.cs" />
+		<Compile Include="DispatchInterfaces\_SolutionsModule.cs" />
+		<Compile Include="DispatchInterfaces\_MobileItem.cs" />
+		<Compile Include="DispatchInterfaces\_ConversationHeader.cs" />
+		<Compile Include="DispatchInterfaces\_PeopleView.cs" />
+
+    		<Compile Include="Classes\SyncObject.cs" />
+		<Compile Include="Classes\Explorer.cs" />
+		<Compile Include="Classes\Inspector.cs" />
+		<Compile Include="Classes\MailItem.cs" />
+		<Compile Include="Classes\AppointmentItem.cs" />
+		<Compile Include="Classes\MeetingItem.cs" />
+		<Compile Include="Classes\TaskItem.cs" />
+		<Compile Include="Classes\Application.cs" />
+		<Compile Include="Classes\ContactItem.cs" />
+		<Compile Include="Classes\DistListItem.cs" />
+		<Compile Include="Classes\DocumentItem.cs" />
+		<Compile Include="Classes\Explorers.cs" />
+		<Compile Include="Classes\Inspectors.cs" />
+		<Compile Include="Classes\Folders.cs" />
+		<Compile Include="Classes\Items.cs" />
+		<Compile Include="Classes\JournalItem.cs" />
+		<Compile Include="Classes\NameSpace.cs" />
+		<Compile Include="Classes\NoteItem.cs" />
+		<Compile Include="Classes\OutlookBarGroups.cs" />
+		<Compile Include="Classes\OutlookBarPane.cs" />
+		<Compile Include="Classes\OutlookBarShortcuts.cs" />
+		<Compile Include="Classes\PostItem.cs" />
+		<Compile Include="Classes\RemoteItem.cs" />
+		<Compile Include="Classes\ReportItem.cs" />
+		<Compile Include="Classes\TaskRequestAcceptItem.cs" />
+		<Compile Include="Classes\TaskRequestDeclineItem.cs" />
+		<Compile Include="Classes\TaskRequestItem.cs" />
+		<Compile Include="Classes\TaskRequestUpdateItem.cs" />
+		<Compile Include="Classes\_RecipientControl.cs" />
+		<Compile Include="Classes\_DocSiteControl.cs" />
+		<Compile Include="Classes\_DpxCtrl.cs" />
+		<Compile Include="Classes\_PageWrapCtrl.cs" />
+		<Compile Include="Classes\_InspectorCtrl.cs" />
+		<Compile Include="Classes\DataSourceObject.cs" />
+		<Compile Include="Classes\Results.cs" />
+		<Compile Include="Classes\Views.cs" />
+		<Compile Include="Classes\Reminder.cs" />
+		<Compile Include="Classes\Reminders.cs" />
+		<Compile Include="Classes\OlkTextBox.cs" />
+		<Compile Include="Classes\OlkLabel.cs" />
+		<Compile Include="Classes\OlkCommandButton.cs" />
+		<Compile Include="Classes\OlkCheckBox.cs" />
+		<Compile Include="Classes\OlkOptionButton.cs" />
+		<Compile Include="Classes\OlkComboBox.cs" />
+		<Compile Include="Classes\OlkListBox.cs" />
+		<Compile Include="Classes\OlkInfoBar.cs" />
+		<Compile Include="Classes\OlkContactPhoto.cs" />
+		<Compile Include="Classes\OlkBusinessCardControl.cs" />
+		<Compile Include="Classes\OlkPageControl.cs" />
+		<Compile Include="Classes\OlkDateControl.cs" />
+		<Compile Include="Classes\OlkTimeControl.cs" />
+		<Compile Include="Classes\OlkCategory.cs" />
+		<Compile Include="Classes\OlkFrameHeader.cs" />
+		<Compile Include="Classes\OlkSenderPhoto.cs" />
+		<Compile Include="Classes\PropertyAccessor.cs" />
+		<Compile Include="Classes\NavigationModule.cs" />
+		<Compile Include="Classes\NavigationModules.cs" />
+		<Compile Include="Classes\Store.cs" />
+		<Compile Include="Classes\Rules.cs" />
+		<Compile Include="Classes\RuleActions.cs" />
+		<Compile Include="Classes\MoveOrCopyRuleAction.cs" />
+		<Compile Include="Classes\RuleAction.cs" />
+		<Compile Include="Classes\SendRuleAction.cs" />
+		<Compile Include="Classes\AssignToCategoryRuleAction.cs" />
+		<Compile Include="Classes\PlaySoundRuleAction.cs" />
+		<Compile Include="Classes\MarkAsTaskRuleAction.cs" />
+		<Compile Include="Classes\NewItemAlertRuleAction.cs" />
+		<Compile Include="Classes\RuleConditions.cs" />
+		<Compile Include="Classes\RuleCondition.cs" />
+		<Compile Include="Classes\ImportanceRuleCondition.cs" />
+		<Compile Include="Classes\AccountRuleCondition.cs" />
+		<Compile Include="Classes\Account.cs" />
+		<Compile Include="Classes\TextRuleCondition.cs" />
+		<Compile Include="Classes\CategoryRuleCondition.cs" />
+		<Compile Include="Classes\FormNameRuleCondition.cs" />
+		<Compile Include="Classes\ToOrFromRuleCondition.cs" />
+		<Compile Include="Classes\AddressRuleCondition.cs" />
+		<Compile Include="Classes\SenderInAddressListRuleCondition.cs" />
+		<Compile Include="Classes\FromRssFeedRuleCondition.cs" />
+		<Compile Include="Classes\Rule.cs" />
+		<Compile Include="Classes\Table.cs" />
+		<Compile Include="Classes\Row.cs" />
+		<Compile Include="Classes\Columns.cs" />
+		<Compile Include="Classes\Column.cs" />
+		<Compile Include="Classes\CalendarSharing.cs" />
+		<Compile Include="Classes\UserDefinedProperties.cs" />
+		<Compile Include="Classes\UserDefinedProperty.cs" />
+		<Compile Include="Classes\ExchangeUser.cs" />
+		<Compile Include="Classes\ExchangeDistributionList.cs" />
+		<Compile Include="Classes\Accounts.cs" />
+		<Compile Include="Classes\Stores.cs" />
+		<Compile Include="Classes\SelectNamesDialog.cs" />
+		<Compile Include="Classes\Categories.cs" />
+		<Compile Include="Classes\Category.cs" />
+		<Compile Include="Classes\SharingItem.cs" />
+		<Compile Include="Classes\TimeZones.cs" />
+		<Compile Include="Classes\OlkTimeZoneControl.cs" />
+		<Compile Include="Classes\AttachmentSelection.cs" />
+		<Compile Include="Classes\Folder.cs" />
+		<Compile Include="Classes\ViewFields.cs" />
+		<Compile Include="Classes\ColumnFormat.cs" />
+		<Compile Include="Classes\ViewField.cs" />
+		<Compile Include="Classes\OrderFields.cs" />
+		<Compile Include="Classes\OrderField.cs" />
+		<Compile Include="Classes\ViewFont.cs" />
+		<Compile Include="Classes\AutoFormatRules.cs" />
+		<Compile Include="Classes\AutoFormatRule.cs" />
+		<Compile Include="Classes\NavigationFolders.cs" />
+		<Compile Include="Classes\NavigationFolder.cs" />
+		<Compile Include="Classes\NavigationGroup.cs" />
+		<Compile Include="Classes\FormRegion.cs" />
+		<Compile Include="Classes\StorageItem.cs" />
+		<Compile Include="Classes\NavigationPane.cs" />
+		<Compile Include="Classes\NavigationGroups.cs" />
+		<Compile Include="Classes\DoNotUseMeFolder.cs" />
+		<Compile Include="Classes\TimelineView.cs" />
+		<Compile Include="Classes\MailModule.cs" />
+		<Compile Include="Classes\CalendarModule.cs" />
+		<Compile Include="Classes\ContactsModule.cs" />
+		<Compile Include="Classes\TasksModule.cs" />
+		<Compile Include="Classes\JournalModule.cs" />
+		<Compile Include="Classes\NotesModule.cs" />
+		<Compile Include="Classes\TableView.cs" />
+		<Compile Include="Classes\IconView.cs" />
+		<Compile Include="Classes\CardView.cs" />
+		<Compile Include="Classes\CalendarView.cs" />
+		<Compile Include="Classes\BusinessCardView.cs" />
+		<Compile Include="Classes\FormRegionStartup.cs" />
+		<Compile Include="Classes\TimeZone.cs" />
+		<Compile Include="Classes\SimpleItems.cs" />
+		<Compile Include="Classes\MobileItem.cs" />
+		<Compile Include="Classes\SolutionsModule.cs" />
+		<Compile Include="Classes\Conversation.cs" />
+		<Compile Include="Classes\AccountSelector.cs" />
+		<Compile Include="Classes\ConversationHeader.cs" />
+		<Compile Include="Classes\PeopleView.cs" />
+
+    		<Compile Include="EventInterfaces\SyncObjectEvents.cs" />
+		<Compile Include="EventInterfaces\ExplorerEvents.cs" />
+		<Compile Include="EventInterfaces\InspectorEvents.cs" />
+		<Compile Include="EventInterfaces\ApplicationEvents.cs" />
+		<Compile Include="EventInterfaces\ItemEvents.cs" />
+		<Compile Include="EventInterfaces\ExplorersEvents.cs" />
+		<Compile Include="EventInterfaces\FoldersEvents.cs" />
+		<Compile Include="EventInterfaces\InspectorsEvents.cs" />
+		<Compile Include="EventInterfaces\ItemsEvents.cs" />
+		<Compile Include="EventInterfaces\NameSpaceEvents.cs" />
+		<Compile Include="EventInterfaces\OutlookBarGroupsEvents.cs" />
+		<Compile Include="EventInterfaces\OutlookBarPaneEvents.cs" />
+		<Compile Include="EventInterfaces\OutlookBarShortcutsEvents.cs" />
+		<Compile Include="EventInterfaces\_DRecipientControlEvents.cs" />
+		<Compile Include="EventInterfaces\_DDocSiteControlEvents.cs" />
+		<Compile Include="EventInterfaces\ExplorerEvents_10.cs" />
+		<Compile Include="EventInterfaces\InspectorEvents_10.cs" />
+		<Compile Include="EventInterfaces\ItemEvents_10.cs" />
+		<Compile Include="EventInterfaces\ApplicationEvents_10.cs" />
+		<Compile Include="EventInterfaces\ResultsEvents.cs" />
+		<Compile Include="EventInterfaces\_ViewsEvents.cs" />
+		<Compile Include="EventInterfaces\ReminderCollectionEvents.cs" />
+		<Compile Include="EventInterfaces\_DPageWrapCtrlEvents.cs" />
+		<Compile Include="EventInterfaces\_DInspectorEvents.cs" />
+		<Compile Include="EventInterfaces\ApplicationEvents_11.cs" />
+		<Compile Include="EventInterfaces\OlkTextBoxEvents.cs" />
+		<Compile Include="EventInterfaces\OlkLabelEvents.cs" />
+		<Compile Include="EventInterfaces\OlkCommandButtonEvents.cs" />
+		<Compile Include="EventInterfaces\OlkCheckBoxEvents.cs" />
+		<Compile Include="EventInterfaces\OlkOptionButtonEvents.cs" />
+		<Compile Include="EventInterfaces\OlkComboBoxEvents.cs" />
+		<Compile Include="EventInterfaces\OlkListBoxEvents.cs" />
+		<Compile Include="EventInterfaces\OlkInfoBarEvents.cs" />
+		<Compile Include="EventInterfaces\OlkContactPhotoEvents.cs" />
+		<Compile Include="EventInterfaces\OlkBusinessCardControlEvents.cs" />
+		<Compile Include="EventInterfaces\OlkPageControlEvents.cs" />
+		<Compile Include="EventInterfaces\OlkDateControlEvents.cs" />
+		<Compile Include="EventInterfaces\OlkTimeControlEvents.cs" />
+		<Compile Include="EventInterfaces\OlkCategoryEvents.cs" />
+		<Compile Include="EventInterfaces\OlkFrameHeaderEvents.cs" />
+		<Compile Include="EventInterfaces\OlkSenderPhotoEvents.cs" />
+		<Compile Include="EventInterfaces\StoresEvents_12.cs" />
+		<Compile Include="EventInterfaces\OlkTimeZoneControlEvents.cs" />
+		<Compile Include="EventInterfaces\MAPIFolderEvents_12.cs" />
+		<Compile Include="EventInterfaces\FormRegionEvents.cs" />
+		<Compile Include="EventInterfaces\NavigationPaneEvents_12.cs" />
+		<Compile Include="EventInterfaces\NavigationGroupsEvents_12.cs" />
+		<Compile Include="EventInterfaces\AccountsEvents.cs" />
+		<Compile Include="EventInterfaces\AccountSelectorEvents.cs" />
+
+    		<Compile Include="Modules\Global.cs" />
+
+    
+    		<Compile Include="Tools\COMAddin.cs" />
+		<Compile Include="Tools\ITaskPane.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

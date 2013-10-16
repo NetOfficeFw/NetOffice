@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76A38510-A8E7-4B6F-A90B-10384D845F42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.MSComctlLibApi</RootNamespace>
+    <AssemblyName>MSComctlLibApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>MSComctlLibApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MSComctlLibApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MSComctlLibApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    
+    		<Compile Include="Enums\BorderStyleConstants.cs" />
+		<Compile Include="Enums\MousePointerConstants.cs" />
+		<Compile Include="Enums\AppearanceConstants.cs" />
+		<Compile Include="Enums\VB4AppearanceConstants.cs" />
+		<Compile Include="Enums\ScrollingConstants.cs" />
+		<Compile Include="Enums\OrientationConstants.cs" />
+		<Compile Include="Enums\OLEDragConstants.cs" />
+		<Compile Include="Enums\OLEDropConstants.cs" />
+		<Compile Include="Enums\DragOverConstants.cs" />
+		<Compile Include="Enums\ClipBoardConstants.cs" />
+		<Compile Include="Enums\OLEDropEffectConstants.cs" />
+		<Compile Include="Enums\ErrorConstants.cs" />
+		<Compile Include="Enums\TabWidthStyleConstants.cs" />
+		<Compile Include="Enums\TabStyleConstants.cs" />
+		<Compile Include="Enums\PlacementConstants.cs" />
+		<Compile Include="Enums\TabSelStyleConstants.cs" />
+		<Compile Include="Enums\ButtonStyleConstants.cs" />
+		<Compile Include="Enums\ValueConstants.cs" />
+		<Compile Include="Enums\ToolbarStyleConstants.cs" />
+		<Compile Include="Enums\ToolbarTextAlignConstants.cs" />
+		<Compile Include="Enums\SbarStyleConstants.cs" />
+		<Compile Include="Enums\PanelAlignmentConstants.cs" />
+		<Compile Include="Enums\PanelAutoSizeConstants.cs" />
+		<Compile Include="Enums\PanelBevelConstants.cs" />
+		<Compile Include="Enums\PanelStyleConstants.cs" />
+		<Compile Include="Enums\LabelEditConstants.cs" />
+		<Compile Include="Enums\TreeLineStyleConstants.cs" />
+		<Compile Include="Enums\TreeStyleConstants.cs" />
+		<Compile Include="Enums\TreeRelationshipConstants.cs" />
+		<Compile Include="Enums\ListTextBackgroundConstants.cs" />
+		<Compile Include="Enums\ListArrangeConstants.cs" />
+		<Compile Include="Enums\ListPictureAlignmentConstants.cs" />
+		<Compile Include="Enums\ListLabelEditConstants.cs" />
+		<Compile Include="Enums\ListSortOrderConstants.cs" />
+		<Compile Include="Enums\ListViewConstants.cs" />
+		<Compile Include="Enums\ListColumnAlignmentConstants.cs" />
+		<Compile Include="Enums\ListFindItemWhereConstants.cs" />
+		<Compile Include="Enums\ListFindItemHowConstants.cs" />
+		<Compile Include="Enums\ImageDrawConstants.cs" />
+		<Compile Include="Enums\TickStyleConstants.cs" />
+		<Compile Include="Enums\TextPositionConstants.cs" />
+		<Compile Include="Enums\ImageComboStyleConstants.cs" />
+
+    
+    		<Compile Include="DispatchInterfaces\IVBDataObject.cs" />
+		<Compile Include="DispatchInterfaces\IVBDataObjectFiles.cs" />
+		<Compile Include="DispatchInterfaces\ITabStrip.cs" />
+		<Compile Include="DispatchInterfaces\ITabs.cs" />
+		<Compile Include="DispatchInterfaces\ITab.cs" />
+		<Compile Include="DispatchInterfaces\IToolbar.cs" />
+		<Compile Include="DispatchInterfaces\IButtons.cs" />
+		<Compile Include="DispatchInterfaces\IButton.cs" />
+		<Compile Include="DispatchInterfaces\IButtonMenus.cs" />
+		<Compile Include="DispatchInterfaces\IButtonMenu.cs" />
+		<Compile Include="DispatchInterfaces\IStatusBar.cs" />
+		<Compile Include="DispatchInterfaces\IPanels.cs" />
+		<Compile Include="DispatchInterfaces\IPanel.cs" />
+		<Compile Include="DispatchInterfaces\IProgressBar.cs" />
+		<Compile Include="DispatchInterfaces\ITreeView.cs" />
+		<Compile Include="DispatchInterfaces\INodes.cs" />
+		<Compile Include="DispatchInterfaces\INode.cs" />
+		<Compile Include="DispatchInterfaces\IListView.cs" />
+		<Compile Include="DispatchInterfaces\IListItems.cs" />
+		<Compile Include="DispatchInterfaces\IListItem.cs" />
+		<Compile Include="DispatchInterfaces\IColumnHeaders.cs" />
+		<Compile Include="DispatchInterfaces\IColumnHeader.cs" />
+		<Compile Include="DispatchInterfaces\IListSubItems.cs" />
+		<Compile Include="DispatchInterfaces\IListSubItem.cs" />
+		<Compile Include="DispatchInterfaces\IImageList.cs" />
+		<Compile Include="DispatchInterfaces\IImages.cs" />
+		<Compile Include="DispatchInterfaces\IImage.cs" />
+		<Compile Include="DispatchInterfaces\ISlider.cs" />
+		<Compile Include="DispatchInterfaces\IControls.cs" />
+		<Compile Include="DispatchInterfaces\IComboItem.cs" />
+		<Compile Include="DispatchInterfaces\IComboItems.cs" />
+		<Compile Include="DispatchInterfaces\IImageCombo.cs" />
+
+    		<Compile Include="Classes\DataObject.cs" />
+		<Compile Include="Classes\DataObjectFiles.cs" />
+		<Compile Include="Classes\TabStrip.cs" />
+		<Compile Include="Classes\Tabs.cs" />
+		<Compile Include="Classes\Tab.cs" />
+		<Compile Include="Classes\Toolbar.cs" />
+		<Compile Include="Classes\Buttons.cs" />
+		<Compile Include="Classes\Button.cs" />
+		<Compile Include="Classes\ButtonMenus.cs" />
+		<Compile Include="Classes\ButtonMenu.cs" />
+		<Compile Include="Classes\StatusBar.cs" />
+		<Compile Include="Classes\Panels.cs" />
+		<Compile Include="Classes\Panel.cs" />
+		<Compile Include="Classes\ProgressBar.cs" />
+		<Compile Include="Classes\TreeView.cs" />
+		<Compile Include="Classes\Nodes.cs" />
+		<Compile Include="Classes\Node.cs" />
+		<Compile Include="Classes\ListView.cs" />
+		<Compile Include="Classes\ListItems.cs" />
+		<Compile Include="Classes\ListItem.cs" />
+		<Compile Include="Classes\ColumnHeaders.cs" />
+		<Compile Include="Classes\ColumnHeader.cs" />
+		<Compile Include="Classes\ListSubItems.cs" />
+		<Compile Include="Classes\ListSubItem.cs" />
+		<Compile Include="Classes\ImageList.cs" />
+		<Compile Include="Classes\ListImages.cs" />
+		<Compile Include="Classes\ListImage.cs" />
+		<Compile Include="Classes\Slider.cs" />
+		<Compile Include="Classes\Controls.cs" />
+		<Compile Include="Classes\ComboItem.cs" />
+		<Compile Include="Classes\ComboItems.cs" />
+		<Compile Include="Classes\ImageCombo.cs" />
+
+    		<Compile Include="EventInterfaces\ITabStripEvents.cs" />
+		<Compile Include="EventInterfaces\IToolbarEvents.cs" />
+		<Compile Include="EventInterfaces\IStatusBarEvents.cs" />
+		<Compile Include="EventInterfaces\IProgressBarEvents.cs" />
+		<Compile Include="EventInterfaces\ITreeViewEvents.cs" />
+		<Compile Include="EventInterfaces\ListViewEvents.cs" />
+		<Compile Include="EventInterfaces\ImageListEvents.cs" />
+		<Compile Include="EventInterfaces\ISliderEvents.cs" />
+		<Compile Include="EventInterfaces\DImageComboEvents.cs" />
+
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

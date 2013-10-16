@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.ADODBApi</RootNamespace>
+    <AssemblyName>ADODBApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ADODBApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ADODBApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ADODBApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    		<Compile Include="Utils\ProjectInfo.cs" />
+    
+    		<Compile Include="Enums\CursorTypeEnum.cs" />
+		<Compile Include="Enums\CursorOptionEnum.cs" />
+		<Compile Include="Enums\LockTypeEnum.cs" />
+		<Compile Include="Enums\ExecuteOptionEnum.cs" />
+		<Compile Include="Enums\ConnectOptionEnum.cs" />
+		<Compile Include="Enums\ObjectStateEnum.cs" />
+		<Compile Include="Enums\CursorLocationEnum.cs" />
+		<Compile Include="Enums\DataTypeEnum.cs" />
+		<Compile Include="Enums\FieldAttributeEnum.cs" />
+		<Compile Include="Enums\EditModeEnum.cs" />
+		<Compile Include="Enums\RecordStatusEnum.cs" />
+		<Compile Include="Enums\GetRowsOptionEnum.cs" />
+		<Compile Include="Enums\PositionEnum.cs" />
+		<Compile Include="Enums\BookmarkEnum.cs" />
+		<Compile Include="Enums\MarshalOptionsEnum.cs" />
+		<Compile Include="Enums\AffectEnum.cs" />
+		<Compile Include="Enums\ResyncEnum.cs" />
+		<Compile Include="Enums\CompareEnum.cs" />
+		<Compile Include="Enums\FilterGroupEnum.cs" />
+		<Compile Include="Enums\SearchDirectionEnum.cs" />
+		<Compile Include="Enums\PersistFormatEnum.cs" />
+		<Compile Include="Enums\StringFormatEnum.cs" />
+		<Compile Include="Enums\ConnectPromptEnum.cs" />
+		<Compile Include="Enums\ConnectModeEnum.cs" />
+		<Compile Include="Enums\IsolationLevelEnum.cs" />
+		<Compile Include="Enums\XactAttributeEnum.cs" />
+		<Compile Include="Enums\PropertyAttributesEnum.cs" />
+		<Compile Include="Enums\ErrorValueEnum.cs" />
+		<Compile Include="Enums\ParameterAttributesEnum.cs" />
+		<Compile Include="Enums\ParameterDirectionEnum.cs" />
+		<Compile Include="Enums\CommandTypeEnum.cs" />
+		<Compile Include="Enums\EventStatusEnum.cs" />
+		<Compile Include="Enums\EventReasonEnum.cs" />
+		<Compile Include="Enums\SchemaEnum.cs" />
+		<Compile Include="Enums\SeekEnum.cs" />
+		<Compile Include="Enums\ADCPROP_UPDATECRITERIA_ENUM.cs" />
+		<Compile Include="Enums\ADCPROP_ASYNCTHREADPRIORITY_ENUM.cs" />
+		<Compile Include="Enums\CEResyncEnum.cs" />
+		<Compile Include="Enums\ADCPROP_AUTORECALC_ENUM.cs" />
+		<Compile Include="Enums\RecordCreateOptionsEnum.cs" />
+		<Compile Include="Enums\RecordOpenOptionsEnum.cs" />
+		<Compile Include="Enums\FieldStatusEnum.cs" />
+		<Compile Include="Enums\ADCPROP_UPDATERESYNC_ENUM.cs" />
+		<Compile Include="Enums\MoveRecordOptionsEnum.cs" />
+		<Compile Include="Enums\CopyRecordOptionsEnum.cs" />
+		<Compile Include="Enums\StreamTypeEnum.cs" />
+		<Compile Include="Enums\LineSeparatorEnum.cs" />
+		<Compile Include="Enums\StreamOpenOptionsEnum.cs" />
+		<Compile Include="Enums\StreamWriteEnum.cs" />
+		<Compile Include="Enums\SaveOptionsEnum.cs" />
+		<Compile Include="Enums\FieldEnum.cs" />
+		<Compile Include="Enums\StreamReadEnum.cs" />
+		<Compile Include="Enums\RecordTypeEnum.cs" />
+
+    		<Compile Include="Interfaces\ConnectionEventsVt.cs" />
+		<Compile Include="Interfaces\RecordsetEventsVt.cs" />
+		<Compile Include="Interfaces\ADOConnectionConstruction15.cs" />
+		<Compile Include="Interfaces\ADOConnectionConstruction.cs" />
+		<Compile Include="Interfaces\ADOCommandConstruction.cs" />
+		<Compile Include="Interfaces\ADORecordsetConstruction.cs" />
+		<Compile Include="Interfaces\ADORecordConstruction.cs" />
+		<Compile Include="Interfaces\ADOStreamConstruction.cs" />
+		<Compile Include="Interfaces\ConnectionEventsVt_Deprecated.cs" />
+		<Compile Include="Interfaces\RecordsetEventsVt_Deprecated.cs" />
+		<Compile Include="Interfaces\ADORecordsetConstruction_Deprecated.cs" />
+
+    		<Compile Include="DispatchInterfaces\_Collection.cs" />
+		<Compile Include="DispatchInterfaces\_DynaCollection.cs" />
+		<Compile Include="DispatchInterfaces\_ADO.cs" />
+		<Compile Include="DispatchInterfaces\Properties.cs" />
+		<Compile Include="DispatchInterfaces\Property.cs" />
+		<Compile Include="DispatchInterfaces\Error.cs" />
+		<Compile Include="DispatchInterfaces\Errors.cs" />
+		<Compile Include="DispatchInterfaces\Command15.cs" />
+		<Compile Include="DispatchInterfaces\_Connection.cs" />
+		<Compile Include="DispatchInterfaces\Connection15.cs" />
+		<Compile Include="DispatchInterfaces\_Recordset.cs" />
+		<Compile Include="DispatchInterfaces\Recordset20.cs" />
+		<Compile Include="DispatchInterfaces\Recordset15.cs" />
+		<Compile Include="DispatchInterfaces\Fields.cs" />
+		<Compile Include="DispatchInterfaces\Fields15.cs" />
+		<Compile Include="DispatchInterfaces\Field.cs" />
+		<Compile Include="DispatchInterfaces\_Parameter.cs" />
+		<Compile Include="DispatchInterfaces\Parameters.cs" />
+		<Compile Include="DispatchInterfaces\_Command.cs" />
+		<Compile Include="DispatchInterfaces\Field15.cs" />
+		<Compile Include="DispatchInterfaces\Recordset21.cs" />
+		<Compile Include="DispatchInterfaces\Fields20.cs" />
+		<Compile Include="DispatchInterfaces\Field20.cs" />
+		<Compile Include="DispatchInterfaces\_Record.cs" />
+		<Compile Include="DispatchInterfaces\IRecFields.cs" />
+		<Compile Include="DispatchInterfaces\_Stream.cs" />
+		<Compile Include="DispatchInterfaces\Command15_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Connection_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Connection15_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Recordset_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Recordset21_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Recordset20_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Recordset15_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Fields_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Fields20_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Fields15_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Field_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Field20_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Parameter_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Parameters_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Command_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\ConnectionEvents_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\RecordsetEvents_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Record_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\_Stream_Deprecated.cs" />
+		<Compile Include="DispatchInterfaces\Field15_Deprecated.cs" />
+
+    		<Compile Include="Classes\Connection.cs" />
+		<Compile Include="Classes\Command.cs" />
+		<Compile Include="Classes\Recordset.cs" />
+		<Compile Include="Classes\Parameter.cs" />
+		<Compile Include="Classes\Record.cs" />
+		<Compile Include="Classes\Stream.cs" />
+
+    		<Compile Include="EventInterfaces\ConnectionEvents.cs" />
+		<Compile Include="EventInterfaces\RecordsetEvents.cs" />
+
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
