@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.FieldListDragData newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListDragData.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListDragData;
+			NetOffice.OWC10Api.FieldListDragData newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.FieldListDragData.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListDragData;
 			return newObject;
 			}
 		}

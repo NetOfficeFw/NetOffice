@@ -140,8 +140,9 @@ namespace NetOffice.Tools
         }
 
         /// Looks for the TweakAttribute.
-        /// </summary>
+        /// <summary>
         /// <param name="type">the type you want looking for the attribute</param>
+        /// </summary>
         /// <returns>TweakAttribute</returns>
         public static TweakAttribute GetTweakAttribute(Type type)
         {

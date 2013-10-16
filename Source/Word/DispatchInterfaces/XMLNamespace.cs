@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
-			NetOffice.WordApi.XSLTransform newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
+			NetOffice.WordApi.XSLTransform newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
 			return newObject;
 		}
 
@@ -253,7 +253,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -285,7 +285,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -356,7 +356,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XSLTransforms", paramsArray);
-				NetOffice.WordApi.XSLTransforms newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransforms.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransforms;
+				NetOffice.WordApi.XSLTransforms newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransforms.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransforms;
 				return newObject;
 			}
 		}
@@ -372,7 +372,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
-				NetOffice.WordApi.XSLTransform newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
+				NetOffice.WordApi.XSLTransform newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.XSLTransform.LateBindingApiWrapperType) as NetOffice.WordApi.XSLTransform;
 				return newObject;
 			}
 			set

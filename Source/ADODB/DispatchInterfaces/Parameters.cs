@@ -102,7 +102,7 @@ namespace NetOffice.ADODBApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 			}
 		}

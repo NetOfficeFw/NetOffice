@@ -135,7 +135,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StatusBarItems", paramsArray);
-				NetOffice.VisioApi.IVStatusBarItems newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItems;
+				NetOffice.VisioApi.IVStatusBarItems newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItems;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVStatusBars newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBars;
+				NetOffice.VisioApi.IVStatusBars newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBars;
 				return newObject;
 			}
 		}

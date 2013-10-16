@@ -158,7 +158,22 @@ namespace NetOffice.OWC10Api
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ISpreadsheetEventSink_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -183,8 +198,8 @@ namespace NetOffice.OWC10Api
 
 			Int32 newx = Convert.ToInt32(x);
 			Int32 newy = Convert.ToInt32(y);
-			NetOffice.OWC10Api.ByRef newMenu = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newMenu = Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newx;
 			paramsArray[1] = newy;
@@ -204,7 +219,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -222,7 +237,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray[1] = newCancel;
@@ -240,7 +255,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -271,7 +286,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newEnabled = Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
@@ -288,7 +303,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newChecked = Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
@@ -305,7 +320,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCaption = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCaption = Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCaption;
@@ -322,7 +337,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
@@ -369,9 +384,9 @@ namespace NetOffice.OWC10Api
 			}
 
 			bool newAccept = Convert.ToBoolean(accept);
-			NetOffice.OWC10Api.ByRef newFinalValue = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, finalValue) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newErrorDescription = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, errorDescription) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newFinalValue = Factory.CreateObjectFromComProxy(_eventClass, finalValue) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateObjectFromComProxy(_eventClass, errorDescription) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newAccept;
 			paramsArray[1] = newFinalValue;
@@ -487,7 +502,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -506,7 +521,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newButton = Convert.ToInt32(button);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newButton;
 			paramsArray[1] = newShift;
@@ -574,7 +589,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api._Range newRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newRange = Factory.CreateObjectFromComProxy(_eventClass, range) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newRange;
 			_eventBinding.RaiseCustomEvent("SelectionChanging", ref paramsArray);
@@ -589,7 +604,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.Worksheet newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
+			NetOffice.OWC10Api.Worksheet newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetActivate", ref paramsArray);
@@ -604,7 +619,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.Worksheet newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
+			NetOffice.OWC10Api.Worksheet newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetCalculate", ref paramsArray);
@@ -619,8 +634,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.Worksheet newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
-			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api.Worksheet newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
+			NetOffice.OWC10Api._Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -636,7 +651,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.Worksheet newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
+			NetOffice.OWC10Api.Worksheet newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetDeactivate", ref paramsArray);
@@ -651,8 +666,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.Worksheet newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
-			NetOffice.OWC10Api.Hyperlink newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api.Hyperlink;
+			NetOffice.OWC10Api.Worksheet newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as NetOffice.OWC10Api.Worksheet;
+			NetOffice.OWC10Api.Hyperlink newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api.Hyperlink;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -668,10 +683,10 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			object newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as object;
-			NetOffice.OWC10Api.ByRef newInitialValue = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, initialValue) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newErrorDescription = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, errorDescription) as NetOffice.OWC10Api.ByRef;
+			object newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as object;
+			NetOffice.OWC10Api.ByRef newInitialValue = Factory.CreateObjectFromComProxy(_eventClass, initialValue) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateObjectFromComProxy(_eventClass, errorDescription) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newSelection;
 			paramsArray[1] = newInitialValue;
@@ -689,7 +704,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api._Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
+			NetOffice.OWC10Api._Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OWC10Api._Range;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("ViewChange", ref paramsArray);

@@ -106,7 +106,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "_newEnum", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -139,7 +139,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "constructor", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -169,7 +169,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, index);
 			object returnItem = Invoker.MethodReturn(this, "item", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -182,7 +182,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "item", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -196,7 +196,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "item", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -209,7 +209,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tagName);
 			object returnItem = Invoker.MethodReturn(this, "tags", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -222,7 +222,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(urn);
 			object returnItem = Invoker.MethodReturn(this, "urns", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -235,7 +235,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "namedItem", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -248,7 +248,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "ie8_item", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLElement2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement2;
+			NetOffice.MSHTMLApi.IHTMLElement2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement2;
 			return newObject;
 		}
 
@@ -261,7 +261,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "ie8_namedItem", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLElement2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement2;
+			NetOffice.MSHTMLApi.IHTMLElement2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement2;
 			return newObject;
 		}
 

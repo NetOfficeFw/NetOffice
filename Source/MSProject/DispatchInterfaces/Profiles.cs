@@ -87,7 +87,7 @@ namespace NetOffice.MSProjectApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+			NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DefaultProfile", paramsArray);
-				NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+				NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 				return newObject;
 			}
 			set
@@ -139,7 +139,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveProfile", paramsArray);
-				NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+				NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 				return newObject;
 			}
 		}
@@ -160,7 +160,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType, userName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+			NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 			return newObject;
 		}
 
@@ -175,7 +175,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+			NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 			return newObject;
 		}
 
@@ -191,7 +191,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.Profile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
+			NetOffice.MSProjectApi.Profile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Profile.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profile;
 			return newObject;
 		}
 

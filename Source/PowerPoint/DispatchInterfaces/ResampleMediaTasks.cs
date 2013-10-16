@@ -104,7 +104,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.ResampleMediaTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
+				NetOffice.PowerPointApi.ResampleMediaTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.ResampleMediaTask.LateBindingApiWrapperType) as NetOffice.PowerPointApi.ResampleMediaTask;
 				return newObject;
 			}
 		}

@@ -86,7 +86,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.MSProjectApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -143,7 +143,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Background", paramsArray);
-				NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+				NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 				return newObject;
 			}
 		}
@@ -159,7 +159,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Default", paramsArray);
-				NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+				NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 				return newObject;
 			}
 		}
@@ -180,7 +180,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+				NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 				return newObject;
 			}
 		}
@@ -198,7 +198,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddCallout", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -215,7 +215,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, beginX, beginY, endX, endY);
 			object returnItem = Invoker.MethodReturn(this, "AddConnector", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -228,7 +228,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
 			object returnItem = Invoker.MethodReturn(this, "AddCurve", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -245,7 +245,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddLabel", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -261,7 +261,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beginX, beginY, endX, endY);
 			object returnItem = Invoker.MethodReturn(this, "AddLine", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -281,7 +281,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -300,7 +300,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -320,7 +320,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, linkToFile, saveWithDocument, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -333,7 +333,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(safeArrayOfPoints);
 			object returnItem = Invoker.MethodReturn(this, "AddPolyline", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -350,7 +350,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddShape", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -370,7 +370,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(presetTextEffect, text, fontName, fontSize, fontBold, fontItalic, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddTextEffect", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -387,7 +387,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(orientation, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddTextbox", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -402,7 +402,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(editingType, x1, y1);
 			object returnItem = Invoker.MethodReturn(this, "BuildFreeform", paramsArray);
-			NetOffice.OfficeApi.FreeformBuilder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FreeformBuilder.LateBindingApiWrapperType) as NetOffice.OfficeApi.FreeformBuilder;
+			NetOffice.OfficeApi.FreeformBuilder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FreeformBuilder.LateBindingApiWrapperType) as NetOffice.OfficeApi.FreeformBuilder;
 			return newObject;
 		}
 
@@ -415,7 +415,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Range", paramsArray);
-			NetOffice.MSProjectApi.ShapeRange newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ShapeRange;
+			NetOffice.MSProjectApi.ShapeRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.ShapeRange.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ShapeRange;
 			return newObject;
 		}
 
@@ -444,7 +444,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height, newLayout);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -457,7 +457,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -471,7 +471,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -486,7 +486,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -502,7 +502,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -519,7 +519,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -537,7 +537,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -556,7 +556,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 
@@ -574,7 +574,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numRows, numColumns, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddTable", paramsArray);
-			NetOffice.MSProjectApi.Shape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
+			NetOffice.MSProjectApi.Shape newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Shape.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Shape;
 			return newObject;
 		}
 

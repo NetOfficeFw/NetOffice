@@ -87,7 +87,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.Page newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
+			NetOffice.ExcelApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
 			return newObject;
 			}
 		}

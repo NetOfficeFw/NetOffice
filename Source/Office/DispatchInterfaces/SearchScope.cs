@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ScopeFolder", paramsArray);
-				NetOffice.OfficeApi.ScopeFolder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ScopeFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.ScopeFolder;
+				NetOffice.OfficeApi.ScopeFolder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ScopeFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.ScopeFolder;
 				return newObject;
 			}
 		}

@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(varIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.PivotResultMemberProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotResultMemberProperty.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotResultMemberProperty;
+			NetOffice.OWC10Api.PivotResultMemberProperty newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotResultMemberProperty.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotResultMemberProperty;
 			return newObject;
 			}
 		}

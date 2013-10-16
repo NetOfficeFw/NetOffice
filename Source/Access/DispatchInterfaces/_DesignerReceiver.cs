@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "LaunchBuilder", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -134,7 +134,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "RetrievePropertyValues", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "RetrievePropertyValues", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "IsExpressionValid", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -263,7 +263,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "RetrieveControlSourcesInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -326,7 +326,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "RetrieveRecordSourceInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -347,7 +347,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "RetrieveViewInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -412,7 +412,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "GetFormBodyAndCss", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

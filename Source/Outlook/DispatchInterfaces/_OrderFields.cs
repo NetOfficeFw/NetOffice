@@ -85,7 +85,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OutlookApi._OrderField newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._OrderField;
+				NetOffice.OutlookApi._OrderField newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OutlookApi._OrderField;
 				return newObject;
 			}
 		}
@@ -185,7 +185,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, isDescending);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.OrderField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
+			NetOffice.OutlookApi.OrderField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
 			return newObject;
 		}
 
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OutlookApi.OrderField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
+			NetOffice.OutlookApi.OrderField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
 			return newObject;
 		}
 
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, index, isDescending);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.OutlookApi.OrderField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
+			NetOffice.OutlookApi.OrderField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
 			return newObject;
 		}
 
@@ -250,7 +250,7 @@ namespace NetOffice.OutlookApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyName, index);
 			object returnItem = Invoker.MethodReturn(this, "Insert", paramsArray);
-			NetOffice.OutlookApi.OrderField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
+			NetOffice.OutlookApi.OrderField newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OutlookApi.OrderField.LateBindingApiWrapperType) as NetOffice.OutlookApi.OrderField;
 			return newObject;
 		}
 

@@ -104,7 +104,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageFields", paramsArray);
-				NetOffice.OWC10Api.PageFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
+				NetOffice.OWC10Api.PageFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageFields;
 				return newObject;
 			}
 		}

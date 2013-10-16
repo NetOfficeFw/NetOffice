@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.PageRelatedField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRelatedField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelatedField;
+			NetOffice.OWC10Api.PageRelatedField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRelatedField.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelatedField;
 			return newObject;
 			}
 		}

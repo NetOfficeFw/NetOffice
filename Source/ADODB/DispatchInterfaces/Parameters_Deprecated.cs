@@ -102,7 +102,7 @@ namespace NetOffice.ADODBApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 			}
 		}

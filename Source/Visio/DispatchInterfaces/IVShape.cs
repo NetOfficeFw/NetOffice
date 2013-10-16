@@ -188,7 +188,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Document", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
+				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVDocument;
 				return newObject;
 			}
 		}
@@ -205,7 +205,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 			set
@@ -226,7 +226,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
 				return newObject;
 			}
 		}
@@ -257,7 +257,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Master", paramsArray);
-				NetOffice.VisioApi.IVMaster newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
+				NetOffice.VisioApi.IVMaster newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
 				return newObject;
 			}
 		}
@@ -303,7 +303,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(localeSpecificCellName);
 			object returnItem = Invoker.PropertyGet(this, "Cells", paramsArray);
-			NetOffice.VisioApi.IVCell newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
 			return newObject;
 		}
 
@@ -331,7 +331,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(section, row, column);
 			object returnItem = Invoker.PropertyGet(this, "CellsSRC", paramsArray);
-			NetOffice.VisioApi.IVCell newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
 			return newObject;
 		}
 
@@ -359,7 +359,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Shapes", paramsArray);
-				NetOffice.VisioApi.IVShapes newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShapes;
+				NetOffice.VisioApi.IVShapes newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShapes;
 				return newObject;
 			}
 		}
@@ -525,7 +525,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Characters", paramsArray);
-				NetOffice.VisioApi.IVCharacters newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCharacters;
+				NetOffice.VisioApi.IVCharacters newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCharacters;
 				return newObject;
 			}
 		}
@@ -669,7 +669,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connects", paramsArray);
-				NetOffice.VisioApi.IVConnects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVConnects;
+				NetOffice.VisioApi.IVConnects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVConnects;
 				return newObject;
 			}
 		}
@@ -895,7 +895,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fFill, lineRes);
 			object returnItem = Invoker.PropertyGet(this, "GeomExIf", paramsArray);
-			COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 
@@ -948,7 +948,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContainingPage", paramsArray);
-				NetOffice.VisioApi.IVPage newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPage;
+				NetOffice.VisioApi.IVPage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPage;
 				return newObject;
 			}
 		}
@@ -964,7 +964,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContainingMaster", paramsArray);
-				NetOffice.VisioApi.IVMaster newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
+				NetOffice.VisioApi.IVMaster newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
 				return newObject;
 			}
 		}
@@ -980,7 +980,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContainingShape", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 				return newObject;
 			}
 		}
@@ -1125,7 +1125,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Layer", paramsArray);
-			NetOffice.VisioApi.IVLayer newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVLayer;
+			NetOffice.VisioApi.IVLayer newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVLayer;
 			return newObject;
 		}
 
@@ -1151,7 +1151,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EventList", paramsArray);
-				NetOffice.VisioApi.IVEventList newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEventList;
+				NetOffice.VisioApi.IVEventList newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEventList;
 				return newObject;
 			}
 		}
@@ -1213,7 +1213,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Object", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -1245,7 +1245,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FromConnects", paramsArray);
-				NetOffice.VisioApi.IVConnects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVConnects;
+				NetOffice.VisioApi.IVConnects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVConnects;
 				return newObject;
 			}
 		}
@@ -1262,7 +1262,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hyperlink", paramsArray);
-				NetOffice.VisioApi.IVHyperlink newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlink;
+				NetOffice.VisioApi.IVHyperlink newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlink;
 				return newObject;
 			}
 		}
@@ -1308,7 +1308,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Paths", paramsArray);
-				NetOffice.VisioApi.IVPaths newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPaths;
+				NetOffice.VisioApi.IVPaths newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPaths;
 				return newObject;
 			}
 		}
@@ -1324,7 +1324,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PathsLocal", paramsArray);
-				NetOffice.VisioApi.IVPaths newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPaths;
+				NetOffice.VisioApi.IVPaths newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPaths;
 				return newObject;
 			}
 		}
@@ -1370,7 +1370,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Section", paramsArray);
-			NetOffice.VisioApi.IVSection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSection;
+			NetOffice.VisioApi.IVSection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSection;
 			return newObject;
 		}
 
@@ -1396,7 +1396,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Hyperlinks", paramsArray);
-				NetOffice.VisioApi.IVHyperlinks newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlinks;
+				NetOffice.VisioApi.IVHyperlinks newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlinks;
 				return newObject;
 			}
 		}
@@ -1599,7 +1599,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(relation, tolerance, flags, resultRoot);
 			object returnItem = Invoker.PropertyGet(this, "SpatialNeighbors", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -1630,7 +1630,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(relation, tolerance, flags);
 			object returnItem = Invoker.PropertyGet(this, "SpatialNeighbors", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -1662,7 +1662,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y, relation, tolerance, flags);
 			object returnItem = Invoker.PropertyGet(this, "SpatialSearch", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -1692,7 +1692,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(localeIndependentCellName);
 			object returnItem = Invoker.PropertyGet(this, "CellsU", paramsArray);
-			NetOffice.VisioApi.IVCell newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVCell;
 			return newObject;
 		}
 
@@ -1830,7 +1830,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RootShape", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 				return newObject;
 			}
 		}
@@ -1846,7 +1846,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MasterShape", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 				return newObject;
 			}
 		}
@@ -1862,7 +1862,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+				stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 				return newObject;
 			}
 		}
@@ -1973,7 +1973,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataGraphic", paramsArray);
-				NetOffice.VisioApi.IVMaster newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
+				NetOffice.VisioApi.IVMaster newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMaster;
 				return newObject;
 			}
 			set
@@ -2009,7 +2009,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContainerProperties", paramsArray);
-				NetOffice.VisioApi.IVContainerProperties newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVContainerProperties;
+				NetOffice.VisioApi.IVContainerProperties newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVContainerProperties;
 				return newObject;
 			}
 		}
@@ -2055,7 +2055,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CalloutTarget", paramsArray);
-				NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+				NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 				return newObject;
 			}
 			set
@@ -2091,7 +2091,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Comments", paramsArray);
-				NetOffice.VisioApi.IVComments newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVComments;
+				NetOffice.VisioApi.IVComments newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVComments;
 				return newObject;
 			}
 		}
@@ -2265,7 +2265,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectToDrop, xPos, yPos);
 			object returnItem = Invoker.MethodReturn(this, "Drop", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2406,7 +2406,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xBegin, yBegin, xEnd, yEnd);
 			object returnItem = Invoker.MethodReturn(this, "DrawLine", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2422,7 +2422,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x1, y1, x2, y2);
 			object returnItem = Invoker.MethodReturn(this, "DrawRectangle", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2438,7 +2438,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x1, y1, x2, y2);
 			object returnItem = Invoker.MethodReturn(this, "DrawOval", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2453,7 +2453,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray((object)xyArray, tolerance, flags);
 			object returnItem = Invoker.MethodReturn(this, "DrawSpline", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2468,7 +2468,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray((object)xyArray, degree, flags);
 			object returnItem = Invoker.MethodReturn(this, "DrawBezier", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2482,7 +2482,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray((object)xyArray, flags);
 			object returnItem = Invoker.MethodReturn(this, "DrawPolyline", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2507,7 +2507,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Import", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2531,7 +2531,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, flags);
 			object returnItem = Invoker.MethodReturn(this, "InsertFromFile", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2545,7 +2545,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(classOrProgID, flags);
 			object returnItem = Invoker.MethodReturn(this, "InsertObject", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2557,7 +2557,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenDrawWindow", paramsArray);
-			NetOffice.VisioApi.IVWindow newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVWindow;
 			return newObject;
 		}
 
@@ -2569,7 +2569,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "OpenSheetWindow", paramsArray);
-			NetOffice.VisioApi.IVWindow newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVWindow;
 			return newObject;
 		}
 
@@ -2707,7 +2707,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "AddHyperlink", paramsArray);
-			NetOffice.VisioApi.IVHyperlink newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlink;
+			NetOffice.VisioApi.IVHyperlink newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVHyperlink;
 			return newObject;
 		}
 
@@ -2844,7 +2844,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(degree, flags, (object)xyArray, (object)knots, weights);
 			object returnItem = Invoker.MethodReturn(this, "DrawNURBS", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2861,7 +2861,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(degree, flags, (object)xyArray, (object)knots);
 			object returnItem = Invoker.MethodReturn(this, "DrawNURBS", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2873,7 +2873,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Group", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -2885,7 +2885,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3014,7 +3014,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode, data);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -3028,7 +3028,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -3043,7 +3043,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(selType, iterationMode);
 			object returnItem = Invoker.MethodReturn(this, "CreateSelection", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -3069,7 +3069,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, xPos, yPos);
 			object returnItem = Invoker.MethodReturn(this, "AddGuide", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3087,7 +3087,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xBegin, yBegin, xEnd, yEnd, xControl, yControl);
 			object returnItem = Invoker.MethodReturn(this, "DrawArcByThreePoints", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3104,7 +3104,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xBegin, yBegin, xEnd, yEnd, sweepFlag);
 			object returnItem = Invoker.MethodReturn(this, "DrawQuarterArc", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3121,7 +3121,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle, endAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3137,7 +3137,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3154,7 +3154,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xCenter, yCenter, radius, startAngle);
 			object returnItem = Invoker.MethodReturn(this, "DrawCircularArc", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3396,7 +3396,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateSubProcess", paramsArray);
-			NetOffice.VisioApi.IVPage newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPage;
+			NetOffice.VisioApi.IVPage newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPage;
 			return newObject;
 		}
 
@@ -3411,7 +3411,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop, newShape);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -3426,7 +3426,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page, objectToDrop);
 			object returnItem = Invoker.MethodReturn(this, "MoveToSubprocess", paramsArray);
-			NetOffice.VisioApi.IVSelection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVSelection;
 			return newObject;
 		}
 
@@ -3451,7 +3451,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop, replaceFlags);
 			object returnItem = Invoker.MethodReturn(this, "ReplaceShape", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 
@@ -3465,7 +3465,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(masterOrMasterShortcutToDrop);
 			object returnItem = Invoker.MethodReturn(this, "ReplaceShape", paramsArray);
-			NetOffice.VisioApi.IVShape newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVShape;
 			return newObject;
 		}
 

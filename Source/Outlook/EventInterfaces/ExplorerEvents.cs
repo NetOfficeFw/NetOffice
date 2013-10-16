@@ -66,7 +66,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ExplorerEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -115,7 +130,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newNewFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
+			object newNewFolder = Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewFolder;
 			paramsArray.SetValue(cancel, 1);

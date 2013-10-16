@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "pages", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection;
+				NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLStyleSheetPagesCollection;
 				return newObject;
 			}
 		}

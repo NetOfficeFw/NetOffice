@@ -46,7 +46,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public NavigationGroupsEvents_12_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -69,7 +84,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			_eventBinding.RaiseCustomEvent("SelectedChange", ref paramsArray);
@@ -84,7 +99,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
+			NetOffice.OutlookApi.NavigationFolder newNavigationFolder = Factory.CreateObjectFromComProxy(_eventClass, navigationFolder) as NetOffice.OutlookApi.NavigationFolder;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNavigationFolder;
 			_eventBinding.RaiseCustomEvent("NavigationFolderAdd", ref paramsArray);

@@ -38,7 +38,22 @@ namespace NetOffice.VBIDEApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _dispCommandBarControlEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.VBIDEApi
 				return;
 			}
 
-			object newCommandBarControl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, commandBarControl) as object;
+			object newCommandBarControl = Factory.CreateObjectFromComProxy(_eventClass, commandBarControl) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newCommandBarControl;
 			paramsArray.SetValue(handled, 1);

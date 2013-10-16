@@ -38,7 +38,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public NavigationPaneEvents_12_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.NavigationModule newCurrentModule = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, currentModule) as NetOffice.OutlookApi.NavigationModule;
+			NetOffice.OutlookApi.NavigationModule newCurrentModule = Factory.CreateObjectFromComProxy(_eventClass, currentModule) as NetOffice.OutlookApi.NavigationModule;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCurrentModule;
 			_eventBinding.RaiseCustomEvent("ModuleSwitch", ref paramsArray);

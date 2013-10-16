@@ -110,7 +110,22 @@ namespace NetOffice.MSComctlLibApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ListViewEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -167,7 +182,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ColumnHeader newColumnHeader = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as NetOffice.MSComctlLibApi.ColumnHeader;
+			NetOffice.MSComctlLibApi.ColumnHeader newColumnHeader = Factory.CreateObjectFromComProxy(_eventClass, columnHeader) as NetOffice.MSComctlLibApi.ColumnHeader;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newColumnHeader;
 			_eventBinding.RaiseCustomEvent("ColumnClick", ref paramsArray);
@@ -182,7 +197,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ListItem newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemClick", ref paramsArray);
@@ -462,7 +477,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ListItem newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
+			NetOffice.MSComctlLibApi.ListItem newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as NetOffice.MSComctlLibApi.ListItem;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("ItemCheck", ref paramsArray);

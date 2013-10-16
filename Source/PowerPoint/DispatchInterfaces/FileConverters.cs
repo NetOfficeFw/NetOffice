@@ -89,7 +89,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.PowerPointApi.FileConverter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.FileConverter.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverter;
+				NetOffice.PowerPointApi.FileConverter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.PowerPointApi.FileConverter.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileConverter;
 				return newObject;
 			}
 		}

@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PropertyTest newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTest;
+			NetOffice.OfficeApi.PropertyTest newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PropertyTest.LateBindingApiWrapperType) as NetOffice.OfficeApi.PropertyTest;
 			return newObject;
 			}
 		}

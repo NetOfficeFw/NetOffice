@@ -84,7 +84,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
 				return newObject;
 			}
 		}
@@ -100,7 +100,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EventList", paramsArray);
-				NetOffice.VisioApi.IVEventList newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEventList;
+				NetOffice.VisioApi.IVEventList newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEventList;
 				return newObject;
 			}
 		}

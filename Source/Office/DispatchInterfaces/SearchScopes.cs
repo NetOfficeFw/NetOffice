@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SearchScope newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchScope.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchScope;
+			NetOffice.OfficeApi.SearchScope newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SearchScope.LateBindingApiWrapperType) as NetOffice.OfficeApi.SearchScope;
 			return newObject;
 			}
 		}

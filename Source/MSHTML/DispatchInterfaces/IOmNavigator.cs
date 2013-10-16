@@ -144,7 +144,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "mimeTypes", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLMimeTypesCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLMimeTypesCollection;
+				NetOffice.MSHTMLApi.IHTMLMimeTypesCollection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLMimeTypesCollection;
 				return newObject;
 			}
 		}
@@ -160,7 +160,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "plugins", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLPluginsCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLPluginsCollection;
+				NetOffice.MSHTMLApi.IHTMLPluginsCollection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLPluginsCollection;
 				return newObject;
 			}
 		}
@@ -191,7 +191,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "opsProfile", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLOpsProfile newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOpsProfile;
+				NetOffice.MSHTMLApi.IHTMLOpsProfile newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOpsProfile;
 				return newObject;
 			}
 		}
@@ -329,7 +329,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "userProfile", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLOpsProfile newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOpsProfile;
+				NetOffice.MSHTMLApi.IHTMLOpsProfile newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOpsProfile;
 				return newObject;
 			}
 		}

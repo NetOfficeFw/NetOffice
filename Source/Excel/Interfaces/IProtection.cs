@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AllowEditRanges", paramsArray);
-				NetOffice.ExcelApi.AllowEditRanges newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRanges;
+				NetOffice.ExcelApi.AllowEditRanges newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRanges.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRanges;
 				return newObject;
 			}
 		}

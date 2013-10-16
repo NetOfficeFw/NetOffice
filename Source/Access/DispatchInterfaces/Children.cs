@@ -88,7 +88,7 @@ namespace NetOffice.AccessApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 			}
 		}

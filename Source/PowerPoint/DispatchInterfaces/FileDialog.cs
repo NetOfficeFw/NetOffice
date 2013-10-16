@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.PowerPointApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
+				NetOffice.PowerPointApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.Application.LateBindingApiWrapperType) as NetOffice.PowerPointApi.Application;
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Extensions", paramsArray);
-				NetOffice.PowerPointApi.FileDialogExtensionList newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileDialogExtensionList.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialogExtensionList;
+				NetOffice.PowerPointApi.FileDialogExtensionList newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileDialogExtensionList.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialogExtensionList;
 				return newObject;
 			}
 		}
@@ -318,7 +318,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				NetOffice.PowerPointApi.FileDialogFileList newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileDialogFileList.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialogFileList;
+				NetOffice.PowerPointApi.FileDialogFileList newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.FileDialogFileList.LateBindingApiWrapperType) as NetOffice.PowerPointApi.FileDialogFileList;
 				return newObject;
 			}
 		}

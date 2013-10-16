@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 			}
 		}
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, parentFolder, overwriteIfFileAlreadyExists);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFile newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
+			NetOffice.OfficeApi.SharedWorkspaceFile newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFile;
 			return newObject;
 		}
 

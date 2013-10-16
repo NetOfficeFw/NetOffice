@@ -100,7 +100,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.TextColumn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
+				NetOffice.WordApi.TextColumn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
 				return newObject;
 			}
 		}
@@ -270,7 +270,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, spacing, evenlySpaced);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TextColumn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
+			NetOffice.WordApi.TextColumn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
 			return newObject;
 		}
 
@@ -283,7 +283,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TextColumn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
+			NetOffice.WordApi.TextColumn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
 			return newObject;
 		}
 
@@ -297,7 +297,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TextColumn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
+			NetOffice.WordApi.TextColumn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
 			return newObject;
 		}
 
@@ -312,7 +312,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, spacing);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TextColumn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
+			NetOffice.WordApi.TextColumn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TextColumn.LateBindingApiWrapperType) as NetOffice.WordApi.TextColumn;
 			return newObject;
 		}
 

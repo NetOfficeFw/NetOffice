@@ -87,7 +87,7 @@ namespace NetOffice.VisioApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVMenuItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
+			NetOffice.VisioApi.IVMenuItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVMenu newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
+				NetOffice.VisioApi.IVMenu newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
 				return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentItem", paramsArray);
-				NetOffice.VisioApi.IVMenuItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
+				NetOffice.VisioApi.IVMenuItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VisioApi.IVMenuItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
+			NetOffice.VisioApi.IVMenuItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
 			return newObject;
 		}
 
@@ -164,7 +164,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.MethodReturn(this, "AddAt", paramsArray);
-			NetOffice.VisioApi.IVMenuItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
+			NetOffice.VisioApi.IVMenuItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuItem;
 			return newObject;
 		}
 

@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.DocumentProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value, linkSource);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.DocumentProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.DocumentProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.DocumentProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, linkToContent, type, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.DocumentProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
+			NetOffice.OfficeApi.DocumentProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.DocumentProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentProperty;
 			return newObject;
 		}
 

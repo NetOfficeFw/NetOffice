@@ -102,7 +102,7 @@ namespace NetOffice.DAOApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.DAOApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
 			return newObject;
 			}
 		}

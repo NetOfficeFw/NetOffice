@@ -87,7 +87,7 @@ namespace NetOffice.MSProjectApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSProjectApi.ReportTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplate;
+			NetOffice.MSProjectApi.ReportTemplate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplate;
 			return newObject;
 			}
 		}

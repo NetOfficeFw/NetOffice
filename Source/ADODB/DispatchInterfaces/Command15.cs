@@ -84,7 +84,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
-				NetOffice.ADODBApi._Connection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Connection;
+				NetOffice.ADODBApi._Connection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Connection;
 				return newObject;
 			}
 			set
@@ -165,7 +165,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parameters", paramsArray);
-				NetOffice.ADODBApi.Parameters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters;
+				NetOffice.ADODBApi.Parameters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters;
 				return newObject;
 			}
 		}
@@ -226,7 +226,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -240,7 +240,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -255,7 +255,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Recordset;
 			return newObject;
 		}
 
@@ -272,7 +272,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -285,7 +285,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -330,7 +330,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 
@@ -347,7 +347,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
+			NetOffice.ADODBApi._Parameter newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.ADODBApi._Parameter;
 			return newObject;
 		}
 

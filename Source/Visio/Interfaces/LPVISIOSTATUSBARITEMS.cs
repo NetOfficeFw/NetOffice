@@ -87,7 +87,7 @@ namespace NetOffice.VisioApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVStatusBarItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
+			NetOffice.VisioApi.IVStatusBarItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVStatusBar newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBar;
+				NetOffice.VisioApi.IVStatusBar newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBar;
 				return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ParentItem", paramsArray);
-				NetOffice.VisioApi.IVStatusBarItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
+				NetOffice.VisioApi.IVStatusBarItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VisioApi.IVStatusBarItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
+			NetOffice.VisioApi.IVStatusBarItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
 			return newObject;
 		}
 
@@ -164,7 +164,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.MethodReturn(this, "AddAt", paramsArray);
-			NetOffice.VisioApi.IVStatusBarItem newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
+			NetOffice.VisioApi.IVStatusBarItem newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBarItem;
 			return newObject;
 		}
 

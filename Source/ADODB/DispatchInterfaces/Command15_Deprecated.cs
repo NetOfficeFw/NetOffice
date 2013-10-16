@@ -84,7 +84,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
-				NetOffice.ADODBApi._Connection_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Connection_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Connection_Deprecated;
+				NetOffice.ADODBApi._Connection_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi._Connection_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Connection_Deprecated;
 				return newObject;
 			}
 			set
@@ -165,7 +165,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parameters", paramsArray);
-				NetOffice.ADODBApi.Parameters_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters_Deprecated;
+				NetOffice.ADODBApi.Parameters_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Parameters_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi.Parameters_Deprecated;
 				return newObject;
 			}
 		}
@@ -226,7 +226,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
+			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
 			return newObject;
 		}
 
@@ -240,7 +240,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
+			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
 			return newObject;
 		}
 
@@ -255,7 +255,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsAffected, parameters);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
+			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
 			return newObject;
 		}
 
@@ -272,7 +272,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size, value);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 
@@ -285,7 +285,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 
@@ -330,7 +330,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 
@@ -347,7 +347,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, direction, size);
 			object returnItem = Invoker.MethodReturn(this, "CreateParameter", paramsArray);
-			NetOffice.ADODBApi._Parameter_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
+			NetOffice.ADODBApi._Parameter_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Parameter_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Parameter_Deprecated;
 			return newObject;
 		}
 

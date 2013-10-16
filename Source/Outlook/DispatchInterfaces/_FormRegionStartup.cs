@@ -92,7 +92,7 @@ namespace NetOffice.OutlookApi
 			object returnItem = Invoker.MethodReturn(this, "GetFormRegionStorage", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -124,7 +124,7 @@ namespace NetOffice.OutlookApi
 			object returnItem = Invoker.MethodReturn(this, "GetFormRegionManifest", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -146,7 +146,7 @@ namespace NetOffice.OutlookApi
 			object returnItem = Invoker.MethodReturn(this, "GetFormRegionIcon", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

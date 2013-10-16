@@ -85,7 +85,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item16", paramsArray);
-			NetOffice.VisioApi.IVPath newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPath;
+			NetOffice.VisioApi.IVPath newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPath;
 			return newObject;
 		}
 
@@ -160,7 +160,7 @@ namespace NetOffice.VisioApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVPath newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPath;
+			NetOffice.VisioApi.IVPath newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVPath;
 			return newObject;
 			}
 		}

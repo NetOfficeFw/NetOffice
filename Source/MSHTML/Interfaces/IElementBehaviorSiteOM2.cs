@@ -85,7 +85,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetDefaults", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLElementDefaults newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElementDefaults;
+			NetOffice.MSHTMLApi.IHTMLElementDefaults newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElementDefaults;
 			return newObject;
 		}
 

@@ -156,7 +156,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "onscroll", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -183,7 +183,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "createControlRange", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 

@@ -85,7 +85,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVApplication;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.VisioApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVEvent newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
+			NetOffice.VisioApi.IVEvent newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
 			return newObject;
 			}
 		}
@@ -149,7 +149,7 @@ namespace NetOffice.VisioApi
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(objectID);
 			object returnItem = Invoker.PropertyGet(this, "ItemFromID", paramsArray);
-			NetOffice.VisioApi.IVEvent newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
+			NetOffice.VisioApi.IVEvent newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
 			return newObject;
 		}
 
@@ -180,7 +180,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventCode, action, target, targetArgs);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VisioApi.IVEvent newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
+			NetOffice.VisioApi.IVEvent newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
 			return newObject;
 		}
 
@@ -196,7 +196,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eventCode, sinkIUnkOrIDisp, iIDSink, targetArgs);
 			object returnItem = Invoker.MethodReturn(this, "AddAdvise", paramsArray);
-			NetOffice.VisioApi.IVEvent newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
+			NetOffice.VisioApi.IVEvent newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVEvent;
 			return newObject;
 		}
 

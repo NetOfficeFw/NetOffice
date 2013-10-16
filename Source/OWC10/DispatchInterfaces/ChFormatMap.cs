@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Segments", paramsArray);
-				NetOffice.OWC10Api.ChSegments newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegments.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegments;
+				NetOffice.OWC10Api.ChSegments newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSegments.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSegments;
 				return newObject;
 			}
 		}

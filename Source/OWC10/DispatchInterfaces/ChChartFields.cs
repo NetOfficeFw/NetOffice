@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChChartField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChartField.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChartField;
+			NetOffice.OWC10Api.ChChartField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChartField.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChartField;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChDropZone newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChDropZone.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChDropZone;
+				NetOffice.OWC10Api.ChDropZone newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChDropZone.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChDropZone;
 				return newObject;
 			}
 		}

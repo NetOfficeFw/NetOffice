@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				NetOffice.OfficeApi.AnswerWizardFiles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizardFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizardFiles;
+				NetOffice.OfficeApi.AnswerWizardFiles newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizardFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizardFiles;
 				return newObject;
 			}
 		}

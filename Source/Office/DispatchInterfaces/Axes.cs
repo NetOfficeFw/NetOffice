@@ -101,7 +101,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.OfficeApi.IMsoAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
+			NetOffice.OfficeApi.IMsoAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.OfficeApi.IMsoAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
+			NetOffice.OfficeApi.IMsoAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType) as NetOffice.OfficeApi.IMsoAxis;
 			return newObject;
 			}
 		}
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}

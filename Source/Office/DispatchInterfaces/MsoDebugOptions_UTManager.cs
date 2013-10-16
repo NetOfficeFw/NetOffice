@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UnitTests", paramsArray);
-				NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
+				NetOffice.OfficeApi.MsoDebugOptions_UTs newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTs;
 				return newObject;
 			}
 		}

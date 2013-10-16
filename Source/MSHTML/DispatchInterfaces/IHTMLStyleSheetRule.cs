@@ -105,7 +105,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "style", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLRuleStyle newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLRuleStyle;
+				NetOffice.MSHTMLApi.IHTMLRuleStyle newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLRuleStyle;
 				return newObject;
 			}
 		}

@@ -122,7 +122,22 @@ namespace NetOffice.OWC10Api
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _DataSourceControlEvent_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -145,7 +160,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("Current", ref paramsArray);
@@ -160,7 +175,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeExpand", ref paramsArray);
@@ -175,7 +190,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeCollapse", ref paramsArray);
@@ -190,7 +205,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeFirstPage", ref paramsArray);
@@ -205,7 +220,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforePreviousPage", ref paramsArray);
@@ -220,7 +235,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeNextPage", ref paramsArray);
@@ -235,7 +250,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeLastPage", ref paramsArray);
@@ -250,7 +265,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("DataError", ref paramsArray);
@@ -265,7 +280,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("DataPageComplete", ref paramsArray);
@@ -280,7 +295,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeInitialBind", ref paramsArray);
@@ -295,7 +310,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("RecordsetSaveProgress", ref paramsArray);
@@ -310,7 +325,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("AfterDelete", ref paramsArray);
@@ -325,7 +340,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("AfterInsert", ref paramsArray);
@@ -340,7 +355,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("AfterUpdate", ref paramsArray);
@@ -355,7 +370,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
@@ -370,7 +385,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeInsert", ref paramsArray);
@@ -385,7 +400,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeOverwrite", ref paramsArray);
@@ -400,7 +415,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("BeforeUpdate", ref paramsArray);
@@ -415,7 +430,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("Dirty", ref paramsArray);
@@ -430,7 +445,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("RecordExit", ref paramsArray);
@@ -445,7 +460,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("Undo", ref paramsArray);
@@ -460,7 +475,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
+			NetOffice.OWC10Api.DSCEventInfo newDSCEventInfo = Factory.CreateObjectFromComProxy(_eventClass, dSCEventInfo) as NetOffice.OWC10Api.DSCEventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDSCEventInfo;
 			_eventBinding.RaiseCustomEvent("Focus", ref paramsArray);

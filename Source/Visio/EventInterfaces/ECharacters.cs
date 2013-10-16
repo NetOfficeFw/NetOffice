@@ -38,7 +38,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ECharacters_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);

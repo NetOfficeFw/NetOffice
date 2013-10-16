@@ -84,7 +84,7 @@ namespace NetOffice.MSComctlLibApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				NetOffice.MSComctlLibApi.IVBDataObjectFiles newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IVBDataObjectFiles;
+				NetOffice.MSComctlLibApi.IVBDataObjectFiles newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSComctlLibApi.IVBDataObjectFiles;
 				return newObject;
 			}
 		}
@@ -114,7 +114,7 @@ namespace NetOffice.MSComctlLibApi
 			object returnItem = Invoker.MethodReturn(this, "GetData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

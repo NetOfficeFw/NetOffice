@@ -46,7 +46,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public EDataRecordsets_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -69,7 +84,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
 			_eventBinding.RaiseCustomEvent("DataRecordsetAdded", ref paramsArray);
@@ -84,7 +99,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVDataRecordset newDataRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
+			NetOffice.VisioApi.IVDataRecordset newDataRecordset = Factory.CreateObjectFromComProxy(_eventClass, dataRecordset) as NetOffice.VisioApi.IVDataRecordset;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordset;
 			_eventBinding.RaiseCustomEvent("BeforeDataRecordsetDelete", ref paramsArray);
@@ -99,7 +114,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, dataRecordsetChanged) as NetOffice.VisioApi.IVDataRecordsetChangedEvent;
+			NetOffice.VisioApi.IVDataRecordsetChangedEvent newDataRecordsetChanged = Factory.CreateObjectFromComProxy(_eventClass, dataRecordsetChanged) as NetOffice.VisioApi.IVDataRecordsetChangedEvent;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDataRecordsetChanged;
 			_eventBinding.RaiseCustomEvent("DataRecordsetChanged", ref paramsArray);

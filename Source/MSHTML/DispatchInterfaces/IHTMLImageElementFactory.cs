@@ -87,7 +87,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width, height);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 
@@ -100,7 +100,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 
@@ -114,7 +114,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(width);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLImgElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
+			NetOffice.MSHTMLApi.IHTMLImgElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLImgElement;
 			return newObject;
 		}
 

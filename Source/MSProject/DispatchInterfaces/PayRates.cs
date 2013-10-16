@@ -87,7 +87,7 @@ namespace NetOffice.MSProjectApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.MSProjectApi.PayRate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
+			NetOffice.MSProjectApi.PayRate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.Resource newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Resource;
+				NetOffice.MSProjectApi.Resource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Resource.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Resource;
 				return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 		}
@@ -155,7 +155,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectiveDate, stdRate, ovtRate, costPerUse);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.PayRate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
+			NetOffice.MSProjectApi.PayRate newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
 			return newObject;
 		}
 
@@ -169,7 +169,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectiveDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.PayRate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
+			NetOffice.MSProjectApi.PayRate newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
 			return newObject;
 		}
 
@@ -184,7 +184,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectiveDate, stdRate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.PayRate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
+			NetOffice.MSProjectApi.PayRate newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
 			return newObject;
 		}
 
@@ -200,7 +200,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effectiveDate, stdRate, ovtRate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.MSProjectApi.PayRate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
+			NetOffice.MSProjectApi.PayRate newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.PayRate.LateBindingApiWrapperType) as NetOffice.MSProjectApi.PayRate;
 			return newObject;
 		}
 

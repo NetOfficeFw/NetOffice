@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 			}
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.CustomXMLSchema newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
+			NetOffice.OfficeApi.CustomXMLSchema newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.CustomXMLSchema.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLSchema;
 			return newObject;
 		}
 

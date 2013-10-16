@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.AddIn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
+			NetOffice.ExcelApi.AddIn newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
 			return newObject;
 			}
 		}
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, copyFile);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.AddIn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
+			NetOffice.ExcelApi.AddIn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
 			return newObject;
 		}
 
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.AddIn newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
+			NetOffice.ExcelApi.AddIn newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AddIn.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIn;
 			return newObject;
 		}
 

@@ -94,7 +94,22 @@ namespace NetOffice.MSComctlLibApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public IToolbarEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -117,7 +132,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Button newButton = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
 			_eventBinding.RaiseCustomEvent("ButtonClick", ref paramsArray);
@@ -358,7 +373,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, buttonMenu) as NetOffice.MSComctlLibApi.ButtonMenu;
+			NetOffice.MSComctlLibApi.ButtonMenu newButtonMenu = Factory.CreateObjectFromComProxy(_eventClass, buttonMenu) as NetOffice.MSComctlLibApi.ButtonMenu;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButtonMenu;
 			_eventBinding.RaiseCustomEvent("ButtonMenuClick", ref paramsArray);
@@ -373,7 +388,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Button newButton = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
+			NetOffice.MSComctlLibApi.Button newButton = Factory.CreateObjectFromComProxy(_eventClass, button) as NetOffice.MSComctlLibApi.Button;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newButton;
 			_eventBinding.RaiseCustomEvent("ButtonDropDown", ref paramsArray);

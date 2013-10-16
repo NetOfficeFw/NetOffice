@@ -100,7 +100,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChChart newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChart.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChart;
+				NetOffice.OWC10Api.ChChart newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChChart.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChChart;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
+			NetOffice.OWC10Api.ChAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
 			return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scaling);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.ChAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
+			NetOffice.OWC10Api.ChAxis newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
 			return newObject;
 		}
 

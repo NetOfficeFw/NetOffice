@@ -5,15 +5,6 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Mark a method as error handler for COMAddin methods. The non-static method need the following signature: public void ErrorHandler(ErrorMethodKind methodKind, Exception exception)
-    /// Rethrow the exception(second argument) in the method body to the runtime system if you want signalize an error to the environment(typical not wanted)
-    /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Method)]
-    public class ErrorHandlerAttribute : System.Attribute
-    {
-    }
-
-    /// <summary>
     /// Indicates in which method the error is occured
     /// </summary>
     public enum ErrorMethodKind
@@ -51,6 +42,12 @@ namespace NetOffice.Tools
         /// <summary>
         /// the error is occured in public virtual void CTPFactoryAvailable(object CTPFactoryInst)
         /// </summary>
-        CTPFactoryAvailable = 6
+        CTPFactoryAvailable = 6,
+
+        /// <summary>
+        ///  the error is occured in protected virtual Factory CreateFactory()
+        /// </summary>
+        CreateFactory = 7
+
     }
 }

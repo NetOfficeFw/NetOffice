@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.Bookmark newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
+				NetOffice.WordApi.Bookmark newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
 				return newObject;
 			}
 		}
@@ -209,7 +209,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Bookmark newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
+			NetOffice.WordApi.Bookmark newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
 			return newObject;
 		}
 
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.Bookmark newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
+			NetOffice.WordApi.Bookmark newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.Bookmark.LateBindingApiWrapperType) as NetOffice.WordApi.Bookmark;
 			return newObject;
 		}
 

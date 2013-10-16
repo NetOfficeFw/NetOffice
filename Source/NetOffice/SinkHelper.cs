@@ -41,11 +41,12 @@ namespace NetOffice
         /// <summary>
         /// try to find connection point by FindConnectionPoint
         /// </summary>
+        /// <param name="comInstance"></param>
         /// <param name="connectionPointContainer"></param>
         /// <param name="point"></param>
         /// <param name="sinkIds"></param>
         /// <returns></returns>
-        private static string FindConnectionPoint(IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
+        private static string FindConnectionPoint(COMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
         {
             try
             {
@@ -65,7 +66,7 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                comInstance.Console.WriteException(throwedException);
                 return null;
             }
         }
@@ -73,11 +74,12 @@ namespace NetOffice
         /// <summary>
         /// try to find connection point by EnumConnectionPoints
         /// </summary>
+        /// <param name="comInstance"></param>
         /// <param name="connectionPointContainer"></param>
         /// <param name="point"></param>
         /// <param name="sinkIds"></param>
         /// <returns></returns>
-        private static string EnumConnectionPoint(IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
+        private static string EnumConnectionPoint(COMObject comInstance, IConnectionPointContainer connectionPointContainer, ref IConnectionPoint point, params string[] sinkIds)
         {
             IConnectionPoint[] points = new IConnectionPoint[1];
             IEnumConnectionPoints enumPoints = null;
@@ -108,7 +110,7 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                comInstance.Console.WriteException(throwedException);
                 return null;
             }
             finally
@@ -121,33 +123,39 @@ namespace NetOffice
         /// <summary>
         /// get supported connection point from comProxy
         /// </summary>
-        /// <param name="comProxy"></param>
+        /// <param name="comInstance"></param>
         /// <param name="point"></param>
         /// <param name="sinkIds"></param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
+        public static string GetConnectionPoint(COMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
         {
             if (null == sinkIds)
                 return null;
 
-            IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
+            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
+            if (null == connectionPointContainer)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
+                return null;
+            }
 
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint");
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
 
-            string id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
+            string id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
 
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
 
             if (null == id)
             {
-                if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint");
-                id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
-                if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+                id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
             }
 
             if (null != id)
@@ -159,33 +167,39 @@ namespace NetOffice
         /// <summary>
         /// get supported connection point from comProxy in reverse order to GetConnectionPoint
         /// </summary>
-        /// <param name="comProxy"></param>
+        /// <param name="comInstance"></param>
         /// <param name="point"></param>
         /// <param name="sinkIds"></param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static string GetConnectionPoint2(COMObject comProxy, ref IConnectionPoint point, params string[] sinkIds)
+        public static string GetConnectionPoint2(COMObject comInstance, ref IConnectionPoint point, params string[] sinkIds)
         {
             if (null == sinkIds)
                 return null;
 
-            IConnectionPointContainer connectionPointContainer = (IConnectionPointContainer)comProxy.UnderlyingObject;
+            IConnectionPointContainer connectionPointContainer = comInstance.UnderlyingObject as IConnectionPointContainer;
+            if (null == connectionPointContainer)
+            {
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine("Unable to cast IConnectionPointContainer.");
+                return null;
+            }
 
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint");
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint");
 
-            string id = EnumConnectionPoint(connectionPointContainer, ref point, sinkIds);
-            
-            if (Settings.EnableEventDebugOutput)
-                DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
+            string id = EnumConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+
+            if (comInstance.Settings.EnableEventDebugOutput)
+                comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call EnumConnectionPoint passed");
 
             if (null == id)
             {
-                if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint");
-                id = FindConnectionPoint(connectionPointContainer, ref point, sinkIds);
-                if (Settings.EnableEventDebugOutput)
-                    DebugConsole.WriteLine(comProxy.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint");
+                id = FindConnectionPoint(comInstance, connectionPointContainer, ref point, sinkIds);
+                if (comInstance.Settings.EnableEventDebugOutput)
+                    comInstance.Console.WriteLine(comInstance.UnderlyingTypeName + " -> Call FindConnectionPoint passed");
             }
 
             if (null != id)
@@ -216,7 +230,7 @@ namespace NetOffice
         {
             try
             {
-                if (true == Settings.EnableEvents)
+                if (true == Settings.Default.EnableEvents)
                 {
                     _connectionPoint = connectPoint;
                     _connectionPoint.Advise(this, out _connectionCookie);
@@ -225,7 +239,7 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                _eventClass.Console.WriteException(throwedException);
                 throw (throwedException);
             }
         }
@@ -252,12 +266,12 @@ namespace NetOffice
                 }
                 catch (System.Runtime.InteropServices.COMException throwedException)
                 {
-                    DebugConsole.WriteException(throwedException);
+                    _eventClass.Console.WriteException(throwedException);
                     ; // RPC server is disconnected or dead
                 }
                 catch (Exception throwedException)
                 {
-                    DebugConsole.WriteException(throwedException);
+                    _eventClass.Console.WriteException(throwedException);
                     throw new COMException("An error occured.", throwedException);
                 }
 

@@ -136,7 +136,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ManySide", paramsArray);
-				NetOffice.OWC10Api.PageRowsource newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRowsource;
+				NetOffice.OWC10Api.PageRowsource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRowsource;
 				return newObject;
 			}
 		}
@@ -152,7 +152,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OneSide", paramsArray);
-				NetOffice.OWC10Api.PageRowsource newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRowsource;
+				NetOffice.OWC10Api.PageRowsource newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRowsource.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRowsource;
 				return newObject;
 			}
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PageRelatedFields", paramsArray);
-				NetOffice.OWC10Api.PageRelatedFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelatedFields;
+				NetOffice.OWC10Api.PageRelatedFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PageRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.PageRelatedFields;
 				return newObject;
 			}
 		}

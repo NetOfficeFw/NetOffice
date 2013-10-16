@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "Colors", paramsArray);
-			NetOffice.OfficeApi.ThemeColor newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.ThemeColor.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeColor;
+			NetOffice.OfficeApi.ThemeColor newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.ThemeColor.LateBindingApiWrapperType) as NetOffice.OfficeApi.ThemeColor;
 			return newObject;
 		}
 

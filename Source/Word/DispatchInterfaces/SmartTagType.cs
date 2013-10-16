@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -131,7 +131,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartTagActions", paramsArray);
-				NetOffice.WordApi.SmartTagActions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SmartTagActions.LateBindingApiWrapperType) as NetOffice.WordApi.SmartTagActions;
+				NetOffice.WordApi.SmartTagActions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SmartTagActions.LateBindingApiWrapperType) as NetOffice.WordApi.SmartTagActions;
 				return newObject;
 			}
 		}
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartTagRecognizers", paramsArray);
-				NetOffice.WordApi.SmartTagRecognizers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SmartTagRecognizers.LateBindingApiWrapperType) as NetOffice.WordApi.SmartTagRecognizers;
+				NetOffice.WordApi.SmartTagRecognizers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.SmartTagRecognizers.LateBindingApiWrapperType) as NetOffice.WordApi.SmartTagRecognizers;
 				return newObject;
 			}
 		}

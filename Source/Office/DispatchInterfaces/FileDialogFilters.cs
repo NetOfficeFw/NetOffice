@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.FileDialogFilter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
+				NetOffice.OfficeApi.FileDialogFilter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
 				return newObject;
 			}
 		}
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions, position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.FileDialogFilter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
+			NetOffice.OfficeApi.FileDialogFilter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
 			return newObject;
 		}
 
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(description, extensions);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.FileDialogFilter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
+			NetOffice.OfficeApi.FileDialogFilter newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.FileDialogFilter.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileDialogFilter;
 			return newObject;
 		}
 

@@ -42,7 +42,22 @@ namespace NetOffice.OfficeApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _CustomTaskPaneEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			_eventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
@@ -80,7 +95,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateObjectFromComProxy(_eventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCustomTaskPaneInst;
 			_eventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);

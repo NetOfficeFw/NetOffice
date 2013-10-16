@@ -38,7 +38,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public AccountsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Account newAccount = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, account) as NetOffice.OutlookApi.Account;
+			NetOffice.OutlookApi.Account newAccount = Factory.CreateObjectFromComProxy(_eventClass, account) as NetOffice.OutlookApi.Account;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAccount;
 			_eventBinding.RaiseCustomEvent("AutoDiscoverComplete", ref paramsArray);

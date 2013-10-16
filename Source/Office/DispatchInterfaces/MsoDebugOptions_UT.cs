@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Run", paramsArray);
-			NetOffice.OfficeApi.MsoDebugOptions_UTRunResult newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTRunResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTRunResult;
+			NetOffice.OfficeApi.MsoDebugOptions_UTRunResult newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MsoDebugOptions_UTRunResult.LateBindingApiWrapperType) as NetOffice.OfficeApi.MsoDebugOptions_UTRunResult;
 			return newObject;
 		}
 

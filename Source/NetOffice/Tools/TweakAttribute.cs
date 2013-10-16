@@ -6,7 +6,7 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// Activate tweak options. you can add various values in the office add-in regristry location
+    /// Activate COMAddin tweak options. you can add various values in the office add-in regristry location
     /// to customize NetOffice diagnostic/log settings at runtime. This can be very helpful in troubleshooting.
     /// See tweak overview here: http://netoffice.codeplex.com/wikipage?title=Tweaks_EN
     /// </summary>

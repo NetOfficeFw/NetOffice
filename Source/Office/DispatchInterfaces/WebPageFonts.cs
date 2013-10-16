@@ -102,7 +102,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.WebPageFont newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFont.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFont;
+			NetOffice.OfficeApi.WebPageFont newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFont.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFont;
 			return newObject;
 			}
 		}

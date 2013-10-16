@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.SchemaRelationship newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 			}
 		}
@@ -124,7 +124,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.SchemaRelationship newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 		}
 
@@ -142,7 +142,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField);
 			object returnItem = Invoker.MethodReturn(this, "AddNew", paramsArray);
-			NetOffice.OWC10Api.SchemaRelationship newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
+			NetOffice.OWC10Api.SchemaRelationship newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelationship;
 			return newObject;
 		}
 

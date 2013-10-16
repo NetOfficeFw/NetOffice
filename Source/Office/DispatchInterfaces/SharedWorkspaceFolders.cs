@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
+			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
 			return newObject;
 			}
 		}
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderName, parentFolder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
+			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
 			return newObject;
 		}
 
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folderName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
+			NetOffice.OfficeApi.SharedWorkspaceFolder newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceFolder.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolder;
 			return newObject;
 		}
 

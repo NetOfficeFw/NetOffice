@@ -38,7 +38,22 @@ namespace NetOffice.MSHTMLApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public HTMLNamespaceEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.MSHTMLApi
 				return;
 			}
 
-			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
+			NetOffice.MSHTMLApi.IHTMLEventObj newpEvtObj = Factory.CreateObjectFromComProxy(_eventClass, pEvtObj) as NetOffice.MSHTMLApi.IHTMLEventObj;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpEvtObj;
 			_eventBinding.RaiseCustomEvent("onreadystatechange", ref paramsArray);

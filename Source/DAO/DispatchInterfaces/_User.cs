@@ -144,7 +144,7 @@ namespace NetOffice.DAOApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Groups", paramsArray);
-				NetOffice.DAOApi.Groups newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Groups.LateBindingApiWrapperType) as NetOffice.DAOApi.Groups;
+				NetOffice.DAOApi.Groups newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Groups.LateBindingApiWrapperType) as NetOffice.DAOApi.Groups;
 				return newObject;
 			}
 		}
@@ -175,7 +175,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, pID);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
-			NetOffice.DAOApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
 			return newObject;
 		}
 
@@ -188,7 +188,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
-			NetOffice.DAOApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
 			return newObject;
 		}
 
@@ -202,7 +202,7 @@ namespace NetOffice.DAOApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "CreateGroup", paramsArray);
-			NetOffice.DAOApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
+			NetOffice.DAOApi.Group newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.DAOApi.Group.LateBindingApiWrapperType) as NetOffice.DAOApi.Group;
 			return newObject;
 		}
 

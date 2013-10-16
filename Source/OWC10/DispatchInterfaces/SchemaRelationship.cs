@@ -129,7 +129,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRelatedFields", paramsArray);
-				NetOffice.OWC10Api.SchemaRelatedFields newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelatedFields;
+				NetOffice.OWC10Api.SchemaRelatedFields newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRelatedFields.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRelatedFields;
 				return newObject;
 			}
 		}

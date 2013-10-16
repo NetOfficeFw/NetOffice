@@ -357,7 +357,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fonts", paramsArray);
-				NetOffice.OfficeApi.WebPageFonts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFonts;
+				NetOffice.OfficeApi.WebPageFonts newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebPageFonts.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebPageFonts;
 				return newObject;
 			}
 		}

@@ -38,7 +38,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public InspectorsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Inspector newInspector = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, inspector) as NetOffice.OutlookApi._Inspector;
+			NetOffice.OutlookApi._Inspector newInspector = Factory.CreateObjectFromComProxy(_eventClass, inspector) as NetOffice.OutlookApi._Inspector;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newInspector;
 			_eventBinding.RaiseCustomEvent("NewInspector", ref paramsArray);

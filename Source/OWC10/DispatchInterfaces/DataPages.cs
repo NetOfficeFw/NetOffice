@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.DataPage newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.DataPage.LateBindingApiWrapperType) as NetOffice.OWC10Api.DataPage;
+			NetOffice.OWC10Api.DataPage newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.DataPage.LateBindingApiWrapperType) as NetOffice.OWC10Api.DataPage;
 			return newObject;
 			}
 		}

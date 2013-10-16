@@ -42,7 +42,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public StoresEvents_12_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Store newStore = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newStore;
 			paramsArray.SetValue(cancel, 1);
@@ -83,7 +98,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi._Store newStore = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
+			NetOffice.OutlookApi._Store newStore = Factory.CreateObjectFromComProxy(_eventClass, store) as NetOffice.OutlookApi._Store;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStore;
 			_eventBinding.RaiseCustomEvent("StoreAdd", ref paramsArray);

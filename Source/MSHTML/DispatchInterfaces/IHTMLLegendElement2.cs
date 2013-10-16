@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "form", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFormElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
+				NetOffice.MSHTMLApi.IHTMLFormElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
 				return newObject;
 			}
 		}

@@ -104,7 +104,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Members", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspaceMembers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceMembers.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceMembers;
+				NetOffice.OfficeApi.SharedWorkspaceMembers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceMembers.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceMembers;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Tasks", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspaceTasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceTasks.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTasks;
+				NetOffice.OfficeApi.SharedWorkspaceTasks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceTasks.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTasks;
 				return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Files", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspaceFiles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFiles;
+				NetOffice.OfficeApi.SharedWorkspaceFiles newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFiles.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFiles;
 				return newObject;
 			}
 		}
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Folders", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspaceFolders newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolders;
+				NetOffice.OfficeApi.SharedWorkspaceFolders newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceFolders.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceFolders;
 				return newObject;
 			}
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Links", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspaceLinks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceLinks.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceLinks;
+				NetOffice.OfficeApi.SharedWorkspaceLinks newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceLinks.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceLinks;
 				return newObject;
 			}
 		}
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -233,7 +233,7 @@ namespace NetOffice.OfficeApi
 				object returnItem = Invoker.PropertyGet(this, "LastRefreshed", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else

@@ -16,10 +16,13 @@ namespace NetOffice
     {
         #region Fields
 
+        /// <summary>
+        /// the well know IUnknown Interface ID
+        /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
 
         /// <summary>
-        ///  returns parent proxy object
+        /// returns parent instance
         /// </summary>
         protected internal COMObject _parentObject;
 
@@ -44,7 +47,7 @@ namespace NetOffice
         protected internal bool _callQuitInDispose;
 
         /// <summary>
-        /// returns instance is currently in diposing progress
+        /// returns instance is currently in disposing progress
         /// </summary>
         protected internal volatile bool _isCurrentlyDisposing;
 
@@ -70,16 +73,59 @@ namespace NetOffice
 
         #endregion
 
-        #region Construction
+        #region Ctor
 
         /// <summary>
         /// creates instance and replace the given replacedObject in proxy management
         /// all created childs from replacedObject are now childs from the new instance
         /// </summary>
-        /// <param name="replacedObject"></param>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(Core factory, COMObject replacedObject)
+        {
+            // copy current factory info or set default
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
+
+            // copy proxy
+            _underlyingObject = replacedObject.UnderlyingObject;
+            _parentObject = replacedObject.ParentObject;
+            _instanceType = replacedObject.InstanceType;
+
+            // copy childs
+            foreach (COMObject item in replacedObject.ListChildObjects)
+                AddChildObject(item);
+
+            // remove old object from parent chain
+            if (!Object.ReferenceEquals(replacedObject.ParentObject, null))
+            {
+                COMObject parentObject = replacedObject.ParentObject;
+                parentObject.RemoveChildObject(replacedObject);
+
+                // add himself as child to parent object
+                parentObject.AddChildObject(this);
+            }
+
+            Factory.RemoveObjectFromList(replacedObject);
+            Factory.AddObjectToList(this);
+        }
+
+        /// <summary>
+        /// creates instance and replace the given replacedObject in proxy management
+        /// all created childs from replacedObject are now childs from the new instance
+        /// </summary>
+        /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject replacedObject)
         {
+            // copy current factory info or set default
+            if (null != replacedObject)
+                Factory = replacedObject.Factory;
+            else
+                Factory = Core.Default;
             Factory.CheckInitialize();
 
             // copy proxy
@@ -108,12 +154,60 @@ namespace NetOffice
         /// <summary>
         /// creates new instance with given proxy
         /// </summary>
-        /// <param name="comProxy"></param>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="comProxy">the now wrapped comProxy root instance</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public COMObject(object comProxy)
+        public COMObject(Core factory, object comProxy)
         {
+            // copy current factory info or set default
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
+
+            _underlyingObject = comProxy;
+            _instanceType = comProxy.GetType();
+
+            Factory.AddObjectToList(this);
+        }
+      
+        /// <summary>
+        /// creates new instance with given proxy and parent info
+        /// </summary>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(COMObject parentObject, object comProxy)
+        {
+            // copy current factory info or set default
+            if (null != parentObject)
+                Factory = parentObject.Factory;
+            else
+                Factory = Core.Default;
             Factory.CheckInitialize();
 
+            _parentObject = parentObject;
+            _underlyingObject = comProxy;
+            _instanceType = comProxy.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+        }
+
+        /// <summary>
+        /// creates new instance with given proxy
+        /// </summary>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
+        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(object comProxy)
+        {
+            // copy current factory info or set default
+            Factory = Core.Default;
+            Factory.CheckInitialize();
+
+            _parentObject = null;
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
@@ -123,18 +217,23 @@ namespace NetOffice
         /// <summary>
         /// creates new instance with given proxy and parent info
         /// </summary>
-        /// <param name="parentObject"></param>
-        /// <param name="comProxy"></param>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
         //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public COMObject(COMObject parentObject, object comProxy)
+        public COMObject(Core factory, COMObject parentObject, object comProxy)
         {
-            Factory.CheckInitialize();
+            // copy current factory info or set default
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
 
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _instanceType = comProxy.GetType();
 
-            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
@@ -143,44 +242,105 @@ namespace NetOffice
         /// <summary>
         /// creates new instance with given proxy, parent info and info instance is an enumerator
         /// </summary>
-        /// <param name="parentObject"></param>
-        /// <param name="comProxy"></param>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
         ///  <param name="isEnumerator"></param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public COMObject(COMObject parentObject, object comProxy, bool isEnumerator)
+        public COMObject(Core factory, COMObject parentObject, object comProxy, bool isEnumerator)
         {
-            Factory.CheckInitialize();
+            // copy current factory info
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
 
             _parentObject = parentObject;
             _underlyingObject = comProxy;
             _isEnumerator = isEnumerator;
             _instanceType = comProxy.GetType();
 
-            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
             Factory.AddObjectToList(this);
         }
 
+        /// <summary>
+        /// creates new instance with given proxy, type info and parent info
+        /// </summary>
+        /// <param name="factory">current factory instance or null for default</param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
+        /// <param name="comProxyType">typeinfo from comProy if you have or null</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(Core factory, COMObject parentObject, object comProxy, Type comProxyType)
+        {
+            // copy current factory info
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
+
+            _parentObject = parentObject;
+            _underlyingObject = comProxy;
+
+            if(null != comProxyType)
+                _instanceType = comProxyType;
+            else
+                comProxyType.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+                _parentObject.AddChildObject(this);
+
+            Factory.AddObjectToList(this);
+        }
 
         /// <summary>
         /// creates new instance with given proxy, type info and parent info
         /// </summary>
-        /// <param name="parentObject"></param>
-        /// <param name="comProxy"></param>
-        /// <param name="comProxyType"></param>
+        /// <param name="parentObject">the parent instance where you have these instance from</param>
+        /// <param name="comProxy">the now wrapped comProxy instance</param>
+        /// <param name="comProxyType">typeinfo from comProy if you have or null</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy, Type comProxyType)
         {
+            // copy current factory info or set default
+            if (null != parentObject)
+                Factory = parentObject.Factory;
+            else
+                Factory = Core.Default;
             Factory.CheckInitialize();
 
             _parentObject = parentObject;
             _underlyingObject = comProxy;
-            _instanceType = comProxyType;
 
-            if (Settings.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
+            if (null != comProxyType)
+                _instanceType = comProxyType;
+            else
+                comProxyType.GetType();
+
+            if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
                 _parentObject.AddChildObject(this);
 
+            Factory.AddObjectToList(this);
+        }
+
+        /// <summary>
+        /// creates a new instace with progid
+        /// </summary>
+        /// <param name="factory">current factory instance</param>
+        /// <param name="progId">registered ProgID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject(Core factory, string progId)
+        {
+            // copy current factory info
+            if (null == factory)
+                factory = Core.Default;
+            factory.CheckInitialize();
+            Factory = factory;
+
+            CreateFromProgId(progId);
             Factory.AddObjectToList(this);
         }
 
@@ -191,21 +351,22 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject(string progId)
         {
+            CreateFromProgId(progId);
+
+            // copy current factory info
+            Factory = new Core();
             Factory.CheckInitialize();
 
-            CreateFromProgId(progId);
             Factory.AddObjectToList(this);
         }
-
+         
         /// <summary>
         /// not usable stub constructor
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
-            Factory.CheckInitialize();
-
-            Factory.AddObjectToList(this);
+            DebugConsole.Default.WriteLine("Warning: Invalid COMObject Stub Ctor called.");
         }
 
         #endregion
@@ -213,9 +374,74 @@ namespace NetOffice
         #region COMObject Properties
 
         /// <summary>
+        /// NetOffice property: the associated factory
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public Core Factory
+        {
+            get
+            {
+                if (null == _factory)
+                    return Core.Default;
+                else
+                    return _factory;
+            }
+            set 
+            {
+                _factory = value;
+            }
+        }
+        private Core _factory;
+        
+        /// <summary>
+        /// NetOffice property: the associated invoker
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public Invoker Invoker
+        {
+            get 
+            {
+                if (null != _factory)
+                    return _factory.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
+
+        /// <summary>
+        /// NetOffice property: the associated console
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public DebugConsole Console
+        {
+            get
+            {
+                if (null != _factory)
+                    return _factory.Console;
+                else
+                    return DebugConsole.Default;
+            }
+        }
+
+        /// <summary>
+        /// NetOffice property: the associated settings
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        public Settings Settings
+        {
+            get
+            {
+                if (null != _factory)
+                    return _factory.Settings;
+                else
+                    return Settings.Default;
+            }
+        }
+
+        /// <summary>
         /// NetOffice property: returns the native wrapped proxy
         /// </summary>
-        [Browsable(false)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public object UnderlyingObject
         {
             get
@@ -227,7 +453,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns friendly name for the instance type
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public string FriendlyTypeName
         {
             get
@@ -455,17 +681,14 @@ namespace NetOffice
             bool isLocked = false;
             try
             {
-                if (Settings.EnableThreadSafe)
-                {
-                    Monitor.Enter(_childListLock);
-                    isLocked = true;
-                }
+                Monitor.Enter(_childListLock);
+                isLocked = true;
 
                 _listChildObjects.Add(childObject);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw (throwedException);
             }
             finally
@@ -492,7 +715,7 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw (throwedException);
             }
             finally
@@ -531,17 +754,21 @@ namespace NetOffice
         /// <summary>
         /// calls Quit for a proxy
         /// </summary>
-        /// <param name="proxy"></param>
-        private static void CallQuit(object proxy)
+        /// <param name="settings"></param>
+        /// <param name="invoker"></param>
+        /// <param name="instance"></param>
+        private static void CallQuit(Settings settings, Invoker invoker, COMObject instance)
         {
             try
             {
-                if (Settings.EnableAutomaticQuit)
-                    Invoker.Method(proxy, "Quit");
+                if (null == instance)
+                    return;
+                if (settings.EnableAutomaticQuit)
+                    invoker.Method(instance.UnderlyingObject, "Quit");
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                instance.Console.WriteException(exception);
             }
         }
 
@@ -573,7 +800,7 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                Console.WriteException(exception);
             }
             return cancelDispose;
         }
@@ -622,7 +849,7 @@ namespace NetOffice
 
             // call quit automaticly if wanted
             if (_callQuitInDispose)
-                CallQuit(_underlyingObject);
+                CallQuit(Settings, Invoker, this);
 
             // release proxy
             ReleaseCOMProxy();
@@ -735,7 +962,7 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                Factory.Console.WriteException(exception);
                 throw exception;
             }
             finally
@@ -776,7 +1003,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -795,7 +1022,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, object objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -814,7 +1041,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(object objectA, COMObject objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -833,7 +1060,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator !=(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -852,7 +1079,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator !=(COMObject objectA, object objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -871,7 +1098,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
-            if (!Settings.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))

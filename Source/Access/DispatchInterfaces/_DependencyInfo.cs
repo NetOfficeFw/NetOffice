@@ -85,7 +85,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -101,7 +101,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Dependants", paramsArray);
-				NetOffice.AccessApi._DependencyObjects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
+				NetOffice.AccessApi._DependencyObjects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Dependencies", paramsArray);
-				NetOffice.AccessApi._DependencyObjects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
+				NetOffice.AccessApi._DependencyObjects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
 				return newObject;
 			}
 		}
@@ -133,7 +133,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OutOfDateObjects", paramsArray);
-				NetOffice.AccessApi._DependencyObjects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
+				NetOffice.AccessApi._DependencyObjects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
 				return newObject;
 			}
 		}
@@ -149,7 +149,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "InsufficientPermissions", paramsArray);
-				NetOffice.AccessApi._DependencyObjects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
+				NetOffice.AccessApi._DependencyObjects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
 				return newObject;
 			}
 		}
@@ -165,7 +165,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "UnsupportedObjects", paramsArray);
-				NetOffice.AccessApi._DependencyObjects newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
+				NetOffice.AccessApi._DependencyObjects newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.AccessApi._DependencyObjects;
 				return newObject;
 			}
 		}

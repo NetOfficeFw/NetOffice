@@ -42,7 +42,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ERow_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVCell newCell = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			_eventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
@@ -80,7 +95,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVCell newCell = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			_eventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);

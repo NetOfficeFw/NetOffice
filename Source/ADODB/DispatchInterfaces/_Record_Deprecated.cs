@@ -86,7 +86,7 @@ namespace NetOffice.ADODBApi
 				object returnItem = Invoker.PropertyGet(this, "ActiveConnection", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -130,7 +130,7 @@ namespace NetOffice.ADODBApi
 				object returnItem = Invoker.PropertyGet(this, "Source", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -192,7 +192,7 @@ namespace NetOffice.ADODBApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Fields", paramsArray);
-				NetOffice.ADODBApi.Fields_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Fields_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi.Fields_Deprecated;
+				NetOffice.ADODBApi.Fields_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Fields_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi.Fields_Deprecated;
 				return newObject;
 			}
 		}
@@ -593,7 +593,7 @@ namespace NetOffice.ADODBApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetChildren", paramsArray);
-			NetOffice.ADODBApi._Recordset_Deprecated newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
+			NetOffice.ADODBApi._Recordset_Deprecated newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ADODBApi._Recordset_Deprecated.LateBindingApiWrapperType) as NetOffice.ADODBApi._Recordset_Deprecated;
 			return newObject;
 		}
 

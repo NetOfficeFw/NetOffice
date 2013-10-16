@@ -88,7 +88,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrBehavior, bstrBehaviorUrl, pSite);
 			object returnItem = Invoker.MethodReturn(this, "FindBehavior", paramsArray);
-			NetOffice.MSHTMLApi.IElementBehavior newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IElementBehavior.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IElementBehavior;
+			NetOffice.MSHTMLApi.IElementBehavior newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IElementBehavior.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IElementBehavior;
 			return newObject;
 		}
 

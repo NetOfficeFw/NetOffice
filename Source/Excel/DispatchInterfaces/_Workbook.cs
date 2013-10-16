@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.PropertyGet(this, "Colors", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveChart", paramsArray);
-				NetOffice.ExcelApi.Chart newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Chart.LateBindingApiWrapperType) as NetOffice.ExcelApi.Chart;
+				NetOffice.ExcelApi.Chart newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Chart.LateBindingApiWrapperType) as NetOffice.ExcelApi.Chart;
 				return newObject;
 			}
 		}
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSheet", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -368,7 +368,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "BuiltinDocumentProperties", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -384,7 +384,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Charts", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "Colors", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
-				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
+				NetOffice.OfficeApi.CommandBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
 				return newObject;
 			}
 		}
@@ -523,7 +523,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Container", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -555,7 +555,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomDocumentProperties", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -592,7 +592,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DialogSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -757,7 +757,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Mailer", paramsArray);
-				NetOffice.ExcelApi.Mailer newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Mailer.LateBindingApiWrapperType) as NetOffice.ExcelApi.Mailer;
+				NetOffice.ExcelApi.Mailer newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Mailer.LateBindingApiWrapperType) as NetOffice.ExcelApi.Mailer;
 				return newObject;
 			}
 		}
@@ -774,7 +774,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Modules", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -820,7 +820,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Names", paramsArray);
-				NetOffice.ExcelApi.Names newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Names.LateBindingApiWrapperType) as NetOffice.ExcelApi.Names;
+				NetOffice.ExcelApi.Names newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Names.LateBindingApiWrapperType) as NetOffice.ExcelApi.Names;
 				return newObject;
 			}
 		}
@@ -1069,7 +1069,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RoutingSlip", paramsArray);
-				NetOffice.ExcelApi.RoutingSlip newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.RoutingSlip.LateBindingApiWrapperType) as NetOffice.ExcelApi.RoutingSlip;
+				NetOffice.ExcelApi.RoutingSlip newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.RoutingSlip.LateBindingApiWrapperType) as NetOffice.ExcelApi.RoutingSlip;
 				return newObject;
 			}
 		}
@@ -1125,7 +1125,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Sheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -1161,7 +1161,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Styles", paramsArray);
-				NetOffice.ExcelApi.Styles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Styles.LateBindingApiWrapperType) as NetOffice.ExcelApi.Styles;
+				NetOffice.ExcelApi.Styles newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Styles.LateBindingApiWrapperType) as NetOffice.ExcelApi.Styles;
 				return newObject;
 			}
 		}
@@ -1262,7 +1262,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "UserStatus", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1283,7 +1283,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomViews", paramsArray);
-				NetOffice.ExcelApi.CustomViews newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CustomViews.LateBindingApiWrapperType) as NetOffice.ExcelApi.CustomViews;
+				NetOffice.ExcelApi.CustomViews newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CustomViews.LateBindingApiWrapperType) as NetOffice.ExcelApi.CustomViews;
 				return newObject;
 			}
 		}
@@ -1299,7 +1299,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Windows", paramsArray);
-				NetOffice.ExcelApi.Windows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Windows.LateBindingApiWrapperType) as NetOffice.ExcelApi.Windows;
+				NetOffice.ExcelApi.Windows newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Windows.LateBindingApiWrapperType) as NetOffice.ExcelApi.Windows;
 				return newObject;
 			}
 		}
@@ -1315,7 +1315,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Worksheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -1361,7 +1361,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Excel4IntlMacroSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -1377,7 +1377,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Excel4MacroSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -1473,7 +1473,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBProject", paramsArray);
-				NetOffice.VBIDEApi.VBProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
+				NetOffice.VBIDEApi.VBProject newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBProject;
 				return newObject;
 			}
 		}
@@ -1504,7 +1504,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PublishObjects", paramsArray);
-				NetOffice.ExcelApi.PublishObjects newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PublishObjects.LateBindingApiWrapperType) as NetOffice.ExcelApi.PublishObjects;
+				NetOffice.ExcelApi.PublishObjects newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.PublishObjects.LateBindingApiWrapperType) as NetOffice.ExcelApi.PublishObjects;
 				return newObject;
 			}
 		}
@@ -1520,7 +1520,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WebOptions", paramsArray);
-				NetOffice.ExcelApi.WebOptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WebOptions.LateBindingApiWrapperType) as NetOffice.ExcelApi.WebOptions;
+				NetOffice.ExcelApi.WebOptions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WebOptions.LateBindingApiWrapperType) as NetOffice.ExcelApi.WebOptions;
 				return newObject;
 			}
 		}
@@ -1536,7 +1536,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "HTMLProject", paramsArray);
-				NetOffice.OfficeApi.HTMLProject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.HTMLProject.LateBindingApiWrapperType) as NetOffice.OfficeApi.HTMLProject;
+				NetOffice.OfficeApi.HTMLProject newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.HTMLProject.LateBindingApiWrapperType) as NetOffice.OfficeApi.HTMLProject;
 				return newObject;
 			}
 		}
@@ -1814,7 +1814,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartTagOptions", paramsArray);
-				NetOffice.ExcelApi.SmartTagOptions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SmartTagOptions.LateBindingApiWrapperType) as NetOffice.ExcelApi.SmartTagOptions;
+				NetOffice.ExcelApi.SmartTagOptions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SmartTagOptions.LateBindingApiWrapperType) as NetOffice.ExcelApi.SmartTagOptions;
 				return newObject;
 			}
 		}
@@ -1830,7 +1830,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Permission", paramsArray);
-				NetOffice.OfficeApi.Permission newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Permission.LateBindingApiWrapperType) as NetOffice.OfficeApi.Permission;
+				NetOffice.OfficeApi.Permission newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Permission.LateBindingApiWrapperType) as NetOffice.OfficeApi.Permission;
 				return newObject;
 			}
 		}
@@ -1846,7 +1846,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SharedWorkspace", paramsArray);
-				NetOffice.OfficeApi.SharedWorkspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspace.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspace;
+				NetOffice.OfficeApi.SharedWorkspace newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspace.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspace;
 				return newObject;
 			}
 		}
@@ -1862,7 +1862,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Sync", paramsArray);
-				NetOffice.OfficeApi.Sync newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Sync.LateBindingApiWrapperType) as NetOffice.OfficeApi.Sync;
+				NetOffice.OfficeApi.Sync newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Sync.LateBindingApiWrapperType) as NetOffice.OfficeApi.Sync;
 				return newObject;
 			}
 		}
@@ -1878,7 +1878,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XmlNamespaces", paramsArray);
-				NetOffice.ExcelApi.XmlNamespaces newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.XmlNamespaces.LateBindingApiWrapperType) as NetOffice.ExcelApi.XmlNamespaces;
+				NetOffice.ExcelApi.XmlNamespaces newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.XmlNamespaces.LateBindingApiWrapperType) as NetOffice.ExcelApi.XmlNamespaces;
 				return newObject;
 			}
 		}
@@ -1894,7 +1894,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "XmlMaps", paramsArray);
-				NetOffice.ExcelApi.XmlMaps newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.XmlMaps.LateBindingApiWrapperType) as NetOffice.ExcelApi.XmlMaps;
+				NetOffice.ExcelApi.XmlMaps newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.XmlMaps.LateBindingApiWrapperType) as NetOffice.ExcelApi.XmlMaps;
 				return newObject;
 			}
 		}
@@ -1910,7 +1910,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SmartDocument", paramsArray);
-				NetOffice.OfficeApi.SmartDocument newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartDocument.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartDocument;
+				NetOffice.OfficeApi.SmartDocument newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SmartDocument.LateBindingApiWrapperType) as NetOffice.OfficeApi.SmartDocument;
 				return newObject;
 			}
 		}
@@ -1926,7 +1926,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DocumentLibraryVersions", paramsArray);
-				NetOffice.OfficeApi.DocumentLibraryVersions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentLibraryVersions.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentLibraryVersions;
+				NetOffice.OfficeApi.DocumentLibraryVersions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentLibraryVersions.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentLibraryVersions;
 				return newObject;
 			}
 		}
@@ -1982,7 +1982,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ContentTypeProperties", paramsArray);
-				NetOffice.OfficeApi.MetaProperties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MetaProperties.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperties;
+				NetOffice.OfficeApi.MetaProperties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MetaProperties.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperties;
 				return newObject;
 			}
 		}
@@ -1998,7 +1998,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Connections", paramsArray);
-				NetOffice.ExcelApi.Connections newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Connections.LateBindingApiWrapperType) as NetOffice.ExcelApi.Connections;
+				NetOffice.ExcelApi.Connections newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Connections.LateBindingApiWrapperType) as NetOffice.ExcelApi.Connections;
 				return newObject;
 			}
 		}
@@ -2014,7 +2014,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Signatures", paramsArray);
-				NetOffice.OfficeApi.SignatureSet newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SignatureSet.LateBindingApiWrapperType) as NetOffice.OfficeApi.SignatureSet;
+				NetOffice.OfficeApi.SignatureSet newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SignatureSet.LateBindingApiWrapperType) as NetOffice.OfficeApi.SignatureSet;
 				return newObject;
 			}
 		}
@@ -2030,7 +2030,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ServerPolicy", paramsArray);
-				NetOffice.OfficeApi.ServerPolicy newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ServerPolicy.LateBindingApiWrapperType) as NetOffice.OfficeApi.ServerPolicy;
+				NetOffice.OfficeApi.ServerPolicy newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.ServerPolicy.LateBindingApiWrapperType) as NetOffice.OfficeApi.ServerPolicy;
 				return newObject;
 			}
 		}
@@ -2046,7 +2046,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DocumentInspectors", paramsArray);
-				NetOffice.OfficeApi.DocumentInspectors newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentInspectors.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentInspectors;
+				NetOffice.OfficeApi.DocumentInspectors newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.DocumentInspectors.LateBindingApiWrapperType) as NetOffice.OfficeApi.DocumentInspectors;
 				return newObject;
 			}
 		}
@@ -2062,7 +2062,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ServerViewableItems", paramsArray);
-				NetOffice.ExcelApi.ServerViewableItems newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ServerViewableItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.ServerViewableItems;
+				NetOffice.ExcelApi.ServerViewableItems newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ServerViewableItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.ServerViewableItems;
 				return newObject;
 			}
 		}
@@ -2078,7 +2078,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TableStyles", paramsArray);
-				NetOffice.ExcelApi.TableStyles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TableStyles.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyles;
+				NetOffice.ExcelApi.TableStyles newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TableStyles.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyles;
 				return newObject;
 			}
 		}
@@ -2097,7 +2097,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "DefaultTableStyle", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2126,7 +2126,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "DefaultPivotTableStyle", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2187,7 +2187,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CustomXMLParts", paramsArray);
-				NetOffice.OfficeApi.CustomXMLParts newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLParts.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLParts;
+				NetOffice.OfficeApi.CustomXMLParts newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CustomXMLParts.LateBindingApiWrapperType) as NetOffice.OfficeApi.CustomXMLParts;
 				return newObject;
 			}
 		}
@@ -2223,7 +2223,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Research", paramsArray);
-				NetOffice.ExcelApi.Research newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Research.LateBindingApiWrapperType) as NetOffice.ExcelApi.Research;
+				NetOffice.ExcelApi.Research newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Research.LateBindingApiWrapperType) as NetOffice.ExcelApi.Research;
 				return newObject;
 			}
 		}
@@ -2239,7 +2239,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Theme", paramsArray);
-				NetOffice.OfficeApi.OfficeTheme newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.OfficeTheme.LateBindingApiWrapperType) as NetOffice.OfficeApi.OfficeTheme;
+				NetOffice.OfficeApi.OfficeTheme newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.OfficeTheme.LateBindingApiWrapperType) as NetOffice.OfficeApi.OfficeTheme;
 				return newObject;
 			}
 		}
@@ -2305,7 +2305,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "IconSets", paramsArray);
-				NetOffice.ExcelApi.IconSets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.IconSets.LateBindingApiWrapperType) as NetOffice.ExcelApi.IconSets;
+				NetOffice.ExcelApi.IconSets newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.IconSets.LateBindingApiWrapperType) as NetOffice.ExcelApi.IconSets;
 				return newObject;
 			}
 		}
@@ -2381,7 +2381,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerCaches", paramsArray);
-				NetOffice.ExcelApi.SlicerCaches newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCaches.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCaches;
+				NetOffice.ExcelApi.SlicerCaches newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCaches.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCaches;
 				return newObject;
 			}
 		}
@@ -2397,7 +2397,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSlicer", paramsArray);
-				NetOffice.ExcelApi.Slicer newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicer.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicer;
+				NetOffice.ExcelApi.Slicer newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicer.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicer;
 				return newObject;
 			}
 		}
@@ -2416,7 +2416,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "DefaultSlicerStyle", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2508,7 +2508,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTables", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -2524,7 +2524,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Model", paramsArray);
-				NetOffice.ExcelApi.Model newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Model.LateBindingApiWrapperType) as NetOffice.ExcelApi.Model;
+				NetOffice.ExcelApi.Model newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Model.LateBindingApiWrapperType) as NetOffice.ExcelApi.Model;
 				return newObject;
 			}
 		}
@@ -2563,7 +2563,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "DefaultTimelineStyle", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2751,7 +2751,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.MethodReturn(this, "LinkInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2773,7 +2773,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.MethodReturn(this, "LinkInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2796,7 +2796,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.MethodReturn(this, "LinkInfo", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2816,7 +2816,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.MethodReturn(this, "LinkSources", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2836,7 +2836,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.MethodReturn(this, "LinkSources", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2864,7 +2864,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "NewWindow", paramsArray);
-			NetOffice.ExcelApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Window.LateBindingApiWrapperType) as NetOffice.ExcelApi.Window;
+			NetOffice.ExcelApi.Window newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Window.LateBindingApiWrapperType) as NetOffice.ExcelApi.Window;
 			return newObject;
 		}
 
@@ -2914,7 +2914,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "PivotCaches", paramsArray);
-			NetOffice.ExcelApi.PivotCaches newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCaches.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCaches;
+			NetOffice.ExcelApi.PivotCaches newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.PivotCaches.LateBindingApiWrapperType) as NetOffice.ExcelApi.PivotCaches;
 			return newObject;
 		}
 
@@ -5628,7 +5628,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetWorkflowTasks", paramsArray);
-			NetOffice.OfficeApi.WorkflowTasks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.WorkflowTasks.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTasks;
+			NetOffice.OfficeApi.WorkflowTasks newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.WorkflowTasks.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTasks;
 			return newObject;
 		}
 
@@ -5640,7 +5640,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "GetWorkflowTemplates", paramsArray);
-			NetOffice.OfficeApi.WorkflowTemplates newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.WorkflowTemplates.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTemplates;
+			NetOffice.OfficeApi.WorkflowTemplates newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.WorkflowTemplates.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTemplates;
 			return newObject;
 		}
 

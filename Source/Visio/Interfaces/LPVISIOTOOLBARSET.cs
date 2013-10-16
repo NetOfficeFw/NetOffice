@@ -135,7 +135,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Toolbars", paramsArray);
-				NetOffice.VisioApi.IVToolbars newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbars;
+				NetOffice.VisioApi.IVToolbars newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbars;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVToolbarSets newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbarSets;
+				NetOffice.VisioApi.IVToolbarSets newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbarSets;
 				return newObject;
 			}
 		}

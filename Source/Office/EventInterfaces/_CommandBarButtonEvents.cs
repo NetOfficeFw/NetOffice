@@ -38,7 +38,22 @@ namespace NetOffice.OfficeApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _CommandBarButtonEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CommandBarButton newCtrl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarButton;
+			NetOffice.OfficeApi.CommandBarButton newCtrl = Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarButton;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCtrl;
 			paramsArray.SetValue(cancelDefault, 1);

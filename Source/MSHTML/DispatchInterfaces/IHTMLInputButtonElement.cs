@@ -141,7 +141,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "status", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -187,7 +187,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "form", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFormElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
+				NetOffice.MSHTMLApi.IHTMLFormElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLFormElement;
 				return newObject;
 			}
 		}
@@ -204,7 +204,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "createTextRange", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLTxtRange newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLTxtRange;
+			NetOffice.MSHTMLApi.IHTMLTxtRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLTxtRange.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLTxtRange;
 			return newObject;
 		}
 

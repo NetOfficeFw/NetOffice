@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 			}
 		}
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -284,7 +284,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission, expirationDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 
@@ -313,7 +313,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(userId, permission);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.UserPermission newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
+			NetOffice.OfficeApi.UserPermission newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType) as NetOffice.OfficeApi.UserPermission;
 			return newObject;
 		}
 

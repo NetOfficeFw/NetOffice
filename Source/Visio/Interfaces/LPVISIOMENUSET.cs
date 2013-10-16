@@ -135,7 +135,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Menus", paramsArray);
-				NetOffice.VisioApi.IVMenus newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenus;
+				NetOffice.VisioApi.IVMenus newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenus;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVMenuSets newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSets;
+				NetOffice.VisioApi.IVMenuSets newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSets;
 				return newObject;
 			}
 		}

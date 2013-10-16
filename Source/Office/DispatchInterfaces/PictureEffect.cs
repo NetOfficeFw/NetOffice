@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EffectParameters", paramsArray);
-				NetOffice.OfficeApi.EffectParameters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.EffectParameters.LateBindingApiWrapperType) as NetOffice.OfficeApi.EffectParameters;
+				NetOffice.OfficeApi.EffectParameters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.EffectParameters.LateBindingApiWrapperType) as NetOffice.OfficeApi.EffectParameters;
 				return newObject;
 			}
 		}

@@ -46,7 +46,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public OutlookBarGroupsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -69,7 +84,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newNewGroup = Factory.CreateObjectFromComProxy(_eventClass, newGroup) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewGroup;
 			_eventBinding.RaiseCustomEvent("GroupAdd", ref paramsArray);
@@ -100,7 +115,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarGroup newGroup = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newGroup = Factory.CreateObjectFromComProxy(_eventClass, group) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newGroup;
 			paramsArray.SetValue(cancel, 1);

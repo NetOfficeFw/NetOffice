@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
 			object returnItem = Invoker.PropertyGet(this, "PrintQuality", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -416,7 +416,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "FitToPagesTall", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "FitToPagesWide", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -715,7 +715,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "PrintQuality", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -863,7 +863,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "Zoom", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -931,7 +931,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -947,7 +947,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CenterFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -963,7 +963,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -979,7 +979,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "LeftFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -995,7 +995,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightHeaderPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -1011,7 +1011,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "RightFooterPicture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}
@@ -1107,7 +1107,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Pages", paramsArray);
-				NetOffice.ExcelApi.Pages newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Pages.LateBindingApiWrapperType) as NetOffice.ExcelApi.Pages;
+				NetOffice.ExcelApi.Pages newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Pages.LateBindingApiWrapperType) as NetOffice.ExcelApi.Pages;
 				return newObject;
 			}
 		}
@@ -1123,7 +1123,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "EvenPage", paramsArray);
-				NetOffice.ExcelApi.Page newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
+				NetOffice.ExcelApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
 				return newObject;
 			}
 		}
@@ -1139,7 +1139,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FirstPage", paramsArray);
-				NetOffice.ExcelApi.Page newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
+				NetOffice.ExcelApi.Page newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Page.LateBindingApiWrapperType) as NetOffice.ExcelApi.Page;
 				return newObject;
 			}
 		}

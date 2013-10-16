@@ -5,9 +5,9 @@ using System.Text;
 namespace NetOffice
 {
     /// <summary>
-    /// this method is a custom overload from NetOffice
+    /// This method is a custom overload from NetOffice
     /// </summary>
-    [AttributeUsage(AttributeTargets.All)]
+    [AttributeUsage(AttributeTargets.Method)]
     public sealed class CustomMethodAttribute : System.Attribute
     {
     }

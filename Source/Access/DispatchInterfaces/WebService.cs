@@ -85,7 +85,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Entities", paramsArray);
-				NetOffice.AccessApi.Entities newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Entities.LateBindingApiWrapperType) as NetOffice.AccessApi.Entities;
+				NetOffice.AccessApi.Entities newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.AccessApi.Entities.LateBindingApiWrapperType) as NetOffice.AccessApi.Entities;
 				return newObject;
 			}
 		}

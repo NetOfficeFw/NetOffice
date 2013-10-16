@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -137,7 +137,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MemberProperty", paramsArray);
-				NetOffice.OWC10Api.PivotMemberProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotMemberProperty.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotMemberProperty;
+				NetOffice.OWC10Api.PivotMemberProperty newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.PivotMemberProperty.LateBindingApiWrapperType) as NetOffice.OWC10Api.PivotMemberProperty;
 				return newObject;
 			}
 		}

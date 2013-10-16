@@ -118,7 +118,22 @@ namespace NetOffice.AccessApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public DispWebBrowserControlEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -417,7 +432,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[7];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);
@@ -445,7 +460,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);
@@ -480,7 +495,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newpDisp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
+			object newpDisp = Factory.CreateObjectFromComProxy(_eventClass, pDisp) as object;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newpDisp;
 			paramsArray.SetValue(uRL, 1);

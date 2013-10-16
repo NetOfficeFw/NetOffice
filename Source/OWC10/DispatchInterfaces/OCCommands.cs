@@ -86,7 +86,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.OCCommand newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.OCCommand.LateBindingApiWrapperType) as NetOffice.OWC10Api.OCCommand;
+			NetOffice.OWC10Api.OCCommand newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.OCCommand.LateBindingApiWrapperType) as NetOffice.OWC10Api.OCCommand;
 			return newObject;
 			}
 		}

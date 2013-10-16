@@ -86,7 +86,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(v);
 			object returnItem = Invoker.MethodReturn(this, "querySelector", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
+			NetOffice.MSHTMLApi.IHTMLElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLElement;
 			return newObject;
 		}
 
@@ -99,7 +99,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(v);
 			object returnItem = Invoker.MethodReturn(this, "querySelectorAll", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDOMChildrenCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMChildrenCollection;
+			NetOffice.MSHTMLApi.IHTMLDOMChildrenCollection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMChildrenCollection;
 			return newObject;
 		}
 

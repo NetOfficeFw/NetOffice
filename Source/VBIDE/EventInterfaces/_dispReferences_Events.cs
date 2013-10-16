@@ -42,7 +42,22 @@ namespace NetOffice.VBIDEApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _dispReferences_Events_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.VBIDEApi
 				return;
 			}
 
-			NetOffice.VBIDEApi.Reference newReference = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newReference = Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			_eventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
@@ -80,7 +95,7 @@ namespace NetOffice.VBIDEApi
 				return;
 			}
 
-			NetOffice.VBIDEApi.Reference newReference = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
+			NetOffice.VBIDEApi.Reference newReference = Factory.CreateObjectFromComProxy(_eventClass, reference) as NetOffice.VBIDEApi.Reference;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newReference;
 			_eventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);

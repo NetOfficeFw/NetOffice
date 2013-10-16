@@ -85,7 +85,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.VBIDEApi.Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
+				NetOffice.VBIDEApi.Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
 				return newObject;
 			}
 		}
@@ -102,7 +102,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VBIDEApi.Application newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
+				NetOffice.VBIDEApi.Application newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi.Application;
 				return newObject;
 			}
 		}

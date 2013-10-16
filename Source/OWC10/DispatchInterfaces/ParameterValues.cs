@@ -87,7 +87,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ParameterValue newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
+			NetOffice.OWC10Api.ParameterValue newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
 			return newObject;
 			}
 		}
@@ -121,7 +121,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parameterName, value);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.ParameterValue newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
+			NetOffice.OWC10Api.ParameterValue newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
 			return newObject;
 		}
 
@@ -135,7 +135,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(parameterName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OWC10Api.ParameterValue newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
+			NetOffice.OWC10Api.ParameterValue newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.ParameterValue.LateBindingApiWrapperType) as NetOffice.OWC10Api.ParameterValue;
 			return newObject;
 		}
 

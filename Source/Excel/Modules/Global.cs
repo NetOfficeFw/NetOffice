@@ -29,6 +29,32 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			        _instance = value;				
         	}
         }
+        #region Properties
+
+        internal static Core Factory
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
+
+        #endregion
+
 
 		#endregion
 		#region Properties
@@ -44,7 +70,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -76,7 +102,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Parent", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -92,7 +118,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveCell", paramsArray);
-				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -108,7 +134,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveChart", paramsArray);
-				NetOffice.ExcelApi.Chart newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Chart.LateBindingApiWrapperType) as NetOffice.ExcelApi.Chart;
+				NetOffice.ExcelApi.Chart newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Chart.LateBindingApiWrapperType) as NetOffice.ExcelApi.Chart;
 				return newObject;
 			}
 		}
@@ -125,7 +151,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveDialog", paramsArray);
-				NetOffice.ExcelApi.DialogSheet newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.DialogSheet.LateBindingApiWrapperType) as NetOffice.ExcelApi.DialogSheet;
+				NetOffice.ExcelApi.DialogSheet newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.DialogSheet.LateBindingApiWrapperType) as NetOffice.ExcelApi.DialogSheet;
 				return newObject;
 			}
 		}
@@ -142,7 +168,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveMenuBar", paramsArray);
-				NetOffice.ExcelApi.MenuBar newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.MenuBar.LateBindingApiWrapperType) as NetOffice.ExcelApi.MenuBar;
+				NetOffice.ExcelApi.MenuBar newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.MenuBar.LateBindingApiWrapperType) as NetOffice.ExcelApi.MenuBar;
 				return newObject;
 			}
 		}
@@ -179,7 +205,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveSheet", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 				return newObject;
 			}
 		}
@@ -195,7 +221,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveWindow", paramsArray);
-				NetOffice.ExcelApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Window.LateBindingApiWrapperType) as NetOffice.ExcelApi.Window;
+				NetOffice.ExcelApi.Window newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Window.LateBindingApiWrapperType) as NetOffice.ExcelApi.Window;
 				return newObject;
 			}
 		}
@@ -211,7 +237,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveWorkbook", paramsArray);
-				NetOffice.ExcelApi.Workbook newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+				NetOffice.ExcelApi.Workbook newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 				return newObject;
 			}
 		}
@@ -228,7 +254,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "AddIns", paramsArray);
-				NetOffice.ExcelApi.AddIns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.AddIns.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIns;
+				NetOffice.ExcelApi.AddIns newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.AddIns.LateBindingApiWrapperType) as NetOffice.ExcelApi.AddIns;
 				return newObject;
 			}
 		}
@@ -244,7 +270,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Assistant", paramsArray);
-				NetOffice.OfficeApi.Assistant newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
+				NetOffice.OfficeApi.Assistant newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
 				return newObject;
 			}
 		}
@@ -260,7 +286,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Cells", paramsArray);
-				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -276,7 +302,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Charts", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -293,7 +319,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Columns", paramsArray);
-				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -309,7 +335,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "CommandBars", paramsArray);
-				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
+				NetOffice.OfficeApi.CommandBars newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
 				return newObject;
 			}
 		}
@@ -341,7 +367,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "DialogSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -358,7 +384,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "MenuBars", paramsArray);
-				NetOffice.ExcelApi.MenuBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.MenuBars.LateBindingApiWrapperType) as NetOffice.ExcelApi.MenuBars;
+				NetOffice.ExcelApi.MenuBars newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.MenuBars.LateBindingApiWrapperType) as NetOffice.ExcelApi.MenuBars;
 				return newObject;
 			}
 		}
@@ -375,7 +401,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Modules", paramsArray);
-				NetOffice.ExcelApi.Modules newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Modules.LateBindingApiWrapperType) as NetOffice.ExcelApi.Modules;
+				NetOffice.ExcelApi.Modules newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Modules.LateBindingApiWrapperType) as NetOffice.ExcelApi.Modules;
 				return newObject;
 			}
 		}
@@ -391,7 +417,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Names", paramsArray);
-				NetOffice.ExcelApi.Names newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Names.LateBindingApiWrapperType) as NetOffice.ExcelApi.Names;
+				NetOffice.ExcelApi.Names newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Names.LateBindingApiWrapperType) as NetOffice.ExcelApi.Names;
 				return newObject;
 			}
 		}
@@ -408,7 +434,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1, cell2);
 			object returnItem = Invoker.PropertyGet(_instance, "Range", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -435,7 +461,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(cell1);
 			object returnItem = Invoker.PropertyGet(_instance, "Range", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -462,7 +488,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Rows", paramsArray);
-				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 		}
@@ -479,7 +505,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Selection", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 				return newObject;
 			}
 		}
@@ -495,7 +521,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Sheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -511,7 +537,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(_instance, "ShortcutMenus", paramsArray);
-			NetOffice.ExcelApi.Menu newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Menu.LateBindingApiWrapperType) as NetOffice.ExcelApi.Menu;
+			NetOffice.ExcelApi.Menu newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Menu.LateBindingApiWrapperType) as NetOffice.ExcelApi.Menu;
 			return newObject;
 		}
 
@@ -537,7 +563,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ThisWorkbook", paramsArray);
-				NetOffice.ExcelApi.Workbook newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
+				NetOffice.ExcelApi.Workbook newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbook;
 				return newObject;
 			}
 		}
@@ -554,7 +580,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Toolbars", paramsArray);
-				NetOffice.ExcelApi.Toolbars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Toolbars.LateBindingApiWrapperType) as NetOffice.ExcelApi.Toolbars;
+				NetOffice.ExcelApi.Toolbars newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Toolbars.LateBindingApiWrapperType) as NetOffice.ExcelApi.Toolbars;
 				return newObject;
 			}
 		}
@@ -570,7 +596,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Windows", paramsArray);
-				NetOffice.ExcelApi.Windows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Windows.LateBindingApiWrapperType) as NetOffice.ExcelApi.Windows;
+				NetOffice.ExcelApi.Windows newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Windows.LateBindingApiWrapperType) as NetOffice.ExcelApi.Windows;
 				return newObject;
 			}
 		}
@@ -586,7 +612,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Workbooks", paramsArray);
-				NetOffice.ExcelApi.Workbooks newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbooks.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbooks;
+				NetOffice.ExcelApi.Workbooks newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Workbooks.LateBindingApiWrapperType) as NetOffice.ExcelApi.Workbooks;
 				return newObject;
 			}
 		}
@@ -602,7 +628,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "WorksheetFunction", paramsArray);
-				NetOffice.ExcelApi.WorksheetFunction newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.WorksheetFunction.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorksheetFunction;
+				NetOffice.ExcelApi.WorksheetFunction newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.WorksheetFunction.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorksheetFunction;
 				return newObject;
 			}
 		}
@@ -618,7 +644,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Worksheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -634,7 +660,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Excel4IntlMacroSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -650,7 +676,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Excel4MacroSheets", paramsArray);
-				NetOffice.ExcelApi.Sheets newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
+				NetOffice.ExcelApi.Sheets newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.ExcelApi.Sheets.LateBindingApiWrapperType) as NetOffice.ExcelApi.Sheets;
 				return newObject;
 			}
 		}
@@ -719,7 +745,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "DDERequest", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -750,7 +776,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Evaluate", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -771,7 +797,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Evaluate", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -791,7 +817,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "ExecuteExcel4Macro", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -838,7 +864,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -853,7 +879,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -869,7 +895,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -886,7 +912,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -904,7 +930,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -923,7 +949,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -943,7 +969,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -964,7 +990,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -986,7 +1012,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1009,7 +1035,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1033,7 +1059,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1058,7 +1084,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1084,7 +1110,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1111,7 +1137,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1139,7 +1165,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1168,7 +1194,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1198,7 +1224,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1229,7 +1255,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1261,7 +1287,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1294,7 +1320,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1328,7 +1354,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1363,7 +1389,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1399,7 +1425,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1436,7 +1462,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1474,7 +1500,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1513,7 +1539,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1553,7 +1579,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1594,7 +1620,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1636,7 +1662,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(_instance, "Intersect", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -1681,7 +1707,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1701,7 +1727,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1722,7 +1748,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1744,7 +1770,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1767,7 +1793,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1791,7 +1817,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1816,7 +1842,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1842,7 +1868,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1869,7 +1895,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1897,7 +1923,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1926,7 +1952,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1956,7 +1982,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -1987,7 +2013,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2019,7 +2045,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2052,7 +2078,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2086,7 +2112,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2121,7 +2147,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2157,7 +2183,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2194,7 +2220,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2232,7 +2258,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2271,7 +2297,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2311,7 +2337,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2352,7 +2378,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2394,7 +2420,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2437,7 +2463,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2481,7 +2507,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2526,7 +2552,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2572,7 +2598,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2619,7 +2645,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2667,7 +2693,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2716,7 +2742,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2766,7 +2792,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "Run", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2817,7 +2843,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2838,7 +2864,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2860,7 +2886,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2883,7 +2909,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2907,7 +2933,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2932,7 +2958,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2958,7 +2984,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -2985,7 +3011,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3013,7 +3039,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3042,7 +3068,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3072,7 +3098,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3103,7 +3129,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3135,7 +3161,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3168,7 +3194,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3202,7 +3228,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3237,7 +3263,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3273,7 +3299,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3310,7 +3336,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3348,7 +3374,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3387,7 +3413,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3427,7 +3453,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3468,7 +3494,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3510,7 +3536,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3553,7 +3579,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3597,7 +3623,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3642,7 +3668,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3688,7 +3714,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3735,7 +3761,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3783,7 +3809,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3832,7 +3858,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3882,7 +3908,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -3933,7 +3959,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 			object returnItem = Invoker.MethodReturn(_instance, "_Run2", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance, returnItem);
 				return newObject;
 			}
 			else
@@ -4004,7 +4030,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4019,7 +4045,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4035,7 +4061,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4052,7 +4078,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4070,7 +4096,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4089,7 +4115,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4109,7 +4135,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4130,7 +4156,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4152,7 +4178,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4175,7 +4201,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4199,7 +4225,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4224,7 +4250,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4250,7 +4276,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4277,7 +4303,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4305,7 +4331,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4334,7 +4360,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4364,7 +4390,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4395,7 +4421,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4427,7 +4453,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4460,7 +4486,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4494,7 +4520,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4529,7 +4555,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4565,7 +4591,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4602,7 +4628,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4640,7 +4666,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4679,7 +4705,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4719,7 +4745,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4760,7 +4786,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 
@@ -4802,7 +4828,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29);
 			object returnItem = Invoker.MethodReturn(_instance, "Union", paramsArray);
-			NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 			return newObject;
 		}
 

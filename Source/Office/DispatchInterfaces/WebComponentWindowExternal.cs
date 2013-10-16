@@ -130,7 +130,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WebComponent", paramsArray);
-				NetOffice.OfficeApi.WebComponent newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebComponent.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebComponent;
+				NetOffice.OfficeApi.WebComponent newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WebComponent.LateBindingApiWrapperType) as NetOffice.OfficeApi.WebComponent;
 				return newObject;
 			}
 		}

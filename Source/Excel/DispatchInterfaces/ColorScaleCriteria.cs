@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.ColorScaleCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorScaleCriterion.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorScaleCriterion;
+			NetOffice.ExcelApi.ColorScaleCriterion newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ColorScaleCriterion.LateBindingApiWrapperType) as NetOffice.ExcelApi.ColorScaleCriterion;
 			return newObject;
 			}
 		}

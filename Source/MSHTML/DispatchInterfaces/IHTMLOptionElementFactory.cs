@@ -89,7 +89,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected, selected);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
+			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
 			return newObject;
 		}
 
@@ -102,7 +102,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
+			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
 			return newObject;
 		}
 
@@ -116,7 +116,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
+			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
 			return newObject;
 		}
 
@@ -131,7 +131,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
+			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
 			return newObject;
 		}
 
@@ -147,7 +147,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, value, defaultSelected);
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
+			NetOffice.MSHTMLApi.IHTMLOptionElement newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLOptionElement;
 			return newObject;
 		}
 

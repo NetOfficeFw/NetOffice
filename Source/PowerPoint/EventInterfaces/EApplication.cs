@@ -166,7 +166,23 @@ namespace NetOffice.PowerPointApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public EApplication_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -189,7 +205,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Selection newSel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
 			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
@@ -204,7 +220,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Selection newSel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -222,7 +238,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Selection newSel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
+			NetOffice.PowerPointApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.PowerPointApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -240,7 +256,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("PresentationClose", ref paramsArray);
@@ -255,7 +271,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("PresentationSave", ref paramsArray);
@@ -270,7 +286,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("PresentationOpen", ref paramsArray);
@@ -285,7 +301,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("NewPresentation", ref paramsArray);
@@ -300,7 +316,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Slide newSld = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
+			NetOffice.PowerPointApi.Slide newSld = Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSld;
 			_eventBinding.RaiseCustomEvent("PresentationNewSlide", ref paramsArray);
@@ -315,8 +331,8 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			NetOffice.PowerPointApi.DocumentWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
@@ -332,8 +348,8 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
-			NetOffice.PowerPointApi.DocumentWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.DocumentWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.DocumentWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray[1] = newWn;
@@ -349,7 +365,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("SlideShowBegin", ref paramsArray);
@@ -364,7 +380,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("SlideShowNextBuild", ref paramsArray);
@@ -379,7 +395,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("SlideShowNextSlide", ref paramsArray);
@@ -394,7 +410,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("SlideShowEnd", ref paramsArray);
@@ -409,7 +425,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("PresentationPrint", ref paramsArray);
@@ -424,7 +440,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideRange newSldRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
+			NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
 			_eventBinding.RaiseCustomEvent("SlideSelectionChanged", ref paramsArray);
@@ -439,7 +455,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideRange newSldRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
+			NetOffice.PowerPointApi.SlideRange newSldRange = Factory.CreateObjectFromComProxy(_eventClass, sldRange) as NetOffice.PowerPointApi.SlideRange;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSldRange;
 			_eventBinding.RaiseCustomEvent("ColorSchemeChanged", ref paramsArray);
@@ -454,7 +470,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
@@ -472,8 +488,8 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
-			NetOffice.PowerPointApi.Effect newnEffect = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, nEffect) as NetOffice.PowerPointApi.Effect;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.Effect newnEffect = Factory.CreateObjectFromComProxy(_eventClass, nEffect) as NetOffice.PowerPointApi.Effect;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWn;
 			paramsArray[1] = newnEffect;
@@ -489,7 +505,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("AfterNewPresentation", ref paramsArray);
@@ -504,7 +520,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("AfterPresentationOpen", ref paramsArray);
@@ -519,7 +535,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
@@ -536,7 +552,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("SlideShowOnNext", ref paramsArray);
@@ -551,7 +567,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.SlideShowWindow newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
+			NetOffice.PowerPointApi.SlideShowWindow newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.PowerPointApi.SlideShowWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("SlideShowOnPrevious", ref paramsArray);
@@ -566,7 +582,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPres;
 			paramsArray.SetValue(cancel, 1);
@@ -584,7 +600,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
@@ -599,7 +615,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newProtViewWindow;
 			paramsArray.SetValue(cancel, 1);
@@ -617,7 +633,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason newProtectedViewCloseReason = (NetOffice.PowerPointApi.Enums.PpProtectedViewCloseReason)protectedViewCloseReason;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newProtViewWindow;
@@ -637,7 +653,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
@@ -652,7 +668,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
+			NetOffice.PowerPointApi.ProtectedViewWindow newProtViewWindow = Factory.CreateObjectFromComProxy(_eventClass, protViewWindow) as NetOffice.PowerPointApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newProtViewWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);
@@ -667,7 +683,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Presentation newPres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
+			NetOffice.PowerPointApi.Presentation newPres = Factory.CreateObjectFromComProxy(_eventClass, pres) as NetOffice.PowerPointApi.Presentation;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPres;
 			_eventBinding.RaiseCustomEvent("PresentationCloseFinal", ref paramsArray);
@@ -682,7 +698,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Slide newSld = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
+			NetOffice.PowerPointApi.Slide newSld = Factory.CreateObjectFromComProxy(_eventClass, sld) as NetOffice.PowerPointApi.Slide;
 			Single newX = Convert.ToSingle(x);
 			Single newY = Convert.ToSingle(y);
 			object[] paramsArray = new object[3];
@@ -701,7 +717,7 @@ namespace NetOffice.PowerPointApi
 				return;
 			}
 
-			NetOffice.PowerPointApi.Shape newshp = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shp) as NetOffice.PowerPointApi.Shape;
+			NetOffice.PowerPointApi.Shape newshp = Factory.CreateObjectFromComProxy(_eventClass, shp) as NetOffice.PowerPointApi.Shape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newshp;
 			_eventBinding.RaiseCustomEvent("AfterShapeSizeChange", ref paramsArray);

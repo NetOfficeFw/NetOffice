@@ -14,15 +14,8 @@ namespace NetOffice
     /// <summary>
     /// Core Settings
     /// </summary>
-    public static class Settings
+    public class Settings
     {
-        #region Imports
-
-        [DllImport("ole32.dll", ExactSpelling = true)]
-        private static extern int CoRegisterMessageFilter(IntPtr newFilter, ref IntPtr oldMsgFilter);
-
-        #endregion
-
         #region Constants
 
         // Default Thread Culture to Excel Application
@@ -33,9 +26,9 @@ namespace NetOffice
         #region Ctor
         
         /// <summary>
-        /// Static Type Constructor 
+        /// Creates an instance of the class
         /// </summary>
-        static Settings()
+        public Settings()
         {
             _messageFilter = new RetryMessageFilter();
         }
@@ -44,30 +37,44 @@ namespace NetOffice
 
         #region Fields
 
-        private static CultureInfo  _cultureInfo;
-        private static bool         _eventsEnabled = true;
-        private static RetryMessageFilter  _messageFilter;
-        private static bool         _enableAutomaticQuit;
-        private static bool         _enableAdHocLoading = true;
-        private static bool         _enableDeepLoading = true;
-        private static bool         _enableDebugOutput = false;
-        private static bool         _enableEventDebugOutput;
-        private static bool         _enableSafeMode;
-        private static bool         _enableProxyManagement = true;
-        private static bool         _enableThreadSafe = true;
-        private static CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
-        private static bool         _enableOperatorOverlads = true;
-        private static string       _exceptionMessage = "See inner exception(s) for details.";
-        private static ExceptionMessageHandling _copyInnerExceptionMessage;
+        private CultureInfo  _cultureInfo;
+
+        private bool                _eventsEnabled = true;
+        private RetryMessageFilter  _messageFilter;
+        private bool                _enableAutomaticQuit = false;
+        private bool                _enableAdHocLoading = true;
+        private bool                _enableDeepLoading = true;
+        private bool                _enableDebugOutput = false;
+        private bool                _enableEventDebugOutput = false;
+        private bool                _enableSafeMode = false;
+        private bool                _enableProxyManagement = true;
+        private CacheOptions        _cacheOptions = CacheOptions.KeepExistingCacheAlive;
+        private bool                _enableOperatorOverlads = true;
+        private string              _exceptionMessage = "See inner exception(s) for details.";
+        private ExceptionMessageHandling _copyInnerExceptionMessage;
 
         #endregion
          
         #region Properties
 
         /// <summary>
+        /// Shared Default Settings
+        /// </summary>
+        public static Settings Default
+        {
+            get
+            {
+                if (null == _default)
+                    _default = new Settings();
+                return _default;
+            }
+        }
+        private static Settings _default;
+
+        /// <summary>
         /// Enable the NetOffice COM proxy management. true by default
         /// </summary>
-        public static bool EnableProxyManagement
+        public bool EnableProxyManagement
         {
             get 
             {
@@ -80,9 +87,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This option can be used to set the top level exception message
+        /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
+        /// This option can be used to set the top level exception message or copy the innerst message to top.
         /// </summary>
-        public static ExceptionMessageHandling UseExceptionMessage
+        public ExceptionMessageHandling UseExceptionMessage
         {
             get
             {
@@ -95,9 +103,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// NetOffice wrap all thrown exceptions from Office applications in a COMException. This is the default message for the top level exception 
+        /// NetOffice wrap all thrown exceptions from Office applications in a COMException.
+        /// This is the default message for the top level exception 
         /// </summary>
-        public static string ExceptionMessage
+        public string ExceptionMessage
         {
             get 
             {
@@ -110,9 +119,9 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Used Thread Culture given in the Invoke Calls. en-US by default
+        /// Used Thread Culture given in the invoke calls. en-US by default
         /// </summary>
-        public static CultureInfo ThreadCulture
+        public CultureInfo ThreadCulture
         {
             get
             {
@@ -123,18 +132,20 @@ namespace NetOffice
                 }
                 catch (Exception throwedException)
                 {
-                    throw (new Exception(string.Format("GetCultureInfo {0} failed.", _DefaultCulture), throwedException));
+                    throw (new NetOfficeException(string.Format("GetCultureInfo {0} failed.", _DefaultCulture), throwedException));
                 }
                 finally
                 {
                     if (null == _cultureInfo)
-                        throw (new Exception(string.Format("GetCultureInfo {0} failed.", _DefaultCulture)));
+                        throw (new NetOfficeException(string.Format("GetCultureInfo {0} failed.", _DefaultCulture)));
                 }
 
                 return _cultureInfo;
             }
             set
             {
+                if (null == value)
+                    throw new ArgumentNullException("ThreadCulture must have a value");
                 _cultureInfo = value;
             }
         }
@@ -142,7 +153,7 @@ namespace NetOffice
         /// <summary>
         /// Get or set the Event support. true by default
         /// </summary>
-        public static bool EnableEvents
+        public bool EnableEvents
         {
             get
             {
@@ -157,7 +168,7 @@ namespace NetOffice
         /// <summary>
         /// A predefined implementation of IMessageFilter
         /// </summary>
-        public static RetryMessageFilter MessageFilter
+        public RetryMessageFilter MessageFilter
         {
             get
             {
@@ -168,7 +179,7 @@ namespace NetOffice
         /// <summary>
         /// Get or set the Quit method for an application object was automaticly called while Dispose. false by default
         /// </summary>
-        public static bool EnableAutomaticQuit
+        public bool EnableAutomaticQuit
         {
             get
             {
@@ -183,7 +194,7 @@ namespace NetOffice
         /// <summary>
         /// Get or set the core api checks at runtime the target method or property is supported in current version. if it doesnt a EntityNotSupportedException is thrown. false by default
         /// </summary>
-        public static bool EnableSafeMode
+        public bool EnableSafeMode
         {
             get
             {
@@ -196,25 +207,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the core api performs all operations thread safe. false by default
-        /// </summary>
-        public static bool EnableThreadSafe
-        {
-            get
-            {
-                return _enableThreadSafe;
-            }
-            set
-            {
-                _enableThreadSafe = value;
-            }
-        }
-
-        /// <summary>
         /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static bool EnableAdHocLoading
+        public bool EnableAdHocLoading
         {
             get
             {
@@ -230,7 +226,7 @@ namespace NetOffice
         /// Get or set the Initialize method perform a deep level analyzing(may cause security issues)
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static bool EnableDeepLoading
+        public bool EnableDeepLoading
         {
             get
             {
@@ -245,7 +241,7 @@ namespace NetOffice
         /// <summary>
         /// Get or set NetOffice logs essential system steps in the DebugConsole(if enabled). true by default
         /// </summary>
-        public static bool EnableDebugOutput
+        public bool EnableDebugOutput
         {
             get
             {
@@ -260,7 +256,7 @@ namespace NetOffice
         /// <summary>
         /// Get or set NetOffice logs essential system steps for event operations in the DebugConsole(if enabled). false by default
         /// </summary>
-        public static bool EnableEventDebugOutput
+        public bool EnableEventDebugOutput
         {
             get
             {
@@ -276,7 +272,7 @@ namespace NetOffice
         /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static CacheOptions CacheOptions
+        public CacheOptions CacheOptions
         {
             get
             {
@@ -292,7 +288,7 @@ namespace NetOffice
         /// Get or set NetOffice spend custom overloads for the "==" and "!=" operators for semanticly comparsion. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static bool EnableOperatorOverlads
+        public bool EnableOperatorOverlads
         {
             get
             {

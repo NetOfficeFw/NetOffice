@@ -120,7 +120,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Designer", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -136,7 +136,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CodeModule", paramsArray);
-				NetOffice.VBIDEApi.CodeModule newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CodeModule.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodeModule;
+				NetOffice.VBIDEApi.CodeModule newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.CodeModule.LateBindingApiWrapperType) as NetOffice.VBIDEApi.CodeModule;
 				return newObject;
 			}
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 		}
@@ -184,7 +184,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Collection", paramsArray);
-				NetOffice.VBIDEApi.VBComponents newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBComponents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponents;
+				NetOffice.VBIDEApi.VBComponents newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBComponents.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBComponents;
 				return newObject;
 			}
 		}
@@ -215,7 +215,7 @@ namespace NetOffice.VBIDEApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Properties", paramsArray);
-				NetOffice.VBIDEApi.Properties newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Properties;
+				NetOffice.VBIDEApi.Properties newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.Properties.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Properties;
 				return newObject;
 			}
 		}
@@ -243,7 +243,7 @@ namespace NetOffice.VBIDEApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "DesignerWindow", paramsArray);
-			NetOffice.VBIDEApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
+			NetOffice.VBIDEApi.Window newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.VBIDEApi.Window.LateBindingApiWrapperType) as NetOffice.VBIDEApi.Window;
 			return newObject;
 		}
 

@@ -8,10 +8,99 @@ using System.Text;
 namespace NetOffice
 {
     /// <summary>
-    /// invoke helper functions
+    /// Invoke helper functions
     /// </summary>
-    public static class Invoker
+    public class Invoker
     {
+        #region Fields
+
+        /// <summary>
+        /// lock field to perform thread safe operations
+        /// </summary>
+        private static object _lockInstance = new object();
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="parentFactory">parent factory</param>
+        internal Invoker(Core parentFactory)
+        {
+            Parent = parentFactory;
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        internal Invoker()
+        {
+            IsDefault = true;
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Shared Default Invoker
+        /// </summary>
+        public static Invoker Default
+        {
+            get 
+            {
+                lock (_lockInstance)
+                {
+                    if (null == _default)
+                        _default = new Invoker();
+                    return _default;
+                }
+            }
+        }
+        private static Invoker _default;
+
+        /// <summary>
+        /// Returns info this invoker is the default instance
+        /// </summary>
+        public bool IsDefault { get; private set; }
+
+        /// <summary>
+        /// Parent Factory
+        /// </summary>
+        internal Core Parent { get; private set; }
+
+        /// <summary>
+        /// Associated DebugConsole
+        /// </summary>
+        internal DebugConsole Console
+        {
+            get
+            {
+                if (null != Parent)
+                    return Parent.Console;
+                else
+                    return DebugConsole.Default;
+            }
+        }
+
+        /// <summary>
+        /// Associated Settings
+        /// </summary>
+        internal Settings Settings
+        {
+            get 
+            {
+                if (null != Parent)
+                    return Parent.Settings;
+                else
+                    return Settings.Default;
+            }
+        }
+
+        #endregion
+
         #region Method
 
         /// <summary>
@@ -19,7 +108,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
-        public static void Method(COMObject comObject, string name)
+        public void Method(COMObject comObject, string name)
         {
             Method(comObject, name, null);
         }
@@ -29,7 +118,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
-        public static void Method(object comObject, string name)
+        public void Method(object comObject, string name)
         {
             Method(comObject, name, null);
         }
@@ -40,21 +129,21 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        public static void Method(COMObject comObject, string name, object[] paramsArray)
+        public void Method(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
-                if(comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                if (comObject.IsDisposed)
+                    throw new ObjectDisposedException("COMObject");
 
                 if( (Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name,SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -66,18 +155,18 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static void MethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        public void MethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -88,18 +177,18 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        public static void Method(object comObject, string name, object[] paramsArray)
+        public void Method(object comObject, string name, object[] paramsArray)
         {
             try
             {
                 if ((comObject as COMObject).IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, comObject, paramsArray, Settings.ThreadCulture);
+                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod, null, comObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -111,21 +200,21 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
-        public static void Method(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public void Method(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -136,22 +225,22 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
-        public static object MethodReturn(COMObject comObject, string name)
+        public object MethodReturn(COMObject comObject, string name)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -163,22 +252,22 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
-        public static object MethodReturn(COMObject comObject, string name, object[] paramsArray)
+        public object MethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -191,19 +280,19 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static object MethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        public object MethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -216,22 +305,22 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
-        public static object MethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public object MethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -245,7 +334,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
-        public static void SingleMethod(COMObject comObject, string name)
+        public void SingleMethod(COMObject comObject, string name)
         {
             SingleMethod(comObject, name, null);
         }
@@ -255,7 +344,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
-        public static void SingleMethod(object comObject, string name)
+        public void SingleMethod(object comObject, string name)
         {
             SingleMethod(comObject, name, null);
         }
@@ -266,21 +355,21 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        public static void SingleMethod(COMObject comObject, string name, object[] paramsArray)
+        public void SingleMethod(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -292,18 +381,18 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static void SingleMethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        public void SingleMethodWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -314,18 +403,18 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
-        public static void SingleMethod(object comObject, string name, object[] paramsArray)
+        public void SingleMethod(object comObject, string name, object[] paramsArray)
         {
             try
             {
                 if ((comObject as COMObject).IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+                comObject.GetType().InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject, paramsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -337,21 +426,21 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
-        public static void SingleMethod(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public void SingleMethod(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
+                if ((Settings.Default.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                DebugConsole.Default.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -362,22 +451,22 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of method</param>
         /// <returns>any return value</returns>
-        public static object SingleMethodReturn(COMObject comObject, string name)
+        public object SingleMethodReturn(COMObject comObject, string name)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -389,22 +478,22 @@ namespace NetOffice
         /// <param name="name">name of method</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
-        public static object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray)
+        public object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -417,19 +506,19 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static object SingleMethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        public object SingleMethodReturnWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -442,22 +531,22 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
-        public static object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public object SingleMethodReturn(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod | BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -472,19 +561,19 @@ namespace NetOffice
         /// <param name="comObject">target proxy</param>
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
-        public static object PropertyGet(object comObject, string name)
+        public object PropertyGet(object comObject, string name)
         {
             try
             {
                 if ((comObject as COMObject).IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.ThreadCulture);
+                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -495,22 +584,22 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
         /// <returns>any return value</returns>
-        public static object PropertyGet(COMObject comObject, string name)
+        public object PropertyGet(COMObject comObject, string name)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, null, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -522,19 +611,19 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
-        public static object PropertyGet(object comObject, string name, object[] paramsArray)
+        public object PropertyGet(object comObject, string name, object[] paramsArray)
         {
             try
             {
                 if ((comObject as COMObject).IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -546,22 +635,22 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
-        public static object PropertyGet(COMObject comObject, string name, object[] paramsArray)
+        public object PropertyGet(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -574,19 +663,19 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <returns>any return value</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static object PropertyGetWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
+        public object PropertyGetWithoutSafeMode(COMObject comObject, string name, object[] paramsArray)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.ThreadCulture);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -600,22 +689,22 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param>
         /// <param name="paramModifiers">ararry with modifiers correspond paramsArray</param>
         /// <returns>any return value</returns>
-        public static object PropertyGet(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
+        public object PropertyGet(COMObject comObject, string name, object[] paramsArray, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.ThreadCulture, null);
+                object returnValue = comObject.InstanceType.InvokeMember(name, BindingFlags.GetProperty, null, comObject.UnderlyingObject, paramsArray, paramModifiers, Settings.Default.ThreadCulture, null);
                 return returnValue;
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -627,12 +716,12 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="paramsArray">array with parameters</param> 
         /// <param name="value">value to be set</param>
-        public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value)
+        public void PropertySet(COMObject comObject, string name, object[] paramsArray, object value)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -642,11 +731,11 @@ namespace NetOffice
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = value;
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -659,12 +748,12 @@ namespace NetOffice
         /// <param name="paramsArray">array with parameters</param> 
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>    
-        public static void PropertySet(COMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
+        public void PropertySet(COMObject comObject, string name, object[] paramsArray, object value, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
@@ -674,11 +763,11 @@ namespace NetOffice
                     newParamsArray[i] = paramsArray[i];
                 newParamsArray[newParamsArray.Length - 1] = value;
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, newParamsArray, paramModifiers, Settings.Default.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -689,21 +778,21 @@ namespace NetOffice
         /// <param name="comObject">target object</param>
         /// <param name="name">name of property</param>
         /// <param name="value">value to be set</param>
-        public static void PropertySet(COMObject comObject, string name, object value)
+        public void PropertySet(COMObject comObject, string name, object value)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -715,21 +804,21 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="value">value to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
-        public static void PropertySet(COMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
+        public void PropertySet(COMObject comObject, string name, object value, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, new object[] { value }, paramModifiers, Settings.Default.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -741,21 +830,21 @@ namespace NetOffice
         /// <param name="name">name of property</param>
         /// <param name="value">value array to be set</param>
         /// <param name="paramModifiers">array with modifiers correspond paramsArray</param>
-        public static void PropertySet(COMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
+        public void PropertySet(COMObject comObject, string name, object[] value, ParameterModifier[] paramModifiers)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.ThreadCulture, null);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, paramModifiers, Settings.Default.ThreadCulture, null);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -763,24 +852,24 @@ namespace NetOffice
         /// <summary>
         /// perform property set as latebind call
         /// </summary>
-        /// <param name="comObject"></param>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        public static void PropertySet(COMObject comObject, string name, object[] value)
+        /// <param name="comObject">comobject instance</param>
+        /// <param name="name">name of the property</param>
+        /// <param name="value">new value of the property</param>
+        public void PropertySet(COMObject comObject, string name, object[] value)
         {
             try
             {
                 if (comObject.IsDisposed)
-                    throw new InvalidComObjectException();
+                    throw new ObjectDisposedException("COMObject");
 
                 if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Property)))
                     throw new EntityNotSupportedException(string.Format("Property {0} is not available.", name));
 
-                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.ThreadCulture);
+                comObject.InstanceType.InvokeMember(name, BindingFlags.SetProperty, null, comObject.UnderlyingObject, value, Settings.Default.ThreadCulture);
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                Console.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -866,7 +955,7 @@ namespace NetOffice
             }
             catch (Exception throwedException)
             {
-                DebugConsole.WriteException(throwedException);
+                DebugConsole.Default.WriteException(throwedException);
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
@@ -935,11 +1024,11 @@ namespace NetOffice
 
         private static string GetExceptionMessage(Exception throwedException)
         {
-            switch (Settings.UseExceptionMessage)
+            switch (Settings.Default.UseExceptionMessage)
             {
                 case ExceptionMessageHandling.Default:
 
-                    return Settings.ExceptionMessage;
+                    return Settings.Default.ExceptionMessage;
 
                 case ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException:
 

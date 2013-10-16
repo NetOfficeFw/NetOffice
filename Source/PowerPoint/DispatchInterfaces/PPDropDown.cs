@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Strings", paramsArray);
-				NetOffice.PowerPointApi.PPStrings newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPStrings.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPStrings;
+				NetOffice.PowerPointApi.PPStrings newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.PowerPointApi.PPStrings.LateBindingApiWrapperType) as NetOffice.PowerPointApi.PPStrings;
 				return newObject;
 			}
 		}

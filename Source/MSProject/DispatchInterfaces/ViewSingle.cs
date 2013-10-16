@@ -84,7 +84,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Table", paramsArray);
-				NetOffice.MSProjectApi.Table newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Table.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Table;
+				NetOffice.MSProjectApi.Table newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Table.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Table;
 				return newObject;
 			}
 			set
@@ -105,7 +105,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Filter", paramsArray);
-				NetOffice.MSProjectApi.Filter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filter.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filter;
+				NetOffice.MSProjectApi.Filter newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filter.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filter;
 				return newObject;
 			}
 			set
@@ -126,7 +126,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Group", paramsArray);
-				NetOffice.MSProjectApi.Group newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Group.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Group;
+				NetOffice.MSProjectApi.Group newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Group.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Group;
 				return newObject;
 			}
 			set

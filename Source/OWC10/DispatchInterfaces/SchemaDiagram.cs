@@ -99,7 +99,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SchemaRowsources", paramsArray);
-				NetOffice.OWC10Api.SchemaRowsources newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsources;
+				NetOffice.OWC10Api.SchemaRowsources newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaRowsources.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaRowsources;
 				return newObject;
 			}
 		}

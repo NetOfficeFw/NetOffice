@@ -85,7 +85,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChSeries newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSeries.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSeries;
+				NetOffice.OWC10Api.ChSeries newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChSeries.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChSeries;
 				return newObject;
 			}
 		}
@@ -103,7 +103,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChPoint newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChPoint.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChPoint;
+			NetOffice.OWC10Api.ChPoint newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChPoint.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChPoint;
 			return newObject;
 			}
 		}

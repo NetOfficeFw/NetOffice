@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.IconCriterion newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.IconCriterion.LateBindingApiWrapperType) as NetOffice.ExcelApi.IconCriterion;
+			NetOffice.ExcelApi.IconCriterion newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.IconCriterion.LateBindingApiWrapperType) as NetOffice.ExcelApi.IconCriterion;
 			return newObject;
 			}
 		}

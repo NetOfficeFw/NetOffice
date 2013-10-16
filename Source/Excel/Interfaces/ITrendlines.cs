@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+			NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 			return newObject;
 		}
 
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "_Default", paramsArray);
-				NetOffice.ExcelApi.Trendline newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
+				NetOffice.ExcelApi.Trendline newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.Trendline.LateBindingApiWrapperType) as NetOffice.ExcelApi.Trendline;
 				return newObject;
 			}
 		}

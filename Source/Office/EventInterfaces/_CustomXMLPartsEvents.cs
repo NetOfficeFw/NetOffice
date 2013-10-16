@@ -46,7 +46,22 @@ namespace NetOffice.OfficeApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _CustomXMLPartsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -69,7 +84,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newNewPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newNewPart = Factory.CreateObjectFromComProxy(_eventClass, newPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewPart;
 			_eventBinding.RaiseCustomEvent("PartAfterAdd", ref paramsArray);
@@ -84,7 +99,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newOldPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newOldPart = Factory.CreateObjectFromComProxy(_eventClass, oldPart) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newOldPart;
 			_eventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
@@ -99,7 +114,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CustomXMLPart newPart = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
+			NetOffice.OfficeApi.CustomXMLPart newPart = Factory.CreateObjectFromComProxy(_eventClass, part) as NetOffice.OfficeApi.CustomXMLPart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPart;
 			_eventBinding.RaiseCustomEvent("PartAfterLoad", ref paramsArray);

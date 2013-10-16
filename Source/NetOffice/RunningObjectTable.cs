@@ -51,10 +51,6 @@ namespace NetOffice
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // create binding object
-                    IBindCtx bindInfo;
-                    CreateBindCtx(0, out bindInfo);
-
                     // query com proxy info      
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
@@ -69,8 +65,6 @@ namespace NetOffice
 
                     if (componentNameEqual && classNameEqual)
                     {
-                        if (bindInfo.GetType().IsCOMObject)
-                            Marshal.ReleaseComObject(bindInfo);
                         return comInstance;
                     }
                     else
@@ -78,7 +72,6 @@ namespace NetOffice
                         componentNameEqual = ((_ballmersPlace + componentName).Equals(component, StringComparison.InvariantCultureIgnoreCase));
                         if (componentNameEqual && classNameEqual)
                         {
-                            Marshal.ReleaseComObject(bindInfo);
                             return comInstance;
                         }
                         else
@@ -86,11 +79,7 @@ namespace NetOffice
                             if (comInstance.GetType().IsCOMObject)
                                 Marshal.ReleaseComObject(comInstance);
                         }
-
                     }
-
-                    if (bindInfo.GetType().IsCOMObject)
-                        Marshal.ReleaseComObject(bindInfo);
                 }
 
                 if (throwOnError)
@@ -100,7 +89,7 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                DebugConsole.Default.WriteException(exception);
                 throw;
             }
             finally
@@ -140,10 +129,6 @@ namespace NetOffice
                 // fetch all moniker
                 while (monikerList.Next(1, monikerContainer, pointerFetchedMonikers) == 0)
                 {
-                    // create binding object
-                    IBindCtx bindInfo;
-                    CreateBindCtx(0, out bindInfo);
-
                     // query com proxy info      
                     object comInstance = null;
                     runningObjectTable.GetObject(monikerContainer[0], out comInstance);
@@ -151,13 +136,13 @@ namespace NetOffice
                     // get class name and component name
                     string name = TypeDescriptor.GetClassName(comInstance);
                     string component = TypeDescriptor.GetComponentName(comInstance, false);
-
+                    
                     // match for equal and add to list
                     bool componentNameEqual = (componentName.Equals(component, StringComparison.InvariantCultureIgnoreCase));
                     bool classNameEqual = (className.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 
                     if (componentNameEqual && classNameEqual)
-                    {
+                    { 
                         resultList.Add(comInstance);
                     }
                     else
@@ -174,16 +159,13 @@ namespace NetOffice
                         }
 
                     }
-
-                    if (bindInfo.GetType().IsCOMObject)
-                        Marshal.ReleaseComObject(bindInfo);
                 }
 
                 return resultList;
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                DebugConsole.Default.WriteException(exception);
                 throw;
             }
             finally

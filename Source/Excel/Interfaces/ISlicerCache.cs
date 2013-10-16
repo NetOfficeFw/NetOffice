@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -179,7 +179,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorkbookConnection", paramsArray);
-				NetOffice.ExcelApi.WorkbookConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
+				NetOffice.ExcelApi.WorkbookConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorkbookConnection;
 				return newObject;
 			}
 		}
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Slicers", paramsArray);
-				NetOffice.ExcelApi.Slicers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicers.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicers;
+				NetOffice.ExcelApi.Slicers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Slicers.LateBindingApiWrapperType) as NetOffice.ExcelApi.Slicers;
 				return newObject;
 			}
 		}
@@ -211,7 +211,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotTables", paramsArray);
-				NetOffice.ExcelApi.SlicerPivotTables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerPivotTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerPivotTables;
+				NetOffice.ExcelApi.SlicerPivotTables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerPivotTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerPivotTables;
 				return newObject;
 			}
 		}
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerCacheLevels", paramsArray);
-				NetOffice.ExcelApi.SlicerCacheLevels newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevels.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevels;
+				NetOffice.ExcelApi.SlicerCacheLevels newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerCacheLevels.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerCacheLevels;
 				return newObject;
 			}
 		}
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisibleSlicerItems", paramsArray);
-				NetOffice.ExcelApi.SlicerItems newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "VisibleSlicerItemsList", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "SlicerItems", paramsArray);
-				NetOffice.ExcelApi.SlicerItems newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
+				NetOffice.ExcelApi.SlicerItems newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.SlicerItems.LateBindingApiWrapperType) as NetOffice.ExcelApi.SlicerItems;
 				return newObject;
 			}
 		}
@@ -420,7 +420,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TimelineState", paramsArray);
-				NetOffice.ExcelApi.TimelineState newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TimelineState.LateBindingApiWrapperType) as NetOffice.ExcelApi.TimelineState;
+				NetOffice.ExcelApi.TimelineState newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TimelineState.LateBindingApiWrapperType) as NetOffice.ExcelApi.TimelineState;
 				return newObject;
 			}
 		}
@@ -502,7 +502,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListObject", paramsArray);
-				NetOffice.ExcelApi.ListObject newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType) as NetOffice.ExcelApi.ListObject;
+				NetOffice.ExcelApi.ListObject newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType) as NetOffice.ExcelApi.ListObject;
 				return newObject;
 			}
 		}

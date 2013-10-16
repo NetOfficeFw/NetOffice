@@ -364,7 +364,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "attributes", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLAttributeCollection3 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLAttributeCollection3;
+				NetOffice.MSHTMLApi.IHTMLAttributeCollection3 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLAttributeCollection3;
 				return newObject;
 			}
 		}
@@ -662,7 +662,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrName);
 			object returnItem = Invoker.MethodReturn(this, "getAttributeNode", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
 			return newObject;
 		}
 
@@ -675,7 +675,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pattr);
 			object returnItem = Invoker.MethodReturn(this, "setAttributeNode", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
 			return newObject;
 		}
 
@@ -688,7 +688,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pattr);
 			object returnItem = Invoker.MethodReturn(this, "removeAttributeNode", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
+			NetOffice.MSHTMLApi.IHTMLDOMAttribute2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDOMAttribute2;
 			return newObject;
 		}
 
@@ -715,7 +715,7 @@ namespace NetOffice.MSHTMLApi
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

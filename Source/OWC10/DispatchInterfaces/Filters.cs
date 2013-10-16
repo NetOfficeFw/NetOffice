@@ -85,7 +85,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.OWC10Api.ISpreadsheet newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ISpreadsheet;
+				NetOffice.OWC10Api.ISpreadsheet newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.ISpreadsheet;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.Filter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.Filter.LateBindingApiWrapperType) as NetOffice.OWC10Api.Filter;
+			NetOffice.OWC10Api.Filter newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.Filter.LateBindingApiWrapperType) as NetOffice.OWC10Api.Filter;
 			return newObject;
 			}
 		}
@@ -134,7 +134,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.AutoFilter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.AutoFilter.LateBindingApiWrapperType) as NetOffice.OWC10Api.AutoFilter;
+				NetOffice.OWC10Api.AutoFilter newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.AutoFilter.LateBindingApiWrapperType) as NetOffice.OWC10Api.AutoFilter;
 				return newObject;
 			}
 		}

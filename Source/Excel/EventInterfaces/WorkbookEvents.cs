@@ -194,7 +194,22 @@ namespace NetOffice.ExcelApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public WorkbookEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -306,7 +321,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("NewSheet", ref paramsArray);
@@ -347,7 +362,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Window newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+			NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("WindowResize", ref paramsArray);
@@ -362,7 +377,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Window newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+			NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
@@ -377,7 +392,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Window newWn = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
+			NetOffice.ExcelApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.ExcelApi.Window;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWn;
 			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
@@ -392,8 +407,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -409,8 +424,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -429,8 +444,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -449,7 +464,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetActivate", ref paramsArray);
@@ -464,7 +479,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetDeactivate", ref paramsArray);
@@ -479,7 +494,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetCalculate", ref paramsArray);
@@ -494,8 +509,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -511,8 +526,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.Hyperlink newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -528,8 +543,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -545,7 +560,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("PivotTableCloseConnection", ref paramsArray);
@@ -560,7 +575,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("PivotTableOpenConnection", ref paramsArray);
@@ -590,7 +605,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+			NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
 			string newUrl = Convert.ToString(url);
 			bool newIsRefresh = Convert.ToBoolean(isRefresh);
 			object[] paramsArray = new object[4];
@@ -612,7 +627,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+			NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
 			bool newIsRefresh = Convert.ToBoolean(isRefresh);
 			NetOffice.ExcelApi.Enums.XlXmlImportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlImportResult)result;
 			object[] paramsArray = new object[3];
@@ -631,7 +646,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+			NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
 			string newUrl = Convert.ToString(url);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newMap;
@@ -651,7 +666,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.XmlMap newMap = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
+			NetOffice.ExcelApi.XmlMap newMap = Factory.CreateObjectFromComProxy(_eventClass, map) as NetOffice.ExcelApi.XmlMap;
 			string newUrl = Convert.ToString(url);
 			NetOffice.ExcelApi.Enums.XlXmlExportResult newResult = (NetOffice.ExcelApi.Enums.XlXmlExportResult)result;
 			object[] paramsArray = new object[3];
@@ -689,9 +704,9 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			NetOffice.ExcelApi.Range newTargetRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.Range newTargetRange = Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTargetPivotTable;
@@ -708,8 +723,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
@@ -732,8 +747,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[5];
@@ -756,8 +771,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
@@ -777,8 +792,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -809,7 +824,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Chart newCh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, ch) as NetOffice.ExcelApi.Chart;
+			NetOffice.ExcelApi.Chart newCh = Factory.CreateObjectFromComProxy(_eventClass, ch) as NetOffice.ExcelApi.Chart;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCh;
 			_eventBinding.RaiseCustomEvent("NewChart", ref paramsArray);
@@ -824,7 +839,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetLensGalleryRenderComplete", ref paramsArray);
@@ -839,8 +854,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
-			NetOffice.ExcelApi.TableObject newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			NetOffice.ExcelApi.TableObject newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSh;
 			paramsArray[1] = newTarget;
@@ -856,7 +871,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.ModelChanges newChanges = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, changes) as NetOffice.ExcelApi.ModelChanges;
+			NetOffice.ExcelApi.ModelChanges newChanges = Factory.CreateObjectFromComProxy(_eventClass, changes) as NetOffice.ExcelApi.ModelChanges;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newChanges;
 			_eventBinding.RaiseCustomEvent("ModelChange", ref paramsArray);
@@ -871,7 +886,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			object newSh = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
+			object newSh = Factory.CreateObjectFromComProxy(_eventClass, sh) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSh;
 			_eventBinding.RaiseCustomEvent("SheetBeforeDelete", ref paramsArray);

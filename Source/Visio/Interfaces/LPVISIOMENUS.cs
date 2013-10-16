@@ -87,7 +87,7 @@ namespace NetOffice.VisioApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.VisioApi.IVMenu newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
+			NetOffice.VisioApi.IVMenu newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
 			return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVMenuSet newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSet;
+				NetOffice.VisioApi.IVMenuSet newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSet;
 				return newObject;
 			}
 		}
@@ -135,7 +135,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.VisioApi.IVMenu newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
+			NetOffice.VisioApi.IVMenu newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
 			return newObject;
 		}
 
@@ -148,7 +148,7 @@ namespace NetOffice.VisioApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lIndex);
 			object returnItem = Invoker.MethodReturn(this, "AddAt", paramsArray);
-			NetOffice.VisioApi.IVMenu newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
+			NetOffice.VisioApi.IVMenu newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenu;
 			return newObject;
 		}
 

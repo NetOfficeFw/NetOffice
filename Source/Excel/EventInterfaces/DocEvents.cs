@@ -102,7 +102,22 @@ namespace NetOffice.ExcelApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public DocEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -125,7 +140,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
@@ -140,7 +155,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTarget;
 			paramsArray.SetValue(cancel, 1);
@@ -158,7 +173,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTarget;
 			paramsArray.SetValue(cancel, 1);
@@ -215,7 +230,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Range newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.Range newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);
@@ -230,7 +245,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.Hyperlink newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
+			NetOffice.ExcelApi.Hyperlink newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.Hyperlink;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("FollowHyperlink", ref paramsArray);
@@ -245,7 +260,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("PivotTableUpdate", ref paramsArray);
@@ -260,8 +275,8 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
-			NetOffice.ExcelApi.Range newTargetRange = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.Range newTargetRange = Factory.CreateObjectFromComProxy(_eventClass, targetRange) as NetOffice.ExcelApi.Range;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTargetPivotTable;
 			paramsArray[1] = newTargetRange;
@@ -277,7 +292,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
@@ -299,7 +314,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[4];
@@ -321,7 +336,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTargetPivotTable = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTargetPivotTable = Factory.CreateObjectFromComProxy(_eventClass, targetPivotTable) as NetOffice.ExcelApi.PivotTable;
 			Int32 newValueChangeStart = Convert.ToInt32(valueChangeStart);
 			Int32 newValueChangeEnd = Convert.ToInt32(valueChangeEnd);
 			object[] paramsArray = new object[3];
@@ -340,7 +355,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.PivotTable newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
+			NetOffice.ExcelApi.PivotTable newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.PivotTable;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("PivotTableChangeSync", ref paramsArray);
@@ -368,7 +383,7 @@ namespace NetOffice.ExcelApi
 				return;
 			}
 
-			NetOffice.ExcelApi.TableObject newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
+			NetOffice.ExcelApi.TableObject newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.ExcelApi.TableObject;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newTarget;
 			_eventBinding.RaiseCustomEvent("TableUpdate", ref paramsArray);

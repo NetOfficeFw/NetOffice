@@ -194,7 +194,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.OWC10Api.ChAxis newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
+				NetOffice.OWC10Api.ChAxis newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChAxis.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChAxis;
 				return newObject;
 			}
 		}
@@ -213,7 +213,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index, level);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChCategoryLabel newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
+			NetOffice.OWC10Api.ChCategoryLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
 			return newObject;
 			}
 		}
@@ -231,7 +231,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.ChCategoryLabel newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
+			NetOffice.OWC10Api.ChCategoryLabel newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType) as NetOffice.OWC10Api.ChCategoryLabel;
 			return newObject;
 			}
 		}
@@ -247,7 +247,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "PivotAxis", paramsArray);
-				NetOffice.OWC10Api.PivotResultGroupAxis newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotResultGroupAxis;
+				NetOffice.OWC10Api.PivotResultGroupAxis newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OWC10Api.PivotResultGroupAxis;
 				return newObject;
 			}
 		}

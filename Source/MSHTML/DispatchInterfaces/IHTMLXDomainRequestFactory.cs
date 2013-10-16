@@ -85,7 +85,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "create", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLXDomainRequest newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLXDomainRequest.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLXDomainRequest;
+			NetOffice.MSHTMLApi.IHTMLXDomainRequest newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLXDomainRequest.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLXDomainRequest;
 			return newObject;
 		}
 

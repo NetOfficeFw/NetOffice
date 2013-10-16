@@ -46,7 +46,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public OutlookBarShortcutsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -69,7 +84,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarShortcut newNewShortcut = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newShortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newNewShortcut = Factory.CreateObjectFromComProxy(_eventClass, newShortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newNewShortcut;
 			_eventBinding.RaiseCustomEvent("ShortcutAdd", ref paramsArray);
@@ -100,7 +115,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);

@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.AllowEditRange newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
+			NetOffice.ExcelApi.AllowEditRange newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
 			return newObject;
 			}
 		}
@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, range, password);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.AllowEditRange newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
+			NetOffice.ExcelApi.AllowEditRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
 			return newObject;
 		}
 
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, range);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.AllowEditRange newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
+			NetOffice.ExcelApi.AllowEditRange newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.AllowEditRange.LateBindingApiWrapperType) as NetOffice.ExcelApi.AllowEditRange;
 			return newObject;
 		}
 

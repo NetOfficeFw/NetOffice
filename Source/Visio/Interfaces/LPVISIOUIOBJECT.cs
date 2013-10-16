@@ -141,7 +141,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "MenuSets", paramsArray);
-				NetOffice.VisioApi.IVMenuSets newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSets;
+				NetOffice.VisioApi.IVMenuSets newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVMenuSets;
 				return newObject;
 			}
 		}
@@ -157,7 +157,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ToolbarSets", paramsArray);
-				NetOffice.VisioApi.IVToolbarSets newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbarSets;
+				NetOffice.VisioApi.IVToolbarSets newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVToolbarSets;
 				return newObject;
 			}
 		}
@@ -174,7 +174,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "StatusBars", paramsArray);
-				NetOffice.VisioApi.IVStatusBars newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBars;
+				NetOffice.VisioApi.IVStatusBars newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVStatusBars;
 				return newObject;
 			}
 		}
@@ -190,7 +190,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AccelTables", paramsArray);
-				NetOffice.VisioApi.IVAccelTables newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelTables;
+				NetOffice.VisioApi.IVAccelTables newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelTables;
 				return newObject;
 			}
 		}
@@ -286,7 +286,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Clone", paramsArray);
-				NetOffice.VisioApi.IVUIObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVUIObject;
+				NetOffice.VisioApi.IVUIObject newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVUIObject;
 				return newObject;
 			}
 		}

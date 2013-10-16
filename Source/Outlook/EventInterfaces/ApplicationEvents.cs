@@ -58,7 +58,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ApplicationEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -81,7 +96,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newItem;
 			paramsArray.SetValue(cancel, 1);
@@ -112,7 +127,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("Reminder", ref paramsArray);
@@ -127,7 +142,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.PropertyPages newPages = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
+			NetOffice.OutlookApi.PropertyPages newPages = Factory.CreateObjectFromComProxy(_eventClass, pages) as NetOffice.OutlookApi.PropertyPages;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPages;
 			_eventBinding.RaiseCustomEvent("OptionsPagesAdd", ref paramsArray);

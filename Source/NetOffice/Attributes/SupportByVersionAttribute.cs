@@ -20,8 +20,8 @@ namespace NetOffice
         /// <summary>
         /// creates instance
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="versions"></param>
+        /// <param name="name">name of the library</param>
+        /// <param name="versions">version of the library</param>
         public SupportByVersionAttribute(string name, params double[] versions)
         {
             this.Name = name;

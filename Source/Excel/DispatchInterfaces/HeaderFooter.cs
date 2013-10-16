@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Picture", paramsArray);
-				NetOffice.ExcelApi.Graphic newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
+				NetOffice.ExcelApi.Graphic newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Graphic.LateBindingApiWrapperType) as NetOffice.ExcelApi.Graphic;
 				return newObject;
 			}
 		}

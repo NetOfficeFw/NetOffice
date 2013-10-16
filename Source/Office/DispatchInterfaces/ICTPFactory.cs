@@ -88,7 +88,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle, cTPParentWindow);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cTPAxID, cTPTitle);
 			object returnItem = Invoker.MethodReturn(this, "CreateCTP", paramsArray);
-			NetOffice.OfficeApi._CustomTaskPane newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
+			NetOffice.OfficeApi._CustomTaskPane newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.OfficeApi._CustomTaskPane;
 			return newObject;
 		}
 

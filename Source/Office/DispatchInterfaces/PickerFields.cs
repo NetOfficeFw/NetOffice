@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.PickerField newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PickerField.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerField;
+			NetOffice.OfficeApi.PickerField newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.PickerField.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerField;
 			return newObject;
 			}
 		}

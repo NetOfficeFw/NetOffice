@@ -85,7 +85,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "document", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLDocument2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument2;
+				NetOffice.MSHTMLApi.IHTMLDocument2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLDocument2;
 				return newObject;
 			}
 		}
@@ -102,7 +102,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "fonts", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLFontNamesCollection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSHTMLApi.IHTMLFontNamesCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFontNamesCollection;
+				NetOffice.MSHTMLApi.IHTMLFontNamesCollection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSHTMLApi.IHTMLFontNamesCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFontNamesCollection;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.MSHTMLApi
 				object returnItem = Invoker.PropertyGet(this, "execArg", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -247,7 +247,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "unsecuredWindowOfDocument", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLWindow2 newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLWindow2;
+				NetOffice.MSHTMLApi.IHTMLWindow2 newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLWindow2;
 				return newObject;
 			}
 		}
@@ -320,7 +320,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fontName);
 			object returnItem = Invoker.MethodReturn(this, "sizes", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLFontSizesCollection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLFontSizesCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFontSizesCollection;
+			NetOffice.MSHTMLApi.IHTMLFontSizesCollection newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLFontSizesCollection.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLFontSizesCollection;
 			return newObject;
 		}
 

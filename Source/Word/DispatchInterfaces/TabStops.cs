@@ -100,7 +100,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -132,7 +132,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -153,7 +153,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+				NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 				return newObject;
 			}
 		}
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alignment, leader);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+			NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 			return newObject;
 		}
 
@@ -183,7 +183,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+			NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 			return newObject;
 		}
 
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position, alignment);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+			NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 			return newObject;
 		}
 
@@ -221,7 +221,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "Before", paramsArray);
-			NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+			NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 			return newObject;
 		}
 
@@ -234,7 +234,7 @@ namespace NetOffice.WordApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(position);
 			object returnItem = Invoker.MethodReturn(this, "After", paramsArray);
-			NetOffice.WordApi.TabStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
+			NetOffice.WordApi.TabStop newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.WordApi.TabStop.LateBindingApiWrapperType) as NetOffice.WordApi.TabStop;
 			return newObject;
 		}
 

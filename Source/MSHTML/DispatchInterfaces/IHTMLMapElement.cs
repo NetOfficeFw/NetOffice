@@ -84,7 +84,7 @@ namespace NetOffice.MSHTMLApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "areas", paramsArray);
-				NetOffice.MSHTMLApi.IHTMLAreasCollection newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLAreasCollection;
+				NetOffice.MSHTMLApi.IHTMLAreasCollection newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSHTMLApi.IHTMLAreasCollection;
 				return newObject;
 			}
 		}

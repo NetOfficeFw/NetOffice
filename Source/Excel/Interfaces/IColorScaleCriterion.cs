@@ -122,7 +122,7 @@ namespace NetOffice.ExcelApi
 				object returnItem = Invoker.PropertyGet(this, "Value", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -148,7 +148,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FormatColor", paramsArray);
-				NetOffice.ExcelApi.FormatColor newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.FormatColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.FormatColor;
+				NetOffice.ExcelApi.FormatColor newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.FormatColor.LateBindingApiWrapperType) as NetOffice.ExcelApi.FormatColor;
 				return newObject;
 			}
 		}

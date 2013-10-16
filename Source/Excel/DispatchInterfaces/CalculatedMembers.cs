@@ -85,7 +85,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -118,7 +118,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "_Default", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 			}
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -206,7 +206,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -222,7 +222,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -240,7 +240,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, dynamic, displayFolder);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -276,7 +276,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "_Add", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember, numberFormat);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -345,7 +345,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -378,7 +378,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -396,7 +396,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, displayFolder);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -415,7 +415,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, displayFolder, measureGroup);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -435,7 +435,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 
@@ -456,7 +456,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedMember", paramsArray);
-			NetOffice.ExcelApi.CalculatedMember newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
+			NetOffice.ExcelApi.CalculatedMember newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType) as NetOffice.ExcelApi.CalculatedMember;
 			return newObject;
 		}
 

@@ -42,7 +42,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public OutlookBarPaneEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
+			NetOffice.OutlookApi.OutlookBarShortcut newShortcut = Factory.CreateObjectFromComProxy(_eventClass, shortcut) as NetOffice.OutlookApi.OutlookBarShortcut;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newShortcut;
 			paramsArray.SetValue(cancel, 1);
@@ -83,7 +98,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.OutlookBarGroup newToGroup = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, toGroup) as NetOffice.OutlookApi.OutlookBarGroup;
+			NetOffice.OutlookApi.OutlookBarGroup newToGroup = Factory.CreateObjectFromComProxy(_eventClass, toGroup) as NetOffice.OutlookApi.OutlookBarGroup;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newToGroup;
 			paramsArray.SetValue(cancel, 1);

@@ -84,7 +84,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 			set
@@ -105,7 +105,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.MSProjectApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
+				NetOffice.MSProjectApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Application.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Application;
 				return newObject;
 			}
 			set
@@ -126,7 +126,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Projects", paramsArray);
-				NetOffice.MSProjectApi.Projects newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Projects.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Projects;
+				NetOffice.MSProjectApi.Projects newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Projects.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Projects;
 				return newObject;
 			}
 			set
@@ -147,7 +147,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSelection", paramsArray);
-				NetOffice.MSProjectApi.Selection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Selection.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Selection;
+				NetOffice.MSProjectApi.Selection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Selection.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Selection;
 				return newObject;
 			}
 			set
@@ -168,7 +168,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveCell", paramsArray);
-				NetOffice.MSProjectApi.Cell newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Cell;
+				NetOffice.MSProjectApi.Cell newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Cell;
 				return newObject;
 			}
 			set
@@ -189,7 +189,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveProject", paramsArray);
-				NetOffice.MSProjectApi.Project newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Project.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Project;
+				NetOffice.MSProjectApi.Project newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Project.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Project;
 				return newObject;
 			}
 			set
@@ -210,7 +210,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveWindow", paramsArray);
-				NetOffice.MSProjectApi.Window newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Window.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Window;
+				NetOffice.MSProjectApi.Window newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Window.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Window;
 				return newObject;
 			}
 			set
@@ -1605,7 +1605,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assistant", paramsArray);
-				NetOffice.OfficeApi.Assistant newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
+				NetOffice.OfficeApi.Assistant newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
 				return newObject;
 			}
 			set
@@ -1646,7 +1646,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VBE", paramsArray);
-				NetOffice.VBIDEApi.VBE newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
+				NetOffice.VBIDEApi.VBE newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.VBIDEApi.VBE.LateBindingApiWrapperType) as NetOffice.VBIDEApi.VBE;
 				return newObject;
 			}
 			set
@@ -1750,7 +1750,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "StatusBar", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -1776,7 +1776,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "FileSearch", paramsArray);
-				NetOffice.OfficeApi.FileSearch newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileSearch;
+				NetOffice.OfficeApi.FileSearch newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.FileSearch.LateBindingApiWrapperType) as NetOffice.OfficeApi.FileSearch;
 				return newObject;
 			}
 			set
@@ -1899,7 +1899,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Profiles", paramsArray);
-				NetOffice.MSProjectApi.Profiles newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profiles.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profiles;
+				NetOffice.MSProjectApi.Profiles newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Profiles.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Profiles;
 				return newObject;
 			}
 			set
@@ -1920,7 +1920,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalBaseCalendars", paramsArray);
-				NetOffice.MSProjectApi.Calendars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendars.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendars;
+				NetOffice.MSProjectApi.Calendars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Calendars.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Calendars;
 				return newObject;
 			}
 			set
@@ -1941,7 +1941,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalViews", paramsArray);
-				NetOffice.MSProjectApi.Views newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSProjectApi.Views;
+				NetOffice.MSProjectApi.Views newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.MSProjectApi.Views;
 				return newObject;
 			}
 			set
@@ -1962,7 +1962,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalViewsSingle", paramsArray);
-				NetOffice.MSProjectApi.ViewsSingle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsSingle;
+				NetOffice.MSProjectApi.ViewsSingle newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsSingle.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsSingle;
 				return newObject;
 			}
 			set
@@ -1983,7 +1983,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalViewsCombination", paramsArray);
-				NetOffice.MSProjectApi.ViewsCombination newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsCombination;
+				NetOffice.MSProjectApi.ViewsCombination newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ViewsCombination.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ViewsCombination;
 				return newObject;
 			}
 			set
@@ -2004,7 +2004,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalTaskTables", paramsArray);
-				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
+				NetOffice.MSProjectApi.Tables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
 				return newObject;
 			}
 			set
@@ -2025,7 +2025,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalResourceTables", paramsArray);
-				NetOffice.MSProjectApi.Tables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
+				NetOffice.MSProjectApi.Tables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Tables.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Tables;
 				return newObject;
 			}
 			set
@@ -2046,7 +2046,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalTaskFilters", paramsArray);
-				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
+				NetOffice.MSProjectApi.Filters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
 				return newObject;
 			}
 			set
@@ -2067,7 +2067,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalResourceFilters", paramsArray);
-				NetOffice.MSProjectApi.Filters newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
+				NetOffice.MSProjectApi.Filters newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Filters.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Filters;
 				return newObject;
 			}
 			set
@@ -2088,7 +2088,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalOutlineCodes", paramsArray);
-				NetOffice.MSProjectApi.OutlineCodes newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCodes.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCodes;
+				NetOffice.MSProjectApi.OutlineCodes newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.OutlineCodes.LateBindingApiWrapperType) as NetOffice.MSProjectApi.OutlineCodes;
 				return newObject;
 			}
 			set
@@ -2149,7 +2149,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Windows", paramsArray);
-				NetOffice.MSProjectApi.Windows newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Windows.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Windows;
+				NetOffice.MSProjectApi.Windows newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Windows.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Windows;
 				return newObject;
 			}
 		}
@@ -2165,7 +2165,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "CommandBars", paramsArray);
-				NetOffice.OfficeApi.CommandBars newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
+				NetOffice.OfficeApi.CommandBars newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.CommandBars.LateBindingApiWrapperType) as NetOffice.OfficeApi.CommandBars;
 				return newObject;
 			}
 		}
@@ -2181,7 +2181,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AnswerWizard", paramsArray);
-				NetOffice.OfficeApi.AnswerWizard newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
+				NetOffice.OfficeApi.AnswerWizard newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
 				return newObject;
 			}
 		}
@@ -2374,7 +2374,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "COMAddIns", paramsArray);
-				NetOffice.OfficeApi.COMAddIns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
+				NetOffice.OfficeApi.COMAddIns newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
 				return newObject;
 			}
 		}
@@ -2390,7 +2390,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Windows2", paramsArray);
-				NetOffice.MSProjectApi.Windows2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Windows2.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Windows2;
+				NetOffice.MSProjectApi.Windows2 newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Windows2.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Windows2;
 				return newObject;
 			}
 		}
@@ -2406,7 +2406,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "VisualReportTemplateList", paramsArray);
-				NetOffice.MSProjectApi.ReportTemplates newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplates.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplates;
+				NetOffice.MSProjectApi.ReportTemplates newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.ReportTemplates.LateBindingApiWrapperType) as NetOffice.MSProjectApi.ReportTemplates;
 				return newObject;
 			}
 			set
@@ -2547,7 +2547,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Assistance", paramsArray);
-				NetOffice.OfficeApi.IAssistance newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
+				NetOffice.OfficeApi.IAssistance newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
 				return newObject;
 			}
 		}
@@ -2565,7 +2565,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "TimescaleStart", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2593,7 +2593,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "TimescaleFinish", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2621,7 +2621,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "PanZoomStart", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2649,7 +2649,7 @@ namespace NetOffice.MSProjectApi
 				object returnItem = Invoker.PropertyGet(this, "PanZoomFinish", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else
@@ -2755,7 +2755,7 @@ namespace NetOffice.MSProjectApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "GlobalReports", paramsArray);
-				NetOffice.MSProjectApi.Reports newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Reports.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Reports;
+				NetOffice.MSProjectApi.Reports newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.MSProjectApi.Reports.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Reports;
 				return newObject;
 			}
 		}
@@ -2852,7 +2852,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateAdd", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2874,7 +2874,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateAdd", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2896,7 +2896,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateSubtract", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2918,7 +2918,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateSubtract", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2940,7 +2940,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateDifference", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -2962,7 +2962,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateDifference", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3008,7 +3008,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DurationValue", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3029,7 +3029,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateFormat", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3050,7 +3050,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "DateFormat", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3159,7 +3159,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "TimescaledData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3184,7 +3184,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "TimescaledData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3210,7 +3210,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "TimescaledData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -3237,7 +3237,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "TimescaledData", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -4340,7 +4340,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "UpdateFromProjectServer", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20365,7 +20365,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20387,7 +20387,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20410,7 +20410,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20434,7 +20434,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20459,7 +20459,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -20485,7 +20485,7 @@ namespace NetOffice.MSProjectApi
 			object returnItem = Invoker.MethodReturn(this, "CheckField", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -32894,7 +32894,7 @@ namespace NetOffice.MSProjectApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(x, y);
 			object returnItem = Invoker.MethodReturn(this, "GetCellInfo", paramsArray);
-			NetOffice.MSProjectApi.Cell newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Cell;
+			NetOffice.MSProjectApi.Cell newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSProjectApi.Cell.LateBindingApiWrapperType) as NetOffice.MSProjectApi.Cell;
 			return newObject;
 		}
 

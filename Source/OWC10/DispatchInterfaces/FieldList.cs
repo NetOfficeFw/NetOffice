@@ -114,7 +114,7 @@ namespace NetOffice.OWC10Api
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Font", paramsArray);
-				stdole.IFont newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.IFont;
+				stdole.IFont newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.IFont;
 				return newObject;
 			}
 			set
@@ -178,7 +178,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bVisible);
 			object returnItem = Invoker.MethodReturn(this, "CreateHierarchy", paramsArray);
-			NetOffice.OWC10Api.FieldListHierarchy newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListHierarchy.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListHierarchy;
+			NetOffice.OWC10Api.FieldListHierarchy newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListHierarchy.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListHierarchy;
 			return newObject;
 		}
 
@@ -206,7 +206,7 @@ namespace NetOffice.OWC10Api
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pfln);
 			object returnItem = Invoker.MethodReturn(this, "GetNextSelected", paramsArray);
-			NetOffice.OWC10Api.FieldListNode newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
+			NetOffice.OWC10Api.FieldListNode newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType) as NetOffice.OWC10Api.FieldListNode;
 			return newObject;
 		}
 

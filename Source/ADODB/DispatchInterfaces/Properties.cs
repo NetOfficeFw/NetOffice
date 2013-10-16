@@ -86,7 +86,7 @@ namespace NetOffice.ADODBApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.ADODBApi.Property newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Property.LateBindingApiWrapperType) as NetOffice.ADODBApi.Property;
+			NetOffice.ADODBApi.Property newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ADODBApi.Property.LateBindingApiWrapperType) as NetOffice.ADODBApi.Property;
 			return newObject;
 			}
 		}

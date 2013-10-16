@@ -38,7 +38,22 @@ namespace NetOffice.OfficeApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _CommandBarComboBoxEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -61,7 +76,7 @@ namespace NetOffice.OfficeApi
 				return;
 			}
 
-			NetOffice.OfficeApi.CommandBarComboBox newCtrl = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarComboBox;
+			NetOffice.OfficeApi.CommandBarComboBox newCtrl = Factory.CreateObjectFromComProxy(_eventClass, ctrl) as NetOffice.OfficeApi.CommandBarComboBox;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCtrl;
 			_eventBinding.RaiseCustomEvent("Change", ref paramsArray);

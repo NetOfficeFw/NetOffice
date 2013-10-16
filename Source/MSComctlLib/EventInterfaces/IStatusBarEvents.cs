@@ -86,7 +86,22 @@ namespace NetOffice.MSComctlLibApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public IStatusBarEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -109,7 +124,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Panel newPanel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
+			NetOffice.MSComctlLibApi.Panel newPanel = Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPanel;
 			_eventBinding.RaiseCustomEvent("PanelClick", ref paramsArray);
@@ -124,7 +139,7 @@ namespace NetOffice.MSComctlLibApi
 				return;
 			}
 
-			NetOffice.MSComctlLibApi.Panel newPanel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
+			NetOffice.MSComctlLibApi.Panel newPanel = Factory.CreateObjectFromComProxy(_eventClass, panel) as NetOffice.MSComctlLibApi.Panel;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPanel;
 			_eventBinding.RaiseCustomEvent("PanelDblClick", ref paramsArray);

@@ -106,7 +106,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public EWindows_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -129,7 +144,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("WindowOpened", ref paramsArray);
@@ -144,7 +159,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("SelectionChanged", ref paramsArray);
@@ -159,7 +174,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("BeforeWindowClosed", ref paramsArray);
@@ -174,7 +189,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("WindowActivated", ref paramsArray);
@@ -189,7 +204,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("BeforeWindowSelDelete", ref paramsArray);
@@ -204,7 +219,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("BeforeWindowPageTurn", ref paramsArray);
@@ -219,7 +234,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("WindowTurnedToPage", ref paramsArray);
@@ -234,7 +249,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("WindowChanged", ref paramsArray);
@@ -249,7 +264,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("ViewChanged", ref paramsArray);
@@ -264,7 +279,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("QueryCancelWindowClose", ref paramsArray);
@@ -279,7 +294,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVWindow newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
+			NetOffice.VisioApi.IVWindow newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.VisioApi.IVWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newWindow;
 			_eventBinding.RaiseCustomEvent("WindowCloseCanceled", ref paramsArray);
@@ -294,7 +309,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVMSGWrap newMSG = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, mSG) as NetOffice.VisioApi.IVMSGWrap;
+			NetOffice.VisioApi.IVMSGWrap newMSG = Factory.CreateObjectFromComProxy(_eventClass, mSG) as NetOffice.VisioApi.IVMSGWrap;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newMSG;
 			_eventBinding.RaiseCustomEvent("OnKeystrokeMessageForAddon", ref paramsArray);

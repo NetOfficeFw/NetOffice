@@ -104,7 +104,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "List", paramsArray);
-				NetOffice.WordApi.List newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.List.LateBindingApiWrapperType) as NetOffice.WordApi.List;
+				NetOffice.WordApi.List newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.List.LateBindingApiWrapperType) as NetOffice.WordApi.List;
 				return newObject;
 			}
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListTemplate", paramsArray);
-				NetOffice.WordApi.ListTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
+				NetOffice.WordApi.ListTemplate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.ListTemplate.LateBindingApiWrapperType) as NetOffice.WordApi.ListTemplate;
 				return newObject;
 			}
 		}
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -244,7 +244,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ListPictureBullet", paramsArray);
-				NetOffice.WordApi.InlineShape newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
+				NetOffice.WordApi.InlineShape newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.InlineShape.LateBindingApiWrapperType) as NetOffice.WordApi.InlineShape;
 				return newObject;
 			}
 		}

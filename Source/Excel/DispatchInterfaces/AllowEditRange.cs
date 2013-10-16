@@ -104,7 +104,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Range", paramsArray);
-				NetOffice.ExcelApi.Range newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
+				NetOffice.ExcelApi.Range newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Range.LateBindingApiWrapperType) as NetOffice.ExcelApi.Range;
 				return newObject;
 			}
 			set
@@ -125,7 +125,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Users", paramsArray);
-				NetOffice.ExcelApi.UserAccessList newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.UserAccessList.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccessList;
+				NetOffice.ExcelApi.UserAccessList newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.UserAccessList.LateBindingApiWrapperType) as NetOffice.ExcelApi.UserAccessList;
 				return newObject;
 			}
 		}

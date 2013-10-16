@@ -6,7 +6,9 @@ namespace NetOffice.NamedPipes
 {
     internal class PipeClient
     {
-        private string _pipeName = "NOTools.ConsoleMonitor.PipeConnection";
+        private static string _pipeName = "NOTools.ConsoleMonitor.PipeConnection";
+
+        private static int _maxMessageLenght = 1024;
 
         /// <summary>
         /// Send a message to specific console
@@ -31,7 +33,7 @@ namespace NetOffice.NamedPipes
             if (null != console && console.IndexOf("?") < -1)
                 throw new ArgumentException("console must be without '?' character");
 
-            if (String.IsNullOrEmpty(message) || message.Length > 1023)
+            if (String.IsNullOrEmpty(message) || message.Length > _maxMessageLenght)
                 return null;
 
             if (null == parentMessageID)
@@ -39,7 +41,8 @@ namespace NetOffice.NamedPipes
 
             DateTime now = DateTime.Now;
             string timeString = now.ToLongTimeString() + ":" + now.Millisecond;
-            return SendRecieveString("CNSL?" + console + "?" + Environment.MachineName + "?" + (null != AppDomain.CurrentDomain ? AppDomain.CurrentDomain.FriendlyName : "") + "?" + timeString + "?" + parentMessageID + "?" + message);
+
+            return SendRecieveString("CNSL?" + console + "?" + Environment.MachineName + "?" + (null != AppDomain.CurrentDomain ? AppDomain.CurrentDomain.FriendlyName + AppDomain.CurrentDomain.Id.ToString() : "") + "?" + timeString + "?" + parentMessageID + "?" + message);
         }
 
 
@@ -53,38 +56,14 @@ namespace NetOffice.NamedPipes
         {
             if (String.IsNullOrEmpty(channel) || channel.IndexOf("?") < -1)
                 throw new ArgumentException("channel can't empty und must be without '?' character");
-            if (String.IsNullOrEmpty(message) || message.Length > 1023)
+            if (String.IsNullOrEmpty(message) || message.Length > _maxMessageLenght)
                 return null;
 
             DateTime now = DateTime.Now;
             string timeString = now.ToLongTimeString() + ":" + now.Millisecond;
-            return SendRecieveString("CHNL?" + channel + "?" + Environment.MachineName + "?" + (null != AppDomain.CurrentDomain ? AppDomain.CurrentDomain.FriendlyName : "") + "?" + timeString + "?" + /*parentMessageID*/ "?" + message);
+            return SendRecieveString("CHNL?" + channel + "?" + Environment.MachineName + "?" + (null != AppDomain.CurrentDomain ? AppDomain.CurrentDomain.FriendlyName + AppDomain.CurrentDomain.Id.ToString() : "") + "?" + timeString + "?" + /*parentMessageID*/ "?" + message);
         }
 
-        private bool TryConnect()
-        {
-            ClientPipeConnection clientConnection = null;
-            try
-            {
-                clientConnection = new ClientPipeConnection(_pipeName, ".");
-                bool result = clientConnection.TryConnect();
-
-                clientConnection.Write("");
-                string response = clientConnection.Read();
-                
-                if (result)
-                    clientConnection.Close();
-                clientConnection.Dispose();
-
-                return result;
-            }
-            catch (Exception exception)
-            {
-                if (null != clientConnection)
-                    clientConnection.Dispose();
-                throw (exception);
-            }
-        }
 
         private string SendRecieveString(string any)
         {

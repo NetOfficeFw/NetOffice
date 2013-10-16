@@ -86,7 +86,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -122,7 +122,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = Invoker.ValidateParamsArray(index);
 				object returnItem = Invoker.MethodReturn(this, "Item", paramsArray);
-				NetOffice.OfficeApi.RulerLevel2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.RulerLevel2.LateBindingApiWrapperType) as NetOffice.OfficeApi.RulerLevel2;
+				NetOffice.OfficeApi.RulerLevel2 newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.RulerLevel2.LateBindingApiWrapperType) as NetOffice.OfficeApi.RulerLevel2;
 				return newObject;
 			}
 		}

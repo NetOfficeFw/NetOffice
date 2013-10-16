@@ -29,7 +29,27 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			        _instance = value;				
         	}
         }
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
 
+        internal static Core Factory
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
+            }
+        }
 		#endregion
 		#region Properties
 
@@ -44,7 +64,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Application", paramsArray);
-				NetOffice.OutlookApi._Application newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Application;
+				NetOffice.OutlookApi._Application newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Application;
 				return newObject;
 			}
 		}
@@ -76,7 +96,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Session", paramsArray);
-				NetOffice.OutlookApi._NameSpace newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
+				NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
 				return newObject;
 			}
 		}
@@ -93,7 +113,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 				return newObject;
 			}
 		}
@@ -109,7 +129,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Assistant", paramsArray);
-				NetOffice.OfficeApi.Assistant newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
+				NetOffice.OfficeApi.Assistant newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.Assistant.LateBindingApiWrapperType) as NetOffice.OfficeApi.Assistant;
 				return newObject;
 			}
 		}
@@ -155,7 +175,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "COMAddIns", paramsArray);
-				NetOffice.OfficeApi.COMAddIns newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
+				NetOffice.OfficeApi.COMAddIns newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.COMAddIns.LateBindingApiWrapperType) as NetOffice.OfficeApi.COMAddIns;
 				return newObject;
 			}
 		}
@@ -171,7 +191,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Explorers", paramsArray);
-				NetOffice.OutlookApi._Explorers newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorers;
+				NetOffice.OutlookApi._Explorers newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorers;
 				return newObject;
 			}
 		}
@@ -187,7 +207,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Inspectors", paramsArray);
-				NetOffice.OutlookApi._Inspectors newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspectors;
+				NetOffice.OutlookApi._Inspectors newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspectors;
 				return newObject;
 			}
 		}
@@ -203,7 +223,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "LanguageSettings", paramsArray);
-				NetOffice.OfficeApi.LanguageSettings newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType) as NetOffice.OfficeApi.LanguageSettings;
+				NetOffice.OfficeApi.LanguageSettings newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.LanguageSettings.LateBindingApiWrapperType) as NetOffice.OfficeApi.LanguageSettings;
 				return newObject;
 			}
 		}
@@ -234,7 +254,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "AnswerWizard", paramsArray);
-				NetOffice.OfficeApi.AnswerWizard newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
+				NetOffice.OfficeApi.AnswerWizard newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.AnswerWizard.LateBindingApiWrapperType) as NetOffice.OfficeApi.AnswerWizard;
 				return newObject;
 			}
 		}
@@ -272,7 +292,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Reminders", paramsArray);
-				NetOffice.OutlookApi._Reminders newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Reminders;
+				NetOffice.OutlookApi._Reminders newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Reminders;
 				return newObject;
 			}
 		}
@@ -318,7 +338,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Assistance", paramsArray);
-				NetOffice.OfficeApi.IAssistance newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
+				NetOffice.OfficeApi.IAssistance newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.IAssistance.LateBindingApiWrapperType) as NetOffice.OfficeApi.IAssistance;
 				return newObject;
 			}
 		}
@@ -334,7 +354,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "TimeZones", paramsArray);
-				NetOffice.OutlookApi.TimeZones newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OutlookApi.TimeZones.LateBindingApiWrapperType) as NetOffice.OutlookApi.TimeZones;
+				NetOffice.OutlookApi.TimeZones newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OutlookApi.TimeZones.LateBindingApiWrapperType) as NetOffice.OutlookApi.TimeZones;
 				return newObject;
 			}
 		}
@@ -350,7 +370,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "PickerDialog", paramsArray);
-				NetOffice.OfficeApi.PickerDialog newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.PickerDialog.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerDialog;
+				NetOffice.OfficeApi.PickerDialog newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.OfficeApi.PickerDialog.LateBindingApiWrapperType) as NetOffice.OfficeApi.PickerDialog;
 				return newObject;
 			}
 		}
@@ -367,7 +387,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "ActiveExplorer", paramsArray);
-			NetOffice.OutlookApi._Explorer newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorer;
+			NetOffice.OutlookApi._Explorer newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Explorer;
 			return newObject;
 		}
 
@@ -379,7 +399,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "ActiveInspector", paramsArray);
-			NetOffice.OutlookApi._Inspector newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspector;
+			NetOffice.OutlookApi._Inspector newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._Inspector;
 			return newObject;
 		}
 
@@ -392,7 +412,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(itemType);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItem", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -406,7 +426,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath, inFolder);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -420,7 +440,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templatePath);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateItemFromTemplate", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -433,7 +453,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateObject", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -446,7 +466,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(_instance, "GetNamespace", paramsArray);
-			NetOffice.OutlookApi._NameSpace newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
+			NetOffice.OutlookApi._NameSpace newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.OutlookApi._NameSpace;
 			return newObject;
 		}
 
@@ -468,7 +488,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(_instance, "ActiveWindow", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -482,7 +502,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filePath, destFolderPath);
 			object returnItem = Invoker.MethodReturn(_instance, "CopyFile", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 
@@ -498,7 +518,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders, tag);
 			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 
@@ -512,7 +532,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope);
 			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 
@@ -527,7 +547,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter);
 			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 
@@ -543,7 +563,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scope, filter, searchSubFolders);
 			object returnItem = Invoker.MethodReturn(_instance, "AdvancedSearch", paramsArray);
-			NetOffice.OutlookApi.Search newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
+			NetOffice.OutlookApi.Search newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.OutlookApi.Search.LateBindingApiWrapperType) as NetOffice.OutlookApi.Search;
 			return newObject;
 		}
 
@@ -581,7 +601,7 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, referenceType);
 			object returnItem = Invoker.MethodReturn(_instance, "GetObjectReference", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 			return newObject;
 		}
 

@@ -86,7 +86,7 @@ namespace NetOffice.DAOApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.DAOApi.Parameter newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Parameter.LateBindingApiWrapperType) as NetOffice.DAOApi.Parameter;
+			NetOffice.DAOApi.Parameter newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.DAOApi.Parameter.LateBindingApiWrapperType) as NetOffice.DAOApi.Parameter;
 			return newObject;
 			}
 		}

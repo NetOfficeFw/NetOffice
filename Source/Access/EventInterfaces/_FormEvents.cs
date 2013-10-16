@@ -266,7 +266,22 @@ namespace NetOffice.AccessApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _FormEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -992,7 +1007,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object newCommand = (object)command;
-			object newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
@@ -1009,7 +1024,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object newCommand = (object)command;
-			object newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
+			object newChecked = Factory.CreateObjectFromComProxy(_eventClass, _checked) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
@@ -1026,7 +1041,7 @@ namespace NetOffice.AccessApi
 			}
 
 			object newCommand = (object)command;
-			object newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
+			object newEnabled = Factory.CreateObjectFromComProxy(_eventClass, enabled) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
@@ -1070,8 +1085,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newScreenTipText = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, screenTipText) as object;
-			object newSourceObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sourceObject) as object;
+			object newScreenTipText = Factory.CreateObjectFromComProxy(_eventClass, screenTipText) as object;
+			object newSourceObject = Factory.CreateObjectFromComProxy(_eventClass, sourceObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newScreenTipText;
 			paramsArray[1] = newSourceObject;
@@ -1087,9 +1102,9 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			object newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
+			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			object newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -1106,8 +1121,8 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
-			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -1123,7 +1138,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
@@ -1138,7 +1153,7 @@ namespace NetOffice.AccessApi
 				return;
 			}
 
-			object newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
+			object newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);

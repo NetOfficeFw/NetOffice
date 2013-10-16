@@ -102,7 +102,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ExplorerEvents_10_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -151,7 +166,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newNewFolder = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
+			object newNewFolder = Factory.CreateObjectFromComProxy(_eventClass, newFolder) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newNewFolder;
 			paramsArray.SetValue(cancel, 1);
@@ -335,7 +350,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.MAPIFolder newTarget = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newTarget = Factory.CreateObjectFromComProxy(_eventClass, target) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[3];
 			paramsArray.SetValue(clipboardContent, 0);
 			paramsArray[1] = newTarget;
@@ -368,7 +383,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("InlineResponse", ref paramsArray);

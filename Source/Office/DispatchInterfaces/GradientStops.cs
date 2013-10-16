@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.GradientStop newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.GradientStop.LateBindingApiWrapperType) as NetOffice.OfficeApi.GradientStop;
+			NetOffice.OfficeApi.GradientStop newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.GradientStop.LateBindingApiWrapperType) as NetOffice.OfficeApi.GradientStop;
 			return newObject;
 			}
 		}

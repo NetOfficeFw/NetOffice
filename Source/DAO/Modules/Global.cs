@@ -29,7 +29,27 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 			        _instance = value;				
         	}
         }
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
 
+        internal static Core Factory
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
+            }
+        }
 		#endregion
 		#region Properties
 
@@ -139,7 +159,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Workspaces", paramsArray);
-				NetOffice.DAOApi.Workspaces newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Workspaces.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspaces;
+				NetOffice.DAOApi.Workspaces newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Workspaces.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspaces;
 				return newObject;
 			}
 		}
@@ -155,7 +175,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Errors", paramsArray);
-				NetOffice.DAOApi.Errors newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Errors.LateBindingApiWrapperType) as NetOffice.DAOApi.Errors;
+				NetOffice.DAOApi.Errors newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Errors.LateBindingApiWrapperType) as NetOffice.DAOApi.Errors;
 				return newObject;
 			}
 		}
@@ -320,7 +340,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
 			object returnItem = Invoker.MethodReturn(_instance, "_30_CreateWorkspace", paramsArray);
-			NetOffice.DAOApi.Workspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -336,7 +356,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -350,7 +370,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -365,7 +385,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -381,7 +401,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -396,7 +416,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale, option);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -411,7 +431,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, locale);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateDatabase", paramsArray);
-			NetOffice.DAOApi.Database newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+			NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
 			return newObject;
 		}
 
@@ -531,7 +551,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password, useType);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWorkspace", paramsArray);
-			NetOffice.DAOApi.Workspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -547,7 +567,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWorkspace", paramsArray);
-			NetOffice.DAOApi.Workspace newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+			NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
 			return newObject;
 		}
 
@@ -563,7 +583,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-			NetOffice.DAOApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 
@@ -577,7 +597,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-			NetOffice.DAOApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 
@@ -592,7 +612,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-			NetOffice.DAOApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 
@@ -608,7 +628,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-			NetOffice.DAOApi.Connection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+			NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
 			return newObject;
 		}
 

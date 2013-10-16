@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.WorkflowTemplate newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WorkflowTemplate.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTemplate;
+			NetOffice.OfficeApi.WorkflowTemplate newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.WorkflowTemplate.LateBindingApiWrapperType) as NetOffice.OfficeApi.WorkflowTemplate;
 			return newObject;
 			}
 		}

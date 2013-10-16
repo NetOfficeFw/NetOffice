@@ -36,10 +36,16 @@ namespace ClientApplication
         {
             InitializeComponent();
 
-            /*Initialize Api COMObject Support*/
-            NetOffice.Factory.Initialize();
+            Excel.Application[] apps = Excel.Application.GetActiveInstances();
 
-            
+            foreach (var item in apps)
+            {
+                Console.WriteLine(item.Hwnd.ToString());
+            }
+
+            foreach (var item in apps)
+                item.Dispose();
+           
             /*>> your testcode here <<*/
         }
 

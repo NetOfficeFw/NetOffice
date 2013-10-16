@@ -42,7 +42,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public MAPIFolderEvents_12_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.MAPIFolder newMoveTo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
+			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newMoveTo;
 			paramsArray.SetValue(cancel, 1);
@@ -83,8 +98,8 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
-			NetOffice.OutlookApi.MAPIFolder newMoveTo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
+			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			NetOffice.OutlookApi.MAPIFolder newMoveTo = Factory.CreateObjectFromComProxy(_eventClass, moveTo) as NetOffice.OutlookApi.MAPIFolder;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newItem;
 			paramsArray[1] = newMoveTo;

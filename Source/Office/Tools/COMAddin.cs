@@ -34,6 +34,9 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         public COMAddin()
         {
+            Factory = RaiseCreateFactory();
+            if (null == Factory)
+                Factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
             Type = this.GetType();
@@ -42,6 +45,11 @@ namespace NetOffice.OfficeApi.Tools
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// The used factory core
+        /// </summary>
+        public Core Factory { get; private set; }
 
         /// <summary>
         /// Type Information of the instance
@@ -138,7 +146,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
@@ -152,7 +160,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
             }
         }
@@ -166,7 +174,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnConnection, exception);
             }
         }
@@ -180,7 +188,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
@@ -194,7 +202,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
             }
         }
@@ -214,10 +222,10 @@ namespace NetOffice.OfficeApi.Tools
             {
                 string registryEndPoint = TryDetectHostRegistryKey(Application);
                 if(null != registryEndPoint)
-                    Tweaks.EnableTweaks(Type, registryEndPoint);
+                    Tweaks.EnableTweaks(Factory, Type, registryEndPoint);
             }             
 
-			this.Application = NetOffice.Factory.CreateObjectFromComProxy(null, Application);
+			this.Application = Factory.CreateObjectFromComProxy(null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -233,7 +241,7 @@ namespace NetOffice.OfficeApi.Tools
 				}
 				catch(System.Exception exception)
 				{
-					NetOffice.DebugConsole.WriteException(exception);
+                    NetOffice.DebugConsole.Default.WriteException(exception);
 				}			
 			}
 
@@ -246,7 +254,7 @@ namespace NetOffice.OfficeApi.Tools
 				}
 				catch(System.Exception exception)
 				{
-					NetOffice.DebugConsole.WriteException(exception);
+                    NetOffice.DebugConsole.Default.WriteException(exception);
 				}		
             }
              
@@ -257,7 +265,7 @@ namespace NetOffice.OfficeApi.Tools
 			}
 			catch(System.Exception exception)
 			{
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
 			}	
 			
 			try
@@ -267,7 +275,7 @@ namespace NetOffice.OfficeApi.Tools
 			}
 			catch(System.Exception exception)
 			{
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
 			}	
         }
 
@@ -302,7 +310,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (System.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
 				return string.Empty;
             } 
@@ -351,9 +359,40 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (System.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
+        }
+
+        #endregion
+
+        #region Virtual Methods
+
+        /// <summary>
+        /// Create the used factory. The method was called as first in the base ctor
+        /// </summary>
+        /// <returns>new Settings instance</returns>
+        protected virtual Core CreateFactory()
+        {
+            return new Core();
+        }
+
+        /// <summary>
+        /// Create the necessary factory and was called in the first line in base ctor
+        /// </summary>
+        /// <returns></returns>
+        private Core RaiseCreateFactory()
+        {
+            try
+            {
+                return CreateFactory();
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.CreateFactory, exception);
+                return null;
+            }
         }
 
         #endregion
@@ -453,7 +492,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (System.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
             }
         }
@@ -498,7 +537,7 @@ namespace NetOffice.OfficeApi.Tools
             }
             catch (System.Exception exception)
             {
-				NetOffice.DebugConsole.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
             }
         }
@@ -579,7 +618,7 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="applicationProxy">application proy</param>
         /// <returns>Application name or null if failed</returns>
-        private static string TryDetectHostRegistryKey(object applicationProxy)
+        private string TryDetectHostRegistryKey(object applicationProxy)
         {
             Guid libGuid = Factory.GetParentLibraryGuid(applicationProxy);
             if (Guid.Empty == libGuid)
@@ -604,7 +643,6 @@ namespace NetOffice.OfficeApi.Tools
                     return null;
             }
         }
-
 
         #endregion
     }

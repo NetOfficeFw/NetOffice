@@ -78,7 +78,22 @@ namespace NetOffice.ADODBApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public RecordsetEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -100,11 +115,11 @@ namespace NetOffice.ADODBApi
 				Invoker.ReleaseParamsArray(cFields, fields, adStatus, pRecordset);
 				return;
 			}
-
+            
 			Int32 newcFields = Convert.ToInt32(cFields);
 			object newFields = (object)fields;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
@@ -124,9 +139,9 @@ namespace NetOffice.ADODBApi
 
 			Int32 newcFields = Convert.ToInt32(cFields);
 			object newFields = (object)fields;
-			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newcFields;
 			paramsArray[1] = newFields;
@@ -148,7 +163,7 @@ namespace NetOffice.ADODBApi
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = Convert.ToInt32(cRecords);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
@@ -168,9 +183,9 @@ namespace NetOffice.ADODBApi
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			Int32 newcRecords = Convert.ToInt32(cRecords);
-			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newcRecords;
@@ -191,7 +206,7 @@ namespace NetOffice.ADODBApi
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
@@ -209,9 +224,9 @@ namespace NetOffice.ADODBApi
 			}
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
-			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
@@ -231,7 +246,7 @@ namespace NetOffice.ADODBApi
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newadStatus;
@@ -249,9 +264,9 @@ namespace NetOffice.ADODBApi
 			}
 
 			NetOffice.ADODBApi.Enums.EventReasonEnum newadReason = (NetOffice.ADODBApi.Enums.EventReasonEnum)adReason;
-			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newadReason;
 			paramsArray[1] = newpError;
@@ -270,7 +285,7 @@ namespace NetOffice.ADODBApi
 			}
 
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray.SetValue(fMoreData, 0);
 			paramsArray[1] = newadStatus;
@@ -292,7 +307,7 @@ namespace NetOffice.ADODBApi
 			Int32 newProgress = Convert.ToInt32(progress);
 			Int32 newMaxProgress = Convert.ToInt32(maxProgress);
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+			NetOffice.ADODBApi._Recordset newpRecordset = Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newProgress;
 			paramsArray[1] = newMaxProgress;
@@ -310,9 +325,9 @@ namespace NetOffice.ADODBApi
 				return;
 			}
 
-			NetOffice.ADODBApi.Error newpError = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
+            NetOffice.ADODBApi.Error newpError = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
-			NetOffice.ADODBApi._Recordset newpRecordset = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
+            NetOffice.ADODBApi._Recordset newpRecordset = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pRecordset) as NetOffice.ADODBApi._Recordset;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpError;
 			paramsArray[1] = newadStatus;

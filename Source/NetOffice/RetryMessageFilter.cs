@@ -191,7 +191,7 @@ namespace NetOffice
         int IMessageFilter.RetryRejectedCall(IntPtr htaskCallee, uint dwTickCount, uint dwRejectType)
         {
             if (LogMode == RetryMessageFilterLogMode.RetryRejectedCall || LogMode == RetryMessageFilterLogMode.Both)
-                DebugConsole.WriteLine("IMessageFilter.RetryRejectedCall.dwTickCount={0} , dwRejectType={1}", dwTickCount, dwRejectType);
+                DebugConsole.Default.WriteLine("IMessageFilter.RetryRejectedCall.dwTickCount={0} , dwRejectType={1}", dwTickCount, dwRejectType);
 
             switch (RetryMode)
             {
@@ -209,11 +209,10 @@ namespace NetOffice
         int IMessageFilter.MessagePending(IntPtr htaskCallee, uint dwTickCount, uint dwPendingType)
         {
             if (LogMode == RetryMessageFilterLogMode.MessagePending || LogMode == RetryMessageFilterLogMode.Both)
-                DebugConsole.WriteLine("IMessageFilter.MessagePending.dwTickCount={0} , dwPendingType={1}", dwTickCount, dwPendingType);
+                DebugConsole.Default.WriteLine("IMessageFilter.MessagePending.dwTickCount={0} , dwPendingType={1}", dwTickCount, dwPendingType);
             return 1; // PENDINGMSG_WAITNOPROCESS see: http://msdn.microsoft.com/en-us/library/aa908923.aspx for further info
         }
 
         #endregion
-
     }
 }

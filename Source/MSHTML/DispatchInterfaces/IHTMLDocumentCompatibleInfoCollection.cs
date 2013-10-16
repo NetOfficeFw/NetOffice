@@ -101,7 +101,7 @@ namespace NetOffice.MSHTMLApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.MethodReturn(this, "item", paramsArray);
-			NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo;
+			NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo.LateBindingApiWrapperType) as NetOffice.MSHTMLApi.IHTMLDocumentCompatibleInfo;
 			return newObject;
 		}
 

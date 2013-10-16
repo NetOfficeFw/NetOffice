@@ -88,7 +88,7 @@ namespace NetOffice.MSDATASRCApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrDM, riid);
 			object returnItem = Invoker.MethodReturn(this, "getDataMember", paramsArray);
-			object newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+			object newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 			return newObject;
 		}
 

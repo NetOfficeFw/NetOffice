@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.MetaProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MetaProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperty;
+			NetOffice.OfficeApi.MetaProperty newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.MetaProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperty;
 			return newObject;
 			}
 		}
@@ -135,7 +135,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(internalName);
 			object returnItem = Invoker.MethodReturn(this, "GetItemByInternalName", paramsArray);
-			NetOffice.OfficeApi.MetaProperty newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MetaProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperty;
+			NetOffice.OfficeApi.MetaProperty newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.MetaProperty.LateBindingApiWrapperType) as NetOffice.OfficeApi.MetaProperty;
 			return newObject;
 		}
 

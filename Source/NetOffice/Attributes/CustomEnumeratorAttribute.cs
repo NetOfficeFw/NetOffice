@@ -5,7 +5,7 @@ using System.Text;
 namespace NetOffice
 {
     /// <summary>
-    /// this enumerator is not supported by the instance, its a custom service by NetOffice
+    /// This enumerator is not supported from the com proxy instance, its a custom service from NetOffice
     /// </summary>
     [AttributeUsage(AttributeTargets.All)]
     public sealed class CustomEnumeratorAttribute : System.Attribute

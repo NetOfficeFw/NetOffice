@@ -50,7 +50,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public EStyle_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -73,7 +88,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVStyle newStyle = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			_eventBinding.RaiseCustomEvent("StyleChanged", ref paramsArray);
@@ -88,7 +103,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVStyle newStyle = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			_eventBinding.RaiseCustomEvent("BeforeStyleDelete", ref paramsArray);
@@ -103,7 +118,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVStyle newStyle = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			_eventBinding.RaiseCustomEvent("QueryCancelStyleDelete", ref paramsArray);
@@ -118,7 +133,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVStyle newStyle = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
+			NetOffice.VisioApi.IVStyle newStyle = Factory.CreateObjectFromComProxy(_eventClass, style) as NetOffice.VisioApi.IVStyle;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newStyle;
 			_eventBinding.RaiseCustomEvent("StyleDeleteCanceled", ref paramsArray);

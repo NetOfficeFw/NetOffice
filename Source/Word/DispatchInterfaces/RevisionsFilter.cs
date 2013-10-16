@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Reviewers", paramsArray);
-				NetOffice.WordApi.Reviewers newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Reviewers.LateBindingApiWrapperType) as NetOffice.WordApi.Reviewers;
+				NetOffice.WordApi.Reviewers newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Reviewers.LateBindingApiWrapperType) as NetOffice.WordApi.Reviewers;
 				return newObject;
 			}
 		}

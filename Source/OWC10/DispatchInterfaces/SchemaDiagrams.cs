@@ -102,7 +102,7 @@ namespace NetOffice.OWC10Api
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OWC10Api.SchemaDiagram newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaDiagram.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaDiagram;
+			NetOffice.OWC10Api.SchemaDiagram newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OWC10Api.SchemaDiagram.LateBindingApiWrapperType) as NetOffice.OWC10Api.SchemaDiagram;
 			return newObject;
 			}
 		}

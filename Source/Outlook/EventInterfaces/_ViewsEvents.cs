@@ -42,7 +42,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _ViewsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -65,7 +80,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.View newView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newView = Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
 			_eventBinding.RaiseCustomEvent("ViewAdd", ref paramsArray);
@@ -80,7 +95,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.View newView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
+			NetOffice.OutlookApi.View newView = Factory.CreateObjectFromComProxy(_eventClass, view) as NetOffice.OutlookApi.View;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newView;
 			_eventBinding.RaiseCustomEvent("ViewRemove", ref paramsArray);

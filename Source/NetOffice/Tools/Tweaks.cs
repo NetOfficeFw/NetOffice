@@ -14,14 +14,15 @@ namespace NetOffice.Tools
         /// <summary>
         /// Analyze a COMAddin for the TweakAttribute and try to set given arguments(registry) if exists
         /// </summary>
+        /// <param name="factory">current used factory or null for default</param>
         /// <param name="addinType">Type info from COMAddin instance</param>
         /// <param name="registryEndPoint">specific office registry key endpoint</param>
-        public static void EnableTweaks(Type addinType, string registryEndPoint)
+        public static void EnableTweaks(Core factory, Type addinType, string registryEndPoint)
         {
             try
             {
-                if (null == addinType)
-                    return;
+                if (null == factory)
+                    factory = Core.Default;
 
                 TweakAttribute tweakAttribute = AttributeHelper.GetTweakAttribute(addinType);
                 if (null == tweakAttribute || false == tweakAttribute.Enabled)
@@ -36,21 +37,20 @@ namespace NetOffice.Tools
                 if (null != locationAttribute && locationAttribute.Value == RegistrySaveLocation.LocalMachine)
                     hiveKey = Registry.LocalMachine;
 
-                RegistryKey key = hiveKey.OpenSubKey("Software\\Microsoft\\Office\\" + registryEndPoint + "\\" + progIDAttribute.Value);
+                RegistryKey key = hiveKey.OpenSubKey("Software\\Microsoft\\Office\\" + registryEndPoint + "\\Addins\\" + progIDAttribute.Value);
                 if (null != key)
                 {
-                    TweakConsoleMode(key);
-                    TweakSharedOutput(key);
-                    TweakExceptionHandling(key);
-                    TweakExceptionMessage(key);
-                    TweakThreadCulture(key);
-                    TweakMessageFilter(key);
-                    TweakSafeMode(key);
-                    TweakThreadSafe(key);
-                    TweakAddHocLoading(key);
-                    TweakDeepLoading(key);
-                    TweakDebugOutput(key);
-                    TweakEventOutput(key);
+                    TweakConsoleMode(factory, key);
+                    TweakSharedOutput(factory, key);
+                    TweakAddHocLoading(factory, key);
+                    TweakDeepLoading(factory, key);
+                    TweakDebugOutput(factory, key);
+                    TweakExceptionHandling(factory, key);
+                    TweakExceptionMessage(factory, key);
+                    TweakThreadCulture(factory, key);
+                    TweakMessageFilter(factory, key);
+                    TweakSafeMode(factory, key);
+                    TweakEventOutput(factory, key);
 
                     key.Close();
                     key.Dispose();
@@ -60,11 +60,11 @@ namespace NetOffice.Tools
             }
             catch (Exception exception)
             {
-                DebugConsole.WriteException(exception);
+                factory.Console.WriteException(exception);
             }
         }
 
-        private static void TweakConsoleMode(RegistryKey key)
+        private static void TweakConsoleMode(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOConsoleMode", null) as string;
             if (null != value)
@@ -73,13 +73,13 @@ namespace NetOffice.Tools
                 switch (value)
                 {
                     case "none":
-                        DebugConsole.Mode = ConsoleMode.None;
+                        factory.Console.Mode = DebugConsoleMode.None;
                         return;
                     case "console":
-                        DebugConsole.Mode = ConsoleMode.Console;
+                        factory.Console.Mode = DebugConsoleMode.Console;
                         return;
                     case "trace":
-                        DebugConsole.Mode = ConsoleMode.Trace;
+                        factory.Console.Mode = DebugConsoleMode.Trace;
                         return;
                     default:
                         break;
@@ -91,27 +91,27 @@ namespace NetOffice.Tools
                     if (pos > -1)
                     {
                         string logFile = value.Substring(pos + 1);
-                        DebugConsole.FileName = logFile;
-                        DebugConsole.Mode = ConsoleMode.LogFile;
+                        factory.Console.FileName = logFile;
+                        factory.Console.Mode = DebugConsoleMode.LogFile;
                     }
                 }
             }
         }
 
-        private static void TweakSharedOutput(RegistryKey key)
+        private static void TweakSharedOutput(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOConsoleShare", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    DebugConsole.EnableSharedOutput = true;
+                    factory.Console.EnableSharedOutput = true;
                 else
-                    DebugConsole.EnableSharedOutput = false;
+                    factory.Console.EnableSharedOutput = false;
             }
         }
 
-        private static void TweakExceptionHandling(RegistryKey key)
+        private static void TweakExceptionHandling(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOExceptionHandling", null) as string;
             if (null != value)
@@ -120,13 +120,13 @@ namespace NetOffice.Tools
                 switch (value)
                 {
                     case "default":
-                        Settings.UseExceptionMessage = ExceptionMessageHandling.Default;
+                        factory.Settings.UseExceptionMessage = ExceptionMessageHandling.Default;
                         return;
                     case "copyInnerexceptionmessagetotoplevelexception":
-                        Settings.UseExceptionMessage = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
+                        factory.Settings.UseExceptionMessage = ExceptionMessageHandling.CopyInnerExceptionMessageToTopLevelException;
                         return;
                     case "copyallinnerexceptionmessagestotoplevelexception":
-                        Settings.UseExceptionMessage = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
+                        factory.Settings.UseExceptionMessage = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
                         return;
                     default:
                         break;
@@ -135,16 +135,16 @@ namespace NetOffice.Tools
         }
 
 
-        private static void TweakExceptionMessage(RegistryKey key)
+        private static void TweakExceptionMessage(Core factory, RegistryKey key)
         {
              string value = key.GetValue("NOExceptionMessage", null) as string;
              if (null != value)
              {
-                 Settings.ExceptionMessage = value;
+                 factory.Settings.ExceptionMessage = value;
              }
         }
 
-        private static void TweakThreadCulture(RegistryKey key)
+        private static void TweakThreadCulture(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOCultureInfo", null) as string;
             if (null != value)
@@ -152,16 +152,16 @@ namespace NetOffice.Tools
                 value = value.ToLower().Trim();
                 try
                 {
-                    Settings.ThreadCulture = System.Globalization.CultureInfo.GetCultureInfo(value);
+                    factory.Settings.ThreadCulture = System.Globalization.CultureInfo.GetCultureInfo(value);
                 }
                 catch (Exception exception)
                 {
-                    DebugConsole.WriteException(exception);
+                    factory.Console.WriteException(exception);
                 }               
             }
         }
 
-        private static void TweakMessageFilter(RegistryKey key)
+        private static void TweakMessageFilter(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOMessageFilter", null) as string;
             if (null != value)
@@ -170,13 +170,13 @@ namespace NetOffice.Tools
                 switch (value)
                 {
                     case "immediately":
-                        Settings.MessageFilter.RetryMode = RetryMessageFilterMode.Immediately;
+                        factory.Settings.MessageFilter.RetryMode = RetryMessageFilterMode.Immediately;
                         return;
                     case "delayed":
-                        Settings.MessageFilter.RetryMode = RetryMessageFilterMode.Delayed;
+                        factory.Settings.MessageFilter.RetryMode = RetryMessageFilterMode.Delayed;
                         return;
                     case "None":
-                        Settings.MessageFilter.RetryMode = RetryMessageFilterMode.None;
+                        factory.Settings.MessageFilter.RetryMode = RetryMessageFilterMode.None;
                         return;
                     default:
                         break;
@@ -184,81 +184,68 @@ namespace NetOffice.Tools
             }
         }
 
-        private static void TweakSafeMode(RegistryKey key)
+        private static void TweakSafeMode(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOSafeMode", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    Settings.EnableSafeMode = true;
+                    factory.Settings.EnableSafeMode = true;
                 else
-                    Settings.EnableSafeMode = false;
+                    factory.Settings.EnableSafeMode = false;
             }
         }
 
-        private static void TweakThreadSafe(RegistryKey key)
-        {
-            string value = key.GetValue("NOThreadSafe", null) as string;
-            if (null != value)
-            {
-                value = value.ToLower().Trim();
-                if (value == "enabled")
-                    Settings.EnableThreadSafe = true;
-                else
-                    Settings.EnableThreadSafe = false;
-            }
-        }
-
-        private static void TweakAddHocLoading(RegistryKey key)
+        private static void TweakAddHocLoading(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOAdHocLoad", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    Settings.EnableAdHocLoading = true;
+                    factory.Settings.EnableAdHocLoading = true;
                 else
-                    Settings.EnableAdHocLoading = false;
+                    factory.Settings.EnableAdHocLoading = false;
             }
         }
 
-        private static void TweakDeepLoading(RegistryKey key)
+        private static void TweakDeepLoading(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NODeepLoad", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    Settings.EnableDeepLoading = true;
+                    factory.Settings.EnableDeepLoading = true;
                 else
-                    Settings.EnableDeepLoading = false;
+                    factory.Settings.EnableDeepLoading = false;
             }
         }
 
-        private static void TweakDebugOutput(RegistryKey key)
+        private static void TweakDebugOutput(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NODebugOut", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    Settings.EnableDebugOutput = true;
+                    factory.Settings.EnableDebugOutput = true;
                 else
-                    Settings.EnableDebugOutput = false;
+                    factory.Settings.EnableDebugOutput = false;
             }
         }
 
-        private static void TweakEventOutput(RegistryKey key)
+        private static void TweakEventOutput(Core factory, RegistryKey key)
         {
             string value = key.GetValue("NOEventOut", null) as string;
             if (null != value)
             {
                 value = value.ToLower().Trim();
                 if (value == "enabled")
-                    Settings.EnableEventDebugOutput = true;
+                    factory.Settings.EnableEventDebugOutput = true;
                 else
-                    Settings.EnableEventDebugOutput = false;
+                    factory.Settings.EnableEventDebugOutput = false;
             }
         }
     }

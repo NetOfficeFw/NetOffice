@@ -138,7 +138,22 @@ namespace NetOffice.OWC10Api
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public IChartEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -251,7 +266,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -270,7 +285,7 @@ namespace NetOffice.OWC10Api
 
 			Int32 newKeyCode = Convert.ToInt32(keyCode);
 			Int32 newShift = Convert.ToInt32(shift);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newKeyCode;
 			paramsArray[1] = newShift;
@@ -288,7 +303,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			Int32 newKeyAscii = Convert.ToInt32(keyAscii);
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newKeyAscii;
 			paramsArray[1] = newCancel;
@@ -397,8 +412,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.ByRef newTipText = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tipText) as NetOffice.OWC10Api.ByRef;
-			object newContextObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, contextObject) as object;
+			NetOffice.OWC10Api.ByRef newTipText = Factory.CreateObjectFromComProxy(_eventClass, tipText) as NetOffice.OWC10Api.ByRef;
+			object newContextObject = Factory.CreateObjectFromComProxy(_eventClass, contextObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newTipText;
 			paramsArray[1] = newContextObject;
@@ -415,7 +430,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newEnabled = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newEnabled = Factory.CreateObjectFromComProxy(_eventClass, enabled) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newEnabled;
@@ -432,7 +447,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newChecked = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newChecked = Factory.CreateObjectFromComProxy(_eventClass, _checked) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newChecked;
@@ -449,7 +464,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCaption = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCaption = Factory.CreateObjectFromComProxy(_eventClass, caption) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCaption;
@@ -466,7 +481,7 @@ namespace NetOffice.OWC10Api
 			}
 
 			object newCommand = (object)command;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newCommand;
 			paramsArray[1] = newCancel;
@@ -501,8 +516,8 @@ namespace NetOffice.OWC10Api
 
 			Int32 newx = Convert.ToInt32(x);
 			Int32 newy = Convert.ToInt32(y);
-			NetOffice.OWC10Api.ByRef newMenu = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newMenu = Factory.CreateObjectFromComProxy(_eventClass, menu) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newx;
 			paramsArray[1] = newy;
@@ -520,9 +535,9 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
-			NetOffice.OWC10Api.ByRef newCancel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
+			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateObjectFromComProxy(_eventClass, cancel) as NetOffice.OWC10Api.ByRef;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -539,8 +554,8 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
-			object newchartObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
+			object newchartObject = Factory.CreateObjectFromComProxy(_eventClass, chartObject) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newdrawObject;
 			paramsArray[1] = newchartObject;
@@ -556,7 +571,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterFinalRender", ref paramsArray);
@@ -571,7 +586,7 @@ namespace NetOffice.OWC10Api
 				return;
 			}
 
-			NetOffice.OWC10Api.ChChartDraw newdrawObject = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
+			NetOffice.OWC10Api.ChChartDraw newdrawObject = Factory.CreateObjectFromComProxy(_eventClass, drawObject) as NetOffice.OWC10Api.ChChartDraw;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdrawObject;
 			_eventBinding.RaiseCustomEvent("AfterLayout", ref paramsArray);

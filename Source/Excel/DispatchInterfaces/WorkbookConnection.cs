@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "OLEDBConnection", paramsArray);
-				NetOffice.ExcelApi.OLEDBConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.OLEDBConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.OLEDBConnection;
+				NetOffice.ExcelApi.OLEDBConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.OLEDBConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.OLEDBConnection;
 				return newObject;
 			}
 		}
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ODBCConnection", paramsArray);
-				NetOffice.ExcelApi.ODBCConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ODBCConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.ODBCConnection;
+				NetOffice.ExcelApi.ODBCConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ODBCConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.ODBCConnection;
 				return newObject;
 			}
 		}
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Ranges", paramsArray);
-				NetOffice.ExcelApi.Ranges newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Ranges.LateBindingApiWrapperType) as NetOffice.ExcelApi.Ranges;
+				NetOffice.ExcelApi.Ranges newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Ranges.LateBindingApiWrapperType) as NetOffice.ExcelApi.Ranges;
 				return newObject;
 			}
 		}
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ModelConnection", paramsArray);
-				NetOffice.ExcelApi.ModelConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelConnection;
+				NetOffice.ExcelApi.ModelConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelConnection;
 				return newObject;
 			}
 		}
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "WorksheetDataConnection", paramsArray);
-				NetOffice.ExcelApi.WorksheetDataConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorksheetDataConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorksheetDataConnection;
+				NetOffice.ExcelApi.WorksheetDataConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.WorksheetDataConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.WorksheetDataConnection;
 				return newObject;
 			}
 		}
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TextConnection", paramsArray);
-				NetOffice.ExcelApi.TextConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TextConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.TextConnection;
+				NetOffice.ExcelApi.TextConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TextConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.TextConnection;
 				return newObject;
 			}
 		}
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DataFeedConnection", paramsArray);
-				NetOffice.ExcelApi.DataFeedConnection newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.DataFeedConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.DataFeedConnection;
+				NetOffice.ExcelApi.DataFeedConnection newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.DataFeedConnection.LateBindingApiWrapperType) as NetOffice.ExcelApi.DataFeedConnection;
 				return newObject;
 			}
 		}
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ModelTables", paramsArray);
-				NetOffice.ExcelApi.ModelTables newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelTables;
+				NetOffice.ExcelApi.ModelTables newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.ModelTables.LateBindingApiWrapperType) as NetOffice.ExcelApi.ModelTables;
 				return newObject;
 			}
 		}

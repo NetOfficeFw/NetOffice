@@ -106,7 +106,7 @@ namespace NetOffice.AccessApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "DbcVbProject", paramsArray);
-				NetOffice.VBIDEApi._VBProject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi._VBProject;
+				NetOffice.VBIDEApi._VBProject newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VBIDEApi._VBProject;
 				return newObject;
 			}
 		}
@@ -829,7 +829,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "GetWizGlob", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else
@@ -1096,7 +1096,7 @@ namespace NetOffice.AccessApi
 			object returnItem = Invoker.MethodReturn(this, "LoadResourceLibrary", paramsArray);
 			if((null != returnItem) && (returnItem is MarshalByRefObject))
 			{
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 				return newObject;
 			}
 			else

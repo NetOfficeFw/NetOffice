@@ -192,7 +192,7 @@ namespace NetOffice.MSHTMLApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.EnableEvents)
+			if(false == NetOffice.Settings.Default.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -299,7 +299,7 @@ namespace NetOffice.MSHTMLApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.WriteException(exception);
+                        DebugConsole.Default.WriteException(exception);
                     }
                 }
                 return delegates.Length;

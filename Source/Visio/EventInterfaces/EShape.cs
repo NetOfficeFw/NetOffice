@@ -122,7 +122,22 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public EShape_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -145,7 +160,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVCell newCell = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			_eventBinding.RaiseCustomEvent("CellChanged", ref paramsArray);
@@ -160,7 +175,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("ShapeAdded", ref paramsArray);
@@ -175,7 +190,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("BeforeSelectionDelete", ref paramsArray);
@@ -190,7 +205,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("ShapeChanged", ref paramsArray);
@@ -205,7 +220,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("SelectionAdded", ref paramsArray);
@@ -220,7 +235,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("BeforeShapeDelete", ref paramsArray);
@@ -235,7 +250,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("TextChanged", ref paramsArray);
@@ -250,7 +265,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVCell newCell = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
+			NetOffice.VisioApi.IVCell newCell = Factory.CreateObjectFromComProxy(_eventClass, cell) as NetOffice.VisioApi.IVCell;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newCell;
 			_eventBinding.RaiseCustomEvent("FormulaChanged", ref paramsArray);
@@ -265,7 +280,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("ShapeParentChanged", ref paramsArray);
@@ -280,7 +295,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("BeforeShapeTextEdit", ref paramsArray);
@@ -295,7 +310,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("ShapeExitedTextEdit", ref paramsArray);
@@ -310,7 +325,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("QueryCancelSelectionDelete", ref paramsArray);
@@ -325,7 +340,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("SelectionDeleteCanceled", ref paramsArray);
@@ -340,7 +355,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("QueryCancelUngroup", ref paramsArray);
@@ -355,7 +370,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("UngroupCanceled", ref paramsArray);
@@ -370,7 +385,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("QueryCancelConvertToGroup", ref paramsArray);
@@ -385,7 +400,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("ConvertToGroupCanceled", ref paramsArray);
@@ -400,7 +415,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("QueryCancelGroup", ref paramsArray);
@@ -415,7 +430,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVSelection newSelection = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
+			NetOffice.VisioApi.IVSelection newSelection = Factory.CreateObjectFromComProxy(_eventClass, selection) as NetOffice.VisioApi.IVSelection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSelection;
 			_eventBinding.RaiseCustomEvent("GroupCanceled", ref paramsArray);
@@ -430,7 +445,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newShape;
 			_eventBinding.RaiseCustomEvent("ShapeDataGraphicChanged", ref paramsArray);
@@ -445,7 +460,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
 			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];
@@ -464,7 +479,7 @@ namespace NetOffice.VisioApi
 				return;
 			}
 
-			NetOffice.VisioApi.IVShape newShape = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
+			NetOffice.VisioApi.IVShape newShape = Factory.CreateObjectFromComProxy(_eventClass, shape) as NetOffice.VisioApi.IVShape;
 			Int32 newDataRecordsetID = Convert.ToInt32(dataRecordsetID);
 			Int32 newDataRowID = Convert.ToInt32(dataRowID);
 			object[] paramsArray = new object[3];

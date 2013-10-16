@@ -29,7 +29,27 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			        _instance = value;				
         	}
         }
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
+            }
+        }
 
+        internal static Core Factory
+        {
+            get
+            {
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
+            }
+        }
 		#endregion
 		#region Properties
 
@@ -44,7 +64,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Application", paramsArray);
-				NetOffice.VisioApi.IVApplication newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVApplication;
+				NetOffice.VisioApi.IVApplication newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVApplication;
 				return newObject;
 			}
 		}
@@ -60,7 +80,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveDocument", paramsArray);
-				NetOffice.VisioApi.IVDocument newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVDocument;
+				NetOffice.VisioApi.IVDocument newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVDocument;
 				return newObject;
 			}
 		}
@@ -76,7 +96,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActivePage", paramsArray);
-				NetOffice.VisioApi.IVPage newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVPage;
+				NetOffice.VisioApi.IVPage newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVPage;
 				return newObject;
 			}
 		}
@@ -92,7 +112,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "ActiveWindow", paramsArray);
-				NetOffice.VisioApi.IVWindow newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVWindow;
+				NetOffice.VisioApi.IVWindow newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVWindow;
 				return newObject;
 			}
 		}
@@ -108,7 +128,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Documents", paramsArray);
-				NetOffice.VisioApi.IVDocuments newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVDocuments;
+				NetOffice.VisioApi.IVDocuments newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVDocuments;
 				return newObject;
 			}
 		}
@@ -124,7 +144,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Windows", paramsArray);
-				NetOffice.VisioApi.IVWindows newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVWindows;
+				NetOffice.VisioApi.IVWindows newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVWindows;
 				return newObject;
 			}
 		}
@@ -140,7 +160,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Addons", paramsArray);
-				NetOffice.VisioApi.IVAddons newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVAddons;
+				NetOffice.VisioApi.IVAddons newObject = Factory.CreateObjectFromComProxy(_instance,returnItem) as NetOffice.VisioApi.IVAddons;
 				return newObject;
 			}
 		}
@@ -157,7 +177,7 @@ namespace NetOffice.VisioApi.GlobalHelperModules
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(_instance, "Vbe", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(_instance,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 				return newObject;
 			}
 		}

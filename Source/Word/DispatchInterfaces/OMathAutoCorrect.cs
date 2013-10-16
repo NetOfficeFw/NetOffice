@@ -84,7 +84,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Entries", paramsArray);
-				NetOffice.WordApi.OMathAutoCorrectEntries newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OMathAutoCorrectEntries.LateBindingApiWrapperType) as NetOffice.WordApi.OMathAutoCorrectEntries;
+				NetOffice.WordApi.OMathAutoCorrectEntries newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OMathAutoCorrectEntries.LateBindingApiWrapperType) as NetOffice.WordApi.OMathAutoCorrectEntries;
 				return newObject;
 			}
 		}
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Functions", paramsArray);
-				NetOffice.WordApi.OMathRecognizedFunctions newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OMathRecognizedFunctions.LateBindingApiWrapperType) as NetOffice.WordApi.OMathRecognizedFunctions;
+				NetOffice.WordApi.OMathRecognizedFunctions newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.OMathRecognizedFunctions.LateBindingApiWrapperType) as NetOffice.WordApi.OMathRecognizedFunctions;
 				return newObject;
 			}
 		}

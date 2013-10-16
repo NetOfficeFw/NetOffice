@@ -84,7 +84,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.WordApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -178,7 +178,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveGrammarDictionary", paramsArray);
-				NetOffice.WordApi.Dictionary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveHyphenationDictionary", paramsArray);
-				NetOffice.WordApi.Dictionary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -210,7 +210,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveSpellingDictionary", paramsArray);
-				NetOffice.WordApi.Dictionary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -226,7 +226,7 @@ namespace NetOffice.WordApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "ActiveThesaurusDictionary", paramsArray);
-				NetOffice.WordApi.Dictionary newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
+				NetOffice.WordApi.Dictionary newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.WordApi.Dictionary.LateBindingApiWrapperType) as NetOffice.WordApi.Dictionary;
 				return newObject;
 			}
 		}
@@ -264,7 +264,7 @@ namespace NetOffice.WordApi
 				object returnItem = Invoker.PropertyGet(this, "WritingStyleList", paramsArray);
 				if((null != returnItem) && (returnItem is MarshalByRefObject))
 				{
-					COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this, returnItem);
+					COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
 					return newObject;
 				}
 				else

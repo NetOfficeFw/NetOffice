@@ -135,7 +135,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "AccelItems", paramsArray);
-				NetOffice.VisioApi.IVAccelItems newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelItems;
+				NetOffice.VisioApi.IVAccelItems newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelItems;
 				return newObject;
 			}
 		}
@@ -151,7 +151,7 @@ namespace NetOffice.VisioApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				NetOffice.VisioApi.IVAccelTables newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelTables;
+				NetOffice.VisioApi.IVAccelTables newObject = Factory.CreateObjectFromComProxy(this,returnItem) as NetOffice.VisioApi.IVAccelTables;
 				return newObject;
 			}
 		}

@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Application", paramsArray);
-				NetOffice.ExcelApi.Application newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
+				NetOffice.ExcelApi.Application newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.Application.LateBindingApiWrapperType) as NetOffice.ExcelApi.Application;
 				return newObject;
 			}
 		}
@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TableStyleElements", paramsArray);
-				NetOffice.ExcelApi.TableStyleElements newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TableStyleElements.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyleElements;
+				NetOffice.ExcelApi.TableStyleElements newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.ExcelApi.TableStyleElements.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyleElements;
 				return newObject;
 			}
 		}
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newTableStyleName);
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.ExcelApi.TableStyle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyle;
+			NetOffice.ExcelApi.TableStyle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyle;
 			return newObject;
 		}
 
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi
 		{
 			object[] paramsArray = null;
 			object returnItem = Invoker.MethodReturn(this, "Duplicate", paramsArray);
-			NetOffice.ExcelApi.TableStyle newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyle;
+			NetOffice.ExcelApi.TableStyle newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.ExcelApi.TableStyle.LateBindingApiWrapperType) as NetOffice.ExcelApi.TableStyle;
 			return newObject;
 		}
 

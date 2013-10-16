@@ -138,7 +138,22 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public ItemEvents_10_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -177,8 +192,8 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newAction = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, action) as object;
-			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newAction = Factory.CreateObjectFromComProxy(_eventClass, action) as object;
+			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newAction;
 			paramsArray[1] = newResponse;
@@ -212,7 +227,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newForward = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, forward) as object;
+			object newForward = Factory.CreateObjectFromComProxy(_eventClass, forward) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newForward;
 			paramsArray.SetValue(cancel, 1);
@@ -274,7 +289,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
@@ -292,7 +307,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newResponse = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, response) as object;
+			object newResponse = Factory.CreateObjectFromComProxy(_eventClass, response) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newResponse;
 			paramsArray.SetValue(cancel, 1);
@@ -358,7 +373,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			_eventBinding.RaiseCustomEvent("AttachmentAdd", ref paramsArray);
@@ -373,7 +388,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			_eventBinding.RaiseCustomEvent("AttachmentRead", ref paramsArray);
@@ -388,7 +403,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -406,7 +421,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			object newItem = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, item) as object;
+			object newItem = Factory.CreateObjectFromComProxy(_eventClass, item) as object;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newItem;
 			paramsArray.SetValue(cancel, 1);
@@ -424,7 +439,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newAttachment;
 			_eventBinding.RaiseCustomEvent("AttachmentRemove", ref paramsArray);
@@ -439,7 +454,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -457,7 +472,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -475,7 +490,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);
@@ -493,7 +508,7 @@ namespace NetOffice.OutlookApi
 				return;
 			}
 
-			NetOffice.OutlookApi.Attachment newAttachment = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
+			NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateObjectFromComProxy(_eventClass, attachment) as NetOffice.OutlookApi.Attachment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newAttachment;
 			paramsArray.SetValue(cancel, 1);

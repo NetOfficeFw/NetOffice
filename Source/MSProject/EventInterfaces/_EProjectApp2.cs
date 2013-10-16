@@ -254,7 +254,22 @@ namespace NetOffice.MSProjectApi
         private COMObject		_eventClass;
         
 		#endregion
-		
+
+        #region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region Construction
 
 		public _EProjectApp2_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
@@ -277,7 +292,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("NewProject", ref paramsArray);
@@ -292,7 +307,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newtsk;
 			paramsArray.SetValue(cancel, 1);
@@ -310,7 +325,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newres;
 			paramsArray.SetValue(cancel, 1);
@@ -328,7 +343,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newasg;
 			paramsArray.SetValue(cancel, 1);
@@ -346,7 +361,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -368,7 +383,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -390,7 +405,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
 			object newNewVal = (object)newVal;
 			object[] paramsArray = new object[4];
@@ -412,7 +427,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -430,7 +445,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -448,7 +463,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -466,7 +481,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -484,7 +499,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -502,7 +517,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpj;
@@ -522,7 +537,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newpj;
 			_eventBinding.RaiseCustomEvent("ProjectCalculate", ref paramsArray);
@@ -537,7 +552,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			Int32 newgoalArea = Convert.ToInt32(goalArea);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
@@ -554,8 +569,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.Selection newsel = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.MSProjectApi.Selection;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Selection newsel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.MSProjectApi.Selection;
 			object newselType = (object)selType;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newWindow;
@@ -573,11 +588,11 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
 			bool newprojectHasViewWindow = Convert.ToBoolean(projectHasViewWindow);
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[5];
 			paramsArray[0] = newWindow;
 			paramsArray[1] = newprevView;
@@ -596,9 +611,9 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
 			bool newsuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWindow;
@@ -617,7 +632,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newactivatedWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, activatedWindow) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newactivatedWindow = Factory.CreateObjectFromComProxy(_eventClass, activatedWindow) as NetOffice.MSProjectApi.Window;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newactivatedWindow;
 			_eventBinding.RaiseCustomEvent("WindowActivate", ref paramsArray);
@@ -632,7 +647,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newdeactivatedWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, deactivatedWindow) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newdeactivatedWindow = Factory.CreateObjectFromComProxy(_eventClass, deactivatedWindow) as NetOffice.MSProjectApi.Window;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newdeactivatedWindow;
 			_eventBinding.RaiseCustomEvent("WindowDeactivate", ref paramsArray);
@@ -647,7 +662,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			bool newClose = Convert.ToBoolean(close);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
@@ -664,7 +679,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			Int32 newID = Convert.ToInt32(iD);
 			bool newIsGoalArea = Convert.ToBoolean(isGoalArea);
 			object[] paramsArray = new object[3];
@@ -698,7 +713,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray.SetValue(targetPage, 1);
@@ -729,7 +744,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
@@ -746,7 +761,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
@@ -763,7 +778,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			Int32 newID = Convert.ToInt32(iD);
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
@@ -780,7 +795,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			bool newInterim = Convert.ToBoolean(interim);
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom newInterimCopy = (NetOffice.MSProjectApi.Enums.PjSaveBaselineFrom)interimCopy;
@@ -788,7 +803,7 @@ namespace NetOffice.MSProjectApi
 			bool newAllTasks = Convert.ToBoolean(allTasks);
 			bool newRollupToSummaryTasks = Convert.ToBoolean(rollupToSummaryTasks);
 			bool newRollupFromSubtasks = Convert.ToBoolean(rollupFromSubtasks);
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[9];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInterim;
@@ -811,12 +826,12 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			bool newInterim = Convert.ToBoolean(interim);
 			NetOffice.MSProjectApi.Enums.PjBaselines newbl = (NetOffice.MSProjectApi.Enums.PjBaselines)bl;
 			NetOffice.MSProjectApi.Enums.PjSaveBaselineTo newInterimFrom = (NetOffice.MSProjectApi.Enums.PjSaveBaselineTo)interimFrom;
 			bool newAllTasks = Convert.ToBoolean(allTasks);
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[6];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInterim;
@@ -836,8 +851,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
@@ -853,8 +868,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
@@ -870,9 +885,9 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			bool newSaveAsUi = Convert.ToBoolean(saveAsUi);
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newSaveAsUi;
@@ -889,8 +904,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newtsk;
 			paramsArray[1] = newInfo;
@@ -906,8 +921,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newres;
 			paramsArray[1] = newInfo;
@@ -923,8 +938,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newasg;
 			paramsArray[1] = newInfo;
@@ -940,10 +955,10 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Task newtsk = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
+			NetOffice.MSProjectApi.Task newtsk = Factory.CreateObjectFromComProxy(_eventClass, tsk) as NetOffice.MSProjectApi.Task;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newtsk;
 			paramsArray[1] = newField;
@@ -961,10 +976,10 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Resource newres = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
+			NetOffice.MSProjectApi.Resource newres = Factory.CreateObjectFromComProxy(_eventClass, res) as NetOffice.MSProjectApi.Resource;
 			NetOffice.MSProjectApi.Enums.PjField newField = (NetOffice.MSProjectApi.Enums.PjField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newres;
 			paramsArray[1] = newField;
@@ -982,10 +997,10 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Assignment newasg = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
+			NetOffice.MSProjectApi.Assignment newasg = Factory.CreateObjectFromComProxy(_eventClass, asg) as NetOffice.MSProjectApi.Assignment;
 			NetOffice.MSProjectApi.Enums.PjAssignmentField newField = (NetOffice.MSProjectApi.Enums.PjAssignmentField)field;
 			object newNewVal = (object)newVal;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newasg;
 			paramsArray[1] = newField;
@@ -1003,8 +1018,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
@@ -1020,8 +1035,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
@@ -1037,8 +1052,8 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray[1] = newInfo;
@@ -1054,7 +1069,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newInfo;
 			_eventBinding.RaiseCustomEvent("ApplicationBeforeClose", ref paramsArray);
@@ -1104,7 +1119,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newWindow;
 			paramsArray.SetValue(targetPage, 1);
@@ -1202,7 +1217,7 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Project newpj = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
+			NetOffice.MSProjectApi.Project newpj = Factory.CreateObjectFromComProxy(_eventClass, pj) as NetOffice.MSProjectApi.Project;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newpj;
 			paramsArray.SetValue(cancel, 1);
@@ -1233,9 +1248,9 @@ namespace NetOffice.MSProjectApi
 				return;
 			}
 
-			NetOffice.MSProjectApi.Window newWindow = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
-			NetOffice.MSProjectApi.View newprevView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
-			NetOffice.MSProjectApi.View newnewView = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.Window newWindow = Factory.CreateObjectFromComProxy(_eventClass, window) as NetOffice.MSProjectApi.Window;
+			NetOffice.MSProjectApi.View newprevView = Factory.CreateObjectFromComProxy(_eventClass, prevView) as NetOffice.MSProjectApi.View;
+			NetOffice.MSProjectApi.View newnewView = Factory.CreateObjectFromComProxy(_eventClass, newView) as NetOffice.MSProjectApi.View;
 			bool newsuccess = Convert.ToBoolean(success);
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newWindow;
@@ -1255,7 +1270,7 @@ namespace NetOffice.MSProjectApi
 			}
 
 			string newbstrFunctionality = Convert.ToString(bstrFunctionality);
-			NetOffice.MSProjectApi.EventInfo newInfo = NetOffice.Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
+			NetOffice.MSProjectApi.EventInfo newInfo = Factory.CreateObjectFromComProxy(_eventClass, info) as NetOffice.MSProjectApi.EventInfo;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newbstrFunctionality;
 			paramsArray[1] = newInfo;

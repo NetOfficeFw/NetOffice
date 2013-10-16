@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -143,7 +143,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Bullet", paramsArray);
-				NetOffice.OfficeApi.BulletFormat2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.BulletFormat2.LateBindingApiWrapperType) as NetOffice.OfficeApi.BulletFormat2;
+				NetOffice.OfficeApi.BulletFormat2 newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.BulletFormat2.LateBindingApiWrapperType) as NetOffice.OfficeApi.BulletFormat2;
 				return newObject;
 			}
 		}
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "TabStops", paramsArray);
-				NetOffice.OfficeApi.TabStops2 newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.TabStops2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TabStops2;
+				NetOffice.OfficeApi.TabStops2 newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.TabStops2.LateBindingApiWrapperType) as NetOffice.OfficeApi.TabStops2;
 				return newObject;
 			}
 		}

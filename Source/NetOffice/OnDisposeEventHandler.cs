@@ -19,7 +19,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// the target COM object
+        /// The target COM object
         /// </summary>
         public COMObject Sender { get; private set; }
 
@@ -32,6 +32,6 @@ namespace NetOffice
     /// <summary>
     /// EventHandler delegate for COMObject.OnDispose
     /// </summary>
-    /// <param name="eventArgs"></param>
+    /// <param name="eventArgs">info about the target instance</param>
     public delegate void OnDisposeEventHandler(OnDisposeEventArgs eventArgs);
 }

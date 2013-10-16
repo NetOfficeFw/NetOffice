@@ -5,7 +5,7 @@ using System.Text;
 namespace NetOffice.Tools
 {
     /// <summary>
-    /// specifiy possible registry locations
+    /// Specify possible registry locations
     /// </summary>
     public enum RegistrySaveLocation
     {

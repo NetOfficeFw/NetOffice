@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi
 {			
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			object returnItem = Invoker.PropertyGet(this, "Item", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this,returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 			}
 		}
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi
 			{
 				object[] paramsArray = null;
 				object returnItem = Invoker.PropertyGet(this, "Parent", paramsArray);
-				COMObject newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem);
+				COMObject newObject = Factory.CreateObjectFromComProxy(this,returnItem);
 				return newObject;
 			}
 		}
@@ -157,7 +157,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description, dueDate);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -202,7 +202,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(title, status, priority, assignee, description);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
-			NetOffice.OfficeApi.SharedWorkspaceTask newObject = NetOffice.Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
+			NetOffice.OfficeApi.SharedWorkspaceTask newObject = Factory.CreateKnownObjectFromComProxy(this, returnItem,NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType) as NetOffice.OfficeApi.SharedWorkspaceTask;
 			return newObject;
 		}
 

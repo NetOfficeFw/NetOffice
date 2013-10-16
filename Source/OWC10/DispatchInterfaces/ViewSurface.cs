@@ -194,7 +194,7 @@ namespace NetOffice.OWC10Api
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(picture, mask);
 			object returnItem = Invoker.PropertyGet(this, "PictureAlphaBlended", paramsArray);
-			stdole.Picture newObject = NetOffice.Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
+			stdole.Picture newObject = Factory.CreateObjectFromComProxy(this,returnItem) as stdole.Picture;
 			return newObject;
 		}
 
