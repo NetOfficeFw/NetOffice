@@ -1,0 +1,18 @@
+﻿[1033]
+groupBoxLanguage = Select Language
+groupBoxOnlineMode = Tutorial Documentation
+radioButtonShowLink = Show Online Documentation Link
+radioButtonConnect = Connect to Documentation Page
+labelDocumentationHint = The Tutorial application performs a connect to the NetOffice Documentation page our shows you the link to tutorial documentation.
+checkBoxSaveSettings = Save this settings
+buttonDone = Close
+[End]
+[1031]
+groupBoxLanguage = Sprache auswählen
+groupBoxOnlineMode = Tutorial Dokumentation
+radioButtonShowLink = Link zur Documentation anzeigen
+radioButtonConnect = Verbinden und direkt anzeigen
+labelDocumentationHint = Die Tutorial Anwendung kann sich direkt mit der Dokumentation auf Codeplex verbinden, andernfalls wird Ihnen der Link zur jeweiligen Tutorial Dokumentation angezeigt.
+checkBoxSaveSettings = Einstellungen speichern
+buttonDone = Schliessen
+[End]

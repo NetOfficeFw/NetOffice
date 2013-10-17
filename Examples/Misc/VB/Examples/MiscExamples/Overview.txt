@@ -1,0 +1,3 @@
+﻿Example01		- demonstrate how to use the NetOffice Debug Console
+Example02		- demonstrate how to check for a specific entity support at runtime
+Example03	    - demonstrate how to access running outlook application

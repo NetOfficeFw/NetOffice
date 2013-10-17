@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - ClassicUI", "COMAddinClassicExample\IDTExtensibility2 - ClassicUI.csproj", "{4EF7E632-255A-48D0-8F58-78EE798405A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - RibbonUI", "COMAddinRibbonExample\IDTExtensibility2 - RibbonUI.csproj", "{1A259140-8F78-4553-A159-7FB17675E91C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDTExtensibility2 - Taskpane", "COMAddinTaskPaneExample\IDTExtensibility2 - Taskpane.csproj", "{9ECCCB62-B4CC-4102-90EE-06CF724B329C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "NetOffice Tools - Simple\NetOffice Tools - Simple.csproj", "{FED51106-021E-4EF8-8418-3A3CC0FC132C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "NetOffice Tools - Extended\NetOffice Tools - Extended.csproj", "{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EF7E632-255A-48D0-8F58-78EE798405A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF7E632-255A-48D0-8F58-78EE798405A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF7E632-255A-48D0-8F58-78EE798405A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF7E632-255A-48D0-8F58-78EE798405A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A259140-8F78-4553-A159-7FB17675E91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A259140-8F78-4553-A159-7FB17675E91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A259140-8F78-4553-A159-7FB17675E91C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A259140-8F78-4553-A159-7FB17675E91C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ECCCB62-B4CC-4102-90EE-06CF724B329C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FED51106-021E-4EF8-8418-3A3CC0FC132C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FED51106-021E-4EF8-8418-3A3CC0FC132C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FED51106-021E-4EF8-8418-3A3CC0FC132C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FED51106-021E-4EF8-8418-3A3CC0FC132C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF466A2-1FCF-4E42-A7A4-F75293FFAF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
