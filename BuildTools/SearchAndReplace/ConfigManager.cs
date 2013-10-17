@@ -13,9 +13,9 @@ namespace NOBuildTools.SearchAndReplace
         public static void SaveConfigurationToXMLFile(string fullFileName, string targetFolder, string fileFilter, string search, string replace)
         {
             if (File.Exists(fullFileName))
-                File.Decrypt(fullFileName);
+                File.Delete(fullFileName);
 
-            XDocument document = new XDocument(new XElement("NOTools.SearchAndReplace"));
+            XDocument document = new XDocument(new XElement("NOBuildTools.SearchAndReplace"));
             XElement root = document.FirstNode as XElement;
             root.Add(new XElement("TargetFolder", XmlConvert.EncodeName(targetFolder)));
             root.Add(new XElement("FileFilter",  XmlConvert.EncodeName(fileFilter)));
@@ -30,10 +30,9 @@ namespace NOBuildTools.SearchAndReplace
             if (!File.Exists(fullFileName))
                 throw new FileNotFoundException(fullFileName);
 
-            
             XDocument document = XDocument.Load(fullFileName);
             XElement root = document.FirstNode as XElement;
-            if (root.Name != "NOTools.SearchAndReplace")
+            if (root.Name != "NOBuildTools.SearchAndReplace")
                 throw new FormatException("Wrong Magic");
 
             targetFolder = XmlConvert.DecodeName(root.Element("TargetFolder").Value);

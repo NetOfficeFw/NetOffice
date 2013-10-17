@@ -39,9 +39,6 @@
             this.checkBoxChangeNetMarker = new System.Windows.Forms.CheckBox();
             this.labelFolder = new System.Windows.Forms.Label();
             this.labelNetVersion = new System.Windows.Forms.Label();
-            this.labelNewFolder = new System.Windows.Forms.Label();
-            this.buttonChooseNewFolder = new System.Windows.Forms.Button();
-            this.textBoxNewFolder = new System.Windows.Forms.TextBox();
             this.buttonLoadConfig = new System.Windows.Forms.Button();
             this.buttonSaveConfig = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,11 +59,11 @@
             this.textBoxLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLog.Location = new System.Drawing.Point(101, 184);
+            this.textBoxLog.Location = new System.Drawing.Point(101, 155);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
-            this.textBoxLog.Size = new System.Drawing.Size(739, 358);
+            this.textBoxLog.Size = new System.Drawing.Size(739, 305);
             this.textBoxLog.TabIndex = 1;
             // 
             // buttonChooseFolder
@@ -84,7 +81,7 @@
             // 
             this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStart.Location = new System.Drawing.Point(100, 154);
+            this.buttonStart.Location = new System.Drawing.Point(100, 125);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(540, 24);
             this.buttonStart.TabIndex = 3;
@@ -102,7 +99,7 @@
             ".Net 3.5",
             ".Net 4.0",
             ".Net 4.5"});
-            this.comboBoxToNetVersion.Location = new System.Drawing.Point(476, 80);
+            this.comboBoxToNetVersion.Location = new System.Drawing.Point(476, 51);
             this.comboBoxToNetVersion.Name = "comboBoxToNetVersion";
             this.comboBoxToNetVersion.Size = new System.Drawing.Size(172, 21);
             this.comboBoxToNetVersion.TabIndex = 4;
@@ -110,7 +107,7 @@
             // checkBoxChangeKeyFiles
             // 
             this.checkBoxChangeKeyFiles.AutoSize = true;
-            this.checkBoxChangeKeyFiles.Location = new System.Drawing.Point(100, 120);
+            this.checkBoxChangeKeyFiles.Location = new System.Drawing.Point(100, 91);
             this.checkBoxChangeKeyFiles.Name = "checkBoxChangeKeyFiles";
             this.checkBoxChangeKeyFiles.Size = new System.Drawing.Size(105, 17);
             this.checkBoxChangeKeyFiles.TabIndex = 6;
@@ -121,7 +118,7 @@
             // 
             this.textBoxKeyFilesRootFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxKeyFilesRootFolder.Location = new System.Drawing.Point(330, 118);
+            this.textBoxKeyFilesRootFolder.Location = new System.Drawing.Point(330, 89);
             this.textBoxKeyFilesRootFolder.Name = "textBoxKeyFilesRootFolder";
             this.textBoxKeyFilesRootFolder.Size = new System.Drawing.Size(510, 20);
             this.textBoxKeyFilesRootFolder.TabIndex = 7;
@@ -130,7 +127,7 @@
             // labelKeyFolder
             // 
             this.labelKeyFolder.AutoSize = true;
-            this.labelKeyFolder.Location = new System.Drawing.Point(219, 122);
+            this.labelKeyFolder.Location = new System.Drawing.Point(219, 93);
             this.labelKeyFolder.Name = "labelKeyFolder";
             this.labelKeyFolder.Size = new System.Drawing.Size(101, 13);
             this.labelKeyFolder.TabIndex = 8;
@@ -139,7 +136,7 @@
             // checkBoxChangeNetMarker
             // 
             this.checkBoxChangeNetMarker.AutoSize = true;
-            this.checkBoxChangeNetMarker.Location = new System.Drawing.Point(668, 84);
+            this.checkBoxChangeNetMarker.Location = new System.Drawing.Point(668, 55);
             this.checkBoxChangeNetMarker.Name = "checkBoxChangeNetMarker";
             this.checkBoxChangeNetMarker.Size = new System.Drawing.Size(116, 17);
             this.checkBoxChangeNetMarker.TabIndex = 12;
@@ -151,70 +148,43 @@
             this.labelFolder.AutoSize = true;
             this.labelFolder.Location = new System.Drawing.Point(21, 22);
             this.labelFolder.Name = "labelFolder";
-            this.labelFolder.Size = new System.Drawing.Size(75, 13);
+            this.labelFolder.Size = new System.Drawing.Size(49, 13);
             this.labelFolder.TabIndex = 13;
-            this.labelFolder.Text = "Root Directory";
+            this.labelFolder.Text = "Directory";
             // 
             // labelNetVersion
             // 
             this.labelNetVersion.AutoSize = true;
-            this.labelNetVersion.Location = new System.Drawing.Point(384, 84);
+            this.labelNetVersion.Location = new System.Drawing.Point(384, 55);
             this.labelNetVersion.Name = "labelNetVersion";
             this.labelNetVersion.Size = new System.Drawing.Size(86, 13);
             this.labelNetVersion.TabIndex = 15;
             this.labelNetVersion.Text = "To .NET Version";
             // 
-            // labelNewFolder
-            // 
-            this.labelNewFolder.AutoSize = true;
-            this.labelNewFolder.Location = new System.Drawing.Point(21, 52);
-            this.labelNewFolder.Name = "labelNewFolder";
-            this.labelNewFolder.Size = new System.Drawing.Size(76, 13);
-            this.labelNewFolder.TabIndex = 18;
-            this.labelNewFolder.Text = "Copy Directory";
-            // 
-            // buttonChooseNewFolder
-            // 
-            this.buttonChooseNewFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonChooseNewFolder.Location = new System.Drawing.Point(863, 46);
-            this.buttonChooseNewFolder.Name = "buttonChooseNewFolder";
-            this.buttonChooseNewFolder.Size = new System.Drawing.Size(45, 24);
-            this.buttonChooseNewFolder.TabIndex = 17;
-            this.buttonChooseNewFolder.Text = "...";
-            this.buttonChooseNewFolder.UseVisualStyleBackColor = true;
-            this.buttonChooseNewFolder.Click += new System.EventHandler(this.buttonChooseNewFolder_Click);
-            // 
-            // textBoxNewFolder
-            // 
-            this.textBoxNewFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNewFolder.Location = new System.Drawing.Point(100, 49);
-            this.textBoxNewFolder.Name = "textBoxNewFolder";
-            this.textBoxNewFolder.Size = new System.Drawing.Size(740, 20);
-            this.textBoxNewFolder.TabIndex = 16;
-            // 
             // buttonLoadConfig
             // 
-            this.buttonLoadConfig.Location = new System.Drawing.Point(653, 154);
+            this.buttonLoadConfig.Location = new System.Drawing.Point(653, 125);
             this.buttonLoadConfig.Name = "buttonLoadConfig";
             this.buttonLoadConfig.Size = new System.Drawing.Size(90, 24);
             this.buttonLoadConfig.TabIndex = 21;
             this.buttonLoadConfig.Text = "Load Config";
             this.buttonLoadConfig.UseVisualStyleBackColor = true;
+            this.buttonLoadConfig.Click += new System.EventHandler(this.buttonLoadConfig_Click);
             // 
             // buttonSaveConfig
             // 
-            this.buttonSaveConfig.Location = new System.Drawing.Point(750, 154);
+            this.buttonSaveConfig.Location = new System.Drawing.Point(750, 125);
             this.buttonSaveConfig.Name = "buttonSaveConfig";
             this.buttonSaveConfig.Size = new System.Drawing.Size(90, 24);
             this.buttonSaveConfig.TabIndex = 22;
             this.buttonSaveConfig.Text = "Save Config";
             this.buttonSaveConfig.UseVisualStyleBackColor = true;
+            this.buttonSaveConfig.Click += new System.EventHandler(this.buttonSaveConfig_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 84);
+            this.label1.Location = new System.Drawing.Point(101, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 24;
@@ -230,7 +200,7 @@
             ".Net 3.5",
             ".Net 4.0",
             ".Net 4.5"});
-            this.comboBoxFromNetVersion.Location = new System.Drawing.Point(200, 80);
+            this.comboBoxFromNetVersion.Location = new System.Drawing.Point(200, 51);
             this.comboBoxFromNetVersion.Name = "comboBoxFromNetVersion";
             this.comboBoxFromNetVersion.Size = new System.Drawing.Size(172, 21);
             this.comboBoxFromNetVersion.TabIndex = 23;
@@ -239,14 +209,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 554);
+            this.ClientSize = new System.Drawing.Size(925, 472);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxFromNetVersion);
             this.Controls.Add(this.buttonSaveConfig);
             this.Controls.Add(this.buttonLoadConfig);
-            this.Controls.Add(this.labelNewFolder);
-            this.Controls.Add(this.buttonChooseNewFolder);
-            this.Controls.Add(this.textBoxNewFolder);
             this.Controls.Add(this.labelNetVersion);
             this.Controls.Add(this.labelFolder);
             this.Controls.Add(this.checkBoxChangeNetMarker);
@@ -279,9 +246,6 @@
         private System.Windows.Forms.CheckBox checkBoxChangeNetMarker;
         private System.Windows.Forms.Label labelFolder;
         private System.Windows.Forms.Label labelNetVersion;
-        private System.Windows.Forms.Label labelNewFolder;
-        private System.Windows.Forms.Button buttonChooseNewFolder;
-        private System.Windows.Forms.TextBox textBoxNewFolder;
         private System.Windows.Forms.Button buttonLoadConfig;
         private System.Windows.Forms.Button buttonSaveConfig;
         private System.Windows.Forms.Label label1;

@@ -14,6 +14,7 @@ namespace NOBuildTools.VersionUpdater
         public Form1()
         {
             InitializeComponent();
+            textBoxFolder.Text = Application.StartupPath;
             comboBoxFromNetVersion.SelectedIndex = 0;
             comboBoxToNetVersion.SelectedIndex = 0;             
         }
@@ -68,21 +69,227 @@ namespace NOBuildTools.VersionUpdater
                 return false;
             }
 
-            if (!Directory.Exists(textBoxNewFolder.Text))
+            return true;
+        }
+
+        private void ChangeKeyFileInProjectFile(ref string fileContent, string currentFolder, string name, string netVersion)
+        {
+            if (!checkBoxChangeKeyFiles.Checked)
+                return;
+
+            int position1 = fileContent.IndexOf("<AssemblyOriginatorKeyFile>");
+            if (position1 < 0)
             {
-                Directory.CreateDirectory(textBoxNewFolder.Text);
+                textBoxLog.AppendText("\t\tKeyFile Entry not found:" + name + "\r\n");
+                return;
+            }
+
+            int position2 = fileContent.IndexOf("</AssemblyOriginatorKeyFile>", position1);
+            string keyFile = fileContent.Substring(position1 + "<AssemblyOriginatorKeyFile>".Length, position2 - (position1 + "<AssemblyOriginatorKeyFile>".Length));
+            string[] arr = keyFile.Split(new string[] {"_"},StringSplitOptions.RemoveEmptyEntries);
+            string newKeyFile = arr[0] + "_v" + netVersion + ".snk";
+            string newLine = "<AssemblyOriginatorKeyFile>" + newKeyFile + "</AssemblyOriginatorKeyFile>";
+
+            string net1 = "<AssemblyOriginatorKeyFile>" + keyFile + "</AssemblyOriginatorKeyFile>";
+            fileContent = fileContent.Replace(net1, newLine);
+
+            string sourceFile = System.IO.Path.Combine(textBoxKeyFilesRootFolder.Text, netVersion);
+            sourceFile = System.IO.Path.Combine(sourceFile, newKeyFile);
+
+            string destFile = System.IO.Path.Combine(currentFolder, newKeyFile);
+            if(!System.IO.File.Exists(destFile))
+                System.IO.File.Copy(sourceFile, destFile);
+        }
+        
+        private void ChangeToolCodeInCSharpSolutionFile(ref string fileContent, string toNetVersion)
+        {
+            if (toNetVersion == "4.5")
+            {
+                string replaceToolsString = "# Visual Studio Express 2012 for Windows Desktop";
+
+                string tools2008 = "# Visual Studio 2008";
+                int position = fileContent.IndexOf(tools2008);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2008, replaceToolsString);
+                    return;
+                }
+
+                string tools2010 = "# Visual Studio 2010";
+                position = fileContent.IndexOf(tools2010);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2010, replaceToolsString);
+                    return;
+                }
             }
             else
             {
-                if (Directory.GetFiles(textBoxNewFolder.Text, "*.*").Length > 0 ||
-                    Directory.GetDirectories(textBoxNewFolder.Text).Length > 0)
+                string replaceToolsString = "# Visual C# Express 2010";
+
+                string tools2008 = "# Visual Studio 2008";
+                int position = fileContent.IndexOf(tools2008);
+                if (position > -1)
                 {
-                    DialogResult dr = MessageBox.Show(this, String.Format("The is folder{0}{1}{0}ist not empty and want be deleted.{0}Continue anyway?", Environment.NewLine, textBoxNewFolder.Text), "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                    if (dr == System.Windows.Forms.DialogResult.No)
-                        return false;
+                    fileContent = fileContent.Replace(tools2008, replaceToolsString);
+                    return;
+                }
+
+                string tools2010 = "# Visual Studio 2010";
+                position = fileContent.IndexOf(tools2010);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2010, replaceToolsString);
+                    return;
                 }
             }
-            return true;
+        }
+
+        private void ChangeToolCodeInVBSolutionFile(ref string fileContent, string toNetVersion)
+        {
+            if (toNetVersion == "4.5")
+            {
+                string replaceToolsString = "# Visual Studio Express 2012 for Windows Desktop";
+
+                string tools2008 = "# Visual Studio 2008";
+                int position = fileContent.IndexOf(tools2008);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2008, replaceToolsString);
+                    return;
+                }
+
+                string tools2010 = "# Visual Studio 2010";
+                position = fileContent.IndexOf(tools2010);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2010, replaceToolsString);
+                    return;
+                }
+            }
+            else
+            { 
+                string replaceToolsString = "# Visual Basic Express 2010";
+
+                string tools2008 = "# Visual Studio 2008";
+                int position = fileContent.IndexOf(tools2008);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2008, replaceToolsString);
+                    return;
+                }
+
+                string tools2010 = "# Visual Studio 2010";
+                position = fileContent.IndexOf(tools2010);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2010, replaceToolsString);
+                    return;
+                }
+            }
+        }
+         
+        private void ChangeToolsVersionEntryInProjectFile(ref string fileContent)
+        {
+            string replacedString = "";
+            replacedString = "ToolsVersion=\"4.0\"";
+
+            string searchTools1 = "ToolsVersion=\"3.5\"";
+            int position = fileContent.IndexOf(searchTools1);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(searchTools1, replacedString);
+                return;
+            }
+        }
+
+        private void ChangeNetVersionEntryInProjectFile(ref string fileContent, string toNetVersion)
+        {
+            string net1 = "<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>";
+            int position = fileContent.IndexOf(net1);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(net1, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
+                return;
+            }
+
+            string net2 = "<TargetFrameworkVersion>v3.0</TargetFrameworkVersion>";
+            position = fileContent.IndexOf(net2);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(net2, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
+                return;
+            }
+
+            string net3 = "<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>";
+            position = fileContent.IndexOf(net3);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(net3, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
+                return;
+            }
+
+            string net4 = "<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>";
+            position = fileContent.IndexOf(net4);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
+                return;
+            }
+
+            string net5 = "<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>";
+            position = fileContent.IndexOf(net5);
+            if (position > -1)
+            {
+                fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
+                return;
+            }
+        }
+
+        private void ChangeFormatVersionInSolutionFile(ref string fileContent, string toNetVersion)
+        {
+            if (toNetVersion == "4.5")
+            {
+                string replacedString = "";
+                replacedString = "Format Version 12.00";
+
+                string tools1 = "Format Version 10.00"; // vs2008
+                int position = fileContent.IndexOf(tools1);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools1, replacedString);
+                    return;
+                }
+
+                string tools2 = "Format Version 11.00"; //vs2010
+                position = fileContent.IndexOf(tools2);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2, replacedString);
+                    return;
+                }
+            }
+            else
+            {
+                string replacedString = "";
+                replacedString = "Format Version 11.00";
+
+                string tools1 = "Format Version 10.00"; // vs2008
+                int position = fileContent.IndexOf(tools1);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools1, replacedString);
+                    return;
+                }
+
+                string tools2 = "Format Version 12.00"; // vs2012
+                position = fileContent.IndexOf(tools2);
+                if (position > -1)
+                {
+                    fileContent = fileContent.Replace(tools2, replacedString);
+                    return;
+                }
+            }
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -105,7 +312,8 @@ namespace NOBuildTools.VersionUpdater
 
                     ChangeNetVersionEntryInProjectFile(ref fileContent, netToVersion);
                     ChangeToolsVersionEntryInProjectFile(ref fileContent);
-                    ChangeKeyFileInProjectFile(ref fileContent, System.IO.Path.GetDirectoryName(file), System.IO.Path.GetFileNameWithoutExtension(file), netToVersion);
+                    if(checkBoxChangeKeyFiles.Checked)
+                        ChangeKeyFileInProjectFile(ref fileContent, System.IO.Path.GetDirectoryName(file), System.IO.Path.GetFileNameWithoutExtension(file), netToVersion);
 
                     File.Delete(file);
                     File.WriteAllText(file, fileContent, Encoding.UTF8);
@@ -120,7 +328,7 @@ namespace NOBuildTools.VersionUpdater
 
                 string fileContent = File.ReadAllText(slnFile);
                 ChangeFormatVersionInSolutionFile(ref fileContent, netToVersion);
-                if(fileContent.IndexOf(".csproj") > -1)
+                if (fileContent.IndexOf(".csproj") > -1)
                     ChangeToolCodeInCSharpSolutionFile(ref fileContent, netToVersion);
                 else if (fileContent.IndexOf(".vbproj") > -1)
                     ChangeToolCodeInVBSolutionFile(ref fileContent, netToVersion);
@@ -162,210 +370,10 @@ namespace NOBuildTools.VersionUpdater
                         File.Delete(file);
                         File.WriteAllText(file, fileContent, Encoding.UTF8);
                     }
-                }                
+                }
             }
         }
 
-        private void ChangeKeyFileInProjectFile(ref string fileContent, string currentFolder, string name, string netVersion)
-        {
-            if (!checkBoxChangeKeyFiles.Checked)
-                return;
-
-            int position1 = fileContent.IndexOf("<AssemblyOriginatorKeyFile>");
-            if (position1 < 0)
-            {
-                textBoxLog.AppendText("\t\tKeyFile Entry not found:" + name + "\r\n");
-                return;
-            }
-
-            int position2 = fileContent.IndexOf("</AssemblyOriginatorKeyFile>", position1);
-            string keyFile = fileContent.Substring(position1 + "<AssemblyOriginatorKeyFile>".Length, position2 - (position1 + "<AssemblyOriginatorKeyFile>".Length));
-            string[] arr = keyFile.Split(new string[] {"_"},StringSplitOptions.RemoveEmptyEntries);
-            string newKeyFile = arr[0] + "_v" + netVersion + ".snk";
-            string newLine = "<AssemblyOriginatorKeyFile>" + newKeyFile + "</AssemblyOriginatorKeyFile>";
-
-            string net1 = "<AssemblyOriginatorKeyFile>" + keyFile + "</AssemblyOriginatorKeyFile>";
-            fileContent = fileContent.Replace(net1, newLine);
-
-            string sourceFile = System.IO.Path.Combine(textBoxKeyFilesRootFolder.Text, netVersion);
-            sourceFile = System.IO.Path.Combine(sourceFile, newKeyFile);
-
-            string destFile = System.IO.Path.Combine(currentFolder, newKeyFile);
-            if(!System.IO.File.Exists(destFile))
-                System.IO.File.Copy(sourceFile, destFile);
-        }
-        
-        private void ChangeToolCodeInCSharpSolutionFile(ref string fileContent, string toNetVersion)
-        {
-            string replaceToolsString = "# Visual C# Express 2010";
-
-            string tools2008 = "# Visual Studio 2008";
-            int position = fileContent.IndexOf(tools2008);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2008, replaceToolsString);
-                return;
-            }
-
-            string tools2010 = "# Visual Studio 2010";
-            position = fileContent.IndexOf(tools2010);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2010, replaceToolsString);
-                return;
-            }
-        }
-
-        private void ChangeToolCodeInVBSolutionFile(ref string fileContent, string toNetVersion)
-        {
-            string replaceToolsString = "# Visual Basic Express 2010";
-
-            string tools2008 = "# Visual Studio 2008";
-            int position = fileContent.IndexOf(tools2008);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2008, replaceToolsString);
-                return;
-            }
-
-            string tools2010 = "# Visual Studio 2010";
-            position = fileContent.IndexOf(tools2010);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2010, replaceToolsString);
-                return;
-            }
-        }
-
-
-        //private void ChangeToolCodeInSolutionFile(ref string fileContent, string netVersion)
-        //{
-        //    string replacedString = "";
-        //    if (comboBoxLanguage.SelectedIndex == 0)
-        //        replacedString = "# Visual C# Express 2010";
-        //    else
-        //        replacedString = "# Visual Basic Express 2010";
-                
-        //    string tools1 = "# Visual C# Express 2010";
-        //    int position = fileContent.IndexOf(tools1);
-        //    if (position > -1)
-        //    {
-        //        fileContent = fileContent.Replace(tools1, replacedString);
-        //        return;
-        //    }
-
-        //    string tools2 = "# Visual Studio 2008";
-        //    position = fileContent.IndexOf(tools2);
-        //    if (position > -1)
-        //    {
-        //        fileContent = fileContent.Replace(tools2, replacedString);
-        //        return;
-        //    }
-
-        //    string tools3 = "# Visual Studio 2010";
-        //    position = fileContent.IndexOf(tools3);
-        //    if (position > -1)
-        //    {
-        //        fileContent = fileContent.Replace(tools3, replacedString);
-        //        return;
-        //    }
-
-        //    string tools4 = "# Visual Basic Express 2010";
-        //    position = fileContent.IndexOf(tools4);
-        //    if (position > -1)
-        //    {
-        //        fileContent = fileContent.Replace(tools4, replacedString);
-        //        return;
-        //    }
-        //}
-
-        private void ChangeFormatVersionInSolutionFile(ref string fileContent, string netVersion)
-        {
-            string replacedString = "";
-            replacedString = "Format Version 11.00";
-
-            string tools1 = "Format Version 10.00";
-            int position = fileContent.IndexOf(tools1);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools1, replacedString);
-                return;
-            }
-
-            string tools2 = "Format Version 11.00";
-            position = fileContent.IndexOf(tools2);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2, replacedString);
-                return;
-            }
-        }
-
-        private void ChangeToolsVersionEntryInProjectFile(ref string fileContent)//, string netVersion)
-        {
-            string replacedString = "";
-            replacedString = "ToolsVersion=\"4.0\"";
-
-            string searchTools1 = "ToolsVersion=\"3.5\"";
-            int position = fileContent.IndexOf(searchTools1);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(searchTools1, replacedString);
-                return;
-            }
-
-            string tools2 = "ToolsVersion=\"4.0\"";
-            position = fileContent.IndexOf(tools2);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(tools2, replacedString);
-                return;
-            }
-        }
-
-        private void ChangeNetVersionEntryInProjectFile(ref string fileContent, string netVersion)
-        {
-            string net1 = "<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>";
-            int position = fileContent.IndexOf(net1);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(net1, "<TargetFrameworkVersion>v" + netVersion + "</TargetFrameworkVersion>");
-                return;
-            }
-
-            string net2 = "<TargetFrameworkVersion>v3.0</TargetFrameworkVersion>";
-            position = fileContent.IndexOf(net2);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(net2, "<TargetFrameworkVersion>v" + netVersion + "</TargetFrameworkVersion>");
-                return;
-            }
-
-            string net3 = "<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>";
-            position = fileContent.IndexOf(net3);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(net3, "<TargetFrameworkVersion>v" + netVersion + "</TargetFrameworkVersion>");
-                return;
-            }
-
-            string net4 = "<TargetFrameworkVersion>v4.0</TargetFrameworkVersion>";
-            position = fileContent.IndexOf(net4);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + netVersion + "</TargetFrameworkVersion>");
-                return;
-            }
-
-            string net5 = "<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>";
-            position = fileContent.IndexOf(net5);
-            if (position > -1)
-            {
-                fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + netVersion + "</TargetFrameworkVersion>");
-                return;
-            }
-        }
-   
         private void buttonChooseFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fdg = new FolderBrowserDialog();
@@ -374,11 +382,55 @@ namespace NOBuildTools.VersionUpdater
 
         }
 
-        private void buttonChooseNewFolder_Click(object sender, EventArgs e)
+        private void buttonLoadConfig_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fdg = new FolderBrowserDialog();
-            if (DialogResult.OK == fdg.ShowDialog(this))
-                textBoxNewFolder.Text = fdg.SelectedPath;
+            try
+            {
+                OpenFileDialog dlg = new OpenFileDialog();
+                dlg.InitialDirectory = Application.StartupPath;
+                dlg.Filter = "Xml Files(*.xml)|*.xml";
+                if (dlg.ShowDialog(this) == DialogResult.Cancel)
+                    return;
+
+                string targetFolder = string.Empty;
+                bool changeNetMarker = false;
+                string from = string.Empty;
+                string to = string.Empty;
+                bool changeKeyFiles = false;
+                string keyFilesFolder = string.Empty;
+
+                ConfigManager.LoadConfigurationFromConfigFile(dlg.FileName, ref targetFolder, ref changeNetMarker, ref from, ref to, ref changeKeyFiles, ref keyFilesFolder);
+
+                textBoxFolder.Text = targetFolder;
+                checkBoxChangeNetMarker.Checked = changeNetMarker;
+                comboBoxFromNetVersion.Text = from;
+                comboBoxToNetVersion.Text = to;
+                checkBoxChangeKeyFiles.Checked = changeKeyFiles;
+                textBoxKeyFilesRootFolder.Text = keyFilesFolder;
+            }
+            catch (Exception exception)
+            {
+                ExceptionDisplayer.ShowException(this, exception);
+            }
         }
+
+        private void buttonSaveConfig_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.InitialDirectory = Application.StartupPath;
+                dlg.Filter = "Xml Files(*.xml)|*.xml";
+                if (dlg.ShowDialog(this) == DialogResult.Cancel)
+                    return;
+
+                ConfigManager.SaveConfigurationToXMLFile(dlg.FileName, textBoxFolder.Text, checkBoxChangeNetMarker.Checked, comboBoxFromNetVersion.Text, comboBoxToNetVersion.Text, checkBoxChangeKeyFiles.Checked, textBoxKeyFilesRootFolder.Text);
+            }
+            catch (Exception exception)
+            {
+                ExceptionDisplayer.ShowException(this, exception);
+            }
+        }
+
     }
 }
