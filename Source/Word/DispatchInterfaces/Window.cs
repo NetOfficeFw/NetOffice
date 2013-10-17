@@ -1410,10 +1410,10 @@ namespace NetOffice.WordApi
 		public void GetPoint(out Int32 screenPixelsLeft, out Int32 screenPixelsTop, out Int32 screenPixelsWidth, out Int32 screenPixelsHeight, object obj)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
-			screenPixelsLeft = 0;
-			screenPixelsTop = 0;
-			screenPixelsWidth = 0;
-			screenPixelsHeight = 0;
+            screenPixelsLeft = 0;
+            screenPixelsTop = 0;
+            screenPixelsWidth = 0;
+            screenPixelsHeight = 0;
 			object[] paramsArray = Invoker.ValidateParamsArray(screenPixelsLeft, screenPixelsTop, screenPixelsWidth, screenPixelsHeight, obj);
 			Invoker.Method(this, "GetPoint", paramsArray, modifiers);
 			screenPixelsLeft = (Int32)paramsArray[0];

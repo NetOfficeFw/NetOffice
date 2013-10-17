@@ -13,7 +13,7 @@ Imports NetOffice.ExcelApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Excel Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("B5CBBECD-4DEE-4A61-AD34-E9B8618452B0"), ProgId("SimpleExcelVB4.Addin")> _
+<Guid("B5CBBECD-4DEE-4A61-AD34-E9B8618452B0"), ProgId("SimpleExcelVB4.Addin"), Tweak(True)> _
 Public Class Addin
     Inherits COMAddin
 

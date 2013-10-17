@@ -34,7 +34,7 @@ Public Class Addin
 
     Public Sub New()
 
-        'wen can add our own taskpanes here, if you dont want that then overwrite the CTPFactoryAvailable method
+        ' we can add our own taskpanes here, if you dont want that then overwrite the CTPFactoryAvailable method
         ' show into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application
         TaskPanes.Add(GetType(SamplePane), "NetOffice Tools - Sample Pane")
         TaskPanes(0).DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight
