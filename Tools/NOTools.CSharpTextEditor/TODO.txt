@@ -1,9 +1,0 @@
-- neueste avalonedit version verwenden - erledigt
-- prüfen warum object caller nichts ausgibt - in arbeit
-- prüfen ob porblemlos jedes GAC assembly mit simplem namem eingebunden werden kann - erledigt
-- showlinenumbers anbieten - erledigt
-
-- shardevelop dom modifizieren und eigene methoden erweitern/anpassen
-- baumfenster für verweise anbieten => incl. .net4 gac auswahldialog und lokale assemblies
-  referenzierterte assemblies dieser assemblies müssen ebenfalls gleich mit eingebunden werden(optional aber voreinstellung)
-- englische dokumentationen für .net assemblies cachen
