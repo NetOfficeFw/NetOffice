@@ -1,1 +1,0 @@
-﻿	Dim _application As %OfficeApp%.Application
