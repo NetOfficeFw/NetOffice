@@ -1,4 +1,5 @@
 ﻿Imports Tests.Core
+Imports Microsoft.Win32
 
 Public Class TestAssembly
     Implements ITestAssembly
@@ -15,8 +16,10 @@ Public Class TestAssembly
 
         If IsNothing(_listPackages) Then
 
-            NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console
-            NetOffice.DebugConsole.EnableSharedOutput = True
+            AddRegistryTweaks()
+
+            NetOffice.DebugConsole.Default.Mode = NetOffice.DebugConsoleMode.Console
+            NetOffice.DebugConsole.Default.EnableSharedOutput = True
 
             _listPackages = New List(Of ITestPackage)
             _listPackages.Add(New Test01())
@@ -40,5 +43,16 @@ Public Class TestAssembly
             Return "Excel"
         End Get
     End Property
+
+    Private Sub AddRegistryTweaks()
+
+        Dim key As RegistryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Office\\Excel\\Addins\\NOTestsMain.ExcelTestAddinVB", True)
+        If Not IsNothing(key) Then
+            key.SetValue("NOExceptionMessage", "Test09TweakVB", RegistryValueKind.String)
+            key.Close()
+            key.Dispose()
+        End If
+
+    End Sub
 
 End Class

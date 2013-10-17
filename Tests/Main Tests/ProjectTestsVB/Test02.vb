@@ -59,7 +59,7 @@ Public Class Test02
         Dim application As MSProject.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
-            NetOffice.Settings.MessageFilter.Enabled = True
+            NetOffice.Settings.Default.MessageFilter.Enabled = True
 
             application = New MSProject.Application()
 
@@ -104,7 +104,7 @@ Public Class Test02
 
         Finally
 
-            NetOffice.Settings.MessageFilter.Enabled = False
+            NetOffice.Settings.Default.MessageFilter.Enabled = False
 
             If Not IsNothing(application) Then
                 application.Quit(False)

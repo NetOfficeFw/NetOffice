@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,10 @@ namespace WordTestsCSharp
         {
             if (null == _listPackages)
             {
-                NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console;
-                NetOffice.DebugConsole.EnableSharedOutput = true;
+                NetOffice.DebugConsole.Default.Mode = NetOffice.DebugConsoleMode.Console;
+                NetOffice.DebugConsole.Default.EnableSharedOutput = true;
+
+                AddRegistryTweaks();
 
                 _listPackages = new List<ITestPackage>();
                 _listPackages.Add(new Test01());
@@ -45,10 +48,22 @@ namespace WordTestsCSharp
                 _listPackages.Add(new Test06());
                 _listPackages.Add(new Test07());
                 _listPackages.Add(new Test08());
+                _listPackages.Add(new Test09());
             }
             return _listPackages.ToArray();
         }
 
         #endregion
+
+        private void AddRegistryTweaks()
+        {
+            RegistryKey key = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Office\\Word\\Addins\\NOTestsMain.WordTestAddinCSharp", true);
+            if (null != key)
+            {
+                key.SetValue("NOExceptionMessage", "WordTweakCS", RegistryValueKind.String);
+                key.Close();
+                key.Dispose();
+            }
+        }
     }
 }

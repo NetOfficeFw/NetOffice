@@ -51,13 +51,13 @@ Public Class Test09
 
             Next
 
-            If IsNothing(addIn) Then
-                Return New TestResult(False, DateTime.Now.Subtract(startTime), "COMAddin NOTestsMain.ExcelTestAddinVB not found.", Nothing, "")
+            If (IsNothing(addIn) Or IsNothing(addIn.Object)) Then
+                Return New TestResult(False, DateTime.Now.Subtract(startTime), "COMAddin NOTestsMain.ExcelTestAddinVB or addIn.Object not found.", Nothing, "")
             End If
 
-            Dim addinProxy As COMObject = New COMObject(Nothing, addIn.Object)
-            Dim addinStatusOkay As Boolean = Invoker.PropertyGet(addinProxy, "StatusOkay")
-            Dim addinStatusDescription As String = Invoker.PropertyGet(addinProxy, "StatusDescription")
+            Dim addinProxy As COMObject = New COMObject(addIn.Object)
+            Dim addinStatusOkay As Boolean = Invoker.Default.PropertyGet(addinProxy, "StatusOkay")
+            Dim addinStatusDescription As String = Invoker.Default.PropertyGet(addinProxy, "StatusDescription")
             addinProxy.Dispose()
 
             If addinStatusOkay = True Then

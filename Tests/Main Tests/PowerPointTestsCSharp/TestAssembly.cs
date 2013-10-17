@@ -33,8 +33,8 @@ namespace PowerPointTestsCSharp
         {
             if (null == _listPackages)
             {
-                NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console;
-                NetOffice.DebugConsole.EnableSharedOutput = true;
+                NetOffice.DebugConsole.Default.Mode = NetOffice.DebugConsoleMode.Console;
+                NetOffice.DebugConsole.Default.EnableSharedOutput = true;
 
                 _listPackages = new List<ITestPackage>();
                 _listPackages.Add(new Test01());

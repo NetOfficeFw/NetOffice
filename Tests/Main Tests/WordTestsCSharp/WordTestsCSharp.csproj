@@ -42,7 +42,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -62,6 +61,7 @@
     <Compile Include="Test06.cs" />
     <Compile Include="Test07.cs" />
     <Compile Include="Test08.cs" />
+    <Compile Include="Test09.cs" />
     <Compile Include="TestAssembly.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

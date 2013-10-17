@@ -54,7 +54,7 @@ namespace ExcelTestsCSharp
 
                 // the given thread culture in all latebinding calls are stored in NetOffice.Settings.
                 // you can change the culture. default is en-us.
-                CultureInfo cultureInfo = NetOffice.Settings.ThreadCulture;
+                CultureInfo cultureInfo = NetOffice.Settings.Default.ThreadCulture;
                 string Pattern1 = string.Format("0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator);
                 string Pattern2 = string.Format("#{1}##0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator, cultureInfo.NumberFormat.CurrencyGroupSeparator);
 

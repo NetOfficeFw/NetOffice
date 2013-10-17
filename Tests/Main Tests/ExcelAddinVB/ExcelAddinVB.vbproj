@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="VBIDEApi, Version=1.5.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -95,7 +94,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TestAddin.vb" />
-    <Compile Include="IDTExtensibility2.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

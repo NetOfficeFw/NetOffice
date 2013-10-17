@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTestsCSharp", "Proje
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ProjectTestsVB", "ProjectTestsVB\ProjectTestsVB.vbproj", "{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordAddinCSharp", "WordAddinCSharp\WordAddinCSharp.csproj", "{C1A47A73-B560-46FE-AC24-86F12647305B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WordAddinVB", "WordAddinVB\WordAddinVB.vbproj", "{93AFFC4F-E6B9-40C0-B114-A78AB9A3EB7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +107,14 @@ Global
 		{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A47A73-B560-46FE-AC24-86F12647305B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A47A73-B560-46FE-AC24-86F12647305B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A47A73-B560-46FE-AC24-86F12647305B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A47A73-B560-46FE-AC24-86F12647305B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93AFFC4F-E6B9-40C0-B114-A78AB9A3EB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93AFFC4F-E6B9-40C0-B114-A78AB9A3EB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93AFFC4F-E6B9-40C0-B114-A78AB9A3EB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93AFFC4F-E6B9-40C0-B114-A78AB9A3EB7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

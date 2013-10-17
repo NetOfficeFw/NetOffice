@@ -93,6 +93,7 @@
     <Compile Include="Test06.vb" />
     <Compile Include="Test07.vb" />
     <Compile Include="Test08.vb" />
+    <Compile Include="Test09.vb" />
     <Compile Include="TestAssembly.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

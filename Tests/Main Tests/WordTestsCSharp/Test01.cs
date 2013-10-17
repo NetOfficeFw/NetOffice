@@ -62,7 +62,7 @@ namespace WordTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit();
+                    application.Quit(WdSaveOptions.wdDoNotSaveChanges);
                     application.Dispose();
                 }
             }

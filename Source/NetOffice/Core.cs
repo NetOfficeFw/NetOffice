@@ -93,6 +93,17 @@ namespace NetOffice
         #region Properties
 
         /// <summary>
+        /// Returns info about intialized state
+        /// </summary>
+        public bool IsInitialized
+        {
+            get 
+            {
+                return _initalized;
+            }
+        }
+
+        /// <summary>
         /// Shared Default Core
         /// </summary>
         public static Core Default
@@ -183,7 +194,7 @@ namespace NetOffice
         /// <summary>
         /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
-        /// <param name="cacheOptions">NetOffice settings instance or null for default</param>
+        /// <param name="cacheOptions">NetOffice cache options</param>
         /// </summary>
         public void Initialize(CacheOptions cacheOptions)
         {
@@ -194,7 +205,7 @@ namespace NetOffice
             { 
                 Monitor.Enter(_factoryListLock);
                 isLocked = true;
-
+              
                 Console.WriteLine("NetOffice Core.Initialize() NO Version:{1} DeepLevel:{0}", Settings.EnableDeepLoading, this.GetType().Assembly.GetName().Version);
 
                 TryLoadAssembly("ExcelApi.dll");
@@ -1121,7 +1132,7 @@ namespace NetOffice
                     if (!exists)
                     { 
                         _factoryList.Add(factoryInfo);
-                        //Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                        Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
                     }
                     return assembly;
                 }

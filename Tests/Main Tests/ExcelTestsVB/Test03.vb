@@ -44,7 +44,7 @@ Public Class Test03
 
             '  the given thread culture in all latebinding calls are stored in NetOffice.Settings.
             '  you can change the culture. default is en-us.
-            Dim cultureInfo As CultureInfo = NetOffice.Settings.ThreadCulture
+            Dim cultureInfo As CultureInfo = NetOffice.Settings.Default.ThreadCulture
 
             Dim Pattern1 As String = String.Format("0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator)
             Dim Pattern2 As String = String.Format("#{1}##0{0}00", cultureInfo.NumberFormat.CurrencyDecimalSeparator, cultureInfo.NumberFormat.CurrencyGroupSeparator)

@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,13 +29,15 @@ namespace ExcelTestsCSharp
         {
             get { return "Excel"; }
         }
-
+         
         public ITestPackage[] LoadTestPackages()
         {
             if (null == _listPackages)
             {
-                NetOffice.DebugConsole.Mode = NetOffice.ConsoleMode.Console;
-                NetOffice.DebugConsole.EnableSharedOutput = true;
+                AddRegistryTweaks();
+
+                NetOffice.DebugConsole.Default.Mode = NetOffice.DebugConsoleMode.Console;
+                NetOffice.DebugConsole.Default.EnableSharedOutput = true;
 
                 _listPackages = new List<ITestPackage>();
                 _listPackages.Add(new Test01());
@@ -51,5 +54,16 @@ namespace ExcelTestsCSharp
         }
 
         #endregion
+
+        private void AddRegistryTweaks()
+        {
+            RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Office\\Excel\\Addins\\NOTestsMain.ExcelTestAddinCSharp", true);
+            if (null != key)
+            {
+                key.SetValue("NOExceptionMessage", "Test09TweakCS", RegistryValueKind.String);
+                key.Close();
+                key.Dispose();
+            }
+        }
     }
 }

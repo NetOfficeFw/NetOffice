@@ -13,7 +13,7 @@ Imports NetOffice.OfficeApi.Enums
 
 <COMAddin("NOTestsMain.ExcelTestAddinVB", "This is a test addin from NOTests.Main", 3)> _
 <CustomUI("ExcelAddinVB.RibbonUI.xml")> _
-<Guid("A3066692-C577-4E7D-B89A-FD391EE202C8"), ProgId("NOTestsMain.ExcelTestAddinVB")> _
+<Guid("A3066692-C577-4E7D-B89A-FD391EE202C8"), ProgId("NOTestsMain.ExcelTestAddinVB"), Tweak(True)> _
 Public Class TestAddin
     Inherits COMAddin
 
@@ -32,7 +32,7 @@ Public Class TestAddin
 
         Get
 
-            If (True = RibbonUIOkay And True = TaskPaneOkay And IsNothing(GeneralError)) Then
+            If (True = RibbonUIOkay And True = TaskPaneOkay And True = TweakOkay And IsNothing(GeneralError)) Then
                 Return True
             Else
                 Return False
@@ -52,12 +52,25 @@ Public Class TestAddin
             If (False = RibbonUIOkay) Then
                 result += "RibbonUI is not loaded"
             End If
+            If (False = TweakOkay) Then
+                result += "Tweak is not set " + NetOffice.Settings.Default.ExceptionMessage
+            End If
             If (Not IsNothing(GeneralError)) Then
                 result += "General Error:" + GeneralError
             End If
 
             Return result
 
+        End Get
+    End Property
+
+    Private ReadOnly Property TweakOkay As Boolean
+        Get
+            If (Factory.Settings.ExceptionMessage.StartsWith("Test09TweakVB")) Then
+                Return True
+            Else
+                Return False
+            End If
         End Get
     End Property
 
@@ -80,7 +93,15 @@ Public Class TestAddin
 
     End Sub
 
+    Public Function GetLabel(ByVal control As Office.IRibbonControl)
+
+        Return Factory.Settings.ExceptionMessage
+
+    End Function
+
     Private Sub Addin_OnConnection(ByVal Application As Object, ByVal ConnectMode As NetOffice.Tools.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Handles Me.OnConnection
+
+        Factory.Initialize()
 
         Dim addin As New Office.COMAddIn(Nothing, AddInInst)
         addin.Object = Me
@@ -88,8 +109,7 @@ Public Class TestAddin
 
     End Sub
 
-    <ErrorHandler()>
-    Public Sub GeneralErrorHandler(ByVal methodKind As ErrorMethodKind, ByVal exception As Exception)
+    Protected Overrides Sub OnError(ByVal methodKind As NetOffice.Tools.ErrorMethodKind, ByVal exception As System.Exception)
 
         If (IsNothing(GeneralError)) Then
             GeneralError = ""

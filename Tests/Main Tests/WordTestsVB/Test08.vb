@@ -32,14 +32,15 @@ Public Class Test08
 
     Public Function DoTest() As Tests.Core.TestResult Implements Tests.Core.ITestPackage.DoTest
 
-        Dim document As Word.Document = Nothing
+        Dim application As Word.Application = Nothing
         Dim startTime As DateTime = DateTime.Now
         Try
 
-            document = New Word.Document()
-            document.Application.DisplayAlerts = WdAlertLevel.wdAlertsNone
-            document.Application.Selection.TypeText("Test with TabIntend VB")
-            document.Application.Selection.Start = 0
+            application = New Word.Application()
+            Dim document As Word.Document = application.Documents.Add()
+            application.DisplayAlerts = WdAlertLevel.wdAlertsNone
+            application.Selection.TypeText("Test with TabIntend VB")
+            application.Selection.Start = 0
             Dim p As Word.Paragraph = document.Application.Selection.Range.Paragraphs(1)
 
             p.IndentCharWidth(10)
@@ -58,9 +59,9 @@ Public Class Test08
 
         Finally
 
-            If Not IsNothing(document) Then
-                document.Application.Quit()
-                document.Dispose()
+            If Not IsNothing(application) Then
+                application.Quit(WdSaveOptions.wdDoNotSaveChanges)
+                application.Dispose()
             End If
 
         End Try

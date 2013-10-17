@@ -87,7 +87,6 @@ namespace NetOffice
             // copy current factory info or set default
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             // copy proxy
@@ -126,7 +125,6 @@ namespace NetOffice
                 Factory = replacedObject.Factory;
             else
                 Factory = Core.Default;
-            Factory.CheckInitialize();
 
             // copy proxy
             _underlyingObject = replacedObject.UnderlyingObject;
@@ -162,7 +160,6 @@ namespace NetOffice
             // copy current factory info or set default
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             _underlyingObject = comProxy;
@@ -184,7 +181,6 @@ namespace NetOffice
                 Factory = parentObject.Factory;
             else
                 Factory = Core.Default;
-            Factory.CheckInitialize();
 
             _parentObject = parentObject;
             _underlyingObject = comProxy;
@@ -205,7 +201,6 @@ namespace NetOffice
         {
             // copy current factory info or set default
             Factory = Core.Default;
-            Factory.CheckInitialize();
 
             _parentObject = null;
             _underlyingObject = comProxy;
@@ -226,7 +221,6 @@ namespace NetOffice
             // copy current factory info or set default
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             _parentObject = parentObject;
@@ -252,7 +246,6 @@ namespace NetOffice
             // copy current factory info
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             _parentObject = parentObject;
@@ -279,7 +272,6 @@ namespace NetOffice
             // copy current factory info
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             _parentObject = parentObject;
@@ -310,7 +302,6 @@ namespace NetOffice
                 Factory = parentObject.Factory;
             else
                 Factory = Core.Default;
-            Factory.CheckInitialize();
 
             _parentObject = parentObject;
             _underlyingObject = comProxy;
@@ -337,7 +328,6 @@ namespace NetOffice
             // copy current factory info
             if (null == factory)
                 factory = Core.Default;
-            factory.CheckInitialize();
             Factory = factory;
 
             CreateFromProgId(progId);
@@ -352,11 +342,7 @@ namespace NetOffice
         public COMObject(string progId)
         {
             CreateFromProgId(progId);
-
-            // copy current factory info
-            Factory = new Core();
-            Factory.CheckInitialize();
-
+            Factory = Core.Default;
             Factory.AddObjectToList(this);
         }
          

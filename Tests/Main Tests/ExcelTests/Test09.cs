@@ -46,16 +46,16 @@ namespace ExcelTestsCSharp
                 Excel.Worksheet sheet = application.Workbooks[1].Sheets[1] as Excel.Worksheet;
 
                 Office.COMAddIn addin = (from a in application.COMAddIns where a.ProgId == "NOTestsMain.ExcelTestAddinCSharp" select a).FirstOrDefault();
-                if(null == addin)
-                    return new TestResult(false, DateTime.Now.Subtract(startTime), "NOTestsMain.ExcelTestAddinCSharp not found.", null, "");
-
+                if (null == addin || null == addin.Object)
+                    return new TestResult(false, DateTime.Now.Subtract(startTime), "NOTestsMain.ExcelTestAddinCSharp or addin.Object not found.", null, "");
+                	
                 bool addinStatusOkay = false;
                 string errorDescription = string.Empty;
                 if (null != addin.Object)
                 { 
-                    COMObject addinProxy = new COMObject(null, addin.Object);
-                    addinStatusOkay = (bool)Invoker.PropertyGet(addinProxy, "StatusOkay");
-                    errorDescription = (string)Invoker.PropertyGet(addinProxy, "StatusDescription");
+                    COMObject addinProxy = new COMObject(addin.Object);
+                    addinStatusOkay = (bool)Invoker.Default.PropertyGet(addinProxy, "StatusOkay");
+                    errorDescription = (string)Invoker.Default.PropertyGet(addinProxy, "StatusDescription");
                     addinProxy.Dispose();
                 }
 

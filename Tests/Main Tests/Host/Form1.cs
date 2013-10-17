@@ -80,7 +80,15 @@ namespace Host
             foreach (ITestPackage item in excelVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -88,7 +96,15 @@ namespace Host
             foreach (ITestPackage item in excelCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }
@@ -99,7 +115,15 @@ namespace Host
             foreach (ITestPackage item in outlookVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -107,7 +131,15 @@ namespace Host
             foreach (ITestPackage item in outlookCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }
@@ -118,7 +150,15 @@ namespace Host
             foreach (ITestPackage item in wordVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -126,7 +166,15 @@ namespace Host
             foreach (ITestPackage item in wordCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }
@@ -137,7 +185,15 @@ namespace Host
             foreach (ITestPackage item in powerVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -145,7 +201,15 @@ namespace Host
             foreach (ITestPackage item in powerCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }
@@ -156,7 +220,15 @@ namespace Host
             foreach (ITestPackage item in accessVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -164,7 +236,15 @@ namespace Host
             foreach (ITestPackage item in accessCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }
@@ -175,7 +255,15 @@ namespace Host
             foreach (ITestPackage item in projectVB.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
 
@@ -183,7 +271,15 @@ namespace Host
             foreach (ITestPackage item in projectCSharp.LoadTestPackages())
             {
                 ShowCurrentTestPackge(item);
-                TestResult result = item.DoTest();
+                TestResult result = null;
+                try
+                {
+                    result = item.DoTest();
+                }
+                catch (Exception exception)
+                {
+                    result = new TestResult(false, TimeSpan.MinValue, "Unexpected Error.", exception, "");
+                }
                 AddTestResult(item, result);
             }
         }

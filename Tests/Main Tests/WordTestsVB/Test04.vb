@@ -90,7 +90,7 @@ Public Class Test04
         Finally
 
             If Not IsNothing(application) Then
-                application.Quit()
+                application.Quit(WdSaveOptions.wdDoNotSaveChanges)
                 application.Dispose()
             End If
 

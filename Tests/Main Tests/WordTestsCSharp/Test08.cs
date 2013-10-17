@@ -37,16 +37,17 @@ namespace WordTestsCSharp
 
         public TestResult DoTest()
         {
-            Word.Document document = null;
+            Word.Application application = null;
             DateTime startTime = DateTime.Now;
             try
             {
-                document = new Word.Document();
-                document.Application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
-                document.Application.Selection.TypeText("Test with TabIntend C#");
-                document.Application.Selection.Start = 0;
+                application = new Word.Application();
+                Word.Document document = application.Documents.Add();
+                application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+                application.Selection.TypeText("Test with TabIntend C#");
+                application.Selection.Start = 0;
                 Word.Paragraph p = document.Application.Selection.Range.Paragraphs[1];
-               
+
                 p.IndentCharWidth(10);
                 p.IndentFirstLineCharWidth(8);
                 p.Space1();
@@ -54,7 +55,7 @@ namespace WordTestsCSharp
                 p.Space2();
                 p.TabHangingIndent(5);
                 p.TabIndent(3);
-
+               
                 return new TestResult(true, DateTime.Now.Subtract(startTime), "", null, "");
             }
             catch (Exception exception)
@@ -63,10 +64,10 @@ namespace WordTestsCSharp
             }
             finally
             {
-                if (null != document)
+                if (null != application)
                 {
-                    document.Application.Quit();
-                    document.Dispose();
+                    application.Quit(WdSaveOptions.wdDoNotSaveChanges);
+                    application.Dispose();
                 }
             }
         }

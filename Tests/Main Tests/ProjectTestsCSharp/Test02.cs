@@ -34,7 +34,7 @@ namespace ProjectTestsCSharp
 
         public TestResult DoTest()
         {
-            NetOffice.Settings.MessageFilter.Enabled = true;
+            NetOffice.Settings.Default.MessageFilter.Enabled = true;
             MSProject.Application application = null;
             DateTime startTime = DateTime.Now;
             try
@@ -77,7 +77,7 @@ namespace ProjectTestsCSharp
             }
             finally
             {
-                NetOffice.Settings.MessageFilter.Enabled = false;
+                NetOffice.Settings.Default.MessageFilter.Enabled = false;
 
                 if (null != application)
                 {
