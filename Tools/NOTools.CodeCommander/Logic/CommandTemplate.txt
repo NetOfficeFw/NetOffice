@@ -1,0 +1,29 @@
+﻿using System;
+using System.IO;
+using NetOffice;
+%Usings%
+
+namespace DynamicCommands
+{
+	public class MyCommand : NetOfficeDeveloperAddin.Logic.DynamicCommand
+	{
+		/// <summary>
+		/// Execute the command and call HostApplication.Dispose() after them
+		/// </summary>
+		public override void Execute()
+		{
+			// insert code here
+		}
+			 
+		/// <summary>
+		/// Current Office Host Application
+		/// </summary>
+		internal %HostType% Application
+		{
+			get
+			{
+				return base.HostApplication as %HostType%;
+			}
+		}
+	}	
+}
