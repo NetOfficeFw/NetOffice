@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoadRibonUI" >
+  <ribbon>
+    <tabs>
+      <tab id="ExtendedAccessCS4.Addin" label="NetOfficeTools Extended Example CS4">
+        <group id="group1" label="Example">
+          <button id="aboutButton" label="About" imageMso="AdvertisePublishAs" size="large" onAction="OnClickAboutButton" />
+          <toggleButton id="paneVisibleToogleButton" label="Sample Pane(CS4) Visible" imageMso="CreateFormBlankForm" size="large" getPressed="OnGetPressedPanelToggle" onAction="OnCheckPanelToggle" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

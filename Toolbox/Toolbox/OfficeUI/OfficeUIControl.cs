@@ -27,8 +27,8 @@ namespace NetOffice.DeveloperToolbox
         public OfficeUIControl()
         {
             InitializeComponent();
-            NetOffice.DebugConsole.Mode = ConsoleMode.Console;
-            NetOffice.Settings.UseExceptionMessage = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
+            NetOffice.DebugConsole.Default.Mode = DebugConsoleMode.Console;
+            NetOffice.Settings.Default.UseExceptionMessage = ExceptionMessageHandling.CopyAllInnerExceptionMessagesToTopLevelException;
             _waitControl = new WaitControl(_currentLanguageID);
             _waitControl.Visible = false;
             this.Controls.Add(_waitControl);

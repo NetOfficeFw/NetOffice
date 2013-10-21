@@ -1,0 +1,5 @@
+﻿Example01		- create new Database
+Example02		- write data
+Example03		- use compactdatabase
+Example04		- database informations
+Example05		- customize UI

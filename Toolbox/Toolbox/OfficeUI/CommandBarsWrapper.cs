@@ -18,15 +18,15 @@ namespace NetOffice.DeveloperToolbox
 
         private IEnumerator GetProxyEnumeratorAsProperty(COMObject comObject)
         {
-            object enumProxy = Invoker.PropertyGet(comObject, "_NewEnum");
-            COMObject enumerator = new COMObject(comObject, enumProxy, true);
-            Invoker.MethodWithoutSafeMode(enumerator, "Reset", null);
-            bool isMoveNextTrue = (bool)Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+            object enumProxy = Invoker.Default.PropertyGet(comObject, "_NewEnum");
+            COMObject enumerator = new COMObject(Core.Default, comObject, enumProxy, true);
+            Invoker.Default.MethodWithoutSafeMode(enumerator, "Reset", null);
+            bool isMoveNextTrue = (bool)Invoker.Default.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
             while (true == isMoveNextTrue)
             {
-                object itemProxy = Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
+                object itemProxy = Invoker.Default.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                 COMObject returnClass = new COMObject(enumerator, itemProxy);
-                isMoveNextTrue = (bool)Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
+                isMoveNextTrue = (bool)Invoker.Default.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 yield return returnClass;
             }
         }

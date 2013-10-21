@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+  <Customer ID ="1" Name="Maria Anders" Company="Alfreds Futterkiste" City="Berlin" PostalCode="12209" Country="Germany" Phone="030-0074321" />
+  <Customer ID ="2" Name="Ana Trujillo" Company="Ana Trujillo Emparedados y helados" City="México D.F." PostalCode="05021" Country="Mexico" Phone="(5) 555-4729" />
+  <Customer ID ="3" Name="Antonio Moreno" Company="Antonio Moreno Taquería" City="México D.F." PostalCode="05023" Country="Mexico" Phone="(5) 555-3932" />
+  <Customer ID ="4" Name="Thomas Hardy" Company="Around the Horn" City="London" PostalCode="WA1 1DP" Country="UK" Phone="(171) 555-7788" />
+  <Customer ID ="5" Name="Christina Berglund" Company="Berglunds snabbköp" City="Luleå" PostalCode="S-958 22" Country="Sweden" Phone="0921-12 34 65" />
+  <Customer ID ="6" Name="Hanna Moos" Company="Blauer See Delikatessen" City="Mannheim" PostalCode="68306" Country="Germany" Phone="0621-08460" />
+  <Customer ID ="7" Name="Frédérique Citeaux" Company="Blondel père et fils" City="Strasbourg" PostalCode="67000" Country="France" Phone="88.60.15.31" />
+  <Customer ID ="8" Name="Martín Sommer" Company="Bólido Comidas preparadas" City="Madrid" PostalCode="28023" Country="Spain" Phone="(91) 555 22 82" />
+  <Customer ID ="9" Name="Laurence Lebihan" Company="Bon app'" City="Marseille" PostalCode="13008" Country="France" Phone="91.24.45.40" />
+  <Customer ID ="10" Name="Elizabeth Lincoln" Company="Bottom-Dollar Markets" City="Tsawassen" PostalCode="T2F 8M4" Country="Canada" Phone="(604) 555-4729" />
+  <Customer ID ="11" Name="Victoria Ashworth" Company="B's Beverages" City="London" PostalCode="EC2 5NT" Country="UK" Phone="(171) 555-1212" />
+  <Customer ID ="12" Name="Patricio Simpson" Company="Cactus Comidas para llevar" City="Buenos Aires" PostalCode="1010" Country="Argentina" Phone="(1) 135-5555" />
+  <Customer ID ="13" Name="Francisco Chang" Company="Centro comercial Moctezuma" City="México D.F." PostalCode="05022" Country="Mexico" Phone="(5) 555-3392" />
+  <Customer ID ="14" Name="Yang Wang" Company="Chop-suey Chinese" City="Bern" PostalCode="3012" Country="Switzerland" Phone="0452-076545" />
+  <Customer ID ="15" Name="Pedro Afonso" Company="Comércio Mineiro" City="São Paulo" PostalCode="05432-043" Country="Brazil" Phone="(11) 555-7647" />
+  <Customer ID ="16" Name="Elizabeth Brown" Company="Consolidated Holdings" City="London" PostalCode="WX1 6LT" Country="UK" Phone="(171) 555-2282" />
+  <Customer ID ="17" Name="Sven Ottlieb" Company="Drachenblut Delikatessen" City="Aachen" PostalCode="52066" Country="Germany" Phone="0241-039123" />
+  <Customer ID ="18" Name="Janine Labrune" Company="Du monde entier" City="Nantes" PostalCode="44000" Country="France" Phone="40.67.88.88" />
+  <Customer ID ="19" Name="Ann Devon" Company="Eastern Connection" City="London" PostalCode="WX3 6FW" Country="UK" Phone="(171) 555-0297" />
+  <Customer ID ="20" Name="Roland Mendel" Company="Ernst Handel" City="Graz" PostalCode="8010" Country="Austria" Phone="7675-3425" />
+  <Customer ID ="21" Name="Aria Cruz" Company="Familia Arquibaldo" City="São Paulo" PostalCode="05442-030" Country="Brazil" Phone="(11) 555-9857" />
+  <Customer ID ="22" Name="Diego Roel" Company="FISSA Fabrica Inter. Salchichas S.A." City="Madrid" PostalCode="28034" Country="Spain" Phone="(91) 555 94 44" />
+  <Customer ID ="23" Name="Martine Rancé" Company="Folies gourmandes" City="Lille" PostalCode="59000" Country="France" Phone="20.16.10.16" />
+  <Customer ID ="24" Name="Maria Larsson" Company="Folk och fä HB" City="Bräcke" PostalCode="S-844 67" Country="Sweden" Phone="0695-34 67 21" />
+  <Customer ID ="25" Name="Peter Franken" Company="Frankenversand" City="München" PostalCode="80805" Country="Germany" Phone="089-0877310" />
+  <Customer ID ="26" Name="Carine Schmitt" Company="France restauration" City="Nantes" PostalCode="44000" Country="France" Phone="40.32.21.21" />
+  <Customer ID ="27" Name="Paolo Accorti" Company="Franchi S.p.A." City="Torino" PostalCode="10100" Country="Italy" Phone="011-4988260" />
+  <Customer ID ="28" Name="Lino Rodriguez " Company="Furia Bacalhau e Frutos do Mar" City="Lisboa" PostalCode="1675" Country="Portugal" Phone="(1) 354-2534" />
+  <Customer ID ="29" Name="Eduardo Saavedra" Company="Galería del gastrónomo" City="Barcelona" PostalCode="08022" Country="Spain" Phone="(93) 203 4560" />
+  <Customer ID ="30" Name="José Pedro Freyre" Company="Godos Cocina Típica" City="Sevilla" PostalCode="41101" Country="Spain" Phone="(95) 555 82 82" />
+  <Customer ID ="31" Name="André Fonseca" Company="Gourmet Lanchonetes" City="Campinas" PostalCode="04876-786" Country="Brazil" Phone="(11) 555-9482" />
+  <Customer ID ="32" Name="Howard Snyder" Company="Great Lakes Food Market" City="Eugene" PostalCode="97403" Country="USA" Phone="(503) 555-7555" />
+  <Customer ID ="33" Name="Manuel Pereira" Company="GROSELLA-Restaurante" City="Caracas" PostalCode="1081" Country="Venezuela" Phone="(2) 283-2951" />
+  <Customer ID ="34" Name="Mario Pontes" Company="Hanari Carnes" City="Rio de Janeiro" PostalCode="05454-876" Country="Brazil" Phone="(21) 555-0091" />
+  <Customer ID ="35" Name="Carlos Hernández" Company="HILARIÓN-Abastos" City="San Cristóbal" PostalCode="5022" Country="Venezuela" Phone="(5) 555-1340" />
+  <Customer ID ="36" Name="Yoshi Latimer" Company="Hungry Coyote Import Store" City="Elgin" PostalCode="97827" Country="USA" Phone="(503) 555-6874" />
+  <Customer ID ="37" Name="Helen Bennett" Company="Island Trading" City="Cowes" PostalCode="PO31 7PJ" Country="UK" Phone="(198) 555-8888" />
+  <Customer ID ="38" Name="Philip Cramer" Company="Königlich Essen" City="Brandenburg" PostalCode="14776" Country="Germany" Phone="0555-09876" />
+  <Customer ID ="39" Name="Daniel Tonini" Company="La corne d'abondance" City="Versailles" PostalCode="78000" Country="France" Phone="30.59.84.10" />
+  <Customer ID ="40" Name="Annette Roulet" Company="La maison d'Asie" City="Toulouse" PostalCode="31000" Country="France" Phone="61.77.61.10" />
+  <Customer ID ="41" Name="Yoshi Tannamuri" Company="Laughing Bacchus Wine Cellars" City="Vancouver" PostalCode="V3F 2K1" Country="Canada" Phone="(604) 555-3392" />
+  <Customer ID ="42" Name="John Steel" Company="Lazy K Kountry Store" City="Walla Walla" PostalCode="99362" Country="USA" Phone="(509) 555-7969" />
+  <Customer ID ="43" Name="Renate Messner" Company="Lehmanns Marktstand" City="Frankfurt a.M. " PostalCode="60528" Country="Germany" Phone="069-0245984" />
+  <Customer ID ="44" Name="Jaime Yorres" Company="Let's Stop N Shop" City="San Francisco" PostalCode="94117" Country="USA" Phone="(415) 555-5938" />
+  <Customer ID ="45" Name="Carlos González" Company="LILA-Supermercado" City="Barquisimeto" PostalCode="3508" Country="Venezuela" Phone="(9) 331-6954" />
+  <Customer ID ="46" Name="Felipe Izquierdo" Company="LINO-Delicateses" City="I. de Margarita" PostalCode="4980" Country="Venezuela" Phone="(8) 34-56-12" />
+  <Customer ID ="47" Name="Fran Wilson" Company="Lonesome Pine Restaurant" City="Portland" PostalCode="97219" Country="USA" Phone="(503) 555-9573" />
+  <Customer ID ="48" Name="Giovanni Rovelli" Company="Magazzini Alimentari Riuniti" City="Bergamo" PostalCode="24100" Country="Italy" Phone="035-640230" />
+  <Customer ID ="49" Name="Catherine Dewey" Company="Maison Dewey" City="Bruxelles" PostalCode="B-1180" Country="Belgium" Phone="(02) 201 24 67" />
+  <Customer ID ="50" Name="Jean Fresnière" Company="Mère Paillarde" City="Montréal" PostalCode="H1J 1C3" Country="Canada" Phone="(514) 555-8054" />
+  <Customer ID ="51" Name="Alexander Feuer" Company="Morgenstern Gesundkost" City="Leipzig" PostalCode="04179" Country="Germany" Phone="0342-023176" />
+  <Customer ID ="52" Name="Simon Crowther" Company="North/South" City="London" PostalCode="SW7 1RZ" Country="UK" Phone="(171) 555-7733" />
+  <Customer ID ="53" Name="Yvonne Moncada" Company="Océano Atlántico Ltda." City="Buenos Aires" PostalCode="1010" Country="Argentina" Phone="(1) 135-5333" />
+  <Customer ID ="54" Name="Rene Phillips" Company="Old World Delicatessen" City="Anchorage" PostalCode="99508" Country="USA" Phone="(907) 555-7584" />
+  <Customer ID ="55" Name="Henriette Pfalzheim" Company="Ottilies Käseladen" City="Köln" PostalCode="50739" Country="Germany" Phone="0221-0644327" />
+  <Customer ID ="56" Name="Marie Bertrand" Company="Paris spécialités" City="Paris" PostalCode="75012" Country="France" Phone="(1) 42.34.22.66" />
+  <Customer ID ="57" Name="Guillermo Fernández" Company="Pericles Comidas clásicas" City="México D.F." PostalCode="05033" Country="Mexico" Phone="(5) 552-3745" />
+  <Customer ID ="58" Name="Georg Pipps" Company="Piccolo und mehr" City="Salzburg" PostalCode="5020" Country="Austria" Phone="6562-9722" />
+  <Customer ID ="59" Name="Isabel de Castro" Company="Princesa Isabel Vinhos" City="Lisboa" PostalCode="1756" Country="Portugal" Phone="(1) 356-5634" />
+  <Customer ID ="60" Name="Bernardo Batista" Company="Que Delícia" City="Rio de Janeiro" PostalCode="02389-673" Country="Brazil" Phone="(21) 555-4252" />
+  <Customer ID ="61" Name="Lúcia Carvalho" Company="Queen Cozinha" City="São Paulo" PostalCode="05487-020" Country="Brazil" Phone="(11) 555-1189" />
+  <Customer ID ="62" Name="Horst Kloss" Company="QUICK-Stop" City="Cunewalde" PostalCode="01307" Country="Germany" Phone="0372-035188" />
+  <Customer ID ="63" Name="Sergio Gutiérrez" Company="Rancho grande" City="Buenos Aires" PostalCode="1010" Country="Argentina" Phone="(1) 123-5555" />
+  <Customer ID ="64" Name="Paula Wilson" Company="Rattlesnake Canyon Grocery" City="Albuquerque" PostalCode="87110" Country="USA" Phone="(505) 555-5939" />
+  <Customer ID ="65" Name="Maurizio Moroni" Company="Reggiani Caseifici" City="Reggio Emilia" PostalCode="42100" Country="Italy" Phone="0522-556721" />
+  <Customer ID ="66" Name="Janete Limeira" Company="Ricardo Adocicados" City="Rio de Janeiro" PostalCode="02389-890" Country="Brazil" Phone="(21) 555-3412" />
+  <Customer ID ="67" Name="Michael Holz" Company="Richter Supermarkt" City="Genève" PostalCode="1203" Country="Switzerland" Phone="0897-034214" />
+  <Customer ID ="68" Name="Alejandra Camino" Company="Romero y tomillo" City="Madrid" PostalCode="28001" Country="Spain" Phone="(91) 745 6200" />
+  <Customer ID ="69" Name="Jonas Bergulfsen" Company="Santé Gourmet" City="Stavern" PostalCode="4110" Country="Norway" Phone="07-98 92 35" />
+  <Customer ID ="70" Name="Jose Pavarotti" Company="Save-a-lot Markets" City="Boise" PostalCode="83720" Country="USA" Phone="(208) 555-8097" />
+  <Customer ID ="71" Name="Hari Kumar" Company="Seven Seas Imports" City="London" PostalCode="OX15 4NB" Country="UK" Phone="(171) 555-1717" />
+  <Customer ID ="72" Name="Jytte Petersen" Company="Simons bistro" City="København" PostalCode="1734" Country="Denmark" Phone="31 12 34 56" />
+  <Customer ID ="73" Name="Dominique Perrier" Company="Spécialités du monde" City="Paris" PostalCode="75016" Country="France" Phone="(1) 47.55.60.10" />
+  <Customer ID ="74" Name="Art Braunschweiger" Company="Split Rail Beer &amp; Ale" City="Lander" PostalCode="82520" Country="USA" Phone="(307) 555-4680" />
+  <Customer ID ="75" Name="Pascale Cartrain" Company="Suprêmes délices" City="Charleroi" PostalCode="B-6000" Country="Belgium" Phone="(071) 23 67 22 20" />
+  <Customer ID ="76" Name="Liz Nixon" Company="The Big Cheese" City="Portland" PostalCode="97201" Country="USA" Phone="(503) 555-3612" />
+  <Customer ID ="77" Name="Liu Wong" Company="The Cracker Box" City="Butte" PostalCode="59801" Country="USA" Phone="(406) 555-5834" />
+  <Customer ID ="78" Name="Karin Josephs" Company="Toms Spezialitäten" City="Münster" PostalCode="44087" Country="Germany" Phone="0251-031259" />
+  <Customer ID ="79" Name="Miguel Angel Paolino" Company="Tortuga Restaurante" City="México D.F." PostalCode="05033" Country="Mexico" Phone="(5) 555-2933" />
+  <Customer ID ="80" Name="Anabela Domingues" Company="Tradição Hipermercados" City="São Paulo" PostalCode="05634-030" Country="Brazil" Phone="(11) 555-2167" />
+  <Customer ID ="81" Name="Helvetius Nagy" Company="Trail's Head Gourmet Provisioners" City="Kirkland" PostalCode="98034" Country="USA" Phone="(206) 555-8257" />
+  <Customer ID ="82" Name="Palle Ibsen" Company="Vaffeljernet" City="Århus" PostalCode="8200" Country="Denmark" Phone="86 21 32 43" />
+  <Customer ID ="83" Name="Mary Saveley" Company="Victuailles en stock" City="Lyon" PostalCode="69004" Country="France" Phone="78.32.54.86" />
+  <Customer ID ="84" Name="Paul Henriot" Company="Vins et alcools Chevalier" City="Reims" PostalCode="51100" Country="France" Phone="26.47.15.10" />
+  <Customer ID ="85" Name="Rita Müller" Company="Die Wandernde Kuh" City="Stuttgart" PostalCode="70563" Country="Germany" Phone="0711-020361" />
+  <Customer ID ="86" Name="Pirkko Koskitalo" Company="Wartian Herkku" City="Oulu" PostalCode="90110" Country="Finland" Phone="981-443655" />
+  <Customer ID ="87" Name="Paula Parente" Company="Wellington Importadora" City="Resende" PostalCode="08737-363" Country="Brazil" Phone="(14) 555-8122" />
+  <Customer ID ="88" Name="Karl Jablonski" Company="White Clover Markets" City="Seattle" PostalCode="98128" Country="USA" Phone="(206) 555-4112" />
+  <Customer ID ="89" Name="Matti Karttunen" Company="Wilman Kala" City="Helsinki" PostalCode="21240" Country="Finland" Phone="90-224 8858" />
+  <Customer ID ="90" Name="Zbyszek Piestrzeniewicz" Company="Wolski  Zajazd" City="Warszawa" PostalCode="01-012" Country="Poland" Phone="(26) 642-7012" />
+</Customers>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Simple", "Simple\NetOffice Tools - Simple.csproj", "{788064E5-CF75-47EC-B970-AC58CF75F647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Extended", "Extended\NetOffice Tools - Extended.csproj", "{D5AA7573-497C-42C5-843E-A607D134330B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice Tools - Tweaks", "Tweaks\NetOffice Tools - Tweaks.csproj", "{91D666FC-3012-4556-99A9-A359A53FFF38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{788064E5-CF75-47EC-B970-AC58CF75F647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788064E5-CF75-47EC-B970-AC58CF75F647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788064E5-CF75-47EC-B970-AC58CF75F647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788064E5-CF75-47EC-B970-AC58CF75F647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AA7573-497C-42C5-843E-A607D134330B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AA7573-497C-42C5-843E-A607D134330B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AA7573-497C-42C5-843E-A607D134330B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AA7573-497C-42C5-843E-A607D134330B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D666FC-3012-4556-99A9-A359A53FFF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D666FC-3012-4556-99A9-A359A53FFF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D666FC-3012-4556-99A9-A359A53FFF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D666FC-3012-4556-99A9-A359A53FFF38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
