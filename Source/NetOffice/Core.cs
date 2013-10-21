@@ -178,6 +178,18 @@ namespace NetOffice
         /// </summary>
         public event ProxyCountChangedHandler ProxyCountChanged;
 
+        /// <summary>
+        /// Raise the ProxyCountChanged event (and optional, send channel message to console)
+        /// </summary>
+        /// <param name="proxyCount"></param>
+        private void RaiseProxyCountChanged(int proxyCount)
+        {
+            if (null != ProxyCountChanged)
+                ProxyCountChanged(proxyCount);
+            if (Settings.EnableProxyCountChannel)
+                this.Console.SendPipeChannelMessage(Settings.ProxyCountChannelName, String.Format("Current Proxy Count:{0}", proxyCount));
+        }
+
         #endregion
 
         #region Factory Methods
@@ -784,8 +796,7 @@ namespace NetOffice
 
                 _globalObjectList.Add(proxy);
 
-                if (null != ProxyCountChanged)
-                    ProxyCountChanged(_globalObjectList.Count);
+                RaiseProxyCountChanged(_globalObjectList.Count);
             }
             catch (Exception throwedException)
             {
@@ -815,8 +826,7 @@ namespace NetOffice
 
                 _globalObjectList.Remove(proxy);
 
-                if (null != ProxyCountChanged)
-                    ProxyCountChanged(_globalObjectList.Count);
+                RaiseProxyCountChanged(_globalObjectList.Count);
             }
             catch (Exception throwedException)
             {

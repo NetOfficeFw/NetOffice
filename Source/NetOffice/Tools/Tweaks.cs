@@ -76,6 +76,7 @@ namespace NetOffice.Tools
                 RegistryKey key = hiveKey.OpenSubKey("Software\\Microsoft\\Office\\" + registryEndPoint + "\\Addins\\" + progIDAttribute.Value);
                 if (null != key)
                 {
+                    TweakProxyCountChannel(factory, addinInstance, addinType, key);
                     TweakConsoleMode(factory, addinInstance, addinType, key);
                     TweakSharedOutput(factory, addinInstance, addinType, key);
                     TweakAddHocLoading(factory, addinInstance, addinType, key);
@@ -244,6 +245,28 @@ namespace NetOffice.Tools
         #endregion
 
         #region NO Tweaks
+        
+        private static void TweakProxyCountChannel(Core factory, object addinInstance, Type addinType, RegistryKey key)
+        {
+            string value = key.GetValue("NOEnableProxyCountChannel", null) as string;
+            if (null != value)
+            {
+                bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOEnableProxyCountChannel", value);
+                if (!allow)
+                    return;
+                value = value.ToLower().Trim();
+                if (value.StartsWith("enabled", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    int pos = value.IndexOf(";", StringComparison.InvariantCultureIgnoreCase);
+                    if (pos > -1)
+                    {
+                        string channelName = value.Substring(pos + 1);
+                        factory.Settings.EnableProxyCountChannel = true;
+                        factory.Settings.ProxyCountChannelName = channelName;
+                    }
+                }
+            }
+        }
 
         private static void TweakConsoleMode(Core factory, object addinInstance, Type addinType, RegistryKey key)
         {

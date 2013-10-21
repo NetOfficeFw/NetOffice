@@ -48,6 +48,8 @@ namespace NetOffice
         private bool                _enableEventDebugOutput = false;
         private bool                _enableSafeMode = false;
         private bool                _enableProxyManagement = true;
+        private bool                _enableProxyCountChannel = false;
+        private string              _proxyCountChannelName = "DefaultProxyCountChannel";
         private CacheOptions        _cacheOptions = CacheOptions.KeepExistingCacheAlive;
         private bool                _enableOperatorOverlads = true;
         private string              _exceptionMessage = "See inner exception(s) for details.";
@@ -265,6 +267,36 @@ namespace NetOffice
             set
             {
                 _enableEventDebugOutput = value;
+            }
+        }
+        
+        /// <summary>
+        /// Get or set NetOffice logs the current proxy count from a core factory to a ConsoleMonitor channel
+        /// </summary>
+        public bool EnableProxyCountChannel
+        {
+            get
+            {
+                return _enableProxyCountChannel;
+            }
+            set
+            {
+                _enableProxyCountChannel = value;
+            }
+        }
+
+        /// <summary>
+        /// A ConsoleMonitor channel name for the option EnableProxyCountChannel 
+        /// </summary>
+        public string ProxyCountChannelName
+        {
+            get
+            {
+                return _proxyCountChannelName;
+            }
+            set
+            {
+                _proxyCountChannelName = value;
             }
         }
 

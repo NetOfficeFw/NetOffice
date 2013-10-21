@@ -64,15 +64,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExcelApi">
-      <HintPath>..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
+      <HintPath>..\..\..\Assemblies\Any CPU\ExcelApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="NetOffice">
-      <HintPath>..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+      <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="OfficeApi">
-      <HintPath>..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
+      <HintPath>..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -81,7 +81,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TutorialsBase">
-      <HintPath>..\TutorialsBase.dll</HintPath>
+      <HintPath>..\..\TutorialsBase.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -95,7 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutorial01.cs" />
     <Compile Include="Tutorial02.cs" />
-    <Compile Include="Tutorial03.cs" />
+    <Compile Include="Tutorial03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Tutorial03.Designer.cs">
       <DependentUpon>Tutorial03.cs</DependentUpon>
     </Compile>
