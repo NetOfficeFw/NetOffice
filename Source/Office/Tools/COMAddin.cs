@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi.Tools
             {
                 string registryEndPoint = TryDetectHostRegistryKey(Application);
                 if(null != registryEndPoint)
-                    Tweaks.EnableTweaks(Factory, Type, registryEndPoint);
+                    Tweaks.ApplyTweaks(Factory, this, Type, registryEndPoint);
             }             
 
 			this.Application = Factory.CreateObjectFromComProxy(null, Application);
@@ -231,6 +231,7 @@ namespace NetOffice.OfficeApi.Tools
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
+            Tweaks.DisposeTweaks(Factory, this, Type);
             RaiseOnDisconnection(RemoveMode, ref custom);
 
 			foreach(ITaskPane item in TaskPaneInstances)
@@ -334,8 +335,9 @@ namespace NetOffice.OfficeApi.Tools
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
-                        Office._CustomTaskPane taskPane = TaskPaneFactory.CreateCTP(item.Type.FullName, title);                        
+                        Office.CustomTaskPane taskPane = TaskPaneFactory.CreateCTP(item.Type.FullName, title) as Office.CustomTaskPane;                        
                         item.Pane = taskPane;
+                        item.AssignEvents();
                         item.IsLoaded = true;
 
                         ITaskPane pane = taskPane.ContentControl as ITaskPane;
@@ -362,6 +364,92 @@ namespace NetOffice.OfficeApi.Tools
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
+        }
+
+        #endregion
+
+        #region Tweaks
+
+        /// <summary>
+        /// This is method is called while startup and ask for permissions to apply a tweak. 
+        /// </summary>
+        /// <param name="name">name of the tweak</param>
+        /// <param name="value">value of the tweak</param>
+        /// <returns>true(default) or false if you dont want this tweak is affected to the addin instance</returns>
+        protected virtual bool AllowApplyTweak(string name, string value)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// Called for custom tweaks to apply the tweak.
+        /// </summary>
+        /// <param name="name">name for the tweak</param>
+        /// <param name="value">value for the teak</param>
+        protected virtual void ApplyCustomTweak(string name, string value)
+        {
+        }
+
+        /// <summary>
+        /// Called for custom tweaks to unload a tweak. Please note: This method is not called in case of unexpected termination.
+        /// You have no warranties for dispose your tweak.
+        /// </summary>
+        /// <param name="name">name for the tweak</param>
+        /// <param name="value">value for the teak</param>
+        protected virtual void DisposeCustomTweak(string name, string value)
+        {
+
+        }
+
+        /// <summary>
+        /// Creates an registry tweak entry in the current addin key
+        /// </summary>
+        /// <param name="addinType">addin type information</param>
+        /// <param name="name">name for the tweak</param>
+        /// <param name="value">value for the tweak</param>
+        /// <param name="throwException">throw exception on error</param>
+        /// <returns>true if key was created otherwise false</returns>
+        protected static bool SetTweakPersistenceEntry(Type addinType, string name, string value, bool throwException)
+        {
+            try
+            {
+                if (null == addinType)
+                    return false;
+                RegistryLocationAttribute registry = AttributeHelper.GetRegistryLocationAttribute(addinType);
+                ProgIdAttribute progID = AttributeHelper.GetProgIDAttribute(addinType);
+                MultiRegisterAttribute register = MultiRegisterAttribute.GetAttribute(addinType);
+
+                if (null == registry)
+                    return false;
+                if (null == progID)
+                    return false;
+                // my current keyboard miss the logical or. thanks LogiLink
+
+                foreach (RegisterIn item in register.Products)
+                {
+                    RegistryKey regKeyOffice = null;
+                    if (registry.Value == RegistrySaveLocation.LocalMachine)
+                        regKeyOffice = Registry.LocalMachine.OpenSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progID.Value, true);
+                    else
+                        regKeyOffice = Registry.CurrentUser.OpenSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progID.Value, true);
+
+                    if (null == regKeyOffice)
+                        continue;
+                    regKeyOffice.SetValue(name, value);
+                    regKeyOffice.Close();
+                    regKeyOffice.Dispose();
+                }
+
+                return true;
+            }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                if (throwException)
+                    throw;
+                else
+                    return false;
+            }
         }
 
         #endregion

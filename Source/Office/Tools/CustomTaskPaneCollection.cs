@@ -6,7 +6,7 @@ using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
 namespace NetOffice.OfficeApi.Tools
-{
+{    
     /// <summary>
     /// wrapper class for CustomTaskPane instance
     /// </summary>
@@ -24,6 +24,60 @@ namespace NetOffice.OfficeApi.Tools
             ChangedProperties = new Dictionary<string, object>();
             Type = type;
             Title = title;
+        }
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Occurs when task visibility is changed
+        /// </summary>
+        public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChange
+        { 
+            add
+            {
+                _visibleStateChange += value;
+            }
+            remove
+            {
+                _visibleStateChange -= value;
+            }
+        }
+        private CustomTaskPane_VisibleStateChangeEventHandler _visibleStateChange;
+
+        /// <summary>
+        /// Raise the VisibleChanged event
+        /// </summary>
+        internal void RaiseVisibleChanged(Office._CustomTaskPane pane)
+        {
+            if (null != _visibleStateChange)
+                _visibleStateChange(pane);
+        }
+
+        /// <summary>
+        /// Occurs when dock postion state is changed
+        /// </summary>
+        public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChange
+        {
+            add
+            {
+                _dockPositionStateChange += value;
+            }
+            remove
+            {
+                _dockPositionStateChange -= value;
+            }
+        }
+        private CustomTaskPane_DockPositionStateChangeEventHandler _dockPositionStateChange;
+
+        /// <summary>
+        /// Raise the DockPositionStateChange event
+        /// </summary>
+        internal void RaiseDockPositionStateChanged(Office._CustomTaskPane pane)
+        {
+            if (null != _dockPositionStateChange)
+                _dockPositionStateChange(pane);
         }
 
         #endregion
@@ -228,7 +282,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// CustomTaskPane instance
         /// </summary>
-        public NetOffice.OfficeApi._CustomTaskPane Pane { get; set; }
+        public NetOffice.OfficeApi.CustomTaskPane Pane { get; set; }
 
         /// <summary>
         /// UserControl type info
@@ -239,6 +293,45 @@ namespace NetOffice.OfficeApi.Tools
         /// Additional Arguments for OnConnection. The UserControl must implement ITaskPane to use it
         /// </summary>
 		public object[] Arguments{ get; set; }
+
+        #endregion
+
+        #region Methods / Trigger
+
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public void AssignEvents()
+        {
+            if (null != Pane && !Pane.IsDisposed && System.Runtime.InteropServices.Marshal.IsComObject(Pane.UnderlyingObject))
+            {
+                Pane.VisibleStateChangeEvent += new CustomTaskPane_VisibleStateChangeEventHandler(Pane_VisibleStateChangeEvent);
+                Pane.DockPositionStateChangeEvent += new CustomTaskPane_DockPositionStateChangeEventHandler(Pane_DockPositionStateChangeEvent);
+            }
+        }
+
+        private void Pane_DockPositionStateChangeEvent(_CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                RaiseDockPositionStateChanged(customTaskPaneInst);
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+            }
+        }
+
+        private void Pane_VisibleStateChangeEvent(_CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                RaiseVisibleChanged(customTaskPaneInst);
+            }
+            catch (Exception exception)
+            {
+                DebugConsole.Default.WriteException(exception);
+            }
+            
+        }
 
         #endregion
     }
