@@ -50,7 +50,7 @@ namespace NOTools.CSharpTextEditor
             DataContext = _currentFile;
             TextEditor1.Document = new ICSharpCode.AvalonEdit.Document.TextDocument();
             TextEditor1.Text = string.Empty;
-            SetupContextMenu();
+            SetupContextMenu(); 
         }
 
         #endregion

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace NOTools.CSharpTextEditorPFCreator
+namespace NOToolsTests.CSharpTextEditor1
 {
     static class Program
     {
@@ -15,8 +15,7 @@ namespace NOTools.CSharpTextEditorPFCreator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTest());
-            //AApplication.Run(new FormCreator());
+            Application.Run(new Form1());
         }
     }
 }

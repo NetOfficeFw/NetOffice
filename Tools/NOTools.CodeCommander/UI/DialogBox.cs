@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Text;
 
-namespace NOTools.DeveloperAddin.UI
+namespace NOTools.CodeCommander.UI
 {
     /// <summary>
     /// helper: display messages and errors

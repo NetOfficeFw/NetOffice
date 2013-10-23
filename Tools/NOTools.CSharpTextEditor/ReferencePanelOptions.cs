@@ -17,6 +17,7 @@ namespace NOTools.CSharpTextEditor
         internal ReferencePanelOptions(CodeEditorControl parent)
         {
             Parent = parent;
+            InitLocalization();
         }
 
         /// <summary>
@@ -39,6 +40,54 @@ namespace NOTools.CSharpTextEditor
                 Parent.splitContainer3.Panel2Collapsed = !value;
             }
         }
+
+        /// <summary>
+        /// Allow the user to add/remove references
+        /// </summary>
+        [DisplayName("AllowAddRemove"), Category("CodeEditor"), Description("Allow the user to add/remove references")]
+        public bool AllowAddRemoveReferences { get; set; }
+
+        /// <summary>
+        /// GAC Tab Label
+        /// </summary>
+        [DisplayName("GACTitle"), Category("Localization"), Description("GAC Tab Label")]
+        public string GACTitle { get; set; }
+
+        /// <summary>
+        /// FileSystem Tab Label
+        /// </summary>
+        [DisplayName("FileSystemTitle"), Category("Localization"), Description("FileSystem Tab Label")]
+        public string FileSystemTitle { get; set; }
+
+        /// <summary>
+        /// Add Menu Item Label
+        /// </summary>
+        [DisplayName("AddTitle"), Category("Localization"), Description("Add Menu Item Label")]
+        public string AddTitle { get; set; }
+
+        /// <summary>
+        /// Remove Menu Item Label
+        /// </summary>
+        [DisplayName("RemoveTitle"), Category("Localization"), Description("Remove Menu Item Label")]
+        public string RemoveTitle { get; set; }
+
+        /// <summary>
+        /// Ok Button Label
+        /// </summary>
+        [DisplayName("OkButtonTitle"), Category("Localization"), Description("Ok Button Label")]
+        public string OkButtonTitle { get; set; }
+
+        /// <summary>
+        /// Cancel Button Label
+        /// </summary>
+        [DisplayName("CancelButtonTitle"), Category("Localization"), Description("Cancel Button Label")]
+        public string CancelButtonTitle { get; set; }
+
+        /// <summary>
+        /// DialogTitle Text Label
+        /// </summary>
+        [DisplayName("DialogTitle"), Category("Localization"), Description("DialogTitle Text Label")]
+        public string DialogTitle { get; set; }
 
         /// <summary>
         /// Get or set the error panel is open
@@ -102,6 +151,17 @@ namespace NOTools.CSharpTextEditor
             {
                 Parent.referencePanel1.ForeColor = value;
             }
+        }
+
+        private void InitLocalization()
+        {
+            GACTitle = "GAC";
+            FileSystemTitle = "FileSystem";
+            AddTitle = "Add";
+            RemoveTitle = "Remove";
+            OkButtonTitle = "Ok";
+            CancelButtonTitle = "Cancel";
+            DialogTitle = "Choose Reference";
         }
 
         public override string ToString()

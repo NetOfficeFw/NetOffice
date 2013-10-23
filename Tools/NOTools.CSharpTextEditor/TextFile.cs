@@ -278,6 +278,23 @@ namespace NOTools.CSharpTextEditor
                }, doAsync);
         }
 
+        public void RemoveReference(string assemblyName)
+        {
+            IProjectContent prjContent = null;
+            foreach (IProjectContent item in _projectContent.ReferencedContents)
+	        {
+                if (item.AssemblyName.Equals(assemblyName, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    prjContent = item;
+                    break;
+                }
+	        }
+
+            if (null != prjContent)
+                _projectContent.ReferencedContents.Remove(prjContent);
+
+
+        }
 
         private string GetPersistencePath()
         {

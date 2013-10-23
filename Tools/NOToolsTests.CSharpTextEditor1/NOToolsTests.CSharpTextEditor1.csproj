@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BB268B8F-42AB-4EF0-B1AD-B247A3EE6D79}</ProjectGuid>
+    <ProjectGuid>{4E0106D1-1BD8-4EDD-8878-22682F3FC8AD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NOTools.CSharpTextEditorPFCreator</RootNamespace>
-    <AssemblyName>NOTools.CSharpTextEditorPFCreator</AssemblyName>
+    <RootNamespace>NOToolsTests.CSharpTextEditor1</RootNamespace>
+    <AssemblyName>NOToolsTests.CSharpTextEditor1</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -35,44 +35,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>..\NOTools.CSharpTextEditor\ICSharpCode Libs\ICSharpCode.NRefactory.dll</HintPath>
+    <Reference Include="NOTools.CSharpTextEditor">
+      <HintPath>..\NOTools.CSharpTextEditor\bin\Debug\NOTools.CSharpTextEditor.dll</HintPath>
     </Reference>
-    <Reference Include="System">
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Drawing">
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Private>False</Private>
-    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCreator.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreator.Designer.cs">
-      <DependentUpon>FormCreator.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTest.Designer.cs">
-      <DependentUpon>FormTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PersistenceFileCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCreator.resx">
-      <DependentUpon>FormCreator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTest.resx">
-      <DependentUpon>FormTest.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +68,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,10 +80,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NOTools.CSharpTextEditor\NOTools.CSharpTextEditor.csproj">
-      <Project>{6F78B47E-BF06-4EEA-92F1-8B823EA22AD3}</Project>
-      <Name>NOTools.CSharpTextEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NOTools.InMemoryCompiler\NOTools.InMemoryCompiler.csproj">
       <Project>{4AC526D9-8629-40FA-A231-729B76DCA737}</Project>
       <Name>NOTools.InMemoryCompiler</Name>

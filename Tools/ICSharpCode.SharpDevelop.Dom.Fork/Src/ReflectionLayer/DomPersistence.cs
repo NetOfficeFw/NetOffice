@@ -274,7 +274,10 @@ namespace ICSharpCode.SharpDevelop.Dom
 			
 			public ReflectionProjectContent ReadProjectContent(ProjectContentRegistry registry)
 			{
-				if (reader.ReadInt64() != FileMagic) {
+                Int64 bigIntFileMagic = reader.ReadInt64();
+
+                if (bigIntFileMagic != FileMagic)
+                {
 					LoggingService.Warn("Read dom: wrong magic");
 					return null;
 				}
@@ -288,10 +291,15 @@ namespace ICSharpCode.SharpDevelop.Dom
 				try {
 					time = File.GetLastWriteTimeUtc(assemblyLocation).ToFileTime();
 				} catch {}
-				if (reader.ReadInt64() != time) {
-					LoggingService.Warn("Read dom: assembly changed since cache was created");
-					return null;
-				}
+
+                Int64 bigIntTime = reader.ReadInt64();
+
+                //if (bigIntTime != time)
+                //{
+                //    LoggingService.Warn("Read dom: assembly changed since cache was created");
+                //    return null;
+                //}
+
 				DomAssemblyName[] referencedAssemblies = new DomAssemblyName[reader.ReadInt32()];
 				for (int i = 0; i < referencedAssemblies.Length; i++) {
 					referencedAssemblies[i] = new DomAssemblyName(reader.ReadString());

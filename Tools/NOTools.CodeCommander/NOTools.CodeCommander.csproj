@@ -8,8 +8,8 @@
     <ProjectGuid>{372327EE-02AD-435D-AB29-5699137F41E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NOTools.DeveloperAddin</RootNamespace>
-    <AssemblyName>NOTools.DeveloperAddin</AssemblyName>
+    <RootNamespace>NOTools.CodeCommander</RootNamespace>
+    <AssemblyName>NOTools.CodeCommander</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>

@@ -5,7 +5,7 @@ using System.Text;
 using NetOffice;
 using NOTools.InMemoryCompiler;
 
-namespace NOTools.DeveloperAddin.Logic
+namespace NOTools.CodeCommander.Logic
 {
  
     class DynamicCommandDefinitionCollection : BindingList<DynamicCommandDefinition>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Please wait...");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Please wait...");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageGac = new System.Windows.Forms.TabPage();
             this.labelNameFilter = new System.Windows.Forms.Label();
@@ -112,7 +112,7 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(0, 47);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
@@ -160,12 +160,90 @@
             // 
             // openFilePanel1
             // 
+            this.openFilePanel1.Default.AllowAddFolders = false;
+            this.openFilePanel1.Default.AllowBrowseFolders = true;
+            this.openFilePanel1.Default.AllowDeleteFiles = false;
+            this.openFilePanel1.Default.AllowDeleteFolders = false;
+            this.openFilePanel1.Default.AllowMultipleSelect = true;
+            this.openFilePanel1.Default.Visible = true;
+            this.openFilePanel1.Desktop.AllowAddFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.Desktop.AllowBrowseFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.Desktop.AllowDeleteFiles = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.Desktop.AllowDeleteFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.Desktop.AllowMultipleSelect = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.Desktop.Expanded = false;
+            this.openFilePanel1.Desktop.Visible = NOTools.FileSystemDialogs.DefaultBoolean.False;
             this.openFilePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.openFilePanel1.Localization.AskBeforeDeleteDirectoryHeader = "Confirm";
+            this.openFilePanel1.Localization.AskBeforeDeleteDirectoryMessage = "To confirm erasure press the YES key.";
+            this.openFilePanel1.Localization.AskBeforeDeleteFileHeader = "Confirm";
+            this.openFilePanel1.Localization.AskBeforeDeleteFileMessage = "To confirm erasure press the YES key.";
+            this.openFilePanel1.Localization.Desktop = "Desktop";
+            this.openFilePanel1.Localization.LabelCreateDirectory = "Create new Directory";
+            this.openFilePanel1.Localization.LabelDeleteDirectory = "Delete Directory";
+            this.openFilePanel1.Localization.LabelDeleteFile = "Delete File";
+            this.openFilePanel1.Localization.LabelDetailsView = "Details";
+            this.openFilePanel1.Localization.LabelFileFilter = "Filter";
+            this.openFilePanel1.Localization.LabelFileName = "File(s)";
+            this.openFilePanel1.Localization.LabelGoRedo = "Go Forward";
+            this.openFilePanel1.Localization.LabelGoUndo = "Go Back";
+            this.openFilePanel1.Localization.LabelGoUpward = "Go Upward";
+            this.openFilePanel1.Localization.LabelLargeIconView = "Large Icons";
+            this.openFilePanel1.Localization.LabelSmallIconView = "Small Icons";
+            this.openFilePanel1.Localization.MyDocuments = "My Documents";
+            this.openFilePanel1.Localization.MyMachine = "My Computer";
+            this.openFilePanel1.Localization.NewDirectoryName = "New Directory";
+            this.openFilePanel1.Localization.SpecialFolders = "Special Folders";
+            this.openFilePanel1.Localization.TemplateFolders = "Custom Folders";
             this.openFilePanel1.Location = new System.Drawing.Point(4, 4);
             this.openFilePanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.openFilePanel1.Misc.AskBeforeDelete = true;
+            this.openFilePanel1.Misc.CategoryPanelWidth = 230;
+            this.openFilePanel1.Misc.FileFilter = "Assemblies(*.dll)|*.dll";
+            this.openFilePanel1.Misc.FireSelectionChangedInsteadOfDoubleClick = true;
+            this.openFilePanel1.Misc.SelectedCategory = NOTools.FileSystemDialogs.RootCategory.MyComputer;
+            this.openFilePanel1.Misc.ShowCategoryPanel = true;
+            this.openFilePanel1.Misc.ShowFilePanel = true;
+            this.openFilePanel1.MyComputer.AllowAddFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyComputer.AllowBrowseFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyComputer.AllowDeleteFiles = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyComputer.AllowDeleteFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyComputer.AllowMultipleSelect = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyComputer.Expanded = false;
+            this.openFilePanel1.MyComputer.ShowCDRomDrives = false;
+            this.openFilePanel1.MyComputer.ShowFixedDrives = true;
+            this.openFilePanel1.MyComputer.ShowNetworkDrives = true;
+            this.openFilePanel1.MyComputer.ShowNoRootDirectoryDrives = false;
+            this.openFilePanel1.MyComputer.ShowRamDrives = true;
+            this.openFilePanel1.MyComputer.ShowRemovableDrives = false;
+            this.openFilePanel1.MyComputer.ShowUnknownDrives = false;
+            this.openFilePanel1.MyComputer.ShowUnreadyDrives = false;
+            this.openFilePanel1.MyComputer.Visible = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.AllowAddFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.AllowBrowseFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.AllowDeleteFiles = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.AllowDeleteFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.AllowMultipleSelect = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.MyDocuments.Expanded = false;
+            this.openFilePanel1.MyDocuments.Visible = NOTools.FileSystemDialogs.DefaultBoolean.False;
             this.openFilePanel1.Name = "openFilePanel1";
             this.openFilePanel1.Size = new System.Drawing.Size(678, 386);
+            this.openFilePanel1.SpecialFolders.AllowAddFolders = NOTools.FileSystemDialogs.DefaultBoolean.False;
+            this.openFilePanel1.SpecialFolders.AllowBrowseFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.SpecialFolders.AllowDeleteFiles = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.SpecialFolders.AllowDeleteFolders = NOTools.FileSystemDialogs.DefaultBoolean.False;
+            this.openFilePanel1.SpecialFolders.AllowMultipleSelect = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.SpecialFolders.Expanded = false;
+            this.openFilePanel1.SpecialFolders.Visible = NOTools.FileSystemDialogs.DefaultBoolean.False;
             this.openFilePanel1.TabIndex = 0;
+            this.openFilePanel1.TemplateFolders.AllowAddFolders = NOTools.FileSystemDialogs.DefaultBoolean.False;
+            this.openFilePanel1.TemplateFolders.AllowBrowseFolders = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.TemplateFolders.AllowDeleteFiles = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.TemplateFolders.AllowDeleteFolders = NOTools.FileSystemDialogs.DefaultBoolean.False;
+            this.openFilePanel1.TemplateFolders.AllowMultipleSelect = NOTools.FileSystemDialogs.DefaultBoolean.Default;
+            this.openFilePanel1.TemplateFolders.Expanded = false;
+            this.openFilePanel1.TemplateFolders.Visible = NOTools.FileSystemDialogs.DefaultBoolean.False;
+            this.openFilePanel1.SelectionChanged += new NOTools.FileSystemDialogs.SelectionChangedEventHandler(this.openFilePanel1_SelectionChanged);
             // 
             // buttonOk
             // 

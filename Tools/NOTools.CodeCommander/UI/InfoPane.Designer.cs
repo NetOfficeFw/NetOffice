@@ -1,4 +1,4 @@
-﻿namespace NOTools.DeveloperAddin.UI
+﻿namespace NOTools.CodeCommander.UI
 {
     partial class InfoPane
     {

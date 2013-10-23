@@ -1,4 +1,4 @@
-﻿namespace NOTools.DeveloperAddin.UI
+﻿namespace NOTools.CodeCommander.UI
 {
     partial class DeveloperPane
     {
@@ -37,9 +37,9 @@
             this.panelSettings = new System.Windows.Forms.Panel();
             this.imageListMain = new System.Windows.Forms.ImageList(this.components);
             this.DirtyLittleTimer = new System.Windows.Forms.Timer(this.components);
-            this.propertyPane1 = new NOTools.DeveloperAddin.UI.PropertyPane();
-            this.infoPane1 = new NOTools.DeveloperAddin.UI.InfoPane();
-            this.commandPane1 = new NOTools.DeveloperAddin.UI.CommandPane();
+            this.propertyPane1 = new NOTools.CodeCommander.UI.PropertyPane();
+            this.infoPane1 = new NOTools.CodeCommander.UI.InfoPane();
+            this.commandPane1 = new NOTools.CodeCommander.UI.CommandPane();
             this.tabControlMain.SuspendLayout();
             this.tabPageCommands.SuspendLayout();
             this.tabPageProperties.SuspendLayout();

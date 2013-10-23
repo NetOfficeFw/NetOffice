@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NetOffice;
 
-namespace NOTools.DeveloperAddin.Logic
+namespace NOTools.CodeCommander.Logic
 {
     /// <summary>
     /// handles the different possible office host applications

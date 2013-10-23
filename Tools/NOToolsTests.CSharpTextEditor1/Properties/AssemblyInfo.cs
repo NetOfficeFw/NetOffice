@@ -5,22 +5,22 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("NOTools.CodeCommander")]
+[assembly: AssemblyTitle("NOToolsTests.CSharpTextEditor1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("http://netoffice.codeplex.com")]
-[assembly: AssemblyCopyright("Copyright ©  2013 Sebastian Lange")]
+[assembly: AssemblyCompany("Organisation")]
+[assembly: AssemblyProduct("NOToolsTests.CSharpTextEditor1")]
+[assembly: AssemblyCopyright("Copyright © Organisation 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Durch Festlegen von ComVisible auf "false" werden die Typen in dieser Assembly unsichtbar 
 // für COM-Komponenten. Wenn Sie auf einen Typ in dieser Assembly von 
 // COM zugreifen müssen, legen Sie das ComVisible-Attribut für diesen Typ auf "true" fest.
-[assembly: ComVisible(true)]
+[assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("ff794734-f0a6-4552-8510-617355872e2e")]
+[assembly: Guid("950a2d31-61f3-430e-8ab8-661b0f191a8c")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

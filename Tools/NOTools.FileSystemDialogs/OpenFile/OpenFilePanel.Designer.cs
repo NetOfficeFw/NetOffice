@@ -466,6 +466,7 @@
             this.Controls.Add(this.toolStripContainer1);
             this.Name = "OpenFilePanel";
             this.Size = new System.Drawing.Size(609, 378);
+            this.Load += new System.EventHandler(this.OpenFilePanel_Load);
             this.Resize += new System.EventHandler(this.OpenFilePanel_Resize);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

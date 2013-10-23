@@ -1231,6 +1231,7 @@ namespace NOTools.FileSystemDialogs
         private void OpenFilePanel_Load(object sender, EventArgs e)
         {
             IsAlreadyLoaded = true;
+            Misc.CurrentFilter = comboBoxFileTypes.SelectedItem as FileFilterItem;
             ShowAll();
         }
 

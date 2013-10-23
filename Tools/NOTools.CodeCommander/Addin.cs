@@ -4,16 +4,16 @@ using NetOffice.Tools;
 using NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 using NetOffice.OfficeApi.Tools;
-using NOTools.DeveloperAddin.Logic;
+using NOTools.CodeCommander.Logic;
 using NOTools.InMemoryCompiler;
 
-namespace NOTools.DeveloperAddin
+namespace NOTools.CodeCommander
 {
     /// <summary>
     /// addin connect class, inherites from NetOffice.OfficeApi.Tools.COMAddin to connect the addin in all office applications
     /// </summary>
-    [COMAddin("NetOffice Developer Addin", "A task pane which allows you to manipulate the automation model at runtime", 3)]
-    [ProgId("NetOfficeDeveloperAddin.Addin"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), CustomUI("NetOfficeDeveloperAddin.UI.RibbonUI.xml")]
+    [COMAddin("NetOffice Code Commander", "A task pane which allows you to manipulate the automation model at runtime", 3)]
+    [ProgId("NOToolsCodeCommander.Addin"), Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), CustomUI("NOTools.CodeCommander.UI.RibbonUI.xml"), Tweak(true)]
     [MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.Outlook, RegisterIn.PowerPoint, RegisterIn.Access, RegisterIn.MSProject)]
     public class Addin : COMAddin
     {
@@ -23,27 +23,35 @@ namespace NOTools.DeveloperAddin
         public Addin()
         {
             Factory.Settings.ExceptionMessage = "#Error";
+            Factory.Console.Name = "CodeCommander";
+
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
             this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
 
-            TaskPanes.Add(typeof(UI.DeveloperPane), "NetOffice Developer Pane");
+            TaskPanes.Add(typeof(UI.DeveloperPane), "Code Commander");
             TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
-            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange;
+            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNone;
             TaskPanes[0].Width = 320;
             TaskPanes[0].Visible = true;
-            TaskPanes[0].Arguments = new object[] { this };           
+            TaskPanes[0].Arguments = new object[] { this };
+            TaskPanes[0].VisibleStateChange += new CustomTaskPane_VisibleStateChangeEventHandler(TaskPane_VisibleStateChange);
         }
 
+        #region Properties
+
         internal DynamicCommandDefinitionCollection Commands { get; private set; }
-       
+
         internal IRibbonUI RibbonUI { get; private set; }
+
+        #endregion
+
+        #region Ribbon Trigger
 
         public void OnLoadRibbonUI(IRibbonUI ribbonUI)
         {
             RibbonUI = ribbonUI;
-            (TaskPaneInstances[0] as UI.DeveloperPane).ParentVisibleChanged += new EventHandler(Addin_ParentVisibleChanged);
         }
-      
+
         public void OnCheckActionToogleButton(IRibbonControl control, bool check)
         {
             TaskPanes[0].Pane.Visible = check;
@@ -54,22 +62,27 @@ namespace NOTools.DeveloperAddin
             return TaskPanes[0].Pane.Visible;
         }
 
-        private void Addin_ParentVisibleChanged(object sender, EventArgs e)
+        #endregion
+
+        #region Addin Trigger
+
+        private void TaskPane_VisibleStateChange(_CustomTaskPane CustomTaskPaneInst)
         {
-            RibbonUI.InvalidateControl("toogleButtongroupNetOfficeDeveloperAddin");
         }
 
-        void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             if (null != Commands)
                 Commands.SaveToFile(Application);
         }
 
-        void Addin_OnStartupComplete(ref Array custom)
+        private void Addin_OnStartupComplete(ref Array custom)
         {
             Commands = new DynamicCommandDefinitionCollection();
             Commands.LoadFromFile(Application);
         }
+
+        #endregion
 
         /*
          *         DynamicAssembly assembly = new DynamicAssembly("MyDynamicAssembly", 

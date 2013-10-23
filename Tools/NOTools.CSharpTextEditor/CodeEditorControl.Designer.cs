@@ -39,7 +39,7 @@
             this.buttonHide = new System.Windows.Forms.Button();
             this.buttonOpen = new System.Windows.Forms.Button();
             this.labelErrors = new System.Windows.Forms.Label();
-            this.buttonOpenHide = new System.Windows.Forms.Button();
+            this.buttonErrorPanelOpenHide = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.errorPanel1 = new NOTools.CSharpTextEditor.ErrorPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -74,8 +74,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(449, 335);
-            this.splitContainer1.SplitterDistance = 259;
+            this.splitContainer1.Size = new System.Drawing.Size(400, 400);
+            this.splitContainer1.SplitterDistance = 357;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -96,8 +96,8 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.referencePanel1);
             this.splitContainer3.Panel2MinSize = 10;
-            this.splitContainer3.Size = new System.Drawing.Size(447, 238);
-            this.splitContainer3.SplitterDistance = 284;
+            this.splitContainer3.Size = new System.Drawing.Size(398, 336);
+            this.splitContainer3.SplitterDistance = 235;
             this.splitContainer3.TabIndex = 4;
             // 
             // elementHost1
@@ -106,7 +106,7 @@
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementHost1.Location = new System.Drawing.Point(0, 0);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(284, 238);
+            this.elementHost1.Size = new System.Drawing.Size(235, 336);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.wpfControl1;
@@ -117,7 +117,7 @@
             this.referencePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.referencePanel1.Location = new System.Drawing.Point(0, 0);
             this.referencePanel1.Name = "referencePanel1";
-            this.referencePanel1.Size = new System.Drawing.Size(159, 238);
+            this.referencePanel1.Size = new System.Drawing.Size(159, 336);
             this.referencePanel1.TabIndex = 0;
             this.referencePanel1.OpenHideClick += new System.EventHandler(this.referencePanel1_OpenHideClick);
             // 
@@ -130,17 +130,17 @@
             this.panelHeader.Controls.Add(this.buttonHide);
             this.panelHeader.Controls.Add(this.buttonOpen);
             this.panelHeader.Controls.Add(this.labelErrors);
-            this.panelHeader.Controls.Add(this.buttonOpenHide);
-            this.panelHeader.Location = new System.Drawing.Point(1, 240);
+            this.panelHeader.Controls.Add(this.buttonErrorPanelOpenHide);
+            this.panelHeader.Location = new System.Drawing.Point(1, 338);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(447, 17);
+            this.panelHeader.Size = new System.Drawing.Size(398, 17);
             this.panelHeader.TabIndex = 3;
             // 
             // labelInfo
             // 
             this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(255, 2);
+            this.labelInfo.Location = new System.Drawing.Point(206, 2);
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(0, 13);
             this.labelInfo.TabIndex = 4;
@@ -152,7 +152,7 @@
             this.buttonHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.buttonHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonHide.Image")));
-            this.buttonHide.Location = new System.Drawing.Point(209, 1);
+            this.buttonHide.Location = new System.Drawing.Point(160, 1);
             this.buttonHide.Name = "buttonHide";
             this.buttonHide.Size = new System.Drawing.Size(17, 17);
             this.buttonHide.TabIndex = 3;
@@ -165,7 +165,7 @@
             this.buttonOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.buttonOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpen.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen.Image")));
-            this.buttonOpen.Location = new System.Drawing.Point(232, 2);
+            this.buttonOpen.Location = new System.Drawing.Point(183, 2);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(17, 17);
             this.buttonOpen.TabIndex = 2;
@@ -181,19 +181,19 @@
             this.labelErrors.TabIndex = 1;
             this.labelErrors.Text = "Errors";
             // 
-            // buttonOpenHide
+            // buttonErrorPanelOpenHide
             // 
-            this.buttonOpenHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.buttonOpenHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenHide.Image")));
-            this.buttonOpenHide.Location = new System.Drawing.Point(430, 0);
-            this.buttonOpenHide.Name = "buttonOpenHide";
-            this.buttonOpenHide.Size = new System.Drawing.Size(17, 17);
-            this.buttonOpenHide.TabIndex = 0;
-            this.buttonOpenHide.UseVisualStyleBackColor = true;
-            this.buttonOpenHide.Visible = false;
-            this.buttonOpenHide.Click += new System.EventHandler(this.buttonOpenHide_Click);
+            this.buttonErrorPanelOpenHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonErrorPanelOpenHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buttonErrorPanelOpenHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonErrorPanelOpenHide.Image = ((System.Drawing.Image)(resources.GetObject("buttonErrorPanelOpenHide.Image")));
+            this.buttonErrorPanelOpenHide.Location = new System.Drawing.Point(381, 0);
+            this.buttonErrorPanelOpenHide.Name = "buttonErrorPanelOpenHide";
+            this.buttonErrorPanelOpenHide.Size = new System.Drawing.Size(17, 17);
+            this.buttonErrorPanelOpenHide.TabIndex = 0;
+            this.buttonErrorPanelOpenHide.UseVisualStyleBackColor = true;
+            this.buttonErrorPanelOpenHide.Visible = false;
+            this.buttonErrorPanelOpenHide.Click += new System.EventHandler(this.buttonErrorPanelOpenHide_Click);
             // 
             // splitContainer2
             // 
@@ -205,7 +205,7 @@
             // 
             this.splitContainer2.Panel1.Controls.Add(this.errorPanel1);
             this.splitContainer2.Panel2Collapsed = true;
-            this.splitContainer2.Size = new System.Drawing.Size(449, 75);
+            this.splitContainer2.Size = new System.Drawing.Size(400, 42);
             this.splitContainer2.SplitterDistance = 263;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -219,7 +219,7 @@
             this.errorPanel1.LineColumnHeader = "Line";
             this.errorPanel1.Location = new System.Drawing.Point(0, 0);
             this.errorPanel1.Name = "errorPanel1";
-            this.errorPanel1.Size = new System.Drawing.Size(449, 74);
+            this.errorPanel1.Size = new System.Drawing.Size(400, 41);
             this.errorPanel1.TabIndex = 0;
             this.errorPanel1.ErrorDoubleClick += new NOTools.CSharpTextEditor.ErrorDoubleClickEventHandler(this.errorPanel1_ErrorDoubleClick);
             // 
@@ -229,9 +229,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.splitContainer1);
-            this.MinimumSize = new System.Drawing.Size(400, 300);
+            this.MinimumSize = new System.Drawing.Size(200, 200);
             this.Name = "CodeEditorControl";
-            this.Size = new System.Drawing.Size(449, 335);
+            this.Size = new System.Drawing.Size(400, 400);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -253,7 +253,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer2;
         internal ErrorPanel errorPanel1;
-        internal System.Windows.Forms.Button buttonOpenHide;
+        internal System.Windows.Forms.Button buttonErrorPanelOpenHide;
         internal System.Windows.Forms.Label labelErrors;
         internal System.Windows.Forms.Button buttonOpen;
         internal System.Windows.Forms.Button buttonHide;

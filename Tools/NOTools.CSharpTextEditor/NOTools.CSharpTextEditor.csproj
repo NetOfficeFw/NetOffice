@@ -33,25 +33,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.AvalonEdit">
+    <Reference Include="ICSharpCode.AvalonEdit, Version=4.3.3.9663, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>ICSharpCode Libs\ICSharpCode.AvalonEdit.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="ICSharpCode.AvalonEdit.CodeCompletion">
+    <Reference Include="ICSharpCode.AvalonEdit.CodeCompletion, Version=1.13.0.29, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>ICSharpCode Libs\ICSharpCode.AvalonEdit.CodeCompletion.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>ICSharpCode Libs\ICSharpCode.NRefactory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpDevelop.Dom, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ICSharpCode Libs\ICSharpCode.SharpDevelop.Dom.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>ICSharpCode Libs\Mono.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="PresentationCore">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Windows.Interactivity">
       <HintPath>ICSharpCode Libs\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -60,9 +77,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WindowsFormsIntegration">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyReference.cs" />
+    <Compile Include="AssemblyReferenceCollection.cs" />
     <Compile Include="CodeEditorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +145,7 @@
     <Compile Include="ReferencesDialog.Designer.cs">
       <DependentUpon>ReferencesDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectedAssembly.cs" />
     <Compile Include="TextChangedEventArgs.cs" />
     <Compile Include="TextFile.cs" />
     <Compile Include="WPFControl.xaml.cs" />
@@ -153,10 +175,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ICSharpCode.SharpDevelop.Dom.Fork\ICSharpCode.SharpDevelop.Dom.Fork.csproj">
-      <Project>{924EE450-603D-49C1-A8E5-4AFAA31CE6F3}</Project>
-      <Name>ICSharpCode.SharpDevelop.Dom.Fork</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NOTools.FileSystemDialogs\NOTools.FileSystemDialogs.csproj">
       <Project>{C72FEF8A-2800-488C-A69A-1F073BA6FEF0}</Project>
       <Name>NOTools.FileSystemDialogs</Name>

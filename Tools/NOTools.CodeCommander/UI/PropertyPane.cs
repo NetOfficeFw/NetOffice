@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using NetOffice;
 using NetOffice.OfficeApi.Tools;
-using NOTools.DeveloperAddin.Logic;
+using NOTools.CodeCommander.Logic;
 
-namespace NOTools.DeveloperAddin.UI
+namespace NOTools.CodeCommander.UI
 {
     public partial class PropertyPane : UserControl
     {

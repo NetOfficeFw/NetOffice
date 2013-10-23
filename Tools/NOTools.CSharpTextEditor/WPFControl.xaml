@@ -9,16 +9,19 @@
              xmlns:codecomplete="clr-namespace:ICSharpCode.AvalonEdit.CodeCompletion;assembly=ICSharpCode.AvalonEdit.CodeCompletion"
              mc:Ignorable="d" 
              d:DesignHeight="183" d:DesignWidth="188">
-        <avalonedit:TextEditor 
-            Name="TextEditor1"
-            SyntaxHighlighting="C#"
-            FontFamily="Courier New"
-            FontSize="10pt"
-            Document="{Binding CodeDocument}" TextChanged="TextEditor1_TextChanged" ShowLineNumbers="True">
-        <avalonedit:TextEditor.Options>
-            <avalonedit:TextEditorOptions ConvertTabsToSpaces="True" EnableTextDragDrop="True" />
-        </avalonedit:TextEditor.Options>
-        <i:Interaction.Behaviors>
-        </i:Interaction.Behaviors>
-    </avalonedit:TextEditor>
+            <avalonedit:TextEditor 
+                Name="TextEditor1"
+                SyntaxHighlighting="C#"
+                FontFamily="Courier New"
+                FontSize="10pt"
+                Document="{Binding CodeDocument}" TextChanged="TextEditor1_TextChanged" ShowLineNumbers="True">
+                <avalonedit:TextEditor.Options>
+                    <avalonedit:TextEditorOptions ConvertTabsToSpaces="True" EnableTextDragDrop="True" />
+                </avalonedit:TextEditor.Options>
+                <i:Interaction.Behaviors>
+                    <codecomplete:CodeCompletionBeahvior 
+                                                FilterStrategy="{Binding FilterStrategy}" 
+                                                ProjectContent="{Binding ProjectContent}" />
+                </i:Interaction.Behaviors>
+        </avalonedit:TextEditor>
 </UserControl>

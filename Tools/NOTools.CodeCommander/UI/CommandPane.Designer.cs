@@ -1,4 +1,4 @@
-﻿namespace NOTools.DeveloperAddin.UI
+﻿namespace NOTools.CodeCommander.UI
 {
     partial class CommandPane
     {
@@ -36,13 +36,12 @@
             this.buttonExecuteCommand = new System.Windows.Forms.Button();
             this.panelCommands = new System.Windows.Forms.Panel();
             this.panelCodeEditor = new System.Windows.Forms.Panel();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.buttonCompileAndExecute = new System.Windows.Forms.Button();
             this.codeEditor = new NOTools.CSharpTextEditor.CodeEditorControl();
             this.buttonSkip = new System.Windows.Forms.Button();
-            this.buttonCompileAndExecute = new System.Windows.Forms.Button();
-            this.buttonApply = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridCommands)).BeginInit();
             this.panelCommands.SuspendLayout();
-            this.panelCodeEditor.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridCommands
@@ -62,7 +61,7 @@
             this.gridCommands.Margin = new System.Windows.Forms.Padding(4);
             this.gridCommands.Name = "gridCommands";
             this.gridCommands.RowHeadersVisible = false;
-            this.gridCommands.Size = new System.Drawing.Size(402, 187);
+            this.gridCommands.Size = new System.Drawing.Size(400, 189);
             this.gridCommands.TabIndex = 10;
             // 
             // columnName
@@ -90,7 +89,7 @@
             // 
             this.buttonAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddNew.Location = new System.Drawing.Point(4, 190);
+            this.buttonAddNew.Location = new System.Drawing.Point(4, 440);
             this.buttonAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(118, 30);
@@ -104,10 +103,10 @@
             this.buttonExecuteCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExecuteCommand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExecuteCommand.Location = new System.Drawing.Point(121, 190);
+            this.buttonExecuteCommand.Location = new System.Drawing.Point(121, 440);
             this.buttonExecuteCommand.Margin = new System.Windows.Forms.Padding(4);
             this.buttonExecuteCommand.Name = "buttonExecuteCommand";
-            this.buttonExecuteCommand.Size = new System.Drawing.Size(285, 30);
+            this.buttonExecuteCommand.Size = new System.Drawing.Size(283, 30);
             this.buttonExecuteCommand.TabIndex = 8;
             this.buttonExecuteCommand.Text = "Execute Command";
             this.buttonExecuteCommand.UseVisualStyleBackColor = true;
@@ -115,66 +114,27 @@
             // 
             // panelCommands
             // 
+            this.panelCommands.Controls.Add(this.panelCodeEditor);
             this.panelCommands.Controls.Add(this.gridCommands);
             this.panelCommands.Controls.Add(this.buttonAddNew);
             this.panelCommands.Controls.Add(this.buttonExecuteCommand);
-            this.panelCommands.Location = new System.Drawing.Point(3, 3);
+            this.panelCommands.Location = new System.Drawing.Point(15, 22);
             this.panelCommands.Name = "panelCommands";
-            this.panelCommands.Size = new System.Drawing.Size(410, 224);
+            this.panelCommands.Size = new System.Drawing.Size(408, 474);
             this.panelCommands.TabIndex = 11;
             // 
             // panelCodeEditor
             // 
-            this.panelCodeEditor.Controls.Add(this.buttonApply);
-            this.panelCodeEditor.Controls.Add(this.buttonCompileAndExecute);
-            this.panelCodeEditor.Controls.Add(this.codeEditor);
-            this.panelCodeEditor.Controls.Add(this.buttonSkip);
-            this.panelCodeEditor.Location = new System.Drawing.Point(3, 231);
+            this.panelCodeEditor.Location = new System.Drawing.Point(0, 228);
             this.panelCodeEditor.Name = "panelCodeEditor";
-            this.panelCodeEditor.Size = new System.Drawing.Size(410, 244);
+            this.panelCodeEditor.Size = new System.Drawing.Size(900, 88);
             this.panelCodeEditor.TabIndex = 12;
-            // 
-            // codeEditor
-            // 
-            this.codeEditor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.codeEditor.Location = new System.Drawing.Point(0, 0);
-            this.codeEditor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.codeEditor.Name = "codeEditor";
-            this.codeEditor.Size = new System.Drawing.Size(408, 210);
-            this.codeEditor.TabIndex = 0;
-            // 
-            // buttonSkip
-            // 
-            this.buttonSkip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSkip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSkip.Location = new System.Drawing.Point(0, 210);
-            this.buttonSkip.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSkip.Name = "buttonSkip";
-            this.buttonSkip.Size = new System.Drawing.Size(118, 30);
-            this.buttonSkip.TabIndex = 11;
-            this.buttonSkip.Text = "Skip";
-            this.buttonSkip.UseVisualStyleBackColor = true;
-            // 
-            // buttonCompileAndExecute
-            // 
-            this.buttonCompileAndExecute.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCompileAndExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCompileAndExecute.Location = new System.Drawing.Point(232, 210);
-            this.buttonCompileAndExecute.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCompileAndExecute.Name = "buttonCompileAndExecute";
-            this.buttonCompileAndExecute.Size = new System.Drawing.Size(177, 30);
-            this.buttonCompileAndExecute.TabIndex = 10;
-            this.buttonCompileAndExecute.Text = "Compile && Execute";
-            this.buttonCompileAndExecute.UseVisualStyleBackColor = true;
             // 
             // buttonApply
             // 
             this.buttonApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonApply.Location = new System.Drawing.Point(118, 210);
+            this.buttonApply.Location = new System.Drawing.Point(145, 633);
             this.buttonApply.Margin = new System.Windows.Forms.Padding(4);
             this.buttonApply.Name = "buttonApply";
             this.buttonApply.Size = new System.Drawing.Size(118, 30);
@@ -182,20 +142,60 @@
             this.buttonApply.Text = "Apply && Close";
             this.buttonApply.UseVisualStyleBackColor = true;
             // 
+            // buttonCompileAndExecute
+            // 
+            this.buttonCompileAndExecute.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCompileAndExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCompileAndExecute.Location = new System.Drawing.Point(259, 633);
+            this.buttonCompileAndExecute.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCompileAndExecute.Name = "buttonCompileAndExecute";
+            this.buttonCompileAndExecute.Size = new System.Drawing.Size(667, 30);
+            this.buttonCompileAndExecute.TabIndex = 10;
+            this.buttonCompileAndExecute.Text = "Compile && Execute";
+            this.buttonCompileAndExecute.UseVisualStyleBackColor = true;
+            // 
+            // codeEditor
+            // 
+            this.codeEditor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.codeEditor.BackColor = System.Drawing.Color.Black;
+            this.codeEditor.Location = new System.Drawing.Point(430, 146);
+            this.codeEditor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codeEditor.MinimumSize = new System.Drawing.Size(400, 300);
+            this.codeEditor.Name = "codeEditor";
+            this.codeEditor.PersistencePath = null;
+            this.codeEditor.ShowLineNumbers = true;
+            this.codeEditor.Size = new System.Drawing.Size(456, 366);
+            this.codeEditor.TabIndex = 0;
+            // 
+            // buttonSkip
+            // 
+            this.buttonSkip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSkip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSkip.Location = new System.Drawing.Point(27, 633);
+            this.buttonSkip.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSkip.Name = "buttonSkip";
+            this.buttonSkip.Size = new System.Drawing.Size(118, 30);
+            this.buttonSkip.TabIndex = 11;
+            this.buttonSkip.Text = "Skip";
+            this.buttonSkip.UseVisualStyleBackColor = true;
+            // 
             // CommandPane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Controls.Add(this.panelCodeEditor);
+            this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.panelCommands);
+            this.Controls.Add(this.buttonCompileAndExecute);
+            this.Controls.Add(this.buttonSkip);
+            this.Controls.Add(this.codeEditor);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CommandPane";
-            this.Size = new System.Drawing.Size(416, 478);
+            this.Size = new System.Drawing.Size(906, 704);
             ((System.ComponentModel.ISupportInitialize)(this.gridCommands)).EndInit();
             this.panelCommands.ResumeLayout(false);
-            this.panelCodeEditor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

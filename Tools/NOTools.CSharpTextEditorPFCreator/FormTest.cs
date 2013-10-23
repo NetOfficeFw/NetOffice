@@ -83,7 +83,7 @@ namespace NOTools.CSharpTextEditorPFCreator
         private void codeEditorControl1_CompileRequest(CodeEditorControl sender, CompileRequestEventArgs args)
         {
             codeEditorControl1.ErrorPanelSettings.Header = "Compile...";
-            DynamicAssembly assembly = new DynamicAssembly("TestAssembly", new string[] { "System.dll", "System.Data.dll" });
+            DynamicAssembly assembly = new DynamicAssembly("TestAssembly", codeEditorControl1.References.ToStringPathArray());
             assembly.CustomClasses.AddNew(codeEditorControl1.Text);
             CompileResult result = CSharpCompiler.CompileDynamicAssembly(assembly);
             codeEditorControl1.ShowErrors(result.Errors, "Sucseed");

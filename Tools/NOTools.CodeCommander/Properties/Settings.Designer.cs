@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NOTools.DeveloperAddin.Properties {
+namespace NOTools.CodeCommander.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

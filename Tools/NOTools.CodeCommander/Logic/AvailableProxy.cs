@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NOTools.DeveloperAddin.Logic
+namespace NOTools.CodeCommander.Logic
 {
     /// <summary>
     /// means a current available proxy from the host application

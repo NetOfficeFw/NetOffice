@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            NOTools.CSharpTextEditor.CompileRequestOptions compileRequestOptions1 = new NOTools.CSharpTextEditor.CompileRequestOptions();
+            NOTools.CSharpTextEditor.AssemblyReference assemblyReference1 = new NOTools.CSharpTextEditor.AssemblyReference();
+            NOTools.CSharpTextEditor.AssemblyReference assemblyReference2 = new NOTools.CSharpTextEditor.AssemblyReference();
+            NOTools.CSharpTextEditor.AssemblyReference assemblyReference3 = new NOTools.CSharpTextEditor.AssemblyReference();
             this.groupBoxSettings = new System.Windows.Forms.GroupBox();
             this.checkBoxAsync = new System.Windows.Forms.CheckBox();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -168,13 +170,42 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.codeEditorControl1.BackColor = System.Drawing.Color.White;
-            compileRequestOptions1.CompileRequestKey = NOTools.CSharpTextEditor.Key.F5;
-            compileRequestOptions1.Enabled = true;
-            this.codeEditorControl1.CompileRequestOptions = compileRequestOptions1;
+            this.codeEditorControl1.CompileRequestOptions.CompileRequestKey = NOTools.CSharpTextEditor.Key.F5;
+            this.codeEditorControl1.CompileRequestOptions.Enabled = true;
+            this.codeEditorControl1.ErrorPanelSettings.AllowPanel = true;
+            this.codeEditorControl1.ErrorPanelSettings.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.codeEditorControl1.ErrorPanelSettings.ErrorColumnHeader = "Error";
+            this.codeEditorControl1.ErrorPanelSettings.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.codeEditorControl1.ErrorPanelSettings.Header = "Errors";
+            this.codeEditorControl1.ErrorPanelSettings.LineColumnHeader = "Line";
+            this.codeEditorControl1.ErrorPanelSettings.LineInfoFormatString = "Current Line:{0} Position:{1}";
+            this.codeEditorControl1.ErrorPanelSettings.PanelOpen = false;
             this.codeEditorControl1.Location = new System.Drawing.Point(0, 0);
             this.codeEditorControl1.MinimumSize = new System.Drawing.Size(400, 300);
             this.codeEditorControl1.Name = "codeEditorControl1";
-            this.codeEditorControl1.PersistencePath = "";
+            this.codeEditorControl1.PersistencePath = "C:\\PF-Test\\PF-Files";
+            this.codeEditorControl1.ReferencePanelSettings.AddTitle = "Add";
+            this.codeEditorControl1.ReferencePanelSettings.AllowAddRemoveReferences = true;
+            this.codeEditorControl1.ReferencePanelSettings.AllowPanel = true;
+            this.codeEditorControl1.ReferencePanelSettings.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.codeEditorControl1.ReferencePanelSettings.CancelButtonTitle = "Cancel";
+            this.codeEditorControl1.ReferencePanelSettings.DialogTitle = "Choose Reference";
+            this.codeEditorControl1.ReferencePanelSettings.FileSystemTitle = "FileSystem";
+            this.codeEditorControl1.ReferencePanelSettings.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.codeEditorControl1.ReferencePanelSettings.GACTitle = "GAC";
+            this.codeEditorControl1.ReferencePanelSettings.Header = "References";
+            this.codeEditorControl1.ReferencePanelSettings.OkButtonTitle = "Ok";
+            this.codeEditorControl1.ReferencePanelSettings.PanelOpen = true;
+            this.codeEditorControl1.ReferencePanelSettings.RemoveTitle = "Remove";
+            assemblyReference1.Name = "System";
+            assemblyReference1.Path = null;
+            assemblyReference2.Name = "System.Drawing";
+            assemblyReference2.Path = null;
+            assemblyReference3.Name = "System.Windows.Forms";
+            assemblyReference3.Path = null;
+            this.codeEditorControl1.References.Add(assemblyReference1);
+            this.codeEditorControl1.References.Add(assemblyReference2);
+            this.codeEditorControl1.References.Add(assemblyReference3);
             this.codeEditorControl1.ShowLineNumbers = true;
             this.codeEditorControl1.Size = new System.Drawing.Size(703, 397);
             this.codeEditorControl1.TabIndex = 0;

@@ -132,6 +132,7 @@ namespace NOTools.FileSystemDialogs
                 _fileFilter = value;
                 RaiseInternalPropertyChanged("FileFilter");
                 RaisePropertyChanged("FileFilter");
+                
             }
         }
         private string _fileFilter = string.Empty;

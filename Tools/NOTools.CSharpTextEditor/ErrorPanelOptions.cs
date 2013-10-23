@@ -37,12 +37,12 @@ namespace NOTools.CSharpTextEditor
         {
             get
             {
-                return Parent.buttonOpenHide.Visible;
+                return Parent.buttonErrorPanelOpenHide.Visible;
             }
             set
             {
 
-                Parent.buttonOpenHide.Visible = value;
+                Parent.buttonErrorPanelOpenHide.Visible = value;
             }
         }
 
@@ -59,7 +59,7 @@ namespace NOTools.CSharpTextEditor
             set
             {
                 Parent.splitContainer1.Panel2Collapsed = !value;
-                Parent.buttonOpenHide.Image = true == Parent.splitContainer1.Panel2Collapsed ? Parent.buttonOpen.Image : Parent.buttonHide.Image;
+                Parent.buttonErrorPanelOpenHide.Image = true == Parent.splitContainer1.Panel2Collapsed ? Parent.buttonOpen.Image : Parent.buttonHide.Image;
                 Parent.wpfControl1.TextEditor1.Focus();
             }
         }

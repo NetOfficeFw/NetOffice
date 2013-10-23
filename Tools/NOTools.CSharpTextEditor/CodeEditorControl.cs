@@ -26,21 +26,24 @@ namespace NOTools.CSharpTextEditor
         public CodeEditorControl()
         {
             InitializeComponent();
+            referencePanel1.ParentEditor = this;
+            References = new AssemblyReferenceCollection();
+            References.ListChanged += new ListChangedEventHandler(References_ListChanged);
             ErrorPanelSettings = new ErrorPanelOptions(this);
             ReferencePanelSettings = new ReferencePanelOptions(this);
+            CompileRequestOptions = new CompileRequestOptions();
             wpfControl1.ParentControl = this;
-            buttonOpenHide_Click(this, new EventArgs());
+            buttonErrorPanelOpenHide_Click(this, new EventArgs());
             if (!DesignMode)
             {
-               // PersistencePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CodeEditorControl");
-                CompileRequestOptions = new CompileRequestOptions();
+               // PersistencePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CodeEditorControl");               
                 Caret_PositionChanged(this, new EventArgs());
                 wpfControl1.TextEditor1.KeyUp += new System.Windows.Input.KeyEventHandler(TextEditor1_KeyUp);
                 wpfControl1.TextEditor1.TextArea.Caret.PositionChanged += new EventHandler(Caret_PositionChanged);
             }
-            // TODO: focus change if need
+            // TODO: button focus change if need
         }
-         
+
         #endregion
 
         #region Events
@@ -75,14 +78,26 @@ namespace NOTools.CSharpTextEditor
         /// <summary>
         /// ErrorPanel settings
         /// </summary>
-        [DisplayName("ErrorPanel"), Category("CodeEditor"), Description("ErrorPanel Settings")]
+        [DisplayName("ErrorPanel"), Category("CodeEditor"), Description("ErrorPanel Settings"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public ErrorPanelOptions ErrorPanelSettings { get; private set; }
 
         /// <summary>
         /// ReferencePanel settings
         /// </summary>
-        [DisplayName("ReferencePanel"), Category("CodeEditor"), Description("ReferencePanel Settings")]
+        [DisplayName("ReferencePanel"), Category("CodeEditor"), Description("ReferencePanel Settings"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public ReferencePanelOptions ReferencePanelSettings { get; private set; }
+
+        /// <summary>
+        /// Allows to set a key to fire the CompileRequest event
+        /// </summary>
+        [DisplayName("RequestOptions"), Category("CodeEditor"), Description("Allows to set a key to fire the CompileRequest event"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        public CompileRequestOptions CompileRequestOptions { get; private set; }
+        
+        /// <summary>
+        /// Allows to set a key to fire the CompileRequest event
+        /// </summary>
+        [DisplayName("References"), Category("CodeEditor"), Description("Allows to add/remvove assembly references"), DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        public AssemblyReferenceCollection References { get; private set; }
 
         /// <summary>
         /// C# Code
@@ -132,17 +147,7 @@ namespace NOTools.CSharpTextEditor
             }
         }
 
-    
-        /// <summary>
-        /// Allows to set a key to fire the CompileRequest event
-        /// </summary>
-        [DisplayName("RequestOptions"), Category("CodeEditor"), Description("Allows to set a key to fire the CompileRequest event")]
-        public CompileRequestOptions CompileRequestOptions { get; set; }
 
-        /// <summary>
-        /// info the control is in design mode
-        /// </summary>
-        [Browsable(false)]
         public new bool DesignMode
         {
             get
@@ -150,7 +155,19 @@ namespace NOTools.CSharpTextEditor
                 return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
             }
         }
-         
+        /// <summary>
+        /// info the control is in design mode
+        /// </summary>
+        [Browsable(false)]
+        private bool IsInDesignMode
+        {
+            get 
+            {
+
+                return System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv";
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -162,6 +179,7 @@ namespace NOTools.CSharpTextEditor
         /// <param name="doAsync">run as async operation</param>
         public void AddReferenceFromPersistenceFolder(string assemblyName, bool doAsync = false)
         {
+            wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder("mscorlib", false);
             wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder(assemblyName, doAsync);
         }
 
@@ -172,6 +190,7 @@ namespace NOTools.CSharpTextEditor
         /// <param name="doAsync">run as async operation</param>
         public void AddReferencesFromPersistenceFolder(string[] assemblyNames, bool doAsync = false)
         {
+            wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder("mscorlib", false);
             wpfControl1.CurrentFile.AddReferencesFromPersistenceFolder(assemblyNames, doAsync);
         }
 
@@ -208,6 +227,28 @@ namespace NOTools.CSharpTextEditor
             wpfControl1.SetTextWithoutChangeEvent(text);
         }
 
+        private void RemoveDeletedReferences()
+        {
+            string[] references = referencePanel1.References;
+            foreach (string referenceName in references)
+            {
+                bool found = false;
+                foreach (AssemblyReference item in References)
+                {
+                    if (item.Name.Equals(referenceName, StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!referenceName.Equals("mscorlib", StringComparison.InvariantCultureIgnoreCase) && false == found)
+                {
+                    wpfControl1.CurrentFile.RemoveReference(referenceName);
+                }
+            }
+        }
+
         /// <summary>
         /// Show compiler errors in the panel
         /// </summary>
@@ -236,17 +277,41 @@ namespace NOTools.CSharpTextEditor
 
         #region Trigger
 
+        private void References_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            if (!IsInDesignMode)
+            { 
+                if (e.ListChangedType == ListChangedType.ItemAdded)
+                {
+                    AssemblyReference item = References[e.NewIndex];
+                    if (!String.IsNullOrWhiteSpace(item.Path))
+                    {
+                        AddReferenceFromFile(item.Name, item.Path, true, true);
+                    }
+                    else
+                    {
+                        AddReferenceFromPersistenceFolder(item.Name, true);
+                    }
+                }
+                else if (e.ListChangedType == ListChangedType.ItemDeleted)
+                {
+                    RemoveDeletedReferences();
+                }
+            }
+            referencePanel1.ShowReferences();
+        }
+
         private void Caret_PositionChanged(object sender, EventArgs e)
         {
             int currentLine = wpfControl1.TextEditor1.TextArea.Caret.Line;
             int currentColumn = wpfControl1.TextEditor1.TextArea.Caret.Column;
             labelInfo.Text = String.Format(ErrorPanelSettings.LineInfoFormatString, currentLine, currentColumn);
         }
-        
-        private void buttonOpenHide_Click(object sender, EventArgs e)
+
+        private void buttonErrorPanelOpenHide_Click(object sender, EventArgs e)
         {
             splitContainer1.Panel2Collapsed = !splitContainer1.Panel2Collapsed;
-            buttonOpenHide.Image = true == splitContainer1.Panel2Collapsed ? buttonOpen.Image : buttonHide.Image;
+            buttonErrorPanelOpenHide.Image = true == splitContainer1.Panel2Collapsed ? buttonOpen.Image : buttonHide.Image;
             wpfControl1.TextEditor1.Focus();
         }
 
@@ -254,9 +319,9 @@ namespace NOTools.CSharpTextEditor
         {
             if (referencePanel1.PanelOpen)
             {
-                splitContainer3.Panel2MinSize = 100;
+                splitContainer3.Panel2MinSize = 180;
                 splitContainer3.SplitterWidth = 4;
-                splitContainer3.SplitterDistance = this.Width - 100;
+                splitContainer3.SplitterDistance = this.Width - 180;
                 splitContainer3.IsSplitterFixed = false;
                 referencePanel1.PerformVisible();                 
             }
