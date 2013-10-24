@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOBuildTools.SourceUpdater"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOBuildTools.VersionUpdater", "VersionUpdater\NOBuildTools.VersionUpdater.csproj", "{3CDA84DA-CC00-49FE-B05F-EB12E38E5AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOBuildTools.ReferenceAnalyzer", "NOBuildTools.ReferenceAnalyzer\NOBuildTools.ReferenceAnalyzer.csproj", "{C6CD402C-0B5B-45F2-9D96-4F670D379124}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOBuildTools.ReferenceAnalyzer", "ReferenceAnalyzer\NOBuildTools.ReferenceAnalyzer.csproj", "{C6CD402C-0B5B-45F2-9D96-4F670D379124}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
