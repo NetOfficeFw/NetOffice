@@ -1,4 +1,4 @@
-﻿<UserControl x:Class=" NOTools.CSharpTextEditor.WPFControl"
+﻿<UserControl x:Class="NOTools.CSharpTextEditor.WPFControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
@@ -14,7 +14,7 @@
                 SyntaxHighlighting="C#"
                 FontFamily="Courier New"
                 FontSize="10pt"
-                Document="{Binding CodeDocument}" TextChanged="TextEditor1_TextChanged" ShowLineNumbers="True">
+                Document="{Binding CodeDocument}" TextChanged="TextEditor1_TextChanged" ShowLineNumbers="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <avalonedit:TextEditor.Options>
                     <avalonedit:TextEditorOptions ConvertTabsToSpaces="True" EnableTextDragDrop="True" />
                 </avalonedit:TextEditor.Options>

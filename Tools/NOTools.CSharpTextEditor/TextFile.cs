@@ -101,31 +101,40 @@ namespace NOTools.CSharpTextEditor
 
         #endregion
 
+        public DomPersistence Persistence 
+        {
+            get 
+            {
+                return _contentRegistry.ActivatePersistence(GetPersistencePath());
+            }
+        }
+
         #region Methods
 
-        public void AddReferenceFromPersistenceFolder(string assemblyName, bool doAsync = false)
+        public bool AddReferenceFromPersistenceFolder(string assemblyName, bool doAsync = false)
         {
-            if (_cacheReferences.ContainsKey(assemblyName))
-                return;
-
             if (!Directory.Exists(GetPersistencePath()))
                 Directory.CreateDirectory(GetPersistencePath());
 
+            bool result = false;
             RunMethod(
                   delegate
                   {
                       lock (_contentRegistry)
                       {
                           DomPersistence persistence = _contentRegistry.ActivatePersistence(GetPersistencePath());
+                          
                           IProjectContent persistenceContent = persistence.LoadProjectContentByAssemblyName(assemblyName);
                           if (null != persistenceContent)
                           {
                               _cacheReferences[assemblyName] = persistenceContent;
                               //_projectContent.AddReferencedContent(persistenceContent);
                               _projectContent.ReferencedContents.Add(persistenceContent);
+                              result = true;
                           }
                       }
                   }, doAsync);
+            return result;
         }        
 
         public void AddReferencesFromPersistenceFolder(string[] assemblyNames, bool doAsync = false)
@@ -159,8 +168,8 @@ namespace NOTools.CSharpTextEditor
          
         public void AddReferenceFromFile(string assemblyName, string assemblyLocation, bool tryPersistence = true, bool doAsync = false)
         {
-            if (_cacheReferences.ContainsKey(assemblyName))
-                return;
+            //if (_cacheReferences.ContainsKey(assemblyName))
+            //    return;
 
             if (!Directory.Exists(GetPersistencePath()))
                 Directory.CreateDirectory(GetPersistencePath());
@@ -296,12 +305,42 @@ namespace NOTools.CSharpTextEditor
 
         }
 
+        private string CalculatePathOneUpward(string path)
+        {
+            if(path.EndsWith("\\"))
+                path = path.Substring(0, path.Length -1);
+            int pos = path.LastIndexOf("\\");
+            if (pos > -1)
+                path = path.Substring(0, pos);
+            return path;
+        }
+
         private string GetPersistencePath()
         {
             if (String.IsNullOrWhiteSpace(PersistancePath))
                 return CurrentPath;
             else
-                return PersistancePath;
+            {
+                if (PersistancePath.Contains(".."))
+                {
+                    string relativePath = CurrentPath;
+                    string[] array = PersistancePath.Split(new string[] { "\\" }, StringSplitOptions.None);
+                    foreach (var item in array)
+                    {
+                        if (item.Trim() == "..")
+                        {
+                            relativePath = CalculatePathOneUpward(relativePath); 
+                        }
+                        else
+                        {
+                            relativePath = Path.Combine(relativePath, item);
+                        }
+                    }
+                    return relativePath;
+                }
+                else
+                    return PersistancePath;
+            }
         }
 
         private void RunMethod(ThreadStart method, bool runAsync)

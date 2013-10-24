@@ -25,6 +25,8 @@ namespace NOTools.CSharpTextEditor
         [DisplayName("Path"), Description("Full Path of the Assembly"), Category("Reference")]
         public string Path { get; set; }
 
+        [DisplayName("IsExe"), Description("Gets info the reference is an executable"), Category("Reference")]
+        public bool IsExe { get; set; }
 
         public override string ToString()
         {

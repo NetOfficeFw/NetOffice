@@ -86,13 +86,13 @@ namespace ICSharpCode.SharpDevelop.Dom
 		
 		Dictionary<string, string> cacheIndex;
 		
-		Dictionary<string, string> CacheIndex {
+		public Dictionary<string, string> CacheIndex {
 			get {
 				return cacheIndex;
 			}
 		}
-		
-		Dictionary<string, string> LoadCacheIndex()
+
+        public Dictionary<string, string> LoadCacheIndex()
 		{
 			string indexFile = GetIndexFileName();
 			Dictionary<string, string> list = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Threading;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -16,15 +17,10 @@ using System.Windows.Shapes;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Rendering;
+using ICSharpCode.AvalonEdit.Folding;
 
 namespace NOTools.CSharpTextEditor
 {
-    /*
-                 <codecomplete:CodeCompletionBeahvior 
-                                                    FilterStrategy="{Binding FilterStrategy}" 
-                                                    ProjectContent="{Binding ProjectContent}" />
-     */
-
     /// <summary>
     /// Interaktionslogik für WPFControl.xaml
     /// </summary>
@@ -34,6 +30,8 @@ namespace NOTools.CSharpTextEditor
 
         private TextFile _currentFile;
         private bool _isChange;
+        FoldingManager _foldingManager;
+        AbstractFoldingStrategy _foldingStrategy;
 
         #endregion
 
@@ -50,6 +48,12 @@ namespace NOTools.CSharpTextEditor
             DataContext = _currentFile;
             TextEditor1.Document = new ICSharpCode.AvalonEdit.Document.TextDocument();
             TextEditor1.Text = string.Empty;
+
+            DispatcherTimer foldingUpdateTimer = new DispatcherTimer();
+            foldingUpdateTimer.Interval = TimeSpan.FromSeconds(2);
+            foldingUpdateTimer.Tick += FoldingUpdateTimer_Tick;
+            foldingUpdateTimer.Start();
+
             SetupContextMenu(); 
         }
 
@@ -130,6 +134,52 @@ namespace NOTools.CSharpTextEditor
             set
             {
                 TextEditor1.Options.ShowEndOfLine = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets/Sets the +- is shown to collapse {} regions
+        /// </summary>
+        public bool EnableFolding
+        {
+            get
+            {
+                return _enableFolding;
+            }
+            set
+            {
+                _enableFolding = value;
+                if (_enableFolding)
+                {
+                    if (null == _foldingStrategy && false == IsInDesignMode)
+                    { 
+                        _foldingStrategy = new BraceFoldingStrategy();
+                        _foldingManager = FoldingManager.Install(TextEditor1.TextArea);
+                    }
+                }
+                else 
+                {
+                    if (null != _foldingManager)
+                    {
+                        FoldingManager.Uninstall(_foldingManager);
+                        _foldingManager = null;
+                        _foldingManager = null;
+                    }
+                }
+            }
+        }
+        private bool _enableFolding;
+
+        /// <summary>
+        /// info the control is in design mode
+        /// </summary>
+        [Browsable(false)]
+        private bool IsInDesignMode
+        {
+            get
+            {
+
+                return System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv";
             }
         }
 
@@ -274,6 +324,12 @@ namespace NOTools.CSharpTextEditor
         #endregion
 
         #region Trigger
+
+        private void FoldingUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            if (_foldingStrategy != null)
+                _foldingStrategy.UpdateFoldings(_foldingManager, TextEditor1.Document);
+        }
 
         private void TextEditor1_TextChanged(object sender, EventArgs e)
         {

@@ -92,7 +92,12 @@ namespace NOTools.CSharpTextEditor
                 if (!String.IsNullOrWhiteSpace(item.Path))
                     list.Add(item.Path);
                 else
-                    list.Add(item.Name + ".dll");
+                {
+                    if(item.IsExe)
+                        list.Add(item.Name + ".exe");
+                    else
+                        list.Add(item.Name + ".dll");
+                }
             }
 
             if (!list.Contains("mscorlib.dll"))

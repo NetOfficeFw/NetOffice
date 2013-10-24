@@ -33,6 +33,7 @@ namespace NOTools.CSharpTextEditor
             ReferencePanelSettings = new ReferencePanelOptions(this);
             CompileRequestOptions = new CompileRequestOptions();
             wpfControl1.ParentControl = this;
+            Persistance = new CSharpTextEditor.PersistanceCache(this);
             buttonErrorPanelOpenHide_Click(this, new EventArgs());
             if (!DesignMode)
             {
@@ -49,15 +50,64 @@ namespace NOTools.CSharpTextEditor
         #region Events
 
         /// <summary>
+        /// Occurs when a load project from persistance operation is failed
+        /// </summary>
+        [Category("CodeEditor"), Description("Occurs when a load project from persistance operation is failed")]
+        public event PersistanceResolveEventHandler PersistanceResolve
+        {
+            add 
+            {
+                _persistanceResolve += value;
+                foreach (var item in _unresolvedNames)
+                {
+                    string path = "";
+                    RaisePersistanceResolve(item, ref path);
+                    if (!String.IsNullOrWhiteSpace(path))
+                        AddReferenceFromFile(item, path, true, true);
+                }
+                _unresolvedNames.Clear();
+            }
+            remove
+            {
+                _persistanceResolve -= value;
+            }
+        }
+        private  PersistanceResolveEventHandler _persistanceResolve;
+
+        private List<string> _unresolvedNames = new List<string>();
+
+        private void RaisePersistanceResolve(string name, ref string path)
+        {
+            if (null != _persistanceResolve)
+                _persistanceResolve(name, ref path);
+            else
+            {
+                if (!_unresolvedNames.Contains(name))
+                    _unresolvedNames.Add(name);
+            }
+        }
+
+        /// <summary>
         /// Occurs when a specific key is pressed (see CompileRequestOptions)
         /// </summary>
         [Category("CodeEditor"), Description("Occurs when a specific key is pressed (see CompileRequestOptions)")]
         public event CompileRequestHandler CompileRequest;
+       
+        /// <summary>
+        /// Occurs when a specific key is pressed (see CompileRequestOptions)
+        /// </summary>
+        [Category("CodeEditor"), Description("Occurs when a specific key is pressed (see CompileRequestOptions)")]
+        public event CompileRequestHandler RunRequest;
 
         private void RaiseCompileRequest(Key key)
         {
             if (null != CompileRequest)
                 CompileRequest(this, new CompileRequestEventArgs(key));
+        }
+        private void RaiseRunRequest(Key key)
+        {
+            if (null != RunRequest)
+                RunRequest(this, new CompileRequestEventArgs(key));
         }
 
         /// <summary>
@@ -75,6 +125,10 @@ namespace NOTools.CSharpTextEditor
 
         #region Properties
 
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        [DisplayName("PersistanceCache"), Category("CodeEditor"), Description("Persistance Items")]
+        public PersistanceCache Persistance { get; private set; }
+      
         /// <summary>
         /// ErrorPanel settings
         /// </summary>
@@ -132,6 +186,22 @@ namespace NOTools.CSharpTextEditor
         }
 
         /// <summary>
+        /// Get /Sets the +- regions for "{}" areas was shown
+        /// </summary>
+        [DisplayName("EnableFolding"), Category("CodeEditor"), Description("Get /Sets the +- regions for '{}' areas was shown")]
+        public bool EnableFolding
+        {
+            get
+            {
+                return wpfControl1.EnableFolding;
+            }
+            set
+            {
+                wpfControl1.EnableFolding = value;
+            }
+        }
+
+        /// <summary>
         /// Assembly info chache path (current codebase if empty)
         /// </summary>
         [Category("CodeEditor"), Description("Assembly info chache path (current codebase if empty)")]
@@ -155,6 +225,7 @@ namespace NOTools.CSharpTextEditor
                 return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
             }
         }
+
         /// <summary>
         /// info the control is in design mode
         /// </summary>
@@ -177,10 +248,10 @@ namespace NOTools.CSharpTextEditor
         /// </summary>
         /// <param name="assemblyName">Name of the assembly</param>
         /// <param name="doAsync">run as async operation</param>
-        public void AddReferenceFromPersistenceFolder(string assemblyName, bool doAsync = false)
+        public bool AddReferenceFromPersistenceFolder(string assemblyName, bool doAsync = false)
         {
             wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder("mscorlib", false);
-            wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder(assemblyName, doAsync);
+            return wpfControl1.CurrentFile.AddReferenceFromPersistenceFolder(assemblyName, false);
         }
 
         /// <summary>
@@ -290,7 +361,14 @@ namespace NOTools.CSharpTextEditor
                     }
                     else
                     {
-                        AddReferenceFromPersistenceFolder(item.Name, true);
+                        bool result = AddReferenceFromPersistenceFolder(item.Name, true);
+                        if (false == result)
+                        {
+                            string path = "";
+                            RaisePersistanceResolve(item.Name, ref path);
+                            if(!String.IsNullOrWhiteSpace(path))
+                                AddReferenceFromFile(item.Name, path, true, true);
+                        }
                     }
                 }
                 else if (e.ListChangedType == ListChangedType.ItemDeleted)
@@ -338,7 +416,10 @@ namespace NOTools.CSharpTextEditor
         private void TextEditor1_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (CompileRequestOptions.Enabled && Convert.ToInt32(e.Key) == Convert.ToInt32(CompileRequestOptions.CompileRequestKey))
-                RaiseCompileRequest(CompileRequestOptions.CompileRequestKey);          
+                RaiseCompileRequest(CompileRequestOptions.CompileRequestKey);
+
+            if (CompileRequestOptions.Enabled && Convert.ToInt32(e.Key) == Convert.ToInt32(CompileRequestOptions.RunRequestKey))
+                RaiseRunRequest(CompileRequestOptions.RunRequestKey);     
         }
 
         private void errorPanel1_ErrorDoubleClick(ErrorPanel sender, int lineNumber, int columnNumber)

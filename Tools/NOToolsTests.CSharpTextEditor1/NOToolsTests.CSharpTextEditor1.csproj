@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NOTools.CSharpTextEditor">
-      <HintPath>..\NOTools.CSharpTextEditor\bin\Debug\NOTools.CSharpTextEditor.dll</HintPath>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>..\NOTools.CSharpTextEditor\ICSharpCode Libs\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +53,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IScriptComponent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -68,7 +69,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +80,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NOTools.CSharpTextEditor\NOTools.CSharpTextEditor.csproj">
+      <Project>{6F78B47E-BF06-4EEA-92F1-8B823EA22AD3}</Project>
+      <Name>NOTools.CSharpTextEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NOTools.InMemoryCompiler\NOTools.InMemoryCompiler.csproj">
       <Project>{4AC526D9-8629-40FA-A231-729B76DCA737}</Project>
       <Name>NOTools.InMemoryCompiler</Name>

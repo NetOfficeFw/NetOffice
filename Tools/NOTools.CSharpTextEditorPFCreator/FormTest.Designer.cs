@@ -172,6 +172,7 @@
             this.codeEditorControl1.BackColor = System.Drawing.Color.White;
             this.codeEditorControl1.CompileRequestOptions.CompileRequestKey = NOTools.CSharpTextEditor.Key.F5;
             this.codeEditorControl1.CompileRequestOptions.Enabled = true;
+            this.codeEditorControl1.EnableFolding = true;
             this.codeEditorControl1.ErrorPanelSettings.AllowPanel = true;
             this.codeEditorControl1.ErrorPanelSettings.BackColor = System.Drawing.Color.LightSteelBlue;
             this.codeEditorControl1.ErrorPanelSettings.ErrorColumnHeader = "Error";

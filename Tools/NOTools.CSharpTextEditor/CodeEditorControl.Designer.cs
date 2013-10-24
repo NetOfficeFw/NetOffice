@@ -74,8 +74,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel2MinSize = 40;
             this.splitContainer1.Size = new System.Drawing.Size(400, 400);
-            this.splitContainer1.SplitterDistance = 357;
+            this.splitContainer1.SplitterDistance = 366;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -96,7 +97,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.referencePanel1);
             this.splitContainer3.Panel2MinSize = 10;
-            this.splitContainer3.Size = new System.Drawing.Size(398, 336);
+            this.splitContainer3.Size = new System.Drawing.Size(398, 345);
             this.splitContainer3.SplitterDistance = 235;
             this.splitContainer3.TabIndex = 4;
             // 
@@ -106,7 +107,7 @@
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementHost1.Location = new System.Drawing.Point(0, 0);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(235, 336);
+            this.elementHost1.Size = new System.Drawing.Size(235, 345);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.wpfControl1;
@@ -117,7 +118,7 @@
             this.referencePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.referencePanel1.Location = new System.Drawing.Point(0, 0);
             this.referencePanel1.Name = "referencePanel1";
-            this.referencePanel1.Size = new System.Drawing.Size(159, 336);
+            this.referencePanel1.Size = new System.Drawing.Size(159, 345);
             this.referencePanel1.TabIndex = 0;
             this.referencePanel1.OpenHideClick += new System.EventHandler(this.referencePanel1_OpenHideClick);
             // 
@@ -131,7 +132,7 @@
             this.panelHeader.Controls.Add(this.buttonOpen);
             this.panelHeader.Controls.Add(this.labelErrors);
             this.panelHeader.Controls.Add(this.buttonErrorPanelOpenHide);
-            this.panelHeader.Location = new System.Drawing.Point(1, 338);
+            this.panelHeader.Location = new System.Drawing.Point(1, 347);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(398, 17);
             this.panelHeader.TabIndex = 3;
@@ -205,7 +206,7 @@
             // 
             this.splitContainer2.Panel1.Controls.Add(this.errorPanel1);
             this.splitContainer2.Panel2Collapsed = true;
-            this.splitContainer2.Size = new System.Drawing.Size(400, 42);
+            this.splitContainer2.Size = new System.Drawing.Size(400, 33);
             this.splitContainer2.SplitterDistance = 263;
             this.splitContainer2.TabIndex = 1;
             // 
@@ -217,9 +218,9 @@
             this.errorPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.errorPanel1.ErrorColumnHeader = "Error";
             this.errorPanel1.LineColumnHeader = "Line";
-            this.errorPanel1.Location = new System.Drawing.Point(0, 0);
+            this.errorPanel1.Location = new System.Drawing.Point(0, -3);
             this.errorPanel1.Name = "errorPanel1";
-            this.errorPanel1.Size = new System.Drawing.Size(400, 41);
+            this.errorPanel1.Size = new System.Drawing.Size(400, 36);
             this.errorPanel1.TabIndex = 0;
             this.errorPanel1.ErrorDoubleClick += new NOTools.CSharpTextEditor.ErrorDoubleClickEventHandler(this.errorPanel1_ErrorDoubleClick);
             // 

@@ -183,6 +183,15 @@ namespace NOTools.CSharpTextEditor
 
         #region Trigger
 
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            if (e.Button != System.Windows.Forms.MouseButtons.Left)
+                return;
+            buttonOk_Click(buttonOk, new EventArgs());
+        }
+
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             if (!ReadyForAction)

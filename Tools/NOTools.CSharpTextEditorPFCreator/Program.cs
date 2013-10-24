@@ -15,8 +15,8 @@ namespace NOTools.CSharpTextEditorPFCreator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTest());
-            //AApplication.Run(new FormCreator());
+            //Application.Run(new FormTest());
+            Application.Run(new FormCreator());
         }
     }
 }
