@@ -70,12 +70,23 @@ namespace NetOffice.ADODBApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public ConnectionEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
-            get 
+            get
             {
                 if (null != _eventClass)
                     return _eventClass.Factory;
@@ -86,17 +97,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #region Construction
-
-        public ConnectionEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region ConnectionEvents Members
 		
 		public void InfoMessage([In, MarshalAs(UnmanagedType.IDispatch)] object pError, [In] object adStatus, [In, MarshalAs(UnmanagedType.IDispatch)] object pConnection)
@@ -107,7 +107,7 @@ namespace NetOffice.ADODBApi
 				Invoker.ReleaseParamsArray(pError, adStatus, pConnection);
 				return;
 			}
-            
+
 			NetOffice.ADODBApi.Error newpError = Factory.CreateObjectFromComProxy(_eventClass, pError) as NetOffice.ADODBApi.Error;
 			NetOffice.ADODBApi.Enums.EventStatusEnum newadStatus = (NetOffice.ADODBApi.Enums.EventStatusEnum)adStatus;
 			NetOffice.ADODBApi._Connection newpConnection = Factory.CreateObjectFromComProxy(_eventClass, pConnection) as NetOffice.ADODBApi._Connection;

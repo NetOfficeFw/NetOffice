@@ -15,6 +15,14 @@ namespace NetOffice.WordApi
 	{
 		#region Construction
 
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public AxisTitle_(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -28,6 +36,16 @@ namespace NetOffice.WordApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AxisTitle_(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+		}
+
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public AxisTitle_(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
@@ -60,6 +78,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start, object length)
@@ -76,6 +95,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartCharacters Characters(object start, object length)
 		{
@@ -87,6 +107,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.ChartCharacters get_Characters(object start)
@@ -102,6 +123,7 @@ namespace NetOffice.WordApi
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartCharacters Characters(object start)
 		{
@@ -120,6 +142,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface AxisTitle 
 	/// SupportByVersion Word, 14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840019.aspx </remarks>
 	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AxisTitle : AxisTitle_
@@ -145,22 +168,40 @@ namespace NetOffice.WordApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public AxisTitle(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AxisTitle(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public AxisTitle(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AxisTitle(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AxisTitle(COMObject replacedObject) : base(replacedObject)
 		{
@@ -185,6 +226,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840390.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string Caption
 		{
@@ -205,6 +247,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835765.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartCharacters Characters
 		{
@@ -238,6 +281,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194729.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object HorizontalAlignment
 		{
@@ -266,6 +310,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840391.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Double Left
 		{
@@ -286,6 +331,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822947.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Orientation
 		{
@@ -314,6 +360,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194418.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool Shadow
 		{
@@ -334,6 +381,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191774.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string Text
 		{
@@ -354,6 +402,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839085.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Double Top
 		{
@@ -374,6 +423,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845147.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object VerticalAlignment
 		{
@@ -402,6 +452,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838876.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 ReadingOrder
 		{
@@ -502,6 +553,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838059.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string Name
 		{
@@ -518,6 +570,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823265.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
@@ -534,6 +587,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837525.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool IncludeInLayout
 		{
@@ -554,6 +608,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838121.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Enums.XlChartElementPosition Position
 		{
@@ -575,6 +630,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822679.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
@@ -592,6 +648,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835489.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
@@ -608,6 +665,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197566.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
@@ -623,6 +681,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194816.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Double Height
 		{
@@ -638,6 +697,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838716.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Double Width
 		{
@@ -653,6 +713,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845408.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string Formula
 		{
@@ -673,6 +734,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845828.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string FormulaR1C1
 		{
@@ -693,6 +755,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845060.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string FormulaLocal
 		{
@@ -713,6 +776,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821952.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string FormulaR1C1Local
 		{
@@ -736,6 +800,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197989.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Delete()
 		{
@@ -755,6 +820,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836741.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Select()
 		{

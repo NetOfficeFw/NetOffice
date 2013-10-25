@@ -13,6 +13,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface AllowEditRanges 
 	/// SupportByVersion Excel, 10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838626.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AllowEditRanges : COMObject ,IEnumerable<NetOffice.ExcelApi.AllowEditRange>
@@ -38,22 +39,40 @@ namespace NetOffice.ExcelApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public AllowEditRanges(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AllowEditRanges(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public AllowEditRanges(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AllowEditRanges(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public AllowEditRanges(COMObject replacedObject) : base(replacedObject)
 		{
@@ -78,6 +97,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839256.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -117,6 +137,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
 		/// <param name="password">optional object Password</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841109.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range, object password)
 		{
@@ -131,6 +152,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841109.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.AllowEditRange Add(string title, NetOffice.ExcelApi.Range range)

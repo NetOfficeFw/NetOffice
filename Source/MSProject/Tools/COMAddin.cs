@@ -220,7 +220,7 @@ namespace NetOffice.MSProjectApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new MSProject.Application(null, Application);
+			this.Application = new MSProject.Application(Factory, null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -381,7 +381,7 @@ namespace NetOffice.MSProjectApi.Tools
                     return false;
                 regKeyProject.SetValue(name, value);
                 regKeyProject.Close();
-                regKeyProject.Dispose();
+                //regKeyProject.Dispose(); not available in previous .net versions
                 return true;
 
             }
@@ -409,7 +409,7 @@ namespace NetOffice.MSProjectApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -444,6 +444,7 @@ namespace NetOffice.MSProjectApi.Tools
         }
 
         #endregion
+
         #region Virtual Methods
 
         /// <summary>

@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SharedWorkspace 
 	/// SupportByVersion Office, 11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862502.aspx </remarks>
 	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspace : _IMsoDispObj
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public SharedWorkspace(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharedWorkspace(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public SharedWorkspace(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharedWorkspace(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharedWorkspace(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861084.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string Name
 		{
@@ -97,6 +117,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863506.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceMembers Members
 		{
@@ -113,6 +134,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863392.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceTasks Tasks
 		{
@@ -129,6 +151,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865183.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFiles Files
 		{
@@ -145,6 +168,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863702.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFolders Folders
 		{
@@ -161,6 +185,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862483.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceLinks Links
 		{
@@ -178,6 +203,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861765.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
@@ -194,6 +220,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865214.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string URL
 		{
@@ -209,6 +236,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860257.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool Connected
 		{
@@ -224,6 +252,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861389.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object LastRefreshed
 		{
@@ -247,6 +276,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860917.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string SourceURL
 		{
@@ -270,6 +300,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862068.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Refresh()
 		{
@@ -282,6 +313,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="uRL">optional object URL</param>
 		/// <param name="name">optional object Name</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew(object uRL, object name)
 		{
@@ -292,6 +324,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew()
@@ -304,6 +337,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
 		/// <param name="uRL">optional object URL</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862182.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void CreateNew(object uRL)
@@ -315,6 +349,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862550.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Delete()
 		{
@@ -325,6 +360,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861519.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void RemoveDocument()
 		{
@@ -335,6 +371,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863540.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void Disconnect()
 		{

@@ -42,8 +42,19 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public NameSpaceEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -58,17 +69,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-		#region Construction
-
-		public NameSpaceEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region NameSpaceEvents Members
 		
 		public void OptionsPagesAdd([In, MarshalAs(UnmanagedType.IDispatch)] object pages, [In, MarshalAs(UnmanagedType.IDispatch)] object folder)

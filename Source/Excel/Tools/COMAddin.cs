@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            this.Application = new Excel.Application(null, Application);
+            this.Application = new Excel.Application(Factory, null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi.Tools
                     return false;
                 regKeyExcel.SetValue(name, value);
                 regKeyExcel.Close();
-                regKeyExcel.Dispose();
+                //regKeyExcel.Dispose(); not available in previous .net versions
                 return true;
             }
             catch (Exception exception)

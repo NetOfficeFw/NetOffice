@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="COMObjectExpandableObjectConverter.cs" />
+    <Compile Include="Core.cs" />
     <Compile Include="DebugConsoleMode.cs" />
     <Compile Include="NamedPipes\ClientPipeConnection.cs" />
     <Compile Include="NamedPipes\InterProcessConnectionState.cs" />
@@ -107,7 +108,6 @@
     <Compile Include="OnDisposeEventHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="COMObject.cs" />
-    <Compile Include="Core.cs" />
     <Compile Include="Interfaces\IFactoryInfo.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="RetryMessageFilter.cs" />

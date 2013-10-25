@@ -28,6 +28,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkCommandButton 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868781.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkCommandButton : _OlkCommandButton,IEventBinding
@@ -61,41 +62,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OlkCommandButton(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public OlkCommandButton(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OlkCommandButton(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkCommandButton(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkCommandButton(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OlkCommandButton 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of OlkCommandButton 
+        ///</summary>		
 		public OlkCommandButton():base("Outlook.OlkCommandButton")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OlkCommandButton
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of OlkCommandButton
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public OlkCommandButton(string progId):base(progId)
 		{
 			
@@ -156,6 +175,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863427.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_ClickEventHandler ClickEvent
 		{
@@ -178,6 +198,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869593.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -200,6 +221,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868329.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_MouseDownEventHandler MouseDownEvent
 		{
@@ -222,6 +244,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862982.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -244,6 +267,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860671.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_MouseUpEventHandler MouseUpEvent
 		{
@@ -266,6 +290,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868553.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_EnterEventHandler EnterEvent
 		{
@@ -288,6 +313,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868836.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_ExitEventHandler ExitEvent
 		{
@@ -310,6 +336,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865822.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_KeyDownEventHandler KeyDownEvent
 		{
@@ -332,6 +359,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869029.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_KeyPressEventHandler KeyPressEvent
 		{
@@ -354,6 +382,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865850.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_KeyUpEventHandler KeyUpEvent
 		{
@@ -376,6 +405,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863036.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -398,6 +428,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865606.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkCommandButton_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -422,7 +453,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -529,7 +560,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

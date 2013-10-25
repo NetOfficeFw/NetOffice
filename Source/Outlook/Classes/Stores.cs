@@ -18,6 +18,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass Stores 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867405.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Stores : _Stores,IEventBinding
@@ -51,41 +52,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Stores(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Stores(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Stores(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Stores(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Stores(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Stores 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Stores 
+        ///</summary>		
 		public Stores():base("Outlook.Stores")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Stores
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Stores
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Stores(string progId):base(progId)
 		{
 			
@@ -146,6 +165,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868606.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event Stores_BeforeStoreRemoveEventHandler BeforeStoreRemoveEvent
 		{
@@ -168,6 +188,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862524.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event Stores_StoreAddEventHandler StoreAddEvent
 		{
@@ -192,7 +213,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -299,7 +320,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

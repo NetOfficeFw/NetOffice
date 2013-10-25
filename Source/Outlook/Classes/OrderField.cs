@@ -16,6 +16,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OrderField 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864486.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OrderField : _OrderField
@@ -48,41 +49,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OrderField(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public OrderField(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OrderField(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OrderField(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OrderField(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OrderField 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of OrderField 
+        ///</summary>		
 		public OrderField():base("Outlook.OrderField")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OrderField
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of OrderField
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public OrderField(string progId):base(progId)
 		{
 			
@@ -145,7 +164,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -247,7 +266,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

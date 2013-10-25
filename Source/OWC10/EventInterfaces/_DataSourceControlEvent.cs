@@ -122,8 +122,19 @@ namespace NetOffice.OWC10Api
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public _DataSourceControlEvent_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -138,17 +149,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-		#region Construction
-
-		public _DataSourceControlEvent_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region _DataSourceControlEvent Members
 		
 		public void Current([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)

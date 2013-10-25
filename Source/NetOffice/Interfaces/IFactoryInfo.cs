@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Reflection; 
+using System.Reflection;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +20,7 @@ namespace NetOffice
         /// guid of component there represents the NetOfficeApi assembly
         /// </summary>
         Guid ComponentGuid { get; }
-        
+
         /// <summary>
         /// assembly info of NetOfficeApi assembly
         /// </summary>

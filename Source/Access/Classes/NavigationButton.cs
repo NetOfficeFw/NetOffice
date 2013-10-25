@@ -28,6 +28,7 @@ namespace NetOffice.AccessApi
 	/// CoClass NavigationButton 
 	/// SupportByVersion Access, 14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationButton : _NavigationButton,IEventBinding
@@ -61,41 +62,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public NavigationButton(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public NavigationButton(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public NavigationButton(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NavigationButton(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NavigationButton(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of NavigationButton 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of NavigationButton 
+        ///</summary>		
 		public NavigationButton():base("Access.NavigationButton")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of NavigationButton
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of NavigationButton
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public NavigationButton(string progId):base(progId)
 		{
 			
@@ -156,6 +175,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822048.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_ClickEventHandler ClickEvent
 		{
@@ -178,6 +198,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822726.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_EnterEventHandler EnterEvent
 		{
@@ -200,6 +221,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196059.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_ExitEventHandler ExitEvent
 		{
@@ -222,6 +244,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192653.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_GotFocusEventHandler GotFocusEvent
 		{
@@ -244,6 +267,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835383.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_LostFocusEventHandler LostFocusEvent
 		{
@@ -266,6 +290,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820826.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_DblClickEventHandler DblClickEvent
 		{
@@ -288,6 +313,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197983.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseDownEventHandler MouseDownEvent
 		{
@@ -310,6 +336,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195891.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -332,6 +359,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845798.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_MouseUpEventHandler MouseUpEvent
 		{
@@ -354,6 +382,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837321.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyDownEventHandler KeyDownEvent
 		{
@@ -376,6 +405,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197089.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyPressEventHandler KeyPressEvent
 		{
@@ -398,6 +428,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195130.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationButton_KeyUpEventHandler KeyUpEvent
 		{
@@ -422,7 +453,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -529,7 +560,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

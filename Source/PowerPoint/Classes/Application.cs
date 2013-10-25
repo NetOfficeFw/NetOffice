@@ -49,6 +49,7 @@ namespace NetOffice.PowerPointApi
 	/// CoClass Application 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745704.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application,IEventBinding
@@ -82,43 +83,62 @@ namespace NetOffice.PowerPointApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Application(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			_callQuitInDispose = true;
+			GlobalHelperModules.GlobalModule.Instance = this;
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Application(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			_callQuitInDispose = true;
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Application 
+        ///</summary>		
 		public Application():base("PowerPoint.Application")
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Application
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
 			_callQuitInDispose = true;
@@ -201,6 +221,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743918.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
@@ -223,6 +244,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746559.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
 		{
@@ -245,6 +267,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745746.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
 		{
@@ -267,6 +290,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744678.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_PresentationCloseEventHandler PresentationCloseEvent
 		{
@@ -289,6 +313,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744230.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_PresentationSaveEventHandler PresentationSaveEvent
 		{
@@ -311,6 +336,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744100.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_PresentationOpenEventHandler PresentationOpenEvent
 		{
@@ -333,6 +359,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745073.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_NewPresentationEventHandler NewPresentationEvent
 		{
@@ -355,6 +382,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746597.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_PresentationNewSlideEventHandler PresentationNewSlideEvent
 		{
@@ -377,6 +405,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743995.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
@@ -399,6 +428,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745519.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
@@ -421,6 +451,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746741.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_SlideShowBeginEventHandler SlideShowBeginEvent
 		{
@@ -443,6 +474,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745070.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_SlideShowNextBuildEventHandler SlideShowNextBuildEvent
 		{
@@ -465,6 +497,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745863.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_SlideShowNextSlideEventHandler SlideShowNextSlideEvent
 		{
@@ -487,6 +520,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746536.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_SlideShowEndEventHandler SlideShowEndEvent
 		{
@@ -509,6 +543,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744696.aspx </remarks>
 		[SupportByVersion("PowerPoint", 9,10,11,12,14,15)]
 		public event Application_PresentationPrintEventHandler PresentationPrintEvent
 		{
@@ -531,6 +566,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745869.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15)]
 		public event Application_SlideSelectionChangedEventHandler SlideSelectionChangedEvent
 		{
@@ -553,6 +589,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745549.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15)]
 		public event Application_ColorSchemeChangedEventHandler ColorSchemeChangedEvent
 		{
@@ -575,6 +612,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744682.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15)]
 		public event Application_PresentationBeforeSaveEventHandler PresentationBeforeSaveEvent
 		{
@@ -597,6 +635,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745682.aspx </remarks>
 		[SupportByVersion("PowerPoint", 10,11,12,14,15)]
 		public event Application_SlideShowNextClickEventHandler SlideShowNextClickEvent
 		{
@@ -619,6 +658,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746421.aspx </remarks>
 		[SupportByVersion("PowerPoint", 11,12,14,15)]
 		public event Application_AfterNewPresentationEventHandler AfterNewPresentationEvent
 		{
@@ -641,6 +681,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744659.aspx </remarks>
 		[SupportByVersion("PowerPoint", 11,12,14,15)]
 		public event Application_AfterPresentationOpenEventHandler AfterPresentationOpenEvent
 		{
@@ -663,6 +704,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744576.aspx </remarks>
 		[SupportByVersion("PowerPoint", 11,12,14,15)]
 		public event Application_PresentationSyncEventHandler PresentationSyncEvent
 		{
@@ -685,6 +727,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746469.aspx </remarks>
 		[SupportByVersion("PowerPoint", 12,14,15)]
 		public event Application_SlideShowOnNextEventHandler SlideShowOnNextEvent
 		{
@@ -707,6 +750,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744749.aspx </remarks>
 		[SupportByVersion("PowerPoint", 12,14,15)]
 		public event Application_SlideShowOnPreviousEventHandler SlideShowOnPreviousEvent
 		{
@@ -729,6 +773,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745567.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_PresentationBeforeCloseEventHandler PresentationBeforeCloseEvent
 		{
@@ -751,6 +796,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745081.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
@@ -773,6 +819,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745575.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
@@ -795,6 +842,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746497.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
@@ -817,6 +865,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744591.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
@@ -839,6 +888,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746253.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
@@ -861,6 +911,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744781.aspx </remarks>
 		[SupportByVersion("PowerPoint", 14,15)]
 		public event Application_PresentationCloseFinalEventHandler PresentationCloseFinalEvent
 		{
@@ -883,6 +934,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227644.aspx </remarks>
 		[SupportByVersion("PowerPoint", 15)]
 		public event Application_AfterDragDropOnSlideEventHandler AfterDragDropOnSlideEvent
 		{
@@ -905,6 +957,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227375.aspx </remarks>
 		[SupportByVersion("PowerPoint", 15)]
 		public event Application_AfterShapeSizeChangeEventHandler AfterShapeSizeChangeEvent
 		{
@@ -929,7 +982,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -1036,7 +1089,7 @@ namespace NetOffice.PowerPointApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

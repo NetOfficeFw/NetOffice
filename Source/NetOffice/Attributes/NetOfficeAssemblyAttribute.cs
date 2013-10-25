@@ -6,7 +6,7 @@ namespace NetOffice
     /// Indicates assembly is a NetOffice api assembly
     /// </summary>
     [AttributeUsage(AttributeTargets.Assembly)]
-    public class NetOfficeAssemblyAttribute: System.Attribute
+    public class NetOfficeAssemblyAttribute : System.Attribute
     {
         /// <summary>
         /// version
@@ -23,7 +23,3 @@ namespace NetOffice
         }
     }
 }
-
-
-
-

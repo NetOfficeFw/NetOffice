@@ -86,6 +86,21 @@ namespace NetOffice.MSComctlLibApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region IProgressBarEvents Members
 		
 		public void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y)

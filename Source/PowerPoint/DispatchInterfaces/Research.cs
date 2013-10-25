@@ -12,6 +12,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface Research 
 	/// SupportByVersion PowerPoint, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745646.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Research : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.PowerPointApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Research(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Research(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Research(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Research(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Research(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746098.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -94,6 +114,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744070.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public object Parent
 		{
@@ -118,6 +139,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="queryLanguage">optional object QueryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
 		/// <param name="launchQuery">optional bool LaunchQuery = true</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
 		{
@@ -129,6 +151,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID)
@@ -142,6 +165,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID, object queryString)
@@ -156,6 +180,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
 		/// <param name="queryLanguage">optional object QueryLanguage</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID, object queryString, object queryLanguage)
@@ -171,6 +196,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="queryString">optional object QueryString</param>
 		/// <param name="queryLanguage">optional object QueryLanguage</param>
 		/// <param name="useSelection">optional bool UseSelection = false</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744220.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Query(string serviceID, object queryString, object queryLanguage, object useSelection)
@@ -184,6 +210,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="language1">object Language1</param>
 		/// <param name="language2">object Language2</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745349.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void SetLanguagePair(object language1, object language2)
 		{
@@ -195,6 +222,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746351.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public bool IsResearchService(string serviceID)
 		{

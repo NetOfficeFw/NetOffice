@@ -12,6 +12,7 @@ namespace NetOffice.ExcelApi
 	/// DispatchInterface TableObject 
 	/// SupportByVersion Excel, 15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231257.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableObject : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.ExcelApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public TableObject(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TableObject(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public TableObject(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TableObject(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TableObject(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229978.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -93,6 +113,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230846.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -110,6 +131,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231705.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object Parent
 		{
@@ -126,6 +148,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227421.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool RowNumbers
 		{
@@ -146,6 +169,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231657.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool FetchedRowOverflow
 		{
@@ -161,6 +185,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231418.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlCellInsertionMode RefreshStyle
 		{
@@ -182,6 +207,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232078.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool EnableRefresh
 		{
@@ -202,6 +228,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228268.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Range Destination
 		{
@@ -218,6 +245,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227991.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Range ResultRange
 		{
@@ -234,6 +262,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230116.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool EnableEditing
 		{
@@ -254,6 +283,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231984.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool PreserveColumnInfo
 		{
@@ -274,6 +304,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227709.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool PreserveFormatting
 		{
@@ -294,6 +325,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227536.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool AdjustColumnWidth
 		{
@@ -314,6 +346,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227697.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.ListObject ListObject
 		{
@@ -330,6 +363,7 @@ namespace NetOffice.ExcelApi
 		/// SupportByVersion Excel 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231317.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
 		{
@@ -349,6 +383,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232042.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public void Delete()
 		{
@@ -359,6 +394,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229533.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool Refresh()
 		{

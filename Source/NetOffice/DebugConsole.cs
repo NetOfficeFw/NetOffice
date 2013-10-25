@@ -12,7 +12,7 @@ namespace NetOffice
     public class DebugConsole
     {
         #region Fields
-        
+
         private static object _sharedLock = new object();
 
         private List<string> _messageList = new List<string>();
@@ -34,7 +34,7 @@ namespace NetOffice
                         _default = new DebugConsole();
                     return _default;
                 }
-               
+
             }
         }
         private static DebugConsole _default;
@@ -54,7 +54,7 @@ namespace NetOffice
                 {
                     if (value.Length > 32)
                         throw new FormatException("Name lenght must be < 32");
-                    if(value.IndexOf("?",0) >-1)
+                    if (value.IndexOf("?", 0) > -1)
                         throw new FormatException("Name can't contain the '?' character.");
                 }
                 _name = value;
@@ -96,7 +96,7 @@ namespace NetOffice
         /// returns all collected messages if Mode == MemoryList
         /// </summary>
         public string[] Messages { get { return _messageList.ToArray(); } }
-        
+
         #endregion
 
         #region Methods
@@ -281,7 +281,7 @@ namespace NetOffice
                 return null;
             }
         }
-   
+
         /// <summary>
         /// Send a message to the NOTools.Console monitor pipe
         /// </summary>

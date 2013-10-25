@@ -12,6 +12,7 @@ namespace NetOffice.AccessApi
 	/// DispatchInterface ImportExportSpecification 
 	/// SupportByVersion Access, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820988.aspx </remarks>
 	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ImportExportSpecification : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.AccessApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public ImportExportSpecification(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ImportExportSpecification(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ImportExportSpecification(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ImportExportSpecification(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ImportExportSpecification(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195433.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -94,6 +114,7 @@ namespace NetOffice.AccessApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834782.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public object Parent
 		{
@@ -110,6 +131,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192471.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Name
 		{
@@ -130,6 +152,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197630.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string XML
 		{
@@ -150,6 +173,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837049.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Description
 		{
@@ -174,6 +198,7 @@ namespace NetOffice.AccessApi
 		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
 		/// <param name="prompt">optional object Prompt</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Execute(object prompt)
 		{
@@ -184,6 +209,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Execute()
@@ -195,6 +221,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834427.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Delete()
 		{

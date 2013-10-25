@@ -53,6 +53,7 @@ namespace NetOffice.VisioApi
 	/// CoClass Pages 
 	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769367(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Pages : IVPages,IEventBinding
@@ -86,41 +87,59 @@ namespace NetOffice.VisioApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Pages(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Pages(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Pages(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Pages(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Pages(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Pages 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Pages 
+        ///</summary>		
 		public Pages():base("Visio.Pages")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Pages
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Pages
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Pages(string progId):base(progId)
 		{
 			
@@ -181,6 +200,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766451(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_PageAddedEventHandler PageAddedEvent
 		{
@@ -203,6 +223,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767106(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_PageChangedEventHandler PageChangedEvent
 		{
@@ -225,6 +246,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766361(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_BeforePageDeleteEventHandler BeforePageDeleteEvent
 		{
@@ -247,6 +269,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767033(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ShapeAddedEventHandler ShapeAddedEvent
 		{
@@ -269,6 +292,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765740(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_BeforeSelectionDeleteEventHandler BeforeSelectionDeleteEvent
 		{
@@ -291,6 +315,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767610(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ShapeChangedEventHandler ShapeChangedEvent
 		{
@@ -313,6 +338,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766978(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_SelectionAddedEventHandler SelectionAddedEvent
 		{
@@ -335,6 +361,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768792(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_BeforeShapeDeleteEventHandler BeforeShapeDeleteEvent
 		{
@@ -357,6 +384,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766559(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_TextChangedEventHandler TextChangedEvent
 		{
@@ -379,6 +407,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768852(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_CellChangedEventHandler CellChangedEvent
 		{
@@ -401,6 +430,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767501(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_FormulaChangedEventHandler FormulaChangedEvent
 		{
@@ -423,6 +453,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767051(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ConnectionsAddedEventHandler ConnectionsAddedEvent
 		{
@@ -445,6 +476,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767866(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ConnectionsDeletedEventHandler ConnectionsDeletedEvent
 		{
@@ -467,6 +499,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768301(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_QueryCancelPageDeleteEventHandler QueryCancelPageDeleteEvent
 		{
@@ -489,6 +522,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766924(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_PageDeleteCanceledEventHandler PageDeleteCanceledEvent
 		{
@@ -511,6 +545,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767530(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ShapeParentChangedEventHandler ShapeParentChangedEvent
 		{
@@ -533,6 +568,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765811(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_BeforeShapeTextEditEventHandler BeforeShapeTextEditEvent
 		{
@@ -555,6 +591,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768215(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ShapeExitedTextEditEventHandler ShapeExitedTextEditEvent
 		{
@@ -577,6 +614,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768528(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_QueryCancelSelectionDeleteEventHandler QueryCancelSelectionDeleteEvent
 		{
@@ -599,6 +637,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765905(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_SelectionDeleteCanceledEventHandler SelectionDeleteCanceledEvent
 		{
@@ -621,6 +660,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767904(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_QueryCancelUngroupEventHandler QueryCancelUngroupEvent
 		{
@@ -643,6 +683,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767587(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_UngroupCanceledEventHandler UngroupCanceledEvent
 		{
@@ -665,6 +706,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767504(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_QueryCancelConvertToGroupEventHandler QueryCancelConvertToGroupEvent
 		{
@@ -687,6 +729,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767711(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 11,12,14,15)]
 		public event Pages_ConvertToGroupCanceledEventHandler ConvertToGroupCanceledEvent
 		{
@@ -709,6 +752,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765076(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15)]
 		public event Pages_QueryCancelGroupEventHandler QueryCancelGroupEvent
 		{
@@ -731,6 +775,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765855(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15)]
 		public event Pages_GroupCanceledEventHandler GroupCanceledEvent
 		{
@@ -753,6 +798,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768287(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15)]
 		public event Pages_ShapeDataGraphicChangedEventHandler ShapeDataGraphicChangedEvent
 		{
@@ -775,6 +821,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766120(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15)]
 		public event Pages_ShapeLinkAddedEventHandler ShapeLinkAddedEvent
 		{
@@ -797,6 +844,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768997(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 12,14,15)]
 		public event Pages_ShapeLinkDeletedEventHandler ShapeLinkDeletedEvent
 		{
@@ -819,6 +867,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767353(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15)]
 		public event Pages_ContainerRelationshipAddedEventHandler ContainerRelationshipAddedEvent
 		{
@@ -841,6 +890,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff768900(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15)]
 		public event Pages_ContainerRelationshipDeletedEventHandler ContainerRelationshipDeletedEvent
 		{
@@ -863,6 +913,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766166(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15)]
 		public event Pages_CalloutRelationshipAddedEventHandler CalloutRelationshipAddedEvent
 		{
@@ -885,6 +936,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766526(v=office.14).aspx </remarks>
 		[SupportByVersion("Visio", 14,15)]
 		public event Pages_CalloutRelationshipDeletedEventHandler CalloutRelationshipDeletedEvent
 		{
@@ -997,7 +1049,7 @@ namespace NetOffice.VisioApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -1104,7 +1156,7 @@ namespace NetOffice.VisioApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

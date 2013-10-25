@@ -158,8 +158,19 @@ namespace NetOffice.OWC10Api
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public ISpreadsheetEventSink_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -174,17 +185,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-		#region Construction
-
-		public ISpreadsheetEventSink_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region ISpreadsheetEventSink Members
 		
 		public void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel)

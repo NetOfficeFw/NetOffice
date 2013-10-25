@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass DocumentItem 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866928.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DocumentItem : _DocumentItem,IEventBinding
@@ -76,41 +77,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public DocumentItem(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public DocumentItem(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public DocumentItem(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DocumentItem(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DocumentItem(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of DocumentItem 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of DocumentItem 
+        ///</summary>		
 		public DocumentItem():base("Outlook.DocumentItem")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of DocumentItem
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of DocumentItem
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public DocumentItem(string progId):base(progId)
 		{
 			
@@ -171,6 +190,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869663.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_OpenEventHandler OpenEvent
 		{
@@ -193,6 +213,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869809.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_CustomActionEventHandler CustomActionEvent
 		{
@@ -215,6 +236,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861289.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
@@ -237,6 +259,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863623.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_ForwardEventHandler ForwardEvent
 		{
@@ -259,6 +282,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861319.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_CloseEventHandler CloseEvent
 		{
@@ -281,6 +305,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869749.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
@@ -303,6 +328,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869425.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_ReadEventHandler ReadEvent
 		{
@@ -325,6 +351,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862733.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_ReplyEventHandler ReplyEvent
 		{
@@ -347,6 +374,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868691.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_ReplyAllEventHandler ReplyAllEvent
 		{
@@ -369,6 +397,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867100.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_SendEventHandler SendEvent
 		{
@@ -391,6 +420,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868539.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_WriteEventHandler WriteEvent
 		{
@@ -413,6 +443,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860659.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
@@ -435,6 +466,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862370.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
@@ -457,6 +489,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864394.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
@@ -479,6 +512,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865084.aspx </remarks>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15)]
 		public event DocumentItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
@@ -501,6 +535,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866473.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event DocumentItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
@@ -523,6 +558,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869067.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
@@ -545,6 +581,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869141.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
@@ -567,6 +604,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866045.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
@@ -589,6 +627,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862392.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
@@ -611,6 +650,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860740.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
@@ -633,6 +673,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869637.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_UnloadEventHandler UnloadEvent
 		{
@@ -655,6 +696,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863656.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event DocumentItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
@@ -677,6 +719,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865392.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15)]
 		public event DocumentItem_BeforeReadEventHandler BeforeReadEvent
 		{
@@ -699,6 +742,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870043.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15)]
 		public event DocumentItem_AfterWriteEventHandler AfterWriteEvent
 		{
@@ -721,6 +765,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228964.aspx </remarks>
 		[SupportByVersion("Outlook", 15)]
 		public event DocumentItem_ReadCompleteEventHandler ReadCompleteEvent
 		{
@@ -745,7 +790,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -858,7 +903,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

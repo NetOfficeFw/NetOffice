@@ -66,8 +66,19 @@ namespace NetOffice.MSProjectApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public _EProjectDoc_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -82,17 +93,6 @@ namespace NetOffice.MSProjectApi
 
         #endregion
 
-		#region Construction
-
-		public _EProjectDoc_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region _EProjectDoc Members
 		
 		public void Open([In, MarshalAs(UnmanagedType.IDispatch)] object pj)

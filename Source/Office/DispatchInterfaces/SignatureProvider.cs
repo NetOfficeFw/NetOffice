@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface SignatureProvider 
 	/// SupportByVersion Office, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861225.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureProvider : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public SignatureProvider(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SignatureProvider(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public SignatureProvider(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SignatureProvider(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SignatureProvider(COMObject replacedObject) : base(replacedObject)
 		{
@@ -84,6 +103,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861157.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
@@ -98,6 +118,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861424.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSignatureSetup(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup)
 		{
@@ -111,6 +132,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864670.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSigningCeremony(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
@@ -125,6 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864683.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SignXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
@@ -138,6 +161,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860266.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void NotifySignatureAdded(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
@@ -154,6 +178,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863028.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void VerifyXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
@@ -170,6 +195,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865248.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSignatureDetails(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
@@ -181,6 +207,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="sigprovdet">NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863646.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet)
 		{
@@ -202,6 +229,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="queryContinue">object QueryContinue</param>
 		/// <param name="stream">object Stream</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862104.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public byte[] HashStream(object queryContinue, object stream)
 		{

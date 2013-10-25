@@ -85,7 +85,7 @@ namespace NetOffice.NamedPipes
             }
             catch (Exception exception)
             {
-                if(null != clientConnection)
+                if (null != clientConnection)
                     clientConnection.Dispose();
                 throw (exception);
             }

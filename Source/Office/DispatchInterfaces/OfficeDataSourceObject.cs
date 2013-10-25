@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface OfficeDataSourceObject 
 	/// SupportByVersion Office, 10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864883.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OfficeDataSourceObject : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OfficeDataSourceObject(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OfficeDataSourceObject(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OfficeDataSourceObject(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OfficeDataSourceObject(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OfficeDataSourceObject(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861793.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string ConnectString
 		{
@@ -97,6 +117,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861897.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string Table
 		{
@@ -117,6 +138,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860869.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string DataSource
 		{
@@ -138,6 +160,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860229.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Columns
 		{
@@ -154,6 +177,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861767.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 RowCount
 		{
@@ -170,6 +194,7 @@ namespace NetOffice.OfficeApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860598.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Filters
 		{
@@ -191,6 +216,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
 		/// <param name="rowNbr">optional Int32 RowNbr = 1</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864664.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
 		{
@@ -203,6 +229,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864664.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
@@ -220,6 +247,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		/// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
 		{
@@ -230,6 +258,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open()
@@ -242,6 +271,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open(object bstrSrc)
@@ -255,6 +285,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open(object bstrSrc, object bstrConnect)
@@ -269,6 +300,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open(object bstrSrc, object bstrConnect, object bstrTable)
@@ -284,6 +316,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865289.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
@@ -301,6 +334,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
 		/// <param name="sortAscending3">optional bool SortAscending3 = true</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
 		{
@@ -312,6 +346,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1)
@@ -325,6 +360,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1, object sortAscending1)
@@ -339,6 +375,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortField1">string SortField1</param>
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
@@ -354,6 +391,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		/// <param name="sortField2">optional string SortField2 = </param>
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
@@ -370,6 +408,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortField2">optional string SortField2 = </param>
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		/// <param name="sortField3">optional string SortField3 = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861392.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
@@ -381,6 +420,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863341.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void ApplyFilter()
 		{

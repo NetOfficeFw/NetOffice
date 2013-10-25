@@ -86,8 +86,19 @@ namespace NetOffice.MSComctlLibApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public IStatusBarEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -102,17 +113,6 @@ namespace NetOffice.MSComctlLibApi
 
         #endregion
 
-		#region Construction
-
-		public IStatusBarEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region IStatusBarEvents Members
 		
 		public void PanelClick([In, MarshalAs(UnmanagedType.IDispatch)] object panel)

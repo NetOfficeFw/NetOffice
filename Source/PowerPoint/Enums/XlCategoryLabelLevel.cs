@@ -5,6 +5,7 @@ namespace NetOffice.PowerPointApi.Enums
 	 /// <summary>
 	 /// SupportByVersion PowerPoint 15
 	 /// </summary>
+	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229719.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 15)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlCategoryLabelLevel

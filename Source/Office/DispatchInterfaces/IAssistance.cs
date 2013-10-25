@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IAssistance 
 	/// SupportByVersion Office, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864589.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAssistance : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public IAssistance(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IAssistance(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IAssistance(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IAssistance(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IAssistance(COMObject replacedObject) : base(replacedObject)
 		{
@@ -82,6 +101,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
 		/// <param name="scope">optional string Scope = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp(object helpId, object scope)
 		{
@@ -92,6 +112,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp()
@@ -104,6 +125,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp(object helpId)
@@ -117,6 +139,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="query">string Query</param>
 		/// <param name="scope">optional string Scope = </param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SearchHelp(string query, object scope)
 		{
@@ -128,6 +151,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="query">string Query</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SearchHelp(string query)
@@ -140,6 +164,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861230.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SetDefaultContext(string helpId)
 		{
@@ -151,6 +176,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 12, 14, 15
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865260.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ClearDefaultContext(string helpId)
 		{

@@ -15,6 +15,14 @@ namespace NetOffice.PowerPointApi
 	{
 		#region Construction
 
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public DisplayUnitLabel_(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -28,6 +36,16 @@ namespace NetOffice.PowerPointApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DisplayUnitLabel_(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
+		}
+
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public DisplayUnitLabel_(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
 		}
 		
 		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
@@ -60,6 +78,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744937.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start, object length)
@@ -76,6 +95,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744937.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters(object start, object length)
 		{
@@ -87,6 +107,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744937.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.PowerPointApi.ChartCharacters get_Characters(object start)
@@ -102,6 +123,7 @@ namespace NetOffice.PowerPointApi
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744937.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters(object start)
 		{
@@ -120,6 +142,7 @@ namespace NetOffice.PowerPointApi
 	/// DispatchInterface DisplayUnitLabel 
 	/// SupportByVersion PowerPoint, 14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744838.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DisplayUnitLabel : DisplayUnitLabel_
@@ -145,22 +168,40 @@ namespace NetOffice.PowerPointApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public DisplayUnitLabel(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DisplayUnitLabel(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public DisplayUnitLabel(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DisplayUnitLabel(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public DisplayUnitLabel(COMObject replacedObject) : base(replacedObject)
 		{
@@ -185,6 +226,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745915.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Caption
 		{
@@ -205,6 +247,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744937.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartCharacters Characters
 		{
@@ -238,6 +281,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744186.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object HorizontalAlignment
 		{
@@ -266,6 +310,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746726.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Left
 		{
@@ -286,6 +331,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746561.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Orientation
 		{
@@ -314,6 +360,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745729.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Shadow
 		{
@@ -334,6 +381,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744936.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Text
 		{
@@ -354,6 +402,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743859.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Top
 		{
@@ -374,6 +423,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744252.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object VerticalAlignment
 		{
@@ -482,6 +532,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745715.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Name
 		{
@@ -498,6 +549,7 @@ namespace NetOffice.PowerPointApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745866.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
@@ -514,6 +566,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746648.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlChartElementPosition Position
 		{
@@ -535,6 +588,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744594.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
@@ -551,6 +605,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743860.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Creator
 		{
@@ -566,6 +621,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745787.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -582,6 +638,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746488.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 ReadingOrder
 		{
@@ -602,6 +659,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745616.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Height
 		{
@@ -617,6 +675,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746269.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Width
 		{
@@ -632,6 +691,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746045.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Formula
 		{
@@ -652,6 +712,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746495.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1
 		{
@@ -672,6 +733,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745031.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaLocal
 		{
@@ -692,6 +754,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744692.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1Local
 		{
@@ -715,6 +778,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745879.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Delete()
 		{
@@ -734,6 +798,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744931.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Select()
 		{

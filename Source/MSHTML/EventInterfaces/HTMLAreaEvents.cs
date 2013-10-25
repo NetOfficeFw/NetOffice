@@ -298,6 +298,21 @@ namespace NetOffice.MSHTMLApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region HTMLAreaEvents Members
 		
 		public void onhelp()

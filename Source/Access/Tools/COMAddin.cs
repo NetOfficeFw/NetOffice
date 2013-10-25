@@ -220,7 +220,7 @@ namespace NetOffice.AccessApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new Access.Application(null, Application);
+			this.Application = new Access.Application(Factory, null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -326,7 +326,7 @@ namespace NetOffice.AccessApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -429,7 +429,7 @@ namespace NetOffice.AccessApi.Tools
                     return false;
                 regKeyAccess.SetValue(name, value);
                 regKeyAccess.Close();
-                regKeyAccess.Dispose();
+                //regKeyAccess.Dispose(); not available in previous .net versions
                 return true;
 
             }

@@ -541,7 +541,7 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         internal static void ParseProject(XDocument document, LogAction func)
         {
-            XElement projectNode = new XElement("Project");
+            XElement projectNode = new XElement("MSProject");
             (document.FirstNode as XElement).Add(projectNode);
             ParseProjectTypes(projectNode, func);
             ParseProjectEnums(projectNode, func);

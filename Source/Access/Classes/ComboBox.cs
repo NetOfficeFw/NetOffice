@@ -34,6 +34,7 @@ namespace NetOffice.AccessApi
 	/// CoClass ComboBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845773.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ComboBox : _Combobox,IEventBinding
@@ -68,41 +69,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public ComboBox(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public ComboBox(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public ComboBox(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ComboBox(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public ComboBox(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of ComboBox 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of ComboBox 
+        ///</summary>		
 		public ComboBox():base("Access.ComboBox")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of ComboBox
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of ComboBox
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public ComboBox(string progId):base(progId)
 		{
 			
@@ -163,6 +182,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193544.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -185,6 +205,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197081.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -207,6 +228,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836326.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_ChangeEventHandler ChangeEvent
 		{
@@ -229,6 +251,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845736.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_NotInListEventHandler NotInListEvent
 		{
@@ -251,6 +274,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822059.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_EnterEventHandler EnterEvent
 		{
@@ -273,6 +297,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193235.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_ExitEventHandler ExitEvent
 		{
@@ -295,6 +320,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196346.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_GotFocusEventHandler GotFocusEvent
 		{
@@ -317,6 +343,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835708.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_LostFocusEventHandler LostFocusEvent
 		{
@@ -339,6 +366,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196406.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_ClickEventHandler ClickEvent
 		{
@@ -361,6 +389,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196034.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_DblClickEventHandler DblClickEvent
 		{
@@ -383,6 +412,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192689.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -405,6 +435,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195865.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -427,6 +458,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192866.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -449,6 +481,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197678.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -471,6 +504,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196758.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -493,6 +527,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821477.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event ComboBox_KeyUpEventHandler KeyUpEvent
 		{
@@ -515,6 +550,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845487.aspx </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15)]
 		public event ComboBox_DirtyEventHandler DirtyEvent
 		{
@@ -537,6 +573,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834733.aspx </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15)]
 		public event ComboBox_UndoEventHandler UndoEvent
 		{
@@ -561,7 +598,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -674,7 +711,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

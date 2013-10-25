@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface IBlogPictureExtensibility 
 	/// SupportByVersion Office, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860265.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IBlogPictureExtensibility : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public IBlogPictureExtensibility(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IBlogPictureExtensibility(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IBlogPictureExtensibility(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IBlogPictureExtensibility(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IBlogPictureExtensibility(COMObject replacedObject) : base(replacedObject)
 		{
@@ -82,6 +101,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="blogPictureProvider">string BlogPictureProvider</param>
 		/// <param name="friendlyName">string FriendlyName</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860839.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void BlogPictureProviderProperties(out string blogPictureProvider, out string friendlyName)
 		{
@@ -101,6 +121,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="blogProvider">string BlogProvider</param>
 		/// <param name="parentWindow">Int32 ParentWindow</param>
 		/// <param name="document">object Document</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862798.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
 		{
@@ -117,6 +138,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="image">object Image</param>
 		/// <param name="pictureURI">string PictureURI</param>
 		/// <param name="imageType">Int32 ImageType</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864012.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void PublishPicture(string account, Int32 parentWindow, object document, object image, out string pictureURI, Int32 imageType)
 		{

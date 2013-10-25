@@ -9,7 +9,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Provides Attribute Helper functions
     /// </summary>
-    [Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+    [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
     public static class AttributeHelper
     {
         /// <summary>
@@ -32,7 +32,7 @@ namespace NetOffice.Tools
 
             return null;
         }
-         
+
         /// <summary>
         /// Looks for a method with the RegisterErrorHandlerFunctionAttribute
         /// </summary>
@@ -111,7 +111,7 @@ namespace NetOffice.Tools
                 return null;
             return array[0] as CustomUIAttribute;
         }
-         
+
         /// <summary>
         /// Looks for the GuidAttribute. Throws an exception if not found
         /// </summary>
@@ -119,7 +119,7 @@ namespace NetOffice.Tools
         /// <returns>GuidAttribute</returns>
         public static GuidAttribute GetGuidAttribute(Type type)
         {
-         
+
             object[] array = type.GetCustomAttributes(typeof(GuidAttribute), false);
             if (array.Length == 0)
                 throw new ArgumentNullException("GuidAttribute is missing");

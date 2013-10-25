@@ -8,7 +8,7 @@ namespace NetOffice.Tools
     /// Specify the kind and condition of an register method call
     /// </summary>
     public enum RegisterMode
-    { 
+    {
         /// <summary>
         /// the base class COMAddin doesnt perform any register operations and call the specified register method with the parameter RegisterCall.Replace. The specified register method has to do all register operations
         /// </summary>
@@ -44,7 +44,7 @@ namespace NetOffice.Tools
         /// the method is called before the base class perform all register operation
         /// </summary>
         CallBefore = 1,
-        
+
         /// <summary>
         /// the method was called when the base class register operations are done
         /// </summary>

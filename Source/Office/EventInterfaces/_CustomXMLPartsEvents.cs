@@ -46,8 +46,19 @@ namespace NetOffice.OfficeApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public _CustomXMLPartsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -62,17 +73,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-		#region Construction
-
-		public _CustomXMLPartsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region _CustomXMLPartsEvents Members
 		
 		public void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart)

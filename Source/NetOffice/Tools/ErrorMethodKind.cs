@@ -8,27 +8,27 @@ namespace NetOffice.Tools
     /// Indicates in which method the error is occured
     /// </summary>
     public enum ErrorMethodKind
-    { 
-          /// <summary>
+    {
+        /// <summary>
         /// the error is occured in void IDTExtensibility2.OnStartupComplete(ref Array custom)
         /// </summary>
         OnStartupComplete = 0,
-        
+
         /// <summary>
         /// the error is occured in void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         /// </summary>
         OnDisconnection = 1,
-        
+
         /// <summary>
         /// the error is occured in void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         /// </summary>
         OnConnection = 2,
-        
+
         /// <summary>
         ///  the error is occured in void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         /// </summary>
         OnAddInsUpdate = 3,
-        
+
         /// <summary>
         /// the error is occured in void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         /// </summary>

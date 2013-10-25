@@ -35,12 +35,8 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
-
-            Excel.Application application = new Excel.Application();
-            application.DisplayAlerts = false;
-            application.Workbooks.Add();
-            application.Quit();
-            application.Dispose();
+            
+            /*>> your testcode here <<*/
         }
 
         /// <summary>

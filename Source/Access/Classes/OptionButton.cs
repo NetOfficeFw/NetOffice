@@ -30,6 +30,7 @@ namespace NetOffice.AccessApi
 	/// CoClass OptionButton 
 	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195195.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OptionButton : _OptionButton,IEventBinding
@@ -64,41 +65,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OptionButton(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public OptionButton(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OptionButton(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OptionButton(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OptionButton(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OptionButton 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of OptionButton 
+        ///</summary>		
 		public OptionButton():base("Access.OptionButton")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OptionButton
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of OptionButton
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public OptionButton(string progId):base(progId)
 		{
 			
@@ -159,6 +178,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197959.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_ClickEventHandler ClickEvent
 		{
@@ -181,6 +201,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198120.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -203,6 +224,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835351.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -225,6 +247,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194932.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_EnterEventHandler EnterEvent
 		{
@@ -247,6 +270,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192088.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_ExitEventHandler ExitEvent
 		{
@@ -269,6 +293,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836556.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_GotFocusEventHandler GotFocusEvent
 		{
@@ -291,6 +316,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836038.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_LostFocusEventHandler LostFocusEvent
 		{
@@ -313,6 +339,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192874.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_DblClickEventHandler DblClickEvent
 		{
@@ -335,6 +362,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194854.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_MouseDownEventHandler MouseDownEvent
 		{
@@ -357,6 +385,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192937.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -379,6 +408,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194184.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_MouseUpEventHandler MouseUpEvent
 		{
@@ -401,6 +431,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197970.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_KeyDownEventHandler KeyDownEvent
 		{
@@ -423,6 +454,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835723.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_KeyPressEventHandler KeyPressEvent
 		{
@@ -445,6 +477,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194221.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event OptionButton_KeyUpEventHandler KeyUpEvent
 		{
@@ -469,7 +502,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -582,7 +615,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

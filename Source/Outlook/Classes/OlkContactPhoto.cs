@@ -27,6 +27,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass OlkContactPhoto 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869806.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkContactPhoto : _OlkContactPhoto,IEventBinding
@@ -60,41 +61,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OlkContactPhoto(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public OlkContactPhoto(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OlkContactPhoto(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkContactPhoto(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkContactPhoto(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OlkContactPhoto 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of OlkContactPhoto 
+        ///</summary>		
 		public OlkContactPhoto():base("Outlook.OlkContactPhoto")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of OlkContactPhoto
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of OlkContactPhoto
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public OlkContactPhoto(string progId):base(progId)
 		{
 			
@@ -155,6 +174,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864215.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_ClickEventHandler ClickEvent
 		{
@@ -177,6 +197,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864796.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_DoubleClickEventHandler DoubleClickEvent
 		{
@@ -199,6 +220,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869332.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_MouseDownEventHandler MouseDownEvent
 		{
@@ -221,6 +243,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869272.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -243,6 +266,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867093.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_MouseUpEventHandler MouseUpEvent
 		{
@@ -265,6 +289,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868566.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_EnterEventHandler EnterEvent
 		{
@@ -287,6 +312,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867520.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_ExitEventHandler ExitEvent
 		{
@@ -309,6 +335,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865644.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_KeyDownEventHandler KeyDownEvent
 		{
@@ -331,6 +358,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864241.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_KeyPressEventHandler KeyPressEvent
 		{
@@ -353,6 +381,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869803.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_KeyUpEventHandler KeyUpEvent
 		{
@@ -375,6 +404,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863908.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event OlkContactPhoto_ChangeEventHandler ChangeEvent
 		{
@@ -399,7 +429,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -506,7 +536,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

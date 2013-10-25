@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new Outlook.Application(null, Application);
+			this.Application = new Outlook.Application(Factory, null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -326,7 +326,7 @@ namespace NetOffice.OutlookApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -429,7 +429,7 @@ namespace NetOffice.OutlookApi.Tools
                     return false;
                 regKeyOutlook.SetValue(name, value);
                 regKeyOutlook.Close();
-                regKeyOutlook.Dispose();
+                //regKeyOutlook.Dispose(); not available in previous .net versions
                 return true;
 
             }

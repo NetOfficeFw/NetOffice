@@ -82,6 +82,21 @@ namespace NetOffice.OutlookApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region InspectorEvents_10 Members
 		
 		public void Activate()

@@ -30,29 +30,34 @@ namespace NetOffice.WordApi.GlobalHelperModules
         	}
         }
 
-        internal static Invoker Invoker
-        {
-            get
-            {
-                if (null != _instance)
-                    return _instance.Invoker;
-                else
-                    return Invoker.Default;
-            }
-        }
+		#endregion
 
-        internal static Core Factory
-        {
-            get
-            {
-                if (null != _instance)
-                    return _instance.Factory;
-                else
-                    return Core.Default;
-            }
-        }
+		#region Internal Properties
+
+		internal static Core Factory
+		{
+			get
+			{
+				if(null != _instance)
+					 return _instance.Factory;
+			else
+				return Core.Default;
+			}
+		}
+
+		internal static Invoker Invoker
+		{
+			get
+			{
+				if(null != _instance)
+					 return _instance.Invoker;
+			else
+				return Invoker.Default;
+			}
+		}
 
 		#endregion
+
 		#region Properties
 
 		/// <summary>
@@ -65,8 +70,8 @@ namespace NetOffice.WordApi.GlobalHelperModules
 			get
 			{
 				object[] paramsArray = null;
-                object returnItem = _instance.Invoker.PropertyGet(_instance, "Application", paramsArray);
-                NetOffice.WordApi.Application newObject = _instance.Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
+				object returnItem = Invoker.PropertyGet(_instance, "Application", paramsArray);
+				NetOffice.WordApi.Application newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.WordApi.Application.LateBindingApiWrapperType) as NetOffice.WordApi.Application;
 				return newObject;
 			}
 		}
@@ -81,7 +86,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 			get
 			{
 				object[] paramsArray = null;
-                object returnItem = _instance.Invoker.PropertyGet(_instance, "Creator", paramsArray);
+				object returnItem = Invoker.PropertyGet(_instance, "Creator", paramsArray);
 				return NetRuntimeSystem.Convert.ToInt32(returnItem);
 			}
 		}
@@ -97,8 +102,8 @@ namespace NetOffice.WordApi.GlobalHelperModules
 			get
 			{
 				object[] paramsArray = null;
-                object returnItem = _instance.Invoker.PropertyGet(_instance, "Parent", paramsArray);
-                COMObject newObject = _instance.Factory.CreateObjectFromComProxy(_instance, returnItem);
+				object returnItem = Invoker.PropertyGet(_instance, "Parent", paramsArray);
+				COMObject newObject = Factory.CreateObjectFromComProxy(_instance,returnItem);
 				return newObject;
 			}
 		}
@@ -1671,10 +1676,9 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(string word, object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
 		{
-           
 			object[] paramsArray = Invoker.ValidateParamsArray(word, customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8);
 			object returnItem = Invoker.MethodReturn(_instance, "GetSpellingSuggestions", paramsArray);
-            NetOffice.WordApi.SpellingSuggestions newObject = _instance.Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
+			NetOffice.WordApi.SpellingSuggestions newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType) as NetOffice.WordApi.SpellingSuggestions;
 			return newObject;
 		}
 

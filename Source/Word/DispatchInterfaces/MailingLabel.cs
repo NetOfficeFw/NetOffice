@@ -12,6 +12,7 @@ namespace NetOffice.WordApi
 	/// DispatchInterface MailingLabel 
 	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835169.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MailingLabel : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.WordApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public MailingLabel(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailingLabel(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public MailingLabel(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailingLabel(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public MailingLabel(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837248.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -93,6 +113,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840786.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -109,6 +130,7 @@ namespace NetOffice.WordApi
 		/// Get
 		/// Unknown COM Proxy
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191949.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -145,6 +167,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845366.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
 		{
@@ -166,6 +189,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837913.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.CustomLabels CustomLabels
 		{
@@ -182,6 +206,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840714.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string DefaultLabelName
 		{
@@ -202,6 +227,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835161.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool Vertical
 		{
@@ -230,6 +256,7 @@ namespace NetOffice.WordApi
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
 		{
@@ -249,6 +276,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
@@ -261,6 +289,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument()
@@ -275,6 +304,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name)
@@ -290,6 +320,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address)
@@ -306,6 +337,7 @@ namespace NetOffice.WordApi
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText)
@@ -323,6 +355,7 @@ namespace NetOffice.WordApi
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress)
@@ -342,6 +375,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835757.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
@@ -362,6 +396,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
 		{
@@ -381,6 +416,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
@@ -391,6 +427,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut()
@@ -403,6 +440,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="name">optional object Name</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name)
@@ -416,6 +454,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address)
@@ -430,6 +469,7 @@ namespace NetOffice.WordApi
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress)
@@ -445,6 +485,7 @@ namespace NetOffice.WordApi
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray)
@@ -461,6 +502,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel)
@@ -478,6 +520,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
@@ -497,6 +540,7 @@ namespace NetOffice.WordApi
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193415.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
@@ -729,6 +773,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836933.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void LabelOptions()
 		{
@@ -746,6 +791,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
 		{
@@ -758,6 +804,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID()
@@ -772,6 +819,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID)
@@ -787,6 +835,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address)
@@ -803,6 +852,7 @@ namespace NetOffice.WordApi
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText)
@@ -820,6 +870,7 @@ namespace NetOffice.WordApi
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress)
@@ -838,6 +889,7 @@ namespace NetOffice.WordApi
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray)
@@ -857,6 +909,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196548.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
@@ -879,6 +932,7 @@ namespace NetOffice.WordApi
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
 		/// <param name="vertical">optional object Vertical</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
 		{
@@ -889,6 +943,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID()
@@ -901,6 +956,7 @@ namespace NetOffice.WordApi
 		/// SupportByVersion Word 12, 14, 15
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID)
@@ -914,6 +970,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address)
@@ -928,6 +985,7 @@ namespace NetOffice.WordApi
 		/// <param name="labelID">optional object LabelID</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress)
@@ -943,6 +1001,7 @@ namespace NetOffice.WordApi
 		/// <param name="address">optional object Address</param>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray)
@@ -959,6 +1018,7 @@ namespace NetOffice.WordApi
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel)
@@ -976,6 +1036,7 @@ namespace NetOffice.WordApi
 		/// <param name="laserTray">optional object LaserTray</param>
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row)
@@ -994,6 +1055,7 @@ namespace NetOffice.WordApi
 		/// <param name="singleLabel">optional object SingleLabel</param>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
@@ -1013,6 +1075,7 @@ namespace NetOffice.WordApi
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
 		/// <param name="printEPostageLabel">optional object PrintEPostageLabel</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822145.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)

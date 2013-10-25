@@ -44,11 +44,11 @@ namespace NetOffice
         private Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
         private Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private List<DependentAssembly> _dependentAssemblies = new List<DependentAssembly>();
-       
+
         private static object _factoryListLock = new object();
         private static object _comObjectLock = new object();
         private static object _globalObjectListLock = new object();
-       
+
         private static Assembly _thisAssembly = Assembly.GetAssembly(typeof(COMObject));
         private static string[] _knownNetOfficeKeyTokens;
         private static object _defaultLock = new object();
@@ -66,7 +66,7 @@ namespace NetOffice
             Console = new DebugConsole();
             Invoker = new Invoker(this);
         }
-        
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
@@ -97,7 +97,7 @@ namespace NetOffice
         /// </summary>
         public bool IsInitialized
         {
-            get 
+            get
             {
                 return _initalized;
             }
@@ -108,7 +108,7 @@ namespace NetOffice
         /// </summary>
         public static Core Default
         {
-            get 
+            get
             {
                 lock (_defaultLock)
                 {
@@ -202,7 +202,7 @@ namespace NetOffice
         {
             Initialize(CacheOptions.KeepExistingCacheAlive);
         }
-         
+
         /// <summary>
         /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
@@ -214,10 +214,10 @@ namespace NetOffice
             _initalized = true;
             bool isLocked = false;
             try
-            { 
+            {
                 Monitor.Enter(_factoryListLock);
                 isLocked = true;
-              
+
                 Console.WriteLine("NetOffice Core.Initialize() NO Version:{1} DeepLevel:{0}", Settings.EnableDeepLoading, this.GetType().Assembly.GetName().Version);
 
                 TryLoadAssembly("ExcelApi.dll");
@@ -275,7 +275,7 @@ namespace NetOffice
                             string assemblyName = itemName.Name;
 
                             //Console.WriteLine(string.Format("Detect NetOffice assembly {0}.", assemblyName));
-                            
+
                             Assembly itemAssembly = Assembly.Load(itemName);
 
                             string[] depends = AddAssembly(assemblyName, itemAssembly);
@@ -460,23 +460,23 @@ namespace NetOffice
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYGET:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
-                    {
+                        {
                             typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
                             string outValue = "";
                             bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
                             if (!exists)
                                 supportList.Add("Property-" + strName, strDocString);
                             break;
-                    }
+                        }
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_FUNC:
-                    {
+                        {
                             typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
                             string outValue = "";
                             bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
                             if (!exists)
                                 supportList.Add("Method-" + strName, strDocString);
                             break;
-                    }
+                        }
                 }
 
                 typeInfo.ReleaseFuncDesc(funcDescPointer);
@@ -881,7 +881,7 @@ namespace NetOffice
         {
             try
             {
-                string targetKeyToken = itemName.FullName.Substring(itemName.FullName.LastIndexOf(" ") +1);
+                string targetKeyToken = itemName.FullName.Substring(itemName.FullName.LastIndexOf(" ") + 1);
                 foreach (string item in KnownNetOfficeKeyTokens)
                 {
                     if (item.EndsWith(targetKeyToken, StringComparison.InvariantCultureIgnoreCase))
@@ -901,11 +901,11 @@ namespace NetOffice
         /// </summary>
         private static string[] KnownNetOfficeKeyTokens
         {
-            get 
+            get
             {
                 if (null == _knownNetOfficeKeyTokens)
-                { 
-                    Type thisType =  typeof(Core);
+                {
+                    Type thisType = typeof(Core);
                     System.IO.Stream ressourceStream = thisType.Assembly.GetManifestResourceStream(thisType.Namespace + ".KeyTokens.txt");
                     System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
                     string text = textStreamReader.ReadToEnd();
@@ -952,7 +952,7 @@ namespace NetOffice
                 {
                     Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
                     NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
-                  
+
                     bool exists = false;
                     foreach (IFactoryInfo itemFactory in _factoryList)
                     {
@@ -963,7 +963,7 @@ namespace NetOffice
                         }
                     }
                     if (!exists)
-                    { 
+                    {
                         _factoryList.Add(factoryInfo);
                         Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
                     }
@@ -1105,7 +1105,7 @@ namespace NetOffice
                     return null;
                 }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Console.WriteException(exception);
                 return null;
@@ -1126,7 +1126,7 @@ namespace NetOffice
                 string fullFileName = System.IO.Path.Combine(directoryName, fileName);
                 if (System.IO.File.Exists(fullFileName))
                 {
-                    
+
                     Assembly assembly = System.Reflection.Assembly.LoadFrom(fullFileName);
                     Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);
                     NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
@@ -1140,7 +1140,7 @@ namespace NetOffice
                         }
                     }
                     if (!exists)
-                    { 
+                    {
                         _factoryList.Add(factoryInfo);
                         Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
                     }

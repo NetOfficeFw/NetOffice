@@ -38,8 +38,19 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public AccountsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -54,17 +65,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-		#region Construction
-
-		public AccountsEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region AccountsEvents Members
 		
 		public void AutoDiscoverComplete([In, MarshalAs(UnmanagedType.IDispatch)] object account)

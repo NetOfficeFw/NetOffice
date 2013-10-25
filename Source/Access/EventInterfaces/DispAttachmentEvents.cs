@@ -114,6 +114,21 @@ namespace NetOffice.AccessApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region DispAttachmentEvents Members
 		
 		public void BeforeUpdate([In] [Out] ref object cancel)

@@ -294,8 +294,19 @@ namespace NetOffice.VisioApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public EDocuments_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -310,17 +321,6 @@ namespace NetOffice.VisioApi
 
         #endregion
 
-		#region Construction
-
-		public EDocuments_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region EDocuments Members
 		
 		public void DocumentOpened([In, MarshalAs(UnmanagedType.IDispatch)] object doc)

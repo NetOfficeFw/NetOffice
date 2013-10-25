@@ -186,6 +186,21 @@ namespace NetOffice.WordApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region ApplicationEvents4 Members
 		
 		public void Startup()
@@ -236,7 +251,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
@@ -251,7 +266,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
@@ -269,7 +284,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
@@ -287,7 +302,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(saveAsUI, 1);
@@ -307,7 +322,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("NewDocument", ref paramsArray);
@@ -322,8 +337,8 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-            NetOffice.WordApi.Window newWn = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newWn;
@@ -339,8 +354,8 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-            NetOffice.WordApi.Window newWn = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newWn;
@@ -356,7 +371,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Selection newSel = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
+			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newSel;
 			_eventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
@@ -371,7 +386,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Selection newSel = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
+			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -389,7 +404,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Selection newSel = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
+			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newSel;
 			paramsArray.SetValue(cancel, 1);
@@ -407,7 +422,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("EPostagePropertyDialog", ref paramsArray);
@@ -422,7 +437,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("EPostageInsert", ref paramsArray);
@@ -437,8 +452,8 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-            NetOffice.WordApi.Document newDocResult = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, docResult) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDocResult = Factory.CreateObjectFromComProxy(_eventClass, docResult) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newDocResult;
@@ -454,7 +469,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("MailMergeAfterRecordMerge", ref paramsArray);
@@ -469,7 +484,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			Int32 newStartRecord = Convert.ToInt32(startRecord);
 			Int32 newEndRecord = Convert.ToInt32(endRecord);
 			object[] paramsArray = new object[4];
@@ -491,7 +506,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(cancel, 1);
@@ -509,7 +524,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("MailMergeDataSourceLoad", ref paramsArray);
@@ -524,7 +539,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(handled, 1);
@@ -542,7 +557,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newDoc;
 			_eventBinding.RaiseCustomEvent("MailMergeWizardSendToCustom", ref paramsArray);
@@ -557,7 +572,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(fromState, 1);
@@ -579,8 +594,8 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
-            NetOffice.WordApi.Window newWn = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Window newWn = Factory.CreateObjectFromComProxy(_eventClass, wn) as NetOffice.WordApi.Window;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray[1] = newWn;
@@ -596,9 +611,9 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Selection newSel = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
-            NetOffice.WordApi.XMLNode newOldXMLNode = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
-            NetOffice.WordApi.XMLNode newNewXMLNode = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.Selection newSel = Factory.CreateObjectFromComProxy(_eventClass, sel) as NetOffice.WordApi.Selection;
+			NetOffice.WordApi.XMLNode newOldXMLNode = Factory.CreateObjectFromComProxy(_eventClass, oldXMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newNewXMLNode = Factory.CreateObjectFromComProxy(_eventClass, newXMLNode) as NetOffice.WordApi.XMLNode;
 			object[] paramsArray = new object[4];
 			paramsArray[0] = newSel;
 			paramsArray[1] = newOldXMLNode;
@@ -618,7 +633,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.XMLNode newXMLNode = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, xMLNode) as NetOffice.WordApi.XMLNode;
+			NetOffice.WordApi.XMLNode newXMLNode = Factory.CreateObjectFromComProxy(_eventClass, xMLNode) as NetOffice.WordApi.XMLNode;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newXMLNode;
 			_eventBinding.RaiseCustomEvent("XMLValidationError", ref paramsArray);
@@ -633,7 +648,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			NetOffice.OfficeApi.Enums.MsoSyncEventType newSyncEventType = (NetOffice.OfficeApi.Enums.MsoSyncEventType)syncEventType;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
@@ -650,7 +665,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			Int32 newcpDeliveryAddrStart = Convert.ToInt32(cpDeliveryAddrStart);
 			Int32 newcpDeliveryAddrEnd = Convert.ToInt32(cpDeliveryAddrEnd);
 			Int32 newcpReturnAddrStart = Convert.ToInt32(cpReturnAddrStart);
@@ -686,7 +701,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.Document newDoc = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
+			NetOffice.WordApi.Document newDoc = Factory.CreateObjectFromComProxy(_eventClass, doc) as NetOffice.WordApi.Document;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newDoc;
 			paramsArray.SetValue(handled, 1);
@@ -704,7 +719,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPvWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
@@ -719,7 +734,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			object[] paramsArray = new object[2];
 			paramsArray[0] = newPvWindow;
 			paramsArray.SetValue(cancel, 1);
@@ -737,7 +752,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			Int32 newCloseReason = Convert.ToInt32(closeReason);
 			object[] paramsArray = new object[3];
 			paramsArray[0] = newPvWindow;
@@ -757,7 +772,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPvWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowSize", ref paramsArray);
@@ -772,7 +787,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPvWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowActivate", ref paramsArray);
@@ -787,7 +802,7 @@ namespace NetOffice.WordApi
 				return;
 			}
 
-            NetOffice.WordApi.ProtectedViewWindow newPvWindow = _eventClass.Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
+			NetOffice.WordApi.ProtectedViewWindow newPvWindow = Factory.CreateObjectFromComProxy(_eventClass, pvWindow) as NetOffice.WordApi.ProtectedViewWindow;
 			object[] paramsArray = new object[1];
 			paramsArray[0] = newPvWindow;
 			_eventBinding.RaiseCustomEvent("ProtectedViewWindowDeactivate", ref paramsArray);

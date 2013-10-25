@@ -5,6 +5,7 @@ namespace NetOffice.VisioApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Visio 11, 12, 14, 15
 	 /// </summary>
+	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766202(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum VisObjectTypes

@@ -42,6 +42,7 @@ namespace NetOffice.OutlookApi
 	/// CoClass SharingItem 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865852.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class SharingItem : _SharingItem,IEventBinding
@@ -75,41 +76,59 @@ namespace NetOffice.OutlookApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public SharingItem(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public SharingItem(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public SharingItem(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharingItem(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public SharingItem(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of SharingItem 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of SharingItem 
+        ///</summary>		
 		public SharingItem():base("Outlook.SharingItem")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of SharingItem
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of SharingItem
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public SharingItem(string progId):base(progId)
 		{
 			
@@ -170,6 +189,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868717.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_OpenEventHandler OpenEvent
 		{
@@ -192,6 +212,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866203.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_CustomActionEventHandler CustomActionEvent
 		{
@@ -214,6 +235,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870103.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
 		{
@@ -236,6 +258,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868764.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_ForwardEventHandler ForwardEvent
 		{
@@ -258,6 +281,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860972.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_CloseEventHandler CloseEvent
 		{
@@ -280,6 +304,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866954.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_PropertyChangeEventHandler PropertyChangeEvent
 		{
@@ -302,6 +327,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862783.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_ReadEventHandler ReadEvent
 		{
@@ -324,6 +350,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865602.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_ReplyEventHandler ReplyEvent
 		{
@@ -346,6 +373,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861545.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_ReplyAllEventHandler ReplyAllEvent
 		{
@@ -368,6 +396,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861581.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_SendEventHandler SendEvent
 		{
@@ -390,6 +419,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862385.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_WriteEventHandler WriteEvent
 		{
@@ -412,6 +442,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870019.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
 		{
@@ -434,6 +465,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868778.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_AttachmentAddEventHandler AttachmentAddEvent
 		{
@@ -456,6 +488,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867235.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_AttachmentReadEventHandler AttachmentReadEvent
 		{
@@ -478,6 +511,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869748.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
 		{
@@ -500,6 +534,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865674.aspx </remarks>
 		[SupportByVersion("Outlook", 10,11,12,14,15)]
 		public event SharingItem_BeforeDeleteEventHandler BeforeDeleteEvent
 		{
@@ -522,6 +557,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869590.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
 		{
@@ -544,6 +580,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867273.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
 		{
@@ -566,6 +603,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869627.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
 		{
@@ -588,6 +626,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868931.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
 		{
@@ -610,6 +649,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867309.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
 		{
@@ -632,6 +672,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868719.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_UnloadEventHandler UnloadEvent
 		{
@@ -654,6 +695,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863605.aspx </remarks>
 		[SupportByVersion("Outlook", 12,14,15)]
 		public event SharingItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
 		{
@@ -676,6 +718,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863722.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15)]
 		public event SharingItem_BeforeReadEventHandler BeforeReadEvent
 		{
@@ -698,6 +741,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868438.aspx </remarks>
 		[SupportByVersion("Outlook", 14,15)]
 		public event SharingItem_AfterWriteEventHandler AfterWriteEvent
 		{
@@ -720,6 +764,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228066.aspx </remarks>
 		[SupportByVersion("Outlook", 15)]
 		public event SharingItem_ReadCompleteEventHandler ReadCompleteEvent
 		{
@@ -744,7 +789,7 @@ namespace NetOffice.OutlookApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -851,7 +896,7 @@ namespace NetOffice.OutlookApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

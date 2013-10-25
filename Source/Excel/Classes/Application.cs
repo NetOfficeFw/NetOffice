@@ -63,6 +63,7 @@ namespace NetOffice.ExcelApi
 	/// CoClass Application 
 	/// SupportByVersion Excel, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194565.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application,IEventBinding
@@ -96,43 +97,62 @@ namespace NetOffice.ExcelApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Application(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			_callQuitInDispose = true;
+			GlobalHelperModules.GlobalModule.Instance = this;
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Application(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			_callQuitInDispose = true;
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Application 
+        ///</summary>		
 		public Application():base("Excel.Application")
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Application
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
 			_callQuitInDispose = true;
@@ -215,6 +235,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837373.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_NewWorkbookEventHandler NewWorkbookEvent
 		{
@@ -237,6 +258,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839035.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetSelectionChangeEventHandler SheetSelectionChangeEvent
 		{
@@ -259,6 +281,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836225.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetBeforeDoubleClickEventHandler SheetBeforeDoubleClickEvent
 		{
@@ -281,6 +304,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840532.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetBeforeRightClickEventHandler SheetBeforeRightClickEvent
 		{
@@ -303,6 +327,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193288.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetActivateEventHandler SheetActivateEvent
 		{
@@ -325,6 +350,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823120.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetDeactivateEventHandler SheetDeactivateEvent
 		{
@@ -347,6 +373,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835607.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetCalculateEventHandler SheetCalculateEvent
 		{
@@ -369,6 +396,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193591.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetChangeEventHandler SheetChangeEvent
 		{
@@ -391,6 +419,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196583.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookOpenEventHandler WorkbookOpenEvent
 		{
@@ -413,6 +442,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837347.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookActivateEventHandler WorkbookActivateEvent
 		{
@@ -435,6 +465,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193560.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookDeactivateEventHandler WorkbookDeactivateEvent
 		{
@@ -457,6 +488,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836770.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookBeforeCloseEventHandler WorkbookBeforeCloseEvent
 		{
@@ -479,6 +511,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840422.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookBeforeSaveEventHandler WorkbookBeforeSaveEvent
 		{
@@ -501,6 +534,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195507.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookBeforePrintEventHandler WorkbookBeforePrintEvent
 		{
@@ -523,6 +557,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198367.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookNewSheetEventHandler WorkbookNewSheetEvent
 		{
@@ -545,6 +580,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836206.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookAddinInstallEventHandler WorkbookAddinInstallEvent
 		{
@@ -567,6 +603,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835570.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WorkbookAddinUninstallEventHandler WorkbookAddinUninstallEvent
 		{
@@ -589,6 +626,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836166.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WindowResizeEventHandler WindowResizeEvent
 		{
@@ -611,6 +649,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821328.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
@@ -633,6 +672,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822473.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
@@ -655,6 +695,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821956.aspx </remarks>
 		[SupportByVersion("Excel", 9,10,11,12,14,15)]
 		public event Application_SheetFollowHyperlinkEventHandler SheetFollowHyperlinkEvent
 		{
@@ -677,6 +718,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840950.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Application_SheetPivotTableUpdateEventHandler SheetPivotTableUpdateEvent
 		{
@@ -699,6 +741,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198029.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Application_WorkbookPivotTableCloseConnectionEventHandler WorkbookPivotTableCloseConnectionEvent
 		{
@@ -721,6 +764,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821547.aspx </remarks>
 		[SupportByVersion("Excel", 10,11,12,14,15)]
 		public event Application_WorkbookPivotTableOpenConnectionEventHandler WorkbookPivotTableOpenConnectionEvent
 		{
@@ -743,6 +787,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839042.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Application_WorkbookSyncEventHandler WorkbookSyncEvent
 		{
@@ -765,6 +810,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196324.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Application_WorkbookBeforeXmlImportEventHandler WorkbookBeforeXmlImportEvent
 		{
@@ -787,6 +833,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837416.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Application_WorkbookAfterXmlImportEventHandler WorkbookAfterXmlImportEvent
 		{
@@ -809,6 +856,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195824.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Application_WorkbookBeforeXmlExportEventHandler WorkbookBeforeXmlExportEvent
 		{
@@ -831,6 +879,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836803.aspx </remarks>
 		[SupportByVersion("Excel", 11,12,14,15)]
 		public event Application_WorkbookAfterXmlExportEventHandler WorkbookAfterXmlExportEvent
 		{
@@ -853,6 +902,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839165.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15)]
 		public event Application_WorkbookRowsetCompleteEventHandler WorkbookRowsetCompleteEvent
 		{
@@ -875,6 +925,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840621.aspx </remarks>
 		[SupportByVersion("Excel", 12,14,15)]
 		public event Application_AfterCalculateEventHandler AfterCalculateEvent
 		{
@@ -897,6 +948,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193316.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_SheetPivotTableAfterValueChangeEventHandler SheetPivotTableAfterValueChangeEvent
 		{
@@ -919,6 +971,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838226.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_SheetPivotTableBeforeAllocateChangesEventHandler SheetPivotTableBeforeAllocateChangesEvent
 		{
@@ -941,6 +994,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838379.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_SheetPivotTableBeforeCommitChangesEventHandler SheetPivotTableBeforeCommitChangesEvent
 		{
@@ -963,6 +1017,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835217.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_SheetPivotTableBeforeDiscardChangesEventHandler SheetPivotTableBeforeDiscardChangesEvent
 		{
@@ -985,6 +1040,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194431.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
@@ -1007,6 +1063,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838239.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
@@ -1029,6 +1086,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821579.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
@@ -1051,6 +1109,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836848.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowResizeEventHandler ProtectedViewWindowResizeEvent
 		{
@@ -1073,6 +1132,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195451.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
@@ -1095,6 +1155,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196820.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
@@ -1117,6 +1178,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198184.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_WorkbookAfterSaveEventHandler WorkbookAfterSaveEvent
 		{
@@ -1139,6 +1201,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834985.aspx </remarks>
 		[SupportByVersion("Excel", 14,15)]
 		public event Application_WorkbookNewChartEventHandler WorkbookNewChartEvent
 		{
@@ -1161,6 +1224,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227506.aspx </remarks>
 		[SupportByVersion("Excel", 15)]
 		public event Application_SheetLensGalleryRenderCompleteEventHandler SheetLensGalleryRenderCompleteEvent
 		{
@@ -1183,6 +1247,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229805.aspx </remarks>
 		[SupportByVersion("Excel", 15)]
 		public event Application_SheetTableUpdateEventHandler SheetTableUpdateEvent
 		{
@@ -1205,6 +1270,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229611.aspx </remarks>
 		[SupportByVersion("Excel", 15)]
 		public event Application_WorkbookModelChangeEventHandler WorkbookModelChangeEvent
 		{
@@ -1227,6 +1293,7 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/dn448391.aspx </remarks>
 		[SupportByVersion("Excel", 15)]
 		public event Application_SheetBeforeDeleteEventHandler SheetBeforeDeleteEvent
 		{
@@ -1251,7 +1318,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -1358,7 +1425,7 @@ namespace NetOffice.ExcelApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

@@ -136,13 +136,13 @@ namespace NetOffice
                     // get class name and component name
                     string name = TypeDescriptor.GetClassName(comInstance);
                     string component = TypeDescriptor.GetComponentName(comInstance, false);
-                    
+
                     // match for equal and add to list
                     bool componentNameEqual = (componentName.Equals(component, StringComparison.InvariantCultureIgnoreCase));
                     bool classNameEqual = (className.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 
                     if (componentNameEqual && classNameEqual)
-                    { 
+                    {
                         resultList.Add(comInstance);
                     }
                     else

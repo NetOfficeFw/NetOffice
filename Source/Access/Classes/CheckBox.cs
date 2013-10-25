@@ -30,6 +30,7 @@ namespace NetOffice.AccessApi
 	/// CoClass CheckBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194967.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CheckBox : _Checkbox,IEventBinding
@@ -64,41 +65,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public CheckBox(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public CheckBox(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public CheckBox(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CheckBox(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public CheckBox(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of CheckBox 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of CheckBox 
+        ///</summary>		
 		public CheckBox():base("Access.CheckBox")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of CheckBox
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of CheckBox
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public CheckBox(string progId):base(progId)
 		{
 			
@@ -159,6 +178,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845501.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_ClickEventHandler ClickEvent
 		{
@@ -181,6 +201,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834411.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -203,6 +224,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835644.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -225,6 +247,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193836.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_EnterEventHandler EnterEvent
 		{
@@ -247,6 +270,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194475.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_ExitEventHandler ExitEvent
 		{
@@ -269,6 +293,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192446.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_GotFocusEventHandler GotFocusEvent
 		{
@@ -291,6 +316,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822462.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_LostFocusEventHandler LostFocusEvent
 		{
@@ -313,6 +339,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835425.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_DblClickEventHandler DblClickEvent
 		{
@@ -335,6 +362,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194926.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -357,6 +385,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836690.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -379,6 +408,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195727.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -401,6 +431,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845602.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -423,6 +454,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197676.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -445,6 +477,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193646.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event CheckBox_KeyUpEventHandler KeyUpEvent
 		{
@@ -469,7 +502,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -582,7 +615,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

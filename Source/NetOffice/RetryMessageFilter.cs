@@ -22,12 +22,12 @@ namespace NetOffice
         /// </summary>
         [MarshalAs(UnmanagedType.IUnknown)]
         public object punk;
-        
+
         /// <summary>
         /// 
         /// </summary>
         public Guid iid;
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -102,17 +102,17 @@ namespace NetOffice
         /// Disable Log
         /// </summary>
         None = 0,
-        
+
         /// <summary>
         /// Call DebugConsole.WriteLine in IMessageFilter.RetryRejectedCall
         /// </summary>
         RetryRejectedCall = 1,
-        
+
         /// <summary>
         /// Call DebugConsole.WriteLine in IMessageFilter.MessagePending
         /// </summary>
         MessagePending = 2,
-        
+
         /// <summary>
         /// Call DebugConsole.WriteLine in IMessageFilter.RetryRejectedCall and IMessageFilter.MessagePending
         /// </summary>

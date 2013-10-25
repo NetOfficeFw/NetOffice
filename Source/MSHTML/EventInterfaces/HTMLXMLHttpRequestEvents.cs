@@ -54,6 +54,21 @@ namespace NetOffice.MSHTMLApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region HTMLXMLHttpRequestEvents Members
 		
 		public void ontimeout()

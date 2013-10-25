@@ -58,8 +58,19 @@ namespace NetOffice.OutlookApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public ReminderCollectionEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -74,17 +85,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-		#region Construction
-
-		public ReminderCollectionEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region ReminderCollectionEvents Members
 		
 		public void BeforeReminderShow([In] [Out] ref object cancel)

@@ -189,8 +189,8 @@ namespace NetOffice.VisioApi
 		}
 		
 		#endregion
-
-        #region Properties
+		
+		#region Properties
 
         internal Core Factory
         {

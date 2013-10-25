@@ -71,7 +71,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// 
     /// </summary>
-    [Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType(4160),ComImport]
+    [Guid("B65AD801-ABAF-11D0-BB8B-00A0C90F2744"), TypeLibType(4160), ComImport]
     public interface IDTExtensibility2
     {
         /// <summary>
@@ -101,7 +101,7 @@ namespace NetOffice.Tools
         [DispId(3)]
         [MethodImpl(4096)]
         void OnAddInsUpdate([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -109,7 +109,7 @@ namespace NetOffice.Tools
         [DispId(4)]
         [MethodImpl(4096)]
         void OnStartupComplete([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
-        
+
         /// <summary>
         /// 
         /// </summary>

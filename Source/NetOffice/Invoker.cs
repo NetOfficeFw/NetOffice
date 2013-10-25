@@ -49,7 +49,7 @@ namespace NetOffice
         /// </summary>
         public static Invoker Default
         {
-            get 
+            get
             {
                 lock (_lockInstance)
                 {
@@ -90,7 +90,7 @@ namespace NetOffice
         /// </summary>
         internal Settings Settings
         {
-            get 
+            get
             {
                 if (null != Parent)
                     return Parent.Settings;
@@ -136,7 +136,7 @@ namespace NetOffice
                 if (comObject.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
 
-                if( (Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name,SupportEntityType.Method)))
+                if ((Settings.EnableSafeMode) && (!comObject.EntityIsAvailable(name, SupportEntityType.Method)))
                     throw new EntityNotSupportedException(string.Format("Method {0} is not available.", name));
 
                 comObject.InstanceType.InvokeMember(name, BindingFlags.InvokeMethod, null, comObject.UnderlyingObject, paramsArray, Settings.Default.ThreadCulture);
@@ -627,7 +627,7 @@ namespace NetOffice
                 throw new System.Runtime.InteropServices.COMException(GetExceptionMessage(throwedException), throwedException);
             }
         }
-        
+
         /// <summary>
         /// perform property get as latebind call with return value
         /// </summary>
@@ -908,8 +908,8 @@ namespace NetOffice
             if (null != param)
             {
                 COMObject comObject = param as COMObject;
-               
-                if (!Object.ReferenceEquals(comObject, null)) 
+
+                if (!Object.ReferenceEquals(comObject, null))
                     param = comObject.UnderlyingObject;
                 else if (param.GetType().IsEnum)
                     param = Convert.ToInt32(param);

@@ -38,8 +38,19 @@ namespace NetOffice.MSHTMLApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public HTMLNamespaceEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -54,17 +65,6 @@ namespace NetOffice.MSHTMLApi
 
         #endregion
 
-		#region Construction
-
-		public HTMLNamespaceEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region HTMLNamespaceEvents Members
 		
 		public void onreadystatechange([In, MarshalAs(UnmanagedType.IDispatch)] object pEvtObj)

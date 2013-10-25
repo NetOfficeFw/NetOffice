@@ -33,6 +33,7 @@ namespace NetOffice.AccessApi
 	/// CoClass NavigationControl 
 	/// SupportByVersion Access, 14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821468.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl,IEventBinding
@@ -66,41 +67,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public NavigationControl(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public NavigationControl(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public NavigationControl(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NavigationControl(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NavigationControl(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of NavigationControl 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of NavigationControl 
+        ///</summary>		
 		public NavigationControl():base("Access.NavigationControl")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of NavigationControl
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of NavigationControl
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public NavigationControl(string progId):base(progId)
 		{
 			
@@ -161,6 +180,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192533.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -183,6 +203,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821744.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -205,6 +226,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192951.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ChangeEventHandler ChangeEvent
 		{
@@ -227,6 +249,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192267.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_EnterEventHandler EnterEvent
 		{
@@ -249,6 +272,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193801.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ExitEventHandler ExitEvent
 		{
@@ -271,6 +295,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193831.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_GotFocusEventHandler GotFocusEvent
 		{
@@ -293,6 +318,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194817.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_LostFocusEventHandler LostFocusEvent
 		{
@@ -315,6 +341,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823080.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_ClickEventHandler ClickEvent
 		{
@@ -337,6 +364,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836976.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_DblClickEventHandler DblClickEvent
 		{
@@ -359,6 +387,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844823.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseDownEventHandler MouseDownEvent
 		{
@@ -381,6 +410,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821140.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -403,6 +433,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845572.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_MouseUpEventHandler MouseUpEvent
 		{
@@ -425,6 +456,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844778.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyDownEventHandler KeyDownEvent
 		{
@@ -447,6 +479,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835989.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyPressEventHandler KeyPressEvent
 		{
@@ -469,6 +502,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192466.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_KeyUpEventHandler KeyUpEvent
 		{
@@ -491,6 +525,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194860.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_DirtyEventHandler DirtyEvent
 		{
@@ -513,6 +548,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836273.aspx </remarks>
 		[SupportByVersion("Access", 14,15)]
 		public event NavigationControl_UndoEventHandler UndoEvent
 		{
@@ -537,7 +573,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -644,7 +680,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

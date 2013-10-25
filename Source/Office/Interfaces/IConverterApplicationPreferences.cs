@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// Interface IConverterApplicationPreferences 
 	/// SupportByVersion Office, 14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862807.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public IConverterApplicationPreferences(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IConverterApplicationPreferences(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IConverterApplicationPreferences(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IConverterApplicationPreferences(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IConverterApplicationPreferences(COMObject replacedObject) : base(replacedObject)
 		{
@@ -81,6 +100,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="plcid">Int32 plcid</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864148.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetLcid(out Int32 plcid)
 		{
@@ -96,6 +116,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="phwnd">Int32 phwnd</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860588.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetHwnd(out Int32 phwnd)
 		{
@@ -111,6 +132,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864579.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetApplication(out string pbstrApplication)
 		{
@@ -126,6 +148,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 14, 15
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862557.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{

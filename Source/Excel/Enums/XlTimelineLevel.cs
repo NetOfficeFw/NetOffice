@@ -5,6 +5,7 @@ namespace NetOffice.ExcelApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Excel 15
 	 /// </summary>
+	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231456.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 15)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum XlTimelineLevel

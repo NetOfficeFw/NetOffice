@@ -108,7 +108,7 @@ namespace NetOffice.NamedPipes
             string name = @"\\" + serverName + @"\pipe\" + pipeName;
             handle.State = InterProcessConnectionState.ConnectingToServer;
             // Try to connect to a server pipe
-            handle.Handle = NamedPipeNative.CreateFile(name, NamedPipeNative.GENERIC_READ | NamedPipeNative.GENERIC_WRITE, 0, null, NamedPipeNative.OPEN_EXISTING, 0, 0); 
+            handle.Handle = NamedPipeNative.CreateFile(name, NamedPipeNative.GENERIC_READ | NamedPipeNative.GENERIC_WRITE, 0, null, NamedPipeNative.OPEN_EXISTING, 0, 0);
             if (handle.Handle.ToInt32() != NamedPipeNative.INVALID_HANDLE_VALUE)
             {
                 handle.State = InterProcessConnectionState.ConnectedToServer;
@@ -216,7 +216,7 @@ namespace NetOffice.NamedPipes
             handle.State = InterProcessConnectionState.ConnectedToClient;
             if (!connected && NamedPipeNative.GetLastError() != NamedPipeNative.ERROR_PIPE_CONNECTED)
             {
-                handle.State = InterProcessConnectionState.Error;                
+                handle.State = InterProcessConnectionState.Error;
             }
         }
 

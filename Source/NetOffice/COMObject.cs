@@ -167,7 +167,7 @@ namespace NetOffice
 
             Factory.AddObjectToList(this);
         }
-      
+
         /// <summary>
         /// creates new instance with given proxy and parent info
         /// </summary>
@@ -277,7 +277,7 @@ namespace NetOffice
             _parentObject = parentObject;
             _underlyingObject = comProxy;
 
-            if(null != comProxyType)
+            if (null != comProxyType)
                 _instanceType = comProxyType;
             else
                 comProxyType.GetType();
@@ -345,7 +345,7 @@ namespace NetOffice
             Factory = Core.Default;
             Factory.AddObjectToList(this);
         }
-         
+
         /// <summary>
         /// not usable stub constructor
         /// </summary>
@@ -372,20 +372,20 @@ namespace NetOffice
                 else
                     return _factory;
             }
-            set 
+            set
             {
                 _factory = value;
             }
         }
         private Core _factory;
-        
+
         /// <summary>
         /// NetOffice property: the associated invoker
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         public Invoker Invoker
         {
-            get 
+            get
             {
                 if (null != _factory)
                     return _factory.Invoker;

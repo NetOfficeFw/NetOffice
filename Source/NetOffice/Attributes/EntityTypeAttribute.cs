@@ -10,37 +10,37 @@ namespace NetOffice
         /// <summary>
         /// entity is class
         /// </summary>
-        IsCoClass           = 0,
-        
+        IsCoClass = 0,
+
         /// <summary>
         /// entity is dispatch interface
         /// </summary>
         IsDispatchInterface = 1,
-        
+
         /// <summary>
         /// entity is interface
         /// </summary>
-        IsInterface         = 2,
-        
+        IsInterface = 2,
+
         /// <summary>
         /// entity is module
         /// </summary>
-        IsModule            = 3,
-        
+        IsModule = 3,
+
         /// <summary>
         /// entity is enum
         /// </summary>
-        IsEnum              = 4,
-        
+        IsEnum = 4,
+
         /// <summary>
         /// entity is struct
         /// </summary>
-        IsStruct            = 5,
-        
+        IsStruct = 5,
+
         /// <summary>
         /// entity is const module
         /// </summary>
-        IsConstants         = 6
+        IsConstants = 6
     }
 
     /// <summary>

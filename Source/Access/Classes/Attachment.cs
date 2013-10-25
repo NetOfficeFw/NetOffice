@@ -33,6 +33,7 @@ namespace NetOffice.AccessApi
 	/// CoClass Attachment 
 	/// SupportByVersion Access, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821783.aspx </remarks>
 	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Attachment : _Attachment,IEventBinding
@@ -66,41 +67,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Attachment(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Attachment(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Attachment(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Attachment(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Attachment(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Attachment 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Attachment 
+        ///</summary>		
 		public Attachment():base("Access.Attachment")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of Attachment
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Attachment
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Attachment(string progId):base(progId)
 		{
 			
@@ -161,6 +180,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844829.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -183,6 +203,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845081.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -205,6 +226,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845173.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_EnterEventHandler EnterEvent
 		{
@@ -227,6 +249,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820770.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_ExitEventHandler ExitEvent
 		{
@@ -249,6 +272,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834764.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_DirtyEventHandler DirtyEvent
 		{
@@ -271,6 +295,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194528.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_ChangeEventHandler ChangeEvent
 		{
@@ -293,6 +318,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198117.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_GotFocusEventHandler GotFocusEvent
 		{
@@ -315,6 +341,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822030.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_LostFocusEventHandler LostFocusEvent
 		{
@@ -337,6 +364,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834489.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_ClickEventHandler ClickEvent
 		{
@@ -359,6 +387,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821484.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_DblClickEventHandler DblClickEvent
 		{
@@ -381,6 +410,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193169.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_MouseDownEventHandler MouseDownEvent
 		{
@@ -403,6 +433,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194908.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -425,6 +456,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821765.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_MouseUpEventHandler MouseUpEvent
 		{
@@ -447,6 +479,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197635.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_KeyDownEventHandler KeyDownEvent
 		{
@@ -469,6 +502,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837202.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_KeyPressEventHandler KeyPressEvent
 		{
@@ -491,6 +525,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193501.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_KeyUpEventHandler KeyUpEvent
 		{
@@ -513,6 +548,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193515.aspx </remarks>
 		[SupportByVersion("Access", 12,14,15)]
 		public event Attachment_AttachmentCurrentEventHandler AttachmentCurrentEvent
 		{
@@ -537,7 +573,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -644,7 +680,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

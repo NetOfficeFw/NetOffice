@@ -12,6 +12,7 @@ namespace NetOffice.OfficeApi
 	/// DispatchInterface NewFile 
 	/// SupportByVersion Office, 10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NewFile : _IMsoDispObj
@@ -37,22 +38,40 @@ namespace NetOffice.OfficeApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public NewFile(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NewFile(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public NewFile(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NewFile(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NewFile(COMObject replacedObject) : base(replacedObject)
 		{
@@ -84,6 +103,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section, object displayName, object action)
 		{
@@ -96,6 +116,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName)
@@ -110,6 +131,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section)
@@ -125,6 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section, object displayName)
@@ -141,6 +164,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section, object displayName, object action)
 		{
@@ -153,6 +177,7 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName)
@@ -167,6 +192,7 @@ namespace NetOffice.OfficeApi
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section)
@@ -182,6 +208,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section, object displayName)

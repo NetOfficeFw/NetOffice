@@ -29,28 +29,35 @@ namespace NetOffice.OutlookApi.GlobalHelperModules
 			        _instance = value;				
         	}
         }
-        internal static Invoker Invoker
-        {
-            get
-            {
-                if (null != _instance)
-                    return _instance.Invoker;
-                else
-                    return Invoker.Default;
-            }
-        }
 
-        internal static Core Factory
-        {
-            get
-            {
-                if (null != _instance)
-                    return _instance.Factory;
-                else
-                    return Core.Default;
-            }
-        }
 		#endregion
+
+		#region Internal Properties
+
+		internal static Core Factory
+		{
+			get
+			{
+				if(null != _instance)
+					 return _instance.Factory;
+			else
+				return Core.Default;
+			}
+		}
+
+		internal static Invoker Invoker
+		{
+			get
+			{
+				if(null != _instance)
+					 return _instance.Invoker;
+			else
+				return Invoker.Default;
+			}
+		}
+
+		#endregion
+
 		#region Properties
 
 		/// <summary>

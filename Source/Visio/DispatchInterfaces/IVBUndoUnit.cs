@@ -12,6 +12,7 @@ namespace NetOffice.VisioApi
 	/// DispatchInterface IVBUndoUnit 
 	/// SupportByVersion Visio, 11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769307(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBUndoUnit : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.VisioApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public IVBUndoUnit(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVBUndoUnit(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public IVBUndoUnit(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVBUndoUnit(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public IVBUndoUnit(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765404(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string Description
 		{
@@ -92,6 +112,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767058(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string UnitTypeCLSID
 		{
@@ -107,6 +128,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766307(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 UnitTypeLong
 		{
@@ -122,6 +144,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766293(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 UnitSize
 		{
@@ -141,6 +164,7 @@ namespace NetOffice.VisioApi
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
 		/// <param name="pMgr">NetOffice.VisioApi.IVBUndoManager pMgr</param>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766032(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Do(NetOffice.VisioApi.IVBUndoManager pMgr)
 		{
@@ -151,6 +175,7 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767691(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void OnNextAdd()
 		{

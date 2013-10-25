@@ -118,8 +118,19 @@ namespace NetOffice.AccessApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public DispWebBrowserControlEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -134,17 +145,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-		#region Construction
-
-		public DispWebBrowserControlEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region DispWebBrowserControlEvents Members
 		
 		public void Updated([In] [Out] ref object code)

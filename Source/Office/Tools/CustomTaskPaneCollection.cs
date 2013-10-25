@@ -298,6 +298,9 @@ namespace NetOffice.OfficeApi.Tools
 
         #region Methods / Trigger
 
+		/// <summary>
+		/// Attach the event triggers
+		/// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public void AssignEvents()
         {

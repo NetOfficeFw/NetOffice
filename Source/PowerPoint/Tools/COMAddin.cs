@@ -220,7 +220,7 @@ namespace NetOffice.PowerPointApi.Tools
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-			this.Application = new PowerPoint.Application(null, Application);
+			this.Application = new PowerPoint.Application(Factory, null, Application);
 			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
         }
 
@@ -326,7 +326,7 @@ namespace NetOffice.PowerPointApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -429,7 +429,7 @@ namespace NetOffice.PowerPointApi.Tools
                     return false;
                 regKeyPPoint.SetValue(name, value);
                 regKeyPPoint.Close();
-                regKeyPPoint.Dispose();
+                //regKeyPPoint.Dispose(); not available in previous .net versions
                 return true;
 
             }

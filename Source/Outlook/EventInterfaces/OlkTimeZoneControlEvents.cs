@@ -102,6 +102,21 @@ namespace NetOffice.OutlookApi
 		
 		#endregion
 		
+		#region Properties
+
+        internal Core Factory
+        {
+            get
+            {
+                if (null != _eventClass)
+                    return _eventClass.Factory;
+                else
+                    return Core.Default;
+            }
+        }
+
+        #endregion
+
 		#region OlkTimeZoneControlEvents Members
 		
 		public void Click()

@@ -222,8 +222,19 @@ namespace NetOffice.ExcelApi
         private COMObject		_eventClass;
         
 		#endregion
+		
+		#region Construction
 
-        #region Properties
+		public AppEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+		{
+			_eventClass = eventClass;
+			_eventBinding = (IEventBinding)eventClass;
+			SetupEventBinding(connectPoint);
+		}
+		
+		#endregion
+		
+		#region Properties
 
         internal Core Factory
         {
@@ -238,17 +249,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-		#region Construction
-
-		public AppEvents_SinkHelper(COMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			_eventClass = eventClass;
-			_eventBinding = (IEventBinding)eventClass;
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
 		#region AppEvents Members
 		
 		public void NewWorkbook([In, MarshalAs(UnmanagedType.IDispatch)] object wb)

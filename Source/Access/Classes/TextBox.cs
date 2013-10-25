@@ -33,6 +33,7 @@ namespace NetOffice.AccessApi
 	/// CoClass TextBox 
 	/// SupportByVersion Access, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835063.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class TextBox : _Textbox,IEventBinding
@@ -67,41 +68,59 @@ namespace NetOffice.AccessApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public TextBox(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public TextBox(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public TextBox(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TextBox(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public TextBox(COMObject replacedObject) : base(replacedObject)
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of TextBox 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of TextBox 
+        ///</summary>		
 		public TextBox():base("Access.TextBox")
 		{
 			
 		}
 		
-		/// <summary>
-        /// creates a new instance of TextBox
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of TextBox
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public TextBox(string progId):base(progId)
 		{
 			
@@ -162,6 +181,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845199.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_BeforeUpdateEventHandler BeforeUpdateEvent
 		{
@@ -184,6 +204,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194818.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_AfterUpdateEventHandler AfterUpdateEvent
 		{
@@ -206,6 +227,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821734.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_ChangeEventHandler ChangeEvent
 		{
@@ -228,6 +250,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197769.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_EnterEventHandler EnterEvent
 		{
@@ -250,6 +273,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844925.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_ExitEventHandler ExitEvent
 		{
@@ -272,6 +296,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822716.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_GotFocusEventHandler GotFocusEvent
 		{
@@ -294,6 +319,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193542.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_LostFocusEventHandler LostFocusEvent
 		{
@@ -316,6 +342,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834731.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_ClickEventHandler ClickEvent
 		{
@@ -338,6 +365,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821748.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_DblClickEventHandler DblClickEvent
 		{
@@ -360,6 +388,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821739.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_MouseDownEventHandler MouseDownEvent
 		{
@@ -382,6 +411,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197411.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_MouseMoveEventHandler MouseMoveEvent
 		{
@@ -404,6 +434,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845232.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_MouseUpEventHandler MouseUpEvent
 		{
@@ -426,6 +457,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844722.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_KeyDownEventHandler KeyDownEvent
 		{
@@ -448,6 +480,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197040.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_KeyPressEventHandler KeyPressEvent
 		{
@@ -470,6 +503,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191709.aspx </remarks>
 		[SupportByVersion("Access", 9,10,11,12,14,15)]
 		public event TextBox_KeyUpEventHandler KeyUpEvent
 		{
@@ -492,6 +526,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835038.aspx </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15)]
 		public event TextBox_DirtyEventHandler DirtyEvent
 		{
@@ -514,6 +549,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836364.aspx </remarks>
 		[SupportByVersion("Access", 10,11,12,14,15)]
 		public event TextBox_UndoEventHandler UndoEvent
 		{
@@ -538,7 +574,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -651,7 +687,7 @@ namespace NetOffice.AccessApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

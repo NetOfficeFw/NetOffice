@@ -24,7 +24,7 @@ namespace NetOffice
         #endregion
 
         #region Ctor
-        
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
@@ -37,26 +37,26 @@ namespace NetOffice
 
         #region Fields
 
-        private CultureInfo  _cultureInfo;
+        private CultureInfo _cultureInfo;
 
-        private bool                _eventsEnabled = true;
-        private RetryMessageFilter  _messageFilter;
-        private bool                _enableAutomaticQuit = false;
-        private bool                _enableAdHocLoading = true;
-        private bool                _enableDeepLoading = true;
-        private bool                _enableDebugOutput = false;
-        private bool                _enableEventDebugOutput = false;
-        private bool                _enableSafeMode = false;
-        private bool                _enableProxyManagement = true;
-        private bool                _enableProxyCountChannel = false;
-        private string              _proxyCountChannelName = "DefaultProxyCountChannel";
-        private CacheOptions        _cacheOptions = CacheOptions.KeepExistingCacheAlive;
-        private bool                _enableOperatorOverlads = true;
-        private string              _exceptionMessage = "See inner exception(s) for details.";
+        private bool _eventsEnabled = true;
+        private RetryMessageFilter _messageFilter;
+        private bool _enableAutomaticQuit = false;
+        private bool _enableAdHocLoading = true;
+        private bool _enableDeepLoading = true;
+        private bool _enableDebugOutput = false;
+        private bool _enableEventDebugOutput = false;
+        private bool _enableSafeMode = false;
+        private bool _enableProxyManagement = true;
+        private bool _enableProxyCountChannel = false;
+        private string _proxyCountChannelName = "DefaultProxyCountChannel";
+        private CacheOptions _cacheOptions = CacheOptions.KeepExistingCacheAlive;
+        private bool _enableOperatorOverlads = true;
+        private string _exceptionMessage = "See inner exception(s) for details.";
         private ExceptionMessageHandling _copyInnerExceptionMessage;
 
         #endregion
-         
+
         #region Properties
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace NetOffice
         /// </summary>
         public bool EnableProxyManagement
         {
-            get 
+            get
             {
                 return _enableProxyManagement;
             }
@@ -110,11 +110,11 @@ namespace NetOffice
         /// </summary>
         public string ExceptionMessage
         {
-            get 
+            get
             {
                 return _exceptionMessage;
             }
-            set 
+            set
             {
                 _exceptionMessage = value;
             }
@@ -151,7 +151,7 @@ namespace NetOffice
                 _cultureInfo = value;
             }
         }
-        
+
         /// <summary>
         /// Get or set the Event support. true by default
         /// </summary>
@@ -269,7 +269,7 @@ namespace NetOffice
                 _enableEventDebugOutput = value;
             }
         }
-        
+
         /// <summary>
         /// Get or set NetOffice logs the current proxy count from a core factory to a ConsoleMonitor channel
         /// </summary>
@@ -331,7 +331,7 @@ namespace NetOffice
                 _enableOperatorOverlads = value;
             }
         }
-        
+
         #endregion
     }
 }

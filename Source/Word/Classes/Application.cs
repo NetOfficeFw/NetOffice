@@ -51,6 +51,7 @@ namespace NetOffice.WordApi
 	/// CoClass Application 
 	/// SupportByVersion Word, 9,10,11,12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838565.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Application : _Application,IEventBinding
@@ -86,43 +87,62 @@ namespace NetOffice.WordApi
         		
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public Application(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			_callQuitInDispose = true;
+			GlobalHelperModules.GlobalModule.Instance = this;
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
 		public Application(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public Application(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+			_callQuitInDispose = true;
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public Application(COMObject replacedObject) : base(replacedObject)
 		{
 			_callQuitInDispose = true;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application 
-        /// </summary>		
+		///<summary>
+        ///creates a new instance of Application 
+        ///</summary>		
 		public Application():base("Word.Application")
 		{
 			_callQuitInDispose = true;
 			GlobalHelperModules.GlobalModule.Instance = this;
 		}
 		
-		/// <summary>
-        /// creates a new instance of Application
-        /// </summary>
-        /// <param name="progId">registered ProgID</param>
+		///<summary>
+        ///creates a new instance of Application
+        ///</summary>
+        ///<param name="progId">registered ProgID</param>
 		public Application(string progId):base(progId)
 		{
 			_callQuitInDispose = true;
@@ -227,6 +247,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194164.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_QuitEventHandler QuitEvent
 		{
@@ -249,6 +270,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822189.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentChangeEventHandler DocumentChangeEvent
 		{
@@ -271,6 +293,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192207.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentOpenEventHandler DocumentOpenEvent
 		{
@@ -293,6 +316,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834271.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforeCloseEventHandler DocumentBeforeCloseEvent
 		{
@@ -315,6 +339,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845163.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforePrintEventHandler DocumentBeforePrintEvent
 		{
@@ -337,6 +362,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838299.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_DocumentBeforeSaveEventHandler DocumentBeforeSaveEvent
 		{
@@ -359,6 +385,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836563.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_NewDocumentEventHandler NewDocumentEvent
 		{
@@ -381,6 +408,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840337.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowActivateEventHandler WindowActivateEvent
 		{
@@ -403,6 +431,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198272.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
 		{
@@ -425,6 +454,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192791.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
 		{
@@ -447,6 +477,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837868.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
 		{
@@ -469,6 +500,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840048.aspx </remarks>
 		[SupportByVersion("Word", 9,10,11,12,14,15)]
 		public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
 		{
@@ -491,6 +523,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197984.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_EPostagePropertyDialogEventHandler EPostagePropertyDialogEvent
 		{
@@ -513,6 +546,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193389.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_EPostageInsertEventHandler EPostageInsertEvent
 		{
@@ -535,6 +569,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198141.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeAfterMergeEventHandler MailMergeAfterMergeEvent
 		{
@@ -557,6 +592,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198157.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeAfterRecordMergeEventHandler MailMergeAfterRecordMergeEvent
 		{
@@ -579,6 +615,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834588.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeBeforeMergeEventHandler MailMergeBeforeMergeEvent
 		{
@@ -601,6 +638,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838357.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeBeforeRecordMergeEventHandler MailMergeBeforeRecordMergeEvent
 		{
@@ -623,6 +661,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196096.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeDataSourceLoadEventHandler MailMergeDataSourceLoadEvent
 		{
@@ -645,6 +684,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193130.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeDataSourceValidateEventHandler MailMergeDataSourceValidateEvent
 		{
@@ -667,6 +707,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837009.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeWizardSendToCustomEventHandler MailMergeWizardSendToCustomEvent
 		{
@@ -689,6 +730,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838546.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_MailMergeWizardStateChangeEventHandler MailMergeWizardStateChangeEvent
 		{
@@ -711,6 +753,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834597.aspx </remarks>
 		[SupportByVersion("Word", 10,11,12,14,15)]
 		public event Application_WindowSizeEventHandler WindowSizeEvent
 		{
@@ -733,6 +776,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835495.aspx </remarks>
 		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_XMLSelectionChangeEventHandler XMLSelectionChangeEvent
 		{
@@ -755,6 +799,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837452.aspx </remarks>
 		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_XMLValidationErrorEventHandler XMLValidationErrorEvent
 		{
@@ -777,6 +822,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835138.aspx </remarks>
 		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_DocumentSyncEventHandler DocumentSyncEvent
 		{
@@ -799,6 +845,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195087.aspx </remarks>
 		[SupportByVersion("Word", 11,12,14,15)]
 		public event Application_EPostageInsertExEventHandler EPostageInsertExEvent
 		{
@@ -821,6 +868,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839145.aspx </remarks>
 		[SupportByVersion("Word", 12,14,15)]
 		public event Application_MailMergeDataSourceValidate2EventHandler MailMergeDataSourceValidate2Event
 		{
@@ -843,6 +891,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194483.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
 		{
@@ -865,6 +914,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192123.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
 		{
@@ -887,6 +937,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194718.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
 		{
@@ -909,6 +960,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836722.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowSizeEventHandler ProtectedViewWindowSizeEvent
 		{
@@ -931,6 +983,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836396.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
 		{
@@ -953,6 +1006,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14 15
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837500.aspx </remarks>
 		[SupportByVersion("Word", 14,15)]
 		public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
 		{
@@ -977,7 +1031,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void CreateEventBridge()
         {
-			if(false == NetOffice.Settings.Default.EnableEvents)
+			if(false == Factory.Settings.EnableEvents)
 				return;
 	
 			if (null != _connectPoint)
@@ -1096,7 +1150,7 @@ namespace NetOffice.WordApi
                     }
                     catch (NetRuntimeSystem.Exception exception)
                     {
-                        DebugConsole.Default.WriteException(exception);
+                        Factory.Console.WriteException(exception);
                     }
                 }
                 return delegates.Length;

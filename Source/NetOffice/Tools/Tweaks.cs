@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define RegKeyDisposeAvailable
+
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Reflection;
@@ -7,12 +9,14 @@ using System.Text;
 using NetOffice.Tools;
 
 namespace NetOffice.Tools
-{
+{ 
     /// <summary>
     /// Tweak Handler to customize some settings at runtime (if wanted)
     /// </summary>
     public static class Tweaks
     {
+       
+
         #region Fields
 
         private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo", 
@@ -35,9 +39,9 @@ namespace NetOffice.Tools
         #endregion
 
         #region Properties
-        
+
         /// <summary>
-        /// Store applied custom teaks. int = GetHashCode() from COMAddin instance. Dictionary<string, string> = name, value of applied tweak
+        /// Store applied custom teaks. int = GetHashCode() from COMAddin instance. Dictionary string string = name, value of applied tweak
         /// </summary>
         private static Dictionary<int, Dictionary<string, string>> CustomTweaks { get; set; }
 
@@ -91,10 +95,10 @@ namespace NetOffice.Tools
                     Dictionary<string, string> customTweaks = ApplyCustomTweaks(factory, addinInstance, addinType, key);
                     AddCustomAppliedTweaks(addinInstance.GetHashCode(), customTweaks);
                     key.Close();
-                    key.Dispose();
+                    // key.Dispose(); not available in previous .net versions (but in fact RegistryKey implements always IDisposable huuu?)
                 }
                 hiveKey.Close();
-                hiveKey.Dispose();
+                // hiveKey.Dispose();  not available in previous .net versions
             }
             catch (Exception exception)
             {
@@ -117,7 +121,7 @@ namespace NetOffice.Tools
             }
             catch (Exception exception)
             {
-                factory.Console.WriteException(exception);                    
+                factory.Console.WriteException(exception);
             }
         }
 
@@ -148,7 +152,7 @@ namespace NetOffice.Tools
         {
             Dictionary<string, string> result = new Dictionary<string, string>();
             string[] names = key.GetValueNames();
-            foreach (string  item in names)
+            foreach (string item in names)
             {
                 if (IsWellKnownName(item))
                     continue;
@@ -187,10 +191,10 @@ namespace NetOffice.Tools
         {
             if (CustomTweaks.ContainsKey(addinInstance.GetHashCode()))
                 CustomTweaks.Remove(addinInstance.GetHashCode());
-       }
+        }
 
         #endregion
-        
+
         #region Caller Methods
 
         private static bool CallAllowApplyTweak(Core factory, object addinInstance, Type addinType, string name, string value)
@@ -245,7 +249,7 @@ namespace NetOffice.Tools
         #endregion
 
         #region NO Tweaks
-        
+
         private static void TweakProxyCountChannel(Core factory, object addinInstance, Type addinType, RegistryKey key)
         {
             string value = key.GetValue("NOEnableProxyCountChannel", null) as string;
@@ -351,14 +355,14 @@ namespace NetOffice.Tools
 
         private static void TweakExceptionMessage(Core factory, object addinInstance, Type addinType, RegistryKey key)
         {
-             string value = key.GetValue("NOExceptionMessage", null) as string;
-             if (null != value)
-             {
-                 bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOExceptionMessage", value);
-                 if (!allow)
-                     return;
-                 factory.Settings.ExceptionMessage = value;
-             }
+            string value = key.GetValue("NOExceptionMessage", null) as string;
+            if (null != value)
+            {
+                bool allow = CallAllowApplyTweak(factory, addinInstance, addinType, "NOExceptionMessage", value);
+                if (!allow)
+                    return;
+                factory.Settings.ExceptionMessage = value;
+            }
         }
 
         private static void TweakThreadCulture(Core factory, object addinInstance, Type addinType, RegistryKey key)
@@ -377,7 +381,7 @@ namespace NetOffice.Tools
                 catch (Exception exception)
                 {
                     factory.Console.WriteException(exception);
-                }               
+                }
             }
         }
 

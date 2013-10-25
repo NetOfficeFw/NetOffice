@@ -5,6 +5,7 @@ namespace NetOffice.OfficeApi.Enums
 	 /// <summary>
 	 /// SupportByVersion Office 15
 	 /// </summary>
+	 ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227893.aspx </remarks>
 	[SupportByVersionAttribute("Office", 15)]
 	[EntityTypeAttribute(EntityType.IsEnum)]
 	public enum MsoMergeCmd

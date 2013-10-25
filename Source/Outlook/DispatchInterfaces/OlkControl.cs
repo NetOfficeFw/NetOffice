@@ -12,6 +12,7 @@ namespace NetOffice.OutlookApi
 	/// DispatchInterface OlkControl 
 	/// SupportByVersion Outlook, 12,14,15
 	///</summary>
+	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864202.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OlkControl : COMObject
@@ -37,22 +38,40 @@ namespace NetOffice.OutlookApi
         
 		#region Construction
 
-        /// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+		public OlkControl(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+		{
+			
+		}
+
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkControl(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
 		{
 		}
 		
-		/// <param name="parentObject">object there has created the proxy</param>
-        /// <param name="comProxy">inner wrapped COM proxy</param>
-        /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		///<param name="factory">current used factory core</param>
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		public OlkControl(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+		{
+
+		}
+
+		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkControl(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
 		{
 		}
 		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public OlkControl(COMObject replacedObject) : base(replacedObject)
 		{
@@ -77,6 +96,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868851.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string ItemProperty
 		{
@@ -97,6 +117,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866215.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string ControlProperty
 		{
@@ -117,6 +138,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869884.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string PossibleValues
 		{
@@ -137,6 +159,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869903.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Format
 		{
@@ -157,6 +180,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867721.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool EnableAutoLayout
 		{
@@ -177,6 +201,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861611.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 MinimumWidth
 		{
@@ -197,6 +222,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869868.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 MinimumHeight
 		{
@@ -217,6 +243,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868997.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
 		{
@@ -238,6 +265,7 @@ namespace NetOffice.OutlookApi
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
 		/// </summary>
+		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862110.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlVerticalLayout VerticalLayout
 		{

@@ -331,7 +331,7 @@ namespace NetOffice.OfficeApi.Tools
             {
                 if (null != CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(null, CTPFactoryInst);
+                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                     foreach (TaskPaneInfo item in TaskPanes)
                     {
                         string title = item.Title;
@@ -437,7 +437,7 @@ namespace NetOffice.OfficeApi.Tools
                         continue;
                     regKeyOffice.SetValue(name, value);
                     regKeyOffice.Close();
-                    regKeyOffice.Dispose();
+                    //regKeyOffice.Dispose(); not available in previous .net versions
                 }
 
                 return true;
