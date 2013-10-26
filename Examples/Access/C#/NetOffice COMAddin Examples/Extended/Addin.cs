@@ -25,7 +25,7 @@ namespace NetOfficeTools.ExtendedAccessCS4
     /*
      * As you can see, the necessary registry informations was given as annotation, no need for Register/Unregister methods
      * The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you want HKEY_CURRENTUSER (just for example here)
-     * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you want this then you can override the GetCustomUI method from the base class.
+     * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you want dont this then you can override the GetCustomUI method from the base class.
      * The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
      */
     [COMAddin("NetOfficeCS4 Extended Sample Addin", "This Addin shows you the COMAddin class from the NetOffice Tools", 3)]
@@ -35,15 +35,16 @@ namespace NetOfficeTools.ExtendedAccessCS4
     {
         public Addin()
         {
-            // enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
-            Factory.Console.Name = "ExtendedAccessCS4.Addin";
-            Factory.Console.Mode = NetOffice.DebugConsoleMode.Console;
+            // Enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
             Factory.Console.EnableSharedOutput = true;
-            Factory.Console.SendPipeConsoleMessage("ExtendedAccessCS4.Addin", "ExtendedAccessCS4.Addin has been loaded.");
+            Factory.Console.SendPipeConsoleMessage("Addin has been loaded.");
+
+            // We want observe the current count of open proxies with NOTools.ConsoleMonitor.exe 
+            Factory.Settings.EnableProxyCountChannel = true;
 
             // trigger the well known IExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
-
+            
             // We add our own taskpane here, if you dont want this way then overwrite the CTPFactoryAvailable method and create your panes in this method.
             // Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
             // Take a look into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application.

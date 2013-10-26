@@ -209,6 +209,30 @@ namespace NetOffice
         /// <summary>
         /// Send a message to the NOTools.Console monitor pipe
         /// </summary>
+        /// <param name="message">the given message as any</param>
+        /// <returns>entry id for the log message if arrived, otherwise null</returns>
+        public string SendPipeConsoleMessage(string message)
+        {
+            try
+            {
+                lock (_sharedLock)
+                {
+                    if (null == Pipe)
+                        Pipe = new PipeClient();
+                    return Pipe.SendConsoleMessage(this.Name, message, null);
+                }
+            }
+            catch (Exception exception)
+            {
+                EnableSharedOutput = false;
+                WriteException(exception);
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Send a message to the NOTools.Console monitor pipe
+        /// </summary>
         /// <param name="console">name for the console(must exclude the '?' char) or null for default console</param>
         /// <param name="message">the given message as any</param>
         /// <returns>entry id for the log message if arrived, otherwise null</returns>

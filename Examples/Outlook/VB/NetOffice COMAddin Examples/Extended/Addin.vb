@@ -25,22 +25,23 @@ Imports NetOffice.OfficeApi.Enums
 '/*
 '* As you can see, the necessary registry informations was given as annotation, no need for Register/Unregister methods
 '* The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you want HKEY_CURRENTUSER (just for example here)
-'* You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you want this then you can override the GetCustomUI method from the base class.
+'* You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you dont want this then you can override the GetCustomUI method from the base class.
 '* The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
 '*/
 <COMAddin("NetOfficeVB4 Extended Outlook Addin", "This Addin shows you the COMAddin  baseclass from the NetOffice Tools", 3)> _
-<RegistryLocation(RegistrySaveLocation.CurrentUser)> _
-<CustomUI("NetOfficeTools.ExtendedOutlookVB4.RibbonUI.xml")> _
+<CustomUI("NetOfficeTools.ExtendedOutlookVB4.RibbonUI.xml"), RegistryLocation(RegistrySaveLocation.CurrentUser)> _
 <Guid("DB89E4AD-6B44-4EFF-A9B5-174335D98A16"), ProgId("ExtendedOutlookVB4.Addin"), Tweak(True)> _
 Public Class Addin
     Inherits COMAddin
 
     Public Sub New()
 
-        ' enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
-        Factory.Console.Name = "ExtendedOutlookVB4.Addin"
+        ' Enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
         Factory.Console.EnableSharedOutput = True
-        Factory.Console.SendPipeConsoleMessage("ExtendedOutlookVB4.Addin", "ExtendedOutlookVB4.Addin has been loaded.")
+        Factory.Console.SendPipeConsoleMessage("ExtendedAccessVB4.Addin has been loaded.")
+
+        ' We want observe the current count of open proxies with NOTools.ConsoleMonitor.exe 
+        Factory.Settings.EnableProxyCountChannel = True
 
         ' We add our own taskpane here, if you dont want this way then overwrite the CTPFactoryAvailable method and create your panes in this method.
         ' Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
@@ -63,7 +64,7 @@ Public Class Addin
         ' You see the host application is accessible as property from the class instance.
         ' The application property was disposed automaticly while shutdown.
         '  We check at runtime (with a NetOffice special service) the property is available because Access 2000 and below doesn't have the Version property.
-      Factory.Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
+        Factory.Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
 
     End Sub
 

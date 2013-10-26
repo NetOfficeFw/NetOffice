@@ -23,7 +23,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
 {
     /*
      * As you can see, the necessary registry informations was given as annotation, no need for Register/Unregister methods
-     * The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you want HKEY_CURRENTUSER (just for example here)
+     * The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you dont want HKEY_CURRENTUSER (just for example here)
      * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you want this then you can override the GetCustomUI method from the base class.
      * The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
      */
@@ -33,12 +33,13 @@ namespace NetOfficeTools.ExtendedExcelCS4
     public class Addin : COMAddin
     {
         public Addin()
-        {           
-            // enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
-            Factory.Console.Name = "ExtendedExcelCS4.Addin";
-            Factory.Console.Mode = NetOffice.DebugConsoleMode.Console;
+        {
+            // Enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
             Factory.Console.EnableSharedOutput = true;
-            Factory.Console.SendPipeConsoleMessage("ExtendedExcelCS4.Addin", "ExtendedExcelCS4.Addin has been loaded.");
+            Factory.Console.SendPipeConsoleMessage("Addin has been loaded.");
+
+            // We want observe the current count of open proxies with NOTools.ConsoleMonitor.exe 
+            Factory.Settings.EnableProxyCountChannel = true;
 
             // trigger the well known IExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);

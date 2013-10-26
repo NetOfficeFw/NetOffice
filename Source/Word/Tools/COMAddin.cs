@@ -35,12 +35,12 @@ namespace NetOffice.WordApi.Tools
         /// </summary>
         public COMAddin()
         {
+            Type = this.GetType();
             Factory = RaiseCreateFactory();
             if (null == Factory)
                 Factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
-            Type = this.GetType();
         }
 
         #endregion
@@ -453,7 +453,15 @@ namespace NetOffice.WordApi.Tools
         /// <returns>new Settings instance</returns>
         protected virtual Core CreateFactory()
         {
-            return new Core();
+            Core newCore = new Core();
+            ProgIdAttribute attribute = AttributeHelper.GetProgIDAttribute(Type, false);
+            if (null != attribute)
+            {
+                string name = attribute.Value + GetHashCode().ToString();
+                newCore.Console.Name = name;
+                newCore.Settings.ProxyCountChannelName = name;
+            }
+            return newCore;
         }
 
         /// <summary>

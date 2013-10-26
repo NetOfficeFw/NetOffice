@@ -316,6 +316,8 @@ namespace NetOffice.OfficeApi.Tools
             try
             {
                 RaiseDockPositionStateChanged(customTaskPaneInst);
+                if (!customTaskPaneInst.IsDisposed)
+                    customTaskPaneInst.Dispose();
             }
             catch (Exception exception)
             {
@@ -328,6 +330,8 @@ namespace NetOffice.OfficeApi.Tools
             try
             {
                 RaiseVisibleChanged(customTaskPaneInst);
+                if (!customTaskPaneInst.IsDisposed)
+                    customTaskPaneInst.Dispose();
             }
             catch (Exception exception)
             {

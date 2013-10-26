@@ -545,6 +545,18 @@ namespace NetOffice
         }
 
         /// <summary>
+        /// NetOffice property: child instances
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMObject[] Childs
+        {
+            get
+            {
+                return _listChildObjects.ToArray();
+            }
+        }
+
+        /// <summary>
         /// NetOffice property: returns instance export events
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
