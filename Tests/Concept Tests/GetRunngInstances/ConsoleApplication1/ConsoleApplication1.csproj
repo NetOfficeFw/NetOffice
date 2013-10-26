@@ -45,6 +45,10 @@
       <HintPath>..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PowerPointApi">
+      <HintPath>..\..\..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
