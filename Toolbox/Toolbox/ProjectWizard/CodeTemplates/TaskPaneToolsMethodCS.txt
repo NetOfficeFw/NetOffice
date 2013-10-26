@@ -1,0 +1,6 @@
+﻿            TaskPanes.Add(typeof(TaskPaneControl), "Task Pane");
+            TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
+            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal;
+            TaskPanes[0].Width = 150;
+            TaskPanes[0].Visible = true;
+            TaskPanes[0].Arguments = new object[] { this };
