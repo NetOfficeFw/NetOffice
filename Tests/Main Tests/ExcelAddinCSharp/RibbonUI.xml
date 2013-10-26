@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoadRibbonUI">
+  <ribbon>
+    <tabs>
+      <tab id="TabNOTestsMainCSExcelAddin" label="TestAddin C# Excel">
+        <group id="group1" label="Example">
+          <button id="customButton1" getLabel="GetLabel" imageMso="HappyFace" size="large"/>
+          <button id="customButton2" getLabel="GetLabel" imageMso="HappyFace" size="large"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

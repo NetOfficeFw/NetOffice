@@ -1,0 +1,22 @@
+﻿
+        #region ICustomTaskPaneConsumer Member
+
+        public void CTPFactoryAvailable(object CTPFactoryInst)
+        {
+            try
+            {
+                Office.ICTPFactory ctpFactory = new NetOffice.OfficeApi.ICTPFactory(_application, CTPFactoryInst);
+                Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(Addin).Assembly.GetName().Name + ".TaskPaneControl", "Addin TaskPane", Type.Missing);
+                taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
+                taskPane.Visible = true;
+                _taskPaneControl = taskPane.ContentControl as TaskPaneControl;
+                ctpFactory.Dispose();
+            }
+            catch (Exception exception)
+            {
+                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                MessageBox.Show(message, "Addin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion

@@ -1,0 +1,24 @@
+﻿
+#Region "ICustomTaskPaneConsumer Member"
+
+    Public Sub CTPFactoryAvailable(ByVal CTPFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
+
+        Try
+
+            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_application, CTPFactoryInst)
+            Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".TaskPaneControl", "Addin TaskPane", Type.Missing)
+            taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
+            taskPane.Visible = True
+            _taskPaneControl = taskPane.ContentControl
+            ctpFactory.Dispose()
+
+        Catch ex As Exception
+
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, "Addin", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+#End Region

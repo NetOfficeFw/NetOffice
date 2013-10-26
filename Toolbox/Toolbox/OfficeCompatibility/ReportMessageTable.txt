@@ -1,0 +1,12 @@
+﻿[1031]
+checkBoxNativeView = Native Ansicht
+labelFilterCaption = Negativ-Filter
+labelFilterHint = Nutzen Sie den Filter um nur Funktionalitäten anzuzeigen die eine bestimmte Version nicht unterstützen.
+buttonSaveReport = Bericht als Datei speichern
+[End]
+[1033]
+checkBoxNativeView = Native View
+labelFilterCaption = Negativ-Filter
+labelFilterHint = Use the filter to show entities without support for a specific version.
+buttonSaveReport = Save Report as File
+[End]

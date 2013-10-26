@@ -1,0 +1,10 @@
+﻿[1031]
+checkBoxClassicUISupport = Ich möchte die Benutzeroberfläche in älteren Office Versionen erweitern
+checkBoxRibbonUISupport = Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern
+checkBoxTaskPaneSupport = Ich möchte eine Task Pane zur Verfügung stellen
+[End]
+[1033]
+checkBoxClassicUISupport = I want customize the classic Office UI
+checkBoxRibbonUISupport = I want customize the Ribbon UI
+checkBoxTaskPaneSupport = Ich want a custom Task Pane
+[End]

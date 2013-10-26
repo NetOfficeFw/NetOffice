@@ -1,0 +1,1 @@
+﻿		_application = new %OfficeApp%.Application(Nothing, Application)

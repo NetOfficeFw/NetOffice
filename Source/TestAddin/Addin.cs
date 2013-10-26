@@ -23,6 +23,11 @@ namespace TestAddin
             TaskPanes[0].Visible = true;
             TaskPanes[0].Arguments = new object[] { this };
             TaskPanes[0].VisibleStateChange += new Office.CustomTaskPane_VisibleStateChangeEventHandler(TaskPane_VisibleStateChange);
+            this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
+        }
+
+        private void Addin_OnStartupComplete(ref Array custom)
+        {
         }
 
         private void TaskPane_VisibleStateChange(Office._CustomTaskPane CustomTaskPaneInst)
@@ -49,6 +54,7 @@ namespace TestAddin
         [RegisterFunction(RegisterMode.CallAfter)]
         public static void Register(Type type, RegisterCall registerCall)
         {
+            SetTweakPersistenceEntry(type, "NOExceptionMessage", "TestMessage", false);
             SetTweakPersistenceEntry(type, "NOConsoleMode", "trace", false);
             SetTweakPersistenceEntry(type, "ShowMessageBoxAtStartUp", "yes", false);
         }

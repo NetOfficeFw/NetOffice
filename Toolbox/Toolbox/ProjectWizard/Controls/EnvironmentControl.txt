@@ -1,0 +1,12 @@
+﻿[1031]
+labelProgrammingLanguage = Programmiersprache
+labelEnvironment = Entwicklungsumgebung
+labelNet4Hint = .NET 4.0 benötigt Visual Studio 2010
+labelNetRuntime = .NET Laufzeitumgebung
+[End]
+[1033]
+labelProgrammingLanguage = Language
+labelEnvironment = Environment
+labelNet4Hint = .NET 4.0 need Visual Studio 2010
+labelNetRuntime = .NET Runtime
+[End]

@@ -1,0 +1,26 @@
+﻿
+        #region Private Helper Methods
+
+        /// <summary>
+        /// reads text file from ressource
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        protected internal static string ReadRessourceFile(string fileName)
+        {
+            Assembly assembly = typeof(Addin).Assembly;
+            System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName);
+            if (ressourceStream == null)
+                throw (new System.IO.IOException("Error accessing resource Stream."));
+
+            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
+            if (textStreamReader == null)
+                throw (new System.IO.IOException("Error accessing resource File."));
+
+            string text = textStreamReader.ReadToEnd();
+            ressourceStream.Close();
+            textStreamReader.Close();
+            return text;
+        }
+
+        #endregion

@@ -1,0 +1,14 @@
+﻿[1031]
+this = Name bearbeiten
+labelName = Name
+labelNewName = Neuer Name
+buttonOK = OK
+buttonAbort = Abbrechen
+[End]
+[1033]
+this = Edit Name
+labelName = Name
+labelNewName = New Name
+buttonOK = OK
+buttonAbort = Cancel
+[End]

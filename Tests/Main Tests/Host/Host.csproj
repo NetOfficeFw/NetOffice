@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2BF64B3-E52A-44DB-8D3C-243C305A2031}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Host</RootNamespace>
+    <AssemblyName>Host</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetOffice, Version=1.7.0.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionDialog.Designer.cs">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExceptionDialog.resx">
+      <DependentUpon>ExceptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccessTestsCSharp\AccessTestsCSharp.csproj">
+      <Project>{DB770245-B58D-4FC2-93AD-FB5C19BA3B2B}</Project>
+      <Name>AccessTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AccessTestsVB\AccessTestsVB.vbproj">
+      <Project>{62E531C0-2089-4A47-8E73-34C2ADCB9E2A}</Project>
+      <Name>AccessTestsVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExcelTestsVB\ExcelTestsVB.vbproj">
+      <Project>{AE34D813-6379-4F3B-99FB-44DD1BB0EA0A}</Project>
+      <Name>ExcelTestsVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExcelTests\ExcelTestsCSharp.csproj">
+      <Project>{A90B0374-1374-493F-8266-5F7F72FF2814}</Project>
+      <Name>ExcelTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OutlookTestsCSharp\OutlookTestsCSharp.csproj">
+      <Project>{205E8F02-1368-4D06-81DB-7A744202ACDE}</Project>
+      <Name>OutlookTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OutlookTestsVB\OutlookTestsVB.vbproj">
+      <Project>{10673184-AA92-47F0-8966-DDC9B07B715A}</Project>
+      <Name>OutlookTestsVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPointTestsCSharp\PowerPointTestsCSharp.csproj">
+      <Project>{8CE3019E-5231-4161-88E7-BBA78DBDDE39}</Project>
+      <Name>PowerPointTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PowerPointTestsVB\PowerPointTestsVB.vbproj">
+      <Project>{B5DB7C5C-BBB1-4E10-939E-687FEC1FEB44}</Project>
+      <Name>PowerPointTestsVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectTestsCSharp\ProjectTestsCSharp.csproj">
+      <Project>{D83EC3BE-1306-408B-8542-762705C976F4}</Project>
+      <Name>ProjectTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectTestsVB\ProjectTestsVB.vbproj">
+      <Project>{32B19682-EFF8-4F62-B3D2-FA85CFD17C02}</Project>
+      <Name>ProjectTestsVB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tests.Core\Tests.Core.csproj">
+      <Project>{9907200C-7CFD-4B1B-89F3-42DE866B194F}</Project>
+      <Name>Tests.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WordTestsCSharp\WordTestsCSharp.csproj">
+      <Project>{6166E2C2-ADA7-442F-AB03-12F474B279FE}</Project>
+      <Name>WordTestsCSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WordTestsVB\WordTestsVB.vbproj">
+      <Project>{10AC1749-8112-460E-972B-D0F5621205B8}</Project>
+      <Name>WordTestsVB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

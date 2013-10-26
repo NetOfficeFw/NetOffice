@@ -1,0 +1,22 @@
+﻿[1031]
+labelHint = Klicken Sie die Schaltfläche 'Neues Projekt' um den Assistenten zu starten.
+buttonCreateProject = Neues Projekt
+cancelButton = Abbrechen
+backButton = Zurück
+nextButton = Weiter
+finishButton = Fertig
+labelConfigHeader = Einstellungen
+labelProgrammingLanguage = Sprache
+labelEnvironment = Entwicklungsumgebung
+[End]
+[1033]
+labelHint = Hit the button 'New Project' to start the Assistant.
+buttonCreateProject = New Project
+cancelButton = Cancel
+backButton = Back
+nextButton = Next
+finishButton = Finish
+labelConfigHeader = Settings
+labelProgrammingLanguage = Language
+labelEnvironment = Environment
+[End]
