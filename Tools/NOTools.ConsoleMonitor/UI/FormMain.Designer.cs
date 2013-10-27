@@ -32,7 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.TabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageConsole = new System.Windows.Forms.TabPage();
+            this.consoleViewMain = new NOTools.ConsoleMonitor.ConsoleViewControl();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
+            this.channelViewMain = new NOTools.ConsoleMonitor.ChannelViewControl();
             this.tabPageInfo = new System.Windows.Forms.TabPage();
             this.labelSugestions2 = new System.Windows.Forms.Label();
             this.linkLabelSuggestions1 = new System.Windows.Forms.LinkLabel();
@@ -85,8 +87,6 @@
             this.TimerMain = new System.Windows.Forms.Timer(this.components);
             this.ContextMenuStripTray = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.consoleViewMain = new NOTools.ConsoleMonitor.ConsoleViewControl();
-            this.channelViewMain = new NOTools.ConsoleMonitor.ChannelViewControl();
             this.TabControlMain.SuspendLayout();
             this.tabPageConsole.SuspendLayout();
             this.tabPageChannels.SuspendLayout();
@@ -127,6 +127,17 @@
             this.tabPageConsole.TabIndex = 0;
             this.tabPageConsole.Text = "Console";
             // 
+            // consoleViewMain
+            // 
+            this.consoleViewMain.BackColor = System.Drawing.SystemColors.Control;
+            this.consoleViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consoleViewMain.Location = new System.Drawing.Point(0, 0);
+            this.consoleViewMain.Name = "consoleViewMain";
+            this.consoleViewMain.ShowCloseButton = false;
+            this.consoleViewMain.Size = new System.Drawing.Size(654, 432);
+            this.consoleViewMain.TabIndex = 0;
+            this.consoleViewMain.ViewStyle = NOTools.ConsoleMonitor.ConsoleViewStyle.Plain;
+            // 
             // tabPageChannels
             // 
             this.tabPageChannels.Controls.Add(this.channelViewMain);
@@ -137,6 +148,14 @@
             this.tabPageChannels.TabIndex = 1;
             this.tabPageChannels.Text = "Channels";
             this.tabPageChannels.UseVisualStyleBackColor = true;
+            // 
+            // channelViewMain
+            // 
+            this.channelViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.channelViewMain.Location = new System.Drawing.Point(0, 0);
+            this.channelViewMain.Name = "channelViewMain";
+            this.channelViewMain.Size = new System.Drawing.Size(654, 432);
+            this.channelViewMain.TabIndex = 0;
             // 
             // tabPageInfo
             // 
@@ -685,25 +704,6 @@
             this.toolStripMenuItemExit.Size = new System.Drawing.Size(142, 22);
             this.toolStripMenuItemExit.Text = "Exit Monitor";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
-            // 
-            // consoleViewMain
-            // 
-            this.consoleViewMain.BackColor = System.Drawing.SystemColors.Control;
-            this.consoleViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consoleViewMain.Location = new System.Drawing.Point(0, 0);
-            this.consoleViewMain.Name = "consoleViewMain";
-            this.consoleViewMain.ShowCloseButton = false;
-            this.consoleViewMain.Size = new System.Drawing.Size(654, 432);
-            this.consoleViewMain.TabIndex = 0;
-            this.consoleViewMain.ViewStyle = NOTools.ConsoleMonitor.ConsoleViewStyle.Plain;
-            // 
-            // channelViewMain
-            // 
-            this.channelViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.channelViewMain.Location = new System.Drawing.Point(0, 0);
-            this.channelViewMain.Name = "channelViewMain";
-            this.channelViewMain.Size = new System.Drawing.Size(654, 432);
-            this.channelViewMain.TabIndex = 0;
             // 
             // FormMain
             // 

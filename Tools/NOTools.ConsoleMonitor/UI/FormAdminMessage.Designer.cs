@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 47);
+            this.label2.Location = new System.Drawing.Point(86, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(298, 13);
             this.label2.TabIndex = 1;
@@ -67,7 +67,7 @@
             // buttonOk
             // 
             this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOk.Location = new System.Drawing.Point(145, 108);
+            this.buttonOk.Location = new System.Drawing.Point(164, 105);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(99, 28);
             this.buttonOk.TabIndex = 10;
@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(84, 70);
+            this.label3.Location = new System.Drawing.Point(86, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 13);
             this.label3.TabIndex = 11;
@@ -90,7 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonOk;
-            this.ClientSize = new System.Drawing.Size(426, 162);
+            this.ClientSize = new System.Drawing.Size(426, 153);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.pictureBoxAbout);

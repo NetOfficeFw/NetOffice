@@ -97,6 +97,8 @@ namespace NOTools.ConsoleMonitor
         {
             get
             {
+                if (null == TabControlMain.SelectedTab)
+                    return null;
                 return TabControlMain.SelectedTab.Controls[0] as IApplicationControl;
             }
         }
@@ -125,18 +127,28 @@ namespace NOTools.ConsoleMonitor
         {
             lock (_lockUI)
             {
+                List<TabPage> removePages = new List<TabPage>();
                 ConsoleUI.Clear();
                 ChannelUI.Clear();
                 foreach (var item in CustomConsoleList)
                     item.Clear();
+                int i = 0;
                 foreach (TabPage item in TabControlMain.TabPages)
                 {
                     IApplicationControl appControl = item.Controls[0] as IApplicationControl;
                     if(null != appControl && !String.IsNullOrWhiteSpace(appControl.ControlName))
-                        item.Text = appControl.ControlName;  
+                        item.Text = appControl.ControlName;
+
+                    if (i > 2)
+                        removePages.Add(item);
+
+                    i++;
                 }
                 TabControlMain.TabPages[0].Text = "Console";
                 TabControlMain.TabPages[1].Text = "Channels";
+
+                foreach (TabPage item in removePages)
+                    TabControlMain.TabPages.Remove(item);
             }
         }
 
@@ -338,6 +350,9 @@ namespace NOTools.ConsoleMonitor
             }
         }
 
+        /// <summary>
+        /// Save all info to disk
+        /// </summary>
         private void SaveDisplayContentToTextFile()
         {
             try
@@ -458,6 +473,46 @@ namespace NOTools.ConsoleMonitor
             return newEntryID;
         }
 
+        /// <summary>
+        /// Get previous sibling page for a tab
+        /// </summary>
+        /// <param name="page">the target</param>
+        /// <returns>prev tab or null</returns>
+        private TabPage GetPreviousPage(TabPage page)
+        {
+            TabPage lastPage = TabControlMain.TabPages[0];
+            foreach (TabPage item in TabControlMain.TabPages)
+            {
+                if (page == item)
+                    return lastPage;
+                lastPage = item;
+                
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Get next sibling page for a tab
+        /// </summary>
+        /// <param name="page">the target</param>
+        /// <returns>next tab or null</returns>
+        private TabPage GetNextPage(TabPage page)
+        {
+            TabPage lastPage = TabControlMain.TabPages[0];
+            for (int i = 0; i < TabControlMain.TabPages.Count; i++)
+            {
+                TabPage item = TabControlMain.TabPages[i];
+                if (item == page)
+                {
+                    if (i+1 < TabControlMain.TabPages.Count)
+                        return TabControlMain.TabPages[i + 1];
+                    else
+                        return null;
+                }
+            }
+            return null;
+        }
+
         #endregion
 
         #region IApplicationHost
@@ -494,7 +549,23 @@ namespace NOTools.ConsoleMonitor
                 console.CloseClick -= new EventHandler(CustomConsole_CloseClick);
                 CustomConsoleList.Remove(console);
                 TabPage consolePage = console.Parent as TabPage;
+                TabPage nextPage = null;
+
+                TabPage prevTab = GetPreviousPage(consolePage);
+
+                if (prevTab.Controls[0] is ConsoleViewControl)
+                {
+                        nextPage = prevTab;
+                }
+                else
+                {
+                    TabPage nextTab = GetNextPage(consolePage);
+                    if (null != nextTab)
+                        nextPage = nextTab;
+                }
                 TabControlMain.TabPages.Remove(consolePage);
+                if (null != nextPage)
+                    TabControlMain.SelectedTab = nextPage;
             }
         }
 
