@@ -154,7 +154,7 @@
             this.channelViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.channelViewMain.Location = new System.Drawing.Point(0, 0);
             this.channelViewMain.Name = "channelViewMain";
-            this.channelViewMain.Size = new System.Drawing.Size(654, 432);
+            this.channelViewMain.Size = new System.Drawing.Size(192, 71);
             this.channelViewMain.TabIndex = 0;
             // 
             // tabPageInfo
@@ -258,7 +258,7 @@
             this.linkLabelInfo.Size = new System.Drawing.Size(276, 16);
             this.linkLabelInfo.TabIndex = 22;
             this.linkLabelInfo.TabStop = true;
-            this.linkLabelInfo.Tag = "http://netoffice.codeplex.com/wikipage?title=ConsoleMonitor";
+            this.linkLabelInfo.Tag = "http://netoffice.codeplex.com/wikipage?title=ConsoleMonitor_EN";
             this.linkLabelInfo.Text = "http://netoffice.codeplex.com/ConsoleMonitor";
             this.linkLabelInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelInfo_LinkClicked);
             // 

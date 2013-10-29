@@ -11,8 +11,6 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
 {
     class WatchController : INotifyPropertyChanged, IDisposable
     {
-       
-
         #region Fields
 
         bool _readOnlyModeForMachineKeys;
@@ -218,7 +216,6 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\14.0\\Visio\\Resiliency\\DisabledItems");
             _disabledItems.Add("Visio", Registry.CurrentUser, "Software\\Microsoft\\Office\\15.0\\Visio\\Resiliency\\DisabledItems");
 
-
             // 64 Bit
             _addinItems.Add("Excel", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Excel\\Addins");
             _addinItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Excel\\Addins");
@@ -234,7 +231,6 @@ namespace NetOffice.DeveloperToolbox.AddinGuard
             _addinItems.Add("MSProject", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\MSProject\\Addins");
             _addinItems.Add("Visio", Registry.LocalMachine, "Software\\Wow6432Node\\Microsoft\\Office\\Visio\\Addins");
             _addinItems.Add("Visio", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\Visio\\Addins");
-
 
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\9.0\\Excel\\Resiliency\\DisabledItems");
             _disabledItems.Add("Excel", Registry.CurrentUser, "Software\\Wow6432Node\\Microsoft\\Office\\10.0\\Excel\\Resiliency\\DisabledItems");

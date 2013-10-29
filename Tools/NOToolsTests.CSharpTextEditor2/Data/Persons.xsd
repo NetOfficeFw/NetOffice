@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<element name="Person">
+  <complexType>
+    <sequence>
+      <element name="ID" type="int" />
+      <element name="Name" type="string" />
+      <element name="Company" type="string" />
+      <element name="City" type="string" />
+      <element name="PostalCode" type="string" />
+      <element name="Country" type="string" />
+      <element name="Phone" type="string" />
+    </sequence>
+  </complexType>
+</element>
