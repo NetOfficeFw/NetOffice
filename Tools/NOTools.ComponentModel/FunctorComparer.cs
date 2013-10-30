@@ -9,10 +9,12 @@ namespace NOTools.ComponentModel.InternalArray
     {
         private Comparison<T> comparison;
         private Comparer<T> c = Comparer<T>.Default;
+
         public FunctorComparer(Comparison<T> comparison)
         {
             this.comparison = comparison;
         }
+
         public int Compare(T x, T y)
         {
             return this.comparison(x, y);

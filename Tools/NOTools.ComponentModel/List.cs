@@ -14,54 +14,6 @@ namespace NOTools.ComponentModel
     [Serializable]
     public class List<T> : IList<T>, ICollection<T>, IEnumerable<T>, IList, ICollection, IEnumerable
     {
-        private static void IfNullAndNullsAreIllegalThenThrow<TT>(object value)
-        {
-            if (value == null && default(TT) != null)
-                throw new NotSupportedException();
-        }
-
-        #region Fields
-
-        private T[] _items;
-        private int _size;
-        private int _version;
-        [NonSerialized]
-        private object _syncRoot;
-        private static readonly T[] _emptyArray = new T[0];
-        private const int _defaultCapacity = 4;
-
-        #endregion
-
-        public int Capacity
-        {
-            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-            get
-            {
-                return this._items.Length;
-            }
-            set
-            {
-                if (value < this._size)
-                {
-                    throw new InvalidOperationException();
-                }
-                if (value != this._items.Length)
-                {
-                    if (value > 0)
-                    {
-                        T[] array = new T[value];
-                        if (this._size > 0)
-                        {
-                            Array.Copy(this._items, 0, array, 0, this._size);
-                        }
-                        this._items = array;
-                        return;
-                    }
-                    this._items = List<T>._emptyArray;
-                }
-            }
-        }
-
         #region Embedded Types
 
         [Serializable]
@@ -193,6 +145,7 @@ namespace NOTools.ComponentModel
                 }
             }
         }
+    
         [Serializable]
         public struct Enumerator : IEnumerator<T>, IDisposable, IEnumerator
         {
@@ -263,115 +216,40 @@ namespace NOTools.ComponentModel
 
         #endregion
 
-        public int Count
-        {
-            [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]
-            get
-            {
-                return this._size;
-            }
-        }
-        bool IList.IsFixedSize
-        {
-            get
-            {
-                return false;
-            }
-        }
-        bool ICollection<T>.IsReadOnly
-        {
-            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-            get
-            {
-                return false;
-            }
-        }
-        bool IList.IsReadOnly
-        {
-            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-            get
-            {
-                return false;
-            }
-        }
-        bool ICollection.IsSynchronized
-        {
-            get
-            {
-                return false;
-            }
-        }
-        object ICollection.SyncRoot
-        {
-            get
-            {
-                if (this._syncRoot == null)
-                {
-                    Interlocked.CompareExchange<object>(ref this._syncRoot, new object(), null);
-                }
-                return this._syncRoot;
-            }
-        }
-        public T this[int index]
-        {
-            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-            get
-            {
-                if (index >= this._size)
-                {
-                     throw new InvalidOperationException();
-                }
-                return this._items[index];
-            }
-            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-            set
-            {
-                if (index >= this._size)
-                {
-                   throw new InvalidOperationException();
-                }
-                this._items[index] = value;
-                this._version++;
-            }
-        }
-        object IList.this[int index]
-        {
-            get
-            {
-                return this[index];
-            }
-            set
-            {
-                IfNullAndNullsAreIllegalThenThrow<T>(value);
-                try
-                {
-                    this[index] = (T)((object)value);
-                }
-                catch (InvalidCastException)
-                {
-                     throw new InvalidOperationException();
-                }
-            }
-        }
-        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+        #region Fields
+
+        private T[] _items;
+        private int _size;
+        private int _version;
+        [NonSerialized]
+        private object _syncRoot;
+        private static readonly T[] _emptyArray = new T[0];
+        private const int _defaultCapacity = 4;
+
+        #endregion
+
+        #region Ctor
+
         public List()
         {
             this._items = List<T>._emptyArray;
         }
+
         [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
         public List(int capacity)
         {
             if (capacity < 0)
             {
-                 throw new InvalidOperationException();
+                throw new InvalidOperationException();
             }
             this._items = new T[capacity];
         }
+
         public List(IEnumerable<T> collection)
         {
             if (collection == null)
             {
-                 throw new InvalidOperationException();
+                throw new InvalidOperationException();
             }
             ICollection<T> collection2 = collection as ICollection<T>;
             if (collection2 != null)
@@ -392,19 +270,114 @@ namespace NOTools.ComponentModel
                 }
             }
         }
-        private static bool IsCompatibleObject(object value)
+
+        #endregion
+
+        #region Properties
+
+        public int Capacity
         {
-            return value is T || (value == null && default(T) == null);
-        }
-        public void Add(T item)
-        {
-            if (this._size == this._items.Length)
+            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+            get
             {
-                this.EnsureCapacity(this._size + 1);
+                return this._items.Length;
             }
-            this._items[this._size++] = item;
-            this._version++;
+            set
+            {
+                if (value < this._size)
+                {
+                    throw new InvalidOperationException();
+                }
+                if (value != this._items.Length)
+                {
+                    if (value > 0)
+                    {
+                        T[] array = new T[value];
+                        if (this._size > 0)
+                        {
+                            Array.Copy(this._items, 0, array, 0, this._size);
+                        }
+                        this._items = array;
+                        return;
+                    }
+                    this._items = List<T>._emptyArray;
+                }
+            }
         }
+
+        public int Count
+        {
+            [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]
+            get
+            {
+                return this._size;
+            }
+        }
+
+        public T this[int index]
+        {
+            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+            get
+            {
+                if (index >= this._size)
+                {
+                    throw new InvalidOperationException();
+                }
+                return this._items[index];
+            }
+            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+            set
+            {
+                if (index >= this._size)
+                {
+                    throw new InvalidOperationException();
+                }
+                this._items[index] = value;
+                this._version++;
+            }
+        }
+
+        #endregion
+
+        #region IList
+
+        bool IList.IsFixedSize
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        bool IList.IsReadOnly
+        {
+            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+            get
+            {
+                return false;
+            }
+        }
+
+        object IList.this[int index]
+        {
+            get
+            {
+                return this[index];
+            }
+            set
+            {
+                IfNullAndNullsAreIllegalThenThrow<T>(value);
+                try
+                {
+                    this[index] = (T)((object)value);
+                }
+                catch (InvalidCastException)
+                {
+                    throw new InvalidOperationException();
+                }
+            }
+        }
+
         int IList.Add(object item)
         {
             try
@@ -417,14 +390,154 @@ namespace NOTools.ComponentModel
             }
             return this.Count - 1;
         }
+
+        [SecuritySafeCritical]
+        bool IList.Contains(object item)
+        {
+            return List<T>.IsCompatibleObject(item) && this.Contains((T)((object)item));
+        }
+         
+        void IList.Insert(int index, object item)
+        {
+            try
+            {
+                this.Insert(index, (T)((object)item));
+            }
+            catch (InvalidCastException)
+            {
+                throw new InvalidOperationException();
+            }
+        }
+
+        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries"), SecuritySafeCritical]
+        int IList.IndexOf(object item)
+        {
+            if (List<T>.IsCompatibleObject(item))
+            {
+                return this.IndexOf((T)((object)item));
+            }
+            return -1;
+        }
+
+        internal static IList<T> Synchronized(List<T> list)
+        {
+            return new List<T>.SynchronizedList(list);
+        }
+
+        [SecuritySafeCritical]
+        void IList.Remove(object item)
+        {
+            if (List<T>.IsCompatibleObject(item))
+            {
+                this.Remove((T)((object)item));
+            }
+        }
+
+        #endregion
+
+        #region ICollection
+
+        bool ICollection<T>.IsReadOnly
+        {
+            [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+            get
+            {
+                return false;
+            }
+        }
+
+        bool ICollection.IsSynchronized
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        object ICollection.SyncRoot
+        {
+            get
+            {
+                if (this._syncRoot == null)
+                {
+                    Interlocked.CompareExchange<object>(ref this._syncRoot, new object(), null);
+                }
+                return this._syncRoot;
+            }
+        }
+
+        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+        void ICollection.CopyTo(Array array, int arrayIndex)
+        {
+            if (array != null && array.Rank != 1)
+            {
+                throw new InvalidOperationException();
+            }
+            try
+            {
+                Array.Copy(this._items, 0, array, arrayIndex, this._size);
+            }
+            catch (ArrayTypeMismatchException)
+            {
+                throw new InvalidOperationException();
+            }
+        }
+
+        #endregion
+
+        #region IEnumerable
+
+        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            return new List<T>.Enumerator(this);
+        }
+
+        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return new List<T>.Enumerator(this);
+        }
+
+        #endregion
+
+        #region Methods
+
+        public List<TOutput> ConvertAll<TOutput>(Converter<T, TOutput> converter)
+        {
+            if (converter == null)
+            {
+                throw new InvalidOperationException();
+            }
+            List<TOutput> list = new List<TOutput>(this._size);
+            for (int i = 0; i < this._size; i++)
+            {
+                list._items[i] = converter(this._items[i]);
+            }
+            list._size = this._size;
+            return list;
+        }
+       
+        public void Add(T item)
+        {
+            if (this._size == this._items.Length)
+            {
+                this.EnsureCapacity(this._size + 1);
+            }
+            this._items[this._size++] = item;
+            this._version++;
+        }
+
         public void AddRange(IEnumerable<T> collection)
         {
             this.InsertRange(this._size, collection);
         }
+
         public ReadOnlyCollection<T> AsReadOnly()
         {
             return new ReadOnlyCollection<T>(this);
         }
+
         public int BinarySearch(int index, int count, T item, IComparer<T> comparer)
         {
             if (index < 0)
@@ -441,14 +554,17 @@ namespace NOTools.ComponentModel
             }
             return Array.BinarySearch<T>(this._items, index, count, item, comparer);
         }
+
         public int BinarySearch(T item)
         {
             return this.BinarySearch(0, this.Count, item, null);
         }
+
         public int BinarySearch(T item, IComparer<T> comparer)
         {
             return this.BinarySearch(0, this.Count, item, comparer);
         }
+
         public void Clear()
         {
             if (this._size > 0)
@@ -458,6 +574,7 @@ namespace NOTools.ComponentModel
             }
             this._version++;
         }
+  
         public bool Contains(T item)
         {
             if (item == null)
@@ -481,46 +598,13 @@ namespace NOTools.ComponentModel
             }
             return false;
         }
-        [SecuritySafeCritical]
-        bool IList.Contains(object item)
-        {
-            return List<T>.IsCompatibleObject(item) && this.Contains((T)((object)item));
-        }
-        public List<TOutput> ConvertAll<TOutput>(Converter<T, TOutput> converter)
-        {
-            if (converter == null)
-            {
-                 throw new InvalidOperationException();
-            }
-            List<TOutput> list = new List<TOutput>(this._size);
-            for (int i = 0; i < this._size; i++)
-            {
-                list._items[i] = converter(this._items[i]);
-            }
-            list._size = this._size;
-            return list;
-        }
+      
         [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
         public void CopyTo(T[] array)
         {
             this.CopyTo(array, 0);
         }
-        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-        void ICollection.CopyTo(Array array, int arrayIndex)
-        {
-            if (array != null && array.Rank != 1)
-            {
-                 throw new InvalidOperationException();
-            }
-            try
-            {
-                Array.Copy(this._items, 0, array, arrayIndex, this._size);
-            }
-            catch (ArrayTypeMismatchException)
-            {
-                 throw new InvalidOperationException();
-            }
-        }
+      
         public void CopyTo(int index, T[] array, int arrayIndex, int count)
         {
             if (this._size - index < count)
@@ -529,10 +613,12 @@ namespace NOTools.ComponentModel
             }
             Array.Copy(this._items, index, array, arrayIndex, count);
         }
+
         public void CopyTo(T[] array, int arrayIndex)
         {
             Array.Copy(this._items, 0, array, arrayIndex, this._size);
         }
+
         private void EnsureCapacity(int min)
         {
             if (this._items.Length < min)
@@ -545,10 +631,12 @@ namespace NOTools.ComponentModel
                 this.Capacity = num;
             }
         }
+
         public bool Exists(Predicate<T> match)
         {
             return this.FindIndex(match) != -1;
         }
+
         public T Find(Predicate<T> match)
         {
             if (match == null)
@@ -564,6 +652,7 @@ namespace NOTools.ComponentModel
             }
             return default(T);
         }
+
         public List<T> FindAll(Predicate<T> match)
         {
             if (match == null)
@@ -580,14 +669,17 @@ namespace NOTools.ComponentModel
             }
             return list;
         }
+
         public int FindIndex(Predicate<T> match)
         {
             return this.FindIndex(0, this._size, match);
         }
+
         public int FindIndex(int startIndex, Predicate<T> match)
         {
             return this.FindIndex(startIndex, this._size - startIndex, match);
         }
+
         public int FindIndex(int startIndex, int count, Predicate<T> match)
         {
             if (startIndex > this._size)
@@ -612,6 +704,7 @@ namespace NOTools.ComponentModel
             }
             return -1;
         }
+
         public T FindLast(Predicate<T> match)
         {
             if (match == null)
@@ -627,14 +720,17 @@ namespace NOTools.ComponentModel
             }
             return default(T);
         }
+
         public int FindLastIndex(Predicate<T> match)
         {
             return this.FindLastIndex(this._size - 1, this._size, match);
         }
+
         public int FindLastIndex(int startIndex, Predicate<T> match)
         {
             return this.FindLastIndex(startIndex, startIndex + 1, match);
         }
+
         public int FindLastIndex(int startIndex, int count, Predicate<T> match)
         {
             if (match == null)
@@ -669,6 +765,7 @@ namespace NOTools.ComponentModel
             }
             return -1;
         }
+
         public void ForEach(Action<T> action)
         {
             if (action == null)
@@ -680,21 +777,13 @@ namespace NOTools.ComponentModel
                 action(this._items[i]);
             }
         }
+       
         [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
         public List<T>.Enumerator GetEnumerator()
         {
             return new List<T>.Enumerator(this);
         }
-        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        {
-            return new List<T>.Enumerator(this);
-        }
-        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return new List<T>.Enumerator(this);
-        }
+
         public List<T> GetRange(int index, int count)
         {
             if (index < 0)
@@ -714,20 +803,13 @@ namespace NOTools.ComponentModel
             list._size = count;
             return list;
         }
+
         [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
         public int IndexOf(T item)
         {
             return Array.IndexOf<T>(this._items, item, 0, this._size);
         }
-        [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries"), SecuritySafeCritical]
-        int IList.IndexOf(object item)
-        {
-            if (List<T>.IsCompatibleObject(item))
-            {
-                return this.IndexOf((T)((object)item));
-            }
-            return -1;
-        }
+         
         public int IndexOf(T item, int index)
         {
             if (index > this._size)
@@ -736,6 +818,7 @@ namespace NOTools.ComponentModel
             }
             return Array.IndexOf<T>(this._items, item, index, this._size - index);
         }
+
         public int IndexOf(T item, int index, int count)
         {
             if (index > this._size)
@@ -748,6 +831,7 @@ namespace NOTools.ComponentModel
             }
             return Array.IndexOf<T>(this._items, item, index, count);
         }
+
         public void Insert(int index, T item)
         {
             if (index > this._size)
@@ -766,17 +850,7 @@ namespace NOTools.ComponentModel
             this._size++;
             this._version++;
         }
-        void IList.Insert(int index, object item)
-        {
-            try
-            {
-                this.Insert(index, (T)((object)item));
-            }
-            catch (InvalidCastException)
-            {
-                throw new InvalidOperationException();
-            }
-        }
+        
         public void InsertRange(int index, IEnumerable<T> collection)
         {
             if (collection == null)
@@ -824,6 +898,7 @@ namespace NOTools.ComponentModel
             }
             this._version++;
         }
+
         public int LastIndexOf(T item)
         {
             if (this._size == 0)
@@ -832,6 +907,7 @@ namespace NOTools.ComponentModel
             }
             return this.LastIndexOf(item, this._size - 1, this._size);
         }
+
         public int LastIndexOf(T item, int index)
         {
             if (index >= this._size)
@@ -840,6 +916,7 @@ namespace NOTools.ComponentModel
             }
             return this.LastIndexOf(item, index, index + 1);
         }
+
         public int LastIndexOf(T item, int index, int count)
         {
             if (this.Count != 0 && index < 0)
@@ -864,6 +941,7 @@ namespace NOTools.ComponentModel
             }
             return Array.LastIndexOf<T>(this._items, item, index, count);
         }
+
         [TargetedPatchingOptOut("Performance critical to inline across NGen image boundaries")]
         public bool Remove(T item)
         {
@@ -875,14 +953,7 @@ namespace NOTools.ComponentModel
             }
             return false;
         }
-        [SecuritySafeCritical]
-        void IList.Remove(object item)
-        {
-            if (List<T>.IsCompatibleObject(item))
-            {
-                this.Remove((T)((object)item));
-            }
-        }
+
         public int RemoveAll(Predicate<T> match)
         {
             if (match == null)
@@ -916,6 +987,7 @@ namespace NOTools.ComponentModel
             this._version++;
             return result;
         }
+
         public void RemoveAt(int index)
         {
             if (index >= this._size)
@@ -930,6 +1002,7 @@ namespace NOTools.ComponentModel
             this._items[this._size] = default(T);
             this._version++;
         }
+
         public void RemoveRange(int index, int count)
         {
             if (index < 0)
@@ -955,10 +1028,12 @@ namespace NOTools.ComponentModel
                 this._version++;
             }
         }
+
         public void Reverse()
         {
             this.Reverse(0, this.Count);
         }
+
         public void Reverse(int index, int count)
         {
             if (index < 0)
@@ -976,14 +1051,17 @@ namespace NOTools.ComponentModel
             Array.Reverse(this._items, index, count);
             this._version++;
         }
+
         public void Sort()
         {
             this.Sort(0, this.Count, null);
         }
+
         public void Sort(IComparer<T> comparer)
         {
             this.Sort(0, this.Count, comparer);
         }
+
         public void Sort(int index, int count, IComparer<T> comparer)
         {
             if (index < 0)
@@ -1020,6 +1098,7 @@ namespace NOTools.ComponentModel
             Array.Copy(this._items, 0, array, 0, this._size);
             return array;
         }
+
         public void TrimExcess()
         {
             int num = (int)((double)this._items.Length * 0.9);
@@ -1028,6 +1107,7 @@ namespace NOTools.ComponentModel
                 this.Capacity = this._size;
             }
         }
+
         public bool TrueForAll(Predicate<T> match)
         {
             if (match == null)
@@ -1043,9 +1123,22 @@ namespace NOTools.ComponentModel
             }
             return true;
         }
-        internal static IList<T> Synchronized(List<T> list)
+
+        #endregion
+
+        #region Static Methods
+
+        private static void IfNullAndNullsAreIllegalThenThrow<TT>(object value)
         {
-            return new List<T>.SynchronizedList(list);
+            if (value == null && default(TT) != null)
+                throw new NotSupportedException();
         }
+
+        private static bool IsCompatibleObject(object value)
+        {
+            return value is T || (value == null && default(T) == null);
+        }
+
+        #endregion
     }
 }

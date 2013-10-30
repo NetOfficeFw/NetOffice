@@ -163,10 +163,7 @@ namespace NOTools.FileSystemDialogs
         internal void ShowAll()
         {
             if (!IsAlreadyLoaded && !IsInDesignMode)
-            { 
                 return;
-            }
-            Console.WriteLine("ShowAll");
             bool[] expanded = GetExpandedStates();
             TreeNode node = TryGetCurrentSelectedRootNode();
             ClearView();

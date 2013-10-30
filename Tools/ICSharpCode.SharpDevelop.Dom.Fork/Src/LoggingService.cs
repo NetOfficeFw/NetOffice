@@ -12,40 +12,41 @@ namespace ICSharpCode.SharpDevelop.Dom
 	{
 		public static void Debug(object message)
 		{
-		
+            if(IsDebugEnabled)
+                Console.WriteLine("LoggingService Debug {0}", message);
 		}
 		
 		public static void Info(object message)
 		{
-			
+            if (IsDebugEnabled)
+                Console.WriteLine("LoggingService Info {0}", message);
 		}
 		
 		public static void Warn(object message)
 		{
-			
+            if (IsDebugEnabled)
+                Console.WriteLine("LoggingService Warn {0}", message);
 		}
 		
 		public static void Warn(object message, Exception exception)
 		{
-			
+            if (IsDebugEnabled)
+                Console.WriteLine("LoggingService Warn {0} {1}", message, exception);
 		}
 		
 		public static void Error(object message)
-		{
-			
+        {
+            if (IsDebugEnabled)
+                Console.WriteLine("LoggingService Error {0}", message);
 		}
 		
 		public static void Error(object message, Exception exception)
-		{
-			
-		}
-		
-		public static bool IsDebugEnabled
         {
-            get
-            {
-				return false;
-			}
+            if (IsDebugEnabled)
+                Console.WriteLine("LoggingService Error {0} {1}", message, exception);
 		}
+
+        public static bool IsDebugEnabled { get; set; }
+       
 	}
 }

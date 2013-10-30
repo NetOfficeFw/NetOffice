@@ -36,9 +36,11 @@ namespace ICSharpCode.SharpDevelop.Dom
 		}
 		
 		#region Cache management
+
 		public string SaveProjectContent(ReflectionProjectContent pc)
 		{
-			try {
+			try 
+            {
 				// create cache directory, if necessary
 				Directory.CreateDirectory(cacheDirectory);
 				
@@ -49,13 +51,18 @@ namespace ICSharpCode.SharpDevelop.Dom
 				                               + "." + pc.AssemblyLocation.GetHashCode().ToString("x", CultureInfo.InvariantCulture)
 				                               + ".dat");
 				AddFileNameToCacheIndex(Path.GetFileName(fileName), pc);
-				using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
+				using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write)) 
+                {
 					WriteProjectContent(pc, fs);
 				}
 				return fileName;
-			} catch (IOException) {
+			} 
+            catch (IOException)
+            {
 				return null;
-			} catch (UnauthorizedAccessException) {
+			}
+            catch (UnauthorizedAccessException) 
+            {
 				return null;
 			}
 		}
@@ -256,12 +263,15 @@ namespace ICSharpCode.SharpDevelop.Dom
 				writer.Write(pc.AssemblyFullName);
 				writer.Write(pc.AssemblyLocation);
 				long time = 0;
-				try {
+				try 
+                {
 					time = File.GetLastWriteTimeUtc(pc.AssemblyLocation).ToFileTime();
-				} catch {}
+				} 
+                catch {}
 				writer.Write(time);
 				writer.Write(pc.ReferencedAssemblyNames.Count);
-				foreach (DomAssemblyName name in pc.ReferencedAssemblyNames) {
+				foreach (DomAssemblyName name in pc.ReferencedAssemblyNames) 
+                {
 					writer.Write(name.FullName);
 				}
 				WriteClasses();
@@ -281,16 +291,20 @@ namespace ICSharpCode.SharpDevelop.Dom
 					LoggingService.Warn("Read dom: wrong magic");
 					return null;
 				}
-				if (reader.ReadInt16() != FileVersion) {
+				if (reader.ReadInt16() != FileVersion)
+                {
 					LoggingService.Warn("Read dom: wrong version");
 					return null;
 				}
 				string assemblyName = reader.ReadString();
 				string assemblyLocation = reader.ReadString();
 				long time = 0;
-				try {
+				try 
+                {
 					time = File.GetLastWriteTimeUtc(assemblyLocation).ToFileTime();
-				} catch {}
+				} 
+                catch 
+                {}
 
                 Int64 bigIntTime = reader.ReadInt64();
 
@@ -301,13 +315,16 @@ namespace ICSharpCode.SharpDevelop.Dom
                 //}
 
 				DomAssemblyName[] referencedAssemblies = new DomAssemblyName[reader.ReadInt32()];
-				for (int i = 0; i < referencedAssemblies.Length; i++) {
+				for (int i = 0; i < referencedAssemblies.Length; i++) 
 					referencedAssemblies[i] = new DomAssemblyName(reader.ReadString());
-				}
+
 				this.pc = new ReflectionProjectContent(assemblyName, assemblyLocation, referencedAssemblies, registry);
-				if (ReadClasses()) {
+				if (ReadClasses())
+                {
 					return pc;
-				} else {
+				}
+                else 
+                {
 					LoggingService.Warn("Read dom: error in file (invalid control mark)");
 					return null;
 				}
@@ -321,7 +338,8 @@ namespace ICSharpCode.SharpDevelop.Dom
 				classIndices.Clear();
 				stringDict.Clear();
 				int i = 0;
-				foreach (IClass c in classes) {
+				foreach (IClass c in classes) 
+                {
 					classIndices[new ClassNameTypeCountPair(c)] = i;
 					i += 1;
 				}
@@ -333,19 +351,23 @@ namespace ICSharpCode.SharpDevelop.Dom
 				
 				writer.Write(classes.Count);
 				writer.Write(externalTypes.Count);
-				foreach (IClass c in classes) {
+				foreach (IClass c in classes) 
+                {
 					writer.Write(c.FullyQualifiedName);
 				}
-				foreach (ClassNameTypeCountPair type in externalTypes) {
+				foreach (ClassNameTypeCountPair type in externalTypes) 
+                {
 					writer.Write(type.ClassName);
 					writer.Write(type.TypeParameterCount);
 				}
 				writer.Write(stringList.Count);
-				foreach (string text in stringList) {
+				foreach (string text in stringList)
+                {
 					writer.Write(text);
 				}
 				WriteAttributes(assemblyAttributes);
-				foreach (IClass c in classes) {
+				foreach (IClass c in classes) 
+                {
 					WriteClass(c);
 					// BinaryReader easily reads junk data when the file does not have the
 					// expected format, so we put a checking byte after each class.

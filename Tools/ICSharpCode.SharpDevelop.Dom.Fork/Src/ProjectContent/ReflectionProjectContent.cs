@@ -143,7 +143,9 @@ namespace ICSharpCode.SharpDevelop.Dom
 		}
 		
 		public ReflectionProjectContent(string assemblyFullName, string assemblyLocation, DomAssemblyName[] referencedAssemblies, ProjectContentRegistry registry)
-		{
+        {
+           // LoggingService.Special("ReflectionProjectContent started.");
+
 			if (assemblyFullName == null)
 				throw new ArgumentNullException("assemblyFullName");
 			if (assemblyLocation == null)
@@ -158,43 +160,58 @@ namespace ICSharpCode.SharpDevelop.Dom
 			this.assemblyLocation = assemblyLocation;
 			this.assemblyCompilationUnit = new DefaultCompilationUnit(this);
 			
-			try {
+			try 
+            {
 				assemblyFileLastWriteTime = File.GetLastWriteTimeUtc(assemblyLocation);
-			} catch (Exception ex) {
+			}
+            catch (Exception ex) 
+            {
 				LoggingService.Warn(ex);
 			}
 			
 			string fileName = null;
-			if (assemblyLocation != typeof(object).Assembly.Location) {
+			if (assemblyLocation != typeof(object).Assembly.Location)
+            {
 				// First look in the assembly's directory.
 				// mscorlib is the exception, because it is loaded from the runtime directory (C:\Windows\Microsoft.NET\Framework\v4.0.30319),
 				// but that might contain an outdated version of mscorlib.xml (with less documented members than the mscorlib.xml in the Reference Assemblies)
 				// (at least on my machine, lots of others don't seem to have the v4.0.30319\mscorlib.xml at all).
 				fileName = XmlDoc.LookupLocalizedXmlDoc(assemblyLocation);
 			}
-			if (fileName == null) {
+
+			if (fileName == null)
+            {
 				// Not found -> look in other directories:
-				foreach (string testDirectory in XmlDoc.XmlDocLookupDirectories) {
+				foreach (string testDirectory in XmlDoc.XmlDocLookupDirectories) 
+                {
 					fileName = XmlDoc.LookupLocalizedXmlDoc(Path.Combine(testDirectory, Path.GetFileName(assemblyLocation)));
 					if (fileName != null)
 						break;
 				}
 			}
-			
-			if (fileName != null) {
-				if (registry.persistence != null) {
-					this.XmlDoc = XmlDoc.Load(fileName, Path.Combine(registry.persistence.CacheDirectory, "XmlDoc"));
-				} else {
-					this.XmlDoc = XmlDoc.Load(fileName, null);
-				}
-			}
+
+            if (fileName != null)
+            {
+                if (registry.persistence != null)
+                    this.XmlDoc = XmlDoc.Load(fileName, Path.Combine(registry.persistence.CacheDirectory, "XmlDoc"));
+                else
+                    this.XmlDoc = XmlDoc.Load(fileName, null);
+            }
+            else
+            {
+                if (registry.persistence != null)
+                    this.XmlDoc = XmlDoc.Load(System.IO.Path.GetFileName(assemblyLocation), Path.Combine(registry.persistence.CacheDirectory, "XmlDoc"));
+            }
+
+           // LoggingService.Special("ReflectionProjectContent passed.");
 		}
 		
 		public void InitializeSpecialClasses()
 		{
 			// Replace the class representing System.Void with VoidClass.Instance
 			IClass voidClass = GetClassInternal(VoidClass.VoidName, 0, Language);
-			if (voidClass != null) {
+			if (voidClass != null)
+            {
 				RemoveClass(voidClass);
 				AddClassToNamespaceList(new VoidClass(this));
 			}

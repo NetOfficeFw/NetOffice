@@ -151,8 +151,8 @@ namespace NOTools.CSharpTextEditor
             if (DialogResult.OK == dialog.ShowDialog(this)) 
             {
                 foreach (var item in dialog.SelectedAssemblies)
-                { 
-                    if(IsValidAssembly(item.Path))
+                {
+                    if (IsValidAssembly(item.Path) && !ParentEditor.References.ContainsReferenece(item.Name))
                         ParentEditor.References.Add(new AssemblyReference(item.Name, item.Path));
                 }
             }             

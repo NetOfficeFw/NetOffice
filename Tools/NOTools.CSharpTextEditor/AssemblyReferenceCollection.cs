@@ -80,6 +80,14 @@ namespace NOTools.CSharpTextEditor
             return "References";
         }
 
+        public bool ContainsReferenece(string referenceName)
+        {
+            foreach (var item in this)
+                if (item.Name.Equals(referenceName, StringComparison.InvariantCultureIgnoreCase))
+                    return true;
+            return false;
+        }
+
         /// <summary>
         /// 
         /// </summary>

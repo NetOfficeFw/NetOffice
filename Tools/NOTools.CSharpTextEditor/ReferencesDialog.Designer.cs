@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Please wait...");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Please wait...");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageGac = new System.Windows.Forms.TabPage();
             this.labelNameFilter = new System.Windows.Forms.Label();
@@ -112,7 +112,7 @@
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem3});
             this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(0, 47);
             this.listView1.Margin = new System.Windows.Forms.Padding(4);
@@ -213,7 +213,7 @@
             this.openFilePanel1.MyComputer.Expanded = false;
             this.openFilePanel1.MyComputer.ShowCDRomDrives = false;
             this.openFilePanel1.MyComputer.ShowFixedDrives = true;
-            this.openFilePanel1.MyComputer.ShowNetworkDrives = true;
+            this.openFilePanel1.MyComputer.ShowNetworkDrives = false;
             this.openFilePanel1.MyComputer.ShowNoRootDirectoryDrives = false;
             this.openFilePanel1.MyComputer.ShowRamDrives = true;
             this.openFilePanel1.MyComputer.ShowRemovableDrives = false;

@@ -140,7 +140,7 @@ namespace NOTools.CSharpTextEditor
                     viewItems[i].SubItems.Add(gacAssemblies[i].PublicKeyToken);
                     viewItems[i].SubItems.Add(gacAssemblies[i].Path);
                     viewItems[i].Font = new System.Drawing.Font("Arial", 10);
-                    viewItems[i].BackColor = _lastItemInvert == true ? Color.White : Color.LavenderBlush;
+                    viewItems[i].BackColor = _lastItemInvert == true ? Color.White : Color.LightGray;
                     if (!CheckGACFilter(gacAssemblies[i].Name))
                         continue;
                     _lastItemInvert = !_lastItemInvert;
