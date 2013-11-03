@@ -98,16 +98,19 @@ namespace NOTools.CSharpTextEditor
             }
         }
         private string _currentPath;
-
-        #endregion
-
-        public DomPersistence Persistence 
+        
+        /// <summary>
+        /// The underlying persistance provider
+        /// </summary>
+        public DomPersistence Persistence
         {
-            get 
+            get
             {
                 return _contentRegistry.ActivatePersistence(GetPersistencePath());
             }
         }
+
+        #endregion
 
         #region Methods
 
@@ -301,7 +304,6 @@ namespace NOTools.CSharpTextEditor
 
             if (null != prjContent)
                 _projectContent.ReferencedContents.Remove(prjContent);
-
 
         }
 

@@ -56,9 +56,48 @@ namespace NOTools.CSharpTextEditor
             return CreateNewFoldings(document);
         }
 
+        /// <summary>
+        /// Create <see cref="NewFolding"/>s for the specified document.
+        /// </summary>
+        public IEnumerable<NewFolding> CreateNewFoldings(ITextSource document)
+        {
+            List<NewFolding> newFoldings = new List<NewFolding>();
+
+            Stack<int> startOffsets = new Stack<int>();
+            int lastNewLineOffset = 0;
+            char openingBrace = this.OpeningBrace;
+            char closingBrace = this.ClosingBrace;
+            for (int i = 0; i < document.TextLength; i++)
+            {
+                char c = document.GetCharAt(i);
+                bool isFirstInLine = IsFirstInLine(document, i);
+                if (c == openingBrace && isFirstInLine)
+                    startOffsets.Push(i);
+                else if (c == closingBrace && isFirstInLine && startOffsets.Count > 0)
+                {
+                    int startOffset = startOffsets.Pop();
+                    // don't fold if opening and closing brace are on the same line
+                    if (startOffset < lastNewLineOffset)
+                        newFoldings.Add(new NewFolding(startOffset, i + 1));
+                }
+                else if (c == '\n' || c == '\r')
+                {
+                    lastNewLineOffset = i + 1;
+                }
+            }
+            newFoldings.Sort((a, b) => a.StartOffset.CompareTo(b.StartOffset));
+            return newFoldings;
+        }
+        
+        /// <summary>
+        /// Returns the info a character is the first character in his line. whitespace and tabs is ignored
+        /// </summary>
+        /// <param name="document">target document</param>
+        /// <param name="position">postion of character</param>
+        /// <returns>true if first in line otherwise false</returns>
         private bool IsFirstInLine(ITextSource document, int position)
         {
-            for (int i = position-1; i > 0; i--)
+            for (int i = position - 1; i > 0; i--)
             {
                 bool stop = false;
                 char c = document.GetCharAt(i);
@@ -78,43 +117,6 @@ namespace NOTools.CSharpTextEditor
                     break;
             }
             return true;
-        }
-
-        /// <summary>
-        /// Create <see cref="NewFolding"/>s for the specified document.
-        /// </summary>
-        public IEnumerable<NewFolding> CreateNewFoldings(ITextSource document)
-        {
-            List<NewFolding> newFoldings = new List<NewFolding>();
-
-            Stack<int> startOffsets = new Stack<int>();
-            int lastNewLineOffset = 0;
-            char openingBrace = this.OpeningBrace;
-            char closingBrace = this.ClosingBrace;
-            for (int i = 0; i < document.TextLength; i++)
-            {
-                char c = document.GetCharAt(i);
-                bool isFirstInLine = IsFirstInLine(document, i);
-                if (c == openingBrace && isFirstInLine)
-                {
-                    startOffsets.Push(i);
-                }
-                else if (c == closingBrace && isFirstInLine && startOffsets.Count > 0)
-                {
-                    int startOffset = startOffsets.Pop();
-                    // don't fold if opening and closing brace are on the same line
-                    if (startOffset < lastNewLineOffset)
-                    {
-                        newFoldings.Add(new NewFolding(startOffset, i + 1));
-                    }
-                }
-                else if (c == '\n' || c == '\r')
-                {
-                    lastNewLineOffset = i + 1;
-                }
-            }
-            newFoldings.Sort((a, b) => a.StartOffset.CompareTo(b.StartOffset));
-            return newFoldings;
         }
     }
 }

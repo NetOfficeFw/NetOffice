@@ -7,9 +7,14 @@ using System.Text;
 
 namespace NOTools.CSharpTextEditor
 {
+    /// <summary>
+    ///All possible settings for the reference panel
+    /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class ReferencePanelOptions
     {
+        #region Ctor
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
@@ -19,6 +24,10 @@ namespace NOTools.CSharpTextEditor
             Parent = parent;
             InitLocalization();
         }
+
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// Parent editor control
@@ -46,6 +55,12 @@ namespace NOTools.CSharpTextEditor
         /// </summary>
         [DisplayName("AllowAddRemove"), Category("CodeEditor"), Description("Allow the user to add/remove references")]
         public bool AllowAddRemoveReferences { get; set; }
+
+        /// <summary>
+        /// Allow the user to add Non-GAC references from the local file system
+        /// </summary>
+        [DisplayName("AllowFileReferences"), Category("CodeEditor"), Description("Allow the user to add Non-GAC references from the local file system")]
+        public bool AllowAddFileReferences { get; set; }
 
         /// <summary>
         /// GAC Tab Label
@@ -152,6 +167,10 @@ namespace NOTools.CSharpTextEditor
                 Parent.referencePanel1.ForeColor = value;
             }
         }
+       
+        #endregion
+
+        #region Methods
 
         private void InitLocalization()
         {
@@ -164,9 +183,19 @@ namespace NOTools.CSharpTextEditor
             DialogTitle = "Choose Reference";
         }
 
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Returns a System.String instance that represents the class instance
+        /// </summary>
+        /// <returns>System.String</returns>
         public override string ToString()
         {
             return "ReferencePanelOptions";
         }
+        
+        #endregion
     }
 }

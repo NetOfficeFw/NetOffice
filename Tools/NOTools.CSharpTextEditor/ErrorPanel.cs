@@ -12,6 +12,7 @@ namespace NOTools.CSharpTextEditor
     /// <summary>
     /// Show compiler error messages in a datagrid
     /// </summary>
+    [ToolboxItem(false)]
     internal partial class ErrorPanel : UserControl
     {
         #region Ctor

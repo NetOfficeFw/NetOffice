@@ -30,6 +30,19 @@ namespace NOTools.CSharpTextEditor
             GACAssemblies.BeginLoadAssemblyInformations(UpdateGACListView, 20);
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="showFileSystemTab">filesystem tab visibility</param>
+        public ReferencesDialog(bool showFileSystemTab)
+        {
+            InitializeComponent();
+            if (!showFileSystemTab)
+                tabControl1.TabPages.Remove(tabPageFileSystem);
+            GACAssemblyItems = new List<ListViewItem>();
+            GACAssemblies.BeginLoadAssemblyInformations(UpdateGACListView, 20);
+        }
+
         #endregion
 
         #region Properties
@@ -251,7 +264,7 @@ namespace NOTools.CSharpTextEditor
             if (!ReadyForAction)
                 return;
 
-            this.DialogResult = DialogResult.OK ;
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

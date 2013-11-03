@@ -9,6 +9,10 @@ using System.Windows.Forms;
 
 namespace NOTools.CSharpTextEditor
 {
+    /// <summary>
+    /// Shows the current references
+    /// </summary>
+    [ToolboxItem(false)]
     public partial class ReferencePanel : UserControl
     {
         #region Ctor
@@ -141,7 +145,7 @@ namespace NOTools.CSharpTextEditor
             if (null == ParentEditor.References)
                 return;
 
-            ReferencesDialog dialog = new ReferencesDialog();
+            ReferencesDialog dialog = new ReferencesDialog(ParentEditor.ReferencePanelSettings.AllowAddFileReferences);
             dialog.GACTitle = ParentEditor.ReferencePanelSettings.GACTitle;
             dialog.FileSystemTitle = ParentEditor.ReferencePanelSettings.FileSystemTitle;
             dialog.OkButtonTitle = ParentEditor.ReferencePanelSettings.OkButtonTitle;

@@ -10,7 +10,7 @@ using System.Text;
 namespace NOTools.CSharpTextEditor
 {
     /// <summary>
-    /// All possible settings for the ErrorPanel
+    /// All possible settings for the  error panel
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class ErrorPanelOptions
