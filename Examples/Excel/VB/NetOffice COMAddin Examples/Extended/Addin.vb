@@ -113,7 +113,7 @@ Public Class Addin
     '* Now you see the way to exend or modify the register/unregister process if you want.
     '* We define 2 static methods with the RegisterFunction attribute, we use CallBeforeAndAfter as condition.
     '* This condition means the register method in the base class call our method as first (before registry modification) and as last(after registry modification).
-    '* The register call argument give you the info what is is currently. Replace means the method in the base class does nothing and its your task to create the registry keys.
+    '* The register call argument give you the info what is it currently. Replace means the method in the base class does nothing and its your task to create the registry keys.
     '* Same thing with Unregister method. 
     ' */
     <RegisterFunction(RegisterMode.CallBeforeAndAfter)> _
@@ -160,7 +160,7 @@ Public Class Addin
 
     End Sub
 
-    ' This method demonstrate an error handle for the register/unregister process.
+    ' This method demonstrate an error handler for the register/unregister process.
     ' For example you have an security issues while register or something like that then you can implement a static errorhandler method.
     ' The first argument shows you the error occurs in Register or Unregister.
     ' The second argument is the thrown exception. Rethrow the exception to signalize an error to the environment otherwise the exception is handled.

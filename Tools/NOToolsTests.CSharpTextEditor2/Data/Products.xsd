@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="Products"
-    targetNamespace="http://tempuri.org/Products.xsd"
-    elementFormDefault="qualified"
-    xmlns="http://tempuri.org/Products.xsd"
-    xmlns:mstns="http://tempuri.org/Products.xsd"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
->
-</xs:schema>
+<element name="Person">
+  <complexType>
+    <sequence>
+      <element name="ID" type="System.Int32" readonly="true"/>
+      <element name="Name" type="System.String" readonly="false"/>
+      <element name="Description" type="System.String" readonly="false"/>
+      <element name="Price" type="System.Double" readonly="false"/>
+    </sequence>
+  </complexType>
+</element>

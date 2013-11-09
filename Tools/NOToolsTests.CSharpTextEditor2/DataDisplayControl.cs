@@ -16,11 +16,13 @@ namespace NOToolsTests.CSharpTextEditor2
         {
             InitializeComponent();
         }
+        
+        public AccessContext Context { get; private set; }
 
         public void OnConnect(IDataHost parent, string tableName)
         {
-            AccessContext context = parent.Tables[tableName].Add(new Guid().ToString());
-            dataGridView1.DataSource = context;
+            Context = parent.Local.Add(Guid.NewGuid().ToString());
+            dataGridView1.DataSource = Context[tableName];
         }
 
         public void OnShow(IDataHost parent)
@@ -30,7 +32,18 @@ namespace NOToolsTests.CSharpTextEditor2
 
         public void OnUnload(IDataHost parent)
         {
-            
+            parent.Local.Remove(Context);
+            Context = null;
+        }
+
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void buttonCancelChanges_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

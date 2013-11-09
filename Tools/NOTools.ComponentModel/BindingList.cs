@@ -13,7 +13,7 @@ namespace NOTools.ComponentModel
     /// <typeparam name="T">Der Typ der Elemente in der Liste.</typeparam>
     [HostProtection(SecurityAction.LinkDemand, SharedState = true)]
     [Serializable]
-    public class BindingList<T> : NOTools.ComponentModel.Collection<T>, IBindingList, IList, ICollection, IEnumerable, ICancelAddNew, IRaiseItemChangedEvents
+    public abstract class BindingList<T> : NOTools.ComponentModel.Collection<T>, IBindingList, IList, ICollection, IEnumerable, ICancelAddNew, IRaiseItemChangedEvents
     {
         #region Fields
 
@@ -58,15 +58,14 @@ namespace NOTools.ComponentModel
 
         /// <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BindingList`1" />-Klasse mit der angegebenen Liste.</summary>
         /// <param name="list">Eine <see cref="T:System.Collections.Generic.IList`1" /> von Elementen, die in <see cref="T:System.ComponentModel.BindingList`1" /> enthalten sein sollen.</param>
-        public BindingList(IList<T> list)
-            : base(list)
+        public BindingList(IList<T> list) : base(list)
         {
             Initialize();
         }
 
         private void Initialize()
         {
-            _allowNew = this.ItemTypeHasDefaultConstructor;
+            //_allowNew = this.ItemTypeHasDefaultConstructor;
             if (typeof(INotifyPropertyChanged).IsAssignableFrom(typeof(T)))
             {
                 _raiseItemChangedEvents = true;
@@ -151,6 +150,7 @@ namespace NOTools.ComponentModel
                     this.FireListChanged(ListChangedType.Reset, -1);
             }
         }
+      
         /// <summary>Ruft einen Wert ab, der angibt, ob Elemente in der Liste bearbeitet werden können, oder legt diesen fest.</summary>
         /// <returns>true, wenn die Listenelemente bearbeitet werden können, andernfalls false. Der Standardwert ist true.</returns>
         public bool AllowEdit
@@ -226,7 +226,9 @@ namespace NOTools.ComponentModel
             get
             {
                 Type typeFromHandle = typeof(T);
-                return typeFromHandle.IsPrimitive || typeFromHandle.GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.CreateInstance, null, new Type[0], null) != null;
+                return typeFromHandle.IsPrimitive ||
+                    typeFromHandle.GetConstructor(
+                    BindingFlags.Instance | BindingFlags.Public | BindingFlags.CreateInstance, null, new Type[0], null) != null;
             }
         }
 
@@ -451,9 +453,8 @@ namespace NOTools.ComponentModel
                 _onListChanged(this, e);
         }
 
-
         /// <summary>Entfernt alle Elemente aus der Auflistung.</summary>
-        protected override void ClearItems() // geändert zu public
+        protected override void ClearItems()
         {
             this.EndNew(_addNewPos);
             if (_raiseItemChangedEvents)
@@ -468,7 +469,7 @@ namespace NOTools.ComponentModel
         /// <summary>Fügt das angegebene Element am angegebenen Index in die Liste ein.</summary>
         /// <param name="index">Der nullbasierte Index, an dem das Element eingefügt werden soll.</param>
         /// <param name="item">Das in die Liste einzufügende Element.</param>
-        protected override void InsertItem(int index, T item) // geändert zu public
+        protected override void InsertItem(int index, T item)
         {
             this.EndNew(_addNewPos);
             base.InsertItem(index, item);
@@ -480,7 +481,7 @@ namespace NOTools.ComponentModel
         /// <summary>Entfernt das Element am angegebenen Index.</summary>
         /// <param name="index">Der nullbasierte Index des zu entfernenden Elements. </param>
         /// <exception cref="T:System.NotSupportedException">Sie entfernen ein neu hinzugefügtes Element, und <see cref="P:System.ComponentModel.IBindingList.AllowRemove" /> ist auf false festgelegt. </exception>
-        protected override void RemoveItem(int index) // geändert zu public
+        protected override void RemoveItem(int index)
         {
             if (!_allowRemove && (_addNewPos < 0 || _addNewPos != index))
                 throw new NotSupportedException();
@@ -599,6 +600,7 @@ namespace NOTools.ComponentModel
         {
             return (T)((object)((IBindingList)this).AddNew());
         }
+
         #endregion
 
         #region Private Methods
@@ -616,7 +618,13 @@ namespace NOTools.ComponentModel
             FireListChanged(ListChangedType.Reset, -1);
         }
 
-        private void FireListChanged(ListChangedType type, int index)
+        public void RaiseListChanged(ListChangedType type, int index)
+        {
+            if (_raiseListChangedEvents)
+                this.OnListChanged(new ListChangedEventArgs(type, index));
+        }
+
+        protected internal override void FireListChanged(ListChangedType type, int index)
         {
             if (_raiseListChangedEvents)
                 this.OnListChanged(new ListChangedEventArgs(type, index));
@@ -695,95 +703,33 @@ namespace NOTools.ComponentModel
 
         #region SecurtityUtils
 
-        private static bool HasReflectionPermission
-        {
-            get
-            {
-                try
-                {
-                    new ReflectionPermission(PermissionState.Unrestricted).Demand();
-                    return true;
-                }
-                catch (SecurityException exception)
-                {
-                    Console.WriteLine("NOTools.ComponentModel:BindingList:SecurityException:{0}", exception.Message);
-                }
-                return false;
-            }
-        }
-
-        internal static object SecureCreateInstance(Type type)
+        internal object SecureCreateInstance(Type type)
         {
             return SecureCreateInstance(type, null);
         }
 
-        internal static object SecureCreateInstance(Type type, object[] args)
+        internal object SecureCreateInstance(Type type, object[] args)
         {
             if (type == null)
                 throw new ArgumentNullException("type");
-            
+
+            ResolveArgumentsOnCreateNew(ref args);
+
             if (type.Assembly == typeof(BindingList<T>).Assembly && !type.IsPublic && !type.IsNestedPublic)
                 new ReflectionPermission(PermissionState.Unrestricted).Demand();
             
             return Activator.CreateInstance(type, args);
         }
-
-        internal static object SecureCreateInstance(Type type, object[] args, bool allowNonPublic)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-            
-            BindingFlags bindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.CreateInstance;
-            if (type.Assembly == typeof(BindingList<T>).Assembly)
-            {
-                if (!type.IsPublic && !type.IsNestedPublic)
-                    new ReflectionPermission(PermissionState.Unrestricted).Demand();
-                else
-                {
-                    if (allowNonPublic && !HasReflectionPermission)
-                        allowNonPublic = false;
-                }
-            }
-
-            if (allowNonPublic)
-                bindingFlags |= BindingFlags.NonPublic;
-            
-            return Activator.CreateInstance(type, bindingFlags, null, args, null);
-        }
-
-        internal static object SecureConstructorInvoke(Type type, Type[] argTypes, object[] args, bool allowNonPublic)
-        {
-            return SecureConstructorInvoke(type, argTypes, args, allowNonPublic, BindingFlags.Default);
-        }
-
-        internal static object SecureConstructorInvoke(Type type, Type[] argTypes, object[] args, bool allowNonPublic, BindingFlags extraFlags)
-        {
-            if (type == null)
-                throw new ArgumentNullException("type");
-            
-            BindingFlags bindingFlags = BindingFlags.Instance | BindingFlags.Public | extraFlags;
-            if (type.Assembly == typeof(BindingList<T>).Assembly)
-            {
-                if (!type.IsPublic && !type.IsNestedPublic)
-                    new ReflectionPermission(PermissionState.Unrestricted).Demand();
-                else
-                {
-                    if (allowNonPublic && !HasReflectionPermission)
-                        allowNonPublic = false;
-                }
-            }
-
-            if (allowNonPublic)
-                bindingFlags |= BindingFlags.NonPublic;
-            
-            ConstructorInfo constructor = type.GetConstructor(bindingFlags, null, argTypes, null);
-            if (constructor != null)
-                return constructor.Invoke(args);
-            
-            return null;
-
-        }
-
+ 
         #endregion
+
+        /// <summary>
+        /// Resolve custom ctor item arguments for the IBindingList.AddNew method
+        /// </summary>
+        /// <param name="args">arguments array for the item</param>
+        protected internal virtual void ResolveArgumentsOnCreateNew(ref object[] args)
+        {
+
+        }
     }
 }

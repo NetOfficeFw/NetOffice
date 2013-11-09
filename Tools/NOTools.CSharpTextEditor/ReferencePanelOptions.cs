@@ -8,7 +8,7 @@ using System.Text;
 namespace NOTools.CSharpTextEditor
 {
     /// <summary>
-    ///All possible settings for the reference panel
+    /// All possible settings for the reference panel
     /// </summary>
     [TypeConverter(typeof(ExpandableObjectConverter))]
     public class ReferencePanelOptions

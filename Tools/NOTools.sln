@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOToolsTests.CSharpTextEdit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOTools.ComponentModel", "NOTools.ComponentModel\NOTools.ComponentModel.csproj", "{15257E3D-097A-45A7-B6D0-B5E8DF00FAD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOToolsTests.ComponentModel1", "NOToolsTests.ComponentModel1\NOToolsTests.ComponentModel1.csproj", "{D7C3810D-0E9E-46EF-92B2-C8A094D33187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +195,16 @@ Global
 		{15257E3D-097A-45A7-B6D0-B5E8DF00FAD2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{15257E3D-097A-45A7-B6D0-B5E8DF00FAD2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{15257E3D-097A-45A7-B6D0-B5E8DF00FAD2}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Debug|x86.ActiveCfg = Debug|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Debug|x86.Build.0 = Debug|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Release|Any CPU.ActiveCfg = Release|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Release|x86.ActiveCfg = Release|x86
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,5 +217,6 @@ Global
 		{93B15DE7-D45C-4E70-AFD1-7910FA857965} = {BA58ACF0-65C8-491A-BA93-F3B0FCBB6FDB}
 		{4E0106D1-1BD8-4EDD-8878-22682F3FC8AD} = {BA58ACF0-65C8-491A-BA93-F3B0FCBB6FDB}
 		{EE6E4E32-1090-42FD-9119-E525C26392A8} = {BA58ACF0-65C8-491A-BA93-F3B0FCBB6FDB}
+		{D7C3810D-0E9E-46EF-92B2-C8A094D33187} = {BA58ACF0-65C8-491A-BA93-F3B0FCBB6FDB}
 	EndGlobalSection
 EndGlobal

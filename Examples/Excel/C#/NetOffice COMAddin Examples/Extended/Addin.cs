@@ -24,7 +24,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
     /*
      * As you can see, the necessary registry informations was given as annotation, no need for Register/Unregister methods
      * The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you dont want HKEY_CURRENTUSER (just for example here)
-     * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you want this then you can override the GetCustomUI method from the base class.
+     * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you dont want this then you can override the GetCustomUI method from the base class.
      * The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
      */
     [COMAddin("NetOfficeCS4 Extended Sample Addin", "This Addin shows you the COMAddin class from the NetOffice Tools", 3)]
@@ -103,7 +103,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
         * Now you see the way to exend or modify the register/unregister process if you want.
         * We define 2 static methods with the RegisterFunction attribute, we use CallBeforeAndAfter as condition.
         * This condition means the register method in the base class call our method as first (before registry modification) and as last(after registry modification).
-        * The register call argument give you the info what is is currently. Replace means the method in the base class does nothing and its your task to create the registry keys.
+        * The register call argument give you the info what is it currently. Replace means the method in the base class does nothing and its your task to create the registry keys.
         * Same thing with Unregister method. 
         */
 
@@ -152,7 +152,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
             MessageBox.Show("An error occurend in " + methodKind.ToString(), "ExtendedExcelCS4.Addin");
         }
 
-        // This method demonstrate an error handle for the register/unregister process.
+        // This method demonstrate an error handler for the register/unregister process.
         // For example you have an security issues while register or something like that then you can implement a static errorhandler method.
         // The first argument shows you the error occurs in Register or Unregister.
         // The second argument is the thrown exception. Rethrow the exception to signalize an error to the environment otherwise the exception is handled.

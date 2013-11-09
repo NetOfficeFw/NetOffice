@@ -517,7 +517,7 @@ namespace NOTools.ComponentModel
             list._size = this._size;
             return list;
         }
-       
+
         public void Add(T item)
         {
             if (this._size == this._items.Length)

@@ -50,16 +50,25 @@
     <Compile Include="DataDisplayControl.Designer.cs">
       <DependentUpon>DataDisplayControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\AccessContext.cs" />
-    <Compile Include="DataLayer\AccessContextItem.cs" />
-    <Compile Include="DataLayer\DataItem.cs" />
-    <Compile Include="DataLayer\DataList.cs" />
-    <Compile Include="DataLayer\DataPropertyDescriptor.cs" />
-    <Compile Include="DataLayer\RootListDefinitionCollection.cs" />
-    <Compile Include="DataLayer\RootListDefinition.cs" />
-    <Compile Include="DataLayer\RootItem.cs" />
-    <Compile Include="DataLayer\RootList.cs" />
-    <Compile Include="DataLayer\RootPropertyDescriptor.cs" />
+    <Compile Include="DataHost.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextItemState.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextListItemManager.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextPropertyDescriptor.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextCollection.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContext.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextItem.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextList.cs" />
+    <Compile Include="DataLayer\AccessContext\AccessContextListCollection.cs" />
+    <Compile Include="DataLayer\Base\DataItem.cs" />
+    <Compile Include="DataLayer\Base\DataList.cs" />
+    <Compile Include="DataLayer\Base\DataPropertyDescriptor.cs" />
+    <Compile Include="DataLayer\AccessContext\Command.cs" />
+    <Compile Include="DataLayer\AccessContext\Closures.cs" />
+    <Compile Include="DataLayer\AccessContext\Chain.cs" />
+    <Compile Include="DataLayer\Root\RootListCollection.cs" />
+    <Compile Include="DataLayer\Root\RootItem.cs" />
+    <Compile Include="DataLayer\Root\RootList.cs" />
+    <Compile Include="DataLayer\Root\RootPropertyDescriptor.cs" />
     <Compile Include="FormHost.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +114,15 @@
     <EmbeddedResource Include="Data\Products.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\Persons.xml" />
+    <EmbeddedResource Include="Data\Persons.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NOTools.ComponentModel\NOTools.ComponentModel.csproj">
+      <Project>{15257E3D-097A-45A7-B6D0-B5E8DF00FAD2}</Project>
+      <Name>NOTools.ComponentModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

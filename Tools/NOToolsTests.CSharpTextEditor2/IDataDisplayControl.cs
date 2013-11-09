@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NOToolsTests.CSharpTextEditor2.DataLayer;
 
 namespace NOToolsTests.CSharpTextEditor2
 {
@@ -25,5 +26,10 @@ namespace NOToolsTests.CSharpTextEditor2
         /// </summary>
         /// <param name="parent"></param>
         void OnUnload(IDataHost parent);
+
+        /// <summary>
+        /// Local Context for the component
+        /// </summary>
+        AccessContext Context { get; }
     }
 }

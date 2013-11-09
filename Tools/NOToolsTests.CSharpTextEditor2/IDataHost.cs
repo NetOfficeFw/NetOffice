@@ -8,6 +8,7 @@ namespace NOToolsTests.CSharpTextEditor2
 {
     public interface IDataHost
     {
-        RootListDefinitionCollection Tables { get; }       
+        RootListCollection Tables { get; }
+        AccessContextCollection Local { get; }
     }
 }
