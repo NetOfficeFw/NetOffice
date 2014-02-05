@@ -35,7 +35,7 @@ namespace NetOffice.DeveloperToolbox
             ProjectControl projectControl = GetProjectControl(controls);
             ProjectType = ToProjectType(projectControl.SelectedProjectType(1033), projectControl.UseTools);
             ProjectFolderType = projectControl.SelectedProjectFolderType(1033);
-            ProjectFolder = GetSelectedFolder(ProjectFolderType);
+            ProjectFolder = projectControl.CalculatedFolder;
 
             EnvironmentControl envControl = GetEnvironmentControl(controls);
             Language = ToLanguage(envControl.SelectedLanguage);
