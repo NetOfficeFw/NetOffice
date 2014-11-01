@@ -11,8 +11,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface XmlNamespace 
 	/// SupportByVersion Excel, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198046.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198046.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XmlNamespace : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821265.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821265.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839243.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839243.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193634.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193634.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public object Parent
 		{
@@ -162,8 +162,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840738.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840738.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string Uri
 		{
@@ -178,8 +178,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839745.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839745.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public string Prefix
 		{

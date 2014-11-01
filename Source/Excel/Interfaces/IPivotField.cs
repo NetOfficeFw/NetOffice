@@ -1872,6 +1872,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1892,6 +1893,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1912,6 +1914,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.CalculatedItems CalculatedItems()
@@ -1924,6 +1927,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Delete()
@@ -1935,6 +1939,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="order">Int32 Order</param>
 		/// <param name="field">string Field</param>
@@ -1948,6 +1953,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="order">Int32 Order</param>
 		/// <param name="field">string Field</param>
@@ -1963,6 +1969,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="order">Int32 Order</param>
 		/// <param name="field">string Field</param>
@@ -1978,6 +1985,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">Int32 Type</param>
 		/// <param name="range">Int32 Range</param>
@@ -1993,6 +2001,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="clearList">optional object ClearList</param>
@@ -2006,6 +2015,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[CustomMethodAttribute]
@@ -2019,6 +2029,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="order">Int32 Order</param>
 		/// <param name="field">string Field</param>
@@ -2033,6 +2044,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -2045,6 +2057,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 ClearManualFilter()
@@ -2056,6 +2069,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 ClearAllFilters()
@@ -2067,6 +2081,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 ClearValueFilters()
@@ -2078,6 +2093,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 ClearLabelFilters()

@@ -328,6 +328,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void submit()
@@ -338,6 +339,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void reset()
@@ -348,6 +350,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional object name</param>
 		/// <param name="index">optional object index</param>
@@ -362,6 +365,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -375,6 +379,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional object name</param>
 		[CustomMethodAttribute]
@@ -389,6 +394,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="tagName">object tagName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

@@ -165,6 +165,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="type">Int32 Type</param>

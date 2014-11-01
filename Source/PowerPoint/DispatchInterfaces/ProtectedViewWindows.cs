@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface ProtectedViewWindows 
 	/// SupportByVersion PowerPoint, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744887.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744887.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ProtectedViewWindows : Collection
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746147.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746147.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746392.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746392.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
@@ -150,11 +151,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readPassword">optional string ReadPassword = </param>
 		/// <param name="openAndRepair">optional NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword, object openAndRepair)
 		{
@@ -166,9 +167,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName)
@@ -181,10 +182,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="readPassword">optional string ReadPassword = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745478.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword)

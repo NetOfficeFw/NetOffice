@@ -324,6 +324,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
 		/// <param name="dataSourceIndex">Int32 DataSourceIndex</param>
@@ -337,6 +338,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum Dimension</param>
 		/// <param name="dataSourceIndex">Int32 DataSourceIndex</param>
@@ -350,6 +352,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="errorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -362,6 +365,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="errorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -374,6 +378,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="errorBarDirection">NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum ErrorBarDirection</param>
 		/// <param name="dataSourceIndex">object DataSourceIndex</param>
@@ -392,6 +397,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()

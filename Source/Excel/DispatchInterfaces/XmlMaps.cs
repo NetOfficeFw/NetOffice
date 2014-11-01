@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface XmlMaps 
 	/// SupportByVersion Excel, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193675.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193675.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class XmlMaps : COMObject ,IEnumerable<NetOffice.ExcelApi.XmlMap>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198292.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198292.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840745.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840745.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194419.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194419.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public object Parent
 		{
@@ -166,8 +166,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195182.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195182.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 Count
 		{
@@ -185,10 +185,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192975.aspx
 		/// </summary>
 		/// <param name="schema">string Schema</param>
 		/// <param name="rootElementName">optional object RootElementName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192975.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.XmlMap Add(string schema, object rootElementName)
 		{
@@ -200,9 +200,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192975.aspx
 		/// </summary>
 		/// <param name="schema">string Schema</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192975.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.XmlMap Add(string schema)

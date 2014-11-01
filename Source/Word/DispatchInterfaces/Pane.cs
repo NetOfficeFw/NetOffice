@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface Pane 
 	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195158.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195158.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pane : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834562.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834562.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845791.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845791.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191877.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191877.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194891.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194891.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document Document
 		{
@@ -163,8 +163,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845192.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845192.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Selection Selection
 		{
@@ -180,8 +180,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192536.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192536.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayRulers
 		{
@@ -201,8 +201,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197477.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197477.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayVerticalRuler
 		{
@@ -222,8 +222,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197733.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197733.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Zooms Zooms
 		{
@@ -239,8 +239,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192358.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192358.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Index
 		{
@@ -255,8 +255,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197276.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197276.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.View View
 		{
@@ -272,8 +272,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836136.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836136.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Pane Next
 		{
@@ -289,8 +289,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840379.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840379.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Pane Previous
 		{
@@ -306,8 +306,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839141.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839141.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 HorizontalPercentScrolled
 		{
@@ -327,8 +327,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192039.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192039.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 VerticalPercentScrolled
 		{
@@ -348,8 +348,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194742.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194742.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 MinimumFontSize
 		{
@@ -390,8 +390,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822540.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822540.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 BrowseWidth
 		{
@@ -406,8 +406,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197859.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197859.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Frameset Frameset
 		{
@@ -423,8 +423,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191753.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191753.aspx </remarks>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.Pages Pages
 		{
@@ -443,8 +443,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195045.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195045.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Activate()
 		{
@@ -454,8 +454,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845079.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845079.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Close()
 		{
@@ -465,12 +465,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		/// <param name="toLeft">optional object ToLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up, object toRight, object toLeft)
 		{
@@ -480,8 +480,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll()
@@ -492,9 +492,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down)
@@ -505,10 +505,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up)
@@ -519,11 +519,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197480.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void LargeScroll(object down, object up, object toRight)
@@ -534,12 +534,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
 		/// <param name="toLeft">optional object ToLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up, object toRight, object toLeft)
 		{
@@ -549,8 +549,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll()
@@ -561,9 +561,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down)
@@ -574,10 +574,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up)
@@ -588,11 +588,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
 		/// <param name="toRight">optional object ToRight</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839589.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SmallScroll(object down, object up, object toRight)
@@ -603,9 +603,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837709.aspx
 		/// </summary>
 		/// <param name="velocity">Int32 Velocity</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837709.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void AutoScroll(Int32 velocity)
 		{
@@ -615,10 +615,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll(object down, object up)
 		{
@@ -628,8 +628,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll()
@@ -640,9 +640,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx
 		/// </summary>
 		/// <param name="down">optional object Down</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838996.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PageScroll(object down)
@@ -653,8 +653,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822373.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822373.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void NewFrameset()
 		{
@@ -664,8 +664,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840881.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840881.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void TOCInFrameset()
 		{

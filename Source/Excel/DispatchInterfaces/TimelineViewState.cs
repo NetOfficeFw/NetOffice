@@ -11,8 +11,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface TimelineViewState 
 	/// SupportByVersion Excel, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229703.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229703.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TimelineViewState : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231262.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231262.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231384.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231384.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230711.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230711.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object Parent
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231943.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231943.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool ShowHeader
 		{
@@ -168,8 +168,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232122.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232122.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool ShowSelectionLabel
 		{
@@ -189,8 +189,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231471.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231471.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool ShowTimeLevel
 		{
@@ -210,8 +210,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231773.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231773.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool ShowHorizontalScrollbar
 		{
@@ -231,8 +231,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231876.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231876.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlTimelineLevel Level
 		{

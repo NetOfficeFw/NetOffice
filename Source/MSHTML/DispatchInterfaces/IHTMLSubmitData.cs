@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="value">optional string value = </param>
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -120,6 +122,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
@@ -132,6 +135,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		/// <param name="filename">optional string filename = </param>
@@ -144,6 +148,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -155,6 +160,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
@@ -167,6 +173,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void appendItemSeparator()

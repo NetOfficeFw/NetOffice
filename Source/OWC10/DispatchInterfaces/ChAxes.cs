@@ -147,6 +147,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="scaling">NetOffice.OWC10Api.ChScaling Scaling</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -160,6 +161,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

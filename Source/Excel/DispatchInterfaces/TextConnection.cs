@@ -11,8 +11,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface TextConnection 
 	/// SupportByVersion Excel, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228015.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228015.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TextConnection : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231033.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231033.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229623.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229623.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230690.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230690.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object Parent
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232073.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232073.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object Connection
 		{
@@ -176,8 +176,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231385.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231385.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileHeaderRow
 		{
@@ -197,8 +197,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232041.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232041.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object TextFileColumnDataTypes
 		{
@@ -226,8 +226,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229203.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229203.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileCommaDelimiter
 		{
@@ -247,8 +247,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231987.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231987.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileConsecutiveDelimiter
 		{
@@ -268,8 +268,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231768.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231768.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public string TextFileDecimalSeparator
 		{
@@ -289,8 +289,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228271.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228271.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object TextFileFixedColumnWidths
 		{
@@ -318,8 +318,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227943.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227943.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public string TextFileOtherDelimiter
 		{
@@ -339,8 +339,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227899.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227899.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlTextParsingType TextFileParseType
 		{
@@ -361,8 +361,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228433.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228433.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlPlatform TextFilePlatform
 		{
@@ -383,8 +383,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227545.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227545.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFilePromptOnRefresh
 		{
@@ -404,8 +404,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227524.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227524.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileSemicolonDelimiter
 		{
@@ -425,8 +425,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230951.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230951.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileSpaceDelimiter
 		{
@@ -446,8 +446,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231782.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231782.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 TextFileStartRow
 		{
@@ -467,8 +467,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227355.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227355.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileTabDelimiter
 		{
@@ -488,8 +488,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228275.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228275.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlTextQualifier TextFileTextQualifier
 		{
@@ -510,8 +510,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227507.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227507.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public string TextFileThousandsSeparator
 		{
@@ -531,8 +531,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230624.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230624.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public bool TextFileTrailingMinusNumbers
 		{
@@ -552,8 +552,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231092.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231092.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlTextVisualLayoutType TextFileVisualLayout
 		{

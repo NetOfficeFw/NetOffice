@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pChangeSink">NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink</param>
 		/// <param name="ppChangeLog">NetOffice.MSHTMLApi.IHTMLChangeLog ppChangeLog</param>
@@ -115,6 +116,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pChangeSink">NetOffice.MSHTMLApi.IHTMLChangeSink pChangeSink</param>
 		/// <param name="pdwCookie">Int32 pdwCookie</param>
@@ -131,6 +133,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dwCookie">Int32 dwCookie</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -143,6 +146,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dwCookie">Int32 dwCookie</param>
 		/// <param name="pIPointerBegin">NetOffice.MSHTMLApi.IMarkupPointer pIPointerBegin</param>
@@ -157,6 +161,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetVersionNumber()
@@ -168,6 +173,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppElementMaster">NetOffice.MSHTMLApi.IHTMLElement ppElementMaster</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

@@ -11,8 +11,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface Phonetic 
 	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195662.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195662.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Phonetic : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822316.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822316.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835576.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835576.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839367.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839367.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196836.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196836.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool Visible
 		{
@@ -168,8 +168,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195833.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195833.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 CharacterType
 		{
@@ -189,8 +189,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822914.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822914.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Alignment
 		{
@@ -210,8 +210,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196590.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196590.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Font Font
 		{
@@ -227,8 +227,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840810.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840810.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string Text
 		{

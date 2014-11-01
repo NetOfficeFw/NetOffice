@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="position">optional object Position</param>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
@@ -193,6 +194,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]

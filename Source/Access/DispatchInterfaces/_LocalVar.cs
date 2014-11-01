@@ -170,6 +170,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

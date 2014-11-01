@@ -3786,6 +3786,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 flags</param>
 		/// <param name="x">Single X</param>
@@ -3804,6 +3805,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 flags</param>
 		/// <param name="x1">Single x1</param>
@@ -3820,6 +3822,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 flags</param>
 		/// <param name="x">Single X</param>
@@ -3834,6 +3837,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 flags</param>
 		/// <param name="x1">Single x1</param>
@@ -3849,6 +3853,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3861,6 +3866,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3873,6 +3879,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3884,6 +3891,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
@@ -3906,6 +3914,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -3928,6 +3937,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3942,6 +3952,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">object Left</param>
 		[CustomMethodAttribute]
@@ -3954,6 +3965,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3967,6 +3979,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3981,6 +3994,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Requery()

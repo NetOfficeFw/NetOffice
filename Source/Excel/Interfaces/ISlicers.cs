@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -200,6 +201,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		[CustomMethodAttribute]
@@ -214,6 +216,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -229,6 +232,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -245,6 +249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -262,6 +267,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -280,6 +286,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -299,6 +306,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>

@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface CustomerData 
 	/// SupportByVersion PowerPoint, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744173.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744173.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomerData : Collection
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746608.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746608.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744844.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744844.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public object Parent
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="id">string Id</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
@@ -150,8 +151,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746711.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746711.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLPart Add()
 		{
@@ -163,9 +164,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745348.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745348.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public void Delete(string id)
 		{

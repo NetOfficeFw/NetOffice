@@ -130,6 +130,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]

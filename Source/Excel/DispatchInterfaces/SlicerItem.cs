@@ -11,8 +11,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface SlicerItem 
 	/// SupportByVersion Excel, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839068.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839068.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlicerItem : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821515.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821515.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822100.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822100.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834936.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834936.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.SlicerCache Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195511.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195511.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string Caption
 		{
@@ -162,8 +162,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838638.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838638.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string Name
 		{
@@ -178,8 +178,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197231.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197231.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public object SourceName
 		{
@@ -202,8 +202,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841176.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841176.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string SourceNameStandard
 		{
@@ -218,8 +218,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837400.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837400.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string Value
 		{
@@ -234,8 +234,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822747.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822747.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public bool Selected
 		{
@@ -255,8 +255,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194434.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194434.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public bool HasData
 		{

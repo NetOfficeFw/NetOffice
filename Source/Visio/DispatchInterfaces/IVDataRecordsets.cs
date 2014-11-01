@@ -235,6 +235,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="connectionIDOrString">object ConnectionIDOrString</param>
 		/// <param name="commandString">string CommandString</param>
@@ -251,6 +252,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="connectionIDOrString">object ConnectionIDOrString</param>
 		/// <param name="commandString">string CommandString</param>
@@ -267,6 +269,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xMLString">string XMLString</param>
 		/// <param name="addOptions">Int32 AddOptions</param>
@@ -282,6 +285,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xMLString">string XMLString</param>
 		/// <param name="addOptions">Int32 AddOptions</param>
@@ -297,6 +301,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="addOptions">Int32 AddOptions</param>
@@ -312,6 +317,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="addOptions">Int32 AddOptions</param>
@@ -327,6 +333,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataErrorCode">Int32 DataErrorCode</param>
 		/// <param name="dataErrorDescription">string DataErrorDescription</param>

@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface TableStyle 
 	/// SupportByVersion PowerPoint, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744218.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744218.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableStyle : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745774.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745774.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string Name
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745618.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745618.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public string Id
 		{

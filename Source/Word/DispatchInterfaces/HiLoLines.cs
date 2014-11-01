@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface HiLoLines 
 	/// SupportByVersion Word, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835221.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835221.aspx </remarks>
 	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HiLoLines : COMObject
@@ -95,9 +95,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837484.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837484.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196379.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196379.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public string Name
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196858.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196858.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartBorder Border
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196843.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196843.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartFormat Format
 		{
@@ -163,9 +163,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197006.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197006.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
@@ -181,8 +181,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840876.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840876.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
@@ -200,8 +200,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194022.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194022.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Select()
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195611.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195611.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Delete()
 		{

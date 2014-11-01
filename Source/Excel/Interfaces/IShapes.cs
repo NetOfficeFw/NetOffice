@@ -188,6 +188,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -205,6 +206,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
 		/// <param name="left">Single Left</param>
@@ -222,6 +224,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoConnectorType Type</param>
 		/// <param name="beginX">Single BeginX</param>
@@ -239,6 +242,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -252,6 +256,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="left">Single Left</param>
@@ -269,6 +274,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="beginX">Single BeginX</param>
 		/// <param name="beginY">Single BeginY</param>
@@ -285,6 +291,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
@@ -304,6 +311,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -317,6 +325,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoAutoShapeType Type</param>
 		/// <param name="left">Single Left</param>
@@ -334,6 +343,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
 		/// <param name="text">string Text</param>
@@ -354,6 +364,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="left">Single Left</param>
@@ -371,6 +382,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="x1">Single X1</param>
@@ -386,6 +398,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 SelectAll()
@@ -397,6 +410,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormControl Type</param>
 		/// <param name="left">Int32 Left</param>
@@ -414,6 +428,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -437,6 +452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -450,6 +466,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		[CustomMethodAttribute]
@@ -464,6 +481,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -479,6 +497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -495,6 +514,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -512,6 +532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -530,6 +551,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -549,6 +571,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -569,6 +592,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -590,6 +614,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -612,6 +637,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classType">optional object ClassType</param>
 		/// <param name="filename">optional object Filename</param>
@@ -635,6 +661,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoDiagramType Type</param>
 		/// <param name="left">Single Left</param>
@@ -652,6 +679,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -669,6 +697,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xlChartType">optional object XlChartType</param>
 		/// <param name="left">optional object Left</param>
@@ -686,6 +715,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -699,6 +729,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xlChartType">optional object XlChartType</param>
 		[CustomMethodAttribute]
@@ -713,6 +744,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xlChartType">optional object XlChartType</param>
 		/// <param name="left">optional object Left</param>
@@ -728,6 +760,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xlChartType">optional object XlChartType</param>
 		/// <param name="left">optional object Left</param>
@@ -744,6 +777,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xlChartType">optional object XlChartType</param>
 		/// <param name="left">optional object Left</param>
@@ -761,6 +795,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="left">optional object Left</param>
@@ -778,6 +813,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		[CustomMethodAttribute]
@@ -792,6 +828,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="left">optional object Left</param>
@@ -807,6 +844,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="left">optional object Left</param>
@@ -823,6 +861,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">NetOffice.OfficeApi.SmartArtLayout Layout</param>
 		/// <param name="left">optional object Left</param>
@@ -840,6 +879,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>
@@ -859,6 +899,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
@@ -872,6 +913,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		[CustomMethodAttribute]
@@ -886,6 +928,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>
@@ -901,6 +944,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>
@@ -917,6 +961,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>
@@ -934,6 +979,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>
@@ -952,6 +998,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="style">optional object Style</param>
 		/// <param name="xlChartType">optional object XlChartType</param>

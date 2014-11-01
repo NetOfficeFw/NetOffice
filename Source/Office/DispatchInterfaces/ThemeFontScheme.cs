@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface ThemeFontScheme 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861788.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861788.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ThemeFontScheme : _IMsoDispObj
@@ -95,9 +95,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860828.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860828.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865197.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865197.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.ThemeFonts MinorFont
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865219.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865219.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.ThemeFonts MajorFont
 		{
@@ -150,9 +150,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863667.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863667.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Load(string fileName)
 		{
@@ -162,9 +162,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861510.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861510.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Save(string fileName)
 		{

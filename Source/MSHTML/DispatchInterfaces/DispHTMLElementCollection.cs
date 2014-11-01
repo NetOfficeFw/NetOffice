@@ -168,6 +168,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public string toString()
@@ -179,6 +180,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional object name</param>
 		/// <param name="index">optional object index</param>
@@ -193,6 +195,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -206,6 +209,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">optional object name</param>
 		[CustomMethodAttribute]
@@ -220,6 +224,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="tagName">object tagName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -233,6 +238,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="urn">object urn</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -246,6 +252,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -259,6 +266,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -272,6 +280,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface SmartArtQuickStyle 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864977.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864977.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SmartArtQuickStyle : _IMsoDispObj
@@ -95,9 +95,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864135.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864135.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864914.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864914.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Id
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860242.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860242.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Name
 		{
@@ -145,8 +145,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863282.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863282.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Description
 		{
@@ -161,8 +161,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860330.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860330.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Category
 		{

@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface SlicerPivotTables 
 	/// SupportByVersion Excel, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834959.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834959.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SlicerPivotTables : COMObject ,IEnumerable<NetOffice.ExcelApi.PivotTable>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837086.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837086.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834611.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834611.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836481.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836481.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196596.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196596.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Count
 		{
@@ -185,9 +185,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838838.aspx
 		/// </summary>
 		/// <param name="pivotTable">NetOffice.ExcelApi.PivotTable PivotTable</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838838.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public void AddPivotTable(NetOffice.ExcelApi.PivotTable pivotTable)
 		{
@@ -197,9 +197,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840538.aspx
 		/// </summary>
 		/// <param name="pivotTable">object PivotTable</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840538.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public void RemovePivotTable(object pivotTable)
 		{

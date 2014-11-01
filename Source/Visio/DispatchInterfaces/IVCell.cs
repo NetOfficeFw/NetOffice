@@ -862,6 +862,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="cellObject">NetOffice.VisioApi.IVCell CellObject</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -873,6 +874,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sheetObject">NetOffice.VisioApi.IVShape SheetObject</param>
 		/// <param name="xPercent">Double xPercent</param>
@@ -886,6 +888,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Trigger()

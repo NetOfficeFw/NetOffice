@@ -11,8 +11,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// DispatchInterface OutlookBarGroup 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864731.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864731.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OutlookBarGroup : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867807.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867807.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865047.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865047.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869730.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869730.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
@@ -146,9 +146,9 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869751.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869751.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -164,8 +164,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868406.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868406.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Name
 		{
@@ -185,8 +185,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868362.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868362.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._OutlookBarShortcuts Shortcuts
 		{
@@ -202,8 +202,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866424.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866424.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlOutlookBarViewType ViewType
 		{

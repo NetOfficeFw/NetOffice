@@ -130,6 +130,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		/// <param name="vIndex">optional object vIndex</param>
@@ -142,6 +143,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="bstrFilename">string bstrFilename</param>
 		[CustomMethodAttribute]
@@ -154,6 +156,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
@@ -164,6 +167,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="vIndex">object vIndex</param>
 		[SupportByVersionAttribute("MSComctlLib", 6)]

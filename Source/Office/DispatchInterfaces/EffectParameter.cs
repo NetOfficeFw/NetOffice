@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface EffectParameter 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863145.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863145.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EffectParameter : _IMsoDispObj
@@ -95,8 +95,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862852.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862852.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Name
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861425.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861425.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public object Value
 		{

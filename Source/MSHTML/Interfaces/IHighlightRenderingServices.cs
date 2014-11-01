@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointerStart">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart</param>
 		/// <param name="pDispPointerEnd">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerEnd</param>
@@ -115,6 +116,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pISegment">NetOffice.MSHTMLApi.IHighlightSegment pISegment</param>
 		/// <param name="pDispPointerStart">NetOffice.MSHTMLApi.IDisplayPointer pDispPointerStart</param>
@@ -129,6 +131,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pISegment">NetOffice.MSHTMLApi.IHighlightSegment pISegment</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

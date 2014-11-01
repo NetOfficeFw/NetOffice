@@ -78,7 +78,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
@@ -91,11 +91,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="length">optional object Length</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Characters Characters(object start, object length)
 		{
@@ -107,7 +107,7 @@ namespace NetOffice.ExcelApi
 		/// Get
 		/// </summary>
 		/// <param name="start">optional object Start</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Characters get_Characters(object start)
@@ -120,10 +120,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx
 		/// Alias for get_Characters
 		/// </summary>
 		/// <param name="start">optional object Start</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Characters Characters(object start)
 		{
@@ -141,8 +141,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface AxisTitle 
 	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820924.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820924.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AxisTitle : AxisTitle_
@@ -225,8 +225,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820908.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820908.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -242,8 +242,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194591.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194591.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -259,9 +259,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836822.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836822.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -277,8 +277,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822518.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822518.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string Name
 		{
@@ -341,8 +341,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823146.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823146.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string Caption
 		{
@@ -362,8 +362,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822918.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Characters Characters
 		{
@@ -395,8 +395,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839750.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839750.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object HorizontalAlignment
 		{
@@ -424,8 +424,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821212.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821212.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double Left
 		{
@@ -445,8 +445,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840807.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840807.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Orientation
 		{
@@ -474,8 +474,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837962.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837962.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool Shadow
 		{
@@ -495,8 +495,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194149.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194149.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public string Text
 		{
@@ -516,8 +516,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197818.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197818.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double Top
 		{
@@ -537,8 +537,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836178.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836178.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object VerticalAlignment
 		{
@@ -566,8 +566,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820879.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820879.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 ReadingOrder
 		{
@@ -615,8 +615,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840720.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840720.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool IncludeInLayout
 		{
@@ -636,8 +636,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837142.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837142.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlChartElementPosition Position
 		{
@@ -658,8 +658,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193547.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193547.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.ChartFormat Format
 		{
@@ -675,8 +675,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822630.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822630.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Double Height
 		{
@@ -691,8 +691,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834650.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834650.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Double Width
 		{
@@ -707,8 +707,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821270.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821270.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string Formula
 		{
@@ -728,8 +728,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822503.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822503.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string FormulaR1C1
 		{
@@ -749,8 +749,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840929.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840929.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string FormulaLocal
 		{
@@ -770,8 +770,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839371.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839371.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public string FormulaR1C1Local
 		{
@@ -794,8 +794,8 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196369.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196369.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Select()
 		{
@@ -814,8 +814,8 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821497.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821497.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Delete()
 		{

@@ -12,8 +12,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface Bookmarks 
 	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821971.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821971.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Bookmarks : COMObject ,IEnumerable<NetOffice.WordApi.Bookmark>
@@ -96,8 +96,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192733.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192733.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822387.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822387.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdBookmarkSortBy DefaultSorting
 		{
@@ -134,8 +134,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193438.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193438.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool ShowHidden
 		{
@@ -155,8 +155,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193379.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193379.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -172,8 +172,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822633.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822633.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -188,9 +188,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841087.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841087.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -209,6 +209,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -226,10 +227,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197253.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="range">optional object Range</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197253.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Bookmark Add(string name, object range)
 		{
@@ -241,9 +242,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197253.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197253.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Bookmark Add(string name)
@@ -256,9 +257,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821366.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821366.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Exists(string name)
 		{

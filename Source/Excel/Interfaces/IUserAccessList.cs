@@ -131,6 +131,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="allowEdit">bool AllowEdit</param>
@@ -145,6 +146,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 DeleteAll()

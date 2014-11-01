@@ -120,6 +120,7 @@
             // 
             this.panelShowTutorialLink.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelShowTutorialLink.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panelShowTutorialLink.Controls.Add(this.labelOffHint);
             this.panelShowTutorialLink.Controls.Add(this.linkLabelTutorialContent);
             this.panelShowTutorialLink.Location = new System.Drawing.Point(0, 0);
@@ -177,6 +178,7 @@
             // 
             // panelTutorialArea
             // 
+            this.panelTutorialArea.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panelTutorialArea.Controls.Add(this.buttonRunTutorial);
             this.panelTutorialArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTutorialArea.Location = new System.Drawing.Point(3, 3);
@@ -453,6 +455,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(973, 584);
             this.Controls.Add(this.listViewTutorials);
             this.Controls.Add(this.labelTutorialDescription);

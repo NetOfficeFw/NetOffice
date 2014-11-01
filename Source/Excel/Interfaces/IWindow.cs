@@ -1136,6 +1136,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Activate()
@@ -1155,6 +1156,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object ActivateNext()
@@ -1174,6 +1176,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object ActivatePrevious()
@@ -1193,6 +1196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="filename">optional object Filename</param>
@@ -1207,6 +1211,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1219,6 +1224,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
@@ -1232,6 +1238,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="filename">optional object Filename</param>
@@ -1246,6 +1253,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1269,6 +1277,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1289,6 +1298,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[CustomMethodAttribute]
@@ -1310,6 +1320,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1332,6 +1343,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1355,6 +1367,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Window NewWindow()
@@ -1367,6 +1380,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1394,6 +1408,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1414,6 +1429,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		[CustomMethodAttribute]
@@ -1435,6 +1451,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1457,6 +1474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1480,6 +1498,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1504,6 +1523,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1529,6 +1549,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1555,6 +1576,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1582,6 +1604,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="enableChanges">optional object EnableChanges</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1602,6 +1625,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1622,6 +1646,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sheets">optional object Sheets</param>
 		/// <param name="position">optional object Position</param>
@@ -1643,6 +1668,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1663,6 +1689,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sheets">optional object Sheets</param>
 		[CustomMethodAttribute]
@@ -1684,6 +1711,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1707,6 +1735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1727,6 +1756,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[CustomMethodAttribute]
@@ -1748,6 +1778,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1770,6 +1801,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		/// <param name="up">optional object Up</param>
@@ -1793,6 +1825,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="points">Int32 Points</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1805,6 +1838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="points">Int32 Points</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1817,6 +1851,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -1831,6 +1866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">Int32 Left</param>
 		/// <param name="top">Int32 Top</param>
@@ -1847,6 +1883,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">Int32 Left</param>
 		/// <param name="top">Int32 Top</param>
@@ -1863,6 +1900,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1891,6 +1929,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1912,6 +1951,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1934,6 +1974,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1957,6 +1998,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -1981,6 +2023,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -2006,6 +2049,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -2032,6 +2076,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>
@@ -2059,6 +2104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="from">optional object From</param>
 		/// <param name="to">optional object To</param>

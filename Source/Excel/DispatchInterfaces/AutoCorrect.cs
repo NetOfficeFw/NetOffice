@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ReplacementList(object index)
@@ -110,10 +110,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx
 		/// Alias for get_ReplacementList
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object ReplacementList(object index)
 		{
@@ -131,8 +131,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface AutoCorrect 
 	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195348.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195348.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AutoCorrect : AutoCorrect_
@@ -215,8 +215,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840180.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840180.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -232,8 +232,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195350.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195350.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -249,9 +249,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840411.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840411.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -267,8 +267,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195044.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195044.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool CapitalizeNamesOfDays
 		{
@@ -288,8 +288,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193969.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object ReplacementList
 		{
@@ -317,8 +317,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841263.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841263.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool ReplaceText
 		{
@@ -338,8 +338,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838419.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838419.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool TwoInitialCapitals
 		{
@@ -359,8 +359,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197144.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197144.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool CorrectSentenceCap
 		{
@@ -380,8 +380,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192998.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192998.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public bool CorrectCapsLock
 		{
@@ -401,8 +401,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197178.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197178.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public bool DisplayAutoCorrectOptions
 		{
@@ -422,8 +422,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839028.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839028.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public bool AutoExpandListRange
 		{
@@ -443,8 +443,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840728.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840728.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public bool AutoFillFormulasInLists
 		{
@@ -467,10 +467,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196318.aspx
 		/// </summary>
 		/// <param name="what">string What</param>
 		/// <param name="replacement">string Replacement</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196318.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object AddReplacement(string what, string replacement)
 		{
@@ -489,9 +489,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823158.aspx
 		/// </summary>
 		/// <param name="what">string What</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823158.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object DeleteReplacement(string what)
 		{

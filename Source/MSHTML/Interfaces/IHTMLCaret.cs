@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="fScrollIntoView">Int32 fScrollIntoView</param>
@@ -111,6 +112,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="fVisible">Int32 fVisible</param>
@@ -126,6 +128,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIMarkupPointer">NetOffice.MSHTMLApi.IMarkupPointer pIMarkupPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -138,6 +141,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -150,6 +154,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIsVisible">Int32 pIsVisible</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -165,6 +170,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fScrollIntoView">Int32 fScrollIntoView</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -177,6 +183,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Hide()
@@ -188,6 +195,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pText">Int16 pText</param>
 		/// <param name="lLen">Int32 lLen</param>
@@ -201,6 +209,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 scrollIntoView()
@@ -212,6 +221,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="fTranslate">Int32 fTranslate</param>
@@ -228,6 +238,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="peDir">NetOffice.MSHTMLApi.Enums._CARET_DIRECTION peDir</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -243,6 +254,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="eDir">NetOffice.MSHTMLApi.Enums._CARET_DIRECTION eDir</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

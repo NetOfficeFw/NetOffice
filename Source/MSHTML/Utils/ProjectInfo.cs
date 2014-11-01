@@ -15,7 +15,7 @@ namespace MSHTMLApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.MSHTMLApi";
-        private Guid     _componentGuid = new Guid("3050F1C5-98B5-11CF-BB82-00AA00BDCE0B");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("3050F1C5-98B5-11CF-BB82-00AA00BDCE0B")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace MSHTMLApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

@@ -289,6 +289,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void FlipHorizontal()
@@ -299,6 +300,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void FlipVertical()
@@ -309,6 +311,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void RotateClockwise()
@@ -319,6 +322,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void RotateCounterClockwise()
@@ -329,6 +333,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()

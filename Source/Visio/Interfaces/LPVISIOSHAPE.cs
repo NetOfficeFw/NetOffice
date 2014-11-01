@@ -2138,6 +2138,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2149,6 +2150,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void BringForward()
@@ -2159,6 +2161,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void BringToFront()
@@ -2169,6 +2172,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void ConvertToGroup()
@@ -2179,6 +2183,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void FlipHorizontal()
@@ -2189,6 +2194,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void FlipVertical()
@@ -2199,6 +2205,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void ReverseEnds()
@@ -2209,6 +2216,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void SendBackward()
@@ -2219,6 +2227,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void SendToBack()
@@ -2229,6 +2238,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Rotate90()
@@ -2239,6 +2249,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Ungroup()
@@ -2249,6 +2260,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2260,6 +2272,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2271,6 +2284,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
@@ -2281,6 +2295,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2292,6 +2307,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectToDrop">object ObjectToDrop</param>
 		/// <param name="xPos">Double xPos</param>
@@ -2307,6 +2323,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2319,6 +2336,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2330,6 +2348,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		/// <param name="row">Int16 Row</param>
@@ -2344,6 +2363,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		/// <param name="row">Int16 Row</param>
@@ -2356,6 +2376,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
@@ -2368,6 +2389,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
@@ -2380,6 +2402,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
@@ -2392,6 +2415,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2403,6 +2427,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		/// <param name="rowName">string RowName</param>
@@ -2417,6 +2442,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="section">Int16 Section</param>
 		/// <param name="row">Int16 Row</param>
@@ -2432,6 +2458,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xBegin">Double xBegin</param>
 		/// <param name="yBegin">Double yBegin</param>
@@ -2448,6 +2475,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x1">Double x1</param>
 		/// <param name="y1">Double y1</param>
@@ -2464,6 +2492,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x1">Double x1</param>
 		/// <param name="y1">Double y1</param>
@@ -2480,6 +2509,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xyArray">Double[] xyArray</param>
 		/// <param name="tolerance">Double Tolerance</param>
@@ -2495,6 +2525,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xyArray">Double[] xyArray</param>
 		/// <param name="degree">Int16 degree</param>
@@ -2510,6 +2541,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xyArray">Double[] xyArray</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2524,6 +2556,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tolerance">Double Tolerance</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2536,6 +2569,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2549,6 +2583,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void CenterDrawing()
@@ -2559,6 +2594,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2573,6 +2609,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="classOrProgID">string ClassOrProgID</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2587,6 +2624,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVWindow OpenDrawWindow()
@@ -2599,6 +2637,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVWindow OpenSheetWindow()
@@ -2611,6 +2650,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectsToInstance">object[] ObjectsToInstance</param>
 		/// <param name="xyArray">Double[] xyArray</param>
@@ -2628,6 +2668,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>
@@ -2643,6 +2684,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2660,6 +2702,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>
@@ -2674,6 +2717,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="unitsNamesOrCodes">object[] UnitsNamesOrCodes</param>
@@ -2689,6 +2733,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Layout()
@@ -2699,6 +2744,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 Flags</param>
 		/// <param name="lpr8Left">Double lpr8Left</param>
@@ -2723,6 +2769,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xPos">Double xPos</param>
 		/// <param name="yPos">Double yPos</param>
@@ -2737,6 +2784,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVHyperlink AddHyperlink()
@@ -2749,6 +2797,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="otherShape">NetOffice.VisioApi.IVShape OtherShape</param>
 		/// <param name="x">Double x</param>
@@ -2769,6 +2818,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="otherShape">NetOffice.VisioApi.IVShape OtherShape</param>
 		/// <param name="x">Double x</param>
@@ -2789,6 +2839,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x">Double x</param>
 		/// <param name="y">Double y</param>
@@ -2808,6 +2859,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x">Double x</param>
 		/// <param name="y">Double y</param>
@@ -2827,6 +2879,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void UpdateAlignmentBox()
@@ -2837,6 +2890,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectsToInstance">object[] ObjectsToInstance</param>
 		/// <param name="xyArray">Double[] xyArray</param>
@@ -2854,6 +2908,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>
@@ -2869,6 +2924,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="degree">Int16 degree</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2886,6 +2942,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="degree">Int16 degree</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -2903,6 +2960,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVShape Group()
@@ -2915,6 +2973,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public NetOffice.VisioApi.IVShape Duplicate()
@@ -2927,6 +2986,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void SwapEnds()
@@ -2937,6 +2997,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">optional object Flags</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2948,6 +3009,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2959,6 +3021,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">optional object Flags</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2970,6 +3033,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2981,6 +3045,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">optional object Flags</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -2992,6 +3057,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -3003,6 +3069,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		/// <param name="link">optional object Link</param>
@@ -3016,6 +3083,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		[CustomMethodAttribute]
@@ -3028,6 +3096,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		/// <param name="link">optional object Link</param>
@@ -3041,6 +3110,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="selType">NetOffice.VisioApi.Enums.VisSelectionTypes SelType</param>
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
@@ -3056,6 +3126,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="selType">NetOffice.VisioApi.Enums.VisSelectionTypes SelType</param>
 		[CustomMethodAttribute]
@@ -3070,6 +3141,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="selType">NetOffice.VisioApi.Enums.VisSelectionTypes SelType</param>
 		/// <param name="iterationMode">optional NetOffice.VisioApi.Enums.VisSelectMode IterationMode = 256</param>
@@ -3085,6 +3157,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="distance">Double Distance</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -3096,6 +3169,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">Int16 Type</param>
 		/// <param name="xPos">Double xPos</param>
@@ -3111,6 +3185,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xBegin">Double xBegin</param>
 		/// <param name="yBegin">Double yBegin</param>
@@ -3129,6 +3204,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xBegin">Double xBegin</param>
 		/// <param name="yBegin">Double yBegin</param>
@@ -3146,6 +3222,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xCenter">Double xCenter</param>
 		/// <param name="yCenter">Double yCenter</param>
@@ -3163,6 +3240,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xCenter">Double xCenter</param>
 		/// <param name="yCenter">Double yCenter</param>
@@ -3179,6 +3257,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xCenter">Double xCenter</param>
 		/// <param name="yCenter">Double yCenter</param>
@@ -3196,6 +3275,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		/// <param name="rowID">Int32 RowID</param>
@@ -3209,6 +3289,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		/// <param name="rowID">Int32 RowID</param>
@@ -3222,6 +3303,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -3233,6 +3315,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -3245,6 +3328,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetIDs">Int32[] DataRecordsetIDs</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -3259,6 +3343,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		/// <param name="customPropertyIndices">Int32[] CustomPropertyIndices</param>
@@ -3274,6 +3359,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		/// <param name="customPropertyIndex">Int32 CustomPropertyIndex</param>
@@ -3287,6 +3373,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRecordsetID">Int32 DataRecordsetID</param>
 		/// <param name="customPropertyIndex">Int32 CustomPropertyIndex</param>
@@ -3300,6 +3387,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="toShape">NetOffice.VisioApi.IVShape ToShape</param>
 		/// <param name="placementDir">NetOffice.VisioApi.Enums.VisAutoConnectDir PlacementDir</param>
@@ -3313,6 +3401,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="toShape">NetOffice.VisioApi.IVShape ToShape</param>
 		/// <param name="placementDir">NetOffice.VisioApi.Enums.VisAutoConnectDir PlacementDir</param>
@@ -3326,6 +3415,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="category">string Category</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -3338,6 +3428,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisConnectedShapesFlags Flags</param>
 		/// <param name="categoryFilter">string CategoryFilter</param>
@@ -3351,6 +3442,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisGluedShapesFlags Flags</param>
 		/// <param name="categoryFilter">string CategoryFilter</param>
@@ -3365,6 +3457,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisGluedShapesFlags Flags</param>
 		/// <param name="categoryFilter">string CategoryFilter</param>
@@ -3379,6 +3472,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="connectorEnd">NetOffice.VisioApi.Enums.VisConnectorEnds ConnectorEnd</param>
 		/// <param name="offsetX">Double OffsetX</param>
@@ -3393,6 +3487,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="direction">NetOffice.VisioApi.Enums.VisResizeDirection Direction</param>
 		/// <param name="distance">Double Distance</param>
@@ -3406,6 +3501,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void AddToContainers()
@@ -3416,6 +3512,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void RemoveFromContainers()
@@ -3426,6 +3523,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public NetOffice.VisioApi.IVPage CreateSubProcess()
@@ -3438,6 +3536,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="page">NetOffice.VisioApi.IVPage Page</param>
 		/// <param name="objectToDrop">object ObjectToDrop</param>
@@ -3453,6 +3552,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="page">NetOffice.VisioApi.IVPage Page</param>
 		/// <param name="objectToDrop">object ObjectToDrop</param>
@@ -3468,6 +3568,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="delFlags">Int32 DelFlags</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -3479,6 +3580,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="masterOrMasterShortcutToDrop">object MasterOrMasterShortcutToDrop</param>
 		/// <param name="replaceFlags">optional Int32 ReplaceFlags = 0</param>
@@ -3493,6 +3595,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="masterOrMasterShortcutToDrop">object MasterOrMasterShortcutToDrop</param>
 		[CustomMethodAttribute]
@@ -3507,6 +3610,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="lineMatrix">NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices lineMatrix</param>
 		/// <param name="fillMatrix">NetOffice.VisioApi.Enums.VisQuickStyleMatrixIndices fillMatrix</param>
@@ -3525,6 +3629,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="changePictureFlags">optional Int32 ChangePictureFlags = 0</param>
@@ -3538,6 +3643,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]

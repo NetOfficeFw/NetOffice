@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface HeadersFooters 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745028.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745028.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class HeadersFooters : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745328.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745328.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743840.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743840.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744085.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744085.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.HeaderFooter DateAndTime
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746240.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746240.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.HeaderFooter SlideNumber
 		{
@@ -164,8 +164,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745438.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745438.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.HeaderFooter Header
 		{
@@ -181,8 +181,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745854.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745854.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.HeaderFooter Footer
 		{
@@ -198,8 +198,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745936.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745936.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayOnTitleSlide
 		{
@@ -223,8 +223,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746293.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746293.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Clear()
 		{

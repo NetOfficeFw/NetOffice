@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface TabStop 
 	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195736.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195736.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TabStop : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194595.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194595.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196513.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196513.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194503.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194503.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840413.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840413.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdTabAlignment Alignment
 		{
@@ -168,8 +168,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194185.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194185.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdTabLeader Leader
 		{
@@ -190,8 +190,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840507.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840507.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single Position
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838133.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838133.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool CustomTab
 		{
@@ -227,8 +227,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845748.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845748.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.TabStop Next
 		{
@@ -244,8 +244,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194278.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194278.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.TabStop Previous
 		{
@@ -264,8 +264,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195894.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195894.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Clear()
 		{

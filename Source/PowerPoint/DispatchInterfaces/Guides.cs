@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface Guides 
 	/// SupportByVersion PowerPoint, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228696.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228696.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Guides : Collection
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj684227.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj684227.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj717752.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj717752.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public object Parent
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("PowerPoint", 15)]
@@ -150,10 +151,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227668.aspx
 		/// </summary>
 		/// <param name="orientation">NetOffice.PowerPointApi.Enums.PpGuideOrientation Orientation</param>
 		/// <param name="position">Single Position</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227668.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public NetOffice.PowerPointApi.Guide Add(NetOffice.PowerPointApi.Enums.PpGuideOrientation orientation, Single position)
 		{

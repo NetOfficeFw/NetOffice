@@ -11,8 +11,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// DispatchInterface ImportExportSpecification 
 	/// SupportByVersion Access, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820988.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820988.aspx </remarks>
 	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ImportExportSpecification : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195433.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195433.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834782.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834782.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public object Parent
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192471.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192471.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Name
 		{
@@ -151,8 +151,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197630.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197630.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string XML
 		{
@@ -172,8 +172,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837049.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837049.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string Description
 		{
@@ -196,9 +196,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx
 		/// </summary>
 		/// <param name="prompt">optional object Prompt</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Execute(object prompt)
 		{
@@ -208,8 +208,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837213.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Execute()
@@ -220,8 +220,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834427.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834427.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void Delete()
 		{
@@ -231,6 +231,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

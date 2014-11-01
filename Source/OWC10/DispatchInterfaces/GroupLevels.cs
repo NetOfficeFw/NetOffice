@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordSource">string RecordSource</param>
 		/// <param name="failIfThere">optional bool FailIfThere = false</param>
@@ -145,6 +146,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordSource">string RecordSource</param>
 		[CustomMethodAttribute]
@@ -159,6 +161,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface Legend 
 	/// SupportByVersion PowerPoint, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745364.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745364.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Legend : COMObject
@@ -95,9 +95,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743869.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743869.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745450.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745450.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Name
 		{
@@ -163,8 +163,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745429.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745429.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlLegendPosition Position
 		{
@@ -185,8 +185,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746207.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746207.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Shadow
 		{
@@ -206,8 +206,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744900.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744900.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Height
 		{
@@ -261,8 +261,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745997.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745997.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Left
 		{
@@ -282,8 +282,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746206.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746206.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Top
 		{
@@ -303,8 +303,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745029.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745029.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double Width
 		{
@@ -353,8 +353,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744360.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744360.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IncludeInLayout
 		{
@@ -374,8 +374,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744846.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744846.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
@@ -391,8 +391,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743975.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743975.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Creator
 		{
@@ -407,8 +407,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745099.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745099.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -427,8 +427,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745291.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745291.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Select()
 		{
@@ -447,8 +447,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745168.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745168.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Delete()
 		{
@@ -467,9 +467,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745851.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745851.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object LegendEntries(object index)
 		{
@@ -481,8 +481,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745851.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745851.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object LegendEntries()
@@ -495,8 +495,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745797.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745797.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Clear()
 		{

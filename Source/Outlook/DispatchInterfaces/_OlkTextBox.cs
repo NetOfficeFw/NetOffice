@@ -94,6 +94,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862440.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool AutoSize
@@ -114,6 +115,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868074.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool AutoTab
@@ -134,6 +136,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866250.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool AutoWordSelect
@@ -154,6 +157,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868847.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 BackColor
@@ -174,6 +178,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865385.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlBorderStyle BorderStyle
@@ -195,6 +200,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868029.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlDragBehavior DragBehavior
@@ -216,6 +222,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864717.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Enabled
@@ -236,6 +243,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868498.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior
@@ -257,6 +265,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869920.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool EnterKeyBehavior
@@ -277,6 +286,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866952.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public stdole.Font Font
@@ -293,6 +303,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867178.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 ForeColor
@@ -313,6 +324,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867387.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool HideSelection
@@ -333,6 +345,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867135.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool IntegralHeight
@@ -353,6 +366,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867613.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool Locked
@@ -373,6 +387,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867099.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 MaxLength
@@ -393,6 +408,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867214.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public stdole.Picture MouseIcon
@@ -414,6 +430,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861805.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
@@ -435,6 +452,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865375.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool MultiLine
@@ -455,6 +473,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861589.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string PasswordChar
@@ -475,6 +494,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868710.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlScrollBars Scrollbars
@@ -496,6 +516,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869253.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool SelectionMargin
@@ -516,6 +537,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866944.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool TabKeyBehavior
@@ -536,6 +558,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862087.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string Text
@@ -556,6 +579,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867726.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlTextAlign TextAlign
@@ -577,6 +601,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866220.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public object Value
@@ -605,6 +630,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863462.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool WordWrap
@@ -625,6 +651,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869133.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 SelStart
@@ -645,6 +672,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867432.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 SelLength
@@ -665,6 +693,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868770.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string SelText
@@ -704,6 +733,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862394.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Cut()
@@ -714,6 +744,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865079.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Copy()
@@ -724,6 +755,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863023.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Paste()
@@ -734,6 +766,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862377.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public void Clear()

@@ -12,8 +12,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface GroupShapes 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746438.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746438.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupShapes : COMObject ,IEnumerable<NetOffice.PowerPointApi.Shape>
@@ -96,9 +96,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745121.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745121.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Application
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745518.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745518.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746264.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746264.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744075.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744075.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -167,6 +167,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
@@ -184,9 +185,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746394.aspx
 		/// </summary>
 		/// <param name="index">object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746394.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.ShapeRange Range(object index)
 		{

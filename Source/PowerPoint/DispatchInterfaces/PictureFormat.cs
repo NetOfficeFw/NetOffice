@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface PictureFormat 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745665.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745665.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PictureFormat : COMObject
@@ -95,9 +95,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744199.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744199.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746349.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746349.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746089.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746089.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744038.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744038.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Brightness
 		{
@@ -168,8 +168,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744927.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744927.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoPictureColorType ColorType
 		{
@@ -190,8 +190,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744132.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744132.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Contrast
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745195.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745195.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single CropBottom
 		{
@@ -232,8 +232,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744671.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744671.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single CropLeft
 		{
@@ -253,8 +253,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744213.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744213.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single CropRight
 		{
@@ -274,8 +274,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746445.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746445.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single CropTop
 		{
@@ -295,8 +295,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744047.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744047.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 TransparencyColor
 		{
@@ -316,8 +316,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746002.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746002.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState TransparentBackground
 		{
@@ -338,8 +338,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745590.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745590.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.Crop Crop
 		{
@@ -358,9 +358,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744703.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744703.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void IncrementBrightness(Single increment)
 		{
@@ -370,9 +370,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745931.aspx
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745931.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void IncrementContrast(Single increment)
 		{

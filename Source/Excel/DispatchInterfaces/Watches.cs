@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface Watches 
 	/// SupportByVersion Excel, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839970.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839970.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Watches : COMObject ,IEnumerable<NetOffice.ExcelApi.Watch>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823106.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823106.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837389.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837389.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837372.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837372.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840378.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840378.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -185,9 +185,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194476.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194476.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Watch Add(object source)
 		{
@@ -199,8 +199,8 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837426.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837426.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public void Delete()
 		{

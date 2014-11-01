@@ -235,6 +235,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="recordsAffected">object RecordsAffected</param>
 		/// <param name="parameters">optional object Parameters</param>
@@ -250,6 +251,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="recordsAffected">object RecordsAffected</param>
 		[CustomMethodAttribute]
@@ -264,6 +266,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="recordsAffected">object RecordsAffected</param>
 		/// <param name="parameters">optional object Parameters</param>
@@ -279,6 +282,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
@@ -296,6 +300,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -309,6 +314,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
@@ -323,6 +329,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
@@ -338,6 +345,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
@@ -354,6 +362,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		/// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>

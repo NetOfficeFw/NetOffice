@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
@@ -146,6 +147,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
@@ -161,6 +163,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
@@ -177,6 +180,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="rowsourceType">NetOffice.OWC10Api.Enums.DscRowsourceTypeEnum RowsourceType</param>
@@ -193,6 +197,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

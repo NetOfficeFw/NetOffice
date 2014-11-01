@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface OMathMat 
 	/// SupportByVersion Word, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194327.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194327.aspx </remarks>
 	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OMathMat : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839796.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839796.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836965.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836965.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835716.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835716.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821536.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821536.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.OMathMatRows Rows
 		{
@@ -163,8 +163,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197927.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197927.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.OMathMatCols Cols
 		{
@@ -180,10 +180,10 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196512.aspx
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="col">Int32 Col</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196512.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.WordApi.OMath get_Cell(Int32 row, Int32 col)
@@ -196,11 +196,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196512.aspx
 		/// Alias for get_Cell
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="col">Int32 Col</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196512.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.OMath Cell(Int32 row, Int32 col)
 		{
@@ -210,8 +210,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845375.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845375.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdOMathVertAlignType Align
 		{
@@ -232,8 +232,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839960.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839960.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool PlcHoldHidden
 		{
@@ -253,8 +253,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839195.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839195.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdOMathSpacingRule RowSpacingRule
 		{
@@ -275,8 +275,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838755.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838755.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 RowSpacing
 		{
@@ -296,8 +296,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836905.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836905.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 ColSpacing
 		{
@@ -317,8 +317,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194023.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194023.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Enums.WdOMathSpacingRule ColGapRule
 		{
@@ -339,8 +339,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845805.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845805.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 ColGap
 		{

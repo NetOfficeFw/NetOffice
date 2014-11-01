@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface SignatureInfo 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865566.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865566.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureInfo : _IMsoDispObj
@@ -95,8 +95,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860243.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860243.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool ReadOnly
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865010.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865010.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string SignatureProvider
 		{
@@ -127,8 +127,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860281.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860281.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string SignatureText
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861498.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861498.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public stdole.Picture SignatureImage
 		{
@@ -170,8 +170,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860921.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860921.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string SignatureComment
 		{
@@ -191,8 +191,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860572.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860572.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.ContentVerificationResults ContentVerificationResults
 		{
@@ -208,8 +208,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864945.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864945.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.Enums.CertificateVerificationResults CertificateVerificationResults
 		{
@@ -225,8 +225,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862453.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862453.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsValid
 		{
@@ -241,8 +241,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860786.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860786.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsCertificateExpired
 		{
@@ -257,8 +257,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865218.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865218.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsCertificateRevoked
 		{
@@ -273,8 +273,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864566.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864566.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool IsCertificateUntrusted
 		{
@@ -292,9 +292,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862539.aspx
 		/// </summary>
 		/// <param name="sigdet">NetOffice.OfficeApi.Enums.SignatureDetail sigdet</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862539.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object GetSignatureDetail(NetOffice.OfficeApi.Enums.SignatureDetail sigdet)
 		{
@@ -313,9 +313,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865451.aspx
 		/// </summary>
 		/// <param name="certdet">NetOffice.OfficeApi.Enums.CertificateDetail certdet</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865451.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object GetCertificateDetail(NetOffice.OfficeApi.Enums.CertificateDetail certdet)
 		{
@@ -334,9 +334,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863087.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863087.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSignatureCertificate(object parentWindow)
 		{
@@ -346,9 +346,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863741.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863741.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SelectSignatureCertificate(object parentWindow)
 		{
@@ -358,9 +358,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863290.aspx
 		/// </summary>
 		/// <param name="bstrThumbprint">string bstrThumbprint</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863290.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SelectCertificateDetailByThumbprint(string bstrThumbprint)
 		{

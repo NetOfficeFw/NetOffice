@@ -11,8 +11,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// DispatchInterface RecurrencePattern 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863458.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863458.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RecurrencePattern : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869472.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869472.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865875.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865875.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869907.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869907.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
@@ -146,9 +146,9 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867159.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867159.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -164,8 +164,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869388.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869388.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 DayOfMonth
 		{
@@ -185,8 +185,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866785.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866785.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlDaysOfWeek DayOfWeekMask
 		{
@@ -207,8 +207,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867680.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867680.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Duration
 		{
@@ -228,8 +228,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866939.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866939.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime EndTime
 		{
@@ -249,8 +249,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869544.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869544.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Exceptions Exceptions
 		{
@@ -266,8 +266,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863347.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863347.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Instance
 		{
@@ -287,8 +287,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869589.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869589.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Interval
 		{
@@ -308,8 +308,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861331.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861331.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 MonthOfYear
 		{
@@ -329,8 +329,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864419.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864419.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool NoEndDate
 		{
@@ -350,8 +350,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868430.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868430.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Occurrences
 		{
@@ -371,8 +371,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861049.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861049.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime PatternEndDate
 		{
@@ -392,8 +392,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862199.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862199.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime PatternStartDate
 		{
@@ -413,8 +413,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868812.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868812.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlRecurrenceType RecurrenceType
 		{
@@ -435,8 +435,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868917.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868917.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool Regenerate
 		{
@@ -456,8 +456,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865086.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865086.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime StartTime
 		{
@@ -480,9 +480,9 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862727.aspx
 		/// </summary>
 		/// <param name="startDate">DateTime StartDate</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862727.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.AppointmentItem GetOccurrence(DateTime startDate)
 		{

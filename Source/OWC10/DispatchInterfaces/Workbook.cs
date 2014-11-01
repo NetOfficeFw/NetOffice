@@ -400,6 +400,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="structure">optional object Structure</param>
@@ -413,6 +414,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -424,6 +426,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
@@ -436,6 +439,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="structure">optional object Structure</param>
@@ -449,6 +453,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void ResetColors()
@@ -459,6 +464,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -470,6 +476,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]

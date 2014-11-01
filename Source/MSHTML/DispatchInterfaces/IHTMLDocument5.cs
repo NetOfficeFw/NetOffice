@@ -340,6 +340,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrattrName">string bstrattrName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -353,6 +354,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrdata">string bstrdata</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

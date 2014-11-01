@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pSink">NetOffice.MSHTMLApi.ICSSFilterSite pSink</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

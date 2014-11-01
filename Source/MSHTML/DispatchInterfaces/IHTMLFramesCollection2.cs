@@ -112,6 +112,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pvarIndex">object pvarIndex</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

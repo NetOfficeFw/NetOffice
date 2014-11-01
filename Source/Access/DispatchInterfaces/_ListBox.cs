@@ -94,6 +94,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835405.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823103.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -127,6 +129,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834793.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="row">optional object Row</param>
@@ -149,6 +152,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834793.aspx
 		/// Alias for get_Column
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
@@ -162,6 +166,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834793.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -183,6 +188,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834793.aspx
 		/// Alias for get_Column
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
@@ -195,6 +201,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835338.aspx
 		/// </summary>
 		/// <param name="lRow">Int32 lRow</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -221,6 +228,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835338.aspx
 		/// Alias for get_Selected
 		/// </summary>
 		/// <param name="lRow">Int32 lRow</param>
@@ -233,6 +241,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194010.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object OldValue
@@ -256,6 +265,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820776.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -277,6 +287,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820776.aspx
 		/// Alias for get_ItemData
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
@@ -289,6 +300,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837302.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Properties Properties
@@ -305,6 +317,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845521.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Children Controls
@@ -321,6 +334,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823015.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi._ItemsSelected ItemsSelected
@@ -337,6 +351,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837056.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi._Hyperlink Hyperlink
@@ -353,6 +368,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193151.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Value
@@ -381,6 +397,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192015.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string EventProcPrefix
@@ -422,6 +439,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192266.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte ControlType
@@ -442,6 +460,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192283.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ControlSource
@@ -462,6 +481,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821440.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string RowSourceType
@@ -482,6 +502,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196460.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string RowSource
@@ -502,6 +523,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820820.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 ColumnCount
@@ -522,6 +544,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834477.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool ColumnHeads
@@ -542,6 +565,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193491.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ColumnWidths
@@ -562,6 +586,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836882.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 BoundColumn
@@ -582,6 +607,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835379.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string DefaultValue
@@ -602,6 +628,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191760.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool IMEHold
@@ -622,6 +649,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834794.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ValidationRule
@@ -642,6 +670,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822752.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ValidationText
@@ -662,6 +691,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191982.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string StatusBarText
@@ -682,6 +712,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195987.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool Visible
@@ -702,6 +733,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835089.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte DisplayWhen
@@ -722,6 +754,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836886.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool Enabled
@@ -742,6 +775,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822435.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool Locked
@@ -762,6 +796,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195771.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte MultiSelect
@@ -782,6 +817,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844922.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool TabStop
@@ -802,6 +838,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193826.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 TabIndex
@@ -822,6 +859,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821181.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool HideDuplicates
@@ -842,6 +880,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192307.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 Left
@@ -862,6 +901,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845686.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 Top
@@ -882,6 +922,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192685.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 Width
@@ -902,6 +943,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822454.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 Height
@@ -922,6 +964,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196798.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 BackColor
@@ -942,6 +985,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196380.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte SpecialEffect
@@ -962,6 +1006,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195459.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte BorderStyle
@@ -982,6 +1027,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193587.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte OldBorderStyle
@@ -1002,6 +1048,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192725.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte BorderWidth
@@ -1043,6 +1090,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194153.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 BorderColor
@@ -1063,6 +1111,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822710.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ForeColor
@@ -1083,6 +1132,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198062.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string FontName
@@ -1103,6 +1153,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193490.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 FontSize
@@ -1123,6 +1174,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196370.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 FontWeight
@@ -1143,6 +1195,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845203.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool FontItalic
@@ -1163,6 +1216,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845713.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool FontUnderline
@@ -1204,6 +1258,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821795.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 FontBold
@@ -1224,6 +1279,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194639.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ShortcutMenuBar
@@ -1244,6 +1300,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191917.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ControlTipText
@@ -1264,6 +1321,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835636.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 HelpContextId
@@ -1284,6 +1342,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195887.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 ColumnWidth
@@ -1304,6 +1363,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196766.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 ColumnOrder
@@ -1324,6 +1384,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194134.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool ColumnHidden
@@ -1344,6 +1405,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836855.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool AutoLabel
@@ -1364,6 +1426,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836586.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool AddColon
@@ -1384,6 +1447,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845394.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 LabelX
@@ -1404,6 +1468,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196166.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 LabelY
@@ -1424,6 +1489,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822055.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte LabelAlign
@@ -1444,6 +1510,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192036.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int16 Section
@@ -1485,6 +1552,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196800.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string Tag
@@ -1505,6 +1573,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845049.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ListCount
@@ -1525,6 +1594,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193579.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 ListIndex
@@ -1545,6 +1615,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194845.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool IsVisible
@@ -1565,6 +1636,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193539.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1586,6 +1658,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822432.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string BeforeUpdate
@@ -1606,6 +1679,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822417.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string AfterUpdate
@@ -1626,6 +1700,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192523.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnEnter
@@ -1646,6 +1721,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197036.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnExit
@@ -1666,6 +1742,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835432.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnGotFocus
@@ -1686,6 +1763,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834495.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnLostFocus
@@ -1706,6 +1784,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845684.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnClick
@@ -1726,6 +1805,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192914.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnDblClick
@@ -1746,6 +1826,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191714.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnMouseDown
@@ -1766,6 +1847,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192063.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnMouseMove
@@ -1786,6 +1868,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820793.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnMouseUp
@@ -1806,6 +1889,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836570.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnKeyDown
@@ -1826,6 +1910,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836424.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnKeyUp
@@ -1846,6 +1931,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836928.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string OnKeyPress
@@ -1866,6 +1952,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198002.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1887,6 +1974,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195567.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte ScrollBarAlign
@@ -1927,6 +2015,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822449.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public byte NumeralShapes
@@ -1947,6 +2036,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196727.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Enums.AcImeMode IMEMode
@@ -1968,6 +2058,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196804.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string Name
@@ -1988,6 +2079,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197032.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Enums.AcImeSentenceMode IMESentenceMode
@@ -2009,6 +2101,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836245.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
@@ -2031,6 +2124,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845835.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi._SmartTags SmartTags
@@ -2047,6 +2141,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845595.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.Enums.AcLayoutType Layout
@@ -2063,6 +2158,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194962.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int16 LeftPadding
@@ -2083,6 +2179,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822063.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int16 TopPadding
@@ -2103,6 +2200,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821465.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int16 RightPadding
@@ -2123,6 +2221,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196482.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int16 BottomPadding
@@ -2143,6 +2242,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834334.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineStyleLeft
@@ -2163,6 +2263,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835020.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineStyleTop
@@ -2183,6 +2284,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193849.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineStyleRight
@@ -2203,6 +2305,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845671.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineStyleBottom
@@ -2223,6 +2326,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194863.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineWidthLeft
@@ -2243,6 +2347,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822774.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineWidthTop
@@ -2263,6 +2368,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821362.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineWidthRight
@@ -2283,6 +2389,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822791.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public byte GridlineWidthBottom
@@ -2303,6 +2410,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192033.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int32 GridlineColor
@@ -2323,6 +2431,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836611.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
@@ -2344,6 +2453,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192092.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
@@ -2659,6 +2769,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834354.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public bool AllowValueListEdits
@@ -2679,6 +2790,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836908.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public string ListItemsEditForm
@@ -2699,6 +2811,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196196.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public bool InheritValueList
@@ -2719,6 +2832,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845047.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public Int32 LayoutID
@@ -2734,6 +2848,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192468.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public bool ShowOnlyRowSourceValues
@@ -2754,6 +2869,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835060.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 BackThemeColorIndex
@@ -2774,6 +2890,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196681.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single BackTint
@@ -2794,6 +2911,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195189.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single BackShade
@@ -2814,6 +2932,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192718.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 BorderThemeColorIndex
@@ -2834,6 +2953,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196023.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single BorderTint
@@ -2854,6 +2974,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836684.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single BorderShade
@@ -2874,6 +2995,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197663.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 ForeThemeColorIndex
@@ -2894,6 +3016,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192702.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single ForeTint
@@ -2914,6 +3037,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193265.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single ForeShade
@@ -2934,6 +3058,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196465.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 ThemeFontIndex
@@ -2954,6 +3079,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194917.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 GridlineThemeColorIndex
@@ -2974,6 +3100,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192876.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single GridlineTint
@@ -2994,6 +3121,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191885.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Single GridlineShade
@@ -3017,6 +3145,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836296.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Undo()
@@ -3027,6 +3156,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845136.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SizeToFit()
@@ -3037,6 +3167,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197359.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Requery()
@@ -3047,6 +3178,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3058,6 +3190,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821412.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetFocus()
@@ -3068,6 +3201,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		/// <param name="ppsa">optional object[] ppsa</param>
@@ -3090,6 +3224,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrExpr">string bstrExpr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -3112,6 +3247,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820814.aspx
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3126,6 +3262,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820814.aspx
 		/// </summary>
 		/// <param name="left">object Left</param>
 		[CustomMethodAttribute]
@@ -3138,6 +3275,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820814.aspx
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3151,6 +3289,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820814.aspx
 		/// </summary>
 		/// <param name="left">object Left</param>
 		/// <param name="top">optional object Top</param>
@@ -3165,6 +3304,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835328.aspx
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="index">optional object Index</param>
@@ -3177,6 +3317,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835328.aspx
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[CustomMethodAttribute]
@@ -3189,6 +3330,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194439.aspx
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
@@ -3200,6 +3342,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

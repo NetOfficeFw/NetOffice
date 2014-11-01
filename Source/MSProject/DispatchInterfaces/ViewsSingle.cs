@@ -11,8 +11,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface ViewsSingle 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920756(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920756(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ViewsSingle : Views
@@ -98,6 +98,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -117,6 +118,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -131,6 +133,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -146,6 +149,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -162,6 +166,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -179,6 +184,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>
@@ -197,6 +203,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="screen">optional NetOffice.MSProjectApi.Enums.PjViewScreen Screen = 1</param>

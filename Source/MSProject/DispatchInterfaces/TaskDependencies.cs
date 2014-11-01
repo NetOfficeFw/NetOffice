@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface TaskDependencies 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920720(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920720(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TaskDependencies : COMObject ,IEnumerable<NetOffice.MSProjectApi.TaskDependency>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>
@@ -179,6 +180,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		[CustomMethodAttribute]
@@ -193,6 +195,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">NetOffice.MSProjectApi.Task From</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Type = 1</param>

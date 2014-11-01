@@ -1544,6 +1544,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1555,6 +1556,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1566,6 +1568,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="drawingObjects">optional object DrawingObjects</param>
@@ -1581,6 +1584,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1592,6 +1596,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
@@ -1604,6 +1609,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="drawingObjects">optional object DrawingObjects</param>
@@ -1617,6 +1623,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="drawingObjects">optional object DrawingObjects</param>
@@ -1631,6 +1638,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="password">optional object Password</param>
 		/// <param name="drawingObjects">optional object DrawingObjects</param>
@@ -1646,6 +1654,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1659,6 +1668,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1672,6 +1682,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1687,6 +1698,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1699,6 +1711,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1712,6 +1725,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1726,6 +1740,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1741,6 +1756,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1761,6 +1777,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -1772,6 +1789,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
@@ -1784,6 +1802,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1797,6 +1816,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1811,6 +1831,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1826,6 +1847,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1842,6 +1864,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1859,6 +1882,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1877,6 +1901,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1896,6 +1921,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
@@ -1916,6 +1942,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		/// <param name="typeName">optional object TypeName</param>
@@ -1928,6 +1955,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		[CustomMethodAttribute]
@@ -1940,6 +1968,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -1955,6 +1984,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="plotBy">optional object PlotBy</param>
@@ -1967,6 +1997,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		[CustomMethodAttribute]
@@ -1979,6 +2010,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup = 1</param>
@@ -1993,6 +2025,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2006,6 +2039,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
@@ -2020,6 +2054,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="rGallery">Int32 rGallery</param>
 		/// <param name="varFormat">optional object varFormat</param>
@@ -2032,6 +2067,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="rGallery">Int32 rGallery</param>
 		[CustomMethodAttribute]
@@ -2044,6 +2080,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2055,6 +2092,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2076,6 +2114,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2087,6 +2126,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		[CustomMethodAttribute]
@@ -2099,6 +2139,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2112,6 +2153,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2126,6 +2168,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2141,6 +2184,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2157,6 +2201,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2174,6 +2219,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2192,6 +2238,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2211,6 +2258,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2231,6 +2279,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varSource">optional object varSource</param>
 		/// <param name="varGallery">optional object varGallery</param>
@@ -2252,6 +2301,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		/// <param name="format">optional Int32 Format = -4147</param>
@@ -2265,6 +2315,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2276,6 +2327,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		[CustomMethodAttribute]
@@ -2288,6 +2340,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		/// <param name="format">optional Int32 Format = -4147</param>
@@ -2301,6 +2354,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
 		/// <param name="localeID">Int32 LocaleID</param>
@@ -2327,6 +2381,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
 		/// <param name="localeID">Int32 LocaleID</param>
@@ -2349,6 +2404,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varType">optional object varType</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2360,6 +2416,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2371,6 +2428,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		/// <param name="varFilterName">optional object varFilterName</param>
@@ -2385,6 +2443,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		[CustomMethodAttribute]
@@ -2398,6 +2457,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		/// <param name="varFilterName">optional object varFilterName</param>
@@ -2412,6 +2472,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varName">object varName</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2423,6 +2484,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrFileName">string bstrFileName</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2434,6 +2496,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrFileName">string bstrFileName</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2445,6 +2508,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ClearToMatchStyle()
@@ -2455,6 +2519,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void RefreshPivotTable()
@@ -2465,6 +2530,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">Int32 Layout</param>
 		/// <param name="varChartType">optional object varChartType</param>
@@ -2477,6 +2543,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="layout">Int32 Layout</param>
 		[CustomMethodAttribute]
@@ -2489,6 +2556,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Refresh()
@@ -2499,6 +2567,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="rHS">NetOffice.OfficeApi.Enums.MsoChartElementType RHS</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -2510,6 +2579,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2524,6 +2594,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2538,6 +2609,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2552,6 +2624,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2566,6 +2639,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2580,6 +2654,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2594,6 +2669,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2608,6 +2684,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2622,6 +2699,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2636,6 +2714,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2650,6 +2729,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2664,6 +2744,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2678,6 +2759,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2692,6 +2774,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2706,6 +2789,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2720,6 +2804,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2734,6 +2819,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public object Delete()
@@ -2753,6 +2839,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public object Copy()
@@ -2772,6 +2859,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		/// <param name="replace">optional object Replace</param>
 		[SupportByVersionAttribute("Office", 14,15)]
@@ -2792,6 +2880,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
@@ -2812,6 +2901,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Office", 15)]
@@ -2825,6 +2915,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 15)]
@@ -2838,6 +2929,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Office", 15)]
@@ -2849,6 +2941,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 15)]
 		public void ClearToMatchColorStyle()

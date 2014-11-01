@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pdwCount">Int32 pdwCount</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dwIdx">Int32 dwIdx</param>
 		/// <param name="pbstrUrl">string pbstrUrl</param>

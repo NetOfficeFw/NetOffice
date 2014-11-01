@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface Connections 
 	/// SupportByVersion Excel, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196294.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196294.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Connections : COMObject ,IEnumerable<NetOffice.ExcelApi.WorkbookConnection>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838431.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838431.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840518.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840518.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834962.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834962.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839189.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839189.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 Count
 		{
@@ -185,9 +185,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename)
 		{
@@ -199,11 +199,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="createModelConnection">optional object CreateModelConnection</param>
 		/// <param name="importRelationships">optional object ImportRelationships</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection, object importRelationships)
 		{
@@ -215,10 +215,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="createModelConnection">optional object CreateModelConnection</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195309.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename, object createModelConnection)
@@ -231,6 +231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
@@ -248,6 +249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
@@ -267,6 +269,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
@@ -284,6 +287,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
@@ -303,6 +307,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -317,6 +322,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>
@@ -335,6 +341,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="description">string Description</param>

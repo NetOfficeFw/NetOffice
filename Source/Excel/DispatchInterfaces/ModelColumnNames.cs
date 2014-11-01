@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface ModelColumnNames 
 	/// SupportByVersion Excel, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228628.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228628.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ModelColumnNames : COMObject ,IEnumerable<NetOffice.ExcelApi.ModelColumnName>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227432.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227432.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227816.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227816.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229521.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229521.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227341.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227341.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 Count
 		{

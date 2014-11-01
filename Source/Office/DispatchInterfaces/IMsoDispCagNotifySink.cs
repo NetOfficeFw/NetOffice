@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pClipMoniker">object pClipMoniker</param>
 		/// <param name="pItemMoniker">object pItemMoniker</param>
@@ -109,6 +110,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void WindowIsClosing()

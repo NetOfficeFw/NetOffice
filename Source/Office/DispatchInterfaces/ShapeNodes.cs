@@ -130,6 +130,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -147,6 +148,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -158,6 +160,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
@@ -177,6 +180,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
@@ -193,6 +197,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
@@ -210,6 +215,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
@@ -228,6 +234,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>
@@ -247,6 +254,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
@@ -259,6 +267,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="x1">Single X1</param>
@@ -272,6 +281,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType SegmentType</param>

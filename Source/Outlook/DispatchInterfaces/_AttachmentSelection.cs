@@ -95,6 +95,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869147.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
@@ -111,6 +112,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862708.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -127,6 +129,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869136.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -143,6 +146,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861934.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -160,6 +164,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867343.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Count
@@ -175,6 +180,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862981.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Enums.OlSelectionLocation Location
@@ -194,6 +200,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -211,6 +218,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860421.aspx
 		/// </summary>
 		/// <param name="selectionContents">NetOffice.OutlookApi.Enums.OlSelectionContents SelectionContents</param>
 		[SupportByVersionAttribute("Outlook", 14,15)]

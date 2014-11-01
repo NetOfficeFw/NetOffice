@@ -11,8 +11,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// DispatchInterface OlkControl 
 	/// SupportByVersion Outlook, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864202.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864202.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OlkControl : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868851.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868851.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string ItemProperty
 		{
@@ -116,8 +116,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866215.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866215.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string ControlProperty
 		{
@@ -137,8 +137,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869884.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869884.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public string PossibleValues
 		{
@@ -158,8 +158,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869903.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869903.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 Format
 		{
@@ -179,8 +179,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867721.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867721.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public bool EnableAutoLayout
 		{
@@ -200,8 +200,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861611.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861611.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 MinimumWidth
 		{
@@ -221,8 +221,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869868.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869868.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public Int32 MinimumHeight
 		{
@@ -242,8 +242,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868997.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868997.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
 		{
@@ -264,8 +264,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862110.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862110.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlVerticalLayout VerticalLayout
 		{

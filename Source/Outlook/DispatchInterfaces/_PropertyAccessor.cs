@@ -94,6 +94,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865030.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869821.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -126,6 +128,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869435.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -142,6 +145,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866730.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -162,6 +166,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868350.aspx
 		/// </summary>
 		/// <param name="schemaName">string SchemaName</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -182,6 +187,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862751.aspx
 		/// </summary>
 		/// <param name="schemaName">string SchemaName</param>
 		/// <param name="value">object Value</param>
@@ -194,6 +200,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869865.aspx
 		/// </summary>
 		/// <param name="schemaNames">object SchemaNames</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -214,6 +221,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868862.aspx
 		/// </summary>
 		/// <param name="schemaNames">object SchemaNames</param>
 		/// <param name="values">object Values</param>
@@ -235,6 +243,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868342.aspx
 		/// </summary>
 		/// <param name="value">DateTime Value</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -247,6 +256,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868909.aspx
 		/// </summary>
 		/// <param name="value">DateTime Value</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -259,6 +269,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862123.aspx
 		/// </summary>
 		/// <param name="value">string Value</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -279,6 +290,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864468.aspx
 		/// </summary>
 		/// <param name="value">object Value</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -291,6 +303,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868076.aspx
 		/// </summary>
 		/// <param name="schemaName">string SchemaName</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -302,6 +315,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869707.aspx
 		/// </summary>
 		/// <param name="schemaNames">object SchemaNames</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]

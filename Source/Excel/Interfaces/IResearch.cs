@@ -146,6 +146,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
@@ -170,6 +171,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		[CustomMethodAttribute]
@@ -191,6 +193,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
@@ -213,6 +216,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
@@ -236,6 +240,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		/// <param name="queryString">optional object QueryString</param>
@@ -260,6 +265,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="serviceID">string ServiceID</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -272,6 +278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="languageFrom">Int32 LanguageFrom</param>
 		/// <param name="languageTo">Int32 LanguageTo</param>

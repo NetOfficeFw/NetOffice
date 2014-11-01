@@ -12,8 +12,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// DispatchInterface UserProperties 
 	/// SupportByVersion Outlook, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862196.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862196.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class UserProperties : COMObject ,IEnumerable<NetOffice.OutlookApi.UserProperty>
@@ -96,8 +96,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869191.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869191.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868838.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868838.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860960.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860960.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
 		{
@@ -147,9 +147,9 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863415.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863415.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -165,8 +165,8 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866269.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866269.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -184,6 +184,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -201,12 +202,12 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="addToFolderFields">optional object AddToFolderFields</param>
 		/// <param name="displayFormat">optional object DisplayFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
 		{
@@ -218,10 +219,10 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type)
@@ -234,11 +235,11 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType Type</param>
 		/// <param name="addToFolderFields">optional object AddToFolderFields</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867389.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields)
@@ -251,10 +252,10 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863689.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="custom">optional object Custom</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863689.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperty Find(string name, object custom)
 		{
@@ -266,9 +267,9 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863689.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863689.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperty Find(string name)
@@ -281,9 +282,9 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864414.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864414.aspx </remarks>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Remove(Int32 index)
 		{

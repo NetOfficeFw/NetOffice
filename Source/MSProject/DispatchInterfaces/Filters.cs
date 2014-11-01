@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface Filters 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920596(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920596(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Filters : COMObject ,IEnumerable<NetOffice.MSProjectApi.Filter>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="newName">string NewName</param>

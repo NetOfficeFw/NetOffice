@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface FileDialogSelectedItems 
 	/// SupportByVersion Office, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863539.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863539.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileDialogSelectedItems : _IMsoDispObj ,IEnumerable<string>
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863151.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863151.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864570.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864570.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]

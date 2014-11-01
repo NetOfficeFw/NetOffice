@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface View 
 	/// SupportByVersion PowerPoint, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744518.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744518.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class View : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745506.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745506.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743894.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743894.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744251.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744251.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpViewType Type
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745436.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745436.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 Zoom
 		{
@@ -168,9 +168,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744116.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744116.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public object Slide
 		{
@@ -191,8 +191,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744865.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744865.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplaySlideMiniature
 		{
@@ -213,8 +213,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745986.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745986.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ZoomToFit
 		{
@@ -235,8 +235,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746655.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746655.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.PrintOptions PrintOptions
 		{
@@ -252,8 +252,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745373.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745373.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState MediaControlsVisible
 		{
@@ -269,8 +269,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745543.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745543.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single MediaControlsLeft
 		{
@@ -285,8 +285,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745157.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745157.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single MediaControlsTop
 		{
@@ -301,8 +301,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745883.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745883.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single MediaControlsWidth
 		{
@@ -317,8 +317,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744804.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744804.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single MediaControlsHeight
 		{
@@ -336,8 +336,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746573.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746573.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Paste()
 		{
@@ -347,9 +347,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746095.aspx
 		/// </summary>
 		/// <param name="index">Int32 index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746095.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void GotoSlide(Int32 index)
 		{
@@ -359,6 +359,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
@@ -366,7 +367,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
@@ -376,8 +376,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial()
@@ -388,9 +388,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType)
@@ -401,10 +401,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType, object displayAsIcon)
@@ -415,11 +415,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
@@ -430,12 +430,12 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
@@ -446,13 +446,13 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx
 		/// </summary>
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		/// <param name="iconLabel">optional string IconLabel = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743924.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
@@ -463,13 +463,13 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		/// <param name="collate">optional NetOffice.OfficeApi.Enums.MsoTriState Collate = -99</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut(object from, object to, object printToFile, object copies, object collate)
 		{
@@ -479,8 +479,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut()
@@ -491,9 +491,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut(object from)
@@ -504,10 +504,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut(object from, object to)
@@ -518,11 +518,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
 		/// <param name="printToFile">optional string PrintToFile = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut(object from, object to, object printToFile)
@@ -533,12 +533,12 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx
 		/// </summary>
 		/// <param name="from">optional Int32 From = -1</param>
 		/// <param name="to">optional Int32 To = -1</param>
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		/// <param name="copies">optional Int32 Copies = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744250.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void PrintOut(object from, object to, object printToFile, object copies)
@@ -549,9 +549,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744579.aspx
 		/// </summary>
 		/// <param name="shapeId">object ShapeId</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744579.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Player Player(object shapeId)
 		{

@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrBehavior">string bstrBehavior</param>
 		/// <param name="bstrBehaviorUrl">string bstrBehaviorUrl</param>

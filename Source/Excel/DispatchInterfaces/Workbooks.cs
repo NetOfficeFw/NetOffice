@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface Workbooks 
 	/// SupportByVersion Excel, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841074.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841074.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Workbooks : COMObject ,IEnumerable<NetOffice.ExcelApi.Workbook>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195019.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195436.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195436.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837124.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837124.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822893.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822893.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -185,9 +185,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx
 		/// </summary>
 		/// <param name="template">optional object Template</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Add(object template)
 		{
@@ -199,8 +199,8 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840478.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Add()
@@ -213,8 +213,8 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839657.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839657.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void Close()
 		{
@@ -224,6 +224,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -238,7 +239,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="notify">optional object Notify</param>
 		/// <param name="converter">optional object Converter</param>
 		/// <param name="addToMru">optional object AddToMru</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru)
 		{
@@ -250,6 +250,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -266,7 +267,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="addToMru">optional object AddToMru</param>
 		/// <param name="local">optional object Local</param>
 		/// <param name="corruptLoad">optional object CorruptLoad</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local, object corruptLoad)
 		{
@@ -278,9 +278,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename)
@@ -293,10 +293,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks)
@@ -309,11 +309,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly)
@@ -326,12 +326,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="format">optional object Format</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format)
@@ -344,13 +344,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
 		/// <param name="readOnly">optional object ReadOnly</param>
 		/// <param name="format">optional object Format</param>
 		/// <param name="password">optional object Password</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password)
@@ -363,6 +363,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -370,7 +371,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="format">optional object Format</param>
 		/// <param name="password">optional object Password</param>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword)
@@ -383,6 +383,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -391,7 +392,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="password">optional object Password</param>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended)
@@ -404,6 +404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -413,7 +414,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		/// <param name="origin">optional object Origin</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin)
@@ -426,6 +426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -436,7 +437,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		/// <param name="origin">optional object Origin</param>
 		/// <param name="delimiter">optional object Delimiter</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter)
@@ -449,6 +449,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -460,7 +461,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="origin">optional object Origin</param>
 		/// <param name="delimiter">optional object Delimiter</param>
 		/// <param name="editable">optional object Editable</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable)
@@ -473,6 +473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -485,7 +486,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="delimiter">optional object Delimiter</param>
 		/// <param name="editable">optional object Editable</param>
 		/// <param name="notify">optional object Notify</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify)
@@ -498,6 +498,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -511,7 +512,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="editable">optional object Editable</param>
 		/// <param name="notify">optional object Notify</param>
 		/// <param name="converter">optional object Converter</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter)
@@ -524,6 +524,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -539,7 +540,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="converter">optional object Converter</param>
 		/// <param name="addToMru">optional object AddToMru</param>
 		/// <param name="local">optional object Local</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook Open(string filename, object updateLinks, object readOnly, object format, object password, object writeResPassword, object ignoreReadOnlyRecommended, object origin, object delimiter, object editable, object notify, object converter, object addToMru, object local)
@@ -552,6 +552,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -577,6 +578,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -604,6 +606,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -617,6 +620,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -631,6 +635,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -646,6 +651,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -662,6 +668,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -679,6 +686,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -697,6 +705,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -716,6 +725,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -736,6 +746,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -757,6 +768,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -779,6 +791,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -802,6 +815,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -826,6 +840,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -851,6 +866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -878,6 +894,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -895,7 +912,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator)
 		{
@@ -905,6 +921,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -924,7 +941,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="trailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		/// <param name="local">optional object Local</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers, object local)
 		{
@@ -934,9 +950,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename)
@@ -947,10 +963,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin)
@@ -961,11 +977,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
 		/// <param name="startRow">optional object StartRow</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow)
@@ -976,12 +992,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
 		/// <param name="startRow">optional object StartRow</param>
 		/// <param name="dataType">optional object DataType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType)
@@ -992,13 +1008,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
 		/// <param name="startRow">optional object StartRow</param>
 		/// <param name="dataType">optional object DataType</param>
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier)
@@ -1009,6 +1025,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1016,7 +1033,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataType">optional object DataType</param>
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
 		/// <param name="consecutiveDelimiter">optional object ConsecutiveDelimiter</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter)
@@ -1027,6 +1043,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1035,7 +1052,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
 		/// <param name="consecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="tab">optional object Tab</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
@@ -1046,6 +1062,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1055,7 +1072,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="consecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		/// <param name="tab">optional object Tab</param>
 		/// <param name="semicolon">optional object Semicolon</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
@@ -1066,6 +1082,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1076,7 +1093,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="tab">optional object Tab</param>
 		/// <param name="semicolon">optional object Semicolon</param>
 		/// <param name="comma">optional object Comma</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
@@ -1087,6 +1103,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1098,7 +1115,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="semicolon">optional object Semicolon</param>
 		/// <param name="comma">optional object Comma</param>
 		/// <param name="space">optional object Space</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
@@ -1109,6 +1125,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1121,7 +1138,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="comma">optional object Comma</param>
 		/// <param name="space">optional object Space</param>
 		/// <param name="other">optional object Other</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
@@ -1132,6 +1148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1145,7 +1162,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="space">optional object Space</param>
 		/// <param name="other">optional object Other</param>
 		/// <param name="otherChar">optional object OtherChar</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
@@ -1156,6 +1172,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1170,7 +1187,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="other">optional object Other</param>
 		/// <param name="otherChar">optional object OtherChar</param>
 		/// <param name="fieldInfo">optional object FieldInfo</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
@@ -1181,6 +1197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1196,7 +1213,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="otherChar">optional object OtherChar</param>
 		/// <param name="fieldInfo">optional object FieldInfo</param>
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout)
@@ -1207,6 +1223,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1223,7 +1240,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="fieldInfo">optional object FieldInfo</param>
 		/// <param name="textVisualLayout">optional object TextVisualLayout</param>
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator)
@@ -1234,6 +1250,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1252,7 +1269,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="trailingMinusNumbers">optional object TrailingMinusNumbers</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837097.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public void OpenText(string filename, object origin, object startRow, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object textVisualLayout, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
@@ -1263,6 +1279,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1289,6 +1306,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1304,6 +1322,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1320,6 +1339,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1337,6 +1357,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1355,6 +1376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1374,6 +1396,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1394,6 +1417,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1415,6 +1439,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1437,6 +1462,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1460,6 +1486,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1484,6 +1511,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1509,6 +1537,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -1535,6 +1564,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1560,6 +1590,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1573,6 +1604,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1587,6 +1619,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1602,6 +1635,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1618,6 +1652,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1635,6 +1670,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1653,6 +1689,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1672,6 +1709,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1692,6 +1730,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1713,6 +1752,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1735,6 +1775,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1758,6 +1799,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1782,6 +1824,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="origin">optional object Origin</param>
@@ -1807,13 +1850,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="commandText">optional object CommandText</param>
 		/// <param name="commandType">optional object CommandType</param>
 		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
 		/// <param name="importDataAs">optional object ImportDataAs</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery, object importDataAs)
 		{
@@ -1825,9 +1868,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename)
@@ -1840,10 +1883,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="commandText">optional object CommandText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText)
@@ -1856,11 +1899,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="commandText">optional object CommandText</param>
 		/// <param name="commandType">optional object CommandType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType)
@@ -1873,12 +1916,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="commandText">optional object CommandText</param>
 		/// <param name="commandType">optional object CommandType</param>
 		/// <param name="backgroundQuery">optional object BackgroundQuery</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193543.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenDatabase(string filename, object commandText, object commandType, object backgroundQuery)
@@ -1891,9 +1934,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194062.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194062.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public void CheckOut(string filename)
 		{
@@ -1903,9 +1946,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193284.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193284.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public bool CanCheckOut(string filename)
 		{
@@ -1916,10 +1959,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="stylesheets">optional object Stylesheets</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets)
 		{
@@ -1931,11 +1974,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="stylesheets">optional object Stylesheets</param>
 		/// <param name="loadOption">optional object LoadOption</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename, object stylesheets, object loadOption)
 		{
@@ -1947,9 +1990,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx
 		/// </summary>
 		/// <param name="filename">string Filename</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838643.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Workbook OpenXML(string filename)
@@ -1962,6 +2005,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="stylesheets">optional object Stylesheets</param>
@@ -1977,6 +2021,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

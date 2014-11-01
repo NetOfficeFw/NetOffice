@@ -12,8 +12,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface Paragraphs 
 	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837506.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837506.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Paragraphs : COMObject ,IEnumerable<NetOffice.WordApi.Paragraph>
@@ -96,8 +96,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822984.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822984.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198057.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198057.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Paragraph First
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835160.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835160.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Paragraph Last
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838917.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838917.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -163,8 +163,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840711.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840711.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -179,9 +179,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197540.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197540.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -197,8 +197,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821678.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821678.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.ParagraphFormat Format
 		{
@@ -219,8 +219,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838476.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838476.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.TabStops TabStops
 		{
@@ -241,8 +241,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840294.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840294.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Borders Borders
 		{
@@ -263,8 +263,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192605.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192605.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Style
 		{
@@ -292,8 +292,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839508.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839508.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdParagraphAlignment Alignment
 		{
@@ -314,8 +314,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823269.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823269.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 KeepTogether
 		{
@@ -335,8 +335,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835412.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835412.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 KeepWithNext
 		{
@@ -356,8 +356,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196220.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196220.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 PageBreakBefore
 		{
@@ -377,8 +377,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838752.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838752.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 NoLineNumber
 		{
@@ -398,8 +398,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839114.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839114.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single RightIndent
 		{
@@ -419,8 +419,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195950.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195950.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single LeftIndent
 		{
@@ -440,8 +440,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839807.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839807.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single FirstLineIndent
 		{
@@ -461,8 +461,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193441.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193441.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single LineSpacing
 		{
@@ -482,8 +482,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838520.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838520.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdLineSpacing LineSpacingRule
 		{
@@ -504,8 +504,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839608.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839608.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single SpaceBefore
 		{
@@ -525,8 +525,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821250.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821250.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single SpaceAfter
 		{
@@ -546,8 +546,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844979.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844979.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Hyphenation
 		{
@@ -567,8 +567,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845502.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845502.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 WidowControl
 		{
@@ -588,8 +588,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837181.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837181.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Shading Shading
 		{
@@ -605,8 +605,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194328.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194328.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 FarEastLineBreakControl
 		{
@@ -626,8 +626,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837663.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837663.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 WordWrap
 		{
@@ -647,8 +647,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839531.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839531.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 HangingPunctuation
 		{
@@ -668,8 +668,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844846.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844846.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 HalfWidthPunctuationOnTopOfLine
 		{
@@ -689,8 +689,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840315.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840315.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 AddSpaceBetweenFarEastAndAlpha
 		{
@@ -710,8 +710,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821669.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821669.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 AddSpaceBetweenFarEastAndDigit
 		{
@@ -731,8 +731,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844887.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844887.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdBaselineAlignment BaseLineAlignment
 		{
@@ -753,8 +753,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834277.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834277.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 AutoAdjustRightIndent
 		{
@@ -774,8 +774,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192594.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192594.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 DisableLineHeightGrid
 		{
@@ -795,8 +795,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840110.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840110.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdOutlineLevel OutlineLevel
 		{
@@ -817,8 +817,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839150.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839150.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single CharacterUnitRightIndent
 		{
@@ -838,8 +838,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197609.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197609.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single CharacterUnitLeftIndent
 		{
@@ -859,8 +859,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845431.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845431.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single CharacterUnitFirstLineIndent
 		{
@@ -880,8 +880,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822971.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822971.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single LineUnitBefore
 		{
@@ -901,8 +901,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197911.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197911.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single LineUnitAfter
 		{
@@ -922,8 +922,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835233.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835233.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdReadingOrder ReadingOrder
 		{
@@ -944,8 +944,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837516.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837516.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 SpaceBeforeAuto
 		{
@@ -965,8 +965,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197702.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197702.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 SpaceAfterAuto
 		{
@@ -989,6 +989,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1006,9 +1007,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835823.aspx
 		/// </summary>
 		/// <param name="range">optional object Range</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835823.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Paragraph Add(object range)
 		{
@@ -1020,8 +1021,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835823.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835823.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Paragraph Add()
@@ -1034,8 +1035,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845571.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845571.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void CloseUp()
 		{
@@ -1045,8 +1046,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845272.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845272.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void OpenUp()
 		{
@@ -1056,8 +1057,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837221.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837221.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void OpenOrCloseUp()
 		{
@@ -1067,9 +1068,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197854.aspx
 		/// </summary>
 		/// <param name="count">Int16 Count</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197854.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void TabHangingIndent(Int16 count)
 		{
@@ -1079,9 +1080,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193683.aspx
 		/// </summary>
 		/// <param name="count">Int16 Count</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193683.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void TabIndent(Int16 count)
 		{
@@ -1091,8 +1092,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195774.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195774.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Reset()
 		{
@@ -1102,8 +1103,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840969.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840969.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Space1()
 		{
@@ -1113,8 +1114,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837911.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837911.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Space15()
 		{
@@ -1124,8 +1125,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839348.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839348.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Space2()
 		{
@@ -1135,9 +1136,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836918.aspx
 		/// </summary>
 		/// <param name="count">Int16 Count</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836918.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void IndentCharWidth(Int16 count)
 		{
@@ -1147,9 +1148,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838543.aspx
 		/// </summary>
 		/// <param name="count">Int16 Count</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838543.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void IndentFirstLineCharWidth(Int16 count)
 		{
@@ -1159,8 +1160,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835531.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835531.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void OutlinePromote()
 		{
@@ -1170,8 +1171,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192391.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192391.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void OutlineDemote()
 		{
@@ -1181,8 +1182,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192554.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192554.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void OutlineDemoteToBody()
 		{
@@ -1192,8 +1193,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838902.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838902.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Indent()
 		{
@@ -1203,8 +1204,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834544.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834544.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Outdent()
 		{
@@ -1214,8 +1215,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838513.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838513.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void IncreaseSpacing()
 		{
@@ -1225,8 +1226,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835150.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835150.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void DecreaseSpacing()
 		{

@@ -390,6 +390,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
@@ -403,6 +404,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[CustomMethodAttribute]
@@ -416,6 +418,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
@@ -430,6 +433,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
@@ -444,6 +448,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -455,6 +460,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -466,6 +472,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
@@ -480,6 +487,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>

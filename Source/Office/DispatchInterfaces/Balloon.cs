@@ -348,6 +348,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="left">Int32 Left</param>
 		/// <param name="top">Int32 Top</param>
@@ -362,6 +363,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
@@ -374,6 +376,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Close()

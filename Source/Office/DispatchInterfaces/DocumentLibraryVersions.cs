@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface DocumentLibraryVersions 
 	/// SupportByVersion Office, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860259.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860259.aspx </remarks>
 	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DocumentLibraryVersions : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.DocumentLibraryVersion>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862237.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862237.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Count
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863759.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863759.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863074.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863074.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool IsVersioningEnabled
 		{

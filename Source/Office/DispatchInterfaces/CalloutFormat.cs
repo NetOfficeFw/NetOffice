@@ -301,6 +301,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void AutomaticLength()
@@ -311,6 +312,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="drop">Single Drop</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -322,6 +324,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="length">Single Length</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -333,6 +336,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dropType">NetOffice.OfficeApi.Enums.MsoCalloutDropType DropType</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]

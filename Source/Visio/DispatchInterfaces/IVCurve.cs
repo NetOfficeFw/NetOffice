@@ -173,6 +173,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tolerance">Double Tolerance</param>
 		/// <param name="xyArray">Double[] xyArray</param>
@@ -188,6 +189,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="t">Double t</param>
 		/// <param name="x">Double x</param>
@@ -206,6 +208,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="t">Double t</param>
 		/// <param name="n">Int16 n</param>

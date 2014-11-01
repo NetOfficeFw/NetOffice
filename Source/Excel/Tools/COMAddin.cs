@@ -35,12 +35,12 @@ namespace NetOffice.ExcelApi.Tools
         /// </summary>
         public COMAddin()
         {
-            Type = this.GetType();
             Factory = RaiseCreateFactory();
             if (null == Factory)
                 Factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
 			TaskPaneInstances = new List<ITaskPane>();
+            Type = this.GetType();
         }
 
         #endregion
@@ -452,15 +452,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <returns>new Settings instance</returns>
         protected virtual Core CreateFactory()
         {
-            Core newCore = new Core();
-            ProgIdAttribute attribute = AttributeHelper.GetProgIDAttribute(Type, false);
-            if (null != attribute)
-            {
-                string name = attribute.Value + GetHashCode().ToString();
-                newCore.Console.Name = name;
-                newCore.Settings.ProxyCountChannelName = name;
-            }
-            return newCore;
+            return new Core();
         }
 
         /// <summary>

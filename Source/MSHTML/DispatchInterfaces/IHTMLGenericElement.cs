@@ -115,6 +115,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dataMember">string dataMember</param>
 		/// <param name="hierarchy">optional object hierarchy</param>
@@ -129,6 +130,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dataMember">string dataMember</param>
 		[CustomMethodAttribute]

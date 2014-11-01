@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="hwnd">Int32 Hwnd</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -108,6 +109,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Deactivate()

@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface CustomProperty 
 	/// SupportByVersion Word, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191953.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191953.aspx </remarks>
 	[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomProperty : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192355.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192355.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public string Name
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193928.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193928.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public string Value
 		{
@@ -132,8 +132,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822951.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822951.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -149,8 +149,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822587.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822587.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -165,9 +165,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845746.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845746.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -186,8 +186,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835145.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835145.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Delete()
 		{

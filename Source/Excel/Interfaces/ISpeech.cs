@@ -138,6 +138,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="speakAsync">optional object SpeakAsync</param>
@@ -153,6 +154,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		[CustomMethodAttribute]
@@ -166,6 +168,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="speakAsync">optional object SpeakAsync</param>
@@ -180,6 +183,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="speakAsync">optional object SpeakAsync</param>

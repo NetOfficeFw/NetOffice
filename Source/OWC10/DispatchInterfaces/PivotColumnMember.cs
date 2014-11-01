@@ -467,6 +467,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="detailLeft">Int32 DetailLeft</param>
 		/// <param name="detailLeftOffset">Int32 DetailLeftOffset</param>
@@ -480,6 +481,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="detailLeft">Int32 DetailLeft</param>
 		/// <param name="detailLeftOffset">Int32 DetailLeftOffset</param>

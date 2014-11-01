@@ -1194,6 +1194,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = </param>
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.PivotExportActionEnum Action = 1</param>
@@ -1206,6 +1207,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1217,6 +1219,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = </param>
 		[CustomMethodAttribute]
@@ -1229,6 +1232,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Refresh()
@@ -1239,6 +1243,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = pivot.gif</param>
 		/// <param name="filterName">optional string FilterName = gif</param>
@@ -1253,6 +1258,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1264,6 +1270,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = pivot.gif</param>
 		[CustomMethodAttribute]
@@ -1276,6 +1283,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = pivot.gif</param>
 		/// <param name="filterName">optional string FilterName = gif</param>
@@ -1289,6 +1297,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = pivot.gif</param>
 		/// <param name="filterName">optional string FilterName = gif</param>
@@ -1303,6 +1312,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1314,6 +1324,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="selection">optional object Selection = null (Nothing in visual basic)</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1325,6 +1336,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1336,6 +1348,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="source">NetOffice.OWC10Api.DropSource Source</param>
 		/// <param name="dragItem">object DragItem</param>
@@ -1351,6 +1364,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="selection">object Selection</param>
 		/// <param name="activeObject">object ActiveObject</param>
@@ -1366,6 +1380,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="selection">object Selection</param>
 		/// <param name="activeObject">object ActiveObject</param>
@@ -1379,6 +1394,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="selection">object Selection</param>
 		/// <param name="activeObject">object ActiveObject</param>
@@ -1393,6 +1409,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="selection">object Selection</param>
 		/// <param name="activeObject">object ActiveObject</param>
@@ -1408,6 +1425,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="topic">Int32 Topic</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1419,6 +1437,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void ShowAbout()
@@ -1429,6 +1448,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -1442,6 +1462,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="initialValue">optional object InitialValue</param>
 		/// <param name="arrowMode">optional NetOffice.OWC10Api.Enums.PivotArrowModeEnum ArrowMode = 0</param>
@@ -1455,6 +1476,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1466,6 +1488,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="initialValue">optional object InitialValue</param>
 		[CustomMethodAttribute]
@@ -1478,6 +1501,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="initialValue">optional object InitialValue</param>
 		/// <param name="arrowMode">optional NetOffice.OWC10Api.Enums.PivotArrowModeEnum ArrowMode = 0</param>
@@ -1491,6 +1515,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="accept">optional bool Accept = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1502,6 +1527,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1513,6 +1539,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1524,6 +1551,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void OkToBindToControlByName()

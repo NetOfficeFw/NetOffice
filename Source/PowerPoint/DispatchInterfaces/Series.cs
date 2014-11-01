@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface Series 
 	/// SupportByVersion PowerPoint, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744981.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744981.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Series : COMObject
@@ -95,9 +95,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744076.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744076.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746153.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746153.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup
 		{
@@ -152,8 +152,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745197.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745197.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ErrorBars ErrorBars
 		{
@@ -169,8 +169,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746257.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746257.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Explosion
 		{
@@ -190,8 +190,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743895.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743895.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Formula
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745659.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745659.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaLocal
 		{
@@ -232,8 +232,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744271.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744271.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1
 		{
@@ -253,8 +253,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746267.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746267.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string FormulaR1C1Local
 		{
@@ -274,8 +274,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745965.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745965.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool HasDataLabels
 		{
@@ -295,8 +295,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745102.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745102.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool HasErrorBars
 		{
@@ -350,8 +350,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746458.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746458.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool InvertIfNegative
 		{
@@ -371,8 +371,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745192.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745192.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 MarkerBackgroundColor
 		{
@@ -392,8 +392,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744114.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744114.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerBackgroundColorIndex
 		{
@@ -414,8 +414,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744625.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744625.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 MarkerForegroundColor
 		{
@@ -435,8 +435,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745462.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745462.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex MarkerForegroundColorIndex
 		{
@@ -457,8 +457,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745041.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745041.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 MarkerSize
 		{
@@ -478,8 +478,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746599.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746599.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlMarkerStyle MarkerStyle
 		{
@@ -500,8 +500,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745449.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745449.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string Name
 		{
@@ -521,8 +521,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744028.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744028.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlChartPictureType PictureType
 		{
@@ -543,8 +543,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744124.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744124.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 PlotOrder
 		{
@@ -564,8 +564,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746839.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746839.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Smooth
 		{
@@ -585,8 +585,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745492.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745492.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Type
 		{
@@ -606,8 +606,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744368.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744368.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
@@ -628,8 +628,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746833.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746833.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Values
 		{
@@ -657,8 +657,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746506.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746506.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object XValues
 		{
@@ -686,8 +686,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746198.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746198.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object BubbleSizes
 		{
@@ -715,8 +715,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746220.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746220.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlBarShape BarShape
 		{
@@ -737,8 +737,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746046.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746046.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ApplyPictToSides
 		{
@@ -758,8 +758,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746078.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746078.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ApplyPictToFront
 		{
@@ -779,8 +779,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746783.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746783.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool ApplyPictToEnd
 		{
@@ -800,8 +800,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746298.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746298.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Has3DEffect
 		{
@@ -821,8 +821,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744807.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744807.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Shadow
 		{
@@ -842,8 +842,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744802.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744802.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool HasLeaderLines
 		{
@@ -863,8 +863,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746727.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746727.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.LeaderLines LeaderLines
 		{
@@ -880,8 +880,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744341.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744341.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ChartFormat Format
 		{
@@ -897,8 +897,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744543.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744543.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Creator
 		{
@@ -913,8 +913,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745441.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745441.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Double PictureUnit2
 		{
@@ -934,8 +934,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746564.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746564.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -972,8 +972,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745452.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745452.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 PlotColorIndex
 		{
@@ -988,8 +988,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746517.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746517.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 InvertColor
 		{
@@ -1009,8 +1009,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745489.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745489.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.XlColorIndex InvertColorIndex
 		{
@@ -1031,8 +1031,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227564.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227564.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public bool IsFiltered
 		{
@@ -1055,8 +1055,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743916.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743916.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ClearFormats()
 		{
@@ -1075,8 +1075,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745312.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745312.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Copy()
 		{
@@ -1095,9 +1095,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746505.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746505.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object DataLabels(object index)
 		{
@@ -1109,8 +1109,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746505.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746505.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object DataLabels()
@@ -1123,8 +1123,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744542.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744542.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Delete()
 		{
@@ -1143,13 +1143,13 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx
 		/// </summary>
 		/// <param name="direction">NetOffice.PowerPointApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="include">NetOffice.PowerPointApi.Enums.XlErrorBarInclude Include</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
 		/// <param name="amount">optional object Amount</param>
 		/// <param name="minusValues">optional object MinusValues</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type, object amount, object minusValues)
 		{
@@ -1168,11 +1168,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx
 		/// </summary>
 		/// <param name="direction">NetOffice.PowerPointApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="include">NetOffice.PowerPointApi.Enums.XlErrorBarInclude Include</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type)
@@ -1192,12 +1192,12 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx
 		/// </summary>
 		/// <param name="direction">NetOffice.PowerPointApi.Enums.XlErrorBarDirection Direction</param>
 		/// <param name="include">NetOffice.PowerPointApi.Enums.XlErrorBarInclude Include</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.XlErrorBarType Type</param>
 		/// <param name="amount">optional object Amount</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745822.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ErrorBar(NetOffice.PowerPointApi.Enums.XlErrorBarDirection direction, NetOffice.PowerPointApi.Enums.XlErrorBarInclude include, NetOffice.PowerPointApi.Enums.XlErrorBarType type, object amount)
@@ -1217,8 +1217,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744657.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744657.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Paste()
 		{
@@ -1237,9 +1237,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744898.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744898.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Points(object index)
 		{
@@ -1251,8 +1251,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744898.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744898.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Points()
@@ -1265,8 +1265,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744062.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744062.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Select()
 		{
@@ -1285,9 +1285,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744102.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744102.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Trendlines(object index)
 		{
@@ -1299,8 +1299,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744102.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744102.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Trendlines()
@@ -1313,6 +1313,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1325,6 +1326,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1349,6 +1351,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1370,6 +1373,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1392,6 +1396,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1415,6 +1420,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1439,6 +1445,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1450,7 +1457,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
@@ -1469,8 +1475,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels()
@@ -1490,9 +1496,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type)
@@ -1512,10 +1518,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey)
@@ -1535,11 +1541,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText)
@@ -1559,12 +1565,12 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
@@ -1584,13 +1590,13 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
@@ -1610,6 +1616,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1617,7 +1624,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
@@ -1637,6 +1643,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1645,7 +1652,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		/// <param name="showValue">optional object ShowValue</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
@@ -1665,6 +1671,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1674,7 +1681,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		/// <param name="showValue">optional object ShowValue</param>
 		/// <param name="showPercentage">optional object ShowPercentage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
@@ -1694,6 +1700,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1704,7 +1711,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showValue">optional object ShowValue</param>
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746413.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)

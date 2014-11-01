@@ -125,6 +125,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="initialValue">object InitialValue</param>
 		/// <param name="arrowMode">bool ArrowMode</param>
@@ -138,6 +139,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="accept">bool Accept</param>
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -97,6 +97,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="cancel">bool Cancel</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -109,6 +110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="success">bool Success</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]

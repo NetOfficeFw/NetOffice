@@ -410,6 +410,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Select()
@@ -429,6 +430,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Delete()
@@ -448,6 +450,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -461,6 +464,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -474,6 +478,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Clear()

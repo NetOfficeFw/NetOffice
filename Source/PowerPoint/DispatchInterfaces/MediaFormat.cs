@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface MediaFormat 
 	/// SupportByVersion PowerPoint, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744263.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744263.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class MediaFormat : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744541.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744541.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Application Application
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745175.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745175.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Parent
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746131.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746131.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Single Volume
 		{
@@ -151,8 +151,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744385.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744385.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool Muted
 		{
@@ -172,8 +172,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746068.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746068.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 Length
 		{
@@ -188,8 +188,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745838.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745838.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 StartPoint
 		{
@@ -209,8 +209,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746105.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746105.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 EndPoint
 		{
@@ -230,8 +230,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745782.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745782.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 FadeInDuration
 		{
@@ -251,8 +251,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746771.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746771.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 FadeOutDuration
 		{
@@ -272,8 +272,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746520.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746520.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.MediaBookmarks MediaBookmarks
 		{
@@ -289,8 +289,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744315.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744315.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.Enums.PpMediaTaskStatus ResamplingStatus
 		{
@@ -306,8 +306,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745895.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745895.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsLinked
 		{
@@ -322,8 +322,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746271.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746271.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsEmbedded
 		{
@@ -338,8 +338,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744842.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744842.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 AudioSamplingRate
 		{
@@ -354,8 +354,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746132.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746132.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 VideoFrameRate
 		{
@@ -370,8 +370,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744903.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744903.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 SampleHeight
 		{
@@ -386,8 +386,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744690.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744690.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public Int32 SampleWidth
 		{
@@ -402,8 +402,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744226.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744226.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string VideoCompressionType
 		{
@@ -418,8 +418,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745256.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745256.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public string AudioCompressionType
 		{
@@ -437,9 +437,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745841.aspx
 		/// </summary>
 		/// <param name="position">Int32 Position</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745841.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void SetDisplayPicture(Int32 position)
 		{
@@ -449,9 +449,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746677.aspx
 		/// </summary>
 		/// <param name="filePath">string FilePath</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746677.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void SetDisplayPictureFromFile(string filePath)
 		{
@@ -461,6 +461,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
@@ -468,7 +469,6 @@ namespace NetOffice.PowerPointApi
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
 		/// <param name="videoBitRate">optional Int32 VideoBitRate = 7000000</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate, object videoBitRate)
 		{
@@ -478,8 +478,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample()
@@ -490,9 +490,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim)
@@ -503,10 +503,10 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim, object sampleHeight)
@@ -517,11 +517,11 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim, object sampleHeight, object sampleWidth)
@@ -532,12 +532,12 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate)
@@ -548,13 +548,13 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx
 		/// </summary>
 		/// <param name="trim">optional bool Trim = false</param>
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746339.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate)
@@ -565,9 +565,9 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746706.aspx
 		/// </summary>
 		/// <param name="profile">optional NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746706.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void ResampleFromProfile(object profile)
 		{
@@ -577,8 +577,8 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746706.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746706.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void ResampleFromProfile()

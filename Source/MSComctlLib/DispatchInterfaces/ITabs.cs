@@ -180,6 +180,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="pvIndex">object pvIndex</param>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
@@ -191,6 +192,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
@@ -201,6 +203,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
@@ -217,6 +220,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSComctlLib", 6)]
@@ -230,6 +234,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		[CustomMethodAttribute]
@@ -244,6 +249,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>
@@ -259,6 +265,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="pvIndex">optional object pvIndex</param>
 		/// <param name="pvKey">optional object pvKey</param>

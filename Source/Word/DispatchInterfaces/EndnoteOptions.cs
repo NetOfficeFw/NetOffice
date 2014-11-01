@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface EndnoteOptions 
 	/// SupportByVersion Word, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837026.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837026.aspx </remarks>
 	[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class EndnoteOptions : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840869.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840869.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194286.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194286.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820760.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820760.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194289.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194289.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdEndnoteLocation Location
 		{
@@ -168,8 +168,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820811.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820811.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdNoteNumberStyle NumberStyle
 		{
@@ -190,8 +190,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845632.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845632.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Int32 StartingNumber
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837748.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837748.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdNumberingRule NumberingRule
 		{

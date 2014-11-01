@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="nCurrent">Int32 nCurrent</param>
 		/// <param name="pnNew">Int32 pnNew</param>

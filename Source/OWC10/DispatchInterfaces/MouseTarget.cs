@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -110,6 +111,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -123,6 +125,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void MouseLeave()
@@ -133,6 +136,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -146,6 +150,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -159,6 +164,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -172,6 +178,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -185,6 +192,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="page">bool Page</param>
 		/// <param name="count">Int32 Count</param>

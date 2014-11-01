@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface Slicers 
 	/// SupportByVersion Excel, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194125.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194125.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Slicers : COMObject ,IEnumerable<NetOffice.ExcelApi.Slicer>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840922.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840922.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838612.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838612.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194757.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194757.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838399.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838399.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Count
 		{
@@ -185,6 +185,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -194,7 +195,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="left">optional object Left</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width, object height)
 		{
@@ -206,9 +206,9 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination)
@@ -221,10 +221,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level)
@@ -237,11 +237,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="name">optional object Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name)
@@ -254,12 +254,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="name">optional object Name</param>
 		/// <param name="caption">optional object Caption</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption)
@@ -272,13 +272,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
 		/// <param name="name">optional object Name</param>
 		/// <param name="caption">optional object Caption</param>
 		/// <param name="top">optional object Top</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top)
@@ -291,6 +291,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -298,7 +299,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="caption">optional object Caption</param>
 		/// <param name="top">optional object Top</param>
 		/// <param name="left">optional object Left</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left)
@@ -311,6 +311,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx
 		/// </summary>
 		/// <param name="slicerDestination">object SlicerDestination</param>
 		/// <param name="level">optional object Level</param>
@@ -319,7 +320,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="top">optional object Top</param>
 		/// <param name="left">optional object Left</param>
 		/// <param name="width">optional object Width</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840835.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.Slicer Add(object slicerDestination, object level, object name, object caption, object top, object left, object width)

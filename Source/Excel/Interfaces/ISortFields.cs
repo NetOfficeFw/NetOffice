@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range Key</param>
 		/// <param name="sortOn">optional object SortOn</param>
@@ -197,6 +198,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range Key</param>
 		[CustomMethodAttribute]
@@ -211,6 +213,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range Key</param>
 		/// <param name="sortOn">optional object SortOn</param>
@@ -226,6 +229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range Key</param>
 		/// <param name="sortOn">optional object SortOn</param>
@@ -242,6 +246,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="key">NetOffice.ExcelApi.Range Key</param>
 		/// <param name="sortOn">optional object SortOn</param>
@@ -259,6 +264,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 Clear()

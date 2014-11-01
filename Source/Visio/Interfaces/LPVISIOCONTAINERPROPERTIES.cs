@@ -335,6 +335,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void Disband()
@@ -345,6 +346,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void FitToContents()
@@ -355,6 +357,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="marginUnits">NetOffice.VisioApi.Enums.VisUnitCodes MarginUnits</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -367,6 +370,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="marginUnits">NetOffice.VisioApi.Enums.VisUnitCodes MarginUnits</param>
 		/// <param name="marginSize">Double MarginSize</param>
@@ -379,6 +383,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="spacingUnits">NetOffice.VisioApi.Enums.VisUnitCodes SpacingUnits</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -391,6 +396,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="spacingUnits">NetOffice.VisioApi.Enums.VisUnitCodes SpacingUnits</param>
 		/// <param name="spacingSize">Double SpacingSize</param>
@@ -403,6 +409,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectToInsert">object ObjectToInsert</param>
 		/// <param name="position">Int32 Position</param>
@@ -415,6 +422,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="shapeMember">NetOffice.VisioApi.IVShape ShapeMember</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -427,6 +435,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="shape">NetOffice.VisioApi.IVShape Shape</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -440,6 +449,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectToRemove">object ObjectToRemove</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -451,6 +461,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectToReorder">object ObjectToReorder</param>
 		/// <param name="position">Int32 Position</param>
@@ -463,6 +474,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public Int32[] GetListMembers()
@@ -474,6 +486,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="containerFlags">Int32 ContainerFlags</param>
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -486,6 +499,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pObjectToAdd">object pObjectToAdd</param>
 		/// <param name="addOptions">NetOffice.VisioApi.Enums.VisMemberAddOptions addOptions</param>
@@ -498,6 +512,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="direction">NetOffice.VisioApi.Enums.VisLayoutDirection Direction</param>
 		[SupportByVersionAttribute("Visio", 14,15)]

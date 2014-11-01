@@ -97,6 +97,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -108,6 +109,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]

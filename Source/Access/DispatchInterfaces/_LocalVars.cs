@@ -167,6 +167,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="value">object Value</param>
@@ -180,6 +181,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

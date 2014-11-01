@@ -246,6 +246,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="numBytes">optional Int32 NumBytes = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -266,6 +267,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -286,6 +288,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
@@ -301,6 +304,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -312,6 +316,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		[CustomMethodAttribute]
@@ -324,6 +329,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
@@ -337,6 +343,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
@@ -351,6 +358,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
@@ -366,6 +374,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Close()
@@ -376,6 +385,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void SkipLine()
@@ -386,6 +396,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="buffer">object Buffer</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -397,6 +408,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void SetEOS()
@@ -407,6 +419,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="destStream">NetOffice.ADODBApi._Stream_Deprecated DestStream</param>
 		/// <param name="charNumber">optional Int32 CharNumber = -1</param>
@@ -419,6 +432,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="destStream">NetOffice.ADODBApi._Stream_Deprecated DestStream</param>
 		[CustomMethodAttribute]
@@ -431,6 +445,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Flush()
@@ -441,6 +456,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.SaveOptionsEnum Options = 1</param>
@@ -453,6 +469,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[CustomMethodAttribute]
@@ -465,6 +482,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -476,6 +494,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="numChars">optional Int32 NumChars = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -488,6 +507,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -500,6 +520,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="data">string Data</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.StreamWriteEnum Options = 0</param>
@@ -512,6 +533,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="data">string Data</param>
 		[CustomMethodAttribute]
@@ -524,6 +546,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Cancel()

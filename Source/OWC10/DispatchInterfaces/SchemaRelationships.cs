@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="manySchemaRowsource">string ManySchemaRowsource</param>
@@ -148,6 +149,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="manySchemaRowsource">string ManySchemaRowsource</param>
@@ -166,6 +168,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

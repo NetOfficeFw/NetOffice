@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface PickerFields 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862500.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862500.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerFields : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PickerField>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862793.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862793.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 Count
 		{

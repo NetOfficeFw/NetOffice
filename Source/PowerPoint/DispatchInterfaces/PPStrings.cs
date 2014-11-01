@@ -97,6 +97,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -113,6 +114,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -125,6 +127,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="_string">string String</param>
 		/// <param name="position">Int32 Position</param>
@@ -137,6 +140,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]

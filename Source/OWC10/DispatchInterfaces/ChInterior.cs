@@ -349,6 +349,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="patternType">NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
 		/// <param name="color">optional object Color</param>
@@ -362,6 +363,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="patternType">NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
 		[CustomMethodAttribute]
@@ -374,6 +376,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="patternType">NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType</param>
 		/// <param name="color">optional object Color</param>
@@ -387,6 +390,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVarient">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient</param>
@@ -400,6 +404,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="textureFile">object textureFile</param>
 		/// <param name="textureFormat">optional NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat = 4</param>
@@ -414,6 +419,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="textureFile">object textureFile</param>
 		[CustomMethodAttribute]
@@ -426,6 +432,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="textureFile">object textureFile</param>
 		/// <param name="textureFormat">optional NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat = 4</param>
@@ -439,6 +446,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="textureFile">object textureFile</param>
 		/// <param name="textureFormat">optional NetOffice.OWC10Api.Enums.ChartTextureFormatEnum TextureFormat = 4</param>
@@ -453,6 +461,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
@@ -467,6 +476,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
@@ -481,6 +491,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="color">optional object Color</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -492,6 +503,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -503,6 +515,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
@@ -517,6 +530,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>
@@ -530,6 +544,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="gradientStyle">NetOffice.OWC10Api.Enums.ChartGradientStyleEnum GradientStyle</param>
 		/// <param name="gradientVariant">NetOffice.OWC10Api.Enums.ChartGradientVariantEnum GradientVariant</param>

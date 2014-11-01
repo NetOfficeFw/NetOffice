@@ -94,6 +94,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869353.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867714.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlObjectClass Class
@@ -126,6 +128,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868594.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._NameSpace Session
@@ -142,6 +145,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861614.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -159,6 +163,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869984.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Actions Actions
@@ -175,6 +180,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866475.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Attachments Attachments
@@ -191,6 +197,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868846.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string BillingInformation
@@ -211,6 +218,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869687.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Body
@@ -231,6 +239,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868536.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Categories
@@ -251,6 +260,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869197.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Companies
@@ -271,6 +281,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860941.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string ConversationIndex
@@ -286,6 +297,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867429.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string ConversationTopic
@@ -301,6 +313,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868448.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime CreationTime
@@ -316,6 +329,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860394.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string EntryID
@@ -331,6 +345,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866399.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.FormDescription FormDescription
@@ -347,6 +362,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865626.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi._Inspector GetInspector
@@ -363,6 +379,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870060.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlImportance Importance
@@ -384,6 +401,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861615.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime LastModificationTime
@@ -417,6 +435,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861012.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string MessageClass
@@ -437,6 +456,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864214.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Mileage
@@ -457,6 +477,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869603.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool NoAging
@@ -477,6 +498,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866760.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 OutlookInternalVersion
@@ -492,6 +514,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864439.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string OutlookVersion
@@ -507,6 +530,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867665.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool Saved
@@ -522,6 +546,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865657.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlSensitivity Sensitivity
@@ -543,6 +568,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867533.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public Int32 Size
@@ -558,6 +584,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869919.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string Subject
@@ -578,6 +605,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865608.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool UnRead
@@ -598,6 +626,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868402.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.UserProperties UserProperties
@@ -614,6 +643,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863085.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool AutoForwarded
@@ -634,6 +664,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862081.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime DeferredDeliveryTime
@@ -654,6 +685,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865301.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool DeleteAfterSubmit
@@ -674,6 +706,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861556.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime ExpiryTime
@@ -755,6 +788,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866985.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool OriginatorDeliveryReportRequested
@@ -775,6 +809,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868855.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime ReceivedTime
@@ -795,6 +830,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864432.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Recipients Recipients
@@ -811,6 +847,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868400.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool ReminderSet
@@ -831,6 +868,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868943.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime ReminderTime
@@ -851,6 +889,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868322.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.Recipients ReplyRecipients
@@ -867,6 +906,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863419.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.MAPIFolder SaveSentMessageFolder
@@ -888,6 +928,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860665.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public string SenderName
@@ -903,6 +944,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868756.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool Sent
@@ -918,6 +960,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863425.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public DateTime SentOn
@@ -933,6 +976,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861829.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public bool Submitted
@@ -964,6 +1008,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868824.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlDownloadState DownloadState
@@ -980,6 +1025,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868584.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.ItemProperties ItemProperties
@@ -996,6 +1042,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868345.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public NetOffice.OutlookApi.Enums.OlRemoteStatus MarkForDownload
@@ -1017,6 +1064,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862115.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public bool IsConflict
@@ -1032,6 +1080,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868525.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public string MeetingWorkspaceURL
@@ -1068,6 +1117,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865372.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public bool AutoResolvedWinner
@@ -1083,6 +1133,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867566.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public NetOffice.OutlookApi.Conflicts Conflicts
@@ -1099,6 +1150,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868632.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public string SenderEmailAddress
@@ -1114,6 +1166,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868041.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 11,12,14,15)]
 		public string SenderEmailType
@@ -1129,6 +1182,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865853.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
@@ -1145,6 +1199,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866031.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string ConversationID
@@ -1160,6 +1215,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867151.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi.Account SendUsingAccount
@@ -1181,6 +1237,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868547.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public bool IsLatestVersion
@@ -1196,6 +1253,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864715.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public object RTFBody
@@ -1224,6 +1282,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867155.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public DateTime RetentionExpirationDate
@@ -1239,6 +1298,7 @@ namespace NetOffice.OutlookApi
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868264.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public string RetentionPolicyName
@@ -1257,6 +1317,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870052.aspx
 		/// </summary>
 		/// <param name="saveMode">NetOffice.OutlookApi.Enums.OlInspectorClose SaveMode</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -1268,6 +1329,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868386.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public object Copy()
@@ -1280,6 +1342,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865824.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Delete()
@@ -1290,6 +1353,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867509.aspx
 		/// </summary>
 		/// <param name="modal">optional object Modal</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -1301,6 +1365,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867509.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -1312,6 +1377,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868483.aspx
 		/// </summary>
 		/// <param name="destFldr">NetOffice.OutlookApi.MAPIFolder DestFldr</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -1325,6 +1391,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870171.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void PrintOut()
@@ -1335,6 +1402,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865023.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Save()
@@ -1345,6 +1413,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869149.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="type">optional object Type</param>
@@ -1357,6 +1426,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869149.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[CustomMethodAttribute]
@@ -1369,6 +1439,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869092.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.MeetingItem Forward()
@@ -1381,6 +1452,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867189.aspx
 		/// </summary>
 		/// <param name="addToCalendar">bool AddToCalendar</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -1394,6 +1466,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869521.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.MailItem Reply()
@@ -1406,6 +1479,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868643.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public NetOffice.OutlookApi.MailItem ReplyAll()
@@ -1418,6 +1492,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869409.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Send()
@@ -1428,6 +1503,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869606.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 		public void ShowCategoriesDialog()
@@ -1438,6 +1514,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861242.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public NetOffice.OutlookApi._Conversation GetConversation()

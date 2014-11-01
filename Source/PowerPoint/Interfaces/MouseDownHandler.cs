@@ -97,6 +97,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="activeWin">object activeWin</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]

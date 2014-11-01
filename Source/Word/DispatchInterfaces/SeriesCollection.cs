@@ -12,8 +12,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface SeriesCollection 
 	/// SupportByVersion Word, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821223.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821223.aspx </remarks>
 	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SeriesCollection : COMObject ,IEnumerable<NetOffice.WordApi.Series>
@@ -96,9 +96,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839574.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839574.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834899.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834899.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Count
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836348.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836348.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845293.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845293.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
@@ -167,13 +167,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
@@ -185,9 +185,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series Add(object source)
@@ -200,10 +200,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol)
@@ -216,11 +216,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels)
@@ -233,12 +233,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192549.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
@@ -251,11 +251,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Extend(object source, object rowcol, object categoryLabels)
 		{
@@ -274,9 +274,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Extend(object source)
@@ -296,10 +296,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="rowcol">optional object Rowcol</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197201.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Extend(object source, object rowcol)
@@ -319,8 +319,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840883.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840883.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Series NewSeries()
 		{
@@ -332,6 +332,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

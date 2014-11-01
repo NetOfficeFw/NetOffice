@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface ThemeColorScheme 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863682.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863682.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ThemeColorScheme : _IMsoDispObj ,IEnumerable<object>
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864930.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864930.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861492.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861492.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
@@ -133,9 +133,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860912.aspx
 		/// </summary>
 		/// <param name="index">NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860912.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
 		{
@@ -147,9 +147,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862095.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862095.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Load(string fileName)
 		{
@@ -159,9 +159,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861898.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861898.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Save(string fileName)
 		{
@@ -171,9 +171,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862172.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862172.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 GetCustomColor(string name)
 		{

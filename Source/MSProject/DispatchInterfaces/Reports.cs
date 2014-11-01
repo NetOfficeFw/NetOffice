@@ -163,6 +163,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="newName">string NewName</param>
@@ -177,6 +178,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -190,6 +192,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("MSProject", 11)]

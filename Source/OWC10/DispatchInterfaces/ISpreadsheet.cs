@@ -1418,6 +1418,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="addIn">object AddIn</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1429,6 +1430,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void BeginUndo()
@@ -1439,6 +1441,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Calculate()
@@ -1449,6 +1452,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void CalculateFull()
@@ -1459,6 +1463,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cancel">optional bool Cancel = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1470,6 +1475,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1481,6 +1487,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="expression">object Expression</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1502,6 +1509,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="expression">object Expression</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1522,6 +1530,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = </param>
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
@@ -1535,6 +1544,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1546,6 +1556,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = </param>
 		[CustomMethodAttribute]
@@ -1558,6 +1569,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="filename">optional string Filename = </param>
 		/// <param name="action">optional NetOffice.OWC10Api.Enums.SheetExportActionEnum Action = 1</param>
@@ -1571,6 +1583,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1582,6 +1595,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="bstr">string bstr</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1596,6 +1610,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="range1">NetOffice.OWC10Api._Range Range1</param>
 		/// <param name="range2">NetOffice.OWC10Api._Range Range2</param>
@@ -1610,6 +1625,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="range1">NetOffice.OWC10Api._Range Range1</param>
 		/// <param name="range2">NetOffice.OWC10Api._Range Range2</param>
@@ -1624,6 +1640,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Refresh()
@@ -1634,6 +1651,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Repaint()
@@ -1644,6 +1662,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void ShowAbout()
@@ -1654,6 +1673,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -1667,6 +1687,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="topic">Int32 Topic</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1678,6 +1699,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Undo()
@@ -1688,6 +1710,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void UpdatePropertyToolbox()

@@ -355,6 +355,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void Solid()
@@ -365,6 +366,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="textureFile">string TextureFile</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
@@ -376,6 +378,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -389,6 +392,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pattern">NetOffice.OfficeApi.Enums.MsoPatternType Pattern</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
@@ -400,6 +404,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -413,6 +418,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
@@ -424,6 +430,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -436,6 +443,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>
@@ -450,6 +458,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
@@ -461,6 +470,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		[CustomMethodAttribute]
@@ -473,6 +483,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>
@@ -486,6 +497,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>

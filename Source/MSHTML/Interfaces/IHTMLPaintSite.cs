@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 InvalidatePainterInfo()
@@ -108,6 +109,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="prcInvalid">tagRECT prcInvalid</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -120,6 +122,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="rgnInvalid">_RemotableHandle rgnInvalid</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -132,6 +135,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pDrawInfo">_HTML_PAINT_DRAW_INFO pDrawInfo</param>
@@ -148,6 +152,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ptGlobal">tagPOINT ptGlobal</param>
 		/// <param name="pptLocal">tagPOINT pptLocal</param>
@@ -164,6 +169,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ptLocal">tagPOINT ptLocal</param>
 		/// <param name="pptGlobal">tagPOINT pptGlobal</param>
@@ -180,6 +186,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="plCookie">Int32 plCookie</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

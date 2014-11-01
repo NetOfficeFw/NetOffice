@@ -557,6 +557,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
@@ -569,6 +570,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Help()
@@ -579,6 +581,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -599,6 +602,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -614,6 +618,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -630,6 +635,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -647,6 +653,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -665,6 +672,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -684,6 +692,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		/// <param name="callback">string Callback</param>
@@ -704,6 +713,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wizardID">Int32 WizardID</param>
 		/// <param name="varfSuccess">bool varfSuccess</param>
@@ -717,6 +727,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wizardID">Int32 WizardID</param>
 		/// <param name="varfSuccess">bool varfSuccess</param>
@@ -730,6 +741,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wizardID">Int32 WizardID</param>
 		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
@@ -743,6 +755,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wizardID">Int32 WizardID</param>
 		/// <param name="act">NetOffice.OfficeApi.Enums.MsoWizardActType act</param>
@@ -756,6 +769,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void ResetTips()
@@ -766,6 +780,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrAlertTitle">string bstrAlertTitle</param>
 		/// <param name="bstrAlertText">string bstrAlertText</param>

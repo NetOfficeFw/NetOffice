@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface Envelope 
 	/// SupportByVersion Word, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844948.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844948.aspx </remarks>
 	[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Envelope : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839987.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839987.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837451.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837451.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -128,9 +128,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837283.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837283.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844876.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844876.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Range Address
 		{
@@ -163,8 +163,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838288.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838288.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Range ReturnAddress
 		{
@@ -200,8 +200,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845764.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845764.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DefaultPrintFIMA
 		{
@@ -221,8 +221,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195334.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195334.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single DefaultHeight
 		{
@@ -242,8 +242,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192764.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192764.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single DefaultWidth
 		{
@@ -263,8 +263,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192360.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192360.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string DefaultSize
 		{
@@ -284,8 +284,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838668.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838668.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DefaultOmitReturnAddress
 		{
@@ -305,8 +305,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837953.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837953.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdPaperTray FeedSource
 		{
@@ -327,8 +327,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194709.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194709.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single AddressFromLeft
 		{
@@ -348,8 +348,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194512.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194512.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single AddressFromTop
 		{
@@ -369,8 +369,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836104.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836104.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single ReturnAddressFromLeft
 		{
@@ -390,8 +390,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845802.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845802.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Single ReturnAddressFromTop
 		{
@@ -411,8 +411,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194331.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194331.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Style AddressStyle
 		{
@@ -428,8 +428,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838363.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838363.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Style ReturnAddressStyle
 		{
@@ -445,8 +445,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836699.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836699.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdEnvelopeOrientation DefaultOrientation
 		{
@@ -467,8 +467,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838355.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838355.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DefaultFaceUp
 		{
@@ -488,8 +488,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192380.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192380.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool Vertical
 		{
@@ -509,8 +509,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838725.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838725.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single RecipientNamefromLeft
 		{
@@ -530,8 +530,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196823.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196823.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single RecipientNamefromTop
 		{
@@ -551,8 +551,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838472.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838472.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single RecipientPostalfromLeft
 		{
@@ -572,8 +572,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837337.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837337.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single RecipientPostalfromTop
 		{
@@ -593,8 +593,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194048.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194048.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single SenderNamefromLeft
 		{
@@ -614,8 +614,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844790.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844790.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single SenderNamefromTop
 		{
@@ -635,8 +635,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194353.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194353.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single SenderPostalfromLeft
 		{
@@ -656,8 +656,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835494.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835494.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public Single SenderPostalfromTop
 		{
@@ -680,6 +680,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -699,7 +700,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
@@ -709,6 +709,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -738,7 +739,6 @@ namespace NetOffice.WordApi
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="senderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="senderPostalfromTop">optional object SenderPostalfromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
@@ -748,8 +748,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert()
@@ -760,9 +760,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress)
@@ -773,10 +773,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address)
@@ -787,11 +787,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText)
@@ -802,12 +802,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress)
@@ -818,13 +818,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
 		/// <param name="returnAddress">optional object ReturnAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
@@ -835,6 +835,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -842,7 +843,6 @@ namespace NetOffice.WordApi
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
 		/// <param name="returnAddress">optional object ReturnAddress</param>
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
@@ -853,6 +853,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -861,7 +862,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddress">optional object ReturnAddress</param>
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
 		/// <param name="printBarCode">optional object PrintBarCode</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
@@ -872,6 +872,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -881,7 +882,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
 		/// <param name="printBarCode">optional object PrintBarCode</param>
 		/// <param name="printFIMA">optional object PrintFIMA</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
@@ -892,6 +892,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -902,7 +903,6 @@ namespace NetOffice.WordApi
 		/// <param name="printBarCode">optional object PrintBarCode</param>
 		/// <param name="printFIMA">optional object PrintFIMA</param>
 		/// <param name="size">optional object Size</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
@@ -913,6 +913,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -924,7 +925,6 @@ namespace NetOffice.WordApi
 		/// <param name="printFIMA">optional object PrintFIMA</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="height">optional object Height</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
@@ -935,6 +935,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -947,7 +948,6 @@ namespace NetOffice.WordApi
 		/// <param name="size">optional object Size</param>
 		/// <param name="height">optional object Height</param>
 		/// <param name="width">optional object Width</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
@@ -958,6 +958,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -971,7 +972,6 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object Height</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="feedSource">optional object FeedSource</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
@@ -982,6 +982,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -996,7 +997,6 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="feedSource">optional object FeedSource</param>
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
@@ -1007,6 +1007,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1022,7 +1023,6 @@ namespace NetOffice.WordApi
 		/// <param name="feedSource">optional object FeedSource</param>
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
@@ -1033,6 +1033,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1049,7 +1050,6 @@ namespace NetOffice.WordApi
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
@@ -1060,6 +1060,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1077,7 +1078,6 @@ namespace NetOffice.WordApi
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
@@ -1088,6 +1088,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1106,7 +1107,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
@@ -1117,6 +1117,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1137,7 +1138,6 @@ namespace NetOffice.WordApi
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
 		/// <param name="printEPostage">optional object PrintEPostage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage)
@@ -1148,6 +1148,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1169,7 +1170,6 @@ namespace NetOffice.WordApi
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
 		/// <param name="printEPostage">optional object PrintEPostage</param>
 		/// <param name="vertical">optional object Vertical</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical)
@@ -1180,6 +1180,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1202,7 +1203,6 @@ namespace NetOffice.WordApi
 		/// <param name="printEPostage">optional object PrintEPostage</param>
 		/// <param name="vertical">optional object Vertical</param>
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft)
@@ -1213,6 +1213,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1236,7 +1237,6 @@ namespace NetOffice.WordApi
 		/// <param name="vertical">optional object Vertical</param>
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop)
@@ -1247,6 +1247,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1271,7 +1272,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft)
@@ -1282,6 +1282,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1307,7 +1308,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop)
@@ -1318,6 +1318,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1344,7 +1345,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft)
@@ -1355,6 +1355,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1382,7 +1383,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop)
@@ -1393,6 +1393,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1421,7 +1422,6 @@ namespace NetOffice.WordApi
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="senderPostalfromLeft">optional object SenderPostalfromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198190.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Insert(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft)
@@ -1432,6 +1432,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1451,7 +1452,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation)
 		{
@@ -1461,6 +1461,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1490,7 +1491,6 @@ namespace NetOffice.WordApi
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="senderPostalfromLeft">optional object SenderPostalfromLeft</param>
 		/// <param name="senderPostalfromTop">optional object SenderPostalfromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft, object senderPostalfromTop)
 		{
@@ -1500,8 +1500,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut()
@@ -1512,9 +1512,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress)
@@ -1525,10 +1525,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address)
@@ -1539,11 +1539,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText)
@@ -1554,12 +1554,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress)
@@ -1570,13 +1570,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
 		/// <param name="returnAddress">optional object ReturnAddress</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress)
@@ -1587,6 +1587,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1594,7 +1595,6 @@ namespace NetOffice.WordApi
 		/// <param name="omitReturnAddress">optional object OmitReturnAddress</param>
 		/// <param name="returnAddress">optional object ReturnAddress</param>
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText)
@@ -1605,6 +1605,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1613,7 +1614,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddress">optional object ReturnAddress</param>
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
 		/// <param name="printBarCode">optional object PrintBarCode</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode)
@@ -1624,6 +1624,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1633,7 +1634,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAutoText">optional object ReturnAutoText</param>
 		/// <param name="printBarCode">optional object PrintBarCode</param>
 		/// <param name="printFIMA">optional object PrintFIMA</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA)
@@ -1644,6 +1644,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1654,7 +1655,6 @@ namespace NetOffice.WordApi
 		/// <param name="printBarCode">optional object PrintBarCode</param>
 		/// <param name="printFIMA">optional object PrintFIMA</param>
 		/// <param name="size">optional object Size</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size)
@@ -1665,6 +1665,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1676,7 +1677,6 @@ namespace NetOffice.WordApi
 		/// <param name="printFIMA">optional object PrintFIMA</param>
 		/// <param name="size">optional object Size</param>
 		/// <param name="height">optional object Height</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height)
@@ -1687,6 +1687,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1699,7 +1700,6 @@ namespace NetOffice.WordApi
 		/// <param name="size">optional object Size</param>
 		/// <param name="height">optional object Height</param>
 		/// <param name="width">optional object Width</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width)
@@ -1710,6 +1710,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1723,7 +1724,6 @@ namespace NetOffice.WordApi
 		/// <param name="height">optional object Height</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="feedSource">optional object FeedSource</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource)
@@ -1734,6 +1734,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1748,7 +1749,6 @@ namespace NetOffice.WordApi
 		/// <param name="width">optional object Width</param>
 		/// <param name="feedSource">optional object FeedSource</param>
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft)
@@ -1759,6 +1759,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1774,7 +1775,6 @@ namespace NetOffice.WordApi
 		/// <param name="feedSource">optional object FeedSource</param>
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop)
@@ -1785,6 +1785,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1801,7 +1802,6 @@ namespace NetOffice.WordApi
 		/// <param name="addressFromLeft">optional object AddressFromLeft</param>
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft)
@@ -1812,6 +1812,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1829,7 +1830,6 @@ namespace NetOffice.WordApi
 		/// <param name="addressFromTop">optional object AddressFromTop</param>
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop)
@@ -1840,6 +1840,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1858,7 +1859,6 @@ namespace NetOffice.WordApi
 		/// <param name="returnAddressFromLeft">optional object ReturnAddressFromLeft</param>
 		/// <param name="returnAddressFromTop">optional object ReturnAddressFromTop</param>
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp)
@@ -1869,6 +1869,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1889,7 +1890,6 @@ namespace NetOffice.WordApi
 		/// <param name="defaultFaceUp">optional object DefaultFaceUp</param>
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
 		/// <param name="printEPostage">optional object PrintEPostage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage)
@@ -1900,6 +1900,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1921,7 +1922,6 @@ namespace NetOffice.WordApi
 		/// <param name="defaultOrientation">optional object DefaultOrientation</param>
 		/// <param name="printEPostage">optional object PrintEPostage</param>
 		/// <param name="vertical">optional object Vertical</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical)
@@ -1932,6 +1932,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1954,7 +1955,6 @@ namespace NetOffice.WordApi
 		/// <param name="printEPostage">optional object PrintEPostage</param>
 		/// <param name="vertical">optional object Vertical</param>
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft)
@@ -1965,6 +1965,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -1988,7 +1989,6 @@ namespace NetOffice.WordApi
 		/// <param name="vertical">optional object Vertical</param>
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop)
@@ -1999,6 +1999,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2023,7 +2024,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientNamefromLeft">optional object RecipientNamefromLeft</param>
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft)
@@ -2034,6 +2034,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2059,7 +2060,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientNamefromTop">optional object RecipientNamefromTop</param>
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop)
@@ -2070,6 +2070,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2096,7 +2097,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientPostalfromLeft">optional object RecipientPostalfromLeft</param>
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft)
@@ -2107,6 +2107,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2134,7 +2135,6 @@ namespace NetOffice.WordApi
 		/// <param name="recipientPostalfromTop">optional object RecipientPostalfromTop</param>
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop)
@@ -2145,6 +2145,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2173,7 +2174,6 @@ namespace NetOffice.WordApi
 		/// <param name="senderNamefromLeft">optional object SenderNamefromLeft</param>
 		/// <param name="senderNamefromTop">optional object SenderNamefromTop</param>
 		/// <param name="senderPostalfromLeft">optional object SenderPostalfromLeft</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197594.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void PrintOut(object extractAddress, object address, object autoText, object omitReturnAddress, object returnAddress, object returnAutoText, object printBarCode, object printFIMA, object size, object height, object width, object feedSource, object addressFromLeft, object addressFromTop, object returnAddressFromLeft, object returnAddressFromTop, object defaultFaceUp, object defaultOrientation, object printEPostage, object vertical, object recipientNamefromLeft, object recipientNamefromTop, object recipientPostalfromLeft, object recipientPostalfromTop, object senderNamefromLeft, object senderNamefromTop, object senderPostalfromLeft)
@@ -2184,8 +2184,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197914.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197914.aspx </remarks>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void UpdateDocument()
 		{
@@ -2195,6 +2195,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2224,6 +2225,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2236,6 +2238,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2249,6 +2252,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2263,6 +2267,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2278,6 +2283,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2294,6 +2300,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2311,6 +2318,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2329,6 +2337,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2348,6 +2357,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2368,6 +2378,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2389,6 +2400,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2411,6 +2423,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2434,6 +2447,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2458,6 +2472,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2483,6 +2498,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2509,6 +2525,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2536,6 +2553,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2564,6 +2582,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2593,6 +2612,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2622,6 +2642,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2634,6 +2655,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2647,6 +2669,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2661,6 +2684,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2676,6 +2700,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2692,6 +2717,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2709,6 +2735,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2727,6 +2754,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2746,6 +2774,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2766,6 +2795,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2787,6 +2817,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2809,6 +2840,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2832,6 +2864,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2856,6 +2889,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2881,6 +2915,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2907,6 +2942,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2934,6 +2970,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2962,6 +2999,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="extractAddress">optional object ExtractAddress</param>
 		/// <param name="address">optional object Address</param>
@@ -2991,8 +3029,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196101.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196101.aspx </remarks>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public void Options()
 		{

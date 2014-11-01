@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
 		/// <param name="version">optional object version</param>
@@ -110,6 +111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrfeature">string bstrfeature</param>
 		[CustomMethodAttribute]

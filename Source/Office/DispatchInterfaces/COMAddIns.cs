@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface COMAddIns 
 	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865489.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865489.aspx </remarks>
 	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class COMAddIns : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.COMAddIn>
@@ -96,8 +96,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861780.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861780.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860605.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860605.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -150,8 +151,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861527.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861527.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Update()
 		{
@@ -161,6 +162,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varfModal">bool varfModal</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

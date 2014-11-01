@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppIIter">NetOffice.MSHTMLApi.ISegmentListIterator ppIIter</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="peType">NetOffice.MSHTMLApi.Enums._SELECTION_TYPE peType</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -127,6 +129,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pfEmpty">Int32 pfEmpty</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

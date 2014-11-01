@@ -11,8 +11,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface Pane 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920644(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920644(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Pane : COMObject
@@ -154,6 +154,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Activate()
@@ -164,6 +165,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Close()
@@ -174,6 +176,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public NetOffice.MSProjectApi.View View()

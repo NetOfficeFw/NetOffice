@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface OutlineCodes 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920639(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920639(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class OutlineCodes : COMObject ,IEnumerable<NetOffice.MSProjectApi.OutlineCode>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="name">string Name</param>

@@ -730,6 +730,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864144.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -747,6 +748,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863319.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Creator
@@ -762,6 +764,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861450.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public bool BuiltInFace
@@ -782,6 +785,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864154.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 FaceId
@@ -802,6 +806,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864972.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public string ShortcutText
@@ -822,6 +827,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863115.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoButtonState State
@@ -843,6 +849,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861864.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoButtonStyle Style
@@ -864,6 +871,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861807.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoCommandBarButtonHyperlinkType HyperlinkType
@@ -885,6 +893,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864041.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public stdole.Picture Picture
@@ -906,6 +915,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864960.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public stdole.Picture Mask
@@ -954,6 +964,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
@@ -967,6 +978,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -980,6 +992,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -1005,6 +1018,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -1030,6 +1044,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
@@ -1052,6 +1067,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1074,6 +1090,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
@@ -1096,6 +1113,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1108,6 +1126,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1120,6 +1139,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860283.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void CopyFace()
@@ -1130,6 +1150,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860599.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void PasteFace()

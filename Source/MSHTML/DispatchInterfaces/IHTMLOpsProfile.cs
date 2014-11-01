@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
@@ -110,6 +111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[CustomMethodAttribute]
@@ -123,6 +125,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void clearRequest()
@@ -133,6 +136,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -149,6 +153,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		[CustomMethodAttribute]
@@ -161,6 +166,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -174,6 +180,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -188,6 +195,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -203,6 +211,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -219,6 +228,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -231,6 +241,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
@@ -245,6 +256,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="value">string value</param>
@@ -259,6 +271,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool commitChanges()
@@ -270,6 +283,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="reserved">optional object reserved</param>
@@ -283,6 +297,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[CustomMethodAttribute]
@@ -296,6 +311,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -312,6 +328,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		[CustomMethodAttribute]
@@ -324,6 +341,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -337,6 +355,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -351,6 +370,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -366,6 +386,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="usage">object usage</param>
 		/// <param name="fname">optional object fname</param>
@@ -382,6 +403,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool doWriteRequest()

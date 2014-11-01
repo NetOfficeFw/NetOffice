@@ -162,6 +162,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -179,6 +180,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index = -1</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
@@ -193,6 +195,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -206,6 +209,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index = -1</param>
 		[CustomMethodAttribute]
@@ -220,6 +224,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void SelectAll()

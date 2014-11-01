@@ -209,6 +209,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 Refresh()
@@ -220,6 +221,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="connectionToDataSource">NetOffice.ExcelApi.WorkbookConnection ConnectionToDataSource</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -233,6 +235,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="modelTable">object ModelTable</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -246,6 +249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 Initialize()

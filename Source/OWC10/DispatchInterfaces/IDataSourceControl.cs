@@ -1090,6 +1090,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordsetName">string RecordsetName</param>
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
@@ -1105,6 +1106,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordsetName">string RecordsetName</param>
 		[CustomMethodAttribute]
@@ -1119,6 +1121,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordsetName">string RecordsetName</param>
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
@@ -1134,6 +1137,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dataAssistant">object DataAssistant</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1146,6 +1150,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="advise">object Advise</param>
 		/// <param name="sinkName">string SinkName</param>
@@ -1159,6 +1164,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="sinkName">string SinkName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1171,6 +1177,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUnknownDropGoo">object pUnknownDropGoo</param>
 		/// <param name="bstrRecordSetDefName">string bstrRecordSetDefName</param>
@@ -1188,6 +1195,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="rowsources">object Rowsources</param>
 		/// <param name="relationships">object Relationships</param>
@@ -1207,6 +1215,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="element">object Element</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1220,6 +1229,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="rowsources">object Rowsources</param>
 		/// <param name="relationships">object Relationships</param>
@@ -1247,6 +1257,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="unknownDropGoo">object UnknownDropGoo</param>
 		/// <param name="recordSetDefName">string RecordSetDefName</param>
@@ -1275,6 +1286,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="hyperlink">object Hyperlink</param>
 		/// <param name="part">NetOffice.OWC10Api.Enums.DscHyperlinkPartEnum Part</param>
@@ -1289,6 +1301,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1300,6 +1313,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="oldID">string OldID</param>
 		/// <param name="newID">string NewID</param>
@@ -1313,6 +1327,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1324,6 +1339,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1337,6 +1353,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1349,6 +1366,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="sectionElement">object SectionElement</param>
 		/// <param name="recordSource">string RecordSource</param>
@@ -1371,6 +1389,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordSource">string RecordSource</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1383,6 +1402,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordSource">string RecordSource</param>
 		/// <param name="pageField">string PageField</param>
@@ -1396,6 +1416,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="bstrRecordset">string bstrRecordset</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1408,6 +1429,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="exportType">NetOffice.OWC10Api.Enums.ExportableConnectStringEnum ExportType</param>
 		/// <param name="connectString">string ConnectString</param>
@@ -1424,6 +1446,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="eEncoding">optional NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1435,6 +1458,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1446,6 +1470,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="recordsetName">string RecordsetName</param>
 		/// <param name="recordset">NetOffice.ADODBApi.Recordset Recordset</param>
@@ -1458,6 +1483,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="onlineServer">string OnlineServer</param>
 		/// <param name="onlineDatabase">string OnlineDatabase</param>
@@ -1481,6 +1507,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="refreshType">optional NetOffice.OWC10Api.Enums.RefreshType RefreshType = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1493,6 +1520,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1505,6 +1533,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="fChild">Int32 fChild</param>
@@ -1522,6 +1551,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="notification">NetOffice.OWC10Api.Enums.NotificationType Notification</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1534,6 +1564,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="suspend">bool Suspend</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1546,6 +1577,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1557,6 +1589,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="connectionString">string ConnectionString</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1570,6 +1603,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -1586,6 +1620,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -1601,6 +1636,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -1617,6 +1653,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -1629,6 +1666,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="synchronizing">bool Synchronizing</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1641,6 +1679,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="displayError">bool DisplayError</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1653,6 +1692,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="suspend">bool Suspend</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1665,6 +1705,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="firePropChange">bool FirePropChange</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1677,6 +1718,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="value">object Value</param>
 		/// <param name="valueIfNull">optional object ValueIfNull</param>
@@ -1698,6 +1740,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="value">object Value</param>
 		[CustomMethodAttribute]
@@ -1719,6 +1762,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void RefreshJetCache()
@@ -1729,6 +1773,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -193,6 +193,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		[SupportByVersionAttribute("Visio", 15)]
@@ -206,6 +207,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 15)]
 		public void DeleteAll()

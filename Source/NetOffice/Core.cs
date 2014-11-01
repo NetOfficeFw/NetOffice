@@ -53,6 +53,9 @@ namespace NetOffice
         private static string[] _knownNetOfficeKeyTokens;
         private static object _defaultLock = new object();
 
+        private static readonly string _noAssemblyAttributeName = "NetOffice.NetOfficeAssemblyAttribute";
+        private static readonly string[] _tryLoadAssemblyNames = new string[] { "ExcelApi.dll", "WordApi.dll", "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll", "VisioApi.dll", "MSProjectApi.dll" };
+
         #endregion
 
         #region Ctor
@@ -198,6 +201,7 @@ namespace NetOffice
         /// Must be called from client assembly for COMObject Support
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// </summary>
+        [Obsolete("Not necessary anymore(self-initializing)")]
         public void Initialize()
         {
             Initialize(CacheOptions.KeepExistingCacheAlive);
@@ -208,6 +212,7 @@ namespace NetOffice
         /// Recieve factory infos from all loaded NetOfficeApi Assemblies in current application domain
         /// <param name="cacheOptions">NetOffice cache options</param>
         /// </summary>
+        [Obsolete("Not necessary anymore(self-initializing)")]
         public void Initialize(CacheOptions cacheOptions)
         {
             Settings.CacheOptions = cacheOptions;
@@ -220,13 +225,8 @@ namespace NetOffice
 
                 Console.WriteLine("NetOffice Core.Initialize() NO Version:{1} DeepLevel:{0}", Settings.EnableDeepLoading, this.GetType().Assembly.GetName().Version);
 
-                TryLoadAssembly("ExcelApi.dll");
-                TryLoadAssembly("WordApi.dll");
-                TryLoadAssembly("OutlookApi.dll");
-                TryLoadAssembly("PowerPointApi.dll");
-                TryLoadAssembly("AccessApi.dll");
-                TryLoadAssembly("VisioApi.dll");
-                TryLoadAssembly("MSProjectApi.dll");
+                foreach (var item in _tryLoadAssemblyNames)
+                    TryLoadAssembly(item);
 
                 if (!_assemblyResolveEventConnected)
                 {
@@ -273,9 +273,6 @@ namespace NetOffice
                         if (ContainsNetOfficePublicKeyToken(itemName))
                         {
                             string assemblyName = itemName.Name;
-
-                            //Console.WriteLine(string.Format("Detect NetOffice assembly {0}.", assemblyName));
-
                             Assembly itemAssembly = Assembly.Load(itemName);
 
                             string[] depends = AddAssembly(assemblyName, itemAssembly);
@@ -460,23 +457,23 @@ namespace NetOffice
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYGET:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUT:
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_PROPERTYPUTREF:
-                        {
-                            typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
-                            string outValue = "";
-                            bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
-                            if (!exists)
-                                supportList.Add("Property-" + strName, strDocString);
-                            break;
-                        }
+                    {
+                        typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                        string outValue = "";
+                        bool exists = supportList.TryGetValue("Property-" + strName, out outValue);
+                        if (!exists)
+                            supportList.Add("Property-" + strName, strDocString);
+                        break;
+                    }
                     case System.Runtime.InteropServices.ComTypes.INVOKEKIND.INVOKE_FUNC:
-                        {
-                            typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
-                            string outValue = "";
-                            bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
-                            if (!exists)
-                                supportList.Add("Method-" + strName, strDocString);
-                            break;
-                        }
+                    {
+                        typeInfo.GetDocumentation(funcDesc.memid, out strName, out strDocString, out dwHelpContext, out strHelpFile);
+                        string outValue = "";
+                        bool exists = supportList.TryGetValue("Method-" + strName, out outValue);
+                        if (!exists)
+                            supportList.Add("Method-" + strName, strDocString);
+                        break;   
+                    }
                 }
 
                 typeInfo.ReleaseFuncDesc(funcDescPointer);
@@ -860,7 +857,7 @@ namespace NetOffice
                 foreach (object itemAttribute in attributes)
                 {
                     string fullnameAttribute = itemAttribute.GetType().FullName;
-                    if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
+                    if (fullnameAttribute == _noAssemblyAttributeName)
                         return true;
                 }
                 return false;
@@ -932,6 +929,7 @@ namespace NetOffice
                 if (item.Assembly.GetName().Name.StartsWith(name, StringComparison.InvariantCultureIgnoreCase))
                     return true;
             }
+
             return false;
         }
 
@@ -1056,18 +1054,19 @@ namespace NetOffice
 
             foreach (IFactoryInfo item in _factoryList)
             {
-                if (true == hostGuid.Equals(item.ComponentGuid))
-                    return item;
+                foreach (var guid in item.ComponentGuid)
+                    if (true == guid.Equals(hostGuid))
+                        return item;
             }
 
-            // failback
+            // failback because some types was multiple defined (not allowed in COM but in fact ms do this)
             foreach (IFactoryInfo item in _factoryList)
             {
                 if (item.Contains(className))
                     return item;
             }
 
-            string message = string.Format("class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
+            string message = string.Format("Class {0}:{1} not found in loaded NetOffice Assemblies{2}", hostGuid, className, Environment.NewLine);
             message += string.Format("Currently loaded NetOfficeApi Assemblies{0}", Environment.NewLine);
             foreach (IFactoryInfo item in _factoryList)
                 message += string.Format("Loaded NetOffice Assembly:{0} {1}{2}", item.ComponentGuid, item.Assembly.FullName, Environment.NewLine);
@@ -1148,7 +1147,6 @@ namespace NetOffice
                 }
                 else
                 {
-                    //Console.WriteLine(string.Format("Unable to resolve assembly {0}. The assembly doesnt exists in current codebase.", fileName));
                     return null;
                 }
             }
@@ -1179,7 +1177,7 @@ namespace NetOffice
             {
                 IFactoryInfo factoryInfo = GetFactoryInfo(comProxy);
                 string className = TypeDescriptor.GetClassName(comProxy);
-                string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
+                string fullClassName = String.Format("{0}.{1}", factoryInfo.AssemblyNamespace, className);
                 Type proxyType = null;
                 if (!_proxyTypeCache.TryGetValue(fullClassName, out proxyType))
                 {

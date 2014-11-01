@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface Assignments 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920549(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920549(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Assignments : COMObject ,IEnumerable<NetOffice.MSProjectApi.Assignment>
@@ -190,6 +190,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="resourceID">optional object ResourceID</param>
@@ -205,6 +206,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -218,6 +220,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
@@ -232,6 +235,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="resourceID">optional object ResourceID</param>

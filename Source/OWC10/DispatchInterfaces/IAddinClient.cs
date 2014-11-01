@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="vardisp">object vardisp</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -108,6 +109,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void RemoveAddinHost()
@@ -118,6 +120,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		/// <param name="semiCalced">bool SemiCalced</param>

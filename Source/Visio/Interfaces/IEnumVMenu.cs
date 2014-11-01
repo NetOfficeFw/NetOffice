@@ -97,6 +97,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		/// <param name="rgelt">NetOffice.VisioApi.IVMenu rgelt</param>
@@ -116,6 +117,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -128,6 +130,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 Reset()
@@ -139,6 +142,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="ppenm">NetOffice.VisioApi.IEnumVMenu ppenm</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

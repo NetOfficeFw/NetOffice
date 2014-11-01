@@ -41,8 +41,8 @@ namespace NetOffice.VisioApi
 	///<summary>
 	/// CoClass Master 
 	/// SupportByVersion Visio, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769320(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769320(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Master : IVMaster,IEventBinding

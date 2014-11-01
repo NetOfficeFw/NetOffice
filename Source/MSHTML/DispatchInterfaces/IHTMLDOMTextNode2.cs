@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="count">Int32 Count</param>
@@ -110,6 +111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrstring">string bstrstring</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -121,6 +123,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="bstrstring">string bstrstring</param>
@@ -133,6 +136,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="count">Int32 Count</param>
@@ -145,6 +149,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="offset">Int32 offset</param>
 		/// <param name="count">Int32 Count</param>

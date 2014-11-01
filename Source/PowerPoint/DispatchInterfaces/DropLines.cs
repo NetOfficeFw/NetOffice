@@ -192,6 +192,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Delete()
@@ -211,6 +212,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public object Select()

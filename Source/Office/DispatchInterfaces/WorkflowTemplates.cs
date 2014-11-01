@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface WorkflowTemplates 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860226.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860226.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WorkflowTemplates : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.WorkflowTemplate>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861838.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861838.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{

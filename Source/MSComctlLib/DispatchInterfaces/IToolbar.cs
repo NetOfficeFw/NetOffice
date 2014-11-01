@@ -528,6 +528,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Refresh()
@@ -538,6 +539,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Customize()
@@ -548,6 +550,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="key">string Key</param>
 		/// <param name="subkey">string Subkey</param>
@@ -561,6 +564,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="key">string Key</param>
 		/// <param name="subkey">string Subkey</param>
@@ -574,6 +578,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void OLEDrag()
@@ -584,6 +589,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSComctlLib", 6)]

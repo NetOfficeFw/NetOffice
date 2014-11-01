@@ -133,6 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void NotifyStartOfTestSuiteRun()
@@ -143,6 +144,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void NotifyEndOfTestSuiteRun()

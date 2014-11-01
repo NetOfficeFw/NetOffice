@@ -12,8 +12,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface BuildingBlockEntries 
 	/// SupportByVersion Word, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835133.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835133.aspx </remarks>
 	[SupportByVersionAttribute("Word", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class BuildingBlockEntries : COMObject ,IEnumerable<NetOffice.WordApi.BuildingBlock>
@@ -96,8 +96,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840334.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840334.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194454.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194454.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Creator
 		{
@@ -129,9 +129,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836710.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836710.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public object Parent
 		{
@@ -147,8 +147,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838105.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838105.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 Count
 		{
@@ -166,6 +166,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
@@ -183,6 +184,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.WordApi.Enums.WdBuildingBlockTypes Type</param>
@@ -190,7 +192,6 @@ namespace NetOffice.WordApi
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="description">optional object Description</param>
 		/// <param name="insertOptions">optional NetOffice.WordApi.Enums.WdDocPartInsertOptions InsertOptions = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx </remarks>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Enums.WdBuildingBlockTypes type, string category, NetOffice.WordApi.Range range, object description, object insertOptions)
 		{
@@ -202,12 +203,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.WordApi.Enums.WdBuildingBlockTypes Type</param>
 		/// <param name="category">string Category</param>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Enums.WdBuildingBlockTypes type, string category, NetOffice.WordApi.Range range)
@@ -220,13 +221,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.WordApi.Enums.WdBuildingBlockTypes Type</param>
 		/// <param name="category">string Category</param>
 		/// <param name="range">NetOffice.WordApi.Range Range</param>
 		/// <param name="description">optional object Description</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845259.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.BuildingBlock Add(string name, NetOffice.WordApi.Enums.WdBuildingBlockTypes type, string category, NetOffice.WordApi.Range range, object description)

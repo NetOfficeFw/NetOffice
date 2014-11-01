@@ -97,6 +97,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -108,6 +109,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Quit()
@@ -118,6 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void DocumentChange()
@@ -128,6 +131,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -139,6 +143,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -151,6 +156,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -163,6 +169,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="saveAsUI">bool SaveAsUI</param>
@@ -176,6 +183,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -187,6 +195,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
@@ -199,6 +208,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
@@ -211,6 +221,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -222,6 +233,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -234,6 +246,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="cancel">bool Cancel</param>

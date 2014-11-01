@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pNamespace">NetOffice.MSHTMLApi.IElementNamespace pNamespace</param>
 		/// <param name="bstrImplementation">string bstrImplementation</param>

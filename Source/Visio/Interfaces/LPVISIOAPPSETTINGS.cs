@@ -1565,6 +1565,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1579,6 +1580,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		[CustomMethodAttribute]
@@ -1591,6 +1593,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1604,6 +1607,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="resolution">NetOffice.VisioApi.Enums.VisRasterExportResolution resolution</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1618,6 +1622,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pResolution">NetOffice.VisioApi.Enums.VisRasterExportResolution pResolution</param>
 		/// <param name="pWidth">Double pWidth</param>
@@ -1641,6 +1646,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1655,6 +1661,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		[CustomMethodAttribute]
@@ -1667,6 +1674,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1680,6 +1688,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.VisioApi.Enums.VisRasterExportSize size</param>
 		/// <param name="width">optional Double Width = 0</param>
@@ -1694,6 +1703,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pSize">NetOffice.VisioApi.Enums.VisRasterExportSize pSize</param>
 		/// <param name="pWidth">Double pWidth</param>

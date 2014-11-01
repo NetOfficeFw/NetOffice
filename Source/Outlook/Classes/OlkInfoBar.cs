@@ -20,8 +20,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass OlkInfoBar 
 	/// SupportByVersion Outlook, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861894.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861894.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class OlkInfoBar : _OlkInfoBar,IEventBinding

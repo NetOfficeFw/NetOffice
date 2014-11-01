@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface ChartCategory 
 	/// SupportByVersion Word, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227634.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227634.aspx </remarks>
 	[SupportByVersionAttribute("Word", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ChartCategory : COMObject
@@ -95,9 +95,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231175.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231175.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public object Parent
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232152.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232152.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public string Name
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227534.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227534.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public bool IsFiltered
 		{

@@ -15,8 +15,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// CoClass DependencyObjects 
 	/// SupportByVersion Access, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836573.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836573.aspx </remarks>
 	[SupportByVersionAttribute("Access", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DependencyObjects : _DependencyObjects

@@ -97,6 +97,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void ADOCheck()

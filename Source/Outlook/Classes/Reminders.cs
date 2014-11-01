@@ -21,8 +21,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass Reminders 
 	/// SupportByVersion Outlook, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866017.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866017.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Reminders : _Reminders,IEventBinding

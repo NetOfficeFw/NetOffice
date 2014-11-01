@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface ContactCard 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860545.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ContactCard : _IMsoDispObj
@@ -98,8 +98,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863157.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public void Close()
 		{
@@ -109,6 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
 		/// <param name="rectangleLeft">Int32 RectangleLeft</param>
@@ -117,7 +118,6 @@ namespace NetOffice.OfficeApi
 		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
 		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
 		/// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
 		{
@@ -127,6 +127,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx
 		/// </summary>
 		/// <param name="cardStyle">NetOffice.OfficeApi.Enums.MsoContactCardStyle CardStyle</param>
 		/// <param name="rectangleLeft">Int32 RectangleLeft</param>
@@ -134,7 +135,6 @@ namespace NetOffice.OfficeApi
 		/// <param name="rectangleTop">Int32 RectangleTop</param>
 		/// <param name="rectangleBottom">Int32 RectangleBottom</param>
 		/// <param name="horizontalPosition">Int32 HorizontalPosition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861819.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
 		public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)

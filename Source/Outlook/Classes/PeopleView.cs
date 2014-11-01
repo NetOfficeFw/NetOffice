@@ -15,8 +15,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass PeopleView 
 	/// SupportByVersion Outlook, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229577.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229577.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class PeopleView : _PeopleView

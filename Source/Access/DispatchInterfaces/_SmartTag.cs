@@ -94,6 +94,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821717.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192048.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public string Name
@@ -125,6 +127,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194759.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
@@ -142,6 +145,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834783.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi._SmartTagProperties Properties
@@ -158,6 +162,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845414.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi._SmartTagActions SmartTagActions
@@ -174,6 +179,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197988.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public string XML
@@ -189,6 +195,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844953.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public bool IsMissing
@@ -207,6 +214,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192119.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public void Delete()
@@ -217,6 +225,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

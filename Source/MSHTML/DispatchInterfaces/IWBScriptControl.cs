@@ -210,6 +210,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		/// <param name="eventData">object eventData</param>
@@ -222,6 +223,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void bubbleEvent()
@@ -232,6 +234,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="menuItemPairs">object menuItemPairs</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

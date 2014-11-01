@@ -11,8 +11,8 @@ namespace NetOffice.VisioApi
 	///<summary>
 	/// DispatchInterface IVBUndoUnit 
 	/// SupportByVersion Visio, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769307(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769307(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IVBUndoUnit : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765404(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff765404(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string Description
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767058(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767058(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public string UnitTypeCLSID
 		{
@@ -127,8 +127,8 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766307(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766307(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 UnitTypeLong
 		{
@@ -143,8 +143,8 @@ namespace NetOffice.VisioApi
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766293(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766293(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32 UnitSize
 		{
@@ -162,9 +162,9 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766032(v=office.14).aspx
 		/// </summary>
 		/// <param name="pMgr">NetOffice.VisioApi.IVBUndoManager pMgr</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff766032(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Do(NetOffice.VisioApi.IVBUndoManager pMgr)
 		{
@@ -174,8 +174,8 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767691(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff767691(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void OnNextAdd()
 		{

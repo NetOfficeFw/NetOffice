@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLElement GetElement()
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lEvent">Int32 lEvent</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

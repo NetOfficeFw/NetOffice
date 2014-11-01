@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface WebPageFonts 
 	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864178.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864178.aspx </remarks>
 	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebPageFonts : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.WebPageFont>
@@ -96,8 +96,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862200.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862200.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Count
 		{

@@ -139,23 +139,6 @@ namespace NetOffice.Tools
             return array[0] as ProgIdAttribute;
         }
 
-        /// <summary>
-        /// Looks for the ProgIdAttribute. Throws an exception if not found
-        /// </summary>
-        /// <param name="type">the type you want looking for the attribute</param>
-        /// <param name="throwException">throw exception if not found</param>
-        /// <returns>ProgIdAttribute</returns>
-        public static ProgIdAttribute GetProgIDAttribute(Type type, bool throwException)
-        {
-            object[] array = type.GetCustomAttributes(typeof(ProgIdAttribute), false);
-            if (array.Length == 0 && throwException)
-                throw new ArgumentNullException("ProgIdAttribute is missing");
-            if (array.Length == 0)
-                return null;
-            else
-                return array[0] as ProgIdAttribute;
-        }
-
         /// Looks for the TweakAttribute.
         /// <summary>
         /// <param name="type">the type you want looking for the attribute</param>

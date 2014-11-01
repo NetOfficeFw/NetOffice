@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dwEffect">Int32 dwEffect</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -108,6 +109,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="escapePressed">bool EscapePressed</param>
 		/// <param name="keyState">Int32 KeyState</param>

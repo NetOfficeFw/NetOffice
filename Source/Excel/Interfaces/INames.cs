@@ -162,6 +162,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -185,6 +186,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -198,6 +200,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -212,6 +215,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -227,6 +231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -243,6 +248,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -260,6 +266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -278,6 +285,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -297,6 +305,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -317,6 +326,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -338,6 +348,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -360,6 +371,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="refersTo">optional object RefersTo</param>
@@ -383,6 +395,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="indexLocal">optional object IndexLocal</param>

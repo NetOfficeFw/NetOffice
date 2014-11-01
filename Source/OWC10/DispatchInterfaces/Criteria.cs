@@ -211,6 +211,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="criterion">string Criterion</param>
 		[SupportByVersionAttribute("OWC10", 1)]

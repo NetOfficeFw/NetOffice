@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface PivotFilters 
 	/// SupportByVersion Excel, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841200.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841200.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PivotFilters : COMObject ,IEnumerable<NetOffice.ExcelApi.PivotFilter>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836475.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836475.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840815.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840815.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841209.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841209.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object Parent
 		{
@@ -166,8 +166,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837566.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837566.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 Count
 		{
@@ -185,6 +185,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -205,6 +206,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -227,6 +229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		[CustomMethodAttribute]
@@ -241,6 +244,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -256,6 +260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -272,6 +277,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -289,6 +295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -307,6 +314,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -326,6 +334,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -346,6 +355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -368,6 +378,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -389,6 +400,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -404,6 +416,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -420,6 +433,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -437,6 +451,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -455,6 +470,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -474,6 +490,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>
@@ -494,6 +511,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlPivotFilterType Type</param>
 		/// <param name="dataField">optional object DataField</param>

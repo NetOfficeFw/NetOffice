@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -193,6 +194,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		/// <param name="useStandardFormula">optional object UseStandardFormula</param>
@@ -207,6 +209,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

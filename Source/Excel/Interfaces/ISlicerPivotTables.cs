@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotTable">NetOffice.ExcelApi.PivotTable PivotTable</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -192,6 +193,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotTable">object PivotTable</param>
 		[SupportByVersionAttribute("Excel", 14,15)]

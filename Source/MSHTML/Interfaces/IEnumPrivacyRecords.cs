@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 reset()
@@ -108,6 +109,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pSize">Int32 pSize</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -123,6 +125,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pState">Int32 pState</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -138,6 +141,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pbstrUrl">string pbstrUrl</param>
 		/// <param name="pbstrPolicyRef">string pbstrPolicyRef</param>

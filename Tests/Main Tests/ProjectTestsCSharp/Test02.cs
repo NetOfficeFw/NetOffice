@@ -52,7 +52,7 @@ namespace ProjectTestsCSharp
                 
                 task2.Delete();
 
-                application.FileCloseAll(false);
+                application.FileCloseAll(PjSaveType.pjDoNotSave);
 
                 if (TaskDeleteEventCalled && TaskChangeEventCalled && BeforeCloseEventCalled && TaskChangeEventCalled)
                     return new TestResult(true, DateTime.Now.Subtract(startTime), "", null, "");
@@ -81,7 +81,7 @@ namespace ProjectTestsCSharp
 
                 if (null != application)
                 {
-                    application.Quit(false);
+                    application.Quit(PjSaveType.pjDoNotSave);
                     application.Dispose();
                 }
             }

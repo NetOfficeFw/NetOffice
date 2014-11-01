@@ -189,6 +189,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="bVisible">bool bVisible</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -202,6 +203,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="iWidth">Int32 iWidth</param>
 		/// <param name="iHeight">Int32 iHeight</param>
@@ -217,6 +219,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pfln">NetOffice.OWC10Api.FieldListNode pfln</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -230,6 +233,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void ClearSelection()
@@ -240,6 +244,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="iImage">Int32 iImage</param>
 		/// <param name="iOverlay">Int32 iOverlay</param>

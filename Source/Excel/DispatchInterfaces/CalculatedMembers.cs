@@ -12,8 +12,8 @@ namespace NetOffice.ExcelApi
 	///<summary>
 	/// DispatchInterface CalculatedMembers 
 	/// SupportByVersion Excel, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196948.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196948.aspx </remarks>
 	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CalculatedMembers : COMObject ,IEnumerable<NetOffice.ExcelApi.CalculatedMember>
@@ -96,8 +96,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840489.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840489.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Application Application
 		{
@@ -113,8 +113,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837554.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837554.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.Enums.XlCreator Creator
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838660.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838660.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.ExcelApi
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839654.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839654.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -185,12 +185,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
 		/// <param name="type">optional object Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
 		{
@@ -202,6 +202,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -210,7 +211,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="dynamic">optional object Dynamic</param>
 		/// <param name="displayFolder">optional object DisplayFolder</param>
 		/// <param name="hierarchizeDistinct">optional object HierarchizeDistinct</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
 		{
@@ -222,10 +222,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula)
@@ -238,11 +238,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder)
@@ -255,13 +255,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="dynamic">optional object Dynamic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic)
@@ -274,6 +274,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -281,7 +282,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="dynamic">optional object Dynamic</param>
 		/// <param name="displayFolder">optional object DisplayFolder</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835584.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder)
@@ -294,6 +294,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
@@ -311,6 +312,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
@@ -327,6 +329,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">string Formula</param>
@@ -344,6 +347,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -354,7 +358,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="parentHierarchy">optional object ParentHierarchy</param>
 		/// <param name="parentMember">optional object ParentMember</param>
 		/// <param name="numberFormat">optional object NumberFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember, object numberFormat)
 		{
@@ -366,10 +369,10 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula)
@@ -382,11 +385,11 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder)
@@ -399,12 +402,12 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
 		/// <param name="type">optional object Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type)
@@ -417,13 +420,13 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
 		/// <param name="solveOrder">optional object SolveOrder</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="displayFolder">optional object DisplayFolder</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder)
@@ -436,6 +439,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -443,7 +447,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="displayFolder">optional object DisplayFolder</param>
 		/// <param name="measureGroup">optional object MeasureGroup</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup)
@@ -456,6 +459,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -464,7 +468,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="displayFolder">optional object DisplayFolder</param>
 		/// <param name="measureGroup">optional object MeasureGroup</param>
 		/// <param name="parentHierarchy">optional object ParentHierarchy</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy)
@@ -477,6 +480,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="formula">object Formula</param>
@@ -486,7 +490,6 @@ namespace NetOffice.ExcelApi
 		/// <param name="measureGroup">optional object MeasureGroup</param>
 		/// <param name="parentHierarchy">optional object ParentHierarchy</param>
 		/// <param name="parentMember">optional object ParentMember</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229608.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 15)]
 		public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember)

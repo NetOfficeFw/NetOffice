@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface SharedWorkspaceFiles 
 	/// SupportByVersion Office, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862045.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862045.aspx </remarks>
 	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceFiles : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.SharedWorkspaceFile>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864632.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864632.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Count
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864665.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864665.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864597.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864597.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool ItemCountExceeded
 		{
@@ -167,12 +167,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="parentFolder">optional object ParentFolder</param>
 		/// <param name="overwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
 		/// <param name="keepInSync">optional object KeepInSync</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
 		{
@@ -184,9 +184,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
@@ -199,10 +199,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="parentFolder">optional object ParentFolder</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder)
@@ -215,11 +215,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="parentFolder">optional object ParentFolder</param>
 		/// <param name="overwriteIfFileAlreadyExists">optional object OverwriteIfFileAlreadyExists</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864894.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists)

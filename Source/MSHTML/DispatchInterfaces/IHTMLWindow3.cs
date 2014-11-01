@@ -199,6 +199,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
@@ -212,6 +213,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
@@ -224,6 +226,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
@@ -238,6 +241,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
@@ -252,6 +256,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
@@ -266,6 +271,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="expression">object expression</param>
 		/// <param name="msec">Int32 msec</param>
@@ -280,6 +286,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void print()
@@ -290,6 +297,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		/// <param name="varArgIn">optional object varArgIn</param>
@@ -305,6 +313,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -318,6 +327,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
@@ -332,6 +342,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="url">optional string url = </param>
 		/// <param name="varArgIn">optional object varArgIn</param>

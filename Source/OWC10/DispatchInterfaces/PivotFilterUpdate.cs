@@ -138,6 +138,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="member">NetOffice.OWC10Api.PivotMember Member</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -149,6 +150,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="member">NetOffice.OWC10Api.PivotMember Member</param>
 		/// <param name="oldMemberState">NetOffice.OWC10Api.Enums.PivotFilterUpdateMemberStateEnum OldMemberState</param>
@@ -162,6 +164,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Apply()

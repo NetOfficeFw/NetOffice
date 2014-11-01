@@ -364,6 +364,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void UseDefaultFolderSuffix()

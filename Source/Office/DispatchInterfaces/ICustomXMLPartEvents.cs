@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>
 		/// <param name="inUndoRedo">bool InUndoRedo</param>
@@ -109,6 +110,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="oldParentNode">NetOffice.OfficeApi.CustomXMLNode OldParentNode</param>
@@ -123,6 +125,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="oldNode">NetOffice.OfficeApi.CustomXMLNode OldNode</param>
 		/// <param name="newNode">NetOffice.OfficeApi.CustomXMLNode NewNode</param>

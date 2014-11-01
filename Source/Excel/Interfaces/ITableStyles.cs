@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tableStyleName">string TableStyleName</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]

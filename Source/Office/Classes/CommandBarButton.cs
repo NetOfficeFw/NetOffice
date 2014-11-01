@@ -16,8 +16,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// CoClass CommandBarButton 
 	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865221.aspx </remarks>
 	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBarButton : _CommandBarButton,IEventBinding

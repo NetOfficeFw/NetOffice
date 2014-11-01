@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface Permission 
 	/// SupportByVersion Office, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861518.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861518.aspx </remarks>
 	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Permission : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.UserPermission>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865565.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865565.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Count
 		{
@@ -130,8 +130,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862116.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862116.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool EnableTrustedBrowser
 		{
@@ -151,9 +151,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861383.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861383.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
@@ -169,8 +169,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865228.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865228.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool Enabled
 		{
@@ -190,8 +190,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862755.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862755.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string RequestPermissionURL
 		{
@@ -211,8 +211,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860910.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860910.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string PolicyName
 		{
@@ -227,8 +227,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860601.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860601.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string PolicyDescription
 		{
@@ -243,8 +243,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864131.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864131.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool StoreLicenses
 		{
@@ -264,8 +264,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864905.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864905.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public string DocumentAuthor
 		{
@@ -285,8 +285,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863690.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863690.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool PermissionFromPolicy
 		{
@@ -304,11 +304,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
 		/// <param name="userId">string UserId</param>
 		/// <param name="permission">optional object Permission</param>
 		/// <param name="expirationDate">optional object ExpirationDate</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
 		{
@@ -320,9 +320,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
 		/// <param name="userId">string UserId</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId)
@@ -335,10 +335,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx
 		/// </summary>
 		/// <param name="userId">string UserId</param>
 		/// <param name="permission">optional object Permission</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863139.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
@@ -351,9 +351,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864678.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864678.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void ApplyPolicy(string fileName)
 		{
@@ -363,8 +363,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861135.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861135.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public void RemoveAll()
 		{

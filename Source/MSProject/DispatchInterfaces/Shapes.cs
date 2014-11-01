@@ -188,6 +188,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -205,6 +206,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoCalloutType Type</param>
 		/// <param name="left">Single Left</param>
@@ -222,6 +224,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoConnectorType Type</param>
 		/// <param name="beginX">Single BeginX</param>
@@ -239,6 +242,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -252,6 +256,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="left">Single Left</param>
@@ -269,6 +274,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="beginX">Single BeginX</param>
 		/// <param name="beginY">Single BeginY</param>
@@ -285,6 +291,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
@@ -305,6 +312,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
@@ -324,6 +332,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="linkToFile">NetOffice.OfficeApi.Enums.MsoTriState LinkToFile</param>
@@ -344,6 +353,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="safeArrayOfPoints">object SafeArrayOfPoints</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -357,6 +367,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoAutoShapeType Type</param>
 		/// <param name="left">Single Left</param>
@@ -374,6 +385,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="presetTextEffect">NetOffice.OfficeApi.Enums.MsoPresetTextEffect PresetTextEffect</param>
 		/// <param name="text">string Text</param>
@@ -394,6 +406,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="orientation">NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation</param>
 		/// <param name="left">Single Left</param>
@@ -411,6 +424,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType EditingType</param>
 		/// <param name="x1">Single X1</param>
@@ -426,6 +440,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -439,6 +454,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void SelectAll()
@@ -449,6 +465,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -468,6 +485,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -481,6 +499,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		[CustomMethodAttribute]
@@ -495,6 +514,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -510,6 +530,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -526,6 +547,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -543,6 +565,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -561,6 +584,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="style">optional Int32 Style = -1</param>
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
@@ -580,6 +604,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="numRows">Int32 NumRows</param>
 		/// <param name="numColumns">Int32 NumColumns</param>

@@ -31,7 +31,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -120,6 +121,8 @@
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\IDTExtensibility2.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="WndUtils\WindowEnumerator.cs" />
+    <Compile Include="WndUtils\ExcelApplicationWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

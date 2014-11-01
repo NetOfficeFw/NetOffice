@@ -97,6 +97,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="addInInst">NetOffice.VBIDEApi.AddIn AddInInst</param>
 		/// <param name="progId">string ProgId</param>

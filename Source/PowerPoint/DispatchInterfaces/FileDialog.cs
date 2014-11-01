@@ -368,6 +368,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="pUnk">optional object pUnk = null (Nothing in visual basic)</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -379,6 +380,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9)]

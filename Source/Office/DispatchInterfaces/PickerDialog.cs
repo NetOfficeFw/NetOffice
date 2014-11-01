@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface PickerDialog 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860858.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860858.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerDialog : _IMsoDispObj
@@ -95,8 +95,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862371.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862371.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string DataHandlerId
 		{
@@ -116,8 +116,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862526.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862526.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public string Title
 		{
@@ -137,8 +137,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860248.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860248.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerProperties Properties
 		{
@@ -157,8 +157,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861181.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861181.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults CreatePickerResults()
 		{
@@ -170,10 +170,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx
 		/// </summary>
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
 		/// <param name="existingResults">optional NetOffice.OfficeApi.PickerResults ExistingResults = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect, object existingResults)
 		{
@@ -185,8 +185,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Show()
@@ -199,9 +199,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx
 		/// </summary>
 		/// <param name="isMultiSelect">optional bool IsMultiSelect = true</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861095.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Show(object isMultiSelect)
@@ -214,10 +214,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861733.aspx
 		/// </summary>
 		/// <param name="tokenText">string TokenText</param>
 		/// <param name="duplicateDlgMode">Int32 duplicateDlgMode</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861733.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerResults Resolve(string tokenText, Int32 duplicateDlgMode)
 		{

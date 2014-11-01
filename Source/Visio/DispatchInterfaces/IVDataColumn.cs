@@ -250,6 +250,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="property">NetOffice.VisioApi.Enums.VisDataColumnProperties Property</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -270,6 +271,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="property">NetOffice.VisioApi.Enums.VisDataColumnProperties Property</param>
 		/// <param name="value">object Value</param>

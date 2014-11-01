@@ -652,6 +652,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
@@ -662,6 +663,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="iconFileName">string IconFileName</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

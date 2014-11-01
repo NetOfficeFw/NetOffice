@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppIElement">NetOffice.MSHTMLApi.IHTMLElement ppIElement</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fPrimary">Int32 fPrimary</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -124,6 +126,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pfPrimary">Int32 pfPrimary</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

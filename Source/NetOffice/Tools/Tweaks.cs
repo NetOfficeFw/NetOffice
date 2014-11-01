@@ -15,6 +15,8 @@ namespace NetOffice.Tools
     /// </summary>
     public static class Tweaks
     {
+       
+
         #region Fields
 
         private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo", 

@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface SharedWorkspaceLinks 
 	/// SupportByVersion Office, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863849.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863849.aspx </remarks>
 	[SupportByVersionAttribute("Office", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SharedWorkspaceLinks : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.SharedWorkspaceLink>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864175.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864175.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public Int32 Count
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861528.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861528.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public object Parent
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861770.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861770.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public bool ItemCountExceeded
 		{
@@ -167,11 +167,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx
 		/// </summary>
 		/// <param name="uRL">string URL</param>
 		/// <param name="description">optional object Description</param>
 		/// <param name="notes">optional object Notes</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx </remarks>
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description, object notes)
 		{
@@ -183,9 +183,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx
 		/// </summary>
 		/// <param name="uRL">string URL</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL)
@@ -198,10 +198,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx
 		/// </summary>
 		/// <param name="uRL">string URL</param>
 		/// <param name="description">optional object Description</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862533.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 11,12,14,15)]
 		public NetOffice.OfficeApi.SharedWorkspaceLink Add(string uRL, object description)

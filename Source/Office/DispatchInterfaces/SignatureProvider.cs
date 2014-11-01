@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface SignatureProvider 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861225.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861225.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class SignatureProvider : COMObject
@@ -98,12 +98,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861157.aspx
 		/// </summary>
 		/// <param name="siglnimg">NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861157.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public stdole.Picture GenerateSignatureLineImage(NetOffice.OfficeApi.Enums.SignatureLineImage siglnimg, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
@@ -115,10 +115,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861424.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861424.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSignatureSetup(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup)
 		{
@@ -128,11 +128,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864670.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864670.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSigningCeremony(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
@@ -142,12 +142,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864683.aspx
 		/// </summary>
 		/// <param name="queryContinue">object QueryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864683.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SignXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream)
 		{
@@ -157,11 +157,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860266.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
 		/// <param name="psiginfo">NetOffice.OfficeApi.SignatureInfo psiginfo</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860266.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void NotifySignatureAdded(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo)
 		{
@@ -171,6 +171,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863028.aspx
 		/// </summary>
 		/// <param name="queryContinue">object QueryContinue</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -178,7 +179,6 @@ namespace NetOffice.OfficeApi
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863028.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void VerifyXmlDsig(object queryContinue, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
@@ -188,6 +188,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865248.aspx
 		/// </summary>
 		/// <param name="parentWindow">object ParentWindow</param>
 		/// <param name="psigsetup">NetOffice.OfficeApi.SignatureSetup psigsetup</param>
@@ -195,7 +196,6 @@ namespace NetOffice.OfficeApi
 		/// <param name="xmlDsigStream">object XmlDsigStream</param>
 		/// <param name="pcontverres">NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres</param>
 		/// <param name="pcertverres">NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865248.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowSignatureDetails(object parentWindow, NetOffice.OfficeApi.SignatureSetup psigsetup, NetOffice.OfficeApi.SignatureInfo psiginfo, object xmlDsigStream, NetOffice.OfficeApi.Enums.ContentVerificationResults pcontverres, NetOffice.OfficeApi.Enums.CertificateVerificationResults pcertverres)
 		{
@@ -205,9 +205,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863646.aspx
 		/// </summary>
 		/// <param name="sigprovdet">NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863646.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object GetProviderDetail(NetOffice.OfficeApi.Enums.SignatureProviderDetail sigprovdet)
 		{
@@ -226,10 +226,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862104.aspx
 		/// </summary>
 		/// <param name="queryContinue">object QueryContinue</param>
 		/// <param name="stream">object Stream</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862104.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public byte[] HashStream(object queryContinue, object stream)
 		{

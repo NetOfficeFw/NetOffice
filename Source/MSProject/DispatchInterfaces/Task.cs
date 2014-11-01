@@ -11,8 +11,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface Task 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920717(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920717(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Task : COMObject
@@ -18782,8 +18782,8 @@ namespace NetOffice.MSProjectApi
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864567(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864567(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public object IsStartValid
 		{
@@ -18806,8 +18806,8 @@ namespace NetOffice.MSProjectApi
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861711(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861711(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public object IsFinishValid
 		{
@@ -18830,8 +18830,8 @@ namespace NetOffice.MSProjectApi
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865936(v=office.14).aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865936(v=office.14).aspx </remarks>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public object IsDurationValid
 		{
@@ -19722,6 +19722,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19734,6 +19735,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -19746,6 +19748,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Delete()
@@ -19756,6 +19759,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="value">string Value</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19767,6 +19771,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="endDate">object EndDate</param>
@@ -19784,6 +19789,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="endDate">object EndDate</param>
@@ -19799,6 +19805,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="endDate">object EndDate</param>
@@ -19815,6 +19822,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="endDate">object EndDate</param>
@@ -19832,6 +19840,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
@@ -19845,6 +19854,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		[CustomMethodAttribute]
@@ -19857,6 +19867,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
@@ -19870,6 +19881,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
@@ -19883,6 +19895,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		[CustomMethodAttribute]
@@ -19895,6 +19908,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
@@ -19908,6 +19922,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19919,6 +19934,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tasks">object Tasks</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19930,6 +19946,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void OutlineIndent()
@@ -19940,6 +19957,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void OutlineOutdent()
@@ -19950,6 +19968,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void OutlineHideSubTasks()
@@ -19960,6 +19979,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void OutlineShowSubTasks()
@@ -19970,6 +19990,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void OutlineShowAllTasks()
@@ -19980,6 +20001,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startSplitOn">object StartSplitOn</param>
 		/// <param name="endSplitOn">object EndSplitOn</param>

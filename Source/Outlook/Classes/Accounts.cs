@@ -16,8 +16,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass Accounts 
 	/// SupportByVersion Outlook, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862476.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862476.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Accounts : _Accounts,IEventBinding

@@ -510,6 +510,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="val">object Val</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -521,6 +522,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="offset">Int32 Offset</param>
 		/// <param name="bytes">Int32 Bytes</param>
@@ -542,6 +544,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public Int32 _30_FieldSize()
@@ -553,6 +556,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
@@ -569,6 +573,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -582,6 +587,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -596,6 +602,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
@@ -611,6 +618,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>

@@ -94,6 +94,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192087.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836400.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -127,6 +129,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822407.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -144,6 +147,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835352.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string MenuBar
@@ -164,6 +168,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845319.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 CurrentObjectType
@@ -179,6 +184,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196795.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string CurrentObjectName
@@ -194,6 +200,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837183.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Forms Forms
@@ -210,6 +217,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834339.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Reports Reports
@@ -226,6 +234,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835056.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Screen Screen
@@ -242,6 +251,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845564.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.DoCmd DoCmd
@@ -258,6 +268,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195236.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ShortcutMenuBar
@@ -278,6 +289,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821493.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool Visible
@@ -298,6 +310,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836033.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool UserControl
@@ -318,6 +331,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821724.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.DAOApi.DBEngine DBEngine
@@ -334,6 +348,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821379.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
@@ -366,6 +381,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835326.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.References References
@@ -382,6 +398,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836265.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Modules Modules
@@ -414,6 +431,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823044.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public bool IsCompiled
@@ -429,6 +447,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822476.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -477,6 +496,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193770.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.CurrentProject CurrentProject
@@ -493,6 +513,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193230.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.CurrentData CurrentData
@@ -509,6 +530,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197047.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.CodeProject CodeProject
@@ -525,6 +547,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836912.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.CodeData CodeData
@@ -558,6 +581,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822077.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string ProductCode
@@ -573,6 +597,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822463.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
@@ -589,6 +614,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194961.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string Name
@@ -620,6 +646,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836634.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
@@ -652,6 +679,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822721.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
@@ -697,6 +725,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196794.aspx
 		/// </summary>
 		/// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
@@ -711,6 +740,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196794.aspx
 		/// Alias for get_FileDialog
 		/// </summary>
 		/// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
@@ -723,6 +753,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845884.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public bool BrokenReference
@@ -738,6 +769,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195779.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public NetOffice.AccessApi.Printers Printers
@@ -754,6 +786,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821394.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public NetOffice.AccessApi._Printer Printer
@@ -792,6 +825,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192859.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public string Version
@@ -807,6 +841,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835096.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public Int32 Build
@@ -822,6 +857,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191715.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.NewFile NewFileTaskPane
@@ -838,6 +874,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845345.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi._AutoCorrect AutoCorrect
@@ -854,6 +891,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193178.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
@@ -875,6 +913,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845034.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.MacroError MacroError
@@ -891,6 +930,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192459.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.AccessApi.TempVars TempVars
@@ -907,6 +947,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192450.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public NetOffice.OfficeApi.IAssistance Assistance
@@ -923,6 +964,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837286.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public NetOffice.AccessApi.WebServices WebServices
@@ -956,6 +998,7 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj249062.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public NetOffice.AccessApi.ReturnVars ReturnVars
@@ -975,6 +1018,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -986,6 +1030,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
@@ -1001,6 +1046,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
@@ -1014,6 +1060,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
@@ -1028,6 +1075,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195271.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
@@ -1043,6 +1091,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
@@ -1055,6 +1104,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
@@ -1068,6 +1118,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837226.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
@@ -1080,6 +1131,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192308.aspx
 		/// </summary>
 		/// <param name="optionName">string OptionName</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -1100,6 +1152,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195513.aspx
 		/// </summary>
 		/// <param name="optionName">string OptionName</param>
 		/// <param name="setting">object Setting</param>
@@ -1112,6 +1165,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834500.aspx
 		/// </summary>
 		/// <param name="echoOn">Int16 EchoOn</param>
 		/// <param name="bstrStatusBarText">optional string bstrStatusBarText = </param>
@@ -1124,6 +1178,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834500.aspx
 		/// </summary>
 		/// <param name="echoOn">Int16 EchoOn</param>
 		[CustomMethodAttribute]
@@ -1136,6 +1191,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836850.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CloseCurrentDatabase()
@@ -1146,6 +1202,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844963.aspx
 		/// </summary>
 		/// <param name="option">optional NetOffice.AccessApi.Enums.AcQuitOption Option = 1</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -1157,6 +1214,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844963.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -1168,6 +1226,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		/// <param name="argument2">optional object Argument2</param>
@@ -1190,6 +1249,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		[CustomMethodAttribute]
@@ -1211,6 +1271,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193809.aspx
 		/// </summary>
 		/// <param name="action">NetOffice.AccessApi.Enums.AcSysCmdAction Action</param>
 		/// <param name="argument2">optional object Argument2</param>
@@ -1233,6 +1294,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		/// <param name="formTemplate">optional object FormTemplate</param>
@@ -1247,6 +1309,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -1260,6 +1323,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845361.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		[CustomMethodAttribute]
@@ -1274,6 +1338,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		/// <param name="reportTemplate">optional object ReportTemplate</param>
@@ -1288,6 +1353,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -1301,6 +1367,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193499.aspx
 		/// </summary>
 		/// <param name="database">optional object Database</param>
 		[CustomMethodAttribute]
@@ -1315,6 +1382,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1336,6 +1404,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1351,6 +1420,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1367,6 +1437,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1384,6 +1455,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1402,6 +1474,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1421,6 +1494,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1441,6 +1515,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836740.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1462,6 +1537,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1483,6 +1559,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1498,6 +1575,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1514,6 +1592,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1531,6 +1610,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1549,6 +1629,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1568,6 +1649,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1588,6 +1670,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193518.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1609,6 +1692,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1631,6 +1715,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -1653,6 +1738,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836733.aspx
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlName">string ControlName</param>
@@ -1665,6 +1751,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191904.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlName">string ControlName</param>
@@ -1677,6 +1764,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197044.aspx
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="expression">string Expression</param>
@@ -1692,6 +1780,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834804.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1714,6 +1803,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834804.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1736,6 +1826,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835050.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1758,6 +1849,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835050.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1780,6 +1872,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193998.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1802,6 +1895,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193998.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1824,6 +1918,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197744.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1846,6 +1941,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197744.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1868,6 +1964,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834404.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1890,6 +1987,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834404.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1912,6 +2010,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845086.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1934,6 +2033,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845086.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1956,6 +2056,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835667.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -1978,6 +2079,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835667.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2000,6 +2102,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197963.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2022,6 +2125,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197963.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2044,6 +2148,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192869.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2066,6 +2171,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192869.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2088,6 +2194,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834343.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2110,6 +2217,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834343.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2132,6 +2240,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195230.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2154,6 +2263,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195230.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2176,6 +2286,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191865.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2198,6 +2309,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191865.aspx
 		/// </summary>
 		/// <param name="expr">string Expr</param>
 		/// <param name="domain">string Domain</param>
@@ -2220,6 +2332,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834705.aspx
 		/// </summary>
 		/// <param name="stringExpr">string StringExpr</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -2240,6 +2353,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845778.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public string CurrentUser()
@@ -2251,6 +2365,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196189.aspx
 		/// </summary>
 		/// <param name="application">string Application</param>
 		/// <param name="topic">string Topic</param>
@@ -2272,6 +2387,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197936.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="command">string Command</param>
@@ -2284,6 +2400,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194752.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="item">string Item</param>
@@ -2297,6 +2414,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823145.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		/// <param name="item">string Item</param>
@@ -2310,6 +2428,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197795.aspx
 		/// </summary>
 		/// <param name="chanNum">object ChanNum</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -2321,6 +2440,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845193.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DDETerminateAll()
@@ -2331,6 +2451,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835631.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.DAOApi.Database CurrentDb()
@@ -2343,6 +2464,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196457.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.DAOApi.Database CodeDb()
@@ -2355,6 +2477,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="hwnd">Int32 Hwnd</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2367,6 +2490,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="yesno">Int16 yesno</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2379,6 +2503,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845070.aspx
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="fieldType">Int16 FieldType</param>
@@ -2393,6 +2518,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="moduleName">string ModuleName</param>
@@ -2406,6 +2532,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -2417,6 +2544,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836901.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.DAOApi.Workspace DefaultWorkspaceClone()
@@ -2429,6 +2557,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197957.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RefreshTitleBar()
@@ -2439,6 +2568,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="changeFrom">string ChangeFrom</param>
 		/// <param name="changeTo">string ChangeTo</param>
@@ -2452,6 +2582,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="changeFrom">string ChangeFrom</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2464,6 +2595,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196179.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 hWndAccessApp()
@@ -2475,6 +2607,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2525,6 +2658,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		[CustomMethodAttribute]
@@ -2546,6 +2680,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2568,6 +2703,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2591,6 +2727,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2615,6 +2752,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2640,6 +2778,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2666,6 +2805,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2693,6 +2833,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2721,6 +2862,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2750,6 +2892,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2780,6 +2923,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2811,6 +2955,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2843,6 +2988,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2876,6 +3022,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2910,6 +3057,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2945,6 +3093,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2981,6 +3130,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3018,6 +3168,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3056,6 +3207,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3095,6 +3247,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3135,6 +3288,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3176,6 +3330,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3218,6 +3373,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3261,6 +3417,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3305,6 +3462,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3350,6 +3508,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3396,6 +3555,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3443,6 +3603,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3491,6 +3652,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3540,6 +3702,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193559.aspx
 		/// </summary>
 		/// <param name="procedure">string Procedure</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3590,6 +3753,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195223.aspx
 		/// </summary>
 		/// <param name="value">object Value</param>
 		/// <param name="valueIfNull">optional object ValueIfNull</param>
@@ -3611,6 +3775,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195223.aspx
 		/// </summary>
 		/// <param name="value">object Value</param>
 		[CustomMethodAttribute]
@@ -3632,6 +3797,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835072.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3645,6 +3811,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objtyp">Int32 objtyp</param>
 		/// <param name="moduleName">string ModuleName</param>
@@ -3660,6 +3827,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196488.aspx
 		/// </summary>
 		/// <param name="errorNumber">object ErrorNumber</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3680,6 +3848,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3700,6 +3869,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193935.aspx
 		/// </summary>
 		/// <param name="guid">object Guid</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3720,6 +3890,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197675.aspx
 		/// </summary>
 		/// <param name="_string">object String</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3740,6 +3911,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="id">Int32 id</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -3761,6 +3933,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3778,6 +3951,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		[CustomMethodAttribute]
@@ -3790,6 +3964,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3803,6 +3978,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3817,6 +3993,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3832,6 +4009,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3848,6 +4026,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822080.aspx
 		/// </summary>
 		/// <param name="address">string Address</param>
 		/// <param name="subAddress">optional string SubAddress = </param>
@@ -3865,6 +4044,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -3879,6 +4059,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -3893,6 +4074,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823011.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void AddToFavorites()
@@ -3903,6 +4085,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194960.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RefreshDatabaseWindow()
@@ -3913,6 +4096,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191909.aspx
 		/// </summary>
 		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand Command</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -3924,6 +4108,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844740.aspx
 		/// </summary>
 		/// <param name="hyperlink">object Hyperlink</param>
 		/// <param name="part">optional NetOffice.AccessApi.Enums.AcHyperlinkPart Part = 0</param>
@@ -3937,6 +4122,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844740.aspx
 		/// </summary>
 		/// <param name="hyperlink">object Hyperlink</param>
 		[CustomMethodAttribute]
@@ -3950,6 +4136,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821756.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -3963,6 +4150,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822459.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -3976,6 +4164,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="createNewFile">optional bool CreateNewFile = true</param>
@@ -3990,6 +4179,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
@@ -4003,6 +4193,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		[CustomMethodAttribute]
@@ -4017,6 +4208,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835758.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="connect">optional object Connect</param>
@@ -4029,6 +4221,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835758.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
@@ -4041,6 +4234,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837249.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
@@ -4053,6 +4247,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837249.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
@@ -4065,6 +4260,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195216.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="connect">optional object Connect</param>
@@ -4077,6 +4273,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195216.aspx
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[CustomMethodAttribute]
@@ -4089,6 +4286,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -4105,6 +4303,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -4120,6 +4319,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192461.aspx
 		/// </summary>
 		/// <param name="number">Double Number</param>
 		/// <param name="sourceCurrency">string SourceCurrency</param>
@@ -4136,6 +4336,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
@@ -4149,6 +4350,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -4162,6 +4364,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
@@ -4177,6 +4380,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
@@ -4188,6 +4392,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		[CustomMethodAttribute]
@@ -4200,6 +4405,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
@@ -4213,6 +4419,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
@@ -4227,6 +4434,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">optional string Path =  </param>
 		/// <param name="name">optional string Name =  </param>
@@ -4242,6 +4450,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195103.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
@@ -4253,6 +4462,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193465.aspx
 		/// </summary>
 		/// <param name="sourceFilename">string SourceFilename</param>
 		/// <param name="destinationFilename">string DestinationFilename</param>
@@ -4266,6 +4476,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193242.aspx
 		/// </summary>
 		/// <param name="sourceFile">string SourceFile</param>
 		/// <param name="destinationFile">string DestinationFile</param>
@@ -4280,6 +4491,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193242.aspx
 		/// </summary>
 		/// <param name="sourceFile">string SourceFile</param>
 		/// <param name="destinationFile">string DestinationFile</param>
@@ -4294,6 +4506,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4312,6 +4525,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4332,6 +4546,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4345,6 +4560,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4359,6 +4575,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4374,6 +4591,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4390,6 +4608,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4407,6 +4626,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4425,6 +4645,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193212.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4445,6 +4666,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823157.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="importOptions">optional NetOffice.AccessApi.Enums.AcImportXMLOption ImportOptions = 1</param>
@@ -4457,6 +4679,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823157.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		[CustomMethodAttribute]
@@ -4469,6 +4692,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4488,6 +4712,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4502,6 +4727,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4517,6 +4743,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4533,6 +4760,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4550,6 +4778,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4568,6 +4797,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcExportXMLObjectType ObjectType</param>
 		/// <param name="dataSource">string DataSource</param>
@@ -4587,6 +4817,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="transformSource">string TransformSource</param>
@@ -4602,6 +4833,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="transformSource">string TransformSource</param>
@@ -4616,6 +4848,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844810.aspx
 		/// </summary>
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="transformSource">string TransformSource</param>
@@ -4631,6 +4864,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834773.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
 		public NetOffice.AccessApi._AdditionalData CreateAdditionalData()
@@ -4643,6 +4877,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -4656,6 +4891,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filepath">string filepath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -4668,6 +4904,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4690,6 +4927,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4706,6 +4944,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4723,6 +4962,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4741,6 +4981,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4760,6 +5001,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4780,6 +5022,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4801,6 +5044,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4823,6 +5067,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4845,6 +5090,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4861,6 +5107,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4878,6 +5125,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4896,6 +5144,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4915,6 +5164,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4935,6 +5185,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4956,6 +5207,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -4978,6 +5230,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formName">string FormName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -5000,6 +5253,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">string ReportName</param>
 		/// <param name="controlType">NetOffice.AccessApi.Enums.AcControlType ControlType</param>
@@ -5022,6 +5276,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196012.aspx
 		/// </summary>
 		/// <param name="richText">object RichText</param>
 		/// <param name="length">optional object Length</param>
@@ -5035,6 +5290,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196012.aspx
 		/// </summary>
 		/// <param name="richText">object RichText</param>
 		[CustomMethodAttribute]
@@ -5048,6 +5304,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192028.aspx
 		/// </summary>
 		/// <param name="plainText">object PlainText</param>
 		/// <param name="length">optional object Length</param>
@@ -5061,6 +5318,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192028.aspx
 		/// </summary>
 		/// <param name="plainText">object PlainText</param>
 		[CustomMethodAttribute]
@@ -5074,6 +5332,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194416.aspx
 		/// </summary>
 		/// <param name="customUIName">string CustomUIName</param>
 		/// <param name="customUIXML">string CustomUIXML</param>
@@ -5086,6 +5345,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193467.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
@@ -5097,6 +5357,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193985.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="fAppendOnly">optional bool fAppendOnly = false</param>
@@ -5109,6 +5370,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193985.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[CustomMethodAttribute]
@@ -5121,6 +5383,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835727.aspx
 		/// </summary>
 		/// <param name="tableName">string TableName</param>
 		/// <param name="columnName">string ColumnName</param>
@@ -5135,6 +5398,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
 		/// <param name="outputFileName">string OutputFileName</param>
@@ -5153,6 +5417,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
 		/// <param name="outputFileName">string OutputFileName</param>
@@ -5169,6 +5434,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
 		/// <param name="outputFileName">string OutputFileName</param>
@@ -5186,6 +5452,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="externalExporter">object ExternalExporter</param>
 		/// <param name="outputFileName">string OutputFileName</param>
@@ -5204,6 +5471,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821429.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -5217,6 +5485,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845765.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -5230,6 +5499,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5251,6 +5521,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5267,6 +5538,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5284,6 +5556,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5302,6 +5575,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5321,6 +5595,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5341,6 +5616,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192852.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="title">string Title</param>
@@ -5362,6 +5638,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835421.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[SupportByVersionAttribute("Access", 14,15)]
@@ -5373,6 +5650,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834388.aspx
 		/// </summary>
 		/// <param name="displayOption">NetOffice.AccessApi.Enums.AcWebUserDisplay DisplayOption</param>
 		[SupportByVersionAttribute("Access", 14,15)]
@@ -5393,6 +5671,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836539.aspx
 		/// </summary>
 		/// <param name="displayOption">NetOffice.AccessApi.Enums.AcWebUserGroupsDisplay DisplayOption</param>
 		[SupportByVersionAttribute("Access", 14,15)]
@@ -5413,6 +5692,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193453.aspx
 		/// </summary>
 		/// <param name="groupNameOrID">object GroupNameOrID</param>
 		[SupportByVersionAttribute("Access", 14,15)]
@@ -5425,6 +5705,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834368.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -5437,6 +5718,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 14,15)]

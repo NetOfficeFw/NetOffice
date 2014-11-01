@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface FileDialogFilters 
 	/// SupportByVersion Office, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863542.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863542.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class FileDialogFilters : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.FileDialogFilter>
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865321.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865321.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860290.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860290.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -150,9 +151,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx
 		/// </summary>
 		/// <param name="filter">optional object filter</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Delete(object filter)
 		{
@@ -162,8 +163,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862434.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Delete()
@@ -174,8 +175,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860610.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860610.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Clear()
 		{
@@ -185,11 +186,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865351.aspx
 		/// </summary>
 		/// <param name="description">string Description</param>
 		/// <param name="extensions">string Extensions</param>
 		/// <param name="position">optional object Position</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865351.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions, object position)
 		{
@@ -201,10 +202,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865351.aspx
 		/// </summary>
 		/// <param name="description">string Description</param>
 		/// <param name="extensions">string Extensions</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865351.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.FileDialogFilter Add(string description, string extensions)

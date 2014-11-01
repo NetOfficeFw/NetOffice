@@ -113,6 +113,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="total">NetOffice.OWC10Api.PivotTotal Total</param>
 		/// <param name="before">optional object Before</param>
@@ -125,6 +126,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="total">NetOffice.OWC10Api.PivotTotal Total</param>
 		[CustomMethodAttribute]
@@ -137,6 +139,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="total">object Total</param>
 		[SupportByVersionAttribute("OWC10", 1)]

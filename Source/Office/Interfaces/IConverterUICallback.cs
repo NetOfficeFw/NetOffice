@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface IConverterUICallback 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863370.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863370.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterUICallback : COMObject
@@ -98,9 +98,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861826.aspx
 		/// </summary>
 		/// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861826.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrReportProgress(UIntPtr uPercentComplete)
 		{
@@ -111,12 +111,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861376.aspx
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="uType">UIntPtr uType</param>
 		/// <param name="pidResult">Int32 pidResult</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861376.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
 		{
@@ -130,12 +130,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861803.aspx
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrCaption">string bstrCaption</param>
 		/// <param name="pbstrInput">string pbstrInput</param>
 		/// <param name="fPassword">Int32 fPassword</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861803.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
 		{

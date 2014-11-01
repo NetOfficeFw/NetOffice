@@ -2524,6 +2524,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
@@ -2545,6 +2546,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		[CustomMethodAttribute]

@@ -78,7 +78,7 @@ namespace NetOffice.WordApi
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx
 		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_ChartGroups(object index)
@@ -91,11 +91,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx
 		/// Alias for get_ChartGroups
 		/// Unknown COM Proxy
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object ChartGroups(object index)
 		{
@@ -108,7 +108,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1, object index2)
@@ -142,11 +142,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// Alias for get_HasAxis
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
 		/// <param name="index2">optional object Index2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object HasAxis(object index1, object index2)
 		{
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi
 		/// Get/Set
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		[SupportByVersionAttribute("Word", 14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public object get_HasAxis(object index1)
@@ -191,10 +191,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// Alias for get_HasAxis
 		/// </summary>
 		/// <param name="index1">optional object Index1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object HasAxis(object index1)
 		{
@@ -212,8 +212,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface Chart 
 	/// SupportByVersion Word, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193446.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193446.aspx </remarks>
 	[SupportByVersionAttribute("Word", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class Chart : Chart_
@@ -296,9 +296,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191738.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191738.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Parent
 		{
@@ -314,8 +314,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196350.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196350.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool HasTitle
 		{
@@ -335,8 +335,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191751.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191751.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartTitle ChartTitle
 		{
@@ -352,8 +352,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840907.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840907.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 DepthPercent
 		{
@@ -373,8 +373,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192611.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192611.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Elevation
 		{
@@ -394,8 +394,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845244.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845244.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 GapDepth
 		{
@@ -415,8 +415,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836594.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836594.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 HeightPercent
 		{
@@ -436,8 +436,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838954.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838954.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Perspective
 		{
@@ -457,8 +457,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838938.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838938.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object RightAngleAxes
 		{
@@ -486,8 +486,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835465.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835465.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Rotation
 		{
@@ -515,8 +515,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196216.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196216.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
 		{
@@ -537,9 +537,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836391.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object ChartGroups
 		{
@@ -614,8 +614,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836334.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836334.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.Enums.XlChartType ChartType
 		{
@@ -636,8 +636,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197158.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197158.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool HasDataTable
 		{
@@ -657,8 +657,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836380.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836380.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Enums.XlRowCol PlotBy
 		{
@@ -679,8 +679,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845054.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845054.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool HasLegend
 		{
@@ -700,8 +700,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836685.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836685.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Legend Legend
 		{
@@ -717,8 +717,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836998.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object HasAxis
 		{
@@ -746,8 +746,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840511.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840511.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Walls Walls
 		{
@@ -763,8 +763,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845855.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845855.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Floor Floor
 		{
@@ -780,8 +780,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194655.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194655.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.PlotArea PlotArea
 		{
@@ -797,8 +797,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196388.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196388.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool PlotVisibleOnly
 		{
@@ -818,8 +818,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836658.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836658.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartArea ChartArea
 		{
@@ -835,8 +835,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823268.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823268.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool AutoScaling
 		{
@@ -856,8 +856,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191967.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191967.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.DataTable DataTable
 		{
@@ -873,8 +873,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839500.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839500.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Enums.XlBarShape BarShape
 		{
@@ -895,8 +895,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839285.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839285.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Walls SideWall
 		{
@@ -912,8 +912,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193753.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193753.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.Walls BackWall
 		{
@@ -929,8 +929,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195916.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195916.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object ChartStyle
 		{
@@ -958,9 +958,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836370.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836370.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object PivotLayout
 		{
@@ -997,8 +997,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193871.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193871.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowDataLabelsOverMaximum
 		{
@@ -1018,8 +1018,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838941.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838941.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ChartData ChartData
 		{
@@ -1035,9 +1035,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837462.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837462.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Shapes
 		{
@@ -1053,9 +1053,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835828.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835828.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Application
 		{
@@ -1071,8 +1071,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192382.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192382.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public Int32 Creator
 		{
@@ -1189,8 +1189,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198336.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198336.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowReportFilterFieldButtons
 		{
@@ -1210,8 +1210,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839101.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839101.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowLegendFieldButtons
 		{
@@ -1231,8 +1231,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845234.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845234.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowAxisFieldButtons
 		{
@@ -1252,8 +1252,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834948.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834948.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowValueFieldButtons
 		{
@@ -1273,8 +1273,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834564.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834564.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool ShowAllFieldButtons
 		{
@@ -1294,8 +1294,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230485.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230485.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public NetOffice.WordApi.Enums.XlCategoryLabelLevel CategoryLabelLevel
 		{
@@ -1316,8 +1316,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232218.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232218.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public NetOffice.WordApi.Enums.XlSeriesNameLevel SeriesNameLevel
 		{
@@ -1354,8 +1354,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231924.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231924.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public object ChartColor
 		{
@@ -1386,9 +1386,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object SeriesCollection(object index)
 		{
@@ -1400,8 +1400,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837270.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object SeriesCollection()
@@ -1414,6 +1414,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1425,7 +1426,6 @@ namespace NetOffice.WordApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
@@ -1435,8 +1435,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels()
@@ -1447,9 +1447,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type)
@@ -1460,10 +1460,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey)
@@ -1474,11 +1474,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText)
@@ -1489,12 +1489,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
@@ -1505,13 +1505,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
 		/// <param name="autoText">optional object AutoText</param>
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
@@ -1522,6 +1522,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1529,7 +1530,6 @@ namespace NetOffice.WordApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
@@ -1540,6 +1540,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1548,7 +1549,6 @@ namespace NetOffice.WordApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		/// <param name="showValue">optional object ShowValue</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
@@ -1559,6 +1559,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1568,7 +1569,6 @@ namespace NetOffice.WordApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		/// <param name="showValue">optional object ShowValue</param>
 		/// <param name="showPercentage">optional object ShowPercentage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
@@ -1579,6 +1579,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx
 		/// </summary>
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		/// <param name="legendKey">optional object LegendKey</param>
@@ -1589,7 +1590,6 @@ namespace NetOffice.WordApi
 		/// <param name="showValue">optional object ShowValue</param>
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194055.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
@@ -1600,6 +1600,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		/// <param name="typeName">optional object TypeName</param>
@@ -1613,6 +1614,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType ChartType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1626,13 +1628,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839889.aspx
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
 		/// <param name="elementID">Int32 ElementID</param>
 		/// <param name="arg1">Int32 Arg1</param>
 		/// <param name="arg2">Int32 Arg2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839889.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void GetChartElement(Int32 x, Int32 y, out Int32 elementID, out Int32 arg1, out Int32 arg2)
 		{
@@ -1649,10 +1651,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="plotBy">optional object PlotBy</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SetSourceData(string source, object plotBy)
 		{
@@ -1662,9 +1664,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx
 		/// </summary>
 		/// <param name="source">string Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822921.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SetSourceData(string source)
@@ -1675,10 +1677,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="axisGroup">optional NetOffice.WordApi.Enums.XlAxisGroup AxisGroup = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Axes(object type, object axisGroup)
 		{
@@ -1690,8 +1692,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Axes()
@@ -1704,9 +1706,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193697.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Axes(object type)
@@ -1719,6 +1721,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="gallery">Int32 Gallery</param>
 		/// <param name="format">optional object Format</param>
@@ -1732,6 +1735,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="gallery">Int32 Gallery</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1745,9 +1749,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197864.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197864.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SetBackgroundPicture(string fileName)
 		{
@@ -1757,6 +1761,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1769,7 +1774,6 @@ namespace NetOffice.WordApi
 		/// <param name="categoryTitle">optional object CategoryTitle</param>
 		/// <param name="valueTitle">optional object ValueTitle</param>
 		/// <param name="extraTitle">optional object ExtraTitle</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle, object extraTitle)
 		{
@@ -1779,8 +1783,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard()
@@ -1791,9 +1795,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source)
@@ -1804,10 +1808,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery)
@@ -1818,11 +1822,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
 		/// <param name="format">optional object Format</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format)
@@ -1833,12 +1837,12 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
 		/// <param name="format">optional object Format</param>
 		/// <param name="plotBy">optional object PlotBy</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy)
@@ -1849,13 +1853,13 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
 		/// <param name="format">optional object Format</param>
 		/// <param name="plotBy">optional object PlotBy</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels)
@@ -1866,6 +1870,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1873,7 +1878,6 @@ namespace NetOffice.WordApi
 		/// <param name="plotBy">optional object PlotBy</param>
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels)
@@ -1884,6 +1888,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1892,7 +1897,6 @@ namespace NetOffice.WordApi
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="hasLegend">optional object HasLegend</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend)
@@ -1903,6 +1907,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1912,7 +1917,6 @@ namespace NetOffice.WordApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		/// <param name="hasLegend">optional object HasLegend</param>
 		/// <param name="title">optional object Title</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title)
@@ -1923,6 +1927,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1933,7 +1938,6 @@ namespace NetOffice.WordApi
 		/// <param name="hasLegend">optional object HasLegend</param>
 		/// <param name="title">optional object Title</param>
 		/// <param name="categoryTitle">optional object CategoryTitle</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle)
@@ -1944,6 +1948,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="gallery">optional object Gallery</param>
@@ -1955,7 +1960,6 @@ namespace NetOffice.WordApi
 		/// <param name="title">optional object Title</param>
 		/// <param name="categoryTitle">optional object CategoryTitle</param>
 		/// <param name="valueTitle">optional object ValueTitle</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196615.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle)
@@ -1966,11 +1970,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		/// <param name="size">optional NetOffice.WordApi.Enums.XlPictureAppearance Size = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void CopyPicture(object appearance, object format, object size)
 		{
@@ -1980,8 +1984,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void CopyPicture()
@@ -1992,9 +1996,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void CopyPicture(object appearance)
@@ -2005,10 +2009,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx
 		/// </summary>
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823258.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void CopyPicture(object appearance, object format)
@@ -2019,9 +2023,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx
 		/// </summary>
 		/// <param name="type">optional object Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Paste(object type)
 		{
@@ -2031,8 +2035,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839410.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Paste()
@@ -2043,11 +2047,11 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="interactive">optional object Interactive</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool Export(string fileName, object filterName, object interactive)
 		{
@@ -2058,9 +2062,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool Export(string fileName)
@@ -2072,10 +2076,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="filterName">optional object FilterName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195106.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool Export(string fileName, object filterName)
@@ -2087,9 +2091,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839841.aspx
 		/// </summary>
 		/// <param name="name">object Name</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839841.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SetDefaultChart(object name)
 		{
@@ -2099,9 +2103,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845631.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845631.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyChartTemplate(string fileName)
 		{
@@ -2111,9 +2115,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839083.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839083.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SaveChartTemplate(string fileName)
 		{
@@ -2123,8 +2127,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193390.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193390.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ClearToMatchStyle()
 		{
@@ -2134,10 +2138,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx
 		/// </summary>
 		/// <param name="layout">Int32 Layout</param>
 		/// <param name="chartType">optional object ChartType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyLayout(Int32 layout, object chartType)
 		{
@@ -2147,9 +2151,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx
 		/// </summary>
 		/// <param name="layout">Int32 Layout</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840397.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void ApplyLayout(Int32 layout)
@@ -2160,8 +2164,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192135.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192135.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Refresh()
 		{
@@ -2171,9 +2175,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838552.aspx
 		/// </summary>
 		/// <param name="element">NetOffice.OfficeApi.Enums.MsoChartElementType Element</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838552.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void SetElement(NetOffice.OfficeApi.Enums.MsoChartElementType element)
 		{
@@ -2183,6 +2187,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2197,6 +2202,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2211,6 +2217,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2225,6 +2232,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2239,6 +2247,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2253,6 +2262,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2267,6 +2277,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2281,6 +2292,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2295,6 +2307,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2309,6 +2322,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2323,6 +2337,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2337,6 +2352,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2351,6 +2367,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2365,6 +2382,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2379,6 +2397,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2393,6 +2412,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2407,8 +2427,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840074.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840074.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Delete()
 		{
@@ -2427,10 +2447,10 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
 		/// <param name="before">optional object Before</param>
 		/// <param name="after">optional object After</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Copy(object before, object after)
 		{
@@ -2440,8 +2460,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Copy()
@@ -2452,9 +2472,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx
 		/// </summary>
 		/// <param name="before">optional object Before</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192354.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Copy(object before)
@@ -2465,9 +2485,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx
 		/// </summary>
 		/// <param name="replace">optional object Replace</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx </remarks>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Select(object replace)
 		{
@@ -2486,8 +2506,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191928.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
 		public object Select()
@@ -2507,9 +2527,9 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx
 		/// </summary>
 		/// <param name="index">optional object Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public object FullSeriesCollection(object index)
 		{
@@ -2521,8 +2541,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229848.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 15)]
 		public object FullSeriesCollection()
@@ -2535,6 +2555,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 15)]
@@ -2546,8 +2567,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230203.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230203.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public void ClearToMatchColorStyle()
 		{

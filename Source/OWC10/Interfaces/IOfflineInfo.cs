@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
@@ -111,6 +112,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pwzServerFilter">string pwzServerFilter</param>
@@ -125,6 +127,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pwzUrl">string pwzUrl</param>
 		/// <param name="pfSubscribed">Int32 pfSubscribed</param>
@@ -139,6 +142,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pbstrPath">string pbstrPath</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

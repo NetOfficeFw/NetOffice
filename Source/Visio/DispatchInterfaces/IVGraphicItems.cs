@@ -236,6 +236,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="graphicItem">NetOffice.VisioApi.IVGraphicItem GraphicItem</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]

@@ -12,8 +12,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface CategoryCollection 
 	/// SupportByVersion Word, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231100.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231100.aspx </remarks>
 	[SupportByVersionAttribute("Word", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CategoryCollection : COMObject ,IEnumerable<NetOffice.WordApi.ChartCategory>
@@ -96,9 +96,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231978.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231978.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231429.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231429.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public Int32 Count
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229558.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229558.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public object Application
 		{
@@ -148,8 +148,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232266.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232266.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public Int32 Creator
 		{
@@ -167,6 +167,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

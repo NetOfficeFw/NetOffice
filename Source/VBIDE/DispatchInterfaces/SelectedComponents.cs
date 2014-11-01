@@ -145,6 +145,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]

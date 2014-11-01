@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -199,6 +200,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -214,6 +216,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -230,6 +233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -247,6 +251,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -265,6 +270,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlSourceType SourceType</param>
 		/// <param name="filename">string Filename</param>
@@ -284,6 +290,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Delete()
@@ -295,6 +302,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Publish()

@@ -11,8 +11,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// DispatchInterface DoCmd 
 	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192694.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192694.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class DoCmd : COMObject
@@ -98,11 +98,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834781.aspx
 		/// </summary>
 		/// <param name="menuName">object MenuName</param>
 		/// <param name="menuMacroName">object MenuMacroName</param>
 		/// <param name="statusBarText">object StatusBarText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834781.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void AddMenu(object menuName, object menuMacroName, object statusBarText)
 		{
@@ -112,10 +112,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ApplyFilter(object filterName, object whereCondition)
 		{
@@ -125,11 +125,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="controlName">optional object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void ApplyFilter(object filterName, object whereCondition, object controlName)
 		{
@@ -139,8 +139,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ApplyFilter()
@@ -151,9 +151,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197651.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ApplyFilter(object filterName)
@@ -164,8 +164,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196680.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196680.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Beep()
 		{
@@ -175,8 +175,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836964.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836964.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CancelEvent()
 		{
@@ -186,11 +186,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="save">optional NetOffice.AccessApi.Enums.AcCloseSave Save = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Close(object objectType, object objectName, object save)
 		{
@@ -200,8 +200,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Close()
@@ -212,9 +212,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Close(object objectType)
@@ -225,10 +225,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192860.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Close(object objectType, object objectName)
@@ -239,12 +239,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
 		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
 		/// <param name="newName">optional object NewName</param>
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
 		/// <param name="sourceObjectName">optional object SourceObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType, object sourceObjectName)
 		{
@@ -254,8 +254,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CopyObject()
@@ -266,9 +266,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
 		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CopyObject(object destinationDatabase)
@@ -279,10 +279,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
 		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
 		/// <param name="newName">optional object NewName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CopyObject(object destinationDatabase, object newName)
@@ -293,11 +293,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx
 		/// </summary>
 		/// <param name="destinationDatabase">optional object DestinationDatabase</param>
 		/// <param name="newName">optional object NewName</param>
 		/// <param name="sourceObjectType">optional NetOffice.AccessApi.Enums.AcObjectType SourceObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844724.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void CopyObject(object destinationDatabase, object newName, object sourceObjectType)
@@ -308,13 +308,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
 		/// <param name="menuBar">object MenuBar</param>
 		/// <param name="menuName">object MenuName</param>
 		/// <param name="command">object Command</param>
 		/// <param name="subcommand">optional object Subcommand</param>
 		/// <param name="version">optional object Version</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand, object version)
 		{
@@ -324,11 +324,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
 		/// <param name="menuBar">object MenuBar</param>
 		/// <param name="menuName">object MenuName</param>
 		/// <param name="command">object Command</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DoMenuItem(object menuBar, object menuName, object command)
@@ -339,12 +339,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx
 		/// </summary>
 		/// <param name="menuBar">object MenuBar</param>
 		/// <param name="menuName">object MenuName</param>
 		/// <param name="command">object Command</param>
 		/// <param name="subcommand">optional object Subcommand</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822447.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DoMenuItem(object menuBar, object menuName, object command, object subcommand)
@@ -355,10 +355,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx
 		/// </summary>
 		/// <param name="echoOn">object EchoOn</param>
 		/// <param name="statusBarText">optional object StatusBarText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Echo(object echoOn, object statusBarText)
 		{
@@ -368,9 +368,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx
 		/// </summary>
 		/// <param name="echoOn">object EchoOn</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193863.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Echo(object echoOn)
@@ -381,8 +381,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196453.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196453.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindNext()
 		{
@@ -392,6 +392,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
@@ -400,7 +401,6 @@ namespace NetOffice.AccessApi
 		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
 		/// <param name="findFirst">optional object FindFirst</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField, object findFirst)
 		{
@@ -410,9 +410,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat)
@@ -423,10 +423,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match)
@@ -437,11 +437,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
 		/// <param name="matchCase">optional object MatchCase</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match, object matchCase)
@@ -452,12 +452,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search)
@@ -468,13 +468,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
 		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted)
@@ -485,6 +485,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx
 		/// </summary>
 		/// <param name="findWhat">object FindWhat</param>
 		/// <param name="match">optional NetOffice.AccessApi.Enums.AcFindMatch Match = 1</param>
@@ -492,7 +493,6 @@ namespace NetOffice.AccessApi
 		/// <param name="search">optional NetOffice.AccessApi.Enums.AcSearchDirection Search = 2</param>
 		/// <param name="searchAsFormatted">optional object SearchAsFormatted</param>
 		/// <param name="onlyCurrentField">optional NetOffice.AccessApi.Enums.AcFindField OnlyCurrentField = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835361.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void FindRecord(object findWhat, object match, object matchCase, object search, object searchAsFormatted, object onlyCurrentField)
@@ -503,9 +503,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192079.aspx
 		/// </summary>
 		/// <param name="controlName">object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192079.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToControl(object controlName)
 		{
@@ -515,11 +515,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
 		/// <param name="pageNumber">object PageNumber</param>
 		/// <param name="right">optional object Right</param>
 		/// <param name="down">optional object Down</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToPage(object pageNumber, object right, object down)
 		{
@@ -529,9 +529,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
 		/// <param name="pageNumber">object PageNumber</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToPage(object pageNumber)
@@ -542,10 +542,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx
 		/// </summary>
 		/// <param name="pageNumber">object PageNumber</param>
 		/// <param name="right">optional object Right</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192504.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToPage(object pageNumber, object right)
@@ -556,12 +556,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
 		/// <param name="offset">optional object Offset</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToRecord(object objectType, object objectName, object record, object offset)
 		{
@@ -571,8 +571,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToRecord()
@@ -583,9 +583,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToRecord(object objectType)
@@ -596,10 +596,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToRecord(object objectType, object objectName)
@@ -610,11 +610,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194117.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void GoToRecord(object objectType, object objectName, object record)
@@ -625,9 +625,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835648.aspx
 		/// </summary>
 		/// <param name="hourglassOn">object HourglassOn</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835648.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Hourglass(object hourglassOn)
 		{
@@ -637,8 +637,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195449.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195449.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Maximize()
 		{
@@ -648,8 +648,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837032.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837032.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Minimize()
 		{
@@ -659,12 +659,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
 		/// <param name="right">optional object Right</param>
 		/// <param name="down">optional object Down</param>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void MoveSize(object right, object down, object width, object height)
 		{
@@ -674,8 +674,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void MoveSize()
@@ -686,9 +686,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
 		/// <param name="right">optional object Right</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void MoveSize(object right)
@@ -699,10 +699,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
 		/// <param name="right">optional object Right</param>
 		/// <param name="down">optional object Down</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void MoveSize(object right, object down)
@@ -713,11 +713,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx
 		/// </summary>
 		/// <param name="right">optional object Right</param>
 		/// <param name="down">optional object Down</param>
 		/// <param name="width">optional object Width</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197394.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void MoveSize(object right, object down, object width)
@@ -728,6 +728,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
@@ -736,7 +737,6 @@ namespace NetOffice.AccessApi
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		/// <param name="openArgs">optional object OpenArgs</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode, object openArgs)
 		{
@@ -746,9 +746,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName)
@@ -759,10 +759,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view)
@@ -773,11 +773,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view, object filterName)
@@ -788,12 +788,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition)
@@ -804,13 +804,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode)
@@ -821,6 +821,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx
 		/// </summary>
 		/// <param name="formName">object FormName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcFormView View = 0</param>
@@ -828,7 +829,6 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = -1</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820845.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenForm(object formName, object view, object filterName, object whereCondition, object dataMode, object windowMode)
@@ -839,11 +839,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
 		/// <param name="queryName">object QueryName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenQuery(object queryName, object view, object dataMode)
 		{
@@ -853,9 +853,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
 		/// <param name="queryName">object QueryName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenQuery(object queryName)
@@ -866,10 +866,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx
 		/// </summary>
 		/// <param name="queryName">object QueryName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192746.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenQuery(object queryName, object view)
@@ -880,11 +880,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
 		/// <param name="tableName">object TableName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenTable(object tableName, object view, object dataMode)
 		{
@@ -894,9 +894,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
 		/// <param name="tableName">object TableName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenTable(object tableName)
@@ -907,10 +907,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx
 		/// </summary>
 		/// <param name="tableName">object TableName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194975.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenTable(object tableName, object view)
@@ -921,6 +921,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		/// <param name="pageFrom">optional object PageFrom</param>
@@ -928,7 +929,6 @@ namespace NetOffice.AccessApi
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
 		/// <param name="copies">optional object Copies</param>
 		/// <param name="collateCopies">optional object CollateCopies</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies, object collateCopies)
 		{
@@ -938,8 +938,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut()
@@ -950,9 +950,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange)
@@ -963,10 +963,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		/// <param name="pageFrom">optional object PageFrom</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange, object pageFrom)
@@ -977,11 +977,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		/// <param name="pageFrom">optional object PageFrom</param>
 		/// <param name="pageTo">optional object PageTo</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo)
@@ -992,12 +992,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		/// <param name="pageFrom">optional object PageFrom</param>
 		/// <param name="pageTo">optional object PageTo</param>
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality)
@@ -1008,13 +1008,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx
 		/// </summary>
 		/// <param name="printRange">optional NetOffice.AccessApi.Enums.AcPrintRange PrintRange = 0</param>
 		/// <param name="pageFrom">optional object PageFrom</param>
 		/// <param name="pageTo">optional object PageTo</param>
 		/// <param name="printQuality">optional NetOffice.AccessApi.Enums.AcPrintQuality PrintQuality = 0</param>
 		/// <param name="copies">optional object Copies</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192667.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void PrintOut(object printRange, object pageFrom, object pageTo, object printQuality, object copies)
@@ -1025,9 +1025,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx
 		/// </summary>
 		/// <param name="options">optional NetOffice.AccessApi.Enums.AcQuitOption Options = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Quit(object options)
 		{
@@ -1037,8 +1037,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191887.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Quit()
@@ -1049,9 +1049,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx
 		/// </summary>
 		/// <param name="controlName">optional object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Requery(object controlName)
 		{
@@ -1061,8 +1061,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195253.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Requery()
@@ -1073,10 +1073,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RepaintObject(object objectType, object objectName)
 		{
@@ -1086,8 +1086,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RepaintObject()
@@ -1098,9 +1098,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195560.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RepaintObject(object objectType)
@@ -1111,11 +1111,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
 		/// <param name="newName">object NewName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="oldName">optional object OldName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Rename(object newName, object objectType, object oldName)
 		{
@@ -1125,9 +1125,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
 		/// <param name="newName">object NewName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Rename(object newName)
@@ -1138,10 +1138,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx
 		/// </summary>
 		/// <param name="newName">object NewName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823209.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Rename(object newName, object objectType)
@@ -1152,8 +1152,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193174.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193174.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Restore()
 		{
@@ -1163,11 +1163,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
 		/// <param name="macroName">object MacroName</param>
 		/// <param name="repeatCount">optional object RepeatCount</param>
 		/// <param name="repeatExpression">optional object RepeatExpression</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunMacro(object macroName, object repeatCount, object repeatExpression)
 		{
@@ -1177,9 +1177,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
 		/// <param name="macroName">object MacroName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunMacro(object macroName)
@@ -1190,10 +1190,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx
 		/// </summary>
 		/// <param name="macroName">object MacroName</param>
 		/// <param name="repeatCount">optional object RepeatCount</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192075.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunMacro(object macroName, object repeatCount)
@@ -1204,10 +1204,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx
 		/// </summary>
 		/// <param name="sQLStatement">object SQLStatement</param>
 		/// <param name="useTransaction">optional object UseTransaction</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunSQL(object sQLStatement, object useTransaction)
 		{
@@ -1217,9 +1217,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx
 		/// </summary>
 		/// <param name="sQLStatement">object SQLStatement</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194626.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunSQL(object sQLStatement)
@@ -1230,11 +1230,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="inDatabaseWindow">optional object InDatabaseWindow</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName, object inDatabaseWindow)
 		{
@@ -1244,9 +1244,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType)
@@ -1257,10 +1257,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835629.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SelectObject(NetOffice.AccessApi.Enums.AcObjectType objectType, object objectName)
@@ -1271,9 +1271,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837275.aspx
 		/// </summary>
 		/// <param name="warningsOn">object WarningsOn</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837275.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetWarnings(object warningsOn)
 		{
@@ -1283,8 +1283,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195994.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195994.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ShowAllRecords()
 		{
@@ -1294,12 +1294,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition)
 		{
@@ -1309,6 +1309,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
@@ -1316,7 +1317,6 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
 		/// <param name="openArgs">optional object OpenArgs</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode, object openArgs)
 		{
@@ -1326,9 +1326,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenReport(object reportName)
@@ -1339,10 +1339,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenReport(object reportName, object view)
@@ -1353,11 +1353,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenReport(object reportName, object view, object filterName)
@@ -1368,13 +1368,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="windowMode">optional NetOffice.AccessApi.Enums.AcWindowMode WindowMode = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192676.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OpenReport(object reportName, object view, object filterName, object whereCondition, object windowMode)
@@ -1385,6 +1385,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
@@ -1394,7 +1395,6 @@ namespace NetOffice.AccessApi
 		/// <param name="destination">optional object Destination</param>
 		/// <param name="structureOnly">optional object StructureOnly</param>
 		/// <param name="storeLogin">optional object StoreLogin</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly, object storeLogin)
 		{
@@ -1404,8 +1404,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase()
@@ -1416,9 +1416,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType)
@@ -1429,10 +1429,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType)
@@ -1443,11 +1443,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
 		/// <param name="databaseName">optional object DatabaseName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName)
@@ -1458,12 +1458,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
 		/// <param name="databaseName">optional object DatabaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType)
@@ -1474,13 +1474,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
 		/// <param name="databaseName">optional object DatabaseName</param>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
 		/// <param name="source">optional object Source</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source)
@@ -1491,6 +1491,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
@@ -1498,7 +1499,6 @@ namespace NetOffice.AccessApi
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = 0</param>
 		/// <param name="source">optional object Source</param>
 		/// <param name="destination">optional object Destination</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination)
@@ -1509,6 +1509,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="databaseType">optional object DatabaseType</param>
@@ -1517,7 +1518,6 @@ namespace NetOffice.AccessApi
 		/// <param name="source">optional object Source</param>
 		/// <param name="destination">optional object Destination</param>
 		/// <param name="structureOnly">optional object StructureOnly</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196455.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferDatabase(object transferType, object databaseType, object databaseName, object objectType, object source, object destination, object structureOnly)
@@ -1528,6 +1528,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
@@ -1536,7 +1537,6 @@ namespace NetOffice.AccessApi
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
 		/// <param name="range">optional object Range</param>
 		/// <param name="useOA">optional object UseOA</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range, object useOA)
 		{
@@ -1546,8 +1546,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet()
@@ -1558,9 +1558,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType)
@@ -1571,10 +1571,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType)
@@ -1585,11 +1585,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
 		/// <param name="tableName">optional object TableName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName)
@@ -1600,12 +1600,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="fileName">optional object FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName)
@@ -1616,13 +1616,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames)
@@ -1633,6 +1633,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcDataTransferType TransferType = 0</param>
 		/// <param name="spreadsheetType">optional NetOffice.AccessApi.Enums.AcSpreadSheetType SpreadsheetType = 8</param>
@@ -1640,7 +1641,6 @@ namespace NetOffice.AccessApi
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
 		/// <param name="range">optional object Range</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844793.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferSpreadsheet(object transferType, object spreadsheetType, object tableName, object fileName, object hasFieldNames, object range)
@@ -1651,6 +1651,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
@@ -1659,7 +1660,6 @@ namespace NetOffice.AccessApi
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
 		/// <param name="hTMLTableName">optional object HTMLTableName</param>
 		/// <param name="codePage">optional object CodePage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName, object codePage)
 		{
@@ -1669,8 +1669,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText()
@@ -1681,9 +1681,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType)
@@ -1694,10 +1694,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName)
@@ -1708,11 +1708,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
 		/// <param name="tableName">optional object TableName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName, object tableName)
@@ -1723,12 +1723,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="fileName">optional object FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName)
@@ -1739,13 +1739,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames)
@@ -1756,6 +1756,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx
 		/// </summary>
 		/// <param name="transferType">optional NetOffice.AccessApi.Enums.AcTextTransferType TransferType = 0</param>
 		/// <param name="specificationName">optional object SpecificationName</param>
@@ -1763,7 +1764,6 @@ namespace NetOffice.AccessApi
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="hasFieldNames">optional object HasFieldNames</param>
 		/// <param name="hTMLTableName">optional object HTMLTableName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835958.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void TransferText(object transferType, object specificationName, object tableName, object fileName, object hasFieldNames, object hTMLTableName)
@@ -1774,6 +1774,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -1781,7 +1782,6 @@ namespace NetOffice.AccessApi
 		/// <param name="outputFile">optional object OutputFile</param>
 		/// <param name="autoStart">optional object AutoStart</param>
 		/// <param name="templateFile">optional object TemplateFile</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile)
 		{
@@ -1791,6 +1791,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -1799,7 +1800,6 @@ namespace NetOffice.AccessApi
 		/// <param name="autoStart">optional object AutoStart</param>
 		/// <param name="templateFile">optional object TemplateFile</param>
 		/// <param name="encoding">optional object Encoding</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding)
 		{
@@ -1809,6 +1809,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -1818,7 +1819,6 @@ namespace NetOffice.AccessApi
 		/// <param name="templateFile">optional object TemplateFile</param>
 		/// <param name="encoding">optional object Encoding</param>
 		/// <param name="outputQuality">optional NetOffice.AccessApi.Enums.AcExportQuality OutputQuality = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart, object templateFile, object encoding, object outputQuality)
 		{
@@ -1828,9 +1828,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType)
@@ -1841,10 +1841,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName)
@@ -1855,11 +1855,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat)
@@ -1870,12 +1870,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
 		/// <param name="outputFile">optional object OutputFile</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile)
@@ -1886,13 +1886,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
 		/// <param name="outputFile">optional object OutputFile</param>
 		/// <param name="autoStart">optional object AutoStart</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192065.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OutputTo(NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object objectName, object outputFormat, object outputFile, object autoStart)
@@ -1903,10 +1903,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DeleteObject(object objectType, object objectName)
 		{
@@ -1916,8 +1916,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DeleteObject()
@@ -1928,9 +1928,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197376.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void DeleteObject(object objectType)
@@ -1941,10 +1941,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
 		/// <param name="moduleName">optional object ModuleName</param>
 		/// <param name="procedureName">optional object ProcedureName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenModule(object moduleName, object procedureName)
 		{
@@ -1954,8 +1954,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenModule()
@@ -1966,9 +1966,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx
 		/// </summary>
 		/// <param name="moduleName">optional object ModuleName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192698.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenModule(object moduleName)
@@ -1979,6 +1979,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -1990,7 +1991,6 @@ namespace NetOffice.AccessApi
 		/// <param name="messageText">optional object MessageText</param>
 		/// <param name="editMessage">optional object EditMessage</param>
 		/// <param name="templateFile">optional object TemplateFile</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage, object templateFile)
 		{
@@ -2000,8 +2000,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject()
@@ -2012,9 +2012,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType)
@@ -2025,10 +2025,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName)
@@ -2039,11 +2039,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat)
@@ -2054,12 +2054,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
 		/// <param name="to">optional object To</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to)
@@ -2070,13 +2070,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="outputFormat">optional object OutputFormat</param>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc)
@@ -2087,6 +2087,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2094,7 +2095,6 @@ namespace NetOffice.AccessApi
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
 		/// <param name="bcc">optional object Bcc</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc)
@@ -2105,6 +2105,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2113,7 +2114,6 @@ namespace NetOffice.AccessApi
 		/// <param name="cc">optional object Cc</param>
 		/// <param name="bcc">optional object Bcc</param>
 		/// <param name="subject">optional object Subject</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject)
@@ -2124,6 +2124,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2133,7 +2134,6 @@ namespace NetOffice.AccessApi
 		/// <param name="bcc">optional object Bcc</param>
 		/// <param name="subject">optional object Subject</param>
 		/// <param name="messageText">optional object MessageText</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText)
@@ -2144,6 +2144,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcSendObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2154,7 +2155,6 @@ namespace NetOffice.AccessApi
 		/// <param name="subject">optional object Subject</param>
 		/// <param name="messageText">optional object MessageText</param>
 		/// <param name="editMessage">optional object EditMessage</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197046.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SendObject(object objectType, object objectName, object outputFormat, object to, object cc, object bcc, object subject, object messageText, object editMessage)
@@ -2165,10 +2165,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx
 		/// </summary>
 		/// <param name="toolbarName">object ToolbarName</param>
 		/// <param name="show">optional NetOffice.AccessApi.Enums.AcShowToolbar Show = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ShowToolbar(object toolbarName, object show)
 		{
@@ -2178,9 +2178,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx
 		/// </summary>
 		/// <param name="toolbarName">object ToolbarName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194957.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void ShowToolbar(object toolbarName)
@@ -2191,10 +2191,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Save(object objectType, object objectName)
 		{
@@ -2204,8 +2204,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Save()
@@ -2216,9 +2216,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196435.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Save(object objectType)
@@ -2229,12 +2229,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
 		/// <param name="menuIndex">object MenuIndex</param>
 		/// <param name="commandIndex">optional object CommandIndex</param>
 		/// <param name="subcommandIndex">optional object SubcommandIndex</param>
 		/// <param name="flag">optional object Flag</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex, object flag)
 		{
@@ -2244,9 +2244,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
 		/// <param name="menuIndex">object MenuIndex</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetMenuItem(object menuIndex)
@@ -2257,10 +2257,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
 		/// <param name="menuIndex">object MenuIndex</param>
 		/// <param name="commandIndex">optional object CommandIndex</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetMenuItem(object menuIndex, object commandIndex)
@@ -2271,11 +2271,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx
 		/// </summary>
 		/// <param name="menuIndex">object MenuIndex</param>
 		/// <param name="commandIndex">optional object CommandIndex</param>
 		/// <param name="subcommandIndex">optional object SubcommandIndex</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195265.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void SetMenuItem(object menuIndex, object commandIndex, object subcommandIndex)
@@ -2286,9 +2286,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194612.aspx
 		/// </summary>
 		/// <param name="command">NetOffice.AccessApi.Enums.AcCommand Command</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194612.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void RunCommand(NetOffice.AccessApi.Enums.AcCommand command)
 		{
@@ -2298,10 +2298,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx
 		/// </summary>
 		/// <param name="dataAccessPageName">object DataAccessPageName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcDataAccessPageView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenDataAccessPage(object dataAccessPageName, object view)
 		{
@@ -2311,9 +2311,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx
 		/// </summary>
 		/// <param name="dataAccessPageName">object DataAccessPageName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845421.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenDataAccessPage(object dataAccessPageName)
@@ -2324,11 +2324,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
 		/// <param name="viewName">object ViewName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenView(object viewName, object view, object dataMode)
 		{
@@ -2338,9 +2338,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
 		/// <param name="viewName">object ViewName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenView(object viewName)
@@ -2351,10 +2351,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx
 		/// </summary>
 		/// <param name="viewName">object ViewName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197347.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenView(object viewName, object view)
@@ -2365,9 +2365,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821439.aspx
 		/// </summary>
 		/// <param name="diagramName">object DiagramName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821439.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenDiagram(object diagramName)
 		{
@@ -2377,11 +2377,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
 		/// <param name="procedureName">object ProcedureName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenStoredProcedure(object procedureName, object view, object dataMode)
 		{
@@ -2391,9 +2391,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
 		/// <param name="procedureName">object ProcedureName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenStoredProcedure(object procedureName)
@@ -2404,10 +2404,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx
 		/// </summary>
 		/// <param name="procedureName">object ProcedureName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197412.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void OpenStoredProcedure(object procedureName, object view)
@@ -2418,6 +2418,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
@@ -2433,6 +2434,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2446,6 +2448,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
@@ -2460,6 +2463,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="reportName">object ReportName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
@@ -2475,6 +2479,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2492,6 +2497,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2505,6 +2511,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2519,6 +2526,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2534,6 +2542,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2550,6 +2559,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2567,6 +2577,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
 		/// <param name="server">object Server</param>
 		/// <param name="database">object Database</param>
@@ -2574,7 +2585,6 @@ namespace NetOffice.AccessApi
 		/// <param name="login">optional object Login</param>
 		/// <param name="password">optional object Password</param>
 		/// <param name="transferCopyData">optional object TransferCopyData</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password, object transferCopyData)
 		{
@@ -2584,10 +2594,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
 		/// <param name="server">object Server</param>
 		/// <param name="database">object Database</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void TransferSQLDatabase(object server, object database)
@@ -2598,11 +2608,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
 		/// <param name="server">object Server</param>
 		/// <param name="database">object Database</param>
 		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection)
@@ -2613,12 +2623,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
 		/// <param name="server">object Server</param>
 		/// <param name="database">object Database</param>
 		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
 		/// <param name="login">optional object Login</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login)
@@ -2629,13 +2639,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx
 		/// </summary>
 		/// <param name="server">object Server</param>
 		/// <param name="database">object Database</param>
 		/// <param name="useTrustedConnection">optional object UseTrustedConnection</param>
 		/// <param name="login">optional object Login</param>
 		/// <param name="password">optional object Password</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835048.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void TransferSQLDatabase(object server, object database, object useTrustedConnection, object login, object password)
@@ -2646,11 +2656,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
 		/// <param name="databaseFileName">object DatabaseFileName</param>
 		/// <param name="overwriteExistingFile">optional object OverwriteExistingFile</param>
 		/// <param name="disconnectAllUsers">optional object DisconnectAllUsers</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile, object disconnectAllUsers)
 		{
@@ -2660,9 +2670,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
 		/// <param name="databaseFileName">object DatabaseFileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void CopyDatabaseFile(object databaseFileName)
@@ -2673,10 +2683,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx
 		/// </summary>
 		/// <param name="databaseFileName">object DatabaseFileName</param>
 		/// <param name="overwriteExistingFile">optional object OverwriteExistingFile</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845497.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void CopyDatabaseFile(object databaseFileName, object overwriteExistingFile)
@@ -2687,11 +2697,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
 		/// <param name="functionName">object FunctionName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OpenFunction(object functionName, object view, object dataMode)
 		{
@@ -2701,9 +2711,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
 		/// <param name="functionName">object FunctionName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OpenFunction(object functionName)
@@ -2714,10 +2724,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx
 		/// </summary>
 		/// <param name="functionName">object FunctionName</param>
 		/// <param name="view">optional NetOffice.AccessApi.Enums.AcView View = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194192.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
 		public void OpenFunction(object functionName, object view)
@@ -2728,6 +2738,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
@@ -2741,6 +2752,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2753,6 +2765,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2766,6 +2779,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2784,6 +2798,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2797,6 +2812,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2811,6 +2827,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2826,6 +2843,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2842,6 +2860,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2859,6 +2878,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcOutputObjectType ObjectType</param>
 		/// <param name="objectName">optional object ObjectName</param>
@@ -2877,6 +2897,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
 		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="siteAddress">object SiteAddress</param>
@@ -2884,7 +2905,6 @@ namespace NetOffice.AccessApi
 		/// <param name="viewID">optional object ViewID</param>
 		/// <param name="tableName">optional object TableName</param>
 		/// <param name="getLookupDisplayValues">optional object GetLookupDisplayValues</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName, object getLookupDisplayValues)
 		{
@@ -2894,11 +2914,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
 		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="siteAddress">object SiteAddress</param>
 		/// <param name="listID">object ListID</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID)
@@ -2909,12 +2929,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
 		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="siteAddress">object SiteAddress</param>
 		/// <param name="listID">object ListID</param>
 		/// <param name="viewID">optional object ViewID</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID)
@@ -2925,13 +2945,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx
 		/// </summary>
 		/// <param name="transferType">NetOffice.AccessApi.Enums.AcSharePointListTransferType TransferType</param>
 		/// <param name="siteAddress">object SiteAddress</param>
 		/// <param name="listID">object ListID</param>
 		/// <param name="viewID">optional object ViewID</param>
 		/// <param name="tableName">optional object TableName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198137.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void TransferSharePointList(NetOffice.AccessApi.Enums.AcSharePointListTransferType transferType, object siteAddress, object listID, object viewID, object tableName)
@@ -2942,8 +2962,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844747.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844747.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void CloseDatabase()
 		{
@@ -2953,10 +2973,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
 		/// <param name="category">optional object Category</param>
 		/// <param name="group">optional object Group</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void NavigateTo(object category, object group)
 		{
@@ -2966,8 +2986,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void NavigateTo()
@@ -2978,9 +2998,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx
 		/// </summary>
 		/// <param name="category">optional object Category</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191916.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void NavigateTo(object category)
@@ -2991,12 +3011,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SearchForRecord(object objectType, object objectName, object record, object whereCondition)
 		{
@@ -3006,8 +3026,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SearchForRecord()
@@ -3018,9 +3038,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SearchForRecord(object objectType)
@@ -3031,10 +3051,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SearchForRecord(object objectType, object objectName)
@@ -3045,11 +3065,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx
 		/// </summary>
 		/// <param name="objectType">optional NetOffice.AccessApi.Enums.AcDataObjectType ObjectType = -1</param>
 		/// <param name="objectName">optional object ObjectName</param>
 		/// <param name="record">optional NetOffice.AccessApi.Enums.AcRecord Record = 2</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836254.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SearchForRecord(object objectType, object objectName, object record)
@@ -3060,11 +3080,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
 		/// <param name="controlName">object ControlName</param>
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
 		/// <param name="value">optional object Value</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetProperty(object controlName, object property, object value)
 		{
@@ -3074,9 +3094,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
 		/// <param name="controlName">object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetProperty(object controlName)
@@ -3087,10 +3107,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx
 		/// </summary>
 		/// <param name="controlName">object ControlName</param>
 		/// <param name="property">optional NetOffice.AccessApi.Enums.AcProperty Property = 0</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192301.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetProperty(object controlName, object property)
@@ -3101,8 +3121,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837036.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837036.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SingleStep()
 		{
@@ -3112,8 +3132,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191914.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191914.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void ClearMacroError()
 		{
@@ -3123,10 +3143,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx
 		/// </summary>
 		/// <param name="show">object Show</param>
 		/// <param name="category">optional object Category</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetDisplayedCategories(object show, object category)
 		{
@@ -3136,9 +3156,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx
 		/// </summary>
 		/// <param name="show">object Show</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821741.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void SetDisplayedCategories(object show)
@@ -3149,9 +3169,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195088.aspx
 		/// </summary>
 		/// <param name="_lock">object Lock</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195088.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void LockNavigationPane(object _lock)
 		{
@@ -3161,9 +3181,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834375.aspx
 		/// </summary>
 		/// <param name="savedImportExportName">object SavedImportExportName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834375.aspx </remarks>
 		[SupportByVersionAttribute("Access", 12,14,15)]
 		public void RunSavedImportExport(object savedImportExportName)
 		{
@@ -3173,6 +3193,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="objectName">object ObjectName</param>
@@ -3180,7 +3201,6 @@ namespace NetOffice.AccessApi
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="page">optional object Page</param>
 		/// <param name="dataMode">optional NetOffice.AccessApi.Enums.AcFormOpenDataMode DataMode = 1</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page, object dataMode)
 		{
@@ -3190,10 +3210,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="objectName">object ObjectName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName)
@@ -3204,11 +3224,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="objectName">object ObjectName</param>
 		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl)
@@ -3219,12 +3239,12 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="objectName">object ObjectName</param>
 		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition)
@@ -3235,13 +3255,13 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx
 		/// </summary>
 		/// <param name="objectType">NetOffice.AccessApi.Enums.AcBrowseToObjectType ObjectType</param>
 		/// <param name="objectName">object ObjectName</param>
 		/// <param name="pathtoSubformControl">optional object PathtoSubformControl</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="page">optional object Page</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196381.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void BrowseTo(NetOffice.AccessApi.Enums.AcBrowseToObjectType objectType, object objectName, object pathtoSubformControl, object whereCondition, object page)
@@ -3252,10 +3272,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194182.aspx
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="expression">object Expression</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194182.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetParameter(object name, object expression)
 		{
@@ -3265,9 +3285,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836068.aspx
 		/// </summary>
 		/// <param name="macroName">object MacroName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836068.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void RunDataMacro(object macroName)
 		{
@@ -3277,10 +3297,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx
 		/// </summary>
 		/// <param name="orderBy">object OrderBy</param>
 		/// <param name="controlName">optional object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetOrderBy(object orderBy, object controlName)
 		{
@@ -3290,9 +3310,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx
 		/// </summary>
 		/// <param name="orderBy">object OrderBy</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844761.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetOrderBy(object orderBy)
@@ -3303,11 +3323,11 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
 		/// <param name="controlName">optional object ControlName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetFilter(object filterName, object whereCondition, object controlName)
 		{
@@ -3317,8 +3337,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetFilter()
@@ -3329,9 +3349,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetFilter(object filterName)
@@ -3342,10 +3362,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx
 		/// </summary>
 		/// <param name="filterName">optional object FilterName</param>
 		/// <param name="whereCondition">optional object WhereCondition</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197950.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void SetFilter(object filterName, object whereCondition)
@@ -3356,8 +3376,8 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191907.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191907.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public void RefreshRecord()
 		{

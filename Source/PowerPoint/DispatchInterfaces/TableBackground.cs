@@ -11,8 +11,8 @@ namespace NetOffice.PowerPointApi
 	///<summary>
 	/// DispatchInterface TableBackground 
 	/// SupportByVersion PowerPoint, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746069.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746069.aspx </remarks>
 	[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TableBackground : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746004.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746004.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.FillFormat Fill
 		{
@@ -112,8 +112,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744317.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744317.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.PictureFormat Picture
 		{
@@ -129,8 +129,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744988.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744988.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.ReflectionFormat Reflection
 		{
@@ -146,8 +146,8 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745675.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745675.aspx </remarks>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.PowerPointApi.ShadowFormat Shadow
 		{

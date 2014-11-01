@@ -87,8 +87,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisioApi", "Visio\VisioApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAddin", "TestAddin\TestAddin.csproj", "{DA7FFFF9-0848-48E2-9B71-7796C941A013}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,10 +161,6 @@ Global
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA7FFFF9-0848-48E2-9B71-7796C941A013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA7FFFF9-0848-48E2-9B71-7796C941A013}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA7FFFF9-0848-48E2-9B71-7796C941A013}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA7FFFF9-0848-48E2-9B71-7796C941A013}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

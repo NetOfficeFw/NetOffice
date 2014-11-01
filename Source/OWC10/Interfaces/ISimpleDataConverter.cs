@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="varSrc">object varSrc</param>
 		/// <param name="vtDest">Int32 vtDest</param>
@@ -112,6 +113,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="vt1">Int32 vt1</param>
 		/// <param name="vt2">Int32 vt2</param>

@@ -184,6 +184,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 12.0
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("DAO", 12.0)]
@@ -195,6 +196,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 12.0
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("DAO", 12.0)]

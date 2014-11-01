@@ -17,8 +17,8 @@ namespace NetOffice.VisioApi
 	///<summary>
 	/// CoClass Row 
 	/// SupportByVersion Visio, 11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769378(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769378(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Row : IVRow,IEventBinding

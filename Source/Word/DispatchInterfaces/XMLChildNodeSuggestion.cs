@@ -191,6 +191,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="range">optional object Range</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -204,6 +205,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 11,12,14,15)]

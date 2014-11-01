@@ -644,6 +644,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -655,6 +656,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -666,6 +668,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void ResetRotation()
@@ -676,6 +679,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetThreeDFormat">NetOffice.OfficeApi.Enums.MsoPresetThreeDFormat PresetThreeDFormat</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -687,6 +691,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetExtrusionDirection">NetOffice.OfficeApi.Enums.MsoPresetExtrusionDirection PresetExtrusionDirection</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -698,6 +703,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetCamera">NetOffice.OfficeApi.Enums.MsoPresetCamera PresetCamera</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -709,6 +715,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -720,6 +727,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -731,6 +739,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]

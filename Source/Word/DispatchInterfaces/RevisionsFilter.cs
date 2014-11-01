@@ -11,8 +11,8 @@ namespace NetOffice.WordApi
 	///<summary>
 	/// DispatchInterface RevisionsFilter 
 	/// SupportByVersion Word, 15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228191.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228191.aspx </remarks>
 	[SupportByVersionAttribute("Word", 15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class RevisionsFilter : COMObject
@@ -95,8 +95,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231521.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231521.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public NetOffice.WordApi.Enums.WdRevisionsView View
 		{
@@ -117,8 +117,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230964.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj230964.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public NetOffice.WordApi.Enums.WdRevisionsMarkup Markup
 		{
@@ -139,8 +139,8 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231708.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj231708.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public NetOffice.WordApi.Reviewers Reviewers
 		{
@@ -159,8 +159,8 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227337.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj227337.aspx </remarks>
 		[SupportByVersionAttribute("Word", 15)]
 		public void ToggleShowAllReviewers()
 		{

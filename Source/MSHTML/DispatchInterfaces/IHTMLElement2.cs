@@ -1099,6 +1099,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="containerCapture">optional bool containerCapture = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1110,6 +1111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1121,6 +1123,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void releaseCapture()
@@ -1131,6 +1134,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -1144,6 +1148,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="component">optional object component</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1155,6 +1160,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1166,6 +1172,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLRectCollection getClientRects()
@@ -1178,6 +1185,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLRect getBoundingClientRect()
@@ -1190,6 +1198,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="expression">string expression</param>
@@ -1203,6 +1212,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="expression">string expression</param>
@@ -1216,6 +1226,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1236,6 +1247,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1248,6 +1260,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void focus()
@@ -1258,6 +1271,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void blur()
@@ -1268,6 +1282,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pUnk">object pUnk</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1279,6 +1294,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pUnk">object pUnk</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1290,6 +1306,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
@@ -1303,6 +1320,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="_event">string event</param>
 		/// <param name="pdisp">object pdisp</param>
@@ -1315,6 +1333,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public object createControlRange()
@@ -1327,6 +1346,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void clearAttributes()
@@ -1337,6 +1357,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="mergeThis">NetOffice.MSHTMLApi.IHTMLElement mergeThis</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1348,6 +1369,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="where">string where</param>
 		/// <param name="insertedElement">NetOffice.MSHTMLApi.IHTMLElement insertedElement</param>
@@ -1362,6 +1384,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="apply">NetOffice.MSHTMLApi.IHTMLElement apply</param>
 		/// <param name="where">string where</param>
@@ -1376,6 +1399,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="where">string where</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1388,6 +1412,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="where">string where</param>
 		/// <param name="newText">string newText</param>
@@ -1401,6 +1426,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		/// <param name="pvarFactory">optional object pvarFactory</param>
@@ -1414,6 +1440,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[CustomMethodAttribute]
@@ -1427,6 +1454,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cookie">Int32 cookie</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1439,6 +1467,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="v">string v</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

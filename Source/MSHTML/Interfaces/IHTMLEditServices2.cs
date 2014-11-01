@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIStartAnchor">NetOffice.MSHTMLApi.IDisplayPointer pIStartAnchor</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIEndAnchor">NetOffice.MSHTMLApi.IDisplayPointer pIEndAnchor</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -121,6 +123,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fReCompute">Int32 fReCompute</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -133,6 +136,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fReset">Int32 fReset</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

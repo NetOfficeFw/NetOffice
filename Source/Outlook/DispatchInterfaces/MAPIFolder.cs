@@ -633,6 +633,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="destinationFolder">NetOffice.OutlookApi.MAPIFolder DestinationFolder</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -646,6 +647,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Delete()
@@ -656,6 +658,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		public void Display()
@@ -666,6 +669,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="displayMode">optional object DisplayMode</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -679,6 +683,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -692,6 +697,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="destinationFolder">NetOffice.OutlookApi.MAPIFolder DestinationFolder</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -703,6 +709,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
@@ -714,6 +721,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fNoUI">optional object fNoUI</param>
 		/// <param name="name">optional object Name</param>
@@ -726,6 +734,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 10,11,12,14,15)]
@@ -737,6 +746,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fNoUI">optional object fNoUI</param>
 		[CustomMethodAttribute]
@@ -749,6 +759,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="storageIdentifier">string StorageIdentifier</param>
 		/// <param name="storageIdentifierType">NetOffice.OutlookApi.Enums.OlStorageIdentifierType StorageIdentifierType</param>
@@ -763,6 +774,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filter">optional object Filter</param>
 		/// <param name="tableContents">optional object TableContents</param>
@@ -777,6 +789,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -790,6 +803,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filter">optional object Filter</param>
 		[CustomMethodAttribute]
@@ -804,6 +818,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
 		public NetOffice.OutlookApi.CalendarSharing GetCalendarExporter()
@@ -816,6 +831,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Outlook", 14,15)]
 		public stdole.Picture GetCustomIcon()
@@ -828,6 +844,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 14, 15
+		/// 
 		/// </summary>
 		/// <param name="picture">stdole.Picture Picture</param>
 		[SupportByVersionAttribute("Outlook", 14,15)]

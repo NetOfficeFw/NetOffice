@@ -1365,6 +1365,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="parent">object Parent</param>
 		/// <param name="varChildMembers">object varChildMembers</param>
@@ -1380,6 +1381,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="parent">object Parent</param>
 		/// <param name="varChildMembers">object varChildMembers</param>
@@ -1395,6 +1397,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="customGroupMember">object CustomGroupMember</param>
 		[SupportByVersionAttribute("OWC10", 1)]

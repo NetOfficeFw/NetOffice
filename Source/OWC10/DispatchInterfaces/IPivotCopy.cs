@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		/// <param name="output">optional string Output = 0</param>
@@ -109,6 +110,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="format">Int32 Format</param>
 		[CustomMethodAttribute]

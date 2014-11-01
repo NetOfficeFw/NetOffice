@@ -267,6 +267,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="val">object Val</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]

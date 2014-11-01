@@ -209,6 +209,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="columnNames">String[] ColumnNames</param>
 		/// <param name="properties">Int32[] Properties</param>

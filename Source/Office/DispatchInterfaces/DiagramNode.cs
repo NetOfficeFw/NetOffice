@@ -215,6 +215,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
@@ -229,6 +230,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -242,6 +244,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[CustomMethodAttribute]
@@ -256,6 +259,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Delete()
@@ -266,6 +270,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
 		/// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos</param>
@@ -278,6 +283,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -289,6 +295,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
 		/// <param name="swapChildren">optional bool SwapChildren = true</param>
@@ -301,6 +308,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
 		[CustomMethodAttribute]
@@ -313,6 +321,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="copyChildren">bool CopyChildren</param>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
@@ -328,6 +337,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="copyChildren">bool CopyChildren</param>
 		/// <param name="targetNode">NetOffice.OfficeApi.DiagramNode TargetNode</param>
@@ -343,6 +353,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="receivingNode">NetOffice.OfficeApi.DiagramNode ReceivingNode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -354,6 +365,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.DiagramNode NextNode()
@@ -366,6 +378,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.DiagramNode PrevNode()

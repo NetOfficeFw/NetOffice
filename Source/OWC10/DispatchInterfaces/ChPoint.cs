@@ -300,6 +300,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()
@@ -310,6 +311,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		/// <param name="scaled">optional object scaled</param>
@@ -331,6 +333,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		[CustomMethodAttribute]

@@ -245,6 +245,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -256,6 +257,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -276,6 +278,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -290,6 +293,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -305,6 +309,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -321,6 +326,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -338,6 +344,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -356,6 +363,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -375,6 +383,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -395,6 +404,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="nArrangeFlags">optional object nArrangeFlags</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -406,6 +416,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -417,6 +428,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -439,6 +451,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -452,6 +465,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		[CustomMethodAttribute]
@@ -466,6 +480,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -481,6 +496,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -497,6 +513,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -514,6 +531,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -532,6 +550,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -551,6 +570,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -571,6 +591,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>
@@ -592,6 +613,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCaption">optional object bstrCaption</param>
 		/// <param name="nFlags">optional object nFlags</param>

@@ -688,6 +688,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public static void Calculate()
@@ -698,6 +699,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="_string">string String</param>
@@ -710,6 +712,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
@@ -723,6 +726,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">object Item</param>
@@ -736,6 +740,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
@@ -757,6 +762,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -768,6 +774,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -788,6 +795,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -809,6 +817,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -829,6 +838,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -871,6 +881,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -886,6 +897,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -902,6 +914,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -919,6 +932,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -937,6 +951,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -956,6 +971,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -976,6 +992,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -997,6 +1014,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1019,6 +1037,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1042,6 +1061,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1066,6 +1086,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1091,6 +1112,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1117,6 +1139,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1144,6 +1167,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1172,6 +1196,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1201,6 +1226,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1231,6 +1257,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1262,6 +1289,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1294,6 +1322,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1327,6 +1356,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1361,6 +1391,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1396,6 +1427,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1432,6 +1464,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1469,6 +1502,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1507,6 +1541,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1546,6 +1581,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1586,6 +1622,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1627,6 +1664,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -1669,6 +1707,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1719,6 +1758,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -1739,6 +1779,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		[CustomMethodAttribute]
@@ -1760,6 +1801,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1782,6 +1824,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1805,6 +1848,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1829,6 +1873,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1854,6 +1899,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1880,6 +1926,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1907,6 +1954,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1935,6 +1983,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1964,6 +2013,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -1994,6 +2044,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2025,6 +2076,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2057,6 +2109,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2090,6 +2143,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2124,6 +2178,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2159,6 +2214,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2195,6 +2251,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2232,6 +2289,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2270,6 +2328,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2309,6 +2368,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2349,6 +2409,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2390,6 +2451,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2432,6 +2494,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2475,6 +2538,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2519,6 +2583,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2564,6 +2629,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2610,6 +2676,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2657,6 +2724,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2705,6 +2773,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2754,6 +2823,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2804,6 +2874,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2855,6 +2926,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2876,6 +2948,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2898,6 +2971,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2921,6 +2995,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2945,6 +3020,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2970,6 +3046,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -2996,6 +3073,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3023,6 +3101,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3051,6 +3130,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3080,6 +3160,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3110,6 +3191,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3141,6 +3223,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3173,6 +3256,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3206,6 +3290,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3240,6 +3325,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3275,6 +3361,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3311,6 +3398,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3348,6 +3436,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3386,6 +3475,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3425,6 +3515,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3465,6 +3556,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3506,6 +3598,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3548,6 +3641,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3591,6 +3685,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3635,6 +3730,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3680,6 +3776,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3726,6 +3823,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3773,6 +3871,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3821,6 +3920,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3870,6 +3970,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3920,6 +4021,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macro">optional object Macro</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3971,6 +4073,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="keys">object Keys</param>
 		/// <param name="wait">optional object Wait</param>
@@ -3983,6 +4086,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="keys">object Keys</param>
 		[CustomMethodAttribute]
@@ -3995,6 +4099,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4037,6 +4142,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4052,6 +4158,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4068,6 +4175,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4085,6 +4193,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4103,6 +4212,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4122,6 +4232,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4142,6 +4253,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4163,6 +4275,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4185,6 +4298,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4208,6 +4322,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4232,6 +4347,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4257,6 +4373,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4283,6 +4400,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4310,6 +4428,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4338,6 +4457,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4367,6 +4487,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4397,6 +4518,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4428,6 +4550,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4460,6 +4583,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4493,6 +4617,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4527,6 +4652,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4562,6 +4688,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4598,6 +4725,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4635,6 +4763,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4673,6 +4802,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4712,6 +4842,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4752,6 +4883,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -4793,6 +4925,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>

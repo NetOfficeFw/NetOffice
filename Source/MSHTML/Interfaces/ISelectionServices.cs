@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="eType">NetOffice.MSHTMLApi.Enums._SELECTION_TYPE eType</param>
 		/// <param name="pIListener">NetOffice.MSHTMLApi.ISelectionServicesListener pIListener</param>
@@ -110,6 +111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppIContainer">NetOffice.MSHTMLApi.IMarkupContainer ppIContainer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -125,6 +127,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIStart">NetOffice.MSHTMLApi.IMarkupPointer pIStart</param>
 		/// <param name="pIEnd">NetOffice.MSHTMLApi.IMarkupPointer pIEnd</param>
@@ -142,6 +145,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="ppISegmentAdded">NetOffice.MSHTMLApi.IElementSegment ppISegmentAdded</param>
@@ -158,6 +162,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pISegment">NetOffice.MSHTMLApi.ISegment pISegment</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -170,6 +175,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppISelectionServicesListener">NetOffice.MSHTMLApi.ISelectionServicesListener ppISelectionServicesListener</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

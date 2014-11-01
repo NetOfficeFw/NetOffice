@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="password">optional object Password</param>
@@ -196,6 +197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[CustomMethodAttribute]
@@ -210,6 +212,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="password">optional object Password</param>
@@ -225,6 +228,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="password">optional object Password</param>

@@ -184,6 +184,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Delete()
@@ -194,6 +195,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="newWindow">optional object NewWindow</param>
 		/// <param name="addHistory">optional object AddHistory</param>
@@ -209,6 +211,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -220,6 +223,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="newWindow">optional object NewWindow</param>
 		[CustomMethodAttribute]
@@ -232,6 +236,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="newWindow">optional object NewWindow</param>
 		/// <param name="addHistory">optional object AddHistory</param>
@@ -245,6 +250,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="newWindow">optional object NewWindow</param>
 		/// <param name="addHistory">optional object AddHistory</param>
@@ -259,6 +265,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="newWindow">optional object NewWindow</param>
 		/// <param name="addHistory">optional object AddHistory</param>

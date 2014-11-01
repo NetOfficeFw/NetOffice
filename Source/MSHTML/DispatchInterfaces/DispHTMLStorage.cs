@@ -147,6 +147,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -159,6 +160,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -179,6 +181,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		/// <param name="bstrValue">string bstrValue</param>
@@ -191,6 +194,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -202,6 +206,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void clear()

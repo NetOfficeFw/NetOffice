@@ -97,6 +97,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
@@ -110,6 +111,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
@@ -123,6 +125,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dwValue">UIntPtr dwValue</param>
@@ -136,6 +139,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="type">UIntPtr Type</param>
@@ -151,6 +155,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>
@@ -164,6 +169,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>
@@ -178,6 +184,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="id">UIntPtr id</param>
 		/// <param name="dw1">UIntPtr dw1</param>

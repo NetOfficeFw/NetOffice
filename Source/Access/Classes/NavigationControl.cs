@@ -32,8 +32,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// CoClass NavigationControl 
 	/// SupportByVersion Access, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821468.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821468.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationControl : _NavigationControl,IEventBinding

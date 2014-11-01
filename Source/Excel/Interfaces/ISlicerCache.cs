@@ -531,6 +531,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 ClearManualFilter()
@@ -542,6 +543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Delete()
@@ -553,6 +555,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 ClearAllFilters()
@@ -564,6 +567,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 ClearDateFilter()

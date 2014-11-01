@@ -162,6 +162,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -179,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
@@ -195,6 +197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
@@ -212,6 +215,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>
@@ -227,6 +231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pivotCache">NetOffice.ExcelApi.PivotCache PivotCache</param>
 		/// <param name="tableDestination">object TableDestination</param>

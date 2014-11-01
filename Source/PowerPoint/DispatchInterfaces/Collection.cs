@@ -113,6 +113,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]

@@ -15,8 +15,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass ContactsModule 
 	/// SupportByVersion Outlook, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870108.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff870108.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ContactsModule : _ContactsModule

@@ -97,6 +97,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -110,6 +111,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -123,6 +125,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

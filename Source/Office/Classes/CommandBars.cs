@@ -16,8 +16,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// CoClass CommandBars 
 	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860339.aspx </remarks>
 	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class CommandBars : _CommandBars,IEventBinding

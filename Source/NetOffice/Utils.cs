@@ -60,8 +60,8 @@ namespace NetOffice
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     COMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
-                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                     yield return returnClass;
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
             }
         }
@@ -84,8 +84,8 @@ namespace NetOffice
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     COMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
-                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                     yield return returnClass;
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
             }
         }
@@ -107,8 +107,8 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object item = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                     yield return item;
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
             }
         }
@@ -130,8 +130,8 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object item = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                     yield return item;
+                    isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
             }
         }

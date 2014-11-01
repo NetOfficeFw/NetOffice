@@ -113,6 +113,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Clear()
@@ -123,6 +124,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sFormat">Int16 sFormat</param>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
@@ -143,6 +145,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sFormat">Int16 sFormat</param>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
@@ -155,6 +158,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="vValue">optional object vValue</param>
 		/// <param name="vFormat">optional object vFormat</param>
@@ -167,6 +171,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSComctlLib", 6)]
@@ -178,6 +183,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="vValue">optional object vValue</param>
 		[CustomMethodAttribute]

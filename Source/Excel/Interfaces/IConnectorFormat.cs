@@ -261,6 +261,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="connectedShape">NetOffice.ExcelApi.Shape ConnectedShape</param>
 		/// <param name="connectionSite">Int32 ConnectionSite</param>
@@ -274,6 +275,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 BeginDisconnect()
@@ -285,6 +287,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="connectedShape">NetOffice.ExcelApi.Shape ConnectedShape</param>
 		/// <param name="connectionSite">Int32 ConnectionSite</param>
@@ -298,6 +301,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 EndDisconnect()

@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface CustomXMLValidationErrors 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860565.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860565.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CustomXMLValidationErrors : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.CustomXMLValidationError>
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862460.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862460.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public object Parent
 		{
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861469.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861469.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
 		{
@@ -151,12 +151,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
 		/// <param name="clearedOnUpdate">optional bool ClearedOnUpdate = true</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText, object clearedOnUpdate)
 		{
@@ -166,10 +166,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName)
@@ -180,11 +180,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx
 		/// </summary>
 		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode Node</param>
 		/// <param name="errorName">string ErrorName</param>
 		/// <param name="errorText">optional string ErrorText = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860763.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Add(NetOffice.OfficeApi.CustomXMLNode node, string errorName, object errorText)

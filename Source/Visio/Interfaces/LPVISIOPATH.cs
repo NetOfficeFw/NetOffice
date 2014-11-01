@@ -219,6 +219,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tolerance">Double Tolerance</param>
 		/// <param name="xyArray">Double[] xyArray</param>

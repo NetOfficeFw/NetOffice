@@ -112,6 +112,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void select()
@@ -122,6 +123,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSHTMLApi.IHTMLControlElement item</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -133,6 +135,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -144,6 +147,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 index</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -157,6 +161,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="varargStart">optional object varargStart</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -168,6 +173,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -179,6 +185,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -191,6 +198,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -203,6 +211,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -215,6 +224,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -227,6 +237,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -239,6 +250,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -259,6 +271,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">optional bool showUI = false</param>
@@ -273,6 +286,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[CustomMethodAttribute]
@@ -286,6 +300,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		/// <param name="showUI">optional bool showUI = false</param>
@@ -300,6 +315,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="cmdID">string cmdID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -312,6 +328,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public NetOffice.MSHTMLApi.IHTMLElement commonParentElement()

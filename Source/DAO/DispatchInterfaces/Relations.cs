@@ -131,6 +131,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public void Refresh()

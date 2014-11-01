@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="schemaRowsource">object SchemaRowsource</param>
 		/// <param name="name">optional object Name</param>
@@ -145,6 +146,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="schemaRowsource">object SchemaRowsource</param>
 		[CustomMethodAttribute]
@@ -159,6 +161,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="rowsourceType">optional object RowsourceType</param>
@@ -174,6 +177,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		[CustomMethodAttribute]
@@ -188,6 +192,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="rowsourceType">optional object RowsourceType</param>
@@ -203,6 +208,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

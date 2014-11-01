@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface IConverter 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861235.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861235.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverter : COMObject
@@ -98,11 +98,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864088.aspx
 		/// </summary>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864088.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
@@ -116,9 +116,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862058.aspx
 		/// </summary>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862058.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
@@ -129,13 +129,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864636.aspx
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864636.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
@@ -149,6 +149,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863696.aspx
 		/// </summary>
 		/// <param name="bstrSourcePath">string bstrSourcePath</param>
 		/// <param name="bstrDestPath">string bstrDestPath</param>
@@ -156,7 +157,6 @@ namespace NetOffice.OfficeApi
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863696.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
@@ -170,13 +170,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864094.aspx
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		/// <param name="pbstrClass">string pbstrClass</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
 		/// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
 		/// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864094.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetFormat(string bstrPath, out string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
 		{
@@ -192,11 +192,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861511.aspx
 		/// </summary>
 		/// <param name="hrErr">Int32 hrErr</param>
 		/// <param name="pbstrErrorMsg">string pbstrErrorMsg</param>
 		/// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861511.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetErrorString(Int32 hrErr, out string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
 		{

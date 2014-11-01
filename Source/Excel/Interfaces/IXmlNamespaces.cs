@@ -195,6 +195,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">string Path</param>
 		/// <param name="installForAllUsers">optional object InstallForAllUsers</param>
@@ -208,6 +209,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[CustomMethodAttribute]

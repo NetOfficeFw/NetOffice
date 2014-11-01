@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="newPart">NetOffice.OfficeApi.CustomXMLPart NewPart</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -108,6 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="oldPart">NetOffice.OfficeApi.CustomXMLPart OldPart</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -119,6 +121,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="part">NetOffice.OfficeApi.CustomXMLPart Part</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]

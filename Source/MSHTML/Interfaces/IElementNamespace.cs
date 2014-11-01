@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrTagName">string bstrTagName</param>
 		/// <param name="lFlags">Int32 lFlags</param>

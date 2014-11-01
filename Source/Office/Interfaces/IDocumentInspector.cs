@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface IDocumentInspector 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861808.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861808.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IDocumentInspector : COMObject
@@ -98,10 +98,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862465.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="desc">string Desc</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862465.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 GetInfo(out string name, out string desc)
 		{
@@ -117,12 +117,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861133.aspx
 		/// </summary>
 		/// <param name="doc">object Doc</param>
 		/// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="result">string Result</param>
 		/// <param name="action">string Action</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861133.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Inspect(object doc, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result, out string action)
 		{
@@ -140,12 +140,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864114.aspx
 		/// </summary>
 		/// <param name="doc">object Doc</param>
 		/// <param name="hwnd">Int32 Hwnd</param>
 		/// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus Status</param>
 		/// <param name="result">string Result</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864114.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Fix(object doc, Int32 hwnd, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result)
 		{

@@ -927,6 +927,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Select()
@@ -937,6 +938,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		/// <param name="dataSourceIndex">Int32 DataSourceIndex</param>
@@ -950,6 +952,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		/// <param name="dataSourceIndex">Int32 DataSourceIndex</param>
@@ -963,6 +966,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -975,6 +979,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -987,6 +992,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dimension">NetOffice.OWC10Api.Enums.ChartDimensionsEnum Dimension</param>
 		/// <param name="dataSourceIndex">object DataSourceIndex</param>
@@ -1005,6 +1011,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dataReference">string DataReference</param>
 		/// <param name="seriesByRows">optional bool SeriesByRows = false</param>
@@ -1017,6 +1024,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dataReference">string DataReference</param>
 		[CustomMethodAttribute]
@@ -1029,6 +1037,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void DuplicateFormat()

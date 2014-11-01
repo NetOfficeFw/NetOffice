@@ -97,6 +97,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -109,6 +110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
@@ -122,6 +124,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
@@ -136,6 +139,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
@@ -150,6 +154,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -162,6 +167,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -174,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -186,6 +193,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Range Target</param>
@@ -199,6 +207,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -211,6 +220,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -223,6 +233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -235,6 +246,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -248,6 +260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="saveAsUI">bool SaveAsUI</param>
@@ -262,6 +275,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -275,6 +289,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="sh">object Sh</param>
@@ -288,6 +303,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -300,6 +316,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -312,6 +329,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
@@ -325,6 +343,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
@@ -338,6 +357,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="wn">NetOffice.ExcelApi.Window Wn</param>
@@ -351,6 +371,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.Hyperlink Target</param>
@@ -364,6 +385,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -377,6 +399,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -390,6 +413,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="target">NetOffice.ExcelApi.PivotTable Target</param>
@@ -403,6 +427,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="syncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
@@ -416,6 +441,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -432,6 +458,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -447,6 +474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -462,6 +490,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="map">NetOffice.ExcelApi.XmlMap Map</param>
@@ -477,6 +506,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="description">string Description</param>
@@ -492,6 +522,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public Int32 AfterCalculate()
@@ -503,6 +534,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -517,6 +549,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -533,6 +566,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -549,6 +583,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable TargetPivotTable</param>
@@ -564,6 +599,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -576,6 +612,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -589,6 +626,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		/// <param name="reason">NetOffice.ExcelApi.Enums.XlProtectedViewCloseReason Reason</param>
@@ -603,6 +641,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -615,6 +654,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -627,6 +667,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvw">NetOffice.ExcelApi.ProtectedViewWindow Pvw</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -639,6 +680,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="success">bool Success</param>
@@ -652,6 +694,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="ch">NetOffice.ExcelApi.Chart Ch</param>
@@ -665,6 +708,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -677,6 +721,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		/// <param name="target">NetOffice.ExcelApi.TableObject Target</param>
@@ -690,6 +735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="wb">NetOffice.ExcelApi.Workbook Wb</param>
 		/// <param name="changes">NetOffice.ExcelApi.ModelChanges Changes</param>
@@ -703,6 +749,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="sh">object Sh</param>
 		[SupportByVersionAttribute("Excel", 15)]

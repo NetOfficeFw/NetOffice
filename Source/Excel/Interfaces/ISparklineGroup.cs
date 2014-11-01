@@ -400,6 +400,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="location">NetOffice.ExcelApi.Range Location</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -412,6 +413,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceData">string SourceData</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -424,6 +426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="location">NetOffice.ExcelApi.Range Location</param>
 		/// <param name="sourceData">string SourceData</param>
@@ -437,6 +440,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dateRange">string DateRange</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -449,6 +453,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Delete()

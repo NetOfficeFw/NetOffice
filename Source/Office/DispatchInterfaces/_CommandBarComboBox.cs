@@ -730,6 +730,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862391.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -747,6 +748,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864161.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Creator
@@ -762,6 +764,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862439.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 DropDownLines
@@ -782,6 +785,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860247.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 DropDownWidth
@@ -802,6 +806,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864610.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -828,6 +833,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864610.aspx
 		/// Alias for get_List
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
@@ -840,6 +846,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861189.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 ListCount
@@ -855,6 +862,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861774.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 ListHeaderCount
@@ -875,6 +883,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861121.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 ListIndex
@@ -895,6 +904,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860245.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoComboStyle Style
@@ -916,6 +926,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863116.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public string Text
@@ -963,6 +974,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
@@ -976,6 +988,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -989,6 +1002,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -1014,6 +1028,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -1039,6 +1054,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
@@ -1061,6 +1077,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1083,6 +1100,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
@@ -1105,6 +1123,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1117,6 +1136,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1129,6 +1149,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862141.aspx
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="index">optional object Index</param>
@@ -1141,6 +1162,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862141.aspx
 		/// </summary>
 		/// <param name="text">string Text</param>
 		[CustomMethodAttribute]
@@ -1153,6 +1175,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865479.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Clear()
@@ -1163,6 +1186,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862859.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]

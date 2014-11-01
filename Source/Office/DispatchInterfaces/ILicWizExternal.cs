@@ -251,6 +251,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="punkHtmlDoc">object punkHtmlDoc</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -262,6 +263,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void InvokeDateTimeApplet()
@@ -272,6 +274,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="date">DateTime date</param>
 		/// <param name="pFormat">optional string pFormat = </param>
@@ -285,6 +288,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="date">DateTime date</param>
 		[CustomMethodAttribute]
@@ -298,6 +302,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvarId">optional object pvarId</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -309,6 +314,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -320,6 +326,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Terminate()
@@ -330,6 +337,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bPC">Int32 BPC</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -341,6 +349,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrReceipt">string bstrReceipt</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -353,6 +362,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrUrl">string bstrUrl</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -364,6 +374,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrText">string bstrText</param>
 		/// <param name="bstrButtons">string bstrButtons</param>
@@ -378,6 +389,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrKey">string bstrKey</param>
 		/// <param name="fMORW">Int32 fMORW</param>
@@ -391,6 +403,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrMessage">string bstrMessage</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -402,6 +415,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrProductCode">string bstrProductCode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -413,6 +427,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void ResetPID()
@@ -423,6 +438,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dx">Int32 dx</param>
 		/// <param name="dy">Int32 dy</param>
@@ -435,6 +451,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="lMode">Int32 lMode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -447,6 +464,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pdispSelect">object pdispSelect</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -458,6 +476,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void InternetDisconnect()
@@ -468,6 +487,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetConnectedState()

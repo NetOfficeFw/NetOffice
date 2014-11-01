@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface GroupCriteria 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920605(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920605(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class GroupCriteria : COMObject ,IEnumerable<NetOffice.MSProjectApi.GroupCriterion>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -189,6 +190,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		[CustomMethodAttribute]
@@ -203,6 +205,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -218,6 +221,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -234,6 +238,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -251,6 +256,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -269,6 +275,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -288,6 +295,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -308,6 +316,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -329,6 +338,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -351,6 +361,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -374,6 +385,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>
@@ -398,6 +410,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="ascending">optional bool Ascending = true</param>

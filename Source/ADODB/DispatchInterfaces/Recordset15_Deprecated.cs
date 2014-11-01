@@ -571,6 +571,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fieldList">optional object FieldList</param>
 		/// <param name="values">optional object Values</param>
@@ -583,6 +584,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -594,6 +596,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fieldList">optional object FieldList</param>
 		[CustomMethodAttribute]
@@ -606,6 +609,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void CancelUpdate()
@@ -616,6 +620,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Close()
@@ -626,6 +631,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -637,6 +643,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -648,6 +655,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="rows">optional Int32 Rows = -1</param>
 		/// <param name="start">optional object Start</param>
@@ -670,6 +678,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -690,6 +699,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="rows">optional Int32 Rows = -1</param>
 		[CustomMethodAttribute]
@@ -711,6 +721,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="rows">optional Int32 Rows = -1</param>
 		/// <param name="start">optional object Start</param>
@@ -733,6 +744,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="numRecords">Int32 NumRecords</param>
 		/// <param name="start">optional object Start</param>
@@ -745,6 +757,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="numRecords">Int32 NumRecords</param>
 		[CustomMethodAttribute]
@@ -757,6 +770,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void MoveNext()
@@ -767,6 +781,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void MovePrevious()
@@ -777,6 +792,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void MoveFirst()
@@ -787,6 +803,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void MoveLast()
@@ -797,6 +814,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -812,6 +830,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -823,6 +842,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		[CustomMethodAttribute]
@@ -835,6 +855,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -848,6 +869,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -862,6 +884,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -877,6 +900,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -888,6 +912,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -899,6 +924,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -911,6 +937,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -923,6 +950,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fields">optional object Fields</param>
 		/// <param name="values">optional object Values</param>
@@ -935,6 +963,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -946,6 +975,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fields">optional object Fields</param>
 		[CustomMethodAttribute]
@@ -958,6 +988,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -971,6 +1002,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -982,6 +1014,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -993,6 +1026,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1004,6 +1038,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1015,6 +1050,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="recordsAffected">optional object RecordsAffected</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1028,6 +1064,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1041,6 +1078,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="cursorOptions">NetOffice.ADODBApi.Enums.CursorOptionEnum CursorOptions</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -1053,6 +1091,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="criteria">string Criteria</param>
 		/// <param name="skipRecords">optional Int32 SkipRecords = 0</param>
@@ -1067,6 +1106,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="criteria">string Criteria</param>
 		[CustomMethodAttribute]
@@ -1079,6 +1119,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="criteria">string Criteria</param>
 		/// <param name="skipRecords">optional Int32 SkipRecords = 0</param>
@@ -1092,6 +1133,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="criteria">string Criteria</param>
 		/// <param name="skipRecords">optional Int32 SkipRecords = 0</param>

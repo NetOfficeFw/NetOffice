@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
@@ -111,6 +112,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
@@ -124,6 +126,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
@@ -138,6 +141,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 DataModelLoad()
@@ -149,6 +153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>
@@ -162,6 +167,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -174,6 +180,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dscobjtyp">NetOffice.OWC10Api.Enums.DscObjectTypeEnum dscobjtyp</param>
 		/// <param name="varObject">object varObject</param>

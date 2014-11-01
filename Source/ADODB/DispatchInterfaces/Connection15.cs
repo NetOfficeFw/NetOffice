@@ -326,6 +326,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Close()
@@ -336,6 +337,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="commandText">string CommandText</param>
 		/// <param name="recordsAffected">object RecordsAffected</param>
@@ -351,6 +353,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="commandText">string CommandText</param>
 		/// <param name="recordsAffected">object RecordsAffected</param>
@@ -366,6 +369,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public Int32 BeginTrans()
@@ -377,6 +381,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void CommitTrans()
@@ -387,6 +392,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void RollbackTrans()
@@ -397,6 +403,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
@@ -411,6 +418,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -422,6 +430,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		[CustomMethodAttribute]
@@ -434,6 +443,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
@@ -447,6 +457,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		/// <param name="userID">optional string UserID = </param>
@@ -461,6 +472,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
 		/// <param name="restrictions">optional object Restrictions</param>
@@ -476,6 +488,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
 		[CustomMethodAttribute]
@@ -490,6 +503,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="schema">NetOffice.ADODBApi.Enums.SchemaEnum Schema</param>
 		/// <param name="restrictions">optional object Restrictions</param>

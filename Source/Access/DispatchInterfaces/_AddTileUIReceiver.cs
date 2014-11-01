@@ -97,6 +97,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -109,6 +110,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="bstrTableName">string bstrTableName</param>
 		/// <param name="bstrNounID">string bstrNounID</param>
@@ -123,6 +125,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -135,6 +138,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -147,6 +151,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNounID">string bstrNounID</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -160,6 +165,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="pdispNounDefArray">object pdispNounDefArray</param>
 		/// <param name="pdispFinalNameArray">object pdispFinalNameArray</param>
@@ -173,6 +179,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="bstrLeftTable">string bstrLeftTable</param>
 		/// <param name="bstrRightTable">string bstrRightTable</param>
@@ -190,6 +197,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="type">Int16 Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -202,6 +210,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -214,6 +223,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="bstrSearchTerm">string bstrSearchTerm</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -226,6 +236,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -237,6 +248,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -248,6 +260,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="fVisible">bool fVisible</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -260,6 +273,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		/// <param name="type">Int16 Type</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
@@ -273,6 +287,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]
@@ -284,6 +299,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 15)]

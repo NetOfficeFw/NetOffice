@@ -510,6 +510,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Delete()
@@ -521,6 +522,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Cut()
@@ -532,6 +534,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Copy()

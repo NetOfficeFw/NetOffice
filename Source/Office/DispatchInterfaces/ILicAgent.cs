@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwBPC">Int32 dwBPC</param>
 		/// <param name="dwMode">Int32 dwMode</param>
@@ -111,6 +112,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetFirstName()
@@ -122,6 +124,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -133,6 +136,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetLastName()
@@ -144,6 +148,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -155,6 +160,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetOrgName()
@@ -166,6 +172,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -177,6 +184,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetEmail()
@@ -188,6 +196,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -199,6 +208,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetPhone()
@@ -210,6 +220,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -221,6 +232,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetAddress1()
@@ -232,6 +244,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -243,6 +256,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetCity()
@@ -254,6 +268,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -265,6 +280,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetState()
@@ -276,6 +292,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -287,6 +304,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetCountryCode()
@@ -298,6 +316,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -309,6 +328,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetCountryDesc()
@@ -320,6 +340,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -331,6 +352,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetZip()
@@ -342,6 +364,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -353,6 +376,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetIsoLanguage()
@@ -364,6 +388,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwNewVal">Int32 dwNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -375,6 +400,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetMSUpdate()
@@ -386,6 +412,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -397,6 +424,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetMSOffer()
@@ -408,6 +436,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -419,6 +448,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetOtherOffer()
@@ -430,6 +460,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -441,6 +472,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetAddress2()
@@ -452,6 +484,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -463,6 +496,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 CheckSystemClock()
@@ -474,6 +508,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public DateTime GetExistingExpiryDate()
@@ -485,6 +520,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public DateTime GetNewExpiryDate()
@@ -496,6 +532,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingFirstName()
@@ -507,6 +544,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -518,6 +556,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingLastName()
@@ -529,6 +568,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -540,6 +580,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingPhone()
@@ -551,6 +592,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -562,6 +604,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingAddress1()
@@ -573,6 +616,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -584,6 +628,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingAddress2()
@@ -595,6 +640,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -606,6 +652,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingCity()
@@ -617,6 +664,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -628,6 +676,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingState()
@@ -639,6 +688,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -650,6 +700,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingCountryCode()
@@ -661,6 +712,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -672,6 +724,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBillingZip()
@@ -683,6 +736,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrNewVal">string bstrNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -694,6 +748,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bSave">Int32 bSave</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -706,6 +761,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -718,6 +774,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCountryCode">string bstrCountryCode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -730,6 +787,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public DateTime GetCCRenewalExpiryDate()
@@ -741,6 +799,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrVATNumber">string bstrVATNumber</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -752,6 +811,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCCCode">string bstrCCCode</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -763,6 +823,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCCNumber">string bstrCCNumber</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -774,6 +835,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwCCYear">Int32 dwCCYear</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -785,6 +847,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwCCMonth">Int32 dwCCMonth</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -796,6 +859,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetCreditCardCount()
@@ -807,6 +871,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -819,6 +884,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -831,6 +897,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetVATNumber()
@@ -842,6 +909,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetCreditCardType()
@@ -853,6 +921,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetCreditCardNumber()
@@ -864,6 +933,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetCreditCardExpiryYear()
@@ -875,6 +945,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetCreditCardExpiryMonth()
@@ -886,6 +957,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetDisconnectOption()
@@ -897,6 +969,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bNewVal">Int32 bNewVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -908,6 +981,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bReviseCustInfo">Int32 bReviseCustInfo</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -919,6 +993,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessNewLicenseRequest()
@@ -929,6 +1004,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessReissueLicenseRequest()
@@ -939,6 +1015,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessRetailRenewalLicenseRequest()
@@ -949,6 +1026,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessReviseCustInfoRequest()
@@ -959,6 +1037,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessCCRenewalPriceRequest()
@@ -969,6 +1048,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessCCRenewalLicenseRequest()
@@ -979,6 +1059,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetAsyncProcessReturnCode()
@@ -990,6 +1071,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 IsUpgradeAvailable()
@@ -1001,6 +1083,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bWantUpgrade">Int32 bWantUpgrade</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1012,6 +1095,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void AsyncProcessDroppedLicenseRequest()
@@ -1022,6 +1106,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GenerateInstallationId()
@@ -1033,6 +1118,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrVal">string bstrVal</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1045,6 +1131,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCIDIID">string bstrCIDIID</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1057,6 +1144,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public DateTime GetCurrentExpiryDate()
@@ -1068,6 +1156,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bIsLicenseRequest">Int32 bIsLicenseRequest</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1079,6 +1168,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1091,6 +1181,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetPriceItemCount()
@@ -1102,6 +1193,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwIndex">Int32 dwIndex</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1114,6 +1206,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwCurrencyIndex">Int32 dwCurrencyIndex</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -1127,6 +1220,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetInvoiceText()
@@ -1138,6 +1232,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetBackendErrorMsg()
@@ -1149,6 +1244,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 GetCurrencyOption()
@@ -1160,6 +1256,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dwCurrencyOption">Int32 dwCurrencyOption</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -1171,6 +1268,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public string GetEndOfLifeHtmlText()
@@ -1182,6 +1280,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 DisplaySSLCert()

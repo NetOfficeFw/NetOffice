@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface IConverterPreferences 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864179.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864179.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterPreferences : COMObject
@@ -98,9 +98,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx
 		/// </summary>
 		/// <param name="pfMacroEnabled">Int32 pfMacroEnabled</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863141.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetMacroEnabled(out Int32 pfMacroEnabled)
 		{
@@ -114,9 +114,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865570.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx
 		/// </summary>
 		/// <param name="pfLossySave">Int32 pfLossySave</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860851.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetLossySave(out Int32 pfLossySave)
 		{

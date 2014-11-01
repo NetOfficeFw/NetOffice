@@ -416,6 +416,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -432,6 +433,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		[CustomMethodAttribute]
@@ -445,6 +447,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -459,6 +462,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -474,6 +478,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlDVType Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -490,6 +495,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Delete()
@@ -501,6 +507,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -517,6 +524,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -529,6 +537,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
@@ -542,6 +551,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -556,6 +566,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>
@@ -571,6 +582,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="alertStyle">optional object AlertStyle</param>

@@ -239,6 +239,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="key1">object Key1</param>
 		/// <param name="key2">object Key2</param>
@@ -253,6 +254,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSComctlLib", 6)]

@@ -452,6 +452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="what">string What</param>
 		/// <param name="replacement">string Replacement</param>
@@ -473,6 +474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="what">string What</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]

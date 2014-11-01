@@ -94,6 +94,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746387.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Presentations Presentations
@@ -110,6 +111,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746218.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DocumentWindows Windows
@@ -143,6 +145,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745295.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.DocumentWindow ActiveWindow
@@ -159,6 +162,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744912.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Presentation ActivePresentation
@@ -175,6 +179,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744816.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.SlideShowWindows SlideShowWindows
@@ -191,6 +196,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744604.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
@@ -207,6 +213,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745905.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Path
@@ -222,6 +229,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746231.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Name
@@ -237,6 +245,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746732.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Caption
@@ -305,6 +314,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746539.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Build
@@ -320,6 +330,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746225.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string Version
@@ -335,6 +346,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744908.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string OperatingSystem
@@ -350,6 +362,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744770.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string ActivePrinter
@@ -365,6 +378,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744619.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Int32 Creator
@@ -380,6 +394,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744952.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.AddIns AddIns
@@ -396,6 +411,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744521.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -412,6 +428,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745458.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Left
@@ -432,6 +449,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746410.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Top
@@ -452,6 +470,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746076.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Width
@@ -472,6 +491,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744702.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public Single Height
@@ -492,6 +512,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744049.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
@@ -513,6 +534,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745566.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Visible
@@ -549,6 +571,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745671.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState Active
@@ -581,6 +604,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746702.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
@@ -597,6 +621,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744276.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public string ProductCode
@@ -628,6 +653,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745687.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
@@ -661,6 +687,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745929.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ShowWindowsInTaskbar
@@ -699,6 +726,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744258.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
@@ -720,6 +748,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744016.aspx
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoFileDialogType Type</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
@@ -734,6 +763,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744016.aspx
 		/// Alias for get_FileDialog
 		/// </summary>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoFileDialogType Type</param>
@@ -746,6 +776,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746016.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayGridLines
@@ -767,6 +798,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745661.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
@@ -788,6 +820,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745695.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.NewFile NewPresentation
@@ -804,6 +837,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746503.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Enums.PpAlertLevel DisplayAlerts
@@ -825,6 +859,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745925.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState ShowStartupDialog
@@ -846,6 +881,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744774.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.AutoCorrect AutoCorrect
@@ -862,6 +898,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744854.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public NetOffice.PowerPointApi.Options Options
@@ -878,6 +915,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744758.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public bool DisplayDocumentInformationPanel
@@ -898,6 +936,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743833.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public NetOffice.OfficeApi.IAssistance Assistance
@@ -914,6 +953,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745260.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
 		public Int32 ActiveEncryptionSession
@@ -929,6 +969,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744365.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.FileConverters FileConverters
@@ -945,6 +986,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff743963.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.SmartArtLayouts SmartArtLayouts
@@ -961,6 +1003,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745345.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.SmartArtQuickStyles SmartArtQuickStyles
@@ -977,6 +1020,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745159.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.SmartArtColors SmartArtColors
@@ -993,6 +1037,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744225.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ProtectedViewWindows ProtectedViewWindows
@@ -1009,6 +1054,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746155.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.PowerPointApi.ProtectedViewWindow ActiveProtectedViewWindow
@@ -1025,6 +1071,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746169.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public bool IsSandboxed
@@ -1057,6 +1104,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745623.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public NetOffice.OfficeApi.Enums.MsoFileValidationMode FileValidation
@@ -1078,6 +1126,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229713.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public bool ChartDataPointTrack
@@ -1098,6 +1147,7 @@ namespace NetOffice.PowerPointApi
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj228516.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 15)]
 		public NetOffice.OfficeApi.Enums.MsoTriState DisplayGuides
@@ -1122,6 +1172,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745709.aspx
 		/// </summary>
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		/// <param name="contextID">optional Int32 ContextID = 0</param>
@@ -1134,6 +1185,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745709.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
@@ -1145,6 +1197,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745709.aspx
 		/// </summary>
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		[CustomMethodAttribute]
@@ -1157,6 +1210,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff746388.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Quit()
@@ -1167,6 +1221,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744221.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="safeArrayOfParams">optional object[] safeArrayOfParams</param>
@@ -1188,6 +1243,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff744221.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		[CustomMethodAttribute]
@@ -1209,6 +1265,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpFileDialogType Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1223,6 +1280,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pWindow">NetOffice.PowerPointApi.DocumentWindow pWindow</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
@@ -1234,6 +1292,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745072.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
 		public void Activate()
@@ -1244,6 +1303,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="option">Int32 Option</param>
 		/// <param name="persist">optional bool Persist = false</param>
@@ -1258,6 +1318,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="option">Int32 Option</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1272,6 +1333,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="option">Int32 Option</param>
 		/// <param name="state">bool State</param>
@@ -1286,6 +1348,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="option">Int32 Option</param>
 		/// <param name="state">bool State</param>
@@ -1300,6 +1363,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpFileDialogType Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1314,6 +1378,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="marker">Int32 Marker</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1326,6 +1391,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slideLibraryUrl">string SlideLibraryUrl</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
@@ -1337,6 +1403,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="slideUrls">object SlideUrls</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
@@ -1348,6 +1415,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff745395.aspx
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
 		public void StartNewUndoEntry()
@@ -1358,6 +1426,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229517.aspx
 		/// </summary>
 		/// <param name="themeFileName">string themeFileName</param>
 		[SupportByVersionAttribute("PowerPoint", 15)]

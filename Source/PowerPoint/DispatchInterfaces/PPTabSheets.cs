@@ -133,6 +133,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -150,6 +151,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]

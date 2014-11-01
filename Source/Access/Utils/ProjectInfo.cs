@@ -15,7 +15,7 @@ namespace AccessApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.AccessApi";
-        private Guid     _componentGuid = new Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("4AFFC9A0-5F99-101B-AF4E-00AA003F0F07")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace AccessApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

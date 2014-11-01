@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="rcDevice">tagRECT rcDevice</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

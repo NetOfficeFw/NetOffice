@@ -145,6 +145,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
 		/// <param name="before">optional object Before</param>
@@ -158,6 +159,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
 		[CustomMethodAttribute]
@@ -170,6 +172,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fieldSet">NetOffice.OWC10Api.PivotFieldSet FieldSet</param>
 		/// <param name="before">optional object Before</param>
@@ -183,6 +186,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fieldSet">object FieldSet</param>
 		[SupportByVersionAttribute("OWC10", 1)]

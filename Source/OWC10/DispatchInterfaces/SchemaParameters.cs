@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="dataType">optional object DataType</param>
@@ -149,6 +150,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -163,6 +165,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="dataType">optional object DataType</param>
@@ -178,6 +181,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="dataType">optional object DataType</param>
@@ -194,6 +198,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="dataType">optional object DataType</param>
@@ -211,6 +216,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="dataType">optional object DataType</param>

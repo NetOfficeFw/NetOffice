@@ -257,6 +257,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void Delete()

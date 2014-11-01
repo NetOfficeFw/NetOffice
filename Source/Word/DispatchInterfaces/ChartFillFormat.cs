@@ -356,6 +356,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -369,6 +370,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -381,6 +383,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -392,6 +395,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public void Solid()
@@ -402,6 +406,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pattern">NetOffice.OfficeApi.Enums.MsoPatternType Pattern</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -413,6 +418,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>
@@ -427,6 +433,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -438,6 +445,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		[CustomMethodAttribute]
@@ -450,6 +458,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>
@@ -463,6 +472,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">optional object PictureFile</param>
 		/// <param name="pictureFormat">optional object PictureFormat</param>
@@ -477,6 +487,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="textureFile">string TextureFile</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -488,6 +499,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle Style</param>
 		/// <param name="variant">Int32 Variant</param>

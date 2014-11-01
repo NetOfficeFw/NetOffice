@@ -293,6 +293,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="refChild">optional object refChild</param>
@@ -307,6 +308,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		[CustomMethodAttribute]
@@ -321,6 +323,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
@@ -335,6 +338,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="oldChild">NetOffice.MSHTMLApi.IHTMLDOMNode oldChild</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -348,6 +352,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="newChild">NetOffice.MSHTMLApi.IHTMLDOMNode newChild</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -361,6 +366,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool hasChildNodes()
@@ -372,6 +378,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fDeep">bool fDeep</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

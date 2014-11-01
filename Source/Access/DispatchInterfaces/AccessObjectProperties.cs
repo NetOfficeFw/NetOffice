@@ -12,8 +12,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// DispatchInterface AccessObjectProperties 
 	/// SupportByVersion Access, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192122.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192122.aspx </remarks>
 	[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class AccessObjectProperties : COMObject ,IEnumerable<NetOffice.AccessApi.AccessObjectProperty>
@@ -96,8 +96,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834394.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834394.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -113,9 +113,9 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836865.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836865.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -149,8 +149,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836932.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836932.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -168,10 +168,10 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197391.aspx
 		/// </summary>
 		/// <param name="propertyName">string PropertyName</param>
 		/// <param name="value">object Value</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197391.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Add(string propertyName, object value)
 		{
@@ -181,9 +181,9 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822828.aspx
 		/// </summary>
 		/// <param name="item">object Item</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822828.aspx </remarks>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
 		public void Remove(object item)
 		{
@@ -193,6 +193,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface TaskGroups2 
 	/// SupportByVersion MSProject, 11,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920729(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920729(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class TaskGroups2 : COMObject ,IEnumerable<NetOffice.MSProjectApi.Group2>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="fieldName">string FieldName</param>
@@ -178,6 +179,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="newName">string NewName</param>

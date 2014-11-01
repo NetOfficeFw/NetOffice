@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgElt">NetOffice.OWC10Api.IOleUndoUnit rgElt</param>
@@ -116,6 +117,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -128,6 +130,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 Reset()
@@ -139,6 +142,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -158,6 +158,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9)]
 		public void Click()

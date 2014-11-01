@@ -859,6 +859,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		/// <param name="varChild">optional object varChild</param>
@@ -872,6 +873,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flagsSelect">Int32 flagsSelect</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -885,6 +887,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -910,6 +913,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pxLeft">Int32 pxLeft</param>
 		/// <param name="pyTop">Int32 pyTop</param>
@@ -935,6 +939,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		/// <param name="varStart">optional object varStart</param>
@@ -957,6 +962,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="navDir">Int32 navDir</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -979,6 +985,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xLeft">Int32 xLeft</param>
 		/// <param name="yTop">Int32 yTop</param>
@@ -1001,6 +1008,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="varChild">optional object varChild</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1013,6 +1021,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -1025,6 +1034,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pUnk">object pUnk</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -1036,6 +1046,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void EnsureControl()

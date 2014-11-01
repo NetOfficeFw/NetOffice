@@ -81,7 +81,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance or null for default</param>
         /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, COMObject replacedObject)
         {
             // copy current factory info or set default
@@ -117,7 +117,7 @@ namespace NetOffice
         /// all created childs from replacedObject are now childs from the new instance
         /// </summary>
         /// <param name="replacedObject">the instance you want replace in current NO proxy management</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(COMObject replacedObject)
         {
             // copy current factory info or set default
@@ -154,7 +154,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance or null for default</param>
         /// <param name="comProxy">the now wrapped comProxy root instance</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, object comProxy)
         {
             // copy current factory info or set default
@@ -173,7 +173,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy)
         {
             // copy current factory info or set default
@@ -196,7 +196,7 @@ namespace NetOffice
         /// creates new instance with given proxy
         /// </summary>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(object comProxy)
         {
             // copy current factory info or set default
@@ -215,7 +215,7 @@ namespace NetOffice
         /// <param name="factory">current factory instance or null for default</param>
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
-        //[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, COMObject parentObject, object comProxy)
         {
             // copy current factory info or set default
@@ -240,7 +240,7 @@ namespace NetOffice
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
         ///  <param name="isEnumerator"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, COMObject parentObject, object comProxy, bool isEnumerator)
         {
             // copy current factory info
@@ -266,7 +266,7 @@ namespace NetOffice
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
         /// <param name="comProxyType">typeinfo from comProy if you have or null</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, COMObject parentObject, object comProxy, Type comProxyType)
         {
             // copy current factory info
@@ -294,7 +294,7 @@ namespace NetOffice
         /// <param name="parentObject">the parent instance where you have these instance from</param>
         /// <param name="comProxy">the now wrapped comProxy instance</param>
         /// <param name="comProxyType">typeinfo from comProy if you have or null</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(COMObject parentObject, object comProxy, Type comProxyType)
         {
             // copy current factory info or set default
@@ -322,7 +322,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="factory">current factory instance</param>
         /// <param name="progId">registered ProgID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, string progId)
         {
             // copy current factory info
@@ -338,7 +338,7 @@ namespace NetOffice
         /// creates a new instace with progid
         /// </summary>
         /// <param name="progId">registered ProgID</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(string progId)
         {
             CreateFromProgId(progId);
@@ -362,7 +362,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: the associated factory
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public Core Factory
         {
             get
@@ -382,7 +382,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: the associated invoker
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public Invoker Invoker
         {
             get
@@ -397,7 +397,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: the associated console
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public DebugConsole Console
         {
             get
@@ -412,7 +412,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: the associated settings
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public Settings Settings
         {
             get
@@ -427,7 +427,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns the native wrapped proxy
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public object UnderlyingObject
         {
             get
@@ -439,7 +439,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns friendly name for the instance type
         /// </summary>
-        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public string FriendlyTypeName
         {
             get
@@ -459,7 +459,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns class name of native wrapped proxy
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
         public string UnderlyingTypeName
         {
             get
@@ -471,7 +471,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns component name of native wrapped proxy
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
         public string UnderlyingComponentName
         {
             get
@@ -483,7 +483,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns instance is diposed means unusable
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsDisposed
         {
             get
@@ -495,7 +495,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns Type of native proxy
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
         public Type InstanceType
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns parent proxy object
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public COMObject ParentObject
         {
             get
@@ -519,11 +519,10 @@ namespace NetOffice
                 _parentObject = value;
             }
         }
-
         /// <summary>
         /// NetOffice property: returns instance is currently in diposing progress
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsCurrentlyDisposing
         {
             get
@@ -533,22 +532,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  child instance List
+        ///  child instance array
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        internal List<COMObject> ListChildObjects
-        {
-            get
-            {
-                return _listChildObjects;
-            }
-        }
-
-        /// <summary>
-        /// NetOffice property: child instances
-        /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public COMObject[] Childs
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        internal COMObject[] ListChildObjects
         {
             get
             {
@@ -559,7 +546,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns instance export events
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsEventBinding
         {
             get
@@ -571,7 +558,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: returns event bridge is advised
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsEventBridgeInitialized
         {
             get
@@ -587,7 +574,7 @@ namespace NetOffice
         /// <summary>
         /// NetOffice property: retuns instance has one or more event recipients
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice")]
         public bool IsWithEventRecipients
         {
             get
@@ -607,8 +594,9 @@ namespace NetOffice
         /// <summary>
         /// NetOffice method: returns information the proxy provides a method or property with given name at runtime
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">name of the enitity</param>
+        /// <returns>true if available, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool EntityIsAvailable(string name)
         {
             return EntityIsAvailable(name, SupportEntityType.Both);
@@ -617,41 +605,42 @@ namespace NetOffice
         /// <summary>
         ///  NetOffice method: returns information the proxy provides a method or property with given name at runtime
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">name of the enitity</param>
         /// <param name="searchType">limit searching for method or property</param>
-        /// <returns></returns>
+        /// <returns>true if available, otherwise false</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool EntityIsAvailable(string name, SupportEntityType searchType)
         {
             switch (searchType)
             {
                 case SupportEntityType.Method:
-                    {
-                        if (null == _listSupportedEntities)
-                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+                {
+                    if (null == _listSupportedEntities)
+                        _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
-                        string outValue = null;
-                        return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                    }
+                    string outValue = null;
+                    return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);   
+                }
                 case SupportEntityType.Property:
-                    {
-                        if (null == _listSupportedEntities)
-                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+                {
+                    if (null == _listSupportedEntities)
+                        _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
-                        string outValue = null;
-                        return _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
-                    }
+                    string outValue = null;
+                    return _listSupportedEntities.TryGetValue("Property-" + name, out outValue);       
+                }
                 default:
-                    {
-                        if (null == _listSupportedEntities)
-                            _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
+                {
+                    if (null == _listSupportedEntities)
+                        _listSupportedEntities = Factory.GetSupportedEntities(_underlyingObject);
 
-                        string outValue = null;
-                        bool result = _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
-                        if (result)
-                            return true;
+                    string outValue = null;
+                    bool result = _listSupportedEntities.TryGetValue("Property-" + name, out outValue);
+                    if (result)
+                        return true;
 
-                        return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);
-                    }
+                    return _listSupportedEntities.TryGetValue("Method-" + name, out outValue);    
+                }
             }
         }
 
@@ -659,7 +648,7 @@ namespace NetOffice
         /// NetOffice method: create object from progid
         /// </summary>
         /// <param name="progId"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public void CreateFromProgId(string progId)
         {
             _instanceType = System.Type.GetTypeFromProgID(progId);
@@ -672,8 +661,8 @@ namespace NetOffice
         /// <summary>
         ///  NetOffice method: add object to child list
         /// </summary>
-        /// <param name="childObject"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <param name="childObject">target child instance</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public void AddChildObject(COMObject childObject)
         {
             bool isLocked = false;
@@ -702,8 +691,8 @@ namespace NetOffice
         /// <summary>
         /// remove object to child list
         /// </summary>
-        /// <param name="childObject"></param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        /// <param name="childObject">target child instance</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public void RemoveChildObject(COMObject childObject)
         {
             bool isLocked = false;
@@ -729,7 +718,7 @@ namespace NetOffice
         /// <summary>
         ///  NetOffice method: release com proxy
         /// </summary>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public void ReleaseCOMProxy()
         {
             // release himself from COM Runtime System
@@ -903,7 +892,7 @@ namespace NetOffice
         /// <summary>
         /// Serves as a hash function for a particular type.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>System.Int32 instance</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override int GetHashCode()
         {
@@ -913,7 +902,7 @@ namespace NetOffice
         /// <summary>
         /// Returns a string that represents the current object.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>System.String instance</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override string ToString()
         {
@@ -923,7 +912,7 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two Object instances are equal.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true if equal, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public override bool Equals(Object obj)
         {
@@ -933,8 +922,8 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two COMObject instances are equal.
         /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
+        /// <param name="obj">target instance to compare</param>
+        /// <returns>true if equal, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool EqualsOnServer(COMObject obj)
         {
@@ -1034,9 +1023,9 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two COMObject instances are equal.
         /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if equal, otherwise false</returns>
         public static bool operator ==(object objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1053,9 +1042,9 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two COMObject instances are not equal.
         /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1072,9 +1061,9 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two COMObject instances are not equal.
         /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, object objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)
@@ -1091,9 +1080,9 @@ namespace NetOffice
         /// <summary>
         /// Determines whether two COMObject instances are not equal.
         /// </summary>
-        /// <param name="objectA"></param>
-        /// <param name="objectB"></param>
-        /// <returns></returns>
+        /// <param name="objectA">first instance</param>
+        /// <param name="objectB">second instance</param>
+        /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
             if (!Settings.Default.EnableOperatorOverlads)

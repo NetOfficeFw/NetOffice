@@ -131,6 +131,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -144,6 +145,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		/// <param name="bstrUnitTestName">string bstrUnitTestName</param>
@@ -158,6 +160,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="bstrCollectionName">string bstrCollectionName</param>
 		/// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>

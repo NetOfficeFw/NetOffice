@@ -97,6 +97,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="bstrDM">string bstrDM</param>
 		/// <param name="riid">Guid riid</param>
@@ -112,6 +113,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="lIndex">Int32 lIndex</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -125,6 +127,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSDATASRC", 4)]
@@ -137,6 +140,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -150,6 +154,7 @@ namespace NetOffice.MSDATASRCApi
 
 		/// <summary>
 		/// SupportByVersion MSDATASRC 4
+		/// 
 		/// </summary>
 		/// <param name="pDSL">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

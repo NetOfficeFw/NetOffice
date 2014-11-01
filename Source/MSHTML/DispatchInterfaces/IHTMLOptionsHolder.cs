@@ -331,6 +331,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fontName">string fontName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -344,6 +345,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -359,6 +361,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -371,6 +374,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		[CustomMethodAttribute]
@@ -384,6 +388,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -398,6 +403,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -413,6 +419,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -428,6 +435,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -440,6 +448,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		[CustomMethodAttribute]
@@ -453,6 +462,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -467,6 +477,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initFile">optional object initFile</param>
 		/// <param name="initDir">optional object initDir</param>
@@ -482,6 +493,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="initColor">optional object initColor</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -494,6 +506,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -506,6 +519,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void showSecurityInfo()
@@ -516,6 +530,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="_object">NetOffice.MSHTMLApi.IHTMLObjectElement object</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -528,6 +543,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fontName">string fontName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

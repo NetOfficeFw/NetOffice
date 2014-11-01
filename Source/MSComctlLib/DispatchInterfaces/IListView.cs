@@ -885,6 +885,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sz">string sz</param>
 		/// <param name="where">optional object Where</param>
@@ -901,6 +902,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sz">string sz</param>
 		[CustomMethodAttribute]
@@ -915,6 +917,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sz">string sz</param>
 		/// <param name="where">optional object Where</param>
@@ -930,6 +933,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="sz">string sz</param>
 		/// <param name="where">optional object Where</param>
@@ -946,6 +950,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public NetOffice.MSComctlLibApi.IListItem GetFirstVisible()
@@ -958,6 +963,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="x">Single x</param>
 		/// <param name="y">Single y</param>
@@ -973,6 +979,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void StartLabelEdit()
@@ -983,6 +990,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void OLEDrag()
@@ -993,6 +1001,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public void Refresh()
@@ -1003,6 +1012,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSComctlLib", 6)]

@@ -6337,6 +6337,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6362,6 +6363,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[CustomMethodAttribute]
@@ -6374,6 +6376,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6387,6 +6390,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6401,6 +6405,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6416,6 +6421,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6432,6 +6438,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6449,6 +6456,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6467,6 +6475,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6486,6 +6495,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6506,6 +6516,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6527,6 +6538,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6549,6 +6561,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6572,6 +6585,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6596,6 +6610,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -6621,6 +6636,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void Activate()
@@ -6631,6 +6647,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void LevelClearDates()
@@ -6641,6 +6658,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="value">string Value</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6652,6 +6670,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public void MakeServerURLTrusted()
@@ -6662,6 +6681,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="comment">optional object Comment</param>
@@ -6675,6 +6695,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6686,6 +6707,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
@@ -6698,6 +6720,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="comment">optional object Comment</param>
@@ -6711,6 +6734,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -6724,6 +6748,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -6737,6 +6762,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="objectType">NetOffice.MSProjectApi.Enums.PjOrganizer ObjectType</param>
 		/// <param name="matchingID">string MatchingID</param>
@@ -6750,6 +6776,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableName">string DeliverableName</param>
 		/// <param name="deliverableStartDate">object DeliverableStartDate</param>
@@ -6765,6 +6792,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="deliverableName">string DeliverableName</param>
@@ -6780,6 +6808,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6792,6 +6821,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="taskGuid">string TaskGuid</param>
@@ -6805,6 +6835,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6817,6 +6848,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">optional object DeliverableGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6829,6 +6861,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6841,6 +6874,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DeliverablesGetServerCachedXml()
@@ -6853,6 +6887,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object DeliverablesGetXml()
@@ -6865,6 +6900,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string GetServerProjectGuid()
@@ -6876,6 +6912,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		/// <param name="taskGuid">string TaskGuid</param>
@@ -6889,6 +6926,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6901,6 +6939,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public bool DeliverablesClearAll()
@@ -6912,6 +6951,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="deliverableGuid">string DeliverableGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6924,6 +6964,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public string DeliverablesGetProviderProjects()
@@ -6935,6 +6976,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectGuid">string ProjectGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6948,6 +6990,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskGuid">string TaskGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6960,6 +7003,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectGuid">string ProjectGuid</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6980,6 +7024,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public object GetWinprojURLs()
@@ -6999,6 +7044,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 LocalResourceErrorCount()
@@ -7010,6 +7056,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ImportResourceErrorCount()
@@ -7021,6 +7068,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ResourceErrorCount()
@@ -7032,6 +7080,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 LocalResourceCount()
@@ -7043,6 +7092,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public Int32 ResourceCount()
@@ -7054,6 +7104,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		/// <param name="destinationResource">optional object DestinationResource</param>
@@ -7068,6 +7119,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -7081,6 +7133,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="assignmentToDrag">object AssignmentToDrag</param>
 		/// <param name="destinationResource">optional object DestinationResource</param>
@@ -7095,6 +7148,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="customUIXML">string CustomUIXML</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -7106,6 +7160,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7124,6 +7179,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		[CustomMethodAttribute]
@@ -7136,6 +7192,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7149,6 +7206,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7163,6 +7221,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7178,6 +7237,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7194,6 +7254,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7211,6 +7272,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">string Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -7229,6 +7291,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 CheckoutProject()
@@ -7240,6 +7303,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public Int32 HideCheckoutMsgBar()

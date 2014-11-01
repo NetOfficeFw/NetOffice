@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pageRowsource">NetOffice.OWC10Api.PageRowsource PageRowsource</param>
 		/// <param name="schemaRelationship">NetOffice.OWC10Api.SchemaRelationship SchemaRelationship</param>
@@ -145,6 +146,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		/// <param name="printSettings">optional object PrintSettings</param>
@@ -195,6 +196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		[CustomMethodAttribute]
@@ -209,6 +211,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="viewName">string ViewName</param>
 		/// <param name="printSettings">optional object PrintSettings</param>

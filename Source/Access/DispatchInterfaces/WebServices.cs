@@ -12,8 +12,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// DispatchInterface WebServices 
 	/// SupportByVersion Access, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193176.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193176.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class WebServices : COMObject ,IEnumerable<NetOffice.AccessApi.WebService>
@@ -96,8 +96,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823138.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823138.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public NetOffice.AccessApi.Application Application
 		{
@@ -113,9 +113,9 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192841.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192841.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public object Parent
 		{
@@ -149,8 +149,8 @@ namespace NetOffice.AccessApi
 		/// <summary>
 		/// SupportByVersion Access 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193575.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193575.aspx </remarks>
 		[SupportByVersionAttribute("Access", 14,15)]
 		public Int32 Count
 		{
@@ -168,6 +168,7 @@ namespace NetOffice.AccessApi
 
 		/// <summary>
 		/// SupportByVersion Access 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dispid">Int32 dispid</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

@@ -97,6 +97,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="cFields">Int32 cFields</param>
 		/// <param name="fields">object Fields</param>
@@ -112,6 +113,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="cFields">Int32 cFields</param>
 		/// <param name="fields">object Fields</param>
@@ -128,6 +130,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="cRecords">Int32 cRecords</param>
@@ -143,6 +146,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="cRecords">Int32 cRecords</param>
@@ -159,6 +163,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -173,6 +178,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
@@ -188,6 +194,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -202,6 +209,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="adReason">NetOffice.ADODBApi.Enums.EventReasonEnum adReason</param>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
@@ -217,6 +225,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fMoreData">bool fMoreData</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
@@ -231,6 +240,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="progress">Int32 Progress</param>
 		/// <param name="maxProgress">Int32 MaxProgress</param>
@@ -246,6 +256,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="pError">NetOffice.ADODBApi.Error pError</param>
 		/// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>

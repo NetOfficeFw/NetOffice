@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface ODSOFilters 
 	/// SupportByVersion Office, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865224.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865224.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class ODSOFilters : _IMsoDispObj ,IEnumerable<object>
@@ -96,8 +96,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860835.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860835.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -112,9 +112,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861525.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861525.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public object Parent
 		{
@@ -133,6 +133,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -150,13 +151,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
 		{
@@ -166,11 +167,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
@@ -181,12 +182,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx
 		/// </summary>
 		/// <param name="column">string Column</param>
 		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison Comparison</param>
 		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction Conjunction</param>
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864658.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
@@ -197,10 +198,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Delete(Int32 index, object deferUpdate)
 		{
@@ -210,9 +211,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860318.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public void Delete(Int32 index)

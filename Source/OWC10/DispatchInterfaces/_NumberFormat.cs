@@ -243,6 +243,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="hDCInfo">Int32 hDCInfo</param>

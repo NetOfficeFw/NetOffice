@@ -226,6 +226,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="ruleSet">optional NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
 		/// <param name="flags">optional NetOffice.VisioApi.Enums.VisValidationFlags Flags</param>
@@ -238,6 +239,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -249,6 +251,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="ruleSet">optional NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
 		[CustomMethodAttribute]

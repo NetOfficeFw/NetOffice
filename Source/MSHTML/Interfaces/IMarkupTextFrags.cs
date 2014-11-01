@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pcFrags">Int32 pcFrags</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="iFrag">Int32 iFrag</param>
 		/// <param name="pbstrFrag">string pbstrFrag</param>
@@ -129,6 +131,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="iFrag">Int32 iFrag</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -141,6 +144,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="iFrag">Int32 iFrag</param>
 		/// <param name="bstrInsert">string bstrInsert</param>
@@ -155,6 +159,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointerFind">NetOffice.MSHTMLApi.IMarkupPointer pPointerFind</param>
 		/// <param name="piFrag">Int32 piFrag</param>

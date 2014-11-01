@@ -186,6 +186,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
@@ -200,6 +201,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		[CustomMethodAttribute]
@@ -212,6 +214,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
@@ -225,6 +228,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		/// <param name="hDC">Int32 hDC</param>
 		/// <param name="x">optional object x</param>
@@ -239,6 +243,7 @@ namespace NetOffice.MSComctlLibApi
 
 		/// <summary>
 		/// SupportByVersion MSComctlLib 6
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSComctlLib", 6)]
 		public stdole.Picture ExtractIcon()

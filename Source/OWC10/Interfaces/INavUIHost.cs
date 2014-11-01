@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -109,6 +110,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
 		/// <param name="cancel">Int32 Cancel</param>
@@ -122,6 +124,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="navbtn">Int32 navbtn</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -134,6 +137,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="displayText">string DisplayText</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -146,6 +150,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 OnNavUIChange()
@@ -157,6 +162,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 IsFilterOn()
@@ -168,6 +174,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 IsContextBiDi()
@@ -179,6 +186,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fontName">string FontName</param>
 		[SupportByVersionAttribute("OWC10", 1)]

@@ -358,6 +358,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public void Close()
@@ -368,6 +369,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="query">string Query</param>
 		/// <param name="options">optional object Options</param>
@@ -380,6 +382,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="query">string Query</param>
 		[CustomMethodAttribute]
@@ -392,6 +395,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">optional object Type</param>
@@ -407,6 +411,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -421,6 +426,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">optional object Type</param>
@@ -436,6 +442,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
@@ -452,6 +459,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -465,6 +473,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -479,6 +488,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
@@ -494,6 +504,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="type">optional object Type</param>
@@ -510,6 +521,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="table">optional object Table</param>
@@ -526,6 +538,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -539,6 +552,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -553,6 +567,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="table">optional object Table</param>
@@ -568,6 +583,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="table">optional object Table</param>
@@ -584,6 +600,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="attributes">optional object Attributes</param>
@@ -600,6 +617,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -613,6 +631,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -627,6 +646,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="attributes">optional object Attributes</param>
@@ -642,6 +662,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="attributes">optional object Attributes</param>
@@ -658,6 +679,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public void BeginTrans()
@@ -668,6 +690,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="options">optional Int32 Options = 0</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -679,6 +702,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -690,6 +714,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public void Rollback()
@@ -700,6 +725,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -715,6 +741,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -729,6 +756,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -744,6 +772,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="sQLText">optional object SQLText</param>
@@ -758,6 +787,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -771,6 +801,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -785,6 +816,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="options">optional object Options</param>
@@ -799,6 +831,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="source">string Source</param>
 		[CustomMethodAttribute]
@@ -813,6 +846,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -824,6 +858,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="sQL">string SQL</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -836,6 +871,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -849,6 +885,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public NetOffice.DAOApi.Recordset ListTables()
@@ -861,6 +898,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -874,6 +912,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -888,6 +927,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -902,6 +942,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="dbPathName">string DbPathName</param>
 		/// <param name="exchangeType">optional object ExchangeType</param>
@@ -914,6 +955,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="dbPathName">string DbPathName</param>
 		[CustomMethodAttribute]
@@ -926,6 +968,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="pathName">string PathName</param>
 		/// <param name="description">string Description</param>
@@ -939,6 +982,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="pathName">string PathName</param>
 		/// <param name="description">string Description</param>
@@ -952,6 +996,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="bstrOld">string bstrOld</param>
 		/// <param name="bstrNew">string bstrNew</param>
@@ -964,6 +1009,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">optional object Type</param>
@@ -980,6 +1026,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -994,6 +1041,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">optional object Type</param>
@@ -1009,6 +1057,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">optional object Type</param>
@@ -1025,6 +1074,7 @@ namespace NetOffice.DAOApi
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="dbPathName">string DbPathName</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]

@@ -318,6 +318,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="styleName">string StyleName</param>
 		/// <param name="basedOn">string BasedOn</param>
@@ -335,6 +336,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="localeSpecificNameArray">String[] localeSpecificNameArray</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -349,6 +351,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="localeIndependentNameArray">String[] localeIndependentNameArray</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

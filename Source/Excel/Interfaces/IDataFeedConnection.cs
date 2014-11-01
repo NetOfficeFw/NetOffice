@@ -414,6 +414,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 CancelRefresh()
@@ -425,6 +426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 Refresh()
@@ -436,6 +438,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		/// <param name="description">optional object Description</param>
@@ -450,6 +453,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		[CustomMethodAttribute]
@@ -463,6 +467,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="oDCFileName">string ODCFileName</param>
 		/// <param name="description">optional object Description</param>

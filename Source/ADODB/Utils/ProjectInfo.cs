@@ -15,7 +15,7 @@ namespace ADODBApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.ADODBApi";
-        private Guid     _componentGuid = new Guid("00000201-0000-0010-8000-00AA006D2EA4");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("00000201-0000-0010-8000-00AA006D2EA4")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace ADODBApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

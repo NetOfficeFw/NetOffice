@@ -187,6 +187,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -199,6 +200,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		[SupportByVersionAttribute("Excel", 14,15)]

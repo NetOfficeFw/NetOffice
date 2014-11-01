@@ -131,6 +131,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
@@ -146,6 +147,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="title">string Title</param>
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>

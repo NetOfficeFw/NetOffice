@@ -97,6 +97,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="progId">string ProgId</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -110,6 +111,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="index">optional Int32 index = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -124,6 +126,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]

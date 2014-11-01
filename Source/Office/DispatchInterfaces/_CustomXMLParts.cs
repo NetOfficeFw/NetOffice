@@ -95,6 +95,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862384.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -112,6 +113,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865208.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
@@ -148,6 +150,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865361.aspx
 		/// </summary>
 		/// <param name="xML">optional string XML = </param>
 		/// <param name="schemaCollection">optional object SchemaCollection</param>
@@ -162,6 +165,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865361.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -175,6 +179,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865361.aspx
 		/// </summary>
 		/// <param name="xML">optional string XML = </param>
 		[CustomMethodAttribute]
@@ -189,6 +194,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865246.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -202,6 +208,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861183.aspx
 		/// </summary>
 		/// <param name="namespaceURI">string NamespaceURI</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]

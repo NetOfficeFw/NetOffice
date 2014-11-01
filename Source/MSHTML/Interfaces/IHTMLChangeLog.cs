@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pbBuffer">byte pbBuffer</param>
 		/// <param name="nBufferSize">Int32 nBufferSize</param>

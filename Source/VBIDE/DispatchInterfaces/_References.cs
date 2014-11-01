@@ -145,6 +145,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -162,6 +163,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="guid">string Guid</param>
 		/// <param name="major">Int32 Major</param>
@@ -177,6 +179,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -190,6 +193,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="reference">NetOffice.VBIDEApi.Reference Reference</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]

@@ -15,7 +15,7 @@ namespace OfficeApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.OfficeApi";
-        private Guid     _componentGuid = new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("2DF8D04C-5BFA-101B-BDE5-00AA0044DE52")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace OfficeApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

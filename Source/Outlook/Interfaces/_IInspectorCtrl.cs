@@ -134,6 +134,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 10
+		/// 
 		/// </summary>
 		/// <param name="pdispItem">object pdispItem</param>
 		[SupportByVersionAttribute("Outlook", 10)]

@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -196,6 +197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -216,6 +218,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		[CustomMethodAttribute]
@@ -230,6 +233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -245,6 +249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -261,6 +266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -279,6 +285,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -298,6 +305,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.ExcelApi.Enums.XlFormatConditionType Type</param>
 		/// <param name="_operator">optional object Operator</param>
@@ -318,6 +326,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Int32 Delete()
@@ -329,6 +338,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="colorScaleType">Int32 ColorScaleType</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -342,6 +352,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object AddDatabar()
@@ -354,6 +365,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object AddIconSetCondition()
@@ -366,6 +378,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object AddTop10()
@@ -378,6 +391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object AddAboveAverage()
@@ -390,6 +404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
 		public object AddUniqueValues()

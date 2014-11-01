@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hdc">_RemotableHandle hdc</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrPrinterName">string bstrPrinterName</param>
 		/// <param name="hdc">_RemotableHandle hdc</param>

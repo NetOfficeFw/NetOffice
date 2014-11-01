@@ -340,6 +340,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -351,6 +352,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]

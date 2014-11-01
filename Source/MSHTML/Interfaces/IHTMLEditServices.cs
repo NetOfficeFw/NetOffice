@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIDesigner">NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -109,6 +110,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIDesigner">NetOffice.MSHTMLApi.IHTMLEditDesigner pIDesigner</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -121,6 +123,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIContainer">NetOffice.MSHTMLApi.IMarkupContainer pIContainer</param>
 		/// <param name="ppSelSvc">NetOffice.MSHTMLApi.ISelectionServices ppSelSvc</param>
@@ -137,6 +140,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIStartAnchor">NetOffice.MSHTMLApi.IMarkupPointer pIStartAnchor</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -149,6 +153,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIEndAnchor">NetOffice.MSHTMLApi.IMarkupPointer pIEndAnchor</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -161,6 +166,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pStart">NetOffice.MSHTMLApi.IMarkupPointer pStart</param>
 		/// <param name="pEnd">NetOffice.MSHTMLApi.IMarkupPointer pEnd</param>

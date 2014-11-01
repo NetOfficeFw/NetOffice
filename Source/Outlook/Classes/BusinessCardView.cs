@@ -15,8 +15,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass BusinessCardView 
 	/// SupportByVersion Outlook, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867224.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff867224.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class BusinessCardView : _BusinessCardView

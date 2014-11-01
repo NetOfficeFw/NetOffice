@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface NewFile 
 	/// SupportByVersion Office, 10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862417.aspx </remarks>
 	[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class NewFile : _IMsoDispObj
@@ -98,12 +98,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section, object displayName, object action)
 		{
@@ -114,9 +114,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName)
@@ -128,10 +128,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section)
@@ -143,11 +143,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860279.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Add(string fileName, object section, object displayName)
@@ -159,12 +159,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
 		/// <param name="action">optional object Action</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section, object displayName, object action)
 		{
@@ -175,9 +175,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName)
@@ -189,10 +189,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section)
@@ -204,11 +204,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		/// <param name="section">optional object Section</param>
 		/// <param name="displayName">optional object DisplayName</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860573.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
 		public bool Remove(string fileName, object section, object displayName)

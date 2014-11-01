@@ -15,7 +15,7 @@ namespace VBIDEApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.VBIDEApi";
-        private Guid     _componentGuid = new Guid("0002E157-0000-0000-C000-000000000046");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("0002E157-0000-0000-C000-000000000046")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace VBIDEApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

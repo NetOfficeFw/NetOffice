@@ -97,6 +97,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pUnit">NetOffice.VisioApi.IVBUndoUnit pUnit</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

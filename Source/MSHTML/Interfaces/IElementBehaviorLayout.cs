@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="dwFlags">Int32 dwFlags</param>
 		/// <param name="sizeContent">tagSIZE sizeContent</param>
@@ -113,6 +114,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 GetLayoutInfo()
@@ -124,6 +126,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lFlags">Int32 lFlags</param>
 		/// <param name="pptTopLeft">tagPOINT pptTopLeft</param>
@@ -137,6 +140,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="psizeIn">tagSIZE psizeIn</param>
 		/// <param name="prcOut">tagRECT prcOut</param>

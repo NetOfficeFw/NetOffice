@@ -195,6 +195,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
 		[SupportByVersionAttribute("Office", 15)]
@@ -206,6 +207,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 15
+		/// 
 		/// </summary>
 		/// <param name="bstrTagToIgnore">string bstrTagToIgnore</param>
 		[SupportByVersionAttribute("Office", 15)]

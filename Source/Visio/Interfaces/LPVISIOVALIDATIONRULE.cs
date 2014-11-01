@@ -331,6 +331,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 14,15)]
 		public void Delete()
@@ -341,6 +342,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		/// <param name="targetShape">optional NetOffice.VisioApi.IVShape TargetShape</param>
@@ -355,6 +357,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 14,15)]
@@ -368,6 +371,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="targetPage">optional NetOffice.VisioApi.IVPage TargetPage</param>
 		[CustomMethodAttribute]

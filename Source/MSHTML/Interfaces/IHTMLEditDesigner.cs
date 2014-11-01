@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
@@ -110,6 +111,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
@@ -123,6 +125,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>
@@ -136,6 +139,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="inEvtDispId">Int32 inEvtDispId</param>
 		/// <param name="pIEventObj">NetOffice.MSHTMLApi.IHTMLEventObj pIEventObj</param>

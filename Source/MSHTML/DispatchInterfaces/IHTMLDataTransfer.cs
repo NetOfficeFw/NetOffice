@@ -137,6 +137,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="format">string format</param>
 		/// <param name="data">object data</param>
@@ -150,6 +151,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="format">string format</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -170,6 +172,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="format">string format</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

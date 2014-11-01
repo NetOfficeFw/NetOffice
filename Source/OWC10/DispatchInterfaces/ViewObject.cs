@@ -127,6 +127,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="surface">NetOffice.OWC10Api.ViewSurface Surface</param>
 		/// <param name="cx1">Int32 cx1</param>

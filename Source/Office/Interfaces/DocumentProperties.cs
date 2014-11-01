@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface DocumentProperties 
 	/// SupportByVersion Office, 9,10,11,12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863102.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863102.aspx </remarks>
 	[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class DocumentProperties : COMObject ,IEnumerable<NetOffice.OfficeApi.DocumentProperty>
@@ -96,9 +96,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864976.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864976.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Parent
 		{
@@ -132,8 +132,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863076.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863076.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Count
 		{
@@ -148,9 +148,9 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864029.aspx
 		/// Unknown COM Proxy
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864029.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public object Application
 		{
@@ -166,8 +166,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861448.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861448.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public Int32 Creator
 		{
@@ -185,13 +185,13 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
 		/// <param name="linkSource">optional object LinkSource</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value, object linkSource)
 		{
@@ -203,10 +203,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent)
@@ -219,11 +219,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
 		/// <param name="type">optional object Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type)
@@ -236,12 +236,12 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="linkToContent">bool LinkToContent</param>
 		/// <param name="type">optional object Type</param>
 		/// <param name="value">optional object Value</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862806.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.DocumentProperty Add(string name, bool linkToContent, object type, object value)

@@ -12,8 +12,8 @@ namespace NetOffice.MSProjectApi
 	///<summary>
 	/// DispatchInterface CodeMask 
 	/// SupportByVersion MSProject, 11,12,14
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920570(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff920570(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("MSProject", 11,12,14)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class CodeMask : COMObject ,IEnumerable<NetOffice.MSProjectApi.CodeMaskLevel>
@@ -164,6 +164,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = 0</param>
 		/// <param name="length">optional object Length</param>
@@ -179,6 +180,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -192,6 +194,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = 0</param>
 		[CustomMethodAttribute]
@@ -206,6 +209,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = 0</param>
 		/// <param name="length">optional object Length</param>

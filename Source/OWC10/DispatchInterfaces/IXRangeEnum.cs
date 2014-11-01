@@ -127,6 +127,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="rgvar">object rgvar</param>
@@ -145,6 +146,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -156,6 +158,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void Reset()
@@ -166,6 +169,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IXRangeEnum ppEnum</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -180,6 +184,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nTraverseCode">UIntPtr nTraverseCode</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -191,6 +196,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="_out">object Out</param>
 		/// <param name="_in">object In</param>
@@ -207,6 +213,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="cElt">Int32 cElt</param>
 		/// <param name="iStart">Int32 iStart</param>

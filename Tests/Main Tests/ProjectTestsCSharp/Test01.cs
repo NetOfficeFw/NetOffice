@@ -63,7 +63,7 @@ namespace ProjectTestsCSharp
             {
                 if (null != application)
                 {
-                    application.Quit(false);
+                    application.Quit(PjSaveType.pjDoNotSave);
                     application.Dispose();
                 }
             }

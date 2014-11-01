@@ -956,6 +956,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void Apply()
@@ -966,6 +967,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void Delete()
@@ -976,6 +978,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.Shape Duplicate()
@@ -988,6 +991,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="flipCmd">NetOffice.OfficeApi.Enums.MsoFlipCmd FlipCmd</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -999,6 +1003,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1010,6 +1015,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1021,6 +1027,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1032,6 +1039,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void PickUp()
@@ -1042,6 +1050,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void RerouteConnections()
@@ -1052,6 +1061,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="factor">Single Factor</param>
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1065,6 +1075,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="factor">Single Factor</param>
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1078,6 +1089,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="factor">Single Factor</param>
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1091,6 +1103,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="factor">Single Factor</param>
 		/// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState RelativeToOriginalSize</param>
@@ -1104,6 +1117,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="replace">optional object Replace</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1115,6 +1129,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1126,6 +1141,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void SetShapesDefaultProperties()
@@ -1136,6 +1152,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public NetOffice.MSProjectApi.ShapeRange Ungroup()
@@ -1148,6 +1165,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="zOrderCmd">NetOffice.OfficeApi.Enums.MsoZOrderCmd ZOrderCmd</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -1159,6 +1177,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1171,6 +1190,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1183,6 +1203,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1195,6 +1216,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="increment">Single Increment</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -1207,6 +1229,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void Cut()
@@ -1217,6 +1240,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public void Copy()

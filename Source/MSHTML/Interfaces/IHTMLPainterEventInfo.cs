@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="plEventInfoFlags">Int32 plEventInfoFlags</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppElement">NetOffice.MSHTMLApi.IHTMLElement ppElement</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -124,6 +126,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -136,6 +139,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="lPartID">Int32 lPartID</param>
 		/// <param name="pbstrPart">string pbstrPart</param>

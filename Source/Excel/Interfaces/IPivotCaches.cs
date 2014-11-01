@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		/// <param name="sourceData">optional object SourceData</param>
@@ -194,6 +195,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		[CustomMethodAttribute]
@@ -208,6 +210,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		/// <param name="sourceData">optional object SourceData</param>
@@ -223,6 +226,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		[CustomMethodAttribute]
@@ -237,6 +241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sourceType">NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType</param>
 		/// <param name="sourceData">optional object SourceData</param>

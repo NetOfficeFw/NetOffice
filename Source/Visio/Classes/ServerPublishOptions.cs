@@ -15,8 +15,8 @@ namespace NetOffice.VisioApi
 	///<summary>
 	/// CoClass ServerPublishOptions 
 	/// SupportByVersion Visio, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769388(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769388(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ServerPublishOptions : IVServerPublishOptions

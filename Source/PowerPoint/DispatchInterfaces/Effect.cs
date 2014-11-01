@@ -337,6 +337,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="toPos">Int32 toPos</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
@@ -348,6 +349,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect Effect</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
@@ -359,6 +361,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="effect">NetOffice.PowerPointApi.Effect Effect</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
@@ -370,6 +373,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
 		public void Delete()

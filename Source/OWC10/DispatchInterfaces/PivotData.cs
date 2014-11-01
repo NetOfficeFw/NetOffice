@@ -582,6 +582,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="top">NetOffice.OWC10Api.PivotRowMember Top</param>
 		/// <param name="topOffset">Int32 TopOffset</param>
@@ -595,6 +596,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="top">NetOffice.OWC10Api.PivotRowMember Top</param>
 		/// <param name="topOffset">Int32 TopOffset</param>
@@ -608,6 +610,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="left">NetOffice.OWC10Api.PivotColumnMember Left</param>
 		/// <param name="leftOffset">Int32 LeftOffset</param>
@@ -621,6 +624,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="left">NetOffice.OWC10Api.PivotColumnMember Left</param>
 		/// <param name="leftOffset">Int32 LeftOffset</param>
@@ -634,6 +638,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void ShowDetails()
@@ -644,6 +649,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public void HideDetails()

@@ -2650,6 +2650,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="saveChanges">optional NetOffice.MSProjectApi.Enums.PjSaveType SaveChanges = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -2661,6 +2662,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -2672,6 +2674,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="finishDate">object FinishDate</param>
 		/// <param name="duration">object Duration</param>
@@ -2694,6 +2697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="finishDate">object FinishDate</param>
 		/// <param name="duration">object Duration</param>
@@ -2716,6 +2720,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">object Duration</param>
 		/// <param name="units">optional object Units</param>
@@ -2729,6 +2734,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">object Duration</param>
 		[CustomMethodAttribute]
@@ -2742,6 +2748,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">string Duration</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -2762,6 +2769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="date">object Date</param>
 		/// <param name="format">optional object Format</param>
@@ -2783,6 +2791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="date">object Date</param>
 		[CustomMethodAttribute]
@@ -2804,6 +2813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="password">optional object Password</param>
@@ -2817,6 +2827,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -2828,6 +2839,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -2840,6 +2852,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="password">optional object Password</param>
@@ -2853,6 +2866,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void MailLogoff()
@@ -2863,6 +2877,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static object MailSession()
@@ -2882,6 +2897,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static object MailSystem()
@@ -2901,6 +2917,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="resourceID">Int32 ResourceID</param>
@@ -2928,6 +2945,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="resourceID">Int32 ResourceID</param>
@@ -2953,6 +2971,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="resourceID">Int32 ResourceID</param>
@@ -2979,6 +2998,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="resourceID">Int32 ResourceID</param>
@@ -3006,6 +3026,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -3018,6 +3039,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3059,6 +3081,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -3071,6 +3094,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3084,6 +3108,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3098,6 +3123,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3113,6 +3139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3129,6 +3156,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3146,6 +3174,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3164,6 +3193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3183,6 +3213,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3203,6 +3234,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3224,6 +3256,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3246,6 +3279,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3269,6 +3303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3293,6 +3328,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3318,6 +3354,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3344,6 +3381,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3371,6 +3409,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3399,6 +3438,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3428,6 +3468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3458,6 +3499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3489,6 +3531,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3521,6 +3564,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3554,6 +3598,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3588,6 +3633,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3623,6 +3669,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3659,6 +3706,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3696,6 +3744,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3734,6 +3783,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3773,6 +3823,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3813,6 +3864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="arg1">optional object Arg1</param>
@@ -3854,6 +3906,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="projectName">optional object ProjectName</param>
@@ -3867,6 +3920,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		[CustomMethodAttribute]
@@ -3880,6 +3934,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		/// <param name="projectName">optional object ProjectName</param>
@@ -3893,6 +3948,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		[CustomMethodAttribute]
@@ -3906,6 +3962,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -3918,6 +3975,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjValueListItem Item</param>
@@ -3932,6 +3990,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="goalArea">Int32 goalArea</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -3943,6 +4002,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="displayState">bool DisplayState</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -3954,6 +4014,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -3965,6 +4026,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="fieldType">optional NetOffice.MSProjectApi.Enums.PjFieldType FieldType = 0</param>
@@ -3979,6 +4041,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">string FieldName</param>
 		[CustomMethodAttribute]
@@ -3993,6 +4056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4005,6 +4069,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="requestXML">string RequestXML</param>
 		/// <param name="project">optional object Project</param>
@@ -4018,6 +4083,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="requestXML">string RequestXML</param>
 		[CustomMethodAttribute]
@@ -4031,6 +4097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="window">optional object Window</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4042,6 +4109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4053,6 +4121,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">string ServerURL</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4066,6 +4135,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="dataFile">string DataFile</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4086,6 +4156,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 LocaleID()
@@ -4097,6 +4168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void EnterpriseMakeServerURLTrusted()
@@ -4107,6 +4179,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="uRL">string URL</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4119,6 +4192,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4133,6 +4207,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4144,6 +4219,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
@@ -4156,6 +4232,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4169,6 +4246,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4183,6 +4261,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="publishFullPlan">optional bool PublishFullPlan = true</param>
@@ -4195,6 +4274,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4206,6 +4286,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
@@ -4218,6 +4299,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void PublishAllInformation()
@@ -4228,6 +4310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4244,6 +4327,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4255,6 +4339,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
@@ -4267,6 +4352,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4280,6 +4366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4294,6 +4381,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4309,6 +4397,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4325,6 +4414,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4341,6 +4431,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4352,6 +4443,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
@@ -4364,6 +4456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4377,6 +4470,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4391,6 +4485,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4406,6 +4501,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
@@ -4422,6 +4518,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="waitForCompletion">bool WaitForCompletion</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4434,6 +4531,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alertText">string AlertText</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -4447,6 +4545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsOfficeTaskPaneVisible()
@@ -4458,6 +4557,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void OfficeTaskPaneHide()
@@ -4468,6 +4568,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 GetCurrentTheme()
@@ -4479,6 +4580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="message">string Message</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjMessageType Type = 0</param>
@@ -4494,6 +4596,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="message">string Message</param>
 		[CustomMethodAttribute]
@@ -4507,6 +4610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="message">string Message</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjMessageType Type = 0</param>
@@ -4521,6 +4625,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="message">string Message</param>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjMessageType Type = 0</param>
@@ -4536,6 +4641,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4548,6 +4654,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4560,6 +4667,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		/// <param name="template">optional object Template</param>
@@ -4575,6 +4683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4587,6 +4696,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		[CustomMethodAttribute]
@@ -4600,6 +4710,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		/// <param name="template">optional object Template</param>
@@ -4614,6 +4725,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="summaryInfo">optional object SummaryInfo</param>
 		/// <param name="template">optional object Template</param>
@@ -4629,6 +4741,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileProperties()
@@ -4640,6 +4753,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4667,6 +4781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4690,6 +4805,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4714,6 +4830,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4739,6 +4856,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4765,6 +4883,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -4792,6 +4911,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Zoom()
@@ -4803,6 +4923,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">optional object Duration</param>
 		/// <param name="entire">optional object Entire</param>
@@ -4818,6 +4939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4830,6 +4952,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">optional object Duration</param>
 		[CustomMethodAttribute]
@@ -4843,6 +4966,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">optional object Duration</param>
 		/// <param name="entire">optional object Entire</param>
@@ -4857,6 +4981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="duration">optional object Duration</param>
 		/// <param name="entire">optional object Entire</param>
@@ -4872,6 +4997,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percent">optional object Percent</param>
 		/// <param name="entire">optional object Entire</param>
@@ -4885,6 +5011,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4897,6 +5024,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percent">optional object Percent</param>
 		[CustomMethodAttribute]
@@ -4910,6 +5038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
@@ -4923,6 +5052,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4935,6 +5065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
@@ -4948,6 +5079,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4960,6 +5092,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4972,6 +5105,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="share">optional object Share</param>
 		/// <param name="name">optional object Name</param>
@@ -4986,6 +5120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -4998,6 +5133,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="share">optional object Share</param>
 		[CustomMethodAttribute]
@@ -5011,6 +5147,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="share">optional object Share</param>
 		/// <param name="name">optional object Name</param>
@@ -5025,6 +5162,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FileSave()
@@ -5036,6 +5174,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5066,6 +5205,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[CustomMethodAttribute]
@@ -5079,6 +5219,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5093,6 +5234,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5108,6 +5250,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5124,6 +5267,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5141,6 +5285,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5159,6 +5304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5178,6 +5324,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5198,6 +5345,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5219,6 +5367,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5241,6 +5390,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5264,6 +5414,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5288,6 +5439,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5313,6 +5465,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5339,6 +5492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5366,6 +5520,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5394,6 +5549,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5423,6 +5579,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
@@ -5453,6 +5610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5465,6 +5623,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5477,6 +5636,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5499,6 +5659,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5511,6 +5672,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		[CustomMethodAttribute]
@@ -5524,6 +5686,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5538,6 +5701,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5553,6 +5717,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5569,6 +5734,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5586,6 +5752,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5604,6 +5771,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5623,6 +5791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5643,6 +5812,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5664,6 +5834,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromPage">optional object FromPage</param>
 		/// <param name="toPage">optional object ToPage</param>
@@ -5686,6 +5857,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5707,6 +5879,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5719,6 +5892,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -5732,6 +5906,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5746,6 +5921,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5761,6 +5937,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5777,6 +5954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5794,6 +5972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5812,6 +5991,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5831,6 +6011,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5851,6 +6032,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="fromPage">optional object FromPage</param>
@@ -5872,6 +6054,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FilePrintPreview()
@@ -5883,6 +6066,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5895,6 +6079,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5907,6 +6092,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="printer">optional object Printer</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5919,6 +6105,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5931,6 +6118,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5943,6 +6131,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -5955,6 +6144,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="portrait">object Portrait</param>
@@ -5973,6 +6163,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="portrait">object Portrait</param>
@@ -5990,6 +6181,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="portrait">object Portrait</param>
@@ -6008,6 +6200,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="top">optional object Top</param>
@@ -6025,6 +6218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6037,6 +6231,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -6050,6 +6245,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="top">optional object Top</param>
@@ -6064,6 +6260,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="top">optional object Top</param>
@@ -6079,6 +6276,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="top">optional object Top</param>
@@ -6095,6 +6293,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="top">optional object Top</param>
@@ -6112,6 +6311,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
@@ -6126,6 +6326,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[CustomMethodAttribute]
@@ -6139,6 +6340,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
@@ -6153,6 +6355,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
@@ -6167,6 +6370,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		[CustomMethodAttribute]
@@ -6180,6 +6384,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
@@ -6194,6 +6399,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -6216,6 +6422,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -6237,6 +6444,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -6259,6 +6467,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6278,6 +6487,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6290,6 +6500,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -6303,6 +6514,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6317,6 +6529,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6332,6 +6545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6348,6 +6562,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6365,6 +6580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6383,6 +6599,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="allSheetColumns">optional object AllSheetColumns</param>
@@ -6402,6 +6619,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6424,6 +6642,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6436,6 +6655,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -6449,6 +6669,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6463,6 +6684,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6478,6 +6700,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6494,6 +6717,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6511,6 +6735,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6529,6 +6754,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6548,6 +6774,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6568,6 +6795,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6589,6 +6817,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="monthsPerPage">optional object MonthsPerPage</param>
@@ -6611,6 +6840,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6630,6 +6860,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6642,6 +6873,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -6655,6 +6887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6669,6 +6902,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6684,6 +6918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6700,6 +6935,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6717,6 +6953,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6735,6 +6972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -6754,6 +6992,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="any">optional object Any</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -6767,6 +7006,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -6780,6 +7020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6802,6 +7043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -6814,6 +7056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		[CustomMethodAttribute]
@@ -6827,6 +7070,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6841,6 +7085,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6856,6 +7101,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6872,6 +7118,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6889,6 +7136,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6907,6 +7155,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6926,6 +7175,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6946,6 +7196,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6967,6 +7218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="cc">optional object Cc</param>
@@ -6989,6 +7241,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7008,6 +7261,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7020,6 +7274,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		[CustomMethodAttribute]
@@ -7033,6 +7288,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7047,6 +7303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7062,6 +7319,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7078,6 +7336,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7095,6 +7354,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7113,6 +7373,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="manager">optional object Manager</param>
 		/// <param name="resources">optional object Resources</param>
@@ -7132,6 +7393,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MailPostDocument()
@@ -7143,6 +7405,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ODBCManageDataSources()
@@ -7154,6 +7417,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ODBCCreateDataSource()
@@ -7165,6 +7429,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7184,6 +7449,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7196,6 +7462,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		[CustomMethodAttribute]
@@ -7209,6 +7476,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7223,6 +7491,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7238,6 +7507,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7254,6 +7524,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7271,6 +7542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7289,6 +7561,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="to">optional object To</param>
 		/// <param name="subject">optional object Subject</param>
@@ -7308,6 +7581,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="number">optional object Number</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7320,6 +7594,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7332,6 +7607,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7344,6 +7620,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7356,6 +7633,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7368,6 +7646,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="copy">optional object Copy</param>
 		/// <param name="create">optional object Create</param>
@@ -7384,6 +7663,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -7397,6 +7677,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="copy">optional object Copy</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -7411,6 +7692,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="copy">optional object Copy</param>
 		/// <param name="create">optional object Create</param>
@@ -7426,6 +7708,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="copy">optional object Copy</param>
 		/// <param name="create">optional object Create</param>
@@ -7442,6 +7725,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="_default">optional object Default</param>
@@ -7457,6 +7741,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -7471,6 +7756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="_default">optional object Default</param>
@@ -7486,6 +7772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditUndo()
@@ -7497,6 +7784,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditCut()
@@ -7508,6 +7796,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditCopy()
@@ -7519,6 +7808,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		/// <param name="forPrinter">object ForPrinter</param>
@@ -7540,6 +7830,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		/// <param name="forPrinter">object ForPrinter</param>
@@ -7558,6 +7849,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		/// <param name="forPrinter">object ForPrinter</param>
@@ -7577,6 +7869,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		/// <param name="forPrinter">object ForPrinter</param>
@@ -7597,6 +7890,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		/// <param name="forPrinter">object ForPrinter</param>
@@ -7618,6 +7912,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditPaste()
@@ -7629,6 +7924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="link">optional object Link</param>
 		/// <param name="type">optional object Type</param>
@@ -7643,6 +7939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7655,6 +7952,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="link">optional object Link</param>
 		[CustomMethodAttribute]
@@ -7668,6 +7966,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="link">optional object Link</param>
 		/// <param name="type">optional object Type</param>
@@ -7682,6 +7981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditClearFormats()
@@ -7693,6 +7993,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="contents">optional object Contents</param>
 		/// <param name="formats">optional object Formats</param>
@@ -7708,6 +8009,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7720,6 +8022,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="contents">optional object Contents</param>
 		[CustomMethodAttribute]
@@ -7733,6 +8036,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="contents">optional object Contents</param>
 		/// <param name="formats">optional object Formats</param>
@@ -7747,6 +8051,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="contents">optional object Contents</param>
 		/// <param name="formats">optional object Formats</param>
@@ -7762,6 +8067,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool RowClear()
@@ -7773,6 +8079,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DDEPasteLink()
@@ -7784,6 +8091,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditDelete()
@@ -7795,6 +8103,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ColumnDelete()
@@ -7806,6 +8115,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool RowDelete()
@@ -7817,6 +8127,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="verb">optional object Verb</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7829,6 +8140,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -7841,6 +8153,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ObjectLinks()
@@ -7852,6 +8165,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ObjectChangeIcon()
@@ -7863,6 +8177,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ObjectConvert()
@@ -7874,6 +8189,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditInsert()
@@ -7885,6 +8201,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ColumnInsert()
@@ -7896,6 +8213,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool RowInsert()
@@ -7907,6 +8225,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LinkTasks()
@@ -7918,6 +8237,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -7936,6 +8256,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -7950,6 +8271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -7965,6 +8287,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -7981,6 +8304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -7998,6 +8322,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="from">Int32 From</param>
 		/// <param name="to">Int32 To</param>
@@ -8016,6 +8341,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool UnlinkTasks()
@@ -8027,6 +8353,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="resources">object Resources</param>
 		/// <param name="operation">optional NetOffice.MSProjectApi.Enums.PjResAssignOperation Operation = 0</param>
@@ -8041,6 +8368,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="resources">object Resources</param>
 		[CustomMethodAttribute]
@@ -8054,6 +8382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="resources">object Resources</param>
 		/// <param name="operation">optional NetOffice.MSProjectApi.Enums.PjResAssignOperation Operation = 0</param>
@@ -8068,6 +8397,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="iD">optional object ID</param>
 		/// <param name="date">optional object Date</param>
@@ -8081,6 +8411,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8093,6 +8424,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="iD">optional object ID</param>
 		[CustomMethodAttribute]
@@ -8106,6 +8438,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool GotoNextOverAllocation()
@@ -8117,6 +8450,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool InsertNotes()
@@ -8128,6 +8462,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8146,6 +8481,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8158,6 +8494,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
@@ -8171,6 +8508,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8185,6 +8523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8200,6 +8539,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8216,6 +8556,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8233,6 +8574,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8251,6 +8593,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8271,6 +8614,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8283,6 +8627,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
@@ -8296,6 +8641,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8310,6 +8656,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8325,6 +8672,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8341,6 +8689,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8358,6 +8707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8376,6 +8726,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8395,6 +8746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -8415,6 +8767,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SelectAll()
@@ -8426,6 +8779,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ObjectInsert()
@@ -8437,6 +8791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="edition">object Edition</param>
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjSubscribeFormat Format = 1</param>
@@ -8451,6 +8806,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="edition">object Edition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -8465,6 +8821,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="isTask">optional object IsTask</param>
@@ -8483,6 +8840,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -8496,6 +8854,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -8510,6 +8869,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="isTask">optional object IsTask</param>
@@ -8525,6 +8885,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="isTask">optional object IsTask</param>
@@ -8541,6 +8902,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="isTask">optional object IsTask</param>
@@ -8558,6 +8920,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="isTask">optional object IsTask</param>
@@ -8576,6 +8939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="edition">optional object Edition</param>
 		/// <param name="contains">optional object Contains</param>
@@ -8590,6 +8954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -8603,6 +8968,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="edition">optional object Edition</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -8617,6 +8983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8636,6 +9003,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -8649,6 +9017,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -8663,6 +9032,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8678,6 +9048,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8694,6 +9065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8711,6 +9083,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8729,6 +9102,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="view">optional object View</param>
@@ -8748,6 +9122,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="stop">optional object Stop</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -8761,6 +9136,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -8774,6 +9150,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8786,6 +9163,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="singlePane">optional object SinglePane</param>
@@ -8800,6 +9178,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8812,6 +9191,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -8825,6 +9205,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="singlePane">optional object SinglePane</param>
@@ -8839,6 +9220,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8859,6 +9241,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -8871,6 +9254,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -8884,6 +9268,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8898,6 +9283,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8913,6 +9299,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8929,6 +9316,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8946,6 +9334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8964,6 +9353,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -8983,6 +9373,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9003,6 +9394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9020,6 +9412,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -9032,6 +9425,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -9045,6 +9439,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9059,6 +9454,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9074,6 +9470,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9090,6 +9487,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -9107,6 +9505,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -9119,6 +9518,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -9131,6 +9531,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9160,6 +9561,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9174,6 +9576,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9189,6 +9592,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9205,6 +9609,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9222,6 +9627,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9240,6 +9646,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9259,6 +9666,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9279,6 +9687,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9300,6 +9709,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9322,6 +9732,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9345,6 +9756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9369,6 +9781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9394,6 +9807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9420,6 +9834,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9447,6 +9862,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9475,6 +9891,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -9504,6 +9921,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="highlight">optional object Highlight</param>
@@ -9519,6 +9937,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -9531,6 +9950,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -9544,6 +9964,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="highlight">optional object Highlight</param>
@@ -9558,6 +9979,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="highlight">optional object Highlight</param>
@@ -9573,6 +9995,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9597,6 +10020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9611,6 +10035,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9626,6 +10051,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9642,6 +10068,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9659,6 +10086,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9677,6 +10105,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9696,6 +10125,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9716,6 +10146,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9737,6 +10168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9759,6 +10191,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9782,6 +10215,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskFilter">bool TaskFilter</param>
@@ -9806,6 +10240,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9833,6 +10268,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -9845,6 +10281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		[CustomMethodAttribute]
@@ -9858,6 +10295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9872,6 +10310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9887,6 +10326,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9903,6 +10343,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9920,6 +10361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9938,6 +10380,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9957,6 +10400,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9977,6 +10421,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -9998,6 +10443,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10020,6 +10466,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10043,6 +10490,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10067,6 +10515,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10092,6 +10541,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10118,6 +10568,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		/// <param name="title">optional object Title</param>
@@ -10145,6 +10596,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="project">optional object Project</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -10157,6 +10609,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -10169,6 +10622,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10190,6 +10644,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -10202,6 +10657,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		[CustomMethodAttribute]
@@ -10215,6 +10671,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10229,6 +10686,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10244,6 +10702,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10260,6 +10719,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10277,6 +10737,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10295,6 +10756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10314,6 +10776,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10334,6 +10797,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="startWeekOnMonday">optional object StartWeekOnMonday</param>
 		/// <param name="startYearIn">optional object StartYearIn</param>
@@ -10355,6 +10819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10386,6 +10851,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -10398,6 +10864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		[CustomMethodAttribute]
@@ -10411,6 +10878,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10425,6 +10893,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10440,6 +10909,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10456,6 +10926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10473,6 +10944,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10491,6 +10963,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10510,6 +10983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10530,6 +11004,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10551,6 +11026,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10573,6 +11049,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10596,6 +11073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10620,6 +11098,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10645,6 +11124,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10671,6 +11151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10698,6 +11179,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10726,6 +11208,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10755,6 +11238,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10785,6 +11269,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -10816,6 +11301,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10846,6 +11332,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -10858,6 +11345,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		[CustomMethodAttribute]
@@ -10871,6 +11359,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10885,6 +11374,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10900,6 +11390,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10916,6 +11407,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10933,6 +11425,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10951,6 +11444,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10970,6 +11464,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -10990,6 +11485,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11011,6 +11507,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11033,6 +11530,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11056,6 +11554,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11080,6 +11579,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11105,6 +11605,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11131,6 +11632,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11158,6 +11660,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11186,6 +11689,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11215,6 +11719,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -11245,6 +11750,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11271,6 +11777,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -11283,6 +11790,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		[CustomMethodAttribute]
@@ -11296,6 +11804,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11310,6 +11819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11325,6 +11835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11341,6 +11852,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11358,6 +11870,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11376,6 +11889,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11395,6 +11909,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11415,6 +11930,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11436,6 +11952,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11458,6 +11975,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11481,6 +11999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11505,6 +12024,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11530,6 +12050,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="scheduleMessages">optional object ScheduleMessages</param>
 		/// <param name="startOnCurrentDate">optional object StartOnCurrentDate</param>
@@ -11556,6 +12077,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11587,6 +12109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -11599,6 +12122,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		[CustomMethodAttribute]
@@ -11612,6 +12136,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11626,6 +12151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11641,6 +12167,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11657,6 +12184,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11674,6 +12202,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11692,6 +12221,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11711,6 +12241,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11731,6 +12262,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11752,6 +12284,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11774,6 +12307,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11797,6 +12331,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11821,6 +12356,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11846,6 +12382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11872,6 +12409,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11899,6 +12437,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11927,6 +12466,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11956,6 +12496,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -11986,6 +12527,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -12017,6 +12559,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12046,6 +12589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12058,6 +12602,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		[CustomMethodAttribute]
@@ -12071,6 +12616,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12085,6 +12631,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12100,6 +12647,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12116,6 +12664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12133,6 +12682,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12151,6 +12701,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12170,6 +12721,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12190,6 +12742,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12211,6 +12764,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12233,6 +12787,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12256,6 +12811,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12280,6 +12836,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12305,6 +12862,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12331,6 +12889,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12358,6 +12917,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12386,6 +12946,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="workgroupMessages">optional object WorkgroupMessages</param>
 		/// <param name="serverURL">optional object ServerURL</param>
@@ -12415,6 +12976,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12442,6 +13004,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12454,6 +13017,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		[CustomMethodAttribute]
@@ -12467,6 +13031,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12481,6 +13046,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12496,6 +13062,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12512,6 +13079,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12529,6 +13097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12547,6 +13116,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12566,6 +13136,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12586,6 +13157,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12607,6 +13179,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12629,6 +13202,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12652,6 +13226,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12676,6 +13251,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12701,6 +13277,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12727,6 +13304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="autoTrack">optional object AutoTrack</param>
@@ -12754,6 +13332,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalculateAll()
@@ -12765,6 +13344,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12777,6 +13357,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
@@ -12790,6 +13371,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12802,6 +13384,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		[CustomMethodAttribute]
@@ -12815,6 +13398,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="locked">optional object Locked</param>
@@ -12828,6 +13412,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12840,6 +13425,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[CustomMethodAttribute]
@@ -12853,6 +13439,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="fromName">optional object FromName</param>
@@ -12866,6 +13453,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -12879,6 +13467,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fromName">string FromName</param>
 		/// <param name="toName">string ToName</param>
@@ -12892,6 +13481,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -12904,6 +13494,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -12931,6 +13522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -12944,6 +13536,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -12958,6 +13551,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -12973,6 +13567,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -12989,6 +13584,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13006,6 +13602,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13024,6 +13621,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13043,6 +13641,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13063,6 +13662,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13084,6 +13684,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13106,6 +13707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13129,6 +13731,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13153,6 +13756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13178,6 +13782,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13204,6 +13809,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -13231,6 +13837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13259,6 +13866,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13273,6 +13881,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13288,6 +13897,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13304,6 +13914,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13321,6 +13932,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13339,6 +13951,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13358,6 +13971,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13378,6 +13992,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13399,6 +14014,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13421,6 +14037,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13444,6 +14061,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13468,6 +14086,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13493,6 +14112,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13519,6 +14139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13546,6 +14167,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13574,6 +14196,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13586,6 +14209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13600,6 +14224,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">string ProjectName</param>
 		/// <param name="resourceName">string ResourceName</param>
@@ -13614,6 +14239,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		/// <param name="locked">optional object Locked</param>
@@ -13627,6 +14253,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13639,6 +14266,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="index">optional object Index</param>
 		[CustomMethodAttribute]
@@ -13652,6 +14280,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13674,6 +14303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13686,6 +14316,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		[CustomMethodAttribute]
@@ -13699,6 +14330,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13713,6 +14345,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13728,6 +14361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13744,6 +14378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13761,6 +14396,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13779,6 +14415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13798,6 +14435,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13818,6 +14456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13839,6 +14478,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -13861,6 +14501,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13873,6 +14514,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13885,6 +14527,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="copy">optional object Copy</param>
@@ -13902,6 +14545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -13914,6 +14558,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[CustomMethodAttribute]
@@ -13927,6 +14572,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="copy">optional object Copy</param>
@@ -13941,6 +14587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="copy">optional object Copy</param>
@@ -13956,6 +14603,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="copy">optional object Copy</param>
@@ -13972,6 +14620,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="copy">optional object Copy</param>
@@ -13989,6 +14638,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="updateDate">optional object UpdateDate</param>
@@ -14003,6 +14653,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14015,6 +14666,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[CustomMethodAttribute]
@@ -14028,6 +14680,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="updateDate">optional object UpdateDate</param>
@@ -14042,6 +14695,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		/// <param name="actualDuration">optional object ActualDuration</param>
@@ -14059,6 +14713,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14071,6 +14726,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		[CustomMethodAttribute]
@@ -14084,6 +14740,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		/// <param name="actualDuration">optional object ActualDuration</param>
@@ -14098,6 +14755,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		/// <param name="actualDuration">optional object ActualDuration</param>
@@ -14113,6 +14771,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		/// <param name="actualDuration">optional object ActualDuration</param>
@@ -14129,6 +14788,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="percentComplete">optional object PercentComplete</param>
 		/// <param name="actualDuration">optional object ActualDuration</param>
@@ -14146,6 +14806,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projects">optional object Projects</param>
 		/// <param name="view">optional object View</param>
@@ -14161,6 +14822,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14173,6 +14835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projects">optional object Projects</param>
 		[CustomMethodAttribute]
@@ -14186,6 +14849,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projects">optional object Projects</param>
 		/// <param name="view">optional object View</param>
@@ -14200,6 +14864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projects">optional object Projects</param>
 		/// <param name="view">optional object View</param>
@@ -14215,6 +14880,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WindowArrangeAll()
@@ -14226,6 +14892,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14238,6 +14905,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14250,6 +14918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14262,6 +14931,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14274,6 +14944,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="windowName">optional object WindowName</param>
 		/// <param name="dialogID">optional object DialogID</param>
@@ -14288,6 +14959,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14300,6 +14972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="windowName">optional object WindowName</param>
 		[CustomMethodAttribute]
@@ -14313,6 +14986,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="windowName">optional object WindowName</param>
 		/// <param name="dialogID">optional object DialogID</param>
@@ -14327,6 +15001,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PageBreakSet()
@@ -14338,6 +15013,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PageBreakRemove()
@@ -14349,6 +15025,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PageBreaksRemoveAll()
@@ -14360,6 +15037,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowResourcesPredecessors()
@@ -14371,6 +15049,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowResourcesSuccessors()
@@ -14382,6 +15061,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowPredecessorsSuccessors()
@@ -14393,6 +15073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowNotes()
@@ -14404,6 +15085,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowObjects()
@@ -14415,6 +15097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowOverallocation()
@@ -14426,6 +15109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowPercentAllocation()
@@ -14437,6 +15121,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowWork()
@@ -14448,6 +15133,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowCost()
@@ -14459,6 +15145,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowSchedule()
@@ -14470,6 +15157,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowPeakUnits()
@@ -14481,6 +15169,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14493,6 +15182,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowRemainingAvailability()
@@ -14504,6 +15194,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowCumulativeWork()
@@ -14515,6 +15206,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowCumulativeCost()
@@ -14526,6 +15218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PaneNext()
@@ -14537,6 +15230,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PaneCreate()
@@ -14548,6 +15242,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FormViewShow()
@@ -14559,6 +15254,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool PaneClose()
@@ -14570,6 +15266,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WindowSplit()
@@ -14581,6 +15278,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="noWrap">optional object NoWrap</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14593,6 +15291,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14605,6 +15304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="noWrap">optional object NoWrap</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14617,6 +15317,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14629,6 +15330,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DocClose()
@@ -14640,6 +15342,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AppMaximize()
@@ -14651,6 +15354,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AppMinimize()
@@ -14662,6 +15366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		/// <param name="yPosition">optional object YPosition</param>
@@ -14676,6 +15381,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14688,6 +15394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		[CustomMethodAttribute]
@@ -14701,6 +15408,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		/// <param name="yPosition">optional object YPosition</param>
@@ -14715,6 +15423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AppRestore()
@@ -14726,6 +15435,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
@@ -14740,6 +15450,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14752,6 +15463,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
@@ -14765,6 +15477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
@@ -14779,6 +15492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DocMaximize()
@@ -14790,6 +15504,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		/// <param name="yPosition">optional object YPosition</param>
@@ -14804,6 +15519,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14816,6 +15532,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		[CustomMethodAttribute]
@@ -14829,6 +15546,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="xPosition">optional object XPosition</param>
 		/// <param name="yPosition">optional object YPosition</param>
@@ -14843,6 +15561,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DocRestore()
@@ -14854,6 +15573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
@@ -14868,6 +15588,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14880,6 +15601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
@@ -14893,6 +15615,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
@@ -14907,6 +15630,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="levels">optional object Levels</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14919,6 +15643,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14931,6 +15656,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="outlineNumber">optional NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel OutlineNumber = 65535</param>
 		/// <param name="expandInsertedProjects">optional object ExpandInsertedProjects</param>
@@ -14944,6 +15670,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14956,6 +15683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="outlineNumber">optional NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel OutlineNumber = 65535</param>
 		[CustomMethodAttribute]
@@ -14969,6 +15697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="levels">optional object Levels</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14981,6 +15710,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -14993,6 +15723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OutlineHideSubTasks()
@@ -15004,6 +15735,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OutlineShowSubTasks()
@@ -15015,6 +15747,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OutlineShowAllTasks()
@@ -15026,6 +15759,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15038,6 +15772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15050,6 +15785,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15062,6 +15798,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15074,6 +15811,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15086,6 +15824,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15098,6 +15837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15110,6 +15850,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15122,6 +15863,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		/// <param name="extend">optional object Extend</param>
@@ -15135,6 +15877,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15147,6 +15890,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		[CustomMethodAttribute]
@@ -15160,6 +15904,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		/// <param name="extend">optional object Extend</param>
@@ -15173,6 +15918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15185,6 +15931,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		[CustomMethodAttribute]
@@ -15198,6 +15945,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		/// <param name="extend">optional object Extend</param>
@@ -15211,6 +15959,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15223,6 +15972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		[CustomMethodAttribute]
@@ -15236,6 +15986,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		/// <param name="extend">optional object Extend</param>
@@ -15249,6 +16000,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15261,6 +16013,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numCells">optional object NumCells</param>
 		[CustomMethodAttribute]
@@ -15274,6 +16027,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		/// <param name="add">optional object Add</param>
@@ -15287,6 +16041,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15299,6 +16054,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="extend">optional object Extend</param>
 		[CustomMethodAttribute]
@@ -15312,6 +16068,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15324,6 +16081,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15336,6 +16094,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15348,6 +16107,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15360,6 +16120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15378,6 +16139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15392,6 +16154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15407,6 +16170,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15423,6 +16187,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15440,6 +16205,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">Int16 Column</param>
@@ -15458,6 +16224,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="startTime">string StartTime</param>
@@ -15473,6 +16240,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15491,6 +16259,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15505,6 +16274,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15520,6 +16290,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15536,6 +16307,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15553,6 +16325,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15571,6 +16344,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15589,6 +16363,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15603,6 +16378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15618,6 +16394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15634,6 +16411,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15651,6 +16429,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="column">string Column</param>
@@ -15669,6 +16448,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="rowRelative">optional object RowRelative</param>
@@ -15685,6 +16465,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15697,6 +16478,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
@@ -15710,6 +16492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="rowRelative">optional object RowRelative</param>
@@ -15724,6 +16507,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="rowRelative">optional object RowRelative</param>
@@ -15739,6 +16523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="rowRelative">optional object RowRelative</param>
@@ -15755,6 +16540,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15770,6 +16556,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15782,6 +16569,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[CustomMethodAttribute]
@@ -15795,6 +16583,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15809,6 +16598,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15824,6 +16614,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15839,6 +16630,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15851,6 +16643,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[CustomMethodAttribute]
@@ -15864,6 +16657,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15878,6 +16672,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15893,6 +16688,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15908,6 +16704,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15920,6 +16717,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[CustomMethodAttribute]
@@ -15933,6 +16731,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15947,6 +16746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		/// <param name="additional">optional object Additional</param>
@@ -15962,6 +16762,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -15976,6 +16777,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -15988,6 +16790,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
@@ -16001,6 +16804,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -16015,6 +16819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -16029,6 +16834,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16041,6 +16847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
@@ -16054,6 +16861,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -16068,6 +16876,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -16082,6 +16891,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16094,6 +16904,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		[CustomMethodAttribute]
@@ -16107,6 +16918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="row">optional object Row</param>
 		/// <param name="column">optional object Column</param>
@@ -16121,6 +16933,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SelectSheet()
@@ -16132,6 +16945,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
@@ -16145,6 +16959,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="command">string Command</param>
 		/// <param name="timeOut">optional object TimeOut</param>
@@ -16158,6 +16973,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="command">string Command</param>
 		[CustomMethodAttribute]
@@ -16171,6 +16987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DDETerminate()
@@ -16182,6 +16999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tab">optional object Tab</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16194,6 +17012,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16206,6 +17025,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16218,6 +17038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16230,6 +17051,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomForms()
@@ -16241,6 +17063,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Tables()
@@ -16252,6 +17075,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Filters()
@@ -16263,6 +17087,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16275,6 +17100,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16287,6 +17113,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="down">optional object Down</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16299,6 +17126,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16311,6 +17139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Views()
@@ -16322,6 +17151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalculateProject()
@@ -16333,6 +17163,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16345,6 +17176,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16357,6 +17189,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SpellingCheck()
@@ -16368,6 +17201,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16405,6 +17239,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -16417,6 +17252,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		[CustomMethodAttribute]
@@ -16430,6 +17266,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16444,6 +17281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16459,6 +17297,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16475,6 +17314,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16492,6 +17332,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16510,6 +17351,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16529,6 +17371,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16549,6 +17392,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16570,6 +17414,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16592,6 +17437,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16615,6 +17461,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16639,6 +17486,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16664,6 +17512,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16690,6 +17539,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16717,6 +17567,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16745,6 +17596,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16774,6 +17626,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16804,6 +17657,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16835,6 +17689,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16867,6 +17722,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16900,6 +17756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16934,6 +17791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -16969,6 +17827,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -17005,6 +17864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskName">optional object TaskName</param>
 		/// <param name="taskNotes">optional object TaskNotes</param>
@@ -17042,6 +17902,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WindowMoreWindows()
@@ -17053,6 +17914,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool HelpContents()
@@ -17064,6 +17926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17076,6 +17939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17088,6 +17952,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool HelpAbout()
@@ -17099,6 +17964,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="contextNumber">optional object ContextNumber</param>
@@ -17114,6 +17980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17126,6 +17993,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		[CustomMethodAttribute]
@@ -17139,6 +18007,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="contextNumber">optional object ContextNumber</param>
@@ -17153,6 +18022,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="contextNumber">optional object ContextNumber</param>
@@ -17168,6 +18038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="contextNumber">optional object ContextNumber</param>
@@ -17182,6 +18053,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -17195,6 +18067,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -17209,6 +18082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17221,6 +18095,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool HelpAnswerWizard()
@@ -17232,6 +18107,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17244,6 +18120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AutoCorrect()
@@ -17255,6 +18132,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17267,6 +18145,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool HelpTechnicalSupport()
@@ -17278,6 +18157,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17290,6 +18170,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool HelpContextHelp()
@@ -17301,6 +18182,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17319,6 +18201,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17331,6 +18214,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
@@ -17344,6 +18228,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17358,6 +18243,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17373,6 +18259,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17389,6 +18276,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17406,6 +18294,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17424,6 +18313,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17445,6 +18335,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17457,6 +18348,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
@@ -17470,6 +18362,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17484,6 +18377,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17499,6 +18393,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17515,6 +18410,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17532,6 +18428,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17550,6 +18447,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17569,6 +18467,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17589,6 +18488,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -17610,6 +18510,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		/// <param name="position">optional object Position</param>
@@ -17623,6 +18524,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17635,6 +18537,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[CustomMethodAttribute]
@@ -17648,6 +18551,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17660,6 +18564,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17672,6 +18577,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DetailStylesRemoveAll()
@@ -17683,6 +18589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17701,6 +18608,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17713,6 +18621,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -17726,6 +18635,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17740,6 +18650,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17755,6 +18666,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17771,6 +18683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17788,6 +18701,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -17806,6 +18720,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Timescale()
@@ -17817,6 +18732,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17849,6 +18765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -17861,6 +18778,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		[CustomMethodAttribute]
@@ -17874,6 +18792,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17888,6 +18807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17903,6 +18823,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17919,6 +18840,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17936,6 +18858,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17954,6 +18877,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17973,6 +18897,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -17993,6 +18918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18014,6 +18940,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18036,6 +18963,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18059,6 +18987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18083,6 +19012,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18108,6 +19038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18134,6 +19065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18161,6 +19093,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18189,6 +19122,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18218,6 +19152,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18248,6 +19183,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18279,6 +19215,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="majorUnits">optional object MajorUnits</param>
 		/// <param name="minorUnits">optional object MinorUnits</param>
@@ -18311,6 +19248,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18330,6 +19268,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -18342,6 +19281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		[CustomMethodAttribute]
@@ -18355,6 +19295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18369,6 +19310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18384,6 +19326,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18400,6 +19343,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18417,6 +19361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18435,6 +19380,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="key1">optional object Key1</param>
 		/// <param name="ascending1">optional object Ascending1</param>
@@ -18454,6 +19400,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool BarBoxStyles()
@@ -18465,6 +19412,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18494,6 +19442,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -18506,6 +19455,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
@@ -18519,6 +19469,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18533,6 +19484,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18548,6 +19500,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18564,6 +19517,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18581,6 +19535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18599,6 +19554,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18618,6 +19574,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18638,6 +19595,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18659,6 +19617,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18681,6 +19640,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18704,6 +19664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18728,6 +19689,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18753,6 +19715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18779,6 +19742,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18806,6 +19770,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18834,6 +19799,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -18863,6 +19829,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -18878,6 +19845,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -18890,6 +19858,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		[CustomMethodAttribute]
@@ -18903,6 +19872,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -18917,6 +19887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -18932,6 +19903,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -18944,6 +19916,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -18956,6 +19929,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Layout()
@@ -18967,6 +19941,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="straight">optional object Straight</param>
 		/// <param name="displayArrows">optional object DisplayArrows</param>
@@ -18983,6 +19958,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -18996,6 +19972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="straight">optional object Straight</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -19010,6 +19987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="straight">optional object Straight</param>
 		/// <param name="displayArrows">optional object DisplayArrows</param>
@@ -19025,6 +20003,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="straight">optional object Straight</param>
 		/// <param name="displayArrows">optional object DisplayArrows</param>
@@ -19041,6 +20020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LayoutNow()
@@ -19052,6 +20032,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19088,6 +20069,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -19101,6 +20083,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -19115,6 +20098,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19130,6 +20114,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19146,6 +20131,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19163,6 +20149,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19181,6 +20168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19200,6 +20188,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19220,6 +20209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19241,6 +20231,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19263,6 +20254,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19286,6 +20278,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19310,6 +20303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19335,6 +20329,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19361,6 +20356,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19388,6 +20384,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19416,6 +20413,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19445,6 +20443,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19475,6 +20474,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19506,6 +20506,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19538,6 +20539,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19571,6 +20573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19605,6 +20608,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19640,6 +20644,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="criticalStyle">optional object CriticalStyle</param>
 		/// <param name="criticalColor">optional object CriticalColor</param>
@@ -19676,6 +20681,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Gridlines()
@@ -19687,6 +20693,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -19704,6 +20711,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		[CustomMethodAttribute]
@@ -19717,6 +20725,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -19731,6 +20740,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -19746,6 +20756,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -19762,6 +20773,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -19779,6 +20791,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -19792,6 +20805,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -19805,6 +20819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19817,6 +20832,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -19829,6 +20845,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FindNext()
@@ -19840,6 +20857,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FindPrevious()
@@ -19851,6 +20869,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ZoomOut()
@@ -19862,6 +20881,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ZoomIn()
@@ -19873,6 +20893,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19887,6 +20908,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19901,6 +20923,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19918,6 +20941,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19932,6 +20956,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19947,6 +20972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19963,6 +20989,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19980,6 +21007,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -19997,6 +21025,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20011,6 +21040,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20026,6 +21056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20042,6 +21073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20059,6 +21091,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="value">string Value</param>
 		/// <param name="create">optional object Create</param>
@@ -20072,6 +21105,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="value">string Value</param>
 		[CustomMethodAttribute]
@@ -20085,6 +21119,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20111,6 +21146,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20133,6 +21169,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20156,6 +21193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20180,6 +21218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20205,6 +21244,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20231,6 +21271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20251,6 +21292,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20267,6 +21309,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20284,6 +21327,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20302,6 +21346,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20321,6 +21366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -20341,6 +21387,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="window">optional object Window</param>
 		/// <param name="command">optional object Command</param>
@@ -20356,6 +21403,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20368,6 +21416,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="window">optional object Window</param>
 		[CustomMethodAttribute]
@@ -20381,6 +21430,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="window">optional object Window</param>
 		/// <param name="command">optional object Command</param>
@@ -20395,6 +21445,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="window">optional object Window</param>
 		/// <param name="command">optional object Command</param>
@@ -20410,6 +21461,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="application">string Application</param>
 		/// <param name="document">optional object Document</param>
@@ -20425,6 +21477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="application">string Application</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -20439,6 +21492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="application">string Application</param>
 		/// <param name="document">optional object Document</param>
@@ -20454,6 +21508,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DDELinksUpdate()
@@ -20465,6 +21520,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool GotoTaskDates()
@@ -20476,6 +21532,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="display">optional NetOffice.MSProjectApi.Enums.PjGanttBarLink Display = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20488,6 +21545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20500,6 +21558,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="display">optional object Display</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20512,6 +21571,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20524,6 +21584,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="on">optional object On</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20536,6 +21597,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20548,6 +21610,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alwaysRollup">optional object AlwaysRollup</param>
 		/// <param name="hideWhenSummaryExpanded">optional object HideWhenSummaryExpanded</param>
@@ -20561,6 +21624,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20573,6 +21637,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alwaysRollup">optional object AlwaysRollup</param>
 		[CustomMethodAttribute]
@@ -20586,6 +21651,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="dateFormat">NetOffice.MSProjectApi.Enums.PjDateFormat DateFormat</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20598,6 +21664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">NetOffice.MSProjectApi.Enums.PjBarSize Size</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20610,6 +21677,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -20622,6 +21690,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20654,6 +21723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[CustomMethodAttribute]
@@ -20667,6 +21737,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20681,6 +21752,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20696,6 +21768,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20712,6 +21785,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20729,6 +21803,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20747,6 +21822,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20766,6 +21842,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20786,6 +21863,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20807,6 +21885,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20829,6 +21908,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20852,6 +21932,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20876,6 +21957,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20901,6 +21983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20927,6 +22010,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20954,6 +22038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -20982,6 +22067,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -21011,6 +22097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -21041,6 +22128,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -21072,6 +22160,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -21104,6 +22193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21125,6 +22215,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -21138,6 +22229,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -21152,6 +22244,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21167,6 +22260,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21183,6 +22277,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21200,6 +22295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21218,6 +22314,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21237,6 +22334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21257,6 +22355,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="size">optional object Size</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -21278,6 +22377,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		/// <param name="move">optional object Move</param>
@@ -21295,6 +22395,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -21308,6 +22409,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -21322,6 +22424,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		/// <param name="move">optional object Move</param>
@@ -21337,6 +22440,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		/// <param name="move">optional object Move</param>
@@ -21353,6 +22457,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		/// <param name="move">optional object Move</param>
@@ -21370,6 +22475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21402,6 +22508,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -21414,6 +22521,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		[CustomMethodAttribute]
@@ -21427,6 +22535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21441,6 +22550,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21456,6 +22566,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21472,6 +22583,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21489,6 +22601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21507,6 +22620,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21526,6 +22640,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21546,6 +22661,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21567,6 +22683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21589,6 +22706,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21612,6 +22730,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21636,6 +22755,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21661,6 +22781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21687,6 +22808,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21714,6 +22836,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21742,6 +22865,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21771,6 +22895,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21801,6 +22926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21832,6 +22958,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -21864,6 +22991,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="filenames">object Filenames</param>
 		/// <param name="newWindow">object NewWindow</param>
@@ -21883,6 +23011,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="filenames">object Filenames</param>
 		/// <param name="newWindow">object NewWindow</param>
@@ -21900,6 +23029,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="filenames">object Filenames</param>
 		/// <param name="newWindow">object NewWindow</param>
@@ -21918,6 +23048,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="filenames">object Filenames</param>
 		/// <param name="newWindow">object NewWindow</param>
@@ -21937,6 +23068,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjOrganizer Type = 0</param>
 		/// <param name="task">optional object Task</param>
@@ -21950,6 +23082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -21962,6 +23095,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjOrganizer Type = 0</param>
 		[CustomMethodAttribute]
@@ -21975,6 +23109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -21991,6 +23126,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22003,6 +23139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
@@ -22016,6 +23153,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22030,6 +23168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22045,6 +23184,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22061,6 +23201,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22076,6 +23217,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22088,6 +23230,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
@@ -22101,6 +23244,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22115,6 +23259,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22130,6 +23275,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22146,6 +23292,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22158,6 +23305,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
@@ -22171,6 +23319,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22185,6 +23334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22200,6 +23350,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -22216,6 +23367,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool RecurringTaskInsert()
@@ -22227,6 +23379,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarTimescale()
@@ -22238,6 +23391,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22257,6 +23411,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22269,6 +23424,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		[CustomMethodAttribute]
@@ -22282,6 +23438,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22296,6 +23453,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22311,6 +23469,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22327,6 +23486,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22344,6 +23504,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22362,6 +23523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -22381,6 +23543,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -22397,6 +23560,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22409,6 +23573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		[CustomMethodAttribute]
@@ -22422,6 +23587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -22436,6 +23602,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -22451,6 +23618,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -22467,6 +23635,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
@@ -22481,6 +23650,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		[CustomMethodAttribute]
@@ -22494,6 +23664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
@@ -22508,6 +23679,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="baseCalendarName">optional object BaseCalendarName</param>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
@@ -22522,6 +23694,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22534,6 +23707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="baseCalendarName">optional object BaseCalendarName</param>
 		[CustomMethodAttribute]
@@ -22547,6 +23721,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="baseCalendarName">optional object BaseCalendarName</param>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
@@ -22561,6 +23736,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numWeeks">optional object NumWeeks</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -22575,6 +23751,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22587,6 +23764,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numWeeks">optional object NumWeeks</param>
 		[CustomMethodAttribute]
@@ -22600,6 +23778,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="numWeeks">optional object NumWeeks</param>
 		/// <param name="startDate">optional object StartDate</param>
@@ -22614,6 +23793,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sortOrder">optional object SortOrder</param>
 		/// <param name="autoLayout">optional object AutoLayout</param>
@@ -22627,6 +23807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22639,6 +23820,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sortOrder">optional object SortOrder</param>
 		[CustomMethodAttribute]
@@ -22652,6 +23834,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="barRounding">optional object BarRounding</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22664,6 +23847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22676,6 +23860,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22700,6 +23885,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		[CustomMethodAttribute]
@@ -22713,6 +23899,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22727,6 +23914,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22742,6 +23930,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22758,6 +23947,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22775,6 +23965,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22793,6 +23984,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22812,6 +24004,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22832,6 +24025,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22853,6 +24047,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22875,6 +24070,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22898,6 +24094,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -22922,6 +24119,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CalendarBestFitWeekHeight()
@@ -22933,6 +24131,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjShape Type</param>
 		/// <param name="behind">optional object Behind</param>
@@ -22946,6 +24145,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjShape Type</param>
 		[CustomMethodAttribute]
@@ -22959,6 +24159,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="forward">optional object Forward</param>
 		/// <param name="full">optional object Full</param>
@@ -22972,6 +24173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -22984,6 +24186,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
@@ -22997,6 +24200,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DrawingReshape()
@@ -23008,6 +24212,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="sizePositionTab">optional object SizePositionTab</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23020,6 +24225,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23032,6 +24238,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DrawingCycleColor()
@@ -23043,6 +24250,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FormatCopy()
@@ -23054,6 +24262,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FormatPaste()
@@ -23065,6 +24274,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FormatPainter()
@@ -23076,6 +24286,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="toolbarName">optional object ToolbarName</param>
@@ -23091,6 +24302,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -23104,6 +24316,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -23118,6 +24331,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="toolbarName">optional object ToolbarName</param>
@@ -23133,6 +24347,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23151,6 +24366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23166,6 +24382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23182,6 +24399,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23199,6 +24417,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23217,6 +24436,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23231,6 +24451,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23243,6 +24464,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		/// <param name="buttonIndex">optional object ButtonIndex</param>
@@ -23261,6 +24483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -23274,6 +24497,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -23288,6 +24512,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		/// <param name="buttonIndex">optional object ButtonIndex</param>
@@ -23303,6 +24528,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		/// <param name="buttonIndex">optional object ButtonIndex</param>
@@ -23319,6 +24545,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		/// <param name="buttonIndex">optional object ButtonIndex</param>
@@ -23336,6 +24563,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">optional object ToolbarName</param>
 		/// <param name="buttonIndex">optional object ButtonIndex</param>
@@ -23354,6 +24582,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23368,6 +24597,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="toolbarName">string ToolbarName</param>
 		/// <param name="buttonIndex">Int16 ButtonIndex</param>
@@ -23382,6 +24612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23394,6 +24625,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23406,6 +24638,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23418,6 +24651,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23430,6 +24664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23442,6 +24677,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23454,6 +24690,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="align">NetOffice.MSProjectApi.Enums.PjAlignment Align</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23466,6 +24703,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Reports()
@@ -23477,6 +24715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TipOfTheDay()
@@ -23488,6 +24727,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FindFile()
@@ -23499,6 +24739,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="dataFile">string DataFile</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -23512,6 +24753,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23533,6 +24775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -23546,6 +24789,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -23560,6 +24804,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23575,6 +24820,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23591,6 +24837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23608,6 +24855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23626,6 +24874,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23645,6 +24894,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23665,6 +24915,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="messageType">optional object MessageType</param>
 		/// <param name="subject">optional object Subject</param>
@@ -23686,6 +24937,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebInbox()
@@ -23697,6 +24949,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool GanttChartWizard()
@@ -23708,6 +24961,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DrawingToolbarShow()
@@ -23719,6 +24973,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="leadTime">optional object LeadTime</param>
@@ -23732,6 +24987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23744,6 +25000,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[CustomMethodAttribute]
@@ -23757,6 +25014,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		/// <param name="leadTime">optional object LeadTime</param>
@@ -23771,6 +25029,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -23784,6 +25043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="start">optional object Start</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -23798,6 +25058,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23810,6 +25071,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23822,6 +25084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23834,6 +25097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23846,6 +25110,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjPoolAction Action</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -23860,6 +25125,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjPoolAction Action</param>
 		[CustomMethodAttribute]
@@ -23873,6 +25139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjPoolAction Action</param>
 		/// <param name="fileName">optional object FileName</param>
@@ -23887,6 +25154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResourceActiveDirectory()
@@ -23898,6 +25166,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResourceAddressBook()
@@ -23909,6 +25178,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23921,6 +25191,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23933,6 +25204,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -23951,6 +25223,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -23963,6 +25236,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		[CustomMethodAttribute]
@@ -23976,6 +25250,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -23990,6 +25265,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -24005,6 +25281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -24021,6 +25298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -24038,6 +25316,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		/// <param name="position">optional object Position</param>
@@ -24056,6 +25335,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -24069,6 +25349,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -24082,6 +25363,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool About()
@@ -24093,6 +25375,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alignCellData">optional object AlignCellData</param>
 		/// <param name="repeatRowLabel">optional object RepeatRowLabel</param>
@@ -24108,6 +25391,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24120,6 +25404,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alignCellData">optional object AlignCellData</param>
 		[CustomMethodAttribute]
@@ -24133,6 +25418,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alignCellData">optional object AlignCellData</param>
 		/// <param name="repeatRowLabel">optional object RepeatRowLabel</param>
@@ -24147,6 +25433,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alignCellData">optional object AlignCellData</param>
 		/// <param name="repeatRowLabel">optional object RepeatRowLabel</param>
@@ -24162,6 +25449,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24174,6 +25462,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24186,6 +25475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AutoFilter()
@@ -24197,6 +25487,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewBar()
@@ -24208,6 +25499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MacroShowVba()
@@ -24219,6 +25511,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MacroShowCode()
@@ -24230,6 +25523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebGoBack()
@@ -24241,6 +25535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebGoForward()
@@ -24252,6 +25547,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebStopLoading()
@@ -24263,6 +25559,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebRefresh()
@@ -24274,6 +25571,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebOpenStartPage()
@@ -24285,6 +25583,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebOpenSearchPage()
@@ -24296,6 +25595,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="hide">optional object Hide</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24308,6 +25608,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24320,6 +25621,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24335,6 +25637,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24347,6 +25650,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
@@ -24360,6 +25664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24374,6 +25679,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24389,6 +25695,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditPasteAsHyperlink()
@@ -24400,6 +25707,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24415,6 +25723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24427,6 +25736,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -24440,6 +25750,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24454,6 +25765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24469,6 +25781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24484,6 +25797,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24496,6 +25810,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -24509,6 +25824,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24523,6 +25839,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="address">optional object Address</param>
@@ -24538,6 +25855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24553,6 +25871,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24565,6 +25884,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		[CustomMethodAttribute]
@@ -24578,6 +25898,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24592,6 +25913,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		/// <param name="subAddress">optional object SubAddress</param>
@@ -24607,6 +25929,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebCopyHyperlink()
@@ -24618,6 +25941,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="currentLink">optional object CurrentLink</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24630,6 +25954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24642,6 +25967,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditClearHyperlink()
@@ -24653,6 +25979,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24665,6 +25992,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24677,6 +26005,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="address">optional object Address</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24689,6 +26018,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24701,6 +26031,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool WebOpenFavorites()
@@ -24712,6 +26043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24724,6 +26056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24736,6 +26069,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="_lock">optional object Lock</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24748,6 +26082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24760,6 +26095,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="newName">optional object NewName</param>
@@ -24774,6 +26110,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -24787,6 +26124,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="newName">optional object NewName</param>
@@ -24801,6 +26139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CustomizeField()
@@ -24812,6 +26151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="display">optional object Display</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24824,6 +26164,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24836,6 +26177,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="display">optional object Display</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24848,6 +26190,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24860,6 +26203,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24891,6 +26235,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -24903,6 +26248,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -24916,6 +26262,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24930,6 +26277,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24945,6 +26293,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24961,6 +26310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24978,6 +26328,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -24996,6 +26347,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25015,6 +26367,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25035,6 +26388,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25056,6 +26410,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25078,6 +26433,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25101,6 +26457,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25125,6 +26482,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25150,6 +26508,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25176,6 +26535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25203,6 +26563,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25231,6 +26592,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25260,6 +26622,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25290,6 +26653,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="create">optional object Create</param>
@@ -25321,6 +26685,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="right">optional object Right</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25333,6 +26698,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25345,6 +26711,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="acceptAll">optional object AcceptAll</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25357,6 +26724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25369,6 +26737,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ToggleAssignments()
@@ -25380,6 +26749,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ProgressLines()
@@ -25391,6 +26761,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="allSharers">optional object allSharers</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25403,6 +26774,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25415,6 +26787,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResourceSharingPoolRefresh()
@@ -25426,6 +26799,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional object Type</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -25439,6 +26813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -25452,6 +26827,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AddProgressLine()
@@ -25463,6 +26839,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">optional NetOffice.MSProjectApi.Enums.PjField FieldID = -1</param>
 		/// <param name="iMEMode">optional NetOffice.MSProjectApi.Enums.PjIMEMode IMEMode = -1</param>
@@ -25476,6 +26853,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25488,6 +26866,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">optional NetOffice.MSProjectApi.Enums.PjField FieldID = -1</param>
 		[CustomMethodAttribute]
@@ -25501,6 +26880,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="userID">optional object UserID</param>
@@ -25516,6 +26896,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25528,6 +26909,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -25541,6 +26923,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="userID">optional object UserID</param>
@@ -25555,6 +26938,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="userID">optional object UserID</param>
@@ -25570,6 +26954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25582,6 +26967,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25594,6 +26980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25612,6 +26999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25626,6 +27014,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25641,6 +27030,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25657,6 +27047,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25674,6 +27065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="codePrefix">object CodePrefix</param>
 		/// <param name="level">object Level</param>
@@ -25692,6 +27084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25714,6 +27107,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25728,6 +27122,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25743,6 +27138,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25759,6 +27155,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25776,6 +27173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25794,6 +27192,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25813,6 +27212,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25833,6 +27233,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25854,6 +27255,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -25876,6 +27278,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -25897,6 +27300,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -25909,6 +27313,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		[CustomMethodAttribute]
@@ -25922,6 +27327,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -25936,6 +27342,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -25951,6 +27358,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -25967,6 +27375,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -25984,6 +27393,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -26002,6 +27412,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -26021,6 +27432,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -26041,6 +27453,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultSaveFormat">optional object DefaultSaveFormat</param>
 		/// <param name="defaultProjectsPath">optional object DefaultProjectsPath</param>
@@ -26062,6 +27475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool OfficeOnTheWeb()
@@ -26073,6 +27487,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool FixMe()
@@ -26084,6 +27499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowWorkAvailability()
@@ -26095,6 +27511,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ViewShowUnitAvailability()
@@ -26106,6 +27523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		/// <param name="from">optional object From</param>
@@ -26119,6 +27537,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26131,6 +27550,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="all">optional object All</param>
 		[CustomMethodAttribute]
@@ -26144,6 +27564,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool Groups()
@@ -26155,6 +27576,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26167,6 +27589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26179,6 +27602,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool GroupBy()
@@ -26190,6 +27614,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -26205,6 +27630,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -26218,6 +27644,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -26232,6 +27659,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -26247,6 +27675,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -26267,6 +27696,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -26284,6 +27714,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -26302,6 +27733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -26321,6 +27753,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -26341,6 +27774,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26363,6 +27797,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26381,6 +27816,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26400,6 +27836,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26420,6 +27857,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26441,6 +27879,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -26463,6 +27902,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool BarBoxFormat()
@@ -26474,6 +27914,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26492,6 +27933,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26506,6 +27948,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26521,6 +27964,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26537,6 +27981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26554,6 +27999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">object ServerURL</param>
 		/// <param name="name">object Name</param>
@@ -26572,6 +28018,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjDataTemplate Action</param>
@@ -26587,6 +28034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjDataTemplate Action</param>
@@ -26601,6 +28049,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="action">NetOffice.MSProjectApi.Enums.PjDataTemplate Action</param>
@@ -26616,6 +28065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cellRows">optional object CellRows</param>
@@ -26632,6 +28082,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -26645,6 +28096,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cellRows">optional object CellRows</param>
@@ -26659,6 +28111,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cellRows">optional object CellRows</param>
@@ -26674,6 +28127,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cellRows">optional object CellRows</param>
@@ -26690,6 +28144,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26716,6 +28171,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26738,6 +28194,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26761,6 +28218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26785,6 +28243,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26810,6 +28269,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -26836,6 +28296,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="showDialog">optional object ShowDialog</param>
@@ -26849,6 +28310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26861,6 +28323,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -26874,6 +28337,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="unit">optional object Unit</param>
 		/// <param name="rows">optional object Rows</param>
@@ -26888,6 +28352,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26900,6 +28365,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="unit">optional object Unit</param>
 		[CustomMethodAttribute]
@@ -26913,6 +28379,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="unit">optional object Unit</param>
 		/// <param name="rows">optional object Rows</param>
@@ -26927,6 +28394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ComAddInsDialog()
@@ -26938,6 +28406,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool MacroSecurity()
@@ -26949,6 +28418,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LayoutSelectionNow()
@@ -26960,6 +28430,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlign Alignment = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26972,6 +28443,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -26984,6 +28456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ConvertHangulToHanja()
@@ -26995,6 +28468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">optional object ServerURL</param>
 		/// <param name="embedProjectFile">optional object EmbedProjectFile</param>
@@ -27010,6 +28484,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27022,6 +28497,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">optional object ServerURL</param>
 		[CustomMethodAttribute]
@@ -27035,6 +28511,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">optional object ServerURL</param>
 		/// <param name="embedProjectFile">optional object EmbedProjectFile</param>
@@ -27049,6 +28526,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">optional object ServerURL</param>
 		/// <param name="embedProjectFile">optional object EmbedProjectFile</param>
@@ -27064,6 +28542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -27080,6 +28559,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -27093,6 +28573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -27107,6 +28588,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -27122,6 +28604,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -27138,6 +28621,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="formula">optional object Formula</param>
@@ -27151,6 +28635,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -27164,6 +28649,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="test">NetOffice.MSProjectApi.Enums.PjComparison Test</param>
@@ -27181,6 +28667,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="test">NetOffice.MSProjectApi.Enums.PjComparison Test</param>
@@ -27197,6 +28684,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="test">NetOffice.MSProjectApi.Enums.PjComparison Test</param>
@@ -27214,6 +28702,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="summaryInheritsNonsummary">optional object SummaryInheritsNonsummary</param>
@@ -27229,6 +28718,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -27242,6 +28732,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="summaryInheritsNonsummary">optional object SummaryInheritsNonsummary</param>
@@ -27256,6 +28747,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="summaryInheritsNonsummary">optional object SummaryInheritsNonsummary</param>
@@ -27271,6 +28763,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="index">Int16 Index</param>
@@ -27285,6 +28778,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="index">Int16 Index</param>
@@ -27299,6 +28793,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="listDefault">object ListDefault</param>
@@ -27317,6 +28812,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="listDefault">object ListDefault</param>
@@ -27335,6 +28831,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="value">optional object Value</param>
@@ -27352,6 +28849,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -27365,6 +28863,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="value">optional object Value</param>
@@ -27379,6 +28878,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="value">optional object Value</param>
@@ -27394,6 +28894,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="value">optional object Value</param>
@@ -27410,6 +28911,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="value">optional object Value</param>
@@ -27427,6 +28929,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="index">Int16 Index</param>
@@ -27440,6 +28943,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27467,6 +28971,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27484,6 +28989,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27502,6 +29008,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27521,6 +29028,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27541,6 +29049,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27562,6 +29071,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27584,6 +29094,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27607,6 +29118,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27631,6 +29143,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27656,6 +29169,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27682,6 +29196,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -27709,6 +29224,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -27726,6 +29242,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -27740,6 +29257,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -27755,6 +29273,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -27771,6 +29290,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -27788,6 +29308,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27800,6 +29321,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27812,6 +29334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27824,6 +29347,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27836,6 +29360,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27848,6 +29373,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27860,6 +29386,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="straightLinks">optional object StraightLinks</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27872,6 +29399,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27884,6 +29412,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool LayoutRelatedNow()
@@ -27895,6 +29424,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		/// <param name="taskID">optional object TaskID</param>
@@ -27911,6 +29441,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27923,6 +29454,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		[CustomMethodAttribute]
@@ -27936,6 +29468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		/// <param name="taskID">optional object TaskID</param>
@@ -27950,6 +29483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		/// <param name="taskID">optional object TaskID</param>
@@ -27965,6 +29499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		/// <param name="taskID">optional object TaskID</param>
@@ -27981,6 +29516,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showColumns">optional object ShowColumns</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -27993,6 +29529,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28005,6 +29542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="titleHeight">optional object TitleHeight</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28017,6 +29555,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28029,6 +29568,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="goalArea">Int16 goalArea</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28041,6 +29581,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28053,6 +29594,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28065,6 +29607,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SearchFiles()
@@ -28076,6 +29619,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ImportOutlookTasks()
@@ -28087,6 +29631,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28108,6 +29653,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28120,6 +29666,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		[CustomMethodAttribute]
@@ -28133,6 +29680,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28147,6 +29695,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28162,6 +29711,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28178,6 +29728,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28195,6 +29746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28213,6 +29765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28232,6 +29785,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28252,6 +29806,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -28273,6 +29828,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="iD">Int16 ID</param>
 		/// <param name="isGoalArea">optional object IsGoalArea</param>
@@ -28286,6 +29842,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="iD">Int16 ID</param>
 		[CustomMethodAttribute]
@@ -28299,6 +29856,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="serverURL">optional object ServerURL</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28311,6 +29869,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28323,6 +29882,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28343,6 +29903,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		[CustomMethodAttribute]
@@ -28356,6 +29917,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28370,6 +29932,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28385,6 +29948,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28401,6 +29965,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28418,6 +29983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28436,6 +30002,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28455,6 +30022,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectList">object ProjectList</param>
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
@@ -28475,6 +30043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="eUID">object EUID</param>
 		/// <param name="openType">optional NetOffice.MSProjectApi.Enums.PjCheckOutType OpenType = 1</param>
@@ -28488,6 +30057,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="eUID">object EUID</param>
 		[CustomMethodAttribute]
@@ -28501,6 +30071,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUIDs">optional object LocalRUIDs</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28513,6 +30084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28525,6 +30097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="eUID">optional object EUID</param>
 		/// <param name="rUID">optional object RUID</param>
@@ -28538,6 +30111,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28550,6 +30124,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="eUID">optional object EUID</param>
 		[CustomMethodAttribute]
@@ -28563,6 +30138,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28575,6 +30151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28587,6 +30164,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseTeamBuilder()
@@ -28598,6 +30176,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="linkFrom">Int32 LinkFrom</param>
 		/// <param name="linkTo">optional object LinkTo</param>
@@ -28611,6 +30190,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="linkFrom">Int32 LinkFrom</param>
 		[CustomMethodAttribute]
@@ -28624,6 +30204,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseCustomizeFields()
@@ -28635,6 +30216,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseGlobalCheckOut()
@@ -28646,6 +30228,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EnterpriseProjectProfiles()
@@ -28657,6 +30240,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
@@ -28674,6 +30258,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		[CustomMethodAttribute]
@@ -28687,6 +30272,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
@@ -28701,6 +30287,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
@@ -28716,6 +30303,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
@@ -28732,6 +30320,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceListOptions">object ShowResourceListOptions</param>
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
@@ -28749,6 +30338,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
@@ -28762,6 +30352,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		[CustomMethodAttribute]
@@ -28775,6 +30366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28787,6 +30379,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28799,6 +30392,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28811,6 +30405,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28823,6 +30418,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool StopWebBrowserControlNavigation()
@@ -28834,6 +30430,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="backupFileName">optional object BackupFileName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28846,6 +30443,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28858,6 +30456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="profileName">optional object ProfileName</param>
 		/// <param name="restoreFileName">optional object RestoreFileName</param>
@@ -28871,6 +30470,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28883,6 +30483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="profileName">optional object ProfileName</param>
 		[CustomMethodAttribute]
@@ -28896,6 +30497,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">optional NetOffice.MSProjectApi.Enums.PjSpellingField FieldName = -1</param>
 		/// <param name="enableSpellCheck">optional object EnableSpellCheck</param>
@@ -28909,6 +30511,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28921,6 +30524,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">optional NetOffice.MSProjectApi.Enums.PjSpellingField FieldName = -1</param>
 		[CustomMethodAttribute]
@@ -28934,6 +30538,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool AddResourcesFromProjectServer()
@@ -28945,6 +30550,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResetTrackingMethod()
@@ -28956,6 +30562,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ServiceOptionsDialog()
@@ -28967,6 +30574,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28979,6 +30587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -28991,6 +30600,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fSaveChanges">optional object fSaveChanges</param>
 		/// <param name="comments">optional object Comments</param>
@@ -29005,6 +30615,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29017,6 +30628,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fSaveChanges">optional object fSaveChanges</param>
 		[CustomMethodAttribute]
@@ -29030,6 +30642,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fSaveChanges">optional object fSaveChanges</param>
 		/// <param name="comments">optional object Comments</param>
@@ -29044,6 +30657,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CheckOut()
@@ -29055,6 +30669,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DocumentLibraryVersionsDialog()
@@ -29066,6 +30681,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DisplaySharedWorkspace()
@@ -29077,6 +30693,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">optional object ProjectName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29089,6 +30706,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29101,6 +30719,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29113,6 +30732,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29125,6 +30745,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SaveSheetSelection()
@@ -29136,6 +30757,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool RestoreSheetSelection()
@@ -29147,6 +30769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="field">Int32 Field</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29159,6 +30782,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="commitmentDate">optional object CommitmentDate</param>
 		/// <param name="commitmentGuid">optional object CommitmentGuid</param>
@@ -29172,6 +30796,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29184,6 +30809,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="commitmentDate">optional object CommitmentDate</param>
 		[CustomMethodAttribute]
@@ -29197,6 +30823,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool SummaryResourceAssignmentsRefresh()
@@ -29208,6 +30835,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="uniqueID">optional object UniqueID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29220,6 +30848,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29232,6 +30861,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CreateEnterpriseCalendar()
@@ -29243,6 +30873,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
@@ -29256,6 +30887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		[CustomMethodAttribute]
@@ -29269,6 +30901,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ResourceMappingDialog()
@@ -29280,6 +30913,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="oldName">optional object OldName</param>
 		/// <param name="newName">optional object NewName</param>
@@ -29293,6 +30927,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29305,6 +30940,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="oldName">optional object OldName</param>
 		[CustomMethodAttribute]
@@ -29318,6 +30954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskCustomFields">optional object TaskCustomFields</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29330,6 +30967,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29342,6 +30980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29354,6 +30993,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29366,6 +31006,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		/// <param name="resetImport">optional object ResetImport</param>
@@ -29380,6 +31021,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29392,6 +31034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		[CustomMethodAttribute]
@@ -29405,6 +31048,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUID">optional object LocalRUID</param>
 		/// <param name="resetImport">optional object ResetImport</param>
@@ -29419,6 +31063,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool EditRedo()
@@ -29430,6 +31075,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="republish">optional object Republish</param>
 		/// <param name="wssUrl">optional object WssUrl</param>
@@ -29443,6 +31089,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29455,6 +31102,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="republish">optional object Republish</param>
 		[CustomMethodAttribute]
@@ -29468,6 +31116,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="fieldName">optional object FieldName</param>
@@ -29482,6 +31131,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29494,6 +31144,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		[CustomMethodAttribute]
@@ -29507,6 +31158,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">optional object FieldID</param>
 		/// <param name="fieldName">optional object FieldName</param>
@@ -29521,6 +31173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional object FileName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29533,6 +31186,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29545,6 +31199,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CacheSettings()
@@ -29556,6 +31211,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CleanupCache()
@@ -29567,6 +31223,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CacheStatus()
@@ -29578,6 +31235,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fOffline">optional object fOffline</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29590,6 +31248,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29602,6 +31261,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool TaskDrivers()
@@ -29613,6 +31273,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool ToggleChangeHighlighting()
@@ -29624,6 +31285,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pjVisualReportsTab">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTab PjVisualReportsTab = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29636,6 +31298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -29648,6 +31311,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
@@ -29661,6 +31325,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		[CustomMethodAttribute]
@@ -29674,6 +31339,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29689,6 +31355,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29703,6 +31370,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29718,6 +31386,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29733,6 +31402,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		[CustomMethodAttribute]
@@ -29746,6 +31416,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29760,6 +31431,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
@@ -29775,6 +31447,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
@@ -29788,6 +31461,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		[CustomMethodAttribute]
@@ -29801,6 +31475,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool CommitmentsPane()
@@ -29812,6 +31487,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool DependenciesPane()
@@ -29823,6 +31499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
@@ -29836,6 +31513,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		[CustomMethodAttribute]
@@ -29849,6 +31527,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29877,6 +31556,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29900,6 +31580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29924,6 +31605,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29949,6 +31631,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -29975,6 +31658,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -30002,6 +31686,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="readOnly">object ReadOnly</param>
@@ -30030,6 +31715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
@@ -30044,6 +31730,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -30056,6 +31743,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
@@ -30069,6 +31757,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
@@ -30083,6 +31772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="checkIn">optional object CheckIn</param>
@@ -30096,6 +31786,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -30108,6 +31799,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
@@ -30121,6 +31813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30152,6 +31845,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -30164,6 +31858,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		[CustomMethodAttribute]
@@ -30177,6 +31872,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30191,6 +31887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30206,6 +31903,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30222,6 +31920,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30239,6 +31938,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30257,6 +31957,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30276,6 +31977,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30296,6 +31998,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30317,6 +32020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30339,6 +32043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30362,6 +32067,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30386,6 +32092,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30411,6 +32118,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30437,6 +32145,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30464,6 +32173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30492,6 +32202,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30521,6 +32232,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30551,6 +32263,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="planningWizard">optional object PlanningWizard</param>
 		/// <param name="wizardUsage">optional object WizardUsage</param>
@@ -30582,6 +32295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30616,6 +32330,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -30628,6 +32343,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		[CustomMethodAttribute]
@@ -30641,6 +32357,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30655,6 +32372,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30670,6 +32388,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30686,6 +32405,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30703,6 +32423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30721,6 +32442,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30740,6 +32462,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30760,6 +32483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30781,6 +32505,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30803,6 +32528,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30826,6 +32552,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30850,6 +32577,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30875,6 +32603,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30901,6 +32630,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30928,6 +32658,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30956,6 +32687,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -30985,6 +32717,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31015,6 +32748,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31046,6 +32780,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31078,6 +32813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31111,6 +32847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultView">optional object DefaultView</param>
 		/// <param name="dateFormat">optional object DateFormat</param>
@@ -31145,6 +32882,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
@@ -31160,6 +32898,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -31172,6 +32911,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		[CustomMethodAttribute]
@@ -31185,6 +32925,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
@@ -31199,6 +32940,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="calendarName">optional object CalendarName</param>
 		/// <param name="locked">optional object Locked</param>
@@ -31214,6 +32956,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31234,6 +32977,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -31246,6 +32990,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
@@ -31259,6 +33004,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31273,6 +33019,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31288,6 +33035,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31304,6 +33052,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31321,6 +33070,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31339,6 +33089,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31358,6 +33109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -31378,6 +33130,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31398,6 +33151,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -31410,6 +33164,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -31423,6 +33178,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31437,6 +33193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31452,6 +33209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31468,6 +33226,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31485,6 +33244,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31503,6 +33263,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31522,6 +33283,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -31542,6 +33304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31559,6 +33322,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -31571,6 +33335,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		[CustomMethodAttribute]
@@ -31584,6 +33349,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31598,6 +33364,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31613,6 +33380,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31629,6 +33397,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="monthTitle">optional object MonthTitle</param>
 		/// <param name="weekTitle">optional object WeekTitle</param>
@@ -31646,6 +33415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31671,6 +33441,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31685,6 +33456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31700,6 +33472,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31716,6 +33489,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31733,6 +33507,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31751,6 +33526,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31770,6 +33546,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31790,6 +33567,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31811,6 +33589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31833,6 +33612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31856,6 +33636,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31880,6 +33661,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">object Level</param>
@@ -31905,6 +33687,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -31921,6 +33704,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -31934,6 +33718,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -31948,6 +33733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -31963,6 +33749,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="level">optional object Level</param>
@@ -31979,6 +33766,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -31996,6 +33784,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		[CustomMethodAttribute]
@@ -32009,6 +33798,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -32023,6 +33813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -32038,6 +33829,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -32054,6 +33846,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjCustomField FieldID</param>
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
@@ -32071,6 +33864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32093,6 +33887,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32105,6 +33900,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		[CustomMethodAttribute]
@@ -32118,6 +33914,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32132,6 +33929,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32147,6 +33945,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32163,6 +33962,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32180,6 +33980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32198,6 +33999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32217,6 +34019,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32237,6 +34040,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32258,6 +34062,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="showResourceAssignmentIndicators">optional object ShowResourceAssignmentIndicators</param>
 		/// <param name="showEditToStartFinishDates">optional object ShowEditToStartFinishDates</param>
@@ -32280,6 +34085,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUIDs">optional object LocalRUIDs</param>
 		/// <param name="useImportColumn">optional object UseImportColumn</param>
@@ -32293,6 +34099,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32305,6 +34112,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="localRUIDs">optional object LocalRUIDs</param>
 		[CustomMethodAttribute]
@@ -32318,6 +34126,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
@@ -32332,6 +34141,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		[CustomMethodAttribute]
@@ -32345,6 +34155,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="targetPage">string TargetPage</param>
 		/// <param name="wrapperPage">optional object WrapperPage</param>
@@ -32359,6 +34170,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		/// <param name="trustWSS">optional object TrustWSS</param>
@@ -32373,6 +34185,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32385,6 +34198,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		[CustomMethodAttribute]
@@ -32398,6 +34212,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="removeFileProperties">optional object RemoveFileProperties</param>
 		/// <param name="trustWSS">optional object TrustWSS</param>
@@ -32412,6 +34227,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsUndoingOrRedoing()
@@ -32423,6 +34239,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strFormula">string strFormula</param>
@@ -32438,6 +34255,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strFormula">string strFormula</param>
@@ -32453,6 +34271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void UndoClear()
@@ -32463,6 +34282,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="howManyUndos">optional Int32 HowManyUndos = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32475,6 +34295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32487,6 +34308,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="howManyRedos">optional Int32 HowManyRedos = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32499,6 +34321,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32511,6 +34334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="label">string Label</param>
 		/// <param name="guid">optional object Guid</param>
@@ -32523,6 +34347,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="label">string Label</param>
 		[CustomMethodAttribute]
@@ -32535,6 +34360,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void CloseUndoTransaction()
@@ -32545,6 +34371,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strGraphicalIndicators">string strGraphicalIndicators</param>
@@ -32560,6 +34387,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="propertyID">Int32 propertyID</param>
 		/// <param name="strGraphicalIndicators">string strGraphicalIndicators</param>
@@ -32575,6 +34403,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 GetUndoListCount()
@@ -32586,6 +34415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static Int32 GetRedoListCount()
@@ -32597,6 +34427,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="itemIndex">Int32 ItemIndex</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32609,6 +34440,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="itemIndex">Int32 ItemIndex</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32621,6 +34453,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="x">Int32 x</param>
 		/// <param name="y">Int32 y</param>
@@ -32635,6 +34468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static string GetProjectServerSettingsEx()
@@ -32646,6 +34480,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static void AfterUnloadWebBrowserControl()
@@ -32656,6 +34491,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsOffline()
@@ -32667,6 +34503,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
 		public static bool IsReducedFunctionalityMode()
@@ -32678,6 +34515,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="elementType">NetOffice.MSProjectApi.Enums.PjThemeElement elementType</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32690,6 +34528,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="commandName">string CommandName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -32702,6 +34541,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="strURL">string strURL</param>
 		/// <param name="strListGuid">string strListGuid</param>
@@ -32720,6 +34560,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="start">object Start</param>
 		/// <param name="finish">object Finish</param>
@@ -32732,6 +34573,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="start">object Start</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32743,6 +34585,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="applyTo">optional object ApplyTo</param>
@@ -32756,6 +34599,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32768,6 +34612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -32781,6 +34626,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ViewReset()
@@ -32792,6 +34638,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32804,6 +34651,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32816,6 +34664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TableReset()
@@ -32827,6 +34676,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="onOff">optional object OnOff</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32839,6 +34689,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32851,6 +34702,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="applyTo">optional object ApplyTo</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32863,6 +34715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32875,6 +34728,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="singlePane">object SinglePane</param>
@@ -32891,6 +34745,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="singlePane">object SinglePane</param>
@@ -32907,6 +34762,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32919,6 +34775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32931,6 +34788,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32943,6 +34801,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32955,6 +34814,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		/// <param name="column">optional object Column</param>
@@ -32968,6 +34828,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -32980,6 +34841,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		[CustomMethodAttribute]
@@ -32993,6 +34855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="column">optional object Column</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -33005,6 +34868,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -33017,6 +34881,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33048,6 +34913,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33062,6 +34928,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33077,6 +34944,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33093,6 +34961,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33110,6 +34979,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33128,6 +34998,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33147,6 +35018,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33167,6 +35039,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33188,6 +35061,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33210,6 +35084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33233,6 +35108,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33257,6 +35133,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33282,6 +35159,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33308,6 +35186,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33335,6 +35214,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33363,6 +35243,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33392,6 +35273,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33422,6 +35304,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="taskTable">bool TaskTable</param>
@@ -33453,6 +35336,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
@@ -33466,6 +35350,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -33478,6 +35363,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
@@ -33491,6 +35377,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ManageSiteColumns()
@@ -33502,6 +35389,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
@@ -33515,6 +35403,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -33527,6 +35416,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
@@ -33540,6 +35430,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33572,6 +35463,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		[CustomMethodAttribute]
@@ -33585,6 +35477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33599,6 +35492,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33614,6 +35508,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33630,6 +35525,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33647,6 +35543,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33665,6 +35562,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33684,6 +35582,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33704,6 +35603,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33725,6 +35625,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33747,6 +35648,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33770,6 +35672,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33794,6 +35697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33819,6 +35723,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33845,6 +35750,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33872,6 +35778,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33900,6 +35807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33929,6 +35837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33959,6 +35868,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -33990,6 +35900,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">string Item</param>
 		/// <param name="create">optional object Create</param>
@@ -34022,6 +35933,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34046,6 +35958,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		[CustomMethodAttribute]
@@ -34059,6 +35972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34073,6 +35987,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34088,6 +36003,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34104,6 +36020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34121,6 +36038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34139,6 +36057,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34158,6 +36077,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34178,6 +36098,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34199,6 +36120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34221,6 +36143,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34244,6 +36167,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjBarItem Item</param>
 		/// <param name="bar">optional object Bar</param>
@@ -34268,6 +36192,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
@@ -34282,6 +36207,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		[CustomMethodAttribute]
@@ -34295,6 +36221,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjCalendarShading Item</param>
 		/// <param name="pattern">optional object Pattern</param>
@@ -34309,6 +36236,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34328,6 +36256,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -34340,6 +36269,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		[CustomMethodAttribute]
@@ -34353,6 +36283,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34367,6 +36298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34382,6 +36314,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34398,6 +36331,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34415,6 +36349,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34433,6 +36368,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeft">optional object TopLeft</param>
 		/// <param name="topRight">optional object TopRight</param>
@@ -34452,6 +36388,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34473,6 +36410,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -34485,6 +36423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -34498,6 +36437,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34512,6 +36452,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34527,6 +36468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34543,6 +36485,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34560,6 +36503,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34578,6 +36522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34597,6 +36542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34617,6 +36563,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="size">optional object Size</param>
@@ -34638,6 +36585,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34658,6 +36606,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -34670,6 +36619,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
@@ -34683,6 +36633,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34697,6 +36648,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34712,6 +36664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34728,6 +36681,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34745,6 +36699,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34763,6 +36718,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34782,6 +36738,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -34802,6 +36759,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -34817,6 +36775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -34829,6 +36788,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		[CustomMethodAttribute]
@@ -34842,6 +36802,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -34856,6 +36817,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="draw">optional object Draw</param>
 		/// <param name="calendar">optional object Calendar</param>
@@ -34871,6 +36833,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34888,6 +36851,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		[CustomMethodAttribute]
@@ -34901,6 +36865,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34915,6 +36880,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34930,6 +36896,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34946,6 +36913,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjGridline Item</param>
 		/// <param name="normalType">optional object NormalType</param>
@@ -34963,6 +36931,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -34995,6 +36964,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -35007,6 +36977,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		[CustomMethodAttribute]
@@ -35020,6 +36991,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35034,6 +37006,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35049,6 +37022,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35065,6 +37039,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35082,6 +37057,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35100,6 +37076,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35119,6 +37096,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35139,6 +37117,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35160,6 +37139,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35182,6 +37162,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35205,6 +37186,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35229,6 +37211,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35254,6 +37237,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35280,6 +37264,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35307,6 +37292,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35335,6 +37321,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35364,6 +37351,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35394,6 +37382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35425,6 +37414,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="topLeftShowAs">optional object TopLeftShowAs</param>
 		/// <param name="topLeftColor">optional object TopLeftColor</param>
@@ -35457,6 +37447,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35477,6 +37468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35496,6 +37488,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjBoxStyle Style</param>
 		/// <param name="dataTemplate">object DataTemplate</param>
@@ -35516,6 +37509,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35538,6 +37532,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35558,6 +37553,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35579,6 +37575,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="projectName">object ProjectName</param>
 		/// <param name="taskID">object TaskID</param>
@@ -35601,6 +37598,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35627,6 +37625,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35650,6 +37649,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35674,6 +37674,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35699,6 +37700,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="cell">NetOffice.MSProjectApi.Enums.PjCell Cell</param>
@@ -35725,6 +37727,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35752,6 +37755,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35770,6 +37774,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35789,6 +37794,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35809,6 +37815,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35830,6 +37837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35852,6 +37860,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35875,6 +37884,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35899,6 +37909,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35924,6 +37935,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35950,6 +37962,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="layoutMode">optional NetOffice.MSProjectApi.Enums.PjLayoutMode LayoutMode = -1</param>
 		/// <param name="layoutScheme">optional NetOffice.MSProjectApi.Enums.PjLayoutScheme LayoutScheme = -1</param>
@@ -35977,6 +37990,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -35994,6 +38008,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -36008,6 +38023,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -36023,6 +38039,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -36039,6 +38056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">optional NetOffice.MSProjectApi.Enums.PjLinkStyle Style = -1</param>
 		/// <param name="showArrows">object ShowArrows</param>
@@ -36056,6 +38074,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36088,6 +38107,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -36100,6 +38120,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		[CustomMethodAttribute]
@@ -36113,6 +38134,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36127,6 +38149,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36142,6 +38165,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36158,6 +38182,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36175,6 +38200,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36193,6 +38219,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36212,6 +38239,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36232,6 +38260,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36253,6 +38282,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36275,6 +38305,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36298,6 +38329,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36322,6 +38354,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36347,6 +38380,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36373,6 +38407,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36400,6 +38435,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36428,6 +38464,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36457,6 +38494,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36487,6 +38525,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36518,6 +38557,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveAfterReturn">optional object MoveAfterReturn</param>
 		/// <param name="dragAndDrop">optional object DragAndDrop</param>
@@ -36550,6 +38590,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36572,6 +38613,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36587,6 +38629,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36603,6 +38646,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36620,6 +38664,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36638,6 +38683,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36657,6 +38703,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36677,6 +38724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36698,6 +38746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">object Name</param>
 		/// <param name="textWidth">object TextWidth</param>
@@ -36720,6 +38769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36739,6 +38789,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -36751,6 +38802,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -36764,6 +38816,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36778,6 +38831,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36793,6 +38847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36809,6 +38864,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36826,6 +38882,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36844,6 +38901,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="item">optional object Item</param>
@@ -36863,6 +38921,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36882,6 +38941,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -36894,6 +38954,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		[CustomMethodAttribute]
@@ -36907,6 +38968,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36921,6 +38983,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36936,6 +38999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36952,6 +39016,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36969,6 +39034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -36987,6 +39053,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="curIndex">optional object CurIndex</param>
 		/// <param name="order">optional object Order</param>
@@ -37006,6 +39073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37028,6 +39096,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37040,6 +39109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		[CustomMethodAttribute]
@@ -37053,6 +39123,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37067,6 +39138,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37082,6 +39154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37098,6 +39171,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37115,6 +39189,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37133,6 +39208,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37152,6 +39228,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37172,6 +39249,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37193,6 +39271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">optional object Item</param>
 		/// <param name="font">optional object Font</param>
@@ -37215,6 +39294,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37244,6 +39324,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37256,6 +39337,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
@@ -37269,6 +39351,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37283,6 +39366,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37298,6 +39382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37314,6 +39399,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37331,6 +39417,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37349,6 +39436,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37368,6 +39456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37388,6 +39477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37409,6 +39499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37431,6 +39522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37454,6 +39546,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37478,6 +39571,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37503,6 +39597,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37529,6 +39624,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37556,6 +39652,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37584,6 +39681,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="ganttStyle">optional object GanttStyle</param>
@@ -37613,6 +39711,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
@@ -37628,6 +39727,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37640,6 +39740,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
@@ -37653,6 +39754,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
@@ -37667,6 +39769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		/// <param name="remove">optional object Remove</param>
@@ -37682,6 +39785,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		/// <param name="isWorkingDuration">optional object IsWorkingDuration</param>
@@ -37696,6 +39800,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37708,6 +39813,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		[CustomMethodAttribute]
@@ -37721,6 +39827,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveForward">optional object MoveForward</param>
 		/// <param name="isWorkingDuration">optional object IsWorkingDuration</param>
@@ -37735,6 +39842,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveCompleted">optional object MoveCompleted</param>
 		/// <param name="moveIncomplete">optional object MoveIncomplete</param>
@@ -37748,6 +39856,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37760,6 +39869,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="moveCompleted">optional object MoveCompleted</param>
 		[CustomMethodAttribute]
@@ -37773,6 +39883,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		/// <param name="moveDeadline">optional object MoveDeadline</param>
@@ -37786,6 +39897,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37798,6 +39910,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		[CustomMethodAttribute]
@@ -37811,6 +39924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="resolveMethod">optional NetOffice.MSProjectApi.Enums.PjLevelSelectedOption ResolveMethod = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37823,6 +39937,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37835,6 +39950,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		/// <param name="fillColor">optional object FillColor</param>
@@ -37849,6 +39965,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		[CustomMethodAttribute]
@@ -37862,6 +39979,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		/// <param name="fillColor">optional object FillColor</param>
@@ -37876,6 +39994,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.MSProjectApi.Enums.PjTeamPlannerStyle Style</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37888,6 +40007,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="lineMultiple">Int16 LineMultiple</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37900,6 +40020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjTimelineShowHide Item</param>
 		/// <param name="show">optional object Show</param>
@@ -37913,6 +40034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="item">NetOffice.MSProjectApi.Enums.PjTimelineShowHide Item</param>
 		[CustomMethodAttribute]
@@ -37926,6 +40048,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="textOnBar">optional object TextOnBar</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37938,6 +40061,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37950,6 +40074,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.MSProjectApi.Enums.PjTimelineInsertTaskType Type</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37962,6 +40087,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="selectionOnly">optional object SelectionOnly</param>
 		/// <param name="exportWidth">optional object ExportWidth</param>
@@ -37975,6 +40101,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -37987,6 +40114,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="selectionOnly">optional object SelectionOnly</param>
 		[CustomMethodAttribute]
@@ -38000,6 +40128,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38012,6 +40141,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38024,6 +40154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38042,6 +40173,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		[CustomMethodAttribute]
@@ -38055,6 +40187,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38069,6 +40202,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38084,6 +40218,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38100,6 +40235,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38117,6 +40253,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldName">object FieldName</param>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
@@ -38135,6 +40272,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjFilterViewType FilterType = 65535</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38147,6 +40285,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38159,6 +40298,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool FilterClear()
@@ -38170,6 +40310,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GroupNew()
@@ -38181,6 +40322,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GroupClear()
@@ -38192,6 +40334,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertTask()
@@ -38203,6 +40346,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertScheduledTask()
@@ -38214,6 +40358,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertManualTask()
@@ -38225,6 +40370,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertMilestoneTask()
@@ -38236,6 +40382,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertBlankRow()
@@ -38247,6 +40394,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="startOnDate">optional NetOffice.MSProjectApi.Enums.PjNewTasksStartOnDate StartOnDate = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38259,6 +40407,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38271,6 +40420,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38283,6 +40433,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="on">bool On</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38295,6 +40446,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTaskDetails()
@@ -38306,6 +40458,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleResourceDetails()
@@ -38317,6 +40470,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38329,6 +40483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38341,6 +40496,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38353,6 +40509,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38365,6 +40522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38377,6 +40535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38389,6 +40548,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="baseline">Int16 Baseline</param>
 		/// <param name="show">bool Show</param>
@@ -38402,6 +40562,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="baseline">Int16 Baseline</param>
 		/// <param name="show">bool Show</param>
@@ -38415,6 +40576,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TogglePreventResOveralloc()
@@ -38426,6 +40588,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPAutoExpand()
@@ -38437,6 +40600,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPUnassigned()
@@ -38448,6 +40612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ToggleTPUnscheduled()
@@ -38459,6 +40624,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="manual">optional object Manual</param>
 		/// <param name="isStickyDates">optional object IsStickyDates</param>
@@ -38472,6 +40638,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38484,6 +40651,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="manual">optional object Manual</param>
 		[CustomMethodAttribute]
@@ -38497,6 +40665,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="makeActive">optional object MakeActive</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38509,6 +40678,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38521,6 +40691,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38538,6 +40709,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38552,6 +40724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38567,6 +40740,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38583,6 +40757,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38600,6 +40775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38617,6 +40793,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38631,6 +40808,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38646,6 +40824,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38662,6 +40841,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="fieldID">NetOffice.MSProjectApi.Enums.PjField FieldID</param>
 		/// <param name="value">string Value</param>
@@ -38679,6 +40859,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="timeline">optional object Timeline</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38691,6 +40872,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38703,6 +40885,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38722,6 +40905,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38734,6 +40918,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
@@ -38747,6 +40932,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38761,6 +40947,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38776,6 +40963,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38792,6 +40980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38809,6 +40998,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38827,6 +41017,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38846,6 +41037,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38867,6 +41059,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -38879,6 +41072,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		[CustomMethodAttribute]
@@ -38892,6 +41086,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38906,6 +41101,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38921,6 +41117,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38937,6 +41134,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38954,6 +41152,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38972,6 +41171,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -38991,6 +41191,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -39011,6 +41212,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">optional object Field</param>
 		/// <param name="test">optional object Test</param>
@@ -39032,6 +41234,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectToEnd()
@@ -39043,6 +41246,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool SelectTaskAssns()
@@ -39054,6 +41258,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39066,6 +41271,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39078,6 +41284,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39095,6 +41302,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39109,6 +41317,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39124,6 +41333,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39140,6 +41350,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="field">string Field</param>
 		/// <param name="value">string Value</param>
@@ -39157,6 +41368,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39175,6 +41387,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		[CustomMethodAttribute]
@@ -39188,6 +41401,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39202,6 +41416,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39217,6 +41432,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39233,6 +41449,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39250,6 +41467,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
@@ -39268,6 +41486,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="create">optional object Create</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39280,6 +41499,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39292,6 +41512,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDeliverableSync()
@@ -39303,6 +41524,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskDependencySync()
@@ -39314,6 +41536,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskRespectLinks()
@@ -39325,6 +41548,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39337,6 +41561,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39349,6 +41574,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39361,6 +41587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39373,6 +41600,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShowIgnoredTaskWarnings()
@@ -39384,6 +41612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjResourceTypes Type = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39396,6 +41625,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39408,6 +41638,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool InsertSummaryTask()
@@ -39419,6 +41650,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="date">optional object Date</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39431,6 +41663,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39443,6 +41676,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39460,6 +41694,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39475,6 +41710,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39491,6 +41727,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">object Filename</param>
 		/// <param name="taskTable">object TaskTable</param>
@@ -39508,6 +41745,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CompareProjectVersions()
@@ -39519,6 +41757,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskComparison()
@@ -39530,6 +41769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ResourceComparison()
@@ -39541,6 +41781,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool GoToItemInVersions()
@@ -39552,6 +41793,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CloseComparison()
@@ -39563,6 +41805,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool CompareProjectsLegendToggle()
@@ -39574,6 +41817,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">Int32 TaskID</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39586,6 +41830,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TaskInspector()
@@ -39597,6 +41842,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="defaultTab">optional NetOffice.MSProjectApi.Enums.PjOptionsSecurityTab DefaultTab = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39609,6 +41855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39621,6 +41868,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="action">optional object action</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -39634,6 +41882,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -39647,6 +41896,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -39660,6 +41910,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -39673,6 +41924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="page">optional NetOffice.MSProjectApi.Enums.PjServerPage Page = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39685,6 +41937,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39697,6 +41950,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="numLines">optional object NumLines</param>
 		/// <param name="minimized">optional object Minimized</param>
@@ -39710,6 +41964,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39722,6 +41977,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="numLines">optional object NumLines</param>
 		[CustomMethodAttribute]
@@ -39735,6 +41991,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39758,6 +42015,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39770,6 +42028,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		[CustomMethodAttribute]
@@ -39783,6 +42042,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39797,6 +42057,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39812,6 +42073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39828,6 +42090,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39845,6 +42108,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39863,6 +42127,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39882,6 +42147,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39902,6 +42168,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39923,6 +42190,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39945,6 +42213,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="automatic">optional object Automatic</param>
 		/// <param name="delayInSlack">optional object DelayInSlack</param>
@@ -39968,6 +42237,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="color">Int32 Color</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39980,6 +42250,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="color">Int32 Color</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -39992,6 +42263,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineGotoSelectedTask()
@@ -40003,6 +42275,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="resourceUniqueID">optional object ResourceUniqueID</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40015,6 +42288,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40027,6 +42301,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="filename">optional object Filename</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40039,6 +42314,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40051,6 +42327,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool ShareProjectOnline()
@@ -40062,6 +42339,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskUniqueID">optional object TaskUniqueID</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40074,6 +42352,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40086,6 +42365,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		/// <param name="taskID">optional object TaskID</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40098,6 +42378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
@@ -40110,6 +42391,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 14
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11,14)]
 		public static bool TimelineViewToggle()
@@ -40121,6 +42403,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool Table()
@@ -40132,6 +42415,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool ReportsDialog()
@@ -40143,6 +42427,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="percent">optional object Percent</param>
 		/// <param name="entire">optional object Entire</param>
@@ -40156,6 +42441,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40168,6 +42454,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="percent">optional object Percent</param>
 		[CustomMethodAttribute]
@@ -40181,6 +42468,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="applyTo">optional object ApplyTo</param>
@@ -40194,6 +42482,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40206,6 +42495,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -40219,6 +42509,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40231,6 +42522,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40243,6 +42535,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40255,6 +42548,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40267,6 +42561,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
 		/// <param name="newSiteName">optional object NewSiteName</param>
@@ -40281,6 +42576,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40293,6 +42589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
 		[CustomMethodAttribute]
@@ -40306,6 +42603,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="parentSiteUrl">optional object ParentSiteUrl</param>
 		/// <param name="newSiteName">optional object NewSiteName</param>
@@ -40320,6 +42618,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="taskListName">optional object TaskListName</param>
@@ -40333,6 +42632,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40345,6 +42645,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
@@ -40358,6 +42659,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="uRL">optional object URL</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40370,6 +42672,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40382,6 +42685,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool PasteAsPicture()
@@ -40393,6 +42697,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool PasteSourceFormatting()
@@ -40404,6 +42709,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool PasteDestFormatting()
@@ -40415,6 +42721,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool CopyReport()
@@ -40426,6 +42733,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40438,6 +42746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40450,6 +42759,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool SelectTable()
@@ -40461,6 +42771,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool DistributeTableRows()
@@ -40472,6 +42783,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool DistributeTableColumns()
@@ -40483,6 +42795,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool SetRTLTable()
@@ -40494,6 +42807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool SetLTRTable()
@@ -40505,6 +42819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool AlignTableCellTop()
@@ -40516,6 +42831,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool AlignTableCellVerticalCenter()
@@ -40527,6 +42843,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool AlignTableCellBottom()
@@ -40538,6 +42855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="templateId">optional NetOffice.MSProjectApi.Enums.PjReportLayoutTemplateId TemplateId = 0</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40550,6 +42868,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40562,6 +42881,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
@@ -40577,6 +42897,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40589,6 +42910,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		[CustomMethodAttribute]
@@ -40602,6 +42924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
@@ -40616,6 +42939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="siteURL">optional object SiteURL</param>
 		/// <param name="listName">optional object ListName</param>
@@ -40631,6 +42955,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40643,6 +42968,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40655,6 +42981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40667,6 +42994,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40679,6 +43007,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40691,6 +43020,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40703,6 +43033,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="set">optional object Set</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40715,6 +43046,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40727,6 +43059,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool RemoveHighlight()
@@ -40738,6 +43071,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="show">optional object Show</param>
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40750,6 +43084,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40762,6 +43097,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool RenameReport()
@@ -40773,6 +43109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSProject", 11)]
 		public static bool FileOpenUsingBackstage()
@@ -40784,6 +43121,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
 		/// <param name="sharePointName">optional object SharePointName</param>
@@ -40797,6 +43135,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
@@ -40809,6 +43148,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
 		[CustomMethodAttribute]

@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="manySchemaField">string ManySchemaField</param>
 		/// <param name="oneSchemaField">string OneSchemaField</param>

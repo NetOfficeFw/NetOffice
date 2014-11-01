@@ -395,6 +395,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
 		public Int32 Delete()
@@ -406,6 +407,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="url">string Url</param>
 		/// <param name="overwrite">optional object Overwrite</param>
@@ -420,6 +422,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="url">string Url</param>
 		[CustomMethodAttribute]
@@ -434,6 +437,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xmlData">string XmlData</param>
 		/// <param name="overwrite">optional object Overwrite</param>
@@ -448,6 +452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xmlData">string XmlData</param>
 		[CustomMethodAttribute]
@@ -462,6 +467,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="url">string Url</param>
 		/// <param name="overwrite">optional object Overwrite</param>
@@ -476,6 +482,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="url">string Url</param>
 		[CustomMethodAttribute]
@@ -490,6 +497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="data">string Data</param>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]

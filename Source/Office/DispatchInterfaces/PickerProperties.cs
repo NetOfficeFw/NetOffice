@@ -12,8 +12,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface PickerProperties 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861162.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class PickerProperties : _IMsoDispObj ,IEnumerable<NetOffice.OfficeApi.PickerProperty>
@@ -114,8 +114,8 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861123.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 Count
 		{
@@ -133,11 +133,11 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863501.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
 		/// <param name="value">string Value</param>
 		/// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField Type</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863501.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
 		{
@@ -149,9 +149,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx
 		/// </summary>
 		/// <param name="id">string Id</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff863845.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public void Remove(string id)
 		{

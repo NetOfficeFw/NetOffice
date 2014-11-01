@@ -245,6 +245,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="localeSpecificNameArray">String[] localeSpecificNameArray</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -259,6 +260,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objectToDrop">object ObjectToDrop</param>
 		/// <param name="xPos">Int16 xPos</param>
@@ -274,6 +276,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="localeIndependentNameArray">String[] localeIndependentNameArray</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -288,6 +291,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">optional object Flags</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -299,6 +303,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

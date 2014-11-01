@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="viewSurface">NetOffice.OWC10Api.ViewSurface ViewSurface</param>
 		[SupportByVersionAttribute("OWC10", 1)]

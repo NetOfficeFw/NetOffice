@@ -740,6 +740,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="expression">string expression</param>
@@ -753,6 +754,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		/// <param name="expression">string expression</param>
@@ -766,6 +768,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -786,6 +789,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="propname">string propname</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

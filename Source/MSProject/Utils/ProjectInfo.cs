@@ -15,7 +15,7 @@ namespace MSProjectApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.MSProjectApi";
-        private Guid     _componentGuid = new Guid("A7107640-94DF-1068-855E-00DD01075445");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("A7107640-94DF-1068-855E-00DD01075445")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace MSProjectApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

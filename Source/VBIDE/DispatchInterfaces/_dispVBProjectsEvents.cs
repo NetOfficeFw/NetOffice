@@ -97,6 +97,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -108,6 +109,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -119,6 +121,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		/// <param name="oldName">string OldName</param>
@@ -131,6 +134,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="vBProject">NetOffice.VBIDEApi.VBProject VBProject</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]

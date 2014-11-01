@@ -94,6 +94,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823254.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Application Application
@@ -110,6 +111,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197825.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Creator
@@ -125,6 +127,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191758.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -142,6 +145,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845178.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Name
@@ -157,6 +161,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821628.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Documents Documents
@@ -173,6 +178,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822351.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Windows Windows
@@ -189,6 +195,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837737.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Document ActiveDocument
@@ -205,6 +212,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845301.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Window ActiveWindow
@@ -221,6 +229,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838682.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Selection Selection
@@ -237,6 +246,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822917.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -254,6 +264,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195679.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.RecentFiles RecentFiles
@@ -270,6 +281,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845589.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Template NormalTemplate
@@ -286,6 +298,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822391.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.System System
@@ -302,6 +315,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845308.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.AutoCorrect AutoCorrect
@@ -318,6 +332,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197817.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.FontNames FontNames
@@ -334,6 +349,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196340.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.FontNames LandscapeFontNames
@@ -350,6 +366,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192201.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.FontNames PortraitFontNames
@@ -366,6 +383,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840701.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Languages Languages
@@ -398,6 +416,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821300.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Browser Browser
@@ -414,6 +433,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823259.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.FileConverters FileConverters
@@ -430,6 +450,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821659.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.MailingLabel MailingLabel
@@ -446,6 +467,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191745.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Dialogs Dialogs
@@ -462,6 +484,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838479.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.CaptionLabels CaptionLabels
@@ -478,6 +501,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198063.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.AutoCaptions AutoCaptions
@@ -494,6 +518,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822986.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.AddIns AddIns
@@ -510,6 +535,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839544.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool Visible
@@ -530,6 +556,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821519.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Version
@@ -545,6 +572,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197438.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool ScreenUpdating
@@ -565,6 +593,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198164.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool PrintPreview
@@ -585,6 +614,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839740.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Tasks Tasks
@@ -621,6 +651,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836086.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool SpecialMode
@@ -636,6 +667,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839688.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 UsableWidth
@@ -651,6 +683,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834606.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 UsableHeight
@@ -666,6 +699,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192165.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool MathCoprocessorAvailable
@@ -681,6 +715,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192426.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool MouseAvailable
@@ -696,6 +731,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823245.aspx
 		/// </summary>
 		/// <param name="index">NetOffice.WordApi.Enums.WdInternationalIndex Index</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -717,6 +753,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823245.aspx
 		/// Alias for get_International
 		/// </summary>
 		/// <param name="index">NetOffice.WordApi.Enums.WdInternationalIndex Index</param>
@@ -729,6 +766,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839495.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Build
@@ -744,6 +782,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820850.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool CapsLock
@@ -759,6 +798,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845392.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool NumLock
@@ -774,6 +814,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834599.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string UserName
@@ -794,6 +835,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844813.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string UserInitials
@@ -814,6 +856,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193411.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string UserAddress
@@ -834,6 +877,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835128.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -851,6 +895,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838964.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayRecentFiles
@@ -871,6 +916,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845623.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.CommandBars CommandBars
@@ -887,6 +933,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821393.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="languageID">optional object LanguageID</param>
@@ -902,6 +949,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821393.aspx
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
@@ -915,6 +963,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821393.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -929,6 +978,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821393.aspx
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
@@ -941,6 +991,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197234.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.VBIDEApi.VBE VBE
@@ -957,6 +1008,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839412.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string DefaultSaveFormat
@@ -977,6 +1029,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821102.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.ListGalleries ListGalleries
@@ -993,6 +1046,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821995.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string ActivePrinter
@@ -1013,6 +1067,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821925.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Templates Templates
@@ -1029,6 +1084,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822548.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1051,6 +1107,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197596.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.KeyBindings KeyBindings
@@ -1067,6 +1124,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196068.aspx
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
@@ -1083,6 +1141,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196068.aspx
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -1097,6 +1156,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196068.aspx
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
@@ -1112,6 +1172,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196068.aspx
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -1125,6 +1186,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840614.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
@@ -1140,6 +1202,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840614.aspx
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
@@ -1153,6 +1216,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840614.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1167,6 +1231,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840614.aspx
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
@@ -1179,6 +1244,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196028.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Caption
@@ -1199,6 +1265,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192216.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string Path
@@ -1214,6 +1281,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192367.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayScrollBars
@@ -1234,6 +1302,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191937.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string StartupPath
@@ -1254,6 +1323,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835146.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 BackgroundSavingStatus
@@ -1269,6 +1339,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820962.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 BackgroundPrintingStatus
@@ -1284,6 +1355,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839318.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Left
@@ -1304,6 +1376,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837463.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Top
@@ -1324,6 +1397,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836284.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Width
@@ -1344,6 +1418,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845159.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public Int32 Height
@@ -1364,6 +1439,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836388.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdWindowState WindowState
@@ -1385,6 +1461,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192152.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayAutoCompleteTips
@@ -1405,6 +1482,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822542.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Options Options
@@ -1421,6 +1499,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192373.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdAlertLevel DisplayAlerts
@@ -1442,6 +1521,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191957.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Dictionaries CustomDictionaries
@@ -1458,6 +1538,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192616.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string PathSeparator
@@ -1473,6 +1554,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845291.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string StatusBar
@@ -1493,6 +1575,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192800.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool MAPIAvailable
@@ -1508,6 +1591,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845182.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool DisplayScreenTips
@@ -1528,6 +1612,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839294.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdEnableCancelKey EnableCancelKey
@@ -1549,6 +1634,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197424.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool UserControl
@@ -1580,6 +1666,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838972.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Enums.WdMailSystem MailSystem
@@ -1596,6 +1683,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839937.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string DefaultTableSeparator
@@ -1616,6 +1704,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839922.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool ShowVisualBasicEditor
@@ -1636,6 +1725,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839549.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string BrowseExtraFileTypes
@@ -1656,6 +1746,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834540.aspx
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1669,6 +1760,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834540.aspx
 		/// Alias for get_IsObjectValid
 		/// </summary>
 		/// <param name="_object">object Object</param>
@@ -1681,6 +1773,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194713.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.HangulHanjaConversionDictionaries HangulHanjaDictionaries
@@ -1697,6 +1790,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821986.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.MailMessage MailMessage
@@ -1713,6 +1807,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840871.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool FocusInMailHeader
@@ -1728,6 +1823,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192588.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.EmailOptions EmailOptions
@@ -1744,6 +1840,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836711.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoLanguageID Language
@@ -1760,6 +1857,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192831.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.COMAddIns COMAddIns
@@ -1776,6 +1874,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192428.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public bool CheckLanguage
@@ -1796,6 +1895,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197161.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.LanguageSettings LanguageSettings
@@ -1844,6 +1944,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195192.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
@@ -1865,6 +1966,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192776.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
@@ -1886,6 +1988,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840210.aspx
 		/// </summary>
 		/// <param name="fileDialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType FileDialogType</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
@@ -1900,6 +2003,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840210.aspx
 		/// Alias for get_FileDialog
 		/// </summary>
 		/// <param name="fileDialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType FileDialogType</param>
@@ -1912,6 +2016,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193382.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public string EmailTemplate
@@ -1952,6 +2057,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193065.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.OfficeApi.NewFile NewDocument
@@ -1968,6 +2074,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840052.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool ShowStartupDialog
@@ -1988,6 +2095,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192177.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.AutoCorrect AutoCorrectEmail
@@ -2004,6 +2112,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845341.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public NetOffice.WordApi.TaskPanes TaskPanes
@@ -2020,6 +2129,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835491.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public bool DefaultLegalBlackline
@@ -2072,6 +2182,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839771.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public NetOffice.WordApi.XMLNamespaces XMLNamespaces
@@ -2088,6 +2199,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196679.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public bool ArbitraryXMLSupportAvailable
@@ -2135,6 +2247,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192405.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.Bibliography Bibliography
@@ -2151,6 +2264,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191727.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool ShowStylePreviews
@@ -2171,6 +2285,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845435.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool RestrictLinkedStyles
@@ -2191,6 +2306,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837322.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.WordApi.OMathAutoCorrect OMathAutoCorrect
@@ -2207,6 +2323,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836074.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool DisplayDocumentInformationPanel
@@ -2227,6 +2344,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197133.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public NetOffice.OfficeApi.IAssistance Assistance
@@ -2243,6 +2361,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192620.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool OpenAttachmentsInFullScreen
@@ -2263,6 +2382,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836063.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public Int32 ActiveEncryptionSession
@@ -2278,6 +2398,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194203.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 12,14,15)]
 		public bool DontResetInsertionPointProperties
@@ -2298,6 +2419,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839192.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.SmartArtLayouts SmartArtLayouts
@@ -2314,6 +2436,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194982.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.SmartArtQuickStyles SmartArtQuickStyles
@@ -2330,6 +2453,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839505.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.SmartArtColors SmartArtColors
@@ -2346,6 +2470,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838675.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.UndoRecord UndoRecord
@@ -2362,6 +2487,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191978.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.PickerDialog PickerDialog
@@ -2378,6 +2504,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839925.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ProtectedViewWindows ProtectedViewWindows
@@ -2394,6 +2521,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192773.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.WordApi.ProtectedViewWindow ActiveProtectedViewWindow
@@ -2410,6 +2538,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845787.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public bool IsSandboxed
@@ -2425,6 +2554,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193078.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public NetOffice.OfficeApi.Enums.MsoFileValidationMode FileValidation
@@ -2446,6 +2576,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232091.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 15)]
 		public bool ChartDataPointTrack
@@ -2466,6 +2597,7 @@ namespace NetOffice.WordApi
 		/// <summary>
 		/// SupportByVersion Word 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj232207.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 15)]
 		public bool ShowAnimation
@@ -2489,6 +2621,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844895.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="originalFormat">optional object OriginalFormat</param>
@@ -2502,6 +2635,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844895.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -2513,6 +2647,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844895.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		[CustomMethodAttribute]
@@ -2525,6 +2660,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844895.aspx
 		/// </summary>
 		/// <param name="saveChanges">optional object SaveChanges</param>
 		/// <param name="originalFormat">optional object OriginalFormat</param>
@@ -2538,6 +2674,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193095.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ScreenRefresh()
@@ -2548,6 +2685,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2574,6 +2712,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -2586,6 +2725,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -2599,6 +2739,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2613,6 +2754,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2628,6 +2770,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2644,6 +2787,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2661,6 +2805,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2679,6 +2824,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2698,6 +2844,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2718,6 +2865,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2739,6 +2887,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2761,6 +2910,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2784,6 +2934,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2808,6 +2959,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2833,6 +2985,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -2859,6 +3012,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839803.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -2870,6 +3024,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192415.aspx
 		/// </summary>
 		/// <param name="unavailableFont">string UnavailableFont</param>
 		/// <param name="substituteFont">string SubstituteFont</param>
@@ -2882,6 +3037,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821899.aspx
 		/// </summary>
 		/// <param name="times">optional object Times</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -2894,6 +3050,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821899.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -2906,6 +3063,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845561.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="command">string Command</param>
@@ -2918,6 +3076,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837295.aspx
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
@@ -2931,6 +3090,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837201.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
@@ -2944,6 +3104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837546.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
@@ -2957,6 +3118,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837904.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -2968,6 +3130,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192053.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void DDETerminateAll()
@@ -2978,6 +3141,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845364.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2993,6 +3157,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845364.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		[CustomMethodAttribute]
@@ -3006,6 +3171,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845364.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3020,6 +3186,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845364.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3035,6 +3202,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192163.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
@@ -3048,6 +3216,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192163.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		[CustomMethodAttribute]
@@ -3061,6 +3230,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835492.aspx
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="destination">string Destination</param>
@@ -3075,6 +3245,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194744.aspx
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="name">string Name</param>
@@ -3088,6 +3259,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836140.aspx
 		/// </summary>
 		/// <param name="source">string Source</param>
 		/// <param name="name">string Name</param>
@@ -3102,6 +3274,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff823266.aspx
 		/// </summary>
 		/// <param name="tagID">String[] TagID</param>
 		/// <param name="value">String[] Value</param>
@@ -3114,6 +3287,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3133,6 +3307,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -3145,6 +3320,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		[CustomMethodAttribute]
@@ -3158,6 +3334,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3172,6 +3349,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3187,6 +3365,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3203,6 +3382,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3220,6 +3400,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3238,6 +3419,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836577.aspx
 		/// </summary>
 		/// <param name="name">optional object Name</param>
 		/// <param name="addressProperties">optional object AddressProperties</param>
@@ -3257,6 +3439,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194798.aspx
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -3269,6 +3452,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3293,6 +3477,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
@@ -3306,6 +3491,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3320,6 +3506,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3335,6 +3522,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3351,6 +3539,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3368,6 +3557,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3386,6 +3576,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3405,6 +3596,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3425,6 +3617,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3446,6 +3639,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3468,6 +3662,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3491,6 +3686,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822597.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3515,6 +3711,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822681.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ResetIgnoreAll()
@@ -3525,6 +3722,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3551,6 +3749,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
@@ -3565,6 +3764,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3580,6 +3780,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3596,6 +3797,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3613,6 +3815,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3631,6 +3834,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3650,6 +3854,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3670,6 +3875,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3691,6 +3897,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3713,6 +3920,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3736,6 +3944,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3760,6 +3969,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3785,6 +3995,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835170.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -3811,6 +4022,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838545.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void GoBack()
@@ -3821,6 +4033,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff841057.aspx
 		/// </summary>
 		/// <param name="helpType">object HelpType</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -3832,6 +4045,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194337.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void AutomaticChange()
@@ -3842,6 +4056,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839095.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ShowMe()
@@ -3852,6 +4067,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821932.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void HelpTool()
@@ -3862,6 +4078,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845336.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.Window NewWindow()
@@ -3874,6 +4091,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194509.aspx
 		/// </summary>
 		/// <param name="listAllCommands">bool ListAllCommands</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -3885,6 +4103,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834517.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ShowClipboard()
@@ -3895,6 +4114,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820816.aspx
 		/// </summary>
 		/// <param name="when">object When</param>
 		/// <param name="name">string Name</param>
@@ -3908,6 +4128,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820816.aspx
 		/// </summary>
 		/// <param name="when">object When</param>
 		/// <param name="name">string Name</param>
@@ -3921,6 +4142,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837154.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void NextLetter()
@@ -3931,6 +4153,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="zone">string Zone</param>
 		/// <param name="server">string Server</param>
@@ -3948,6 +4171,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="zone">string Zone</param>
 		/// <param name="server">string Server</param>
@@ -3963,6 +4187,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="zone">string Zone</param>
 		/// <param name="server">string Server</param>
@@ -3979,6 +4204,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="zone">string Zone</param>
 		/// <param name="server">string Server</param>
@@ -3996,6 +4222,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844818.aspx
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4008,6 +4235,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void SendFax()
@@ -4018,6 +4246,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835219.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4029,6 +4258,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -4041,6 +4271,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196922.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void GoForward()
@@ -4051,6 +4282,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff844914.aspx
 		/// </summary>
 		/// <param name="left">Int32 Left</param>
 		/// <param name="top">Int32 Top</param>
@@ -4063,6 +4295,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197452.aspx
 		/// </summary>
 		/// <param name="width">Int32 Width</param>
 		/// <param name="height">Int32 Height</param>
@@ -4075,6 +4308,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197549.aspx
 		/// </summary>
 		/// <param name="inches">Single Inches</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4087,6 +4321,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838159.aspx
 		/// </summary>
 		/// <param name="centimeters">Single Centimeters</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4099,6 +4334,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845767.aspx
 		/// </summary>
 		/// <param name="millimeters">Single Millimeters</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4111,6 +4347,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840225.aspx
 		/// </summary>
 		/// <param name="picas">Single Picas</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4123,6 +4360,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840343.aspx
 		/// </summary>
 		/// <param name="lines">Single Lines</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4135,6 +4373,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838268.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4147,6 +4386,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195052.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4159,6 +4399,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836929.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4171,6 +4412,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193434.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4183,6 +4425,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822110.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4195,6 +4438,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821351.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void Activate()
@@ -4205,6 +4449,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840896.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		/// <param name="fVertical">optional object fVertical</param>
@@ -4218,6 +4463,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840896.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[CustomMethodAttribute]
@@ -4231,6 +4477,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840582.aspx
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		/// <param name="fVertical">optional object fVertical</param>
@@ -4244,6 +4491,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840582.aspx
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		[CustomMethodAttribute]
@@ -4257,6 +4505,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845662.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void KeyboardLatin()
@@ -4267,6 +4516,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196621.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void KeyboardBidi()
@@ -4277,6 +4527,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835971.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public void ToggleKeyboard()
@@ -4287,6 +4538,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197538.aspx
 		/// </summary>
 		/// <param name="langId">optional Int32 LangId = 0</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4299,6 +4551,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197538.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4311,6 +4564,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193728.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public string ProductCode()
@@ -4322,6 +4576,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840160.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public NetOffice.WordApi.DefaultWebOptions DefaultWebOptions()
@@ -4334,6 +4589,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="range">object Range</param>
 		/// <param name="cid">object cid</param>
@@ -4348,6 +4604,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821531.aspx
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="documentType">NetOffice.WordApi.Enums.WdDocumentMedium DocumentType</param>
@@ -4360,6 +4617,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834585.aspx
 		/// </summary>
 		/// <param name="documentType">NetOffice.WordApi.Enums.WdDocumentMedium DocumentType</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4372,6 +4630,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4401,6 +4660,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -4412,6 +4672,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[CustomMethodAttribute]
@@ -4424,6 +4685,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4437,6 +4699,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4451,6 +4714,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4466,6 +4730,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4482,6 +4747,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4499,6 +4765,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4517,6 +4784,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4536,6 +4804,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4556,6 +4825,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4577,6 +4847,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4599,6 +4870,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4622,6 +4894,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4646,6 +4919,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4671,6 +4945,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4697,6 +4972,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4724,6 +5000,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4752,6 +5029,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840681.aspx
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -4781,6 +5059,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4831,6 +5110,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		[CustomMethodAttribute]
@@ -4852,6 +5132,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4874,6 +5155,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4897,6 +5179,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4921,6 +5204,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4946,6 +5230,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4972,6 +5257,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -4999,6 +5285,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5027,6 +5314,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5056,6 +5344,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5086,6 +5375,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5117,6 +5407,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5149,6 +5440,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5182,6 +5474,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5216,6 +5509,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5251,6 +5545,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5287,6 +5582,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5324,6 +5620,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5362,6 +5659,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5401,6 +5699,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5441,6 +5740,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5482,6 +5782,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5524,6 +5825,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5567,6 +5869,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5611,6 +5914,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5656,6 +5960,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5702,6 +6007,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5749,6 +6055,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5797,6 +6104,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5846,6 +6154,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838935.aspx
 		/// </summary>
 		/// <param name="macroName">string MacroName</param>
 		/// <param name="varg1">optional object varg1</param>
@@ -5896,6 +6205,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -5926,6 +6236,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -5938,6 +6249,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -5951,6 +6263,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -5965,6 +6278,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -5980,6 +6294,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -5996,6 +6311,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6013,6 +6329,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6031,6 +6348,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6050,6 +6368,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6070,6 +6389,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6091,6 +6411,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6113,6 +6434,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6136,6 +6458,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6160,6 +6483,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6185,6 +6509,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6211,6 +6536,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6238,6 +6564,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6266,6 +6593,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6295,6 +6623,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="background">optional object Background</param>
 		/// <param name="append">optional object Append</param>
@@ -6325,6 +6654,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
@@ -6337,6 +6667,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838158.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void PutFocusInMailHeader()
@@ -6347,6 +6678,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840673.aspx
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
@@ -6358,6 +6690,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6386,6 +6719,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6401,6 +6735,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6417,6 +6752,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6434,6 +6770,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6452,6 +6789,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6471,6 +6809,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6491,6 +6830,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6512,6 +6852,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6534,6 +6875,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6557,6 +6899,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6581,6 +6924,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6606,6 +6950,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6632,6 +6977,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6659,6 +7005,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195665.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6687,6 +7034,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6716,6 +7064,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6731,6 +7080,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6747,6 +7097,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6764,6 +7115,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6782,6 +7134,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6801,6 +7154,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6821,6 +7175,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6842,6 +7197,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6864,6 +7220,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6887,6 +7244,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6911,6 +7269,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6936,6 +7295,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6962,6 +7322,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -6989,6 +7350,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -7017,6 +7379,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194674.aspx
 		/// </summary>
 		/// <param name="originalDocument">NetOffice.WordApi.Document OriginalDocument</param>
 		/// <param name="revisedDocument">NetOffice.WordApi.Document RevisedDocument</param>
@@ -7046,6 +7409,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="localDocument">NetOffice.WordApi.Document LocalDocument</param>
 		/// <param name="serverDocument">NetOffice.WordApi.Document ServerDocument</param>
@@ -7061,6 +7425,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 14,15)]

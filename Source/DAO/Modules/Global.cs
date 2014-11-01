@@ -233,6 +233,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="action">optional object Action</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -244,6 +245,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -255,6 +257,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="srcName">string SrcName</param>
 		/// <param name="dstName">string DstName</param>
@@ -270,6 +273,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="srcName">string SrcName</param>
 		/// <param name="dstName">string DstName</param>
@@ -283,6 +287,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="srcName">string SrcName</param>
 		/// <param name="dstName">string DstName</param>
@@ -297,6 +302,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="srcName">string SrcName</param>
 		/// <param name="dstName">string DstName</param>
@@ -312,6 +318,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -324,6 +331,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="dsn">string Dsn</param>
 		/// <param name="driver">string Driver</param>
@@ -338,6 +346,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="userName">string UserName</param>
@@ -353,6 +362,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -369,6 +379,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -383,6 +394,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -398,6 +410,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -414,6 +427,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="locale">string Locale</param>
@@ -429,6 +443,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="locale">string Locale</param>
@@ -444,6 +459,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public static void FreeLocks()
@@ -454,6 +470,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public static void BeginTrans()
@@ -464,6 +481,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="option">optional Int32 Option = 0</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -475,6 +493,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
@@ -486,6 +505,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
 		public static void Rollback()
@@ -496,6 +516,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="password">string Password</param>
@@ -508,6 +529,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="option">Int16 Option</param>
 		/// <param name="value">object Value</param>
@@ -520,6 +542,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="statNum">Int32 StatNum</param>
 		/// <param name="reset">optional object Reset</param>
@@ -534,6 +557,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="statNum">Int32 StatNum</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -548,6 +572,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="userName">string UserName</param>
@@ -564,6 +589,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="userName">string UserName</param>
@@ -580,6 +606,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -596,6 +623,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		[CustomMethodAttribute]
@@ -610,6 +638,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -625,6 +654,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="options">optional object Options</param>
@@ -641,6 +671,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion DAO 3.6, 12.0
+		/// 
 		/// </summary>
 		/// <param name="option">Int32 Option</param>
 		/// <param name="value">object Value</param>

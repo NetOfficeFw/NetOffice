@@ -626,6 +626,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		/// <param name="format">Int16 Format</param>
@@ -638,6 +639,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="category">Int16 Category</param>
 		/// <param name="code">Int16 Code</param>
@@ -651,6 +653,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Copy()
@@ -661,6 +664,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Cut()
@@ -671,6 +675,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Paste()
@@ -681,6 +686,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="formula">string Formula</param>
 		/// <param name="format">Int16 Format</param>
@@ -693,6 +699,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
@@ -703,6 +710,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="category">NetOffice.VisioApi.Enums.VisFieldCategories Category</param>
 		/// <param name="code">NetOffice.VisioApi.Enums.VisFieldCodes Code</param>
@@ -718,6 +726,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="category">NetOffice.VisioApi.Enums.VisFieldCategories Category</param>
 		/// <param name="code">NetOffice.VisioApi.Enums.VisFieldCodes Code</param>
@@ -732,6 +741,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="category">NetOffice.VisioApi.Enums.VisFieldCategories Category</param>
 		/// <param name="code">NetOffice.VisioApi.Enums.VisFieldCodes Code</param>

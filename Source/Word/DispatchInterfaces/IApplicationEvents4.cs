@@ -97,6 +97,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -108,6 +109,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void Quit()
@@ -118,6 +120,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		public void DocumentChange()
@@ -128,6 +131,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -139,6 +143,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -151,6 +156,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -163,6 +169,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="saveAsUI">bool SaveAsUI</param>
@@ -176,6 +183,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -187,6 +195,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
@@ -199,6 +208,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
@@ -211,6 +221,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -222,6 +233,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -234,6 +246,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -246,6 +259,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -257,6 +271,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -268,6 +283,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="docResult">NetOffice.WordApi.Document DocResult</param>
@@ -280,6 +296,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -291,6 +308,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="startRecord">Int32 StartRecord</param>
@@ -305,6 +323,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -317,6 +336,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -328,6 +348,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="handled">bool Handled</param>
@@ -340,6 +361,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -351,6 +373,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="fromState">Int32 FromState</param>
@@ -365,6 +388,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="wn">NetOffice.WordApi.Window Wn</param>
@@ -377,6 +401,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sel">NetOffice.WordApi.Selection Sel</param>
 		/// <param name="oldXMLNode">NetOffice.WordApi.XMLNode OldXMLNode</param>
@@ -391,6 +416,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="xMLNode">NetOffice.WordApi.XMLNode XMLNode</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
@@ -402,6 +428,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="syncEventType">NetOffice.OfficeApi.Enums.MsoSyncEventType SyncEventType</param>
@@ -414,6 +441,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="cpDeliveryAddrStart">Int32 cpDeliveryAddrStart</param>
@@ -435,6 +463,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="doc">NetOffice.WordApi.Document Doc</param>
 		/// <param name="handled">bool Handled</param>
@@ -448,6 +477,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -460,6 +490,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -473,6 +504,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		/// <param name="closeReason">Int32 CloseReason</param>
@@ -487,6 +519,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -499,6 +532,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByVersionAttribute("Word", 14,15)]
@@ -511,6 +545,7 @@ namespace NetOffice.WordApi
 
 		/// <summary>
 		/// SupportByVersion Word 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pvWindow">NetOffice.WordApi.ProtectedViewWindow PvWindow</param>
 		[SupportByVersionAttribute("Word", 14,15)]

@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ptPoint">tagPOINT ptPoint</param>
 		/// <param name="eCoordSystem">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eCoordSystem</param>
@@ -116,6 +117,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="eMoveUnit">NetOffice.MSHTMLApi.Enums._DISPLAY_MOVEUNIT eMoveUnit</param>
 		/// <param name="lXPos">Int32 lXPos</param>
@@ -129,6 +131,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pMarkupPointer">NetOffice.MSHTMLApi.IMarkupPointer pMarkupPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -141,6 +144,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -153,6 +157,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="eGravity">NetOffice.MSHTMLApi.Enums._POINTER_GRAVITY eGravity</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -165,6 +170,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="peGravity">NetOffice.MSHTMLApi.Enums._POINTER_GRAVITY peGravity</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -180,6 +186,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="eGravity">NetOffice.MSHTMLApi.Enums._DISPLAY_GRAVITY eGravity</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -192,6 +199,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="peGravity">NetOffice.MSHTMLApi.Enums._DISPLAY_GRAVITY peGravity</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -207,6 +215,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pfPositioned">Int32 pfPositioned</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -222,6 +231,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Unposition()
@@ -233,6 +243,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsEqual">Int32 pfIsEqual</param>
@@ -249,6 +260,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsLeftOf">Int32 pfIsLeftOf</param>
@@ -265,6 +277,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pDispPointer">NetOffice.MSHTMLApi.IDisplayPointer pDispPointer</param>
 		/// <param name="pfIsRightOf">Int32 pfIsRightOf</param>
@@ -281,6 +294,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pfBOL">Int32 pfBOL</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -296,6 +310,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointer">NetOffice.MSHTMLApi.IMarkupPointer pPointer</param>
 		/// <param name="pDispLineContext">NetOffice.MSHTMLApi.IDisplayPointer pDispLineContext</param>
@@ -309,6 +324,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 scrollIntoView()
@@ -320,6 +336,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppLineInfo">NetOffice.MSHTMLApi.ILineInfo ppLineInfo</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -335,6 +352,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppLayoutElement">NetOffice.MSHTMLApi.IHTMLElement ppLayoutElement</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -350,6 +368,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pdwBreaks">Int32 pdwBreaks</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

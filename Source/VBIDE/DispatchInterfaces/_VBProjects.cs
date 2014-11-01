@@ -97,6 +97,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="type">NetOffice.VBIDEApi.Enums.vbext_ProjectType Type</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -110,6 +111,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="lpc">NetOffice.VBIDEApi.VBProject lpc</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -121,6 +123,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="bstrPath">string bstrPath</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]

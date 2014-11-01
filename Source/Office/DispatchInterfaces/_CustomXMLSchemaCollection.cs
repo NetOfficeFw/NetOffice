@@ -95,6 +95,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862208.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -112,6 +113,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864015.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public Int32 Count
@@ -145,6 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860878.aspx
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -158,6 +161,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860878.aspx
 		/// Alias for get_NamespaceURI
 		/// </summary>
 		/// <param name="index">Int32 Index</param>
@@ -173,6 +177,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
@@ -189,6 +194,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -202,6 +208,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		[CustomMethodAttribute]
@@ -216,6 +223,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
@@ -231,6 +239,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864881.aspx
 		/// </summary>
 		/// <param name="namespaceURI">optional string NamespaceURI = </param>
 		/// <param name="alias">optional string Alias = </param>
@@ -247,6 +256,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864690.aspx
 		/// </summary>
 		/// <param name="schemaCollection">NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -258,6 +268,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864142.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool Validate()

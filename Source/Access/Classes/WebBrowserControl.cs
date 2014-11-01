@@ -36,8 +36,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// CoClass WebBrowserControl 
 	/// SupportByVersion Access, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835067.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835067.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class WebBrowserControl : _WebBrowserControl,IEventBinding

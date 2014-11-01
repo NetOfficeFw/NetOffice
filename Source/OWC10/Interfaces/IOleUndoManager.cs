@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -109,6 +110,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pPUU">NetOffice.OWC10Api.IOleParentUndoUnit pPUU</param>
 		/// <param name="fCommit">Int32 fCommit</param>
@@ -122,6 +124,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -134,6 +137,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pdwState">Int32 pdwState</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -149,6 +153,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -161,6 +166,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -173,6 +179,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUU">NetOffice.OWC10Api.IOleUndoUnit pUU</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -185,6 +192,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -200,6 +208,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.OWC10Api.IEnumOleUndoUnits ppEnum</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -215,6 +224,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -230,6 +240,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -245,6 +256,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="fEnable">Int32 fEnable</param>
 		[SupportByVersionAttribute("OWC10", 1)]

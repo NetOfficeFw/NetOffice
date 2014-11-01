@@ -225,6 +225,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void abort()
@@ -235,6 +236,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrMethod">string bstrMethod</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
@@ -250,6 +252,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrMethod">string bstrMethod</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
@@ -264,6 +267,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrMethod">string bstrMethod</param>
 		/// <param name="bstrUrl">string bstrUrl</param>
@@ -279,6 +283,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="varBody">optional object varBody</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -290,6 +295,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -301,6 +307,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public string getAllResponseHeaders()
@@ -312,6 +319,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrHeader">string bstrHeader</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -324,6 +332,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrHeader">string bstrHeader</param>
 		/// <param name="bstrValue">string bstrValue</param>

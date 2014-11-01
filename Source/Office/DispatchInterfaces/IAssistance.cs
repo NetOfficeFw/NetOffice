@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// DispatchInterface IAssistance 
 	/// SupportByVersion Office, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864589.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864589.aspx </remarks>
 	[SupportByVersionAttribute("Office", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
 	public class IAssistance : COMObject
@@ -98,10 +98,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
 		/// <param name="scope">optional string Scope = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp(object helpId, object scope)
 		{
@@ -111,8 +111,8 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx
 		/// </summary>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp()
@@ -123,9 +123,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx
 		/// </summary>
 		/// <param name="helpId">optional string HelpId = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860570.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ShowHelp(object helpId)
@@ -136,10 +136,10 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx
 		/// </summary>
 		/// <param name="query">string Query</param>
 		/// <param name="scope">optional string Scope = </param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SearchHelp(string query, object scope)
 		{
@@ -149,9 +149,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx
 		/// </summary>
 		/// <param name="query">string Query</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862805.aspx </remarks>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SearchHelp(string query)
@@ -162,9 +162,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861230.aspx
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861230.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void SetDefaultContext(string helpId)
 		{
@@ -174,9 +174,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865260.aspx
 		/// </summary>
 		/// <param name="helpId">string HelpId</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865260.aspx </remarks>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void ClearDefaultContext(string helpId)
 		{

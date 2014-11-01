@@ -192,6 +192,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Cancel()
@@ -202,6 +203,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional string FileName</param>
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
@@ -214,6 +216,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1)]
@@ -225,6 +228,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional string FileName</param>
 		[CustomMethodAttribute]
@@ -237,6 +241,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
@@ -253,6 +258,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -265,6 +271,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		[CustomMethodAttribute]
@@ -278,6 +285,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
@@ -292,6 +300,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
@@ -307,6 +316,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="stringFormat">optional NetOffice.ADODBApi.Enums.StringFormatEnum StringFormat = 2</param>
 		/// <param name="numRows">optional Int32 NumRows = -1</param>
@@ -323,6 +333,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="bookmark1">object Bookmark1</param>
 		/// <param name="bookmark2">object Bookmark2</param>
@@ -337,6 +348,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="lockType">optional NetOffice.ADODBApi.Enums.LockTypeEnum LockType = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -350,6 +362,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -363,6 +376,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
@@ -375,6 +389,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -386,6 +401,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="affectRecords">optional NetOffice.ADODBApi.Enums.AffectEnum AffectRecords = 3</param>
 		[CustomMethodAttribute]
@@ -398,6 +414,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional string FileName</param>
 		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
@@ -411,6 +428,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -423,6 +441,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="fileName">optional string FileName</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

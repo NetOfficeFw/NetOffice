@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="rcBounds">tagRECT rcBounds</param>
 		/// <param name="rcUpdate">tagRECT rcUpdate</param>
@@ -113,6 +114,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="size">tagSIZE size</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -125,6 +127,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pInfo">_HTML_PAINTER_INFO pInfo</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -140,6 +143,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pt">tagPOINT pt</param>
 		/// <param name="pbHit">Int32 pbHit</param>

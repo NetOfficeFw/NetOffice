@@ -339,6 +339,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="detailTop">Int32 DetailTop</param>
 		/// <param name="detailTopOffset">Int32 DetailTopOffset</param>
@@ -352,6 +353,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="detailTop">Int32 DetailTop</param>
 		/// <param name="detailTopOffset">Int32 DetailTopOffset</param>

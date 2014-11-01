@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		/// <param name="rgelt">object rgelt</param>
@@ -116,6 +117,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="celt">Int32 celt</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -128,6 +130,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 reset()
@@ -139,6 +142,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.MSHTMLApi.IEnumUnknown ppEnum</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

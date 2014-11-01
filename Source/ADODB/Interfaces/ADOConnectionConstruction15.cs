@@ -131,6 +131,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="pDSO">object pDSO</param>
 		/// <param name="pSession">object pSession</param>

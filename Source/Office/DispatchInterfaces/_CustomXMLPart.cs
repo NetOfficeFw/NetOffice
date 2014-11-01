@@ -94,6 +94,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860227.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -111,6 +112,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862841.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLNode DocumentElement
@@ -127,6 +129,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862405.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string Id
@@ -142,6 +145,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860609.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string NamespaceURI
@@ -157,6 +161,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862230.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
@@ -178,6 +183,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861512.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
@@ -194,6 +200,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860262.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public string XML
@@ -209,6 +216,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860307.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public NetOffice.OfficeApi.CustomXMLValidationErrors Errors
@@ -225,6 +233,7 @@ namespace NetOffice.OfficeApi
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865215.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public bool BuiltIn
@@ -243,6 +252,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -259,6 +269,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		[CustomMethodAttribute]
@@ -271,6 +282,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -284,6 +296,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -298,6 +311,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -313,6 +327,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864167.aspx
 		/// </summary>
 		/// <param name="parent">NetOffice.OfficeApi.CustomXMLNode Parent</param>
 		/// <param name="name">optional string Name = </param>
@@ -329,6 +344,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff861077.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Delete()
@@ -339,6 +355,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865466.aspx
 		/// </summary>
 		/// <param name="filePath">string FilePath</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -351,6 +368,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865293.aspx
 		/// </summary>
 		/// <param name="xML">string XML</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -363,6 +381,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864156.aspx
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -376,6 +395,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860915.aspx
 		/// </summary>
 		/// <param name="xPath">string XPath</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]

@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElem">NetOffice.MSHTMLApi.IHTMLOptionElement pElem</param>
 		/// <param name="pvarBefore">object pvarBefore</param>

@@ -15,7 +15,7 @@ namespace MSDATASRCApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.MSDATASRCApi";
-        private Guid     _componentGuid = new Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("7C0FFAB0-CD84-11D0-949A-00A0C91110ED")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace MSDATASRCApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

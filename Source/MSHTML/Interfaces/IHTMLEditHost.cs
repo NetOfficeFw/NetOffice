@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="prcNew">tagRECT prcNew</param>

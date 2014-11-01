@@ -97,6 +97,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
@@ -108,6 +109,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tsk">NetOffice.MSProjectApi.Task tsk</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -120,6 +122,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="res">NetOffice.MSProjectApi.Resource res</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -132,6 +135,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="asg">NetOffice.MSProjectApi.Assignment asg</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -144,6 +148,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="tsk">NetOffice.MSProjectApi.Task tsk</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
@@ -158,6 +163,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="res">NetOffice.MSProjectApi.Resource res</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
@@ -172,6 +178,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="asg">NetOffice.MSProjectApi.Assignment asg</param>
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjAssignmentField Field</param>
@@ -186,6 +193,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -198,6 +206,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -210,6 +219,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -222,6 +232,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -234,6 +245,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="cancel">bool Cancel</param>
@@ -246,6 +258,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		/// <param name="saveAsUi">bool SaveAsUi</param>
@@ -259,6 +272,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11, 12, 14
+		/// 
 		/// </summary>
 		/// <param name="pj">NetOffice.MSProjectApi.Project pj</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]

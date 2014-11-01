@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
@@ -195,6 +196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
@@ -211,6 +213,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
@@ -226,6 +229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>
@@ -242,6 +246,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="source">object Source</param>
 		/// <param name="sourceField">object SourceField</param>

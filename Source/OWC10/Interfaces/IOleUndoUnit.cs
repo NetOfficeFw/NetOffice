@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pUndoManager">NetOffice.OWC10Api.IOleUndoManager pUndoManager</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -109,6 +110,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pbstr">string pbstr</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -124,6 +126,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pClsid">Guid pClsid</param>
 		/// <param name="plID">Int32 plID</param>
@@ -142,6 +145,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 OnNextAdd()

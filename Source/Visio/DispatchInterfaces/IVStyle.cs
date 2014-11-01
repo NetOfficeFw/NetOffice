@@ -645,6 +645,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
@@ -655,6 +656,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>
@@ -670,6 +672,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="flags">Int16 Flags</param>
@@ -687,6 +690,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>
@@ -701,6 +705,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="unitsNamesOrCodes">object[] UnitsNamesOrCodes</param>
@@ -716,6 +721,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		/// <param name="formulaArray">object[] formulaArray</param>

@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pfAllow">Int32 pfAllow</param>
 		/// <param name="pchUrlInQuestion">Int16 pchUrlInQuestion</param>

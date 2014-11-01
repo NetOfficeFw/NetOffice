@@ -15,7 +15,7 @@ namespace VisioApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.VisioApi";
-        private Guid     _componentGuid = new Guid("00021A98-0000-0000-C000-000000000046");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("00021A98-0000-0000-C000-000000000046")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace VisioApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

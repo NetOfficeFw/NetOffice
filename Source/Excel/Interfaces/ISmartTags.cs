@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="smartTagType">string SmartTagType</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]

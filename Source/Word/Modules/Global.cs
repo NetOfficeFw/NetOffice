@@ -63,6 +63,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196288.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Application Application
@@ -79,6 +80,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839176.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static Int32 Creator
@@ -94,6 +96,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837536.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -111,6 +114,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834577.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string Name
@@ -126,6 +130,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836002.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Documents Documents
@@ -142,6 +147,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192377.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Windows Windows
@@ -158,6 +164,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838345.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Document ActiveDocument
@@ -174,6 +181,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197244.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Window ActiveWindow
@@ -190,6 +198,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198352.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Selection Selection
@@ -206,6 +215,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837529.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -223,6 +233,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840791.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool PrintPreview
@@ -243,6 +254,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839389.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.RecentFiles RecentFiles
@@ -259,6 +271,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839307.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Template NormalTemplate
@@ -275,6 +288,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836650.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.System System
@@ -291,6 +305,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193423.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCorrect AutoCorrect
@@ -307,6 +322,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836088.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames FontNames
@@ -323,6 +339,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821549.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames LandscapeFontNames
@@ -339,6 +356,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845169.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FontNames PortraitFontNames
@@ -355,6 +373,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198149.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Languages Languages
@@ -387,6 +406,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845645.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.FileConverters FileConverters
@@ -403,6 +423,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821676.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Dialogs Dialogs
@@ -419,6 +440,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197115.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.CaptionLabels CaptionLabels
@@ -435,6 +457,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822600.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCaptions AutoCaptions
@@ -451,6 +474,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192197.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.AddIns AddIns
@@ -467,6 +491,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839709.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Tasks Tasks
@@ -483,6 +508,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834604.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -500,6 +526,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836562.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.CommandBars CommandBars
@@ -516,6 +543,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821269.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="languageID">optional object LanguageID</param>
@@ -531,6 +559,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821269.aspx
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
@@ -544,6 +573,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821269.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -558,6 +588,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821269.aspx
 		/// Alias for get_SynonymInfo
 		/// </summary>
 		/// <param name="word">string Word</param>
@@ -570,6 +601,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192171.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.VBIDEApi.VBE VBE
@@ -586,6 +618,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff196201.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.ListGalleries ListGalleries
@@ -602,6 +635,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838478.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string ActivePrinter
@@ -622,6 +656,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195188.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Templates Templates
@@ -638,6 +673,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839619.aspx
 		/// Unknown COM Proxy
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -660,6 +696,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821105.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.KeyBindings KeyBindings
@@ -676,6 +713,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197190.aspx
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
@@ -692,6 +730,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197190.aspx
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -706,6 +745,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197190.aspx
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
 		/// <param name="command">string Command</param>
@@ -721,6 +761,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197190.aspx
 		/// Alias for get_KeysBoundTo
 		/// </summary>
 		/// <param name="keyCategory">NetOffice.WordApi.Enums.WdKeyCategory KeyCategory</param>
@@ -734,6 +775,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821263.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
@@ -749,6 +791,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821263.aspx
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
@@ -762,6 +805,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821263.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -776,6 +820,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821263.aspx
 		/// Alias for get_FindKey
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
@@ -788,6 +833,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191993.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Options Options
@@ -804,6 +850,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839350.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Dictionaries CustomDictionaries
@@ -820,6 +867,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197891.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static string StatusBar
@@ -840,6 +888,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get/Set
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822928.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static bool ShowVisualBasicEditor
@@ -860,6 +909,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820807.aspx
 		/// </summary>
 		/// <param name="_object">object Object</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -873,6 +923,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820807.aspx
 		/// Alias for get_IsObjectValid
 		/// </summary>
 		/// <param name="_object">object Object</param>
@@ -885,6 +936,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194823.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.HangulHanjaConversionDictionaries HangulHanjaDictionaries
@@ -901,6 +953,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837343.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.OfficeApi.LanguageSettings LanguageSettings
@@ -933,6 +986,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 10, 11, 12, 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821154.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
 		public static NetOffice.WordApi.AutoCorrect AutoCorrectEmail
@@ -949,6 +1003,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838269.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public static NetOffice.WordApi.ProtectedViewWindows ProtectedViewWindows
@@ -965,6 +1020,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194319.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public static NetOffice.WordApi.ProtectedViewWindow ActiveProtectedViewWindow
@@ -981,6 +1037,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 		/// <summary>
 		/// SupportByVersion Word 14, 15
 		/// Get
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845720.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 14,15)]
 		public static bool IsSandboxed
@@ -999,6 +1056,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192375.aspx
 		/// </summary>
 		/// <param name="times">optional object Times</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1011,6 +1069,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192375.aspx
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1023,6 +1082,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840368.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="command">string Command</param>
@@ -1035,6 +1095,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195283.aspx
 		/// </summary>
 		/// <param name="app">string App</param>
 		/// <param name="topic">string Topic</param>
@@ -1048,6 +1109,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838981.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
@@ -1061,6 +1123,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837523.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		/// <param name="item">string Item</param>
@@ -1074,6 +1137,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192402.aspx
 		/// </summary>
 		/// <param name="channel">Int32 Channel</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1085,6 +1149,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197534.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static void DDETerminateAll()
@@ -1095,6 +1160,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839185.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1110,6 +1176,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839185.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		[CustomMethodAttribute]
@@ -1123,6 +1190,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839185.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1137,6 +1205,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839185.aspx
 		/// </summary>
 		/// <param name="arg1">NetOffice.WordApi.Enums.WdKey Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1152,6 +1221,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195198.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		/// <param name="keyCode2">optional object KeyCode2</param>
@@ -1165,6 +1235,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195198.aspx
 		/// </summary>
 		/// <param name="keyCode">Int32 KeyCode</param>
 		[CustomMethodAttribute]
@@ -1178,6 +1249,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1202,6 +1274,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
@@ -1215,6 +1288,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1229,6 +1303,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1244,6 +1319,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1260,6 +1336,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1277,6 +1354,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1295,6 +1373,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1314,6 +1393,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1334,6 +1414,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1355,6 +1436,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1377,6 +1459,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1400,6 +1483,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839930.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1424,6 +1508,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1450,6 +1535,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		[CustomMethodAttribute]
@@ -1464,6 +1550,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1479,6 +1566,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1495,6 +1583,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1512,6 +1601,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1530,6 +1620,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1549,6 +1640,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1569,6 +1661,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1590,6 +1683,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1612,6 +1706,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1635,6 +1730,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1659,6 +1755,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1684,6 +1781,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845851.aspx
 		/// </summary>
 		/// <param name="word">string Word</param>
 		/// <param name="customDictionary">optional object CustomDictionary</param>
@@ -1710,6 +1808,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff838492.aspx
 		/// </summary>
 		/// <param name="helpType">object HelpType</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1721,6 +1820,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837665.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
 		public static NetOffice.WordApi.Window NewWindow()
@@ -1733,6 +1833,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821231.aspx
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1745,6 +1846,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff191703.aspx
 		/// </summary>
 		/// <param name="path">string Path</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1756,6 +1858,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821651.aspx
 		/// </summary>
 		/// <param name="inches">Single Inches</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1768,6 +1871,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839169.aspx
 		/// </summary>
 		/// <param name="centimeters">Single Centimeters</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1780,6 +1884,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837741.aspx
 		/// </summary>
 		/// <param name="millimeters">Single Millimeters</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1792,6 +1897,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff837735.aspx
 		/// </summary>
 		/// <param name="picas">Single Picas</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1804,6 +1910,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff193922.aspx
 		/// </summary>
 		/// <param name="lines">Single Lines</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1816,6 +1923,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839542.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1828,6 +1936,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821989.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1840,6 +1949,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff845355.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1852,6 +1962,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821829.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1864,6 +1975,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194126.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
@@ -1876,6 +1988,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839394.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		/// <param name="fVertical">optional object fVertical</param>
@@ -1889,6 +2002,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff839394.aspx
 		/// </summary>
 		/// <param name="points">Single Points</param>
 		[CustomMethodAttribute]
@@ -1902,6 +2016,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197519.aspx
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		/// <param name="fVertical">optional object fVertical</param>
@@ -1915,6 +2030,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
 
 		/// <summary>
 		/// SupportByVersion Word 9, 10, 11, 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197519.aspx
 		/// </summary>
 		/// <param name="pixels">Single Pixels</param>
 		[CustomMethodAttribute]

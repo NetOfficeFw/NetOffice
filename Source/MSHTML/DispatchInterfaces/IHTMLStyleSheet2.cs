@@ -113,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>
@@ -127,6 +128,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrSelector">string bstrSelector</param>
 		/// <param name="bstrStyle">string bstrStyle</param>

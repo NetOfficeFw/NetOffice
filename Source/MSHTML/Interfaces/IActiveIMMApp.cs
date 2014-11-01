@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIME">Int32 hIME</param>
@@ -114,6 +115,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
@@ -129,6 +131,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
@@ -144,6 +147,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="phIMC">Int32 phIMC</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -159,6 +163,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIME">Int32 hIME</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -171,6 +176,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -191,6 +197,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -211,6 +218,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -230,6 +238,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -249,6 +258,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -270,6 +280,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -291,6 +302,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pdwListSize">Int32 pdwListSize</param>
@@ -310,6 +322,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pdwListSize">Int32 pdwListSize</param>
@@ -329,6 +342,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -346,6 +360,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0003 plf</param>
@@ -362,6 +377,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0004 plf</param>
@@ -378,6 +394,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -399,6 +416,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -420,6 +438,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCompForm">__MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm</param>
@@ -436,6 +455,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="phIMC">Int32 phIMC</param>
@@ -452,6 +472,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -475,6 +496,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -498,6 +520,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pfdwConversion">Int32 pfdwConversion</param>
@@ -517,6 +540,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="phDefWnd">_RemotableHandle phDefWnd</param>
@@ -533,6 +557,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
@@ -553,6 +578,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
@@ -573,6 +599,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -594,6 +621,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -615,6 +643,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
@@ -635,6 +664,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uBufLen">UIntPtr uBufLen</param>
@@ -655,6 +685,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -667,6 +698,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="fdwIndex">Int32 fdwIndex</param>
@@ -684,6 +716,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="nItem">UIntPtr nItem</param>
@@ -704,6 +737,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="nItem">UIntPtr nItem</param>
@@ -724,6 +758,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pptPos">tagPOINT pptPos</param>
@@ -740,6 +775,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="puVirtualKey">UIntPtr puVirtualKey</param>
@@ -756,6 +792,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="szIMEFileName">string szIMEFileName</param>
 		/// <param name="szLayoutText">string szLayoutText</param>
@@ -773,6 +810,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="szIMEFileName">string szIMEFileName</param>
 		/// <param name="szLayoutText">string szLayoutText</param>
@@ -790,6 +828,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -802,6 +841,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWndIME">_RemotableHandle hWndIME</param>
 		/// <param name="msg">UIntPtr msg</param>
@@ -817,6 +857,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWndIME">_RemotableHandle hWndIME</param>
 		/// <param name="msg">UIntPtr msg</param>
@@ -832,6 +873,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwAction">Int32 dwAction</param>
@@ -847,6 +889,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -862,6 +905,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -877,6 +921,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -890,6 +935,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCandidate">__MIDL___MIDL_itf_mshtml_0001_0042_0005 pCandidate</param>
@@ -903,6 +949,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0003 plf</param>
@@ -916,6 +963,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="plf">__MIDL___MIDL_itf_mshtml_0001_0042_0004 plf</param>
@@ -929,6 +977,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -946,6 +995,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwIndex">Int32 dwIndex</param>
@@ -963,6 +1013,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pCompForm">__MIDL___MIDL_itf_mshtml_0001_0042_0006 pCompForm</param>
@@ -976,6 +1027,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="fdwConversion">Int32 fdwConversion</param>
@@ -990,6 +1042,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="fOpen">Int32 fOpen</param>
@@ -1003,6 +1056,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="pptPos">tagPOINT pptPos</param>
@@ -1016,6 +1070,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="dwHotKeyID">Int32 dwHotKeyID</param>
@@ -1029,6 +1084,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -1044,6 +1100,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="szReading">string szReading</param>
@@ -1059,6 +1116,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="fRestoreLayout">Int32 fRestoreLayout</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1071,6 +1129,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 Deactivate()
@@ -1082,6 +1141,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="msg">UIntPtr msg</param>
@@ -1101,6 +1161,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="aaClassList">Int16 aaClassList</param>
 		/// <param name="uSize">UIntPtr uSize</param>
@@ -1114,6 +1175,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="uCodePage">UIntPtr uCodePage</param>
@@ -1130,6 +1192,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hKL">object hKL</param>
 		/// <param name="plid">Int16 plid</param>
@@ -1146,6 +1209,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hWnd">_RemotableHandle hWnd</param>
 		/// <param name="hIMC">Int32 hIMC</param>
@@ -1160,6 +1224,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="idThread">Int32 idThread</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -1172,6 +1237,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
@@ -1195,6 +1261,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hIMC">Int32 hIMC</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
@@ -1218,6 +1285,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="idThread">Int32 idThread</param>
 		/// <param name="ppEnum">NetOffice.MSHTMLApi.IEnumInputContext ppEnum</param>

@@ -15,8 +15,8 @@ namespace NetOffice.OutlookApi
 	///<summary>
 	/// CoClass ConversationHeader 
 	/// SupportByVersion Outlook, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865006.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff865006.aspx </remarks>
 	[SupportByVersionAttribute("Outlook", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class ConversationHeader : _ConversationHeader

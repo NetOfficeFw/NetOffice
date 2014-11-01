@@ -264,6 +264,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="safeArrayTabStops">object safeArrayTabStops</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -275,6 +276,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="style">NetOffice.PowerPointApi.Enums.PpListBoxAbbreviationStyle Style</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]

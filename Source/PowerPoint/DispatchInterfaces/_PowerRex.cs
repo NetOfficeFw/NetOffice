@@ -97,6 +97,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="erorCode">object erorCode</param>
 		/// <param name="bstrErrorDesc">object bstrErrorDesc</param>

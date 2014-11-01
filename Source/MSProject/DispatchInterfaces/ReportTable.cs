@@ -127,6 +127,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
@@ -142,6 +143,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		[CustomMethodAttribute]
@@ -154,6 +156,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
@@ -167,6 +170,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
@@ -181,6 +185,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="task">bool Task</param>
 		/// <param name="groupName">optional string GroupName = </param>
@@ -196,6 +201,7 @@ namespace NetOffice.MSProjectApi
 
 		/// <summary>
 		/// SupportByVersion MSProject 11
+		/// 
 		/// </summary>
 		/// <param name="row">Int32 Row</param>
 		/// <param name="col">Int32 Col</param>

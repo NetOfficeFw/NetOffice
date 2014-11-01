@@ -19,7 +19,7 @@ namespace NetOffice
         /// <summary>
         /// guid of component there represents the NetOfficeApi assembly
         /// </summary>
-        Guid ComponentGuid { get; }
+        Guid[] ComponentGuid { get; }
 
         /// <summary>
         /// assembly info of NetOfficeApi assembly

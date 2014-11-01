@@ -18,8 +18,8 @@ namespace NetOffice.VisioApi
 	///<summary>
 	/// CoClass DataRecordsets 
 	/// SupportByVersion Visio, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769264(v=office.14).aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/ff769264(v=office.14).aspx </remarks>
 	[SupportByVersionAttribute("Visio", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class DataRecordsets : IVDataRecordsets,IEventBinding

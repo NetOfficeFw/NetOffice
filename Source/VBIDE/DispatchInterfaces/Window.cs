@@ -329,6 +329,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void Close()
@@ -339,6 +340,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
 		public void SetFocus()
@@ -349,6 +351,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="eKind">NetOffice.VBIDEApi.Enums.vbext_WindowType eKind</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -361,6 +364,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -372,6 +376,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="lWindowHandle">Int32 lWindowHandle</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]

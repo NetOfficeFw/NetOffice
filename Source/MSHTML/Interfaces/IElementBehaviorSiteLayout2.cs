@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="plf">tagLOGFONTW plf</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

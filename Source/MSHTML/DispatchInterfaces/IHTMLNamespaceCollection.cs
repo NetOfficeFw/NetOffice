@@ -112,6 +112,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -125,6 +126,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrUrn">string bstrUrn</param>
@@ -140,6 +142,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrNamespace">string bstrNamespace</param>
 		/// <param name="bstrUrn">string bstrUrn</param>

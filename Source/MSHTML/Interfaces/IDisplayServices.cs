@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppDispPointer">NetOffice.MSHTMLApi.IDisplayPointer ppDispPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pRect">tagRECT pRect</param>
 		/// <param name="eSource">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
@@ -127,6 +129,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPoint">tagPOINT pPoint</param>
 		/// <param name="eSource">NetOffice.MSHTMLApi.Enums._COORD_SYSTEM eSource</param>
@@ -142,6 +145,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppCaret">NetOffice.MSHTMLApi.IHTMLCaret ppCaret</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -157,6 +161,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointer">NetOffice.MSHTMLApi.IMarkupPointer pPointer</param>
 		/// <param name="ppComputedStyle">NetOffice.MSHTMLApi.IHTMLComputedStyle ppComputedStyle</param>
@@ -173,6 +178,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="rect">tagRECT rect</param>
@@ -186,6 +192,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIElement">NetOffice.MSHTMLApi.IHTMLElement pIElement</param>
 		/// <param name="pfHasFlowLayout">Int32 pfHasFlowLayout</param>

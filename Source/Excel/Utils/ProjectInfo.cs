@@ -15,7 +15,7 @@ namespace ExcelApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.ExcelApi";
-        private Guid     _componentGuid = new Guid("00020813-0000-0000-C000-000000000046");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("00020813-0000-0000-C000-000000000046")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace ExcelApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

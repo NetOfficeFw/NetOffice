@@ -188,6 +188,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="argString">string ArgString</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

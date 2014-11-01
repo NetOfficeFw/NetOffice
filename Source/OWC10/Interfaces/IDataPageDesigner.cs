@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pDataSourceControl">NetOffice.OWC10Api.IDataSourceControl pDataSourceControl</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -109,6 +110,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="sectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
@@ -122,6 +124,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="sectType">NetOffice.OWC10Api.Enums.SectTypeEnum SectType</param>
 		/// <param name="wzRecordsetName">string wzRecordsetName</param>
@@ -136,6 +139,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -148,6 +152,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("OWC10", 1)]
 		public Int32 OnGroupLevelDeleted()
@@ -159,6 +164,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pGroupLevel">NetOffice.OWC10Api.GroupLevel pGroupLevel</param>
 		/// <param name="wzRecordsetNameOld">string wzRecordsetNameOld</param>
@@ -173,6 +179,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedConnection">object ppUnknownSharedConnection</param>
@@ -186,6 +193,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="lMarker">Int32 lMarker</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -198,6 +206,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="pfSecure">Int32 pfSecure</param>
@@ -211,6 +220,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="dispidChanged">Int32 dispidChanged</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -223,6 +233,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="wzConnectionString">string wzConnectionString</param>
 		/// <param name="ppUnknownSharedDBNS">object ppUnknownSharedDBNS</param>
@@ -236,6 +247,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppbstrFileName">string ppbstrFileName</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -248,6 +260,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pfDesignMode">Int32 pfDesignMode</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -260,6 +273,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pRequestingDSC">NetOffice.OWC10Api.IDataSourceControl pRequestingDSC</param>
 		/// <param name="vfForceRefresh">bool vfForceRefresh</param>
@@ -274,6 +288,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="ppbstrInstId">string ppbstrInstId</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -286,6 +301,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pioum">NetOffice.OWC10Api.IOleUndoManager pioum</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -298,6 +314,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="pDSC">NetOffice.OWC10Api.IDataSourceControl pDSC</param>
 		/// <param name="bstrRecordSetDef">string bstrRecordSetDef</param>

@@ -318,6 +318,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sheetObject">NetOffice.VisioApi.IVShape SheetObject</param>
 		/// <param name="fPresMems">Int16 fPresMems</param>
@@ -330,6 +331,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sheetObject">NetOffice.VisioApi.IVShape SheetObject</param>
 		/// <param name="fPresMems">Int16 fPresMems</param>
@@ -342,6 +344,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="fDeleteShapes">Int16 fDeleteShapes</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]

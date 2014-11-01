@@ -319,6 +319,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public Int32 Activate()
@@ -330,6 +331,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 14,15)]
 		public bool Close()
@@ -341,6 +343,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		/// <param name="updateLinks">optional object UpdateLinks</param>
@@ -355,6 +358,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -368,6 +372,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]

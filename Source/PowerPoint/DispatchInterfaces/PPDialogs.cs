@@ -149,6 +149,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]
@@ -166,6 +167,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -186,6 +188,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -203,6 +206,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -221,6 +225,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -240,6 +245,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -260,6 +266,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -280,6 +287,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -297,6 +305,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -315,6 +324,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -334,6 +344,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="left">Single Left</param>
 		/// <param name="top">Single Top</param>
@@ -354,6 +365,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
@@ -371,6 +383,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
@@ -386,6 +399,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
@@ -402,6 +416,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="resourceDLL">string resourceDLL</param>
 		/// <param name="nResID">Int32 nResID</param>
@@ -419,6 +434,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("PowerPoint", 9)]
 		public NetOffice.PowerPointApi.PPAlert AddAlert()
@@ -431,6 +447,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>
@@ -447,6 +464,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="text">string Text</param>
 		/// <param name="type">NetOffice.PowerPointApi.Enums.PpAlertType Type</param>

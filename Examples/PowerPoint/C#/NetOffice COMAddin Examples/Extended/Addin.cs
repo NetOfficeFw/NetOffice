@@ -36,7 +36,7 @@ namespace NetOfficeTools.ExtendedPPointCS4
         {
             // Enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
             Factory.Console.EnableSharedOutput = true;
-            Factory.Console.SendPipeConsoleMessage("Addin has been loaded.");
+            Factory.Console.SendPipeConsoleMessage(null, "Addin has been loaded.");
 
             // We want observe the current count of open proxies with NOTools.ConsoleMonitor.exe 
             Factory.Settings.EnableProxyCountChannel = true;

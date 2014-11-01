@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppPointer">NetOffice.MSHTMLApi.IMarkupPointer ppPointer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppMarkupContainer">NetOffice.MSHTMLApi.IMarkupContainer ppMarkupContainer</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -127,6 +129,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="tagID">NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID tagID</param>
 		/// <param name="pchAttributes">Int16 pchAttributes</param>
@@ -144,6 +147,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElemCloneThis">NetOffice.MSHTMLApi.IHTMLElement pElemCloneThis</param>
 		/// <param name="ppElementTheClone">NetOffice.MSHTMLApi.IHTMLElement ppElementTheClone</param>
@@ -160,6 +164,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElementInsert">NetOffice.MSHTMLApi.IHTMLElement pElementInsert</param>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
@@ -174,6 +179,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElementRemove">NetOffice.MSHTMLApi.IHTMLElement pElementRemove</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -186,6 +192,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
 		/// <param name="pPointerFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish</param>
@@ -199,6 +206,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointerSourceStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerSourceStart</param>
 		/// <param name="pPointerSourceFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerSourceFinish</param>
@@ -213,6 +221,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointerSourceStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerSourceStart</param>
 		/// <param name="pPointerSourceFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerSourceFinish</param>
@@ -227,6 +236,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pchText">Int16 pchText</param>
 		/// <param name="cch">Int32 cch</param>
@@ -241,6 +251,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pchHTML">Int16 pchHTML</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
@@ -260,6 +271,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="hglobalHTML">_userHGLOBAL hglobalHTML</param>
 		/// <param name="dwFlags">Int32 dwFlags</param>
@@ -279,6 +291,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElement">NetOffice.MSHTMLApi.IHTMLElement pElement</param>
 		/// <param name="pfScoped">Int32 pfScoped</param>
@@ -295,6 +308,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pElement">NetOffice.MSHTMLApi.IHTMLElement pElement</param>
 		/// <param name="ptagId">NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID ptagId</param>
@@ -311,6 +325,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		/// <param name="ptagId">NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID ptagId</param>
@@ -327,6 +342,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="tagID">NetOffice.MSHTMLApi.Enums._ELEMENT_TAG_ID tagID</param>
 		/// <param name="pbstrName">string pbstrName</param>
@@ -343,6 +359,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pIRange">NetOffice.MSHTMLApi.IHTMLTxtRange pIRange</param>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
@@ -357,6 +374,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pPointerStart">NetOffice.MSHTMLApi.IMarkupPointer pPointerStart</param>
 		/// <param name="pPointerFinish">NetOffice.MSHTMLApi.IMarkupPointer pPointerFinish</param>
@@ -371,6 +389,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pchTitle">Int16 pchTitle</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -383,6 +402,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 EndUndoUnit()

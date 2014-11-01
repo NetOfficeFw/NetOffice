@@ -15,7 +15,7 @@ namespace MSComctlLibApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.MSComctlLibApi";
-        private Guid     _componentGuid = new Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1");
+        private Guid[]    _componentGuid = new Guid[]{new Guid("831FDD16-0C5C-11D2-A9FC-0000F8754DA1")};
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;
@@ -55,7 +55,7 @@ namespace MSComctlLibApi.Utils
             }
         }
 
-        public Guid ComponentGuid
+        public Guid[] ComponentGuid
         {
             get
             {

@@ -130,6 +130,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -147,6 +148,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -165,6 +167,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
@@ -178,6 +181,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		[CustomMethodAttribute]
@@ -192,6 +196,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -207,6 +212,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -223,6 +229,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -240,6 +247,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="anchor">optional object Anchor = null (Nothing in visual basic)</param>
 		/// <param name="location">optional NetOffice.OfficeApi.Enums.MsoScriptLocation Location = 2</param>
@@ -258,6 +266,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
 		public void Delete()

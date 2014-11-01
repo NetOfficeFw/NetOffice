@@ -353,6 +353,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="primaryKeySettings">NetOffice.VisioApi.Enums.VisPrimaryKeySettings PrimaryKeySettings</param>
 		/// <param name="primaryKey">String[] PrimaryKey</param>
@@ -370,6 +371,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="primaryKeySettings">NetOffice.VisioApi.Enums.VisPrimaryKeySettings PrimaryKeySettings</param>
 		/// <param name="primaryKey">String[] PrimaryKey</param>
@@ -382,6 +384,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="criteriaString">string CriteriaString</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -394,6 +397,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="dataRowID">Int32 DataRowID</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -414,6 +418,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public void Delete()
@@ -424,6 +429,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public void Refresh()
@@ -434,6 +440,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="newDataAsXML">string NewDataAsXML</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -445,6 +452,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public NetOffice.VisioApi.IVShape[] GetAllRefreshConflicts()
@@ -460,6 +468,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="shapeInConflict">NetOffice.VisioApi.IVShape ShapeInConflict</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
@@ -471,6 +480,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="shapeInConflict">NetOffice.VisioApi.IVShape ShapeInConflict</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]

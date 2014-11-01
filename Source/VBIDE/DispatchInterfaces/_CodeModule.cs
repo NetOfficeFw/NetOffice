@@ -333,6 +333,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="_string">string String</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -344,6 +345,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -355,6 +357,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="_string">string String</param>
@@ -367,6 +370,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="startLine">Int32 StartLine</param>
 		/// <param name="count">optional Int32 Count = 1</param>
@@ -379,6 +383,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="startLine">Int32 StartLine</param>
 		[CustomMethodAttribute]
@@ -391,6 +396,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="line">Int32 Line</param>
 		/// <param name="_string">string String</param>
@@ -403,6 +409,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="eventName">string EventName</param>
 		/// <param name="objectName">string ObjectName</param>
@@ -416,6 +423,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -435,6 +443,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -452,6 +461,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>
@@ -470,6 +480,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="target">string Target</param>
 		/// <param name="startLine">Int32 StartLine</param>

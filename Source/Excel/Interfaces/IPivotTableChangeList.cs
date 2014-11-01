@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tuple">string Tuple</param>
 		/// <param name="value">Double Value</param>
@@ -197,6 +198,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tuple">string Tuple</param>
 		/// <param name="value">Double Value</param>
@@ -212,6 +214,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tuple">string Tuple</param>
 		/// <param name="value">Double Value</param>
@@ -228,6 +231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="tuple">string Tuple</param>
 		/// <param name="value">Double Value</param>

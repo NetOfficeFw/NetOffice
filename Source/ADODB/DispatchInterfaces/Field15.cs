@@ -277,6 +277,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="data">object Data</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
@@ -288,6 +289,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="length">Int32 Length</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]

@@ -673,6 +673,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrName">string bstrName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -686,6 +687,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -699,6 +701,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="pattr">NetOffice.MSHTMLApi.IHTMLDOMAttribute2 pattr</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -712,6 +715,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="name">string name</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -724,6 +728,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -744,6 +749,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="attributeValue">object AttributeValue</param>
@@ -756,6 +762,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="strAttributeName">string strAttributeName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -768,6 +775,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool hasAttributes()

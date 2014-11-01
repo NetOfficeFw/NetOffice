@@ -374,6 +374,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">Int16 Flags</param>
 		/// <param name="xyArray">Double[] xyArray</param>

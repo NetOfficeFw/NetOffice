@@ -163,6 +163,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="applyWebComponentChanges">optional bool ApplyWebComponentChanges = false</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -174,6 +175,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
@@ -185,6 +187,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="domain">string Domain</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]

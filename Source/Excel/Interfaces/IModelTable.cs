@@ -238,6 +238,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 15)]
 		public Int32 Refresh()

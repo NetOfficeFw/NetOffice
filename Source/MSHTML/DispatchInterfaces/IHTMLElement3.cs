@@ -618,6 +618,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="mergeThis">NetOffice.MSHTMLApi.IHTMLElement mergeThis</param>
 		/// <param name="pvarFlags">optional object pvarFlags</param>
@@ -630,6 +631,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="mergeThis">NetOffice.MSHTMLApi.IHTMLElement mergeThis</param>
 		[CustomMethodAttribute]
@@ -642,6 +644,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public void setActive()
@@ -652,6 +655,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrEventName">string bstrEventName</param>
 		/// <param name="pvarEventObject">optional object pvarEventObject</param>
@@ -665,6 +669,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrEventName">string bstrEventName</param>
 		[CustomMethodAttribute]
@@ -678,6 +683,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public bool dragDrop()

@@ -97,6 +97,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -116,6 +117,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -131,6 +133,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -149,6 +152,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -163,6 +167,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -186,6 +191,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -200,6 +206,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -213,6 +220,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -231,6 +239,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -245,6 +254,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -258,6 +268,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -271,6 +282,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nSelMask">Int32 nSelMask</param>
 		[SupportByVersionAttribute("OWC10", 1)]
@@ -283,6 +295,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>
@@ -296,6 +309,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="nNodeId">Int32 nNodeId</param>
 		/// <param name="nTypeId">Int32 nTypeId</param>

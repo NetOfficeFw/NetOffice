@@ -146,6 +146,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -196,6 +197,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
@@ -217,6 +219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -239,6 +242,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -262,6 +266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -286,6 +291,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -311,6 +317,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -337,6 +344,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -364,6 +372,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -392,6 +401,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -421,6 +431,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -451,6 +462,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -482,6 +494,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -514,6 +527,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -547,6 +561,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -581,6 +596,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -616,6 +632,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -652,6 +669,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -689,6 +707,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -727,6 +746,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -766,6 +786,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -806,6 +827,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -847,6 +869,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -889,6 +912,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -932,6 +956,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -976,6 +1001,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1021,6 +1047,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1067,6 +1094,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1114,6 +1142,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1162,6 +1191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1211,6 +1241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">optional object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1261,6 +1292,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1302,6 +1334,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -1315,6 +1348,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1329,6 +1363,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1344,6 +1379,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1360,6 +1396,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1377,6 +1414,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1395,6 +1433,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1414,6 +1453,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1434,6 +1474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1455,6 +1496,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1477,6 +1519,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1500,6 +1543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1524,6 +1568,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1549,6 +1594,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1575,6 +1621,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1602,6 +1649,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1630,6 +1678,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1659,6 +1708,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1689,6 +1739,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1720,6 +1771,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1752,6 +1804,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1785,6 +1838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1819,6 +1873,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1854,6 +1909,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1890,6 +1946,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1927,6 +1984,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -1965,6 +2023,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2004,6 +2063,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2044,6 +2104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2085,6 +2146,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -2097,6 +2159,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -2109,6 +2172,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2150,6 +2214,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -2163,6 +2228,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2177,6 +2243,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2192,6 +2259,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2208,6 +2276,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2225,6 +2294,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2243,6 +2313,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2262,6 +2333,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2282,6 +2354,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2303,6 +2376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2325,6 +2399,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2348,6 +2423,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2372,6 +2448,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2397,6 +2474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2423,6 +2501,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2450,6 +2529,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2478,6 +2558,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2507,6 +2588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2537,6 +2619,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2568,6 +2651,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2600,6 +2684,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2633,6 +2718,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2667,6 +2753,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2702,6 +2789,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2738,6 +2826,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2775,6 +2864,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2813,6 +2903,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2852,6 +2943,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2892,6 +2984,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2933,6 +3026,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -2974,6 +3068,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -2987,6 +3082,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3001,6 +3097,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3016,6 +3113,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3032,6 +3130,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3049,6 +3148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3067,6 +3167,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3086,6 +3187,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3106,6 +3208,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3127,6 +3230,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3149,6 +3253,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3172,6 +3277,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3196,6 +3302,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3221,6 +3328,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3247,6 +3355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3274,6 +3383,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3302,6 +3412,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3331,6 +3442,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3361,6 +3473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3392,6 +3505,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3424,6 +3538,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3457,6 +3572,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3491,6 +3607,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3526,6 +3643,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3562,6 +3680,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3599,6 +3718,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3637,6 +3757,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3676,6 +3797,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3716,6 +3838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3757,6 +3880,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3798,6 +3922,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -3811,6 +3936,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3825,6 +3951,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3840,6 +3967,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3856,6 +3984,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3873,6 +4002,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3891,6 +4021,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3910,6 +4041,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3930,6 +4062,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3951,6 +4084,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3973,6 +4107,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -3996,6 +4131,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4020,6 +4156,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4045,6 +4182,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4071,6 +4209,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4098,6 +4237,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4126,6 +4266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4155,6 +4296,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4185,6 +4327,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4216,6 +4359,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4248,6 +4392,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4281,6 +4426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4315,6 +4461,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4350,6 +4497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4386,6 +4534,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4423,6 +4572,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4461,6 +4611,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4500,6 +4651,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4540,6 +4692,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4581,6 +4734,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4622,6 +4776,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -4635,6 +4790,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4649,6 +4805,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4664,6 +4821,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4680,6 +4838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4697,6 +4856,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4715,6 +4875,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4734,6 +4895,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4754,6 +4916,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4775,6 +4938,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4797,6 +4961,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4820,6 +4985,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4844,6 +5010,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4869,6 +5036,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4895,6 +5063,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4922,6 +5091,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4950,6 +5120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -4979,6 +5150,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5009,6 +5181,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5040,6 +5213,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5072,6 +5246,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5105,6 +5280,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5139,6 +5315,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5174,6 +5351,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5210,6 +5388,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5247,6 +5426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5285,6 +5465,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5324,6 +5505,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5364,6 +5546,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -5405,6 +5588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5446,6 +5630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5460,6 +5645,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5475,6 +5661,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5491,6 +5678,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5508,6 +5696,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5526,6 +5715,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5545,6 +5735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5565,6 +5756,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5586,6 +5778,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5608,6 +5801,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5631,6 +5825,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5655,6 +5850,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5680,6 +5876,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5706,6 +5903,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5733,6 +5931,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5761,6 +5960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5790,6 +5990,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5820,6 +6021,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5851,6 +6053,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5883,6 +6086,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5916,6 +6120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5950,6 +6155,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -5985,6 +6191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6021,6 +6228,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6058,6 +6266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6096,6 +6305,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6135,6 +6345,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6175,6 +6386,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -6216,6 +6428,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6257,6 +6470,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -6270,6 +6484,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6284,6 +6499,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6299,6 +6515,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6315,6 +6532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6332,6 +6550,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6350,6 +6569,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6369,6 +6589,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6389,6 +6610,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6410,6 +6632,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6432,6 +6655,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6455,6 +6679,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6479,6 +6704,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6504,6 +6730,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6530,6 +6757,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6557,6 +6785,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6585,6 +6814,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6614,6 +6844,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6644,6 +6875,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6675,6 +6907,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6707,6 +6940,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6740,6 +6974,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6774,6 +7009,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6809,6 +7045,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6845,6 +7082,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6882,6 +7120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6920,6 +7159,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6959,6 +7199,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -6999,6 +7240,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7040,6 +7282,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7053,6 +7296,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -7066,6 +7310,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7080,6 +7325,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -7093,6 +7339,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7107,6 +7354,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		public Double Pi()
@@ -7118,6 +7366,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -7130,6 +7379,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -7142,6 +7392,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -7155,6 +7406,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -7177,6 +7429,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -7199,6 +7452,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -7222,6 +7476,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -7244,6 +7499,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -7267,6 +7523,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -7280,6 +7537,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7321,6 +7579,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -7334,6 +7593,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7348,6 +7608,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7363,6 +7624,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7379,6 +7641,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7396,6 +7659,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7414,6 +7678,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7433,6 +7698,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7453,6 +7719,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7474,6 +7741,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7496,6 +7764,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7519,6 +7788,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7543,6 +7813,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7568,6 +7839,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7594,6 +7866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7621,6 +7894,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7649,6 +7923,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7678,6 +7953,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7708,6 +7984,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7739,6 +8016,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7771,6 +8049,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7804,6 +8083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7838,6 +8118,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7873,6 +8154,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7909,6 +8191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7946,6 +8229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -7984,6 +8268,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8023,6 +8308,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8063,6 +8349,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8104,6 +8391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8145,6 +8433,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -8158,6 +8447,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8172,6 +8462,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8187,6 +8478,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8203,6 +8495,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8220,6 +8513,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8238,6 +8532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8257,6 +8552,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8277,6 +8573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8298,6 +8595,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8320,6 +8618,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8343,6 +8642,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8367,6 +8667,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8392,6 +8693,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8418,6 +8720,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8445,6 +8748,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8473,6 +8777,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8502,6 +8807,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8532,6 +8838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8563,6 +8870,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8595,6 +8903,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8628,6 +8937,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8662,6 +8972,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8697,6 +9008,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8733,6 +9045,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8770,6 +9083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8808,6 +9122,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8847,6 +9162,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8887,6 +9203,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -8928,6 +9245,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -8942,6 +9260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -8956,6 +9275,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -8970,6 +9290,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -8984,6 +9305,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -8998,6 +9320,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -9012,6 +9335,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9053,6 +9377,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -9066,6 +9391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9080,6 +9406,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9095,6 +9422,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9111,6 +9439,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9128,6 +9457,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9146,6 +9476,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9165,6 +9496,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9185,6 +9517,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9206,6 +9539,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9228,6 +9562,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9251,6 +9586,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9275,6 +9611,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9300,6 +9637,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9326,6 +9664,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9353,6 +9692,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9381,6 +9721,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9410,6 +9751,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9440,6 +9782,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9471,6 +9814,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9503,6 +9847,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9536,6 +9881,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9570,6 +9916,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9605,6 +9952,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9641,6 +9989,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9678,6 +10027,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9716,6 +10066,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9755,6 +10106,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9795,6 +10147,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9836,6 +10189,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -9850,6 +10204,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -9863,6 +10218,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9886,6 +10242,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -9907,6 +10264,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9929,6 +10287,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9952,6 +10311,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -9975,6 +10335,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -9996,6 +10357,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10018,6 +10380,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10041,6 +10404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10064,6 +10428,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -10085,6 +10450,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10107,6 +10473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10130,6 +10497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10153,6 +10521,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -10174,6 +10543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10196,6 +10566,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10219,6 +10590,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10235,6 +10607,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10250,6 +10623,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10266,6 +10640,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10282,6 +10657,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10297,6 +10673,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10313,6 +10690,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10329,6 +10707,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10344,6 +10723,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10360,6 +10740,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10376,6 +10757,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10391,6 +10773,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10407,6 +10790,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10424,6 +10808,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10439,6 +10824,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10455,6 +10841,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10472,6 +10859,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10486,6 +10874,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10499,6 +10888,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -10512,6 +10902,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10526,6 +10917,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10540,6 +10932,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -10553,6 +10946,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -10566,6 +10960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -10580,6 +10975,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -10594,6 +10990,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -10614,6 +11011,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -10627,6 +11025,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -10639,6 +11038,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -10651,6 +11051,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10700,6 +11101,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10722,6 +11124,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10745,6 +11148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10769,6 +11173,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10794,6 +11199,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10820,6 +11226,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10847,6 +11254,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10875,6 +11283,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10904,6 +11313,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10934,6 +11344,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10965,6 +11376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -10997,6 +11409,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11030,6 +11443,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11064,6 +11478,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11099,6 +11514,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11135,6 +11551,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11172,6 +11589,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11210,6 +11628,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11249,6 +11668,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11289,6 +11709,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11330,6 +11751,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11372,6 +11794,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11415,6 +11838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11459,6 +11883,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11504,6 +11929,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11550,6 +11976,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11597,6 +12024,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11645,6 +12073,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11694,6 +12123,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11717,6 +12147,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11740,6 +12171,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11763,6 +12195,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -11786,6 +12219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -11799,6 +12233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -11812,6 +12247,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -11824,6 +12260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -11836,6 +12273,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -11851,6 +12289,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -11866,6 +12305,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -11881,6 +12321,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -11895,6 +12336,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -11909,6 +12351,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -11921,6 +12364,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -11933,6 +12377,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -11945,6 +12390,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -11959,6 +12405,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -11974,6 +12421,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -11990,6 +12438,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12006,6 +12455,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -12018,6 +12468,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -12030,6 +12481,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -12050,6 +12502,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -12071,6 +12524,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12088,6 +12542,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12104,6 +12559,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12121,6 +12577,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12138,6 +12595,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12154,6 +12612,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -12171,6 +12630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12212,6 +12672,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -12225,6 +12686,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12239,6 +12701,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12254,6 +12717,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12270,6 +12734,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12287,6 +12752,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12305,6 +12771,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12324,6 +12791,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12344,6 +12812,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12365,6 +12834,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12387,6 +12857,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12410,6 +12881,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12434,6 +12906,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12459,6 +12932,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12485,6 +12959,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12512,6 +12987,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12540,6 +13016,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12569,6 +13046,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12599,6 +13077,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12630,6 +13109,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12662,6 +13142,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12695,6 +13176,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12729,6 +13211,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12764,6 +13247,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12800,6 +13284,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12837,6 +13322,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12875,6 +13361,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12914,6 +13401,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12954,6 +13442,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -12995,6 +13484,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13036,6 +13526,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -13049,6 +13540,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13063,6 +13555,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13078,6 +13571,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13094,6 +13588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13111,6 +13606,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13129,6 +13625,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13148,6 +13645,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13168,6 +13666,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13189,6 +13688,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13211,6 +13711,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13234,6 +13735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13258,6 +13760,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13283,6 +13786,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13309,6 +13813,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13336,6 +13841,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13364,6 +13870,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13393,6 +13900,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13423,6 +13931,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13454,6 +13963,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13486,6 +13996,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13519,6 +14030,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13553,6 +14065,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13588,6 +14101,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13624,6 +14138,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13661,6 +14176,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13699,6 +14215,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13738,6 +14255,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13778,6 +14296,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13819,6 +14338,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -13831,6 +14351,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -13845,6 +14366,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -13857,6 +14379,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13898,6 +14421,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -13911,6 +14435,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13925,6 +14450,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13940,6 +14466,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13956,6 +14483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13973,6 +14501,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -13991,6 +14520,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14010,6 +14540,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14030,6 +14561,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14051,6 +14583,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14073,6 +14606,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14096,6 +14630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14120,6 +14655,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14145,6 +14681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14171,6 +14708,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14198,6 +14736,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14226,6 +14765,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14255,6 +14795,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14285,6 +14826,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14316,6 +14858,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14348,6 +14891,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14381,6 +14925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14415,6 +14960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14450,6 +14996,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14486,6 +15033,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14523,6 +15071,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14561,6 +15110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14600,6 +15150,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14640,6 +15191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14681,6 +15233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14722,6 +15275,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -14735,6 +15289,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14749,6 +15304,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14764,6 +15320,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14780,6 +15337,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14797,6 +15355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14815,6 +15374,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14834,6 +15394,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14854,6 +15415,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14875,6 +15437,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14897,6 +15460,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14920,6 +15484,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14944,6 +15509,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14969,6 +15535,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -14995,6 +15562,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15022,6 +15590,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15050,6 +15619,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15079,6 +15649,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15109,6 +15680,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15140,6 +15712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15172,6 +15745,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15205,6 +15779,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15239,6 +15814,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15274,6 +15850,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15310,6 +15887,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15347,6 +15925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15385,6 +15964,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15424,6 +16004,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15464,6 +16045,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15505,6 +16087,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -15519,6 +16102,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -15533,6 +16117,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -15545,6 +16130,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -15559,6 +16145,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15572,6 +16159,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -15586,6 +16174,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -15600,6 +16189,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -15614,6 +16204,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -15628,6 +16219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15643,6 +16235,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15656,6 +16249,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15669,6 +16263,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -15683,6 +16278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -15697,6 +16293,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -15711,6 +16308,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -15725,6 +16323,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15743,6 +16342,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15760,6 +16360,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -15778,6 +16379,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15819,6 +16421,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -15832,6 +16435,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15846,6 +16450,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15861,6 +16466,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15877,6 +16483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15894,6 +16501,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15912,6 +16520,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15931,6 +16540,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15951,6 +16561,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15972,6 +16583,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -15994,6 +16606,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16017,6 +16630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16041,6 +16655,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16066,6 +16681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16092,6 +16708,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16119,6 +16736,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16147,6 +16765,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16176,6 +16795,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16206,6 +16826,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16237,6 +16858,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16269,6 +16891,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16302,6 +16925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16336,6 +16960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16371,6 +16996,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16407,6 +17033,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16444,6 +17071,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16482,6 +17110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16521,6 +17150,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16561,6 +17191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16602,6 +17233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16643,6 +17275,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -16656,6 +17289,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16670,6 +17304,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16685,6 +17320,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16701,6 +17337,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16718,6 +17355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16736,6 +17374,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16755,6 +17394,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16775,6 +17415,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16796,6 +17437,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16818,6 +17460,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16841,6 +17484,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16865,6 +17509,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16890,6 +17535,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16916,6 +17562,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16943,6 +17590,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -16971,6 +17619,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17000,6 +17649,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17030,6 +17680,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17061,6 +17712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17093,6 +17745,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17126,6 +17779,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17160,6 +17814,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17195,6 +17850,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17231,6 +17887,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17268,6 +17925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17306,6 +17964,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17345,6 +18004,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17385,6 +18045,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17426,6 +18087,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17438,6 +18100,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17450,6 +18113,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17462,6 +18126,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17474,6 +18139,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17486,6 +18152,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -17498,6 +18165,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -17520,6 +18188,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -17536,6 +18205,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -17552,6 +18222,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -17573,6 +18244,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17614,6 +18286,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -17627,6 +18300,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17641,6 +18315,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17656,6 +18331,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17672,6 +18348,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17689,6 +18366,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17707,6 +18385,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17726,6 +18405,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17746,6 +18426,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17767,6 +18448,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17789,6 +18471,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17812,6 +18495,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17836,6 +18520,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17861,6 +18546,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17887,6 +18573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17914,6 +18601,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17942,6 +18630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -17971,6 +18660,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18001,6 +18691,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18032,6 +18723,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18064,6 +18756,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18097,6 +18790,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18131,6 +18825,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18166,6 +18861,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18202,6 +18898,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18239,6 +18936,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18277,6 +18975,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18316,6 +19015,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18356,6 +19056,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -18397,6 +19098,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18413,6 +19115,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18428,6 +19131,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18444,6 +19148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18456,6 +19161,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18472,6 +19178,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18487,6 +19194,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18503,6 +19211,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18518,6 +19227,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18531,6 +19241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18544,6 +19255,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18557,6 +19269,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18571,6 +19284,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18585,6 +19299,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18597,6 +19312,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18611,6 +19327,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18625,6 +19342,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18639,6 +19357,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18651,6 +19370,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18663,6 +19383,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18676,6 +19397,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18691,6 +19413,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18705,6 +19428,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18718,6 +19442,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18733,6 +19458,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18747,6 +19473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18761,6 +19488,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18775,6 +19503,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18790,6 +19519,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18802,6 +19532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18816,6 +19547,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18828,6 +19560,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18842,6 +19575,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -18854,6 +19588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18867,6 +19602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18881,6 +19617,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18895,6 +19632,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -18910,6 +19648,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18923,6 +19662,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18936,6 +19676,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18949,6 +19690,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18962,6 +19704,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18975,6 +19718,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -18988,6 +19732,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19002,6 +19747,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19015,6 +19761,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19028,6 +19775,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19041,6 +19789,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19054,6 +19803,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19067,6 +19817,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19080,6 +19831,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19095,6 +19847,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19110,6 +19863,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -19125,6 +19879,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19166,6 +19921,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -19179,6 +19935,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19193,6 +19950,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19208,6 +19966,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19224,6 +19983,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19241,6 +20001,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19259,6 +20020,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19278,6 +20040,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19298,6 +20061,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19319,6 +20083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19341,6 +20106,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19364,6 +20130,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19388,6 +20155,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19413,6 +20181,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19439,6 +20208,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19466,6 +20236,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19494,6 +20265,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19523,6 +20295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19553,6 +20326,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19584,6 +20358,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19616,6 +20391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19649,6 +20425,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19683,6 +20460,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19718,6 +20496,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19754,6 +20533,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19791,6 +20571,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19829,6 +20610,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19868,6 +20650,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19908,6 +20691,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19949,6 +20733,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -19990,6 +20775,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -20003,6 +20789,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20017,6 +20804,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20032,6 +20820,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20048,6 +20837,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20065,6 +20855,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20083,6 +20874,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20102,6 +20894,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20122,6 +20915,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20143,6 +20937,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20165,6 +20960,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20188,6 +20984,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20212,6 +21009,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20237,6 +21035,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20263,6 +21062,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20290,6 +21090,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20318,6 +21119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20347,6 +21149,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20377,6 +21180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20408,6 +21212,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20440,6 +21245,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20473,6 +21279,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20507,6 +21314,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20542,6 +21350,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20578,6 +21387,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20615,6 +21425,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20653,6 +21464,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20692,6 +21504,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20732,6 +21545,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20773,6 +21587,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20814,6 +21629,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -20827,6 +21643,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20841,6 +21658,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20856,6 +21674,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20872,6 +21691,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20889,6 +21709,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20907,6 +21728,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20926,6 +21748,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20946,6 +21769,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20967,6 +21791,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -20989,6 +21814,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21012,6 +21838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21036,6 +21863,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21061,6 +21889,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21087,6 +21916,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21114,6 +21944,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21142,6 +21973,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21171,6 +22003,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21201,6 +22034,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21232,6 +22066,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21264,6 +22099,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21297,6 +22133,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21331,6 +22168,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21366,6 +22204,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21402,6 +22241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21439,6 +22279,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21477,6 +22318,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21516,6 +22358,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21556,6 +22399,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21597,6 +22441,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21638,6 +22483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -21651,6 +22497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21665,6 +22512,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21680,6 +22528,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21696,6 +22545,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21713,6 +22563,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21731,6 +22582,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21750,6 +22602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21770,6 +22623,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21791,6 +22645,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21813,6 +22668,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21836,6 +22692,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21860,6 +22717,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21885,6 +22743,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21911,6 +22770,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21938,6 +22798,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21966,6 +22827,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -21995,6 +22857,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22025,6 +22888,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22056,6 +22920,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22088,6 +22953,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22121,6 +22987,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22155,6 +23022,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22190,6 +23058,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22226,6 +23095,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22263,6 +23133,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22301,6 +23172,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22340,6 +23212,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22380,6 +23253,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22421,6 +23295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22462,6 +23337,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -22475,6 +23351,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22489,6 +23366,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22504,6 +23382,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22520,6 +23399,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22537,6 +23417,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22555,6 +23436,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22574,6 +23456,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22594,6 +23477,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22615,6 +23499,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22637,6 +23522,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22660,6 +23546,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22684,6 +23571,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22709,6 +23597,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22735,6 +23624,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22762,6 +23652,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22790,6 +23681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22819,6 +23711,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22849,6 +23742,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22880,6 +23774,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22912,6 +23807,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22945,6 +23841,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -22979,6 +23876,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23014,6 +23912,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23050,6 +23949,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23087,6 +23987,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23125,6 +24026,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23164,6 +24066,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23204,6 +24107,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23245,6 +24149,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23286,6 +24191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -23299,6 +24205,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23313,6 +24220,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23328,6 +24236,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23344,6 +24253,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23361,6 +24271,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23379,6 +24290,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23398,6 +24310,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23418,6 +24331,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23439,6 +24353,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23461,6 +24376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23484,6 +24400,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23508,6 +24425,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23533,6 +24451,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23559,6 +24478,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23586,6 +24506,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23614,6 +24535,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23643,6 +24565,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23673,6 +24596,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23704,6 +24628,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23736,6 +24661,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23769,6 +24695,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23803,6 +24730,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23838,6 +24766,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23874,6 +24803,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23911,6 +24841,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23949,6 +24880,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -23988,6 +24920,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24028,6 +24961,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24069,6 +25003,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24083,6 +25018,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24097,6 +25033,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24110,6 +25047,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24123,6 +25061,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24136,6 +25075,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24149,6 +25089,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24163,6 +25104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -24177,6 +25119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24218,6 +25161,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -24231,6 +25175,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24245,6 +25190,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24260,6 +25206,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24276,6 +25223,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24293,6 +25241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24311,6 +25260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24330,6 +25280,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24350,6 +25301,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24371,6 +25323,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24393,6 +25346,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24416,6 +25370,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24440,6 +25395,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24465,6 +25421,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24491,6 +25448,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24518,6 +25476,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24546,6 +25505,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24575,6 +25535,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24605,6 +25566,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24636,6 +25598,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24668,6 +25631,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24701,6 +25665,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24735,6 +25700,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24770,6 +25736,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24806,6 +25773,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24843,6 +25811,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24881,6 +25850,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24920,6 +25890,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -24960,6 +25931,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -25001,6 +25973,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -25014,6 +25987,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -25027,6 +26001,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -25040,6 +26015,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -25052,6 +26028,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -25064,6 +26041,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25105,6 +26083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25119,6 +26098,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25134,6 +26114,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25150,6 +26131,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25167,6 +26149,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25185,6 +26168,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25204,6 +26188,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25224,6 +26209,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25245,6 +26231,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25267,6 +26254,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25290,6 +26278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25314,6 +26303,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25339,6 +26329,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25365,6 +26356,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25392,6 +26384,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25420,6 +26413,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25449,6 +26443,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25479,6 +26474,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25510,6 +26506,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25542,6 +26539,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25575,6 +26573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25609,6 +26608,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25644,6 +26644,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25680,6 +26681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25717,6 +26719,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25755,6 +26758,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25794,6 +26798,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25834,6 +26839,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -25875,6 +26881,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -25889,6 +26896,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -25903,6 +26911,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -25916,6 +26925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -25928,6 +26938,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -25943,6 +26954,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -25956,6 +26968,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -25969,6 +26982,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -25981,6 +26995,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -25993,6 +27008,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
@@ -26005,6 +27021,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
@@ -26017,6 +27034,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26030,6 +27048,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26043,6 +27062,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26056,6 +27076,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26069,6 +27090,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26082,6 +27104,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26095,6 +27118,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26108,6 +27132,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26121,6 +27146,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26134,6 +27160,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -26147,6 +27174,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26196,6 +27224,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26219,6 +27248,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26243,6 +27273,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26268,6 +27299,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26294,6 +27326,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26321,6 +27354,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26349,6 +27383,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26378,6 +27413,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26408,6 +27444,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26439,6 +27476,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26471,6 +27509,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26504,6 +27543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26538,6 +27578,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26573,6 +27614,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26609,6 +27651,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26646,6 +27689,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26684,6 +27728,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26723,6 +27768,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26763,6 +27809,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26804,6 +27851,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26846,6 +27894,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26889,6 +27938,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26933,6 +27983,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -26978,6 +28029,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -27024,6 +28076,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -27071,6 +28124,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -27119,6 +28173,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 10, 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="progID">object progID</param>
 		/// <param name="server">object server</param>
@@ -27168,6 +28223,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27181,6 +28237,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27194,6 +28251,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27206,6 +28264,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27219,6 +28278,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27232,6 +28292,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27245,6 +28306,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27258,6 +28320,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27271,6 +28334,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27284,6 +28348,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27297,6 +28362,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27310,6 +28376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27323,6 +28390,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27336,6 +28404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27349,6 +28418,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27362,6 +28432,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27374,6 +28445,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27386,6 +28458,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27399,6 +28472,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27412,6 +28486,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27425,6 +28500,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27438,6 +28514,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -27451,6 +28528,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -27464,6 +28542,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -27477,6 +28556,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27489,6 +28569,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27501,6 +28582,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27513,6 +28595,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27525,6 +28608,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27537,6 +28621,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27549,6 +28634,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27561,6 +28647,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27573,6 +28660,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27585,6 +28673,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27597,6 +28686,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27609,6 +28699,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -27621,6 +28712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -27635,6 +28727,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -27649,6 +28742,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27690,6 +28784,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -27703,6 +28798,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27717,6 +28813,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27732,6 +28829,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27748,6 +28846,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27765,6 +28864,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27783,6 +28883,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27802,6 +28903,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27822,6 +28924,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27843,6 +28946,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27865,6 +28969,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27888,6 +28993,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27912,6 +29018,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27937,6 +29044,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27963,6 +29071,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -27990,6 +29099,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28018,6 +29128,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28047,6 +29158,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28077,6 +29189,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28108,6 +29221,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28140,6 +29254,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28173,6 +29288,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28207,6 +29323,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28242,6 +29359,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28278,6 +29396,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28315,6 +29434,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28353,6 +29473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28392,6 +29513,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28432,6 +29554,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28473,6 +29596,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28514,6 +29638,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -28527,6 +29652,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28541,6 +29667,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28556,6 +29683,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28572,6 +29700,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28589,6 +29718,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28607,6 +29737,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28626,6 +29757,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28646,6 +29778,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28667,6 +29800,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28689,6 +29823,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28712,6 +29847,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28736,6 +29872,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28761,6 +29898,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28787,6 +29925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28814,6 +29953,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28842,6 +29982,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28871,6 +30012,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28901,6 +30043,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28932,6 +30075,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28964,6 +30108,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -28997,6 +30142,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29031,6 +30177,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29066,6 +30213,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29102,6 +30250,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29139,6 +30288,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29177,6 +30327,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29216,6 +30367,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29256,6 +30408,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29297,6 +30450,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29312,6 +30466,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -29324,6 +30479,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -29336,6 +30492,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29349,6 +30506,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29362,6 +30520,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -29375,6 +30534,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29388,6 +30548,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -29401,6 +30562,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -29413,6 +30575,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -29425,6 +30588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29438,6 +30602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -29451,6 +30616,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -29464,6 +30630,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
@@ -29476,6 +30643,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29489,6 +30657,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29502,6 +30671,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29515,6 +30685,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29528,6 +30699,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29542,6 +30714,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29556,6 +30729,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29569,6 +30743,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29586,6 +30761,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29603,6 +30779,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29620,6 +30797,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29637,6 +30815,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29653,6 +30832,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29669,6 +30849,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29685,6 +30866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29701,6 +30883,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29717,6 +30900,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29733,6 +30917,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29749,6 +30934,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29765,6 +30951,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29781,6 +30968,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29797,6 +30985,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29811,6 +31000,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29825,6 +31015,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29839,6 +31030,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29853,6 +31045,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29867,6 +31060,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29881,6 +31075,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29899,6 +31094,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29917,6 +31113,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29930,6 +31127,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29943,6 +31141,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29956,6 +31155,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29969,6 +31169,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -29986,6 +31187,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30003,6 +31205,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30016,6 +31219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30029,6 +31233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30043,6 +31248,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30057,6 +31263,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30072,6 +31279,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30087,6 +31295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30102,6 +31311,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30117,6 +31327,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30132,6 +31343,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30147,6 +31359,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30162,6 +31375,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30177,6 +31391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30192,6 +31407,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30207,6 +31423,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30222,6 +31439,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30237,6 +31455,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30254,6 +31473,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30271,6 +31491,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30288,6 +31509,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30305,6 +31527,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30324,6 +31547,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30343,6 +31567,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30362,6 +31587,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30381,6 +31607,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30401,6 +31628,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30421,6 +31649,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30441,6 +31670,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30461,6 +31691,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30474,6 +31705,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30487,6 +31719,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -30500,6 +31733,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30518,6 +31752,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30536,6 +31771,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30554,6 +31790,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30572,6 +31809,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30586,6 +31824,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30604,6 +31843,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30622,6 +31862,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30638,6 +31879,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30654,6 +31896,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30668,6 +31911,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30682,6 +31926,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30696,6 +31941,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -30710,6 +31956,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30751,6 +31998,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -30764,6 +32012,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30778,6 +32027,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30793,6 +32043,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30809,6 +32060,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30826,6 +32078,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30844,6 +32097,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30863,6 +32117,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30883,6 +32138,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30904,6 +32160,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30926,6 +32183,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30949,6 +32207,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30973,6 +32232,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -30998,6 +32258,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31024,6 +32285,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31051,6 +32313,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31079,6 +32342,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31108,6 +32372,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31138,6 +32403,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31169,6 +32435,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31201,6 +32468,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31234,6 +32502,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31268,6 +32537,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31303,6 +32573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31339,6 +32610,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31376,6 +32648,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31414,6 +32687,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31453,6 +32727,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31493,6 +32768,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31534,6 +32810,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31575,6 +32852,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -31588,6 +32866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31602,6 +32881,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31617,6 +32897,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31633,6 +32914,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31650,6 +32932,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31668,6 +32951,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31687,6 +32971,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31707,6 +32992,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31728,6 +33014,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31750,6 +33037,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31773,6 +33061,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31797,6 +33086,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31822,6 +33112,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31848,6 +33139,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31875,6 +33167,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31903,6 +33196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31932,6 +33226,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31962,6 +33257,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -31993,6 +33289,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32025,6 +33322,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32058,6 +33356,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32092,6 +33391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32127,6 +33427,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32163,6 +33464,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32200,6 +33502,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32238,6 +33541,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32277,6 +33581,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32317,6 +33622,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32358,6 +33664,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32399,6 +33706,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -32412,6 +33720,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32426,6 +33735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32441,6 +33751,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32457,6 +33768,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32474,6 +33786,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32492,6 +33805,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32511,6 +33825,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32531,6 +33846,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32552,6 +33868,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32574,6 +33891,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32597,6 +33915,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32621,6 +33940,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32646,6 +33966,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32672,6 +33993,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32699,6 +34021,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32727,6 +34050,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32756,6 +34080,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32786,6 +34111,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32817,6 +34143,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32849,6 +34176,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32882,6 +34210,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32916,6 +34245,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32951,6 +34281,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -32987,6 +34318,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -33024,6 +34356,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -33062,6 +34395,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -33101,6 +34435,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -33141,6 +34476,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -33182,6 +34518,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -33195,6 +34532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33235,6 +34573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33250,6 +34589,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33266,6 +34606,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33283,6 +34624,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33301,6 +34643,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33320,6 +34663,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33340,6 +34684,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33361,6 +34706,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33383,6 +34729,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33406,6 +34753,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33430,6 +34778,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33455,6 +34804,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33481,6 +34831,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33508,6 +34859,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33536,6 +34888,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33565,6 +34918,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33595,6 +34949,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33626,6 +34981,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33658,6 +35014,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33691,6 +35048,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33725,6 +35083,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33760,6 +35119,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33796,6 +35156,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33833,6 +35194,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33871,6 +35233,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33910,6 +35273,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -33950,6 +35314,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -33991,6 +35356,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34005,6 +35371,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34020,6 +35387,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34036,6 +35404,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34053,6 +35422,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34071,6 +35441,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34090,6 +35461,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34110,6 +35482,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34131,6 +35504,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34153,6 +35527,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34176,6 +35551,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34200,6 +35576,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34225,6 +35602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34251,6 +35629,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34278,6 +35657,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34306,6 +35686,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34335,6 +35716,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34365,6 +35747,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34396,6 +35779,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34428,6 +35812,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34461,6 +35846,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34495,6 +35881,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34530,6 +35917,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34566,6 +35954,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34603,6 +35992,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34641,6 +36031,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34680,6 +36071,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34720,6 +36112,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34761,6 +36154,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34775,6 +36169,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -34789,6 +36184,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34829,6 +36225,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34844,6 +36241,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34860,6 +36258,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34877,6 +36276,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34895,6 +36295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34914,6 +36315,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34934,6 +36336,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34955,6 +36358,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -34977,6 +36381,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35000,6 +36405,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35024,6 +36430,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35049,6 +36456,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35075,6 +36483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35102,6 +36511,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35130,6 +36540,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35159,6 +36570,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35189,6 +36601,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35220,6 +36633,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35252,6 +36666,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35285,6 +36700,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35319,6 +36735,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35354,6 +36771,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35390,6 +36808,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35427,6 +36846,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35465,6 +36885,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35504,6 +36925,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -35544,6 +36966,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -35565,6 +36988,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35606,6 +37030,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35621,6 +37046,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35637,6 +37063,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35654,6 +37081,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35672,6 +37100,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35691,6 +37120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35711,6 +37141,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35732,6 +37163,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35754,6 +37186,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35777,6 +37210,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35801,6 +37235,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35826,6 +37261,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35852,6 +37288,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35879,6 +37316,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35907,6 +37345,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35936,6 +37375,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35966,6 +37406,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -35997,6 +37438,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36029,6 +37471,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36062,6 +37505,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36096,6 +37540,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36131,6 +37576,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36167,6 +37613,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36204,6 +37651,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36242,6 +37690,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36281,6 +37730,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36321,6 +37771,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36362,6 +37813,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36376,6 +37828,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36390,6 +37843,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -36403,6 +37857,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -36416,6 +37871,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -36429,6 +37885,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -36442,6 +37899,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36456,6 +37914,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36471,6 +37930,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -36485,6 +37945,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36534,6 +37995,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -36555,6 +38017,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36577,6 +38040,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36600,6 +38064,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36624,6 +38089,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36649,6 +38115,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36675,6 +38142,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36702,6 +38170,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36730,6 +38199,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36759,6 +38229,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36789,6 +38260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36820,6 +38292,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36852,6 +38325,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36885,6 +38359,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36919,6 +38394,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36954,6 +38430,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -36990,6 +38467,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37027,6 +38505,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37065,6 +38544,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37104,6 +38584,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37144,6 +38625,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37185,6 +38667,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37227,6 +38710,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37270,6 +38754,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37314,6 +38799,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37359,6 +38845,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37405,6 +38892,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37452,6 +38940,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37500,6 +38989,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37549,6 +39039,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37590,6 +39081,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -37603,6 +39095,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37617,6 +39110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37632,6 +39126,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37648,6 +39143,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37665,6 +39161,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37683,6 +39180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37702,6 +39200,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37722,6 +39221,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37743,6 +39243,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37765,6 +39266,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37788,6 +39290,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37812,6 +39315,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37837,6 +39341,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37863,6 +39368,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37890,6 +39396,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37918,6 +39425,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37947,6 +39455,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -37977,6 +39486,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38008,6 +39518,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38040,6 +39551,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38073,6 +39585,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38107,6 +39620,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38142,6 +39656,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38178,6 +39693,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38215,6 +39731,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38253,6 +39770,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38292,6 +39810,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38332,6 +39851,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38373,6 +39893,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38388,6 +39909,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38402,6 +39924,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38415,6 +39938,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38428,6 +39952,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38442,6 +39967,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38456,6 +39982,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38470,6 +39997,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38484,6 +40012,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38498,6 +40027,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38511,6 +40041,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -38524,6 +40055,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -38538,6 +40070,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -38552,6 +40085,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -38566,6 +40100,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">NetOffice.ExcelApi.Range Arg2</param>
@@ -38580,6 +40115,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38621,6 +40157,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -38634,6 +40171,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38648,6 +40186,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38663,6 +40202,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38679,6 +40219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38696,6 +40237,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38714,6 +40256,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38733,6 +40276,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38753,6 +40297,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38774,6 +40319,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38796,6 +40342,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38819,6 +40366,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38843,6 +40391,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38868,6 +40417,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38894,6 +40444,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38921,6 +40472,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38949,6 +40501,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -38978,6 +40531,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39008,6 +40562,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39039,6 +40594,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39071,6 +40627,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39104,6 +40661,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39138,6 +40696,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39173,6 +40732,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39209,6 +40769,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39246,6 +40807,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39284,6 +40846,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39323,6 +40886,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39363,6 +40927,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39404,6 +40969,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39445,6 +41011,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -39458,6 +41025,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39472,6 +41040,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39487,6 +41056,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39503,6 +41073,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39520,6 +41091,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39538,6 +41110,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39557,6 +41130,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39577,6 +41151,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39598,6 +41173,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39620,6 +41196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39643,6 +41220,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39667,6 +41245,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39692,6 +41271,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39718,6 +41298,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39745,6 +41326,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39773,6 +41355,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39802,6 +41385,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39832,6 +41416,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39863,6 +41448,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39895,6 +41481,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39928,6 +41515,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39962,6 +41550,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -39997,6 +41586,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40033,6 +41623,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40070,6 +41661,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40108,6 +41700,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40147,6 +41740,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40187,6 +41781,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40228,6 +41823,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -40242,6 +41838,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -40255,6 +41852,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -40268,6 +41866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -40281,6 +41880,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -40294,6 +41894,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40335,6 +41936,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -40348,6 +41950,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40362,6 +41965,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40377,6 +41981,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40393,6 +41998,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40410,6 +42016,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40428,6 +42035,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40447,6 +42055,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40467,6 +42076,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40488,6 +42098,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40510,6 +42121,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40533,6 +42145,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40557,6 +42170,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40582,6 +42196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40608,6 +42223,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40635,6 +42251,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40663,6 +42280,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40692,6 +42310,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40722,6 +42341,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40753,6 +42373,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40785,6 +42406,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40818,6 +42440,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40852,6 +42475,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40887,6 +42511,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40923,6 +42548,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40960,6 +42586,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -40998,6 +42625,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41037,6 +42665,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41077,6 +42706,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41118,6 +42748,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41159,6 +42790,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -41172,6 +42804,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41186,6 +42819,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41201,6 +42835,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41217,6 +42852,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41234,6 +42870,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41252,6 +42889,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41271,6 +42909,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41291,6 +42930,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41312,6 +42952,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41334,6 +42975,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41357,6 +42999,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41381,6 +43024,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41406,6 +43050,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41432,6 +43077,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41459,6 +43105,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41487,6 +43134,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41516,6 +43164,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41546,6 +43195,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41577,6 +43227,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41609,6 +43260,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41642,6 +43294,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41676,6 +43329,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41711,6 +43365,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41747,6 +43402,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41784,6 +43440,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41822,6 +43479,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41861,6 +43519,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41901,6 +43560,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -41942,6 +43602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -41957,6 +43618,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -41972,6 +43634,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -41986,6 +43649,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -42001,6 +43665,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -42016,6 +43681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -42030,6 +43696,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -42045,6 +43712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42058,6 +43726,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -42071,6 +43740,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -42085,6 +43755,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42135,6 +43806,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -42157,6 +43829,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42180,6 +43853,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42204,6 +43878,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42229,6 +43904,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42255,6 +43931,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42282,6 +43959,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42310,6 +43988,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42339,6 +44018,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42369,6 +44049,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42400,6 +44081,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42432,6 +44114,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42465,6 +44148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42499,6 +44183,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42534,6 +44219,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42570,6 +44256,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42607,6 +44294,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42645,6 +44333,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42684,6 +44373,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42724,6 +44414,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42765,6 +44456,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42807,6 +44499,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42850,6 +44543,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42894,6 +44588,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42939,6 +44634,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -42985,6 +44681,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43032,6 +44729,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43080,6 +44778,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43129,6 +44828,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43179,6 +44879,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43196,6 +44897,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43212,6 +44914,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43229,6 +44932,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43245,6 +44949,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43260,6 +44965,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43276,6 +44982,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43290,6 +44997,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43303,6 +45011,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43316,6 +45025,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43329,6 +45039,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43344,6 +45055,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43358,6 +45070,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43372,6 +45085,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43386,6 +45100,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43402,6 +45117,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43417,6 +45133,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43431,6 +45148,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43446,6 +45164,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">bool Arg2</param>
@@ -43459,6 +45178,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -43471,6 +45191,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -43486,6 +45207,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43500,6 +45222,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43514,6 +45237,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43529,6 +45253,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43543,6 +45268,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -43555,6 +45281,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -43567,6 +45294,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
@@ -43579,6 +45307,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43592,6 +45321,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -43605,6 +45335,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43618,6 +45349,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 14, 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -43631,6 +45363,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43643,6 +45376,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43655,6 +45389,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43667,6 +45402,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43679,6 +45415,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43691,6 +45428,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43703,6 +45441,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43715,6 +45454,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43727,6 +45467,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43739,6 +45480,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43751,6 +45493,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43763,6 +45506,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43775,6 +45519,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43787,6 +45532,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -43799,6 +45545,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43812,6 +45559,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43825,6 +45573,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43838,6 +45587,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43851,6 +45601,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -43864,6 +45615,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43905,6 +45657,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -43918,6 +45671,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43932,6 +45686,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43947,6 +45702,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43963,6 +45719,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43980,6 +45737,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -43998,6 +45756,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44017,6 +45776,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44037,6 +45797,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44058,6 +45819,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44080,6 +45842,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44103,6 +45866,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44127,6 +45891,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44152,6 +45917,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44178,6 +45944,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44205,6 +45972,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44233,6 +46001,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44262,6 +46031,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44292,6 +46062,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44323,6 +46094,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44355,6 +46127,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44388,6 +46161,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44422,6 +46196,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44457,6 +46232,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44493,6 +46269,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44530,6 +46307,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44568,6 +46346,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44607,6 +46386,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44647,6 +46427,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44688,6 +46469,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44701,6 +46483,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44714,6 +46497,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44728,6 +46512,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44742,6 +46527,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44756,6 +46542,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44769,6 +46556,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -44782,6 +46570,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44797,6 +46586,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -44812,6 +46602,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -44824,6 +46615,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -44836,6 +46628,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -44848,6 +46641,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44889,6 +46683,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[CustomMethodAttribute]
@@ -44902,6 +46697,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44916,6 +46712,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44931,6 +46728,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44947,6 +46745,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44964,6 +46763,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -44982,6 +46782,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45001,6 +46802,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45021,6 +46823,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45042,6 +46845,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45064,6 +46868,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45087,6 +46892,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45111,6 +46917,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45136,6 +46943,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45162,6 +46970,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45189,6 +46998,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45217,6 +47027,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45246,6 +47057,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45276,6 +47088,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45307,6 +47120,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45339,6 +47153,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45372,6 +47187,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45406,6 +47222,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45441,6 +47258,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45477,6 +47295,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45514,6 +47333,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45552,6 +47372,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45591,6 +47412,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45631,6 +47453,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45672,6 +47495,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">Double Arg2</param>
@@ -45686,6 +47510,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45698,6 +47523,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45710,6 +47536,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45730,6 +47557,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45742,6 +47570,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45755,6 +47584,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -45768,6 +47598,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -45782,6 +47613,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">NetOffice.ExcelApi.Range Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45794,6 +47626,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		/// <param name="arg2">object Arg2</param>
@@ -45815,6 +47648,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45829,6 +47663,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -45842,6 +47677,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45856,6 +47692,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45870,6 +47707,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		[CustomMethodAttribute]
@@ -45883,6 +47721,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">Double Arg1</param>
 		/// <param name="arg2">optional object Arg2</param>
@@ -45897,6 +47736,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45909,6 +47749,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">object Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45921,6 +47762,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		/// <param name="arg2">string Arg2</param>
@@ -45942,6 +47784,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]
@@ -45962,6 +47805,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="arg1">string Arg1</param>
 		[SupportByVersionAttribute("Excel", 15)]

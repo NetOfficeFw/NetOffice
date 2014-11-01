@@ -161,6 +161,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="index">object index</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -178,6 +179,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="component">NetOffice.VBIDEApi.Component Component</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -189,6 +191,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="componentType">NetOffice.VBIDEApi.Enums.vbext_ComponentType ComponentType</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
@@ -202,6 +205,7 @@ namespace NetOffice.VBIDEApi
 
 		/// <summary>
 		/// SupportByVersion VBIDE 12, 14, 5.3
+		/// 
 		/// </summary>
 		/// <param name="fileName">string FileName</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]

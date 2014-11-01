@@ -27,8 +27,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// CoClass NavigationButton 
 	/// SupportByVersion Access, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821707.aspx </remarks>
 	[SupportByVersionAttribute("Access", 14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class NavigationButton : _NavigationButton,IEventBinding

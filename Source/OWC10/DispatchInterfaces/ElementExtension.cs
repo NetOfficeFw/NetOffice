@@ -420,6 +420,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="grfFlags">Int32 grfFlags</param>
 		/// <param name="vfSet">bool vfSet</param>
@@ -433,6 +434,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="bstrOldSource">string bstrOldSource</param>
 		/// <param name="bstrNewSource">string bstrNewSource</param>

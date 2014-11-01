@@ -290,6 +290,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="startDate">object StartDate</param>
 		/// <param name="endDate">object EndDate</param>

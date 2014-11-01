@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -108,6 +109,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="customTaskPaneInst">NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]

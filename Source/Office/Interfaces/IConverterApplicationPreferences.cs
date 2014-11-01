@@ -11,8 +11,8 @@ namespace NetOffice.OfficeApi
 	///<summary>
 	/// Interface IConverterApplicationPreferences 
 	/// SupportByVersion Office, 14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862807.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862807.aspx </remarks>
 	[SupportByVersionAttribute("Office", 14,15)]
 	[EntityTypeAttribute(EntityType.IsInterface)]
 	public class IConverterApplicationPreferences : COMObject
@@ -98,9 +98,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864148.aspx
 		/// </summary>
 		/// <param name="plcid">Int32 plcid</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864148.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetLcid(out Int32 plcid)
 		{
@@ -114,9 +114,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860588.aspx
 		/// </summary>
 		/// <param name="phwnd">Int32 phwnd</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff860588.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetHwnd(out Int32 phwnd)
 		{
@@ -130,9 +130,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864579.aspx
 		/// </summary>
 		/// <param name="pbstrApplication">string pbstrApplication</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff864579.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrGetApplication(out string pbstrApplication)
 		{
@@ -146,9 +146,9 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862557.aspx
 		/// </summary>
 		/// <param name="pFormat">Int32 pFormat</param>
-		///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff862557.aspx </remarks>
 		[SupportByVersionAttribute("Office", 14,15)]
 		public Int32 HrCheckFormat(out Int32 pFormat)
 		{

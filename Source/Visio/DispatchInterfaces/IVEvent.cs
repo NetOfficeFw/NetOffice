@@ -309,6 +309,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="contextString">string ContextString</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -320,6 +321,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public void Delete()
@@ -330,6 +332,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32[] GetFilterObjects()
@@ -341,6 +344,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="objects">Int32[] Objects</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -352,6 +356,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int32[] GetFilterCommands()
@@ -363,6 +368,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="commands">Int32[] Commands</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -374,6 +380,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
 		public Int16[] GetFilterSRC()
@@ -385,6 +392,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="sRCStream">Int16[] SRCStream</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
@@ -396,6 +404,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public Int32[] GetFilterActions()
@@ -407,6 +416,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="filterActionStream">Int32[] filterActionStream</param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]

@@ -32,8 +32,8 @@ namespace NetOffice.AccessApi
 	///<summary>
 	/// CoClass Attachment 
 	/// SupportByVersion Access, 12,14,15
+	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821783.aspx
 	///</summary>
-	///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821783.aspx </remarks>
 	[SupportByVersionAttribute("Access", 12,14,15)]
 	[EntityTypeAttribute(EntityType.IsCoClass)]
 	public class Attachment : _Attachment,IEventBinding

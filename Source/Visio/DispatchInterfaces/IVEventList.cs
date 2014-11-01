@@ -188,6 +188,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="eventCode">Int16 EventCode</param>
 		/// <param name="action">Int16 Action</param>
@@ -204,6 +205,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 11, 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="eventCode">Int16 EventCode</param>
 		/// <param name="sinkIUnkOrIDisp">object SinkIUnkOrIDisp</param>

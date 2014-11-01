@@ -407,6 +407,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="vbByData">bool vbByData</param>
 		[SupportByVersionAttribute("OWC10", 1)]

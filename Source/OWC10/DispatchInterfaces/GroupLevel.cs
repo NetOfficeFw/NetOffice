@@ -598,6 +598,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="grfFlags">Int32 grfFlags</param>
 		/// <param name="vfSet">bool vfSet</param>

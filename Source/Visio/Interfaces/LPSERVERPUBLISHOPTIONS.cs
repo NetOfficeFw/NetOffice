@@ -186,6 +186,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pageName">string PageName</param>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
@@ -198,6 +199,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pageName">string PageName</param>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
@@ -210,6 +212,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages PublishPages</param>
 		/// <param name="namesArray">String[] NamesArray</param>
@@ -223,6 +226,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="flags">NetOffice.VisioApi.Enums.VisLangFlags Flags</param>
 		/// <param name="publishPages">NetOffice.VisioApi.Enums.VisPublishPages PublishPages</param>
@@ -241,6 +245,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets PublishDataRecordsets</param>
 		/// <param name="dataRecordsetIDs">Int32[] DataRecordsetIDs</param>
@@ -253,6 +258,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 14, 15
+		/// 
 		/// </summary>
 		/// <param name="publishDataRecordsets">NetOffice.VisioApi.Enums.VisPublishDataRecordsets PublishDataRecordsets</param>
 		/// <param name="dataRecordsetIDs">Int32[] DataRecordsetIDs</param>

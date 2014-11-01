@@ -131,6 +131,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="groupingDefName">string GroupingDefName</param>
 		/// <param name="groupingFieldName">string GroupingFieldName</param>
@@ -147,6 +148,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="groupingDefName">string GroupingDefName</param>
 		/// <param name="groupingFieldName">string GroupingFieldName</param>
@@ -163,6 +165,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="groupingDefName">string GroupingDefName</param>
 		/// <param name="groupingFieldName">string GroupingFieldName</param>
@@ -180,6 +183,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="groupingDefName">string GroupingDefName</param>
 		/// <param name="groupingFieldName">string GroupingFieldName</param>
@@ -197,6 +201,7 @@ namespace NetOffice.OWC10Api
 
 		/// <summary>
 		/// SupportByVersion OWC10 1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("OWC10", 1)]

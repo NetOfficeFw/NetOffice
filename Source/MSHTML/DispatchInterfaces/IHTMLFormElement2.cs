@@ -117,6 +117,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="urn">object urn</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

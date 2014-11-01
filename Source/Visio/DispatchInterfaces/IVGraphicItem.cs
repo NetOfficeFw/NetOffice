@@ -324,6 +324,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
 		public void Delete()
@@ -334,6 +335,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="field">NetOffice.VisioApi.Enums.VisGraphicField Field</param>
 		/// <param name="expression">string Expression</param>
@@ -351,6 +353,7 @@ namespace NetOffice.VisioApi
 
 		/// <summary>
 		/// SupportByVersion Visio 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="field">NetOffice.VisioApi.Enums.VisGraphicField Field</param>
 		/// <param name="expression">string Expression</param>

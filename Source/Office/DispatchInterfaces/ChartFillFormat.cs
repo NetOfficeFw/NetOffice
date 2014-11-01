@@ -348,6 +348,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">Int32 Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -361,6 +362,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">Int32 Style</param>
 		/// <param name="variant">Int32 Variant</param>
@@ -373,6 +375,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="presetTexture">Int32 PresetTexture</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -384,6 +387,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("Office", 12,14,15)]
 		public void Solid()
@@ -394,6 +398,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pattern">Int32 Pattern</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -405,6 +410,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="pictureFile">object PictureFile</param>
 		/// <param name="pictureFormat">object PictureFormat</param>
@@ -419,6 +425,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="textureFile">string TextureFile</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
@@ -430,6 +437,7 @@ namespace NetOffice.OfficeApi
 
 		/// <summary>
 		/// SupportByVersion Office 12, 14, 15
+		/// 
 		/// </summary>
 		/// <param name="style">Int32 Style</param>
 		/// <param name="variant">Int32 Variant</param>

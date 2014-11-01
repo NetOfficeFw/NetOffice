@@ -228,6 +228,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="msg">string msg</param>
 		/// <param name="targetOrigin">optional object targetOrigin</param>
@@ -240,6 +241,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="msg">string msg</param>
 		[CustomMethodAttribute]
@@ -252,6 +254,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrHTML">string bstrHTML</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -264,6 +267,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="bstrProfilerMarkName">string bstrProfilerMarkName</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

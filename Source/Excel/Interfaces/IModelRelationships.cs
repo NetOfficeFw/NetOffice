@@ -180,6 +180,7 @@ namespace NetOffice.ExcelApi
 
 		/// <summary>
 		/// SupportByVersion Excel 15
+		/// 
 		/// </summary>
 		/// <param name="foreignKeyColumn">NetOffice.ExcelApi.ModelTableColumn ForeignKeyColumn</param>
 		/// <param name="primaryKeyColumn">NetOffice.ExcelApi.ModelTableColumn PrimaryKeyColumn</param>

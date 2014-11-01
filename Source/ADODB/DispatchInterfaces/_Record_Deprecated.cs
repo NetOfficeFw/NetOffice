@@ -237,6 +237,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -254,6 +255,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -266,6 +268,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		[CustomMethodAttribute]
@@ -279,6 +282,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -293,6 +297,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -308,6 +313,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -324,6 +330,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -341,6 +348,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -358,6 +366,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -370,6 +379,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		[CustomMethodAttribute]
@@ -383,6 +393,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -397,6 +408,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -412,6 +424,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -428,6 +441,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="destination">optional string Destination = </param>
@@ -445,6 +459,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		/// <param name="async">optional bool Async = false</param>
@@ -457,6 +472,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -468,6 +484,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional string Source = </param>
 		[CustomMethodAttribute]
@@ -480,6 +497,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -497,6 +515,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -508,6 +527,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		[CustomMethodAttribute]
@@ -520,6 +540,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -533,6 +554,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -547,6 +569,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -562,6 +585,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -578,6 +602,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="source">optional object Source</param>
 		/// <param name="activeConnection">optional object ActiveConnection</param>
@@ -595,6 +620,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Close()
@@ -605,6 +631,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public NetOffice.ADODBApi._Recordset_Deprecated GetChildren()
@@ -617,6 +644,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Cancel()

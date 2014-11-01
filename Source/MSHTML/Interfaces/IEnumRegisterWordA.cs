@@ -97,6 +97,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ppEnum">NetOffice.MSHTMLApi.IEnumRegisterWordA ppEnum</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
@@ -112,6 +113,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ulCount">Int32 ulCount</param>
 		/// <param name="rgRegisterWord">__MIDL___MIDL_itf_mshtml_0001_0042_0001 rgRegisterWord</param>
@@ -131,6 +133,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("MSHTML", 4)]
 		public Int32 reset()
@@ -142,6 +145,7 @@ namespace NetOffice.MSHTMLApi
 
 		/// <summary>
 		/// SupportByVersion MSHTML 4
+		/// 
 		/// </summary>
 		/// <param name="ulCount">Int32 ulCount</param>
 		[SupportByVersionAttribute("MSHTML", 4)]

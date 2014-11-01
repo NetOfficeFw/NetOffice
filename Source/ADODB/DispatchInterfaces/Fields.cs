@@ -131,6 +131,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
 		public void Refresh()
@@ -141,6 +142,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -155,6 +157,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -170,6 +173,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -183,6 +187,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1, 2.5
+		/// 
 		/// </summary>
 		/// <param name="name">string Name</param>
 		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum Type</param>
@@ -197,6 +202,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.1
+		/// 
 		/// </summary>
 		/// <param name="index">object Index</param>
 		[SupportByVersionAttribute("ADODB", 2.1)]
@@ -208,6 +214,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void Update()
@@ -218,6 +225,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		/// <param name="resyncValues">optional NetOffice.ADODBApi.Enums.ResyncEnum ResyncValues = 2</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -229,6 +237,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
@@ -240,6 +249,7 @@ namespace NetOffice.ADODBApi
 
 		/// <summary>
 		/// SupportByVersion ADODB 2.5
+		/// 
 		/// </summary>
 		[SupportByVersionAttribute("ADODB", 2.5)]
 		public void CancelUpdate()

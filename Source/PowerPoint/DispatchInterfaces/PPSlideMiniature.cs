@@ -157,6 +157,7 @@ namespace NetOffice.PowerPointApi
 
 		/// <summary>
 		/// SupportByVersion PowerPoint 9
+		/// 
 		/// </summary>
 		/// <param name="slide">NetOffice.PowerPointApi.Slide Slide</param>
 		[SupportByVersionAttribute("PowerPoint", 9)]

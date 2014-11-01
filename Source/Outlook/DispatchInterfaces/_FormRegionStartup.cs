@@ -97,6 +97,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff866042.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
 		/// <param name="item">object Item</param>
@@ -121,6 +122,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869072.aspx
 		/// </summary>
 		/// <param name="formRegion">NetOffice.OutlookApi.FormRegion FormRegion</param>
 		[SupportByVersionAttribute("Outlook", 12,14,15)]
@@ -132,6 +134,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff869502.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
 		/// <param name="lCID">Int32 LCID</param>
@@ -153,6 +156,7 @@ namespace NetOffice.OutlookApi
 
 		/// <summary>
 		/// SupportByVersion Outlook 12, 14, 15
+		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff868914.aspx
 		/// </summary>
 		/// <param name="formRegionName">string FormRegionName</param>
 		/// <param name="lCID">Int32 LCID</param>
