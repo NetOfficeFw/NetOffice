@@ -1,5 +1,7 @@
 # NetOffice - MS Office in .NET
 
+![branch: master](http://img.shields.io/badge/branch-master-blue.svg?style=flat) [![Build status: master](https://ci.appveyor.com/api/projects/status/kr1qy7by3fakto3s/branch/master?svg=true)](https://ci.appveyor.com/project/jozefizso/netoffice/branch/master) ° ![branch: master](http://img.shields.io/badge/branch-develop-blue.svg?style=flat) [![Build status: develop](https://ci.appveyor.com/api/projects/status/kr1qy7by3fakto3s/branch/develop?svg=true)](https://ci.appveyor.com/project/jozefizso/netoffice/branch/develop)
+
 **.NET wrapper assemblies for accessing Microsoft Office applications.**
 
 NetOffice supports extending and automating Office, Excel, Word, Outlook,
