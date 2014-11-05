@@ -1,0 +1,37 @@
+#
+# NetOffice library
+# AppVeyor configuration
+#
+
+version: 1.7.1.{build}
+
+branches:
+  except:
+    - gh-pages
+
+os: Windows Server 2012
+
+matrix:
+  fast_finish: true     # true => immediately finish build once one of the jobs fails
+
+platform: Any CPU
+configuration:
+  - Debug
+  - Release
+
+build:
+  project: Source\NetOffice.sln
+  verbosity: detailed
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+test:
+  assemblies:
+
+cache:
+  - packages
