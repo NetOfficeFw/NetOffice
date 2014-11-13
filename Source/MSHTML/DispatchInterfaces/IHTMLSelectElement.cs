@@ -361,7 +361,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="index">optional Int32 index = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void remove(object index)
+		public void remove(Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "remove", paramsArray);

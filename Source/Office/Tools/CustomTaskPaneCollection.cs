@@ -207,7 +207,7 @@ namespace NetOffice.OfficeApi.Tools
                 else
                     return "";
             }
-            internal set
+            set
             {
                 object outValue;
                 if (ChangedProperties.TryGetValue("Title", out outValue))
@@ -359,9 +359,12 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPaneType">new child</param>
         /// <param name="title">title(caption) of the child</param>
-        public void Add(Type taskPaneType, string title)
+		 /// <returns>new instance</returns>
+        public TaskPaneInfo Add(Type taskPaneType, string title)
         {
-            InnerList.Add(new TaskPaneInfo(taskPaneType, title));  
+			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title);
+            InnerList.Add(item);
+			return item;
         }
 
         /// <summary>
@@ -380,7 +383,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Returns an Enumerator
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IEnumerator instance</returns>
         public IEnumerator<TaskPaneInfo> GetEnumerator()
         {
             return InnerList.GetEnumerator();
@@ -389,7 +392,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Returns an Enumerator
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IEnumerator instance</returns>
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();

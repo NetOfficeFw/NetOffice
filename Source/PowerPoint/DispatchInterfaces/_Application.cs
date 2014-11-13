@@ -1177,7 +1177,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		/// <param name="contextID">optional Int32 ContextID = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Help(object helpFile, object contextID)
+		public void Help(string helpFile, Int32 contextID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile, contextID);
 			Invoker.Method(this, "Help", paramsArray);
@@ -1202,7 +1202,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Help(object helpFile)
+		public void Help(string helpFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpFile);
 			Invoker.Method(this, "Help", paramsArray);
@@ -1309,7 +1309,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="persist">optional bool Persist = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public bool GetOptionFlag(Int32 option, object persist)
+		public bool GetOptionFlag(Int32 option, bool persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, persist);
 			object returnItem = Invoker.MethodReturn(this, "GetOptionFlag", paramsArray);
@@ -1340,7 +1340,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="persist">optional bool Persist = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void SetOptionFlag(Int32 option, bool state, object persist)
+		public void SetOptionFlag(Int32 option, bool state, bool persist)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option, state, persist);
 			Invoker.Method(this, "SetOptionFlag", paramsArray);

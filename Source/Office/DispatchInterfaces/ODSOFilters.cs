@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
+		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, string bstrCompareTo, bool deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo, deferUpdate);
 			Invoker.Method(this, "Add", paramsArray);
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
+		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, string bstrCompareTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(column, comparison, conjunction, bstrCompareTo);
 			Invoker.Method(this, "Add", paramsArray);
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="index">Int32 Index</param>
 		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Delete(Int32 index, object deferUpdate)
+		public void Delete(Int32 index, bool deferUpdate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, deferUpdate);
 			Invoker.Method(this, "Delete", paramsArray);

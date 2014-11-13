@@ -113,6 +113,19 @@ namespace NetOffice.Tools
         }
 
         /// <summary>
+        /// Looks for the CustomPaneAttribute
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <returns>CustomPaneAttribute or null</returns>
+        public static CustomPaneAttribute GetCustomPaneAttribute(Type type)
+        {
+            object[] array = type.GetCustomAttributes(typeof(CustomPaneAttribute), false);
+            if (array.Length == 0)
+                return null;
+            return array[0] as CustomPaneAttribute;
+        }
+
+        /// <summary>
         /// Looks for the GuidAttribute. Throws an exception if not found
         /// </summary>
         /// <param name="type">the type you want looking for the attribute</param>

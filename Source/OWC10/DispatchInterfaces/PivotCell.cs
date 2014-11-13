@@ -345,7 +345,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="detailTopOffset">Int32 DetailTopOffset</param>
 		/// <param name="update">optional bool Update = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void MoveDetailTop(Int32 detailTop, Int32 detailTopOffset, object update)
+		public void MoveDetailTop(Int32 detailTop, Int32 detailTopOffset, bool update)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(detailTop, detailTopOffset, update);
 			Invoker.Method(this, "MoveDetailTop", paramsArray);

@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -101,7 +101,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -182,7 +182,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle);
 		}
@@ -197,7 +197,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external);
 		}
@@ -229,7 +229,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 			object returnItem = Invoker.PropertyGet(this, "AddressLocal", paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
 			return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 		}
@@ -312,7 +312,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
 			object returnItem = Invoker.PropertyGet(this, "AddressLocal", paramsArray);
@@ -327,7 +327,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle)
 		{
 			return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle);
 		}
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string get_AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
 			object returnItem = Invoker.PropertyGet(this, "AddressLocal", paramsArray);
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="referenceStyle">optional NetOffice.ExcelApi.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public string AddressLocal(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string AddressLocal(object rowAbsolute, object columnAbsolute, NetOffice.ExcelApi.Enums.XlReferenceStyle referenceStyle, object external)
 		{
 			return get_AddressLocal(rowAbsolute, columnAbsolute, referenceStyle, external);
 		}
@@ -2872,7 +2872,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order">optional NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order = 1</param>
 		/// <param name="appendLast">optional object AppendLast</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order, object appendLast)
+		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order, object appendLast)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order, appendLast);
 			object returnItem = Invoker.MethodReturn(this, "ApplyNames", paramsArray);
@@ -3040,7 +3040,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order">optional NetOffice.ExcelApi.Enums.XlApplyNamesOrder Order = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, object order)
+		public object ApplyNames(object names, object ignoreRelativeAbsolute, object useRowColumnNames, object omitColumn, object omitRow, NetOffice.ExcelApi.Enums.XlApplyNamesOrder order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(names, ignoreRelativeAbsolute, useRowColumnNames, omitColumn, omitRow, order);
 			object returnItem = Invoker.MethodReturn(this, "ApplyNames", paramsArray);
@@ -3095,7 +3095,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="destination">NetOffice.ExcelApi.Range Destination</param>
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlAutoFillType Type = 0</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFill(NetOffice.ExcelApi.Range destination, object type)
+		public object AutoFill(NetOffice.ExcelApi.Range destination, NetOffice.ExcelApi.Enums.XlAutoFillType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, type);
 			object returnItem = Invoker.MethodReturn(this, "AutoFill", paramsArray);
@@ -3142,7 +3142,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="criteria2">optional object Criteria2</param>
 		/// <param name="visibleDropDown">optional object VisibleDropDown</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
+		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2, object visibleDropDown)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2, visibleDropDown);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
@@ -3232,7 +3232,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="_operator">optional NetOffice.ExcelApi.Enums.XlAutoFilterOperator Operator = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFilter(object field, object criteria1, object _operator)
+		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
@@ -3257,7 +3257,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="criteria2">optional object Criteria2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFilter(object field, object criteria1, object _operator, object criteria2)
+		public object AutoFilter(object field, object criteria1, NetOffice.ExcelApi.Enums.XlAutoFilterOperator _operator, object criteria2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, criteria1, _operator, criteria2);
 			object returnItem = Invoker.MethodReturn(this, "AutoFilter", paramsArray);
@@ -3304,7 +3304,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pattern">optional object Pattern</param>
 		/// <param name="width">optional object Width</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number, object font, object alignment, object border, object pattern, object width)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border, object pattern, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern, width);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3347,7 +3347,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlRangeAutoFormat Format = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3370,7 +3370,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="number">optional object Number</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3394,7 +3394,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="font">optional object Font</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number, object font)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3419,7 +3419,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="alignment">optional object Alignment</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number, object font, object alignment)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3445,7 +3445,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="border">optional object Border</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number, object font, object alignment, object border)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3472,7 +3472,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pattern">optional object Pattern</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object AutoFormat(object format, object number, object font, object alignment, object border, object pattern)
+		public object AutoFormat(NetOffice.ExcelApi.Enums.XlRangeAutoFormat format, object number, object font, object alignment, object border, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(format, number, font, alignment, border, pattern);
 			object returnItem = Invoker.MethodReturn(this, "AutoFormat", paramsArray);
@@ -3516,7 +3516,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="colorIndex">optional NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex = -4105</param>
 		/// <param name="color">optional object Color</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object BorderAround(object lineStyle, object weight, object colorIndex, object color)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -3541,7 +3541,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="color">optional object Color</param>
 		/// <param name="themeColor">optional object ThemeColor</param>
 		[SupportByVersionAttribute("Excel", 14,15)]
-		public object BorderAround(object lineStyle, object weight, object colorIndex, object color, object themeColor)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color, object themeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color, themeColor);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -3607,7 +3607,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="weight">optional NetOffice.ExcelApi.Enums.XlBorderWeight Weight = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object BorderAround(object lineStyle, object weight)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -3631,7 +3631,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="colorIndex">optional NetOffice.ExcelApi.Enums.XlColorIndex ColorIndex = -4105</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object BorderAround(object lineStyle, object weight, object colorIndex)
+		public object BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			object returnItem = Invoker.MethodReturn(this, "BorderAround", paramsArray);
@@ -4127,7 +4127,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CopyPicture(object appearance, object format)
+		public object CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlCopyPictureFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);
@@ -4170,7 +4170,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CopyPicture(object appearance)
+		public object CopyPicture(NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			object returnItem = Invoker.MethodReturn(this, "CopyPicture", paramsArray);
@@ -4310,7 +4310,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsRTF">optional object ContainsRTF</param>
 		/// <param name="containsVALU">optional object ContainsVALU</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF, object containsRTF, object containsVALU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF, containsVALU);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -4376,7 +4376,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreatePublisher(object edition, object appearance)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -4400,7 +4400,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsPICT">optional object ContainsPICT</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreatePublisher(object edition, object appearance, object containsPICT)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -4425,7 +4425,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsBIFF">optional object ContainsBIFF</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -4451,7 +4451,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="containsRTF">optional object ContainsRTF</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object CreatePublisher(object edition, object appearance, object containsPICT, object containsBIFF, object containsRTF)
+		public object CreatePublisher(object edition, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, object containsPICT, object containsBIFF, object containsRTF)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, appearance, containsPICT, containsBIFF, containsRTF);
 			object returnItem = Invoker.MethodReturn(this, "CreatePublisher", paramsArray);
@@ -4519,7 +4519,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="stop">optional object Stop</param>
 		/// <param name="trend">optional object Trend</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object DataSeries(object rowcol, object type, object date, object step, object stop, object trend)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step, object stop, object trend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop, trend);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -4585,7 +4585,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataSeriesType Type = -4132</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object DataSeries(object rowcol, object type)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -4609,7 +4609,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="date">optional NetOffice.ExcelApi.Enums.XlDataSeriesDate Date = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object DataSeries(object rowcol, object type, object date)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -4634,7 +4634,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="step">optional object Step</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object DataSeries(object rowcol, object type, object date, object step)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -4660,7 +4660,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="stop">optional object Stop</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object DataSeries(object rowcol, object type, object date, object step, object stop)
+		public object DataSeries(object rowcol, NetOffice.ExcelApi.Enums.XlDataSeriesType type, NetOffice.ExcelApi.Enums.XlDataSeriesDate date, object step, object stop)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(rowcol, type, date, step, stop);
 			object returnItem = Invoker.MethodReturn(this, "DataSeries", paramsArray);
@@ -4749,7 +4749,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="chartSize">optional NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize = 1</param>
 		/// <param name="format">optional object Format</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize, object format)
+		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize, format);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
@@ -4847,7 +4847,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="appearance">optional NetOffice.ExcelApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance)
+		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
@@ -4874,7 +4874,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="chartSize">optional NetOffice.ExcelApi.Enums.XlPictureAppearance ChartSize = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, object appearance, object chartSize)
+		public object EditionOptions(NetOffice.ExcelApi.Enums.XlEditionType type, NetOffice.ExcelApi.Enums.XlEditionOptionsOption option, object name, object reference, NetOffice.ExcelApi.Enums.XlPictureAppearance appearance, NetOffice.ExcelApi.Enums.XlPictureAppearance chartSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, option, name, reference, appearance, chartSize);
 			object returnItem = Invoker.MethodReturn(this, "EditionOptions", paramsArray);
@@ -4982,7 +4982,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchByte">optional object MatchByte</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -5004,7 +5004,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchByte">optional object MatchByte</param>
 		/// <param name="searchFormat">optional object SearchFormat</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte, object searchFormat)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte, object searchFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte, searchFormat);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -5109,7 +5109,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="searchDirection">optional NetOffice.ExcelApi.Enums.XlSearchDirection SearchDirection = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -5130,7 +5130,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
+		public NetOffice.ExcelApi.Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.ExcelApi.Enums.XlSearchDirection searchDirection, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -5717,7 +5717,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="skipBlanks">optional object SkipBlanks</param>
 		/// <param name="transpose">optional object Transpose</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -5760,7 +5760,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="paste">optional NetOffice.ExcelApi.Enums.XlPasteType Paste = -4104</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object PasteSpecial(object paste)
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -5783,7 +5783,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="operation">optional NetOffice.ExcelApi.Enums.XlPasteSpecialOperation Operation = -4142</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object PasteSpecial(object paste, object operation)
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -5807,7 +5807,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="skipBlanks">optional object SkipBlanks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object PasteSpecial(object paste, object operation, object skipBlanks)
+		public object PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks);
 			object returnItem = Invoker.MethodReturn(this, "PasteSpecial", paramsArray);
@@ -7530,7 +7530,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
 		/// <param name="sortMethod">optional NetOffice.ExcelApi.Enums.XlSortMethod SortMethod = 1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7565,7 +7565,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
 		/// <param name="dataOption3">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3 = 0</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2, object dataOption3)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2, dataOption3);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7631,7 +7631,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order1">optional NetOffice.ExcelApi.Enums.XlSortOrder Order1 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7655,7 +7655,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="key2">optional object Key2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7680,7 +7680,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7706,7 +7706,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order2">optional NetOffice.ExcelApi.Enums.XlSortOrder Order2 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7733,7 +7733,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="key3">optional object Key3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7761,7 +7761,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order3">optional NetOffice.ExcelApi.Enums.XlSortOrder Order3 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7790,7 +7790,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7820,7 +7820,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="orderCustom">optional object OrderCustom</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7851,7 +7851,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7883,7 +7883,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7917,7 +7917,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption1">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7952,7 +7952,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object Sort(object key1, object order1, object key2, object type, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object sortMethod, object dataOption1, object dataOption2)
+		public object Sort(object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object key2, object type, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(key1, order1, key2, type, order2, key3, order3, header, orderCustom, matchCase, orientation, sortMethod, dataOption1, dataOption2);
 			object returnItem = Invoker.MethodReturn(this, "Sort", paramsArray);
@@ -7984,7 +7984,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="orientation">optional NetOffice.ExcelApi.Enums.XlSortOrientation Orientation = 2</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8019,7 +8019,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
 		/// <param name="dataOption3">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption3 = 0</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2, object dataOption3)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2, dataOption3);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8062,7 +8062,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="sortMethod">optional NetOffice.ExcelApi.Enums.XlSortMethod SortMethod = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8085,7 +8085,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="key1">optional object Key1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8109,7 +8109,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order1">optional NetOffice.ExcelApi.Enums.XlSortOrder Order1 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8134,7 +8134,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="type">optional object Type</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8160,7 +8160,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="key2">optional object Key2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8187,7 +8187,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order2">optional NetOffice.ExcelApi.Enums.XlSortOrder Order2 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8215,7 +8215,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="key3">optional object Key3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8244,7 +8244,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="order3">optional NetOffice.ExcelApi.Enums.XlSortOrder Order3 = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8274,7 +8274,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8305,7 +8305,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="orderCustom">optional object OrderCustom</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8337,7 +8337,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8371,7 +8371,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption1">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption1 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8406,7 +8406,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataOption2">optional NetOffice.ExcelApi.Enums.XlSortDataOption DataOption2 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object SortSpecial(object sortMethod, object key1, object order1, object type, object key2, object order2, object key3, object order3, object header, object orderCustom, object matchCase, object orientation, object dataOption1, object dataOption2)
+		public object SortSpecial(NetOffice.ExcelApi.Enums.XlSortMethod sortMethod, object key1, NetOffice.ExcelApi.Enums.XlSortOrder order1, object type, object key2, NetOffice.ExcelApi.Enums.XlSortOrder order2, object key3, NetOffice.ExcelApi.Enums.XlSortOrder order3, NetOffice.ExcelApi.Enums.XlYesNoGuess header, object orderCustom, object matchCase, NetOffice.ExcelApi.Enums.XlSortOrientation orientation, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption1, NetOffice.ExcelApi.Enums.XlSortDataOption dataOption2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortMethod, key1, order1, type, key2, order2, key3, order3, header, orderCustom, matchCase, orientation, dataOption1, dataOption2);
 			object returnItem = Invoker.MethodReturn(this, "SortSpecial", paramsArray);
@@ -8458,7 +8458,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="edition">string Edition</param>
 		/// <param name="format">optional NetOffice.ExcelApi.Enums.XlSubscribeToFormat Format = -4158</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object SubscribeTo(string edition, object format)
+		public object SubscribeTo(string edition, NetOffice.ExcelApi.Enums.XlSubscribeToFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
 			object returnItem = Invoker.MethodReturn(this, "SubscribeTo", paramsArray);
@@ -8506,7 +8506,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="pageBreaks">optional object PageBreaks</param>
 		/// <param name="summaryBelowData">optional NetOffice.ExcelApi.Enums.XlSummaryRow SummaryBelowData = 1</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks, object summaryBelowData)
+		public object Subtotal(Int32 groupBy, NetOffice.ExcelApi.Enums.XlConsolidationFunction function, object totalList, object replace, object pageBreaks, NetOffice.ExcelApi.Enums.XlSummaryRow summaryBelowData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(groupBy, function, totalList, replace, pageBreaks, summaryBelowData);
 			object returnItem = Invoker.MethodReturn(this, "Subtotal", paramsArray);
@@ -8679,7 +8679,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8713,7 +8713,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="thousandsSeparator">optional object ThousandsSeparator</param>
 		/// <param name="trailingMinusNumbers">optional object TrailingMinusNumbers</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator, object thousandsSeparator, object trailingMinusNumbers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator, thousandsSeparator, trailingMinusNumbers);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8779,7 +8779,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="dataType">optional NetOffice.ExcelApi.Enums.XlTextParsingType DataType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8803,7 +8803,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="textQualifier">optional NetOffice.ExcelApi.Enums.XlTextQualifier TextQualifier = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8828,7 +8828,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="consecutiveDelimiter">optional object ConsecutiveDelimiter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8854,7 +8854,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="tab">optional object Tab</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8881,7 +8881,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="semicolon">optional object Semicolon</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8909,7 +8909,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="comma">optional object Comma</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8938,7 +8938,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="space">optional object Space</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8968,7 +8968,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="other">optional object Other</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -8999,7 +8999,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="otherChar">optional object OtherChar</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -9031,7 +9031,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="fieldInfo">optional object FieldInfo</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -9064,7 +9064,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="decimalSeparator">optional object DecimalSeparator</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public object TextToColumns(object destination, object dataType, object textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator)
+		public object TextToColumns(object destination, NetOffice.ExcelApi.Enums.XlTextParsingType dataType, NetOffice.ExcelApi.Enums.XlTextQualifier textQualifier, object consecutiveDelimiter, object tab, object semicolon, object comma, object space, object other, object otherChar, object fieldInfo, object decimalSeparator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destination, dataType, textQualifier, consecutiveDelimiter, tab, semicolon, comma, space, other, otherChar, fieldInfo, decimalSeparator);
 			object returnItem = Invoker.MethodReturn(this, "TextToColumns", paramsArray);
@@ -9385,7 +9385,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="transpose">optional object Transpose</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object _PasteSpecial(object paste, object operation, object skipBlanks, object transpose)
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks, object transpose)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks, transpose);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
@@ -9430,7 +9430,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object _PasteSpecial(object paste)
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
@@ -9454,7 +9454,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object _PasteSpecial(object paste, object operation)
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
@@ -9479,7 +9479,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object _PasteSpecial(object paste, object operation, object skipBlanks)
+		public object _PasteSpecial(NetOffice.ExcelApi.Enums.XlPasteType paste, NetOffice.ExcelApi.Enums.XlPasteSpecialOperation operation, object skipBlanks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(paste, operation, skipBlanks);
 			object returnItem = Invoker.MethodReturn(this, "_PasteSpecial", paramsArray);
@@ -9757,7 +9757,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="columns">optional object Columns</param>
 		/// <param name="header">optional NetOffice.ExcelApi.Enums.XlYesNoGuess Header = 2</param>
 		[SupportByVersionAttribute("Excel", 12,14,15)]
-		public Int32 RemoveDuplicates(object columns, object header)
+		public Int32 RemoveDuplicates(object columns, NetOffice.ExcelApi.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columns, header);
 			object returnItem = Invoker.MethodReturn(this, "RemoveDuplicates", paramsArray);
@@ -9982,7 +9982,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="color">optional object Color</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 14,15)]
-		public object _BorderAround(object lineStyle, object weight, object colorIndex, object color)
+		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);
@@ -10051,7 +10051,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
-		public object _BorderAround(object lineStyle, object weight)
+		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);
@@ -10076,7 +10076,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Excel", 14,15)]
-		public object _BorderAround(object lineStyle, object weight, object colorIndex)
+		public object _BorderAround(object lineStyle, NetOffice.ExcelApi.Enums.XlBorderWeight weight, NetOffice.ExcelApi.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			object returnItem = Invoker.MethodReturn(this, "_BorderAround", paramsArray);

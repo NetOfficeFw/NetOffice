@@ -236,7 +236,7 @@ namespace NetOffice.MSProjectApi
 		/// </summary>
 		/// <param name="highlight">optional bool Highlight = false</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void Apply(object highlight)
+		public void Apply(bool highlight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(highlight);
 			Invoker.Method(this, "Apply", paramsArray);

@@ -561,7 +561,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		/// <param name="range">optional object Range</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.InlineShape AddChart(object type, object range)
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -590,7 +590,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.InlineShape AddChart(object type)
+		public NetOffice.WordApi.InlineShape AddChart(NetOffice.OfficeApi.Enums.XlChartType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart", paramsArray);
@@ -710,7 +710,7 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional object Range</param>
 		/// <param name="newLayout">optional object NewLayout</param>
 		[SupportByVersionAttribute("Word", 15)]
-		public NetOffice.WordApi.InlineShape AddChart2(object style, object type, object range, object newLayout)
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, object range, object newLayout)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, range, newLayout);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -739,7 +739,7 @@ namespace NetOffice.WordApi
 		/// <param name="style">optional Int32 Style = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 15)]
-		public NetOffice.WordApi.InlineShape AddChart2(object style)
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -755,7 +755,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 15)]
-		public NetOffice.WordApi.InlineShape AddChart2(object style, object type)
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);
@@ -772,7 +772,7 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional object Range</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 15)]
-		public NetOffice.WordApi.InlineShape AddChart2(object style, object type, object range)
+		public NetOffice.WordApi.InlineShape AddChart2(Int32 style, NetOffice.OfficeApi.Enums.XlChartType type, object range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, type, range);
 			object returnItem = Invoker.MethodReturn(this, "AddChart2", paramsArray);

@@ -1408,7 +1408,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional object features</param>
 		/// <param name="replace">optional object replace</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object open(object url, object name, object features, object replace)
+		public object open(string url, object name, object features, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features, replace);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1437,7 +1437,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = text/html</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object open(object url)
+		public object open(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1453,7 +1453,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional object name</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object open(object url, object name)
+		public object open(string url, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1470,7 +1470,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional object features</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object open(object url, object name, object features)
+		public object open(string url, object name, object features)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1594,7 +1594,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		/// <param name="value">optional object value</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, object showUI, object value)
+		public bool execCommand(string cmdID, bool showUI, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI, value);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
@@ -1623,7 +1623,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="showUI">optional bool showUI = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool execCommand(string cmdID, object showUI)
+		public bool execCommand(string cmdID, bool showUI)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(cmdID, showUI);
 			object returnItem = Invoker.MethodReturn(this, "execCommand", paramsArray);
@@ -1691,7 +1691,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrHref">optional string bstrHref = </param>
 		/// <param name="lIndex">optional Int32 lIndex = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLStyleSheet createStyleSheet(object bstrHref, object lIndex)
+		public NetOffice.MSHTMLApi.IHTMLStyleSheet createStyleSheet(string bstrHref, Int32 lIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrHref, lIndex);
 			object returnItem = Invoker.MethodReturn(this, "createStyleSheet", paramsArray);
@@ -1720,7 +1720,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="bstrHref">optional string bstrHref = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLStyleSheet createStyleSheet(object bstrHref)
+		public NetOffice.MSHTMLApi.IHTMLStyleSheet createStyleSheet(string bstrHref)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrHref);
 			object returnItem = Invoker.MethodReturn(this, "createStyleSheet", paramsArray);

@@ -246,7 +246,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options = -1</param>
 		/// <param name="async">optional bool Async</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source, object destination, object userName, object password, object options, object async)
+		public string MoveRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum options, bool async)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options, async);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -273,7 +273,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="source">optional string Source = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source)
+		public string MoveRecord(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -288,7 +288,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="destination">optional string Destination = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source, object destination)
+		public string MoveRecord(string source, string destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -304,7 +304,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source, object destination, object userName)
+		public string MoveRecord(string source, string destination, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -321,7 +321,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source, object destination, object userName, object password)
+		public string MoveRecord(string source, string destination, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -339,7 +339,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum Options = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string MoveRecord(object source, object destination, object userName, object password, object options)
+		public string MoveRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options);
 			object returnItem = Invoker.MethodReturn(this, "MoveRecord", paramsArray);
@@ -357,7 +357,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options = -1</param>
 		/// <param name="async">optional bool Async</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source, object destination, object userName, object password, object options, object async)
+		public string CopyRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum options, bool async)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options, async);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -384,7 +384,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="source">optional string Source = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source)
+		public string CopyRecord(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -399,7 +399,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="destination">optional string Destination = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source, object destination)
+		public string CopyRecord(string source, string destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -415,7 +415,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source, object destination, object userName)
+		public string CopyRecord(string source, string destination, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -432,7 +432,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source, object destination, object userName, object password)
+		public string CopyRecord(string source, string destination, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -450,7 +450,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum Options = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string CopyRecord(object source, object destination, object userName, object password, object options)
+		public string CopyRecord(string source, string destination, string userName, string password, NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, destination, userName, password, options);
 			object returnItem = Invoker.MethodReturn(this, "CopyRecord", paramsArray);
@@ -464,7 +464,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="source">optional string Source</param>
 		/// <param name="async">optional bool Async</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void DeleteRecord(object source, object async)
+		public void DeleteRecord(string source, bool async)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, async);
 			Invoker.Method(this, "DeleteRecord", paramsArray);
@@ -489,7 +489,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="source">optional string Source</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void DeleteRecord(object source)
+		public void DeleteRecord(string source)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source);
 			Invoker.Method(this, "DeleteRecord", paramsArray);
@@ -507,7 +507,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName</param>
 		/// <param name="password">optional string Password</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object activeConnection, object mode, object createOptions, object options, object userName, object password)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum createOptions, NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum options, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode, createOptions, options, userName, password);
 			Invoker.Method(this, "Open", paramsArray);
@@ -561,7 +561,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object activeConnection, object mode)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode);
 			Invoker.Method(this, "Open", paramsArray);
@@ -577,7 +577,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="createOptions">optional NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum CreateOptions = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object activeConnection, object mode, object createOptions)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum createOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode, createOptions);
 			Invoker.Method(this, "Open", paramsArray);
@@ -594,7 +594,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum Options = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object activeConnection, object mode, object createOptions, object options)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum createOptions, NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode, createOptions, options);
 			Invoker.Method(this, "Open", paramsArray);
@@ -612,7 +612,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object activeConnection, object mode, object createOptions, object options, object userName)
+		public void Open(object source, object activeConnection, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum createOptions, NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum options, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, activeConnection, mode, createOptions, options, userName);
 			Invoker.Method(this, "Open", paramsArray);

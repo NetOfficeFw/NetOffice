@@ -1016,7 +1016,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dataReference">string DataReference</param>
 		/// <param name="seriesByRows">optional bool SeriesByRows = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetSpreadsheetData(string dataReference, object seriesByRows)
+		public void SetSpreadsheetData(string dataReference, bool seriesByRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataReference, seriesByRows);
 			Invoker.Method(this, "SetSpreadsheetData", paramsArray);

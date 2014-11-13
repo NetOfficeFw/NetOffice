@@ -291,7 +291,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		/// <param name="height">optional Single Height = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width, object height)
+		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width, Single height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);
@@ -330,7 +330,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="width">optional Single Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, object width)
+		public NetOffice.PowerPointApi.Shape AddPicture(string fileName, NetOffice.OfficeApi.Enums.MsoTriState linkToFile, NetOffice.OfficeApi.Enums.MsoTriState saveWithDocument, Single left, Single top, Single width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, linkToFile, saveWithDocument, left, top, width);
 			object returnItem = Invoker.MethodReturn(this, "AddPicture", paramsArray);

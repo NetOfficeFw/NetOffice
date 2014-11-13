@@ -139,6 +139,16 @@ namespace Sample.Addin
         
         }
 
+        public void OnDockPositionChanged(MsoCTPDockPosition position)
+        {
+
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+
+        }
+
         #endregion
 
         #region Methods

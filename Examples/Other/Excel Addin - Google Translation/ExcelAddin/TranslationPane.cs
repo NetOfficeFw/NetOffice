@@ -154,6 +154,16 @@ namespace Sample.ExcelAddin
 
         }
 
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+
+        }
+
         #endregion
 
         #region Methods

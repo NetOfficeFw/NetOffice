@@ -525,7 +525,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index">Int32 index</param>
 		/// <param name="resetSlide">optional NetOffice.OfficeApi.Enums.MsoTriState ResetSlide = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void GotoSlide(Int32 index, object resetSlide)
+		public void GotoSlide(Int32 index, NetOffice.OfficeApi.Enums.MsoTriState resetSlide)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, resetSlide);
 			Invoker.Method(this, "GotoSlide", paramsArray);

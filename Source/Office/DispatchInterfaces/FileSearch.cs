@@ -345,7 +345,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortOrder">optional NetOffice.OfficeApi.Enums.MsoSortOrder SortOrder = 1</param>
 		/// <param name="alwaysAccurate">optional bool AlwaysAccurate = true</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public Int32 Execute(object sortBy, object sortOrder, object alwaysAccurate)
+		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy, NetOffice.OfficeApi.Enums.MsoSortOrder sortOrder, bool alwaysAccurate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy, sortOrder, alwaysAccurate);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -372,7 +372,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortBy">optional NetOffice.OfficeApi.Enums.MsoSortBy SortBy = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public Int32 Execute(object sortBy)
+		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -387,7 +387,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortOrder">optional NetOffice.OfficeApi.Enums.MsoSortOrder SortOrder = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public Int32 Execute(object sortBy, object sortOrder)
+		public Int32 Execute(NetOffice.OfficeApi.Enums.MsoSortBy sortBy, NetOffice.OfficeApi.Enums.MsoSortOrder sortOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortBy, sortOrder);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);

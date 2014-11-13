@@ -694,7 +694,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="options">optional Int32 Options = 0</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
-		public void CommitTrans(object options)
+		public void CommitTrans(Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "CommitTrans", paramsArray);

@@ -782,7 +782,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="message">optional string message = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void alert(object message)
+		public void alert(string message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			Invoker.Method(this, "alert", paramsArray);
@@ -806,7 +806,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="message">optional string message = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public bool confirm(object message)
+		public bool confirm(string message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			object returnItem = Invoker.MethodReturn(this, "confirm", paramsArray);
@@ -833,7 +833,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="message">optional string message = </param>
 		/// <param name="defstr">optional string defstr = undefined</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object prompt(object message, object defstr)
+		public object prompt(string message, string defstr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message, defstr);
 			object returnItem = Invoker.MethodReturn(this, "prompt", paramsArray);
@@ -876,7 +876,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="message">optional string message = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object prompt(object message)
+		public object prompt(string message)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message);
 			object returnItem = Invoker.MethodReturn(this, "prompt", paramsArray);
@@ -911,7 +911,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional string features = </param>
 		/// <param name="replace">optional bool replace = false</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name, object features, object replace)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name, string features, bool replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features, replace);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -940,7 +940,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="url">optional string url = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -956,7 +956,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -973,7 +973,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="features">optional string features = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public NetOffice.MSHTMLApi.IHTMLWindow2 open(object url, object name, object features)
+		public NetOffice.MSHTMLApi.IHTMLWindow2 open(string url, string name, string features)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(url, name, features);
 			object returnItem = Invoker.MethodReturn(this, "open", paramsArray);
@@ -1069,7 +1069,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="helpArg">optional object helpArg</param>
 		/// <param name="features">optional string features = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void showHelp(string helpURL, object helpArg, object features)
+		public void showHelp(string helpURL, object helpArg, string features)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpURL, helpArg, features);
 			Invoker.Method(this, "showHelp", paramsArray);
@@ -1186,7 +1186,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="code">string code</param>
 		/// <param name="language">optional string language = JScript</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object execScript(string code, object language)
+		public object execScript(string code, string language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(code, language);
 			object returnItem = Invoker.MethodReturn(this, "execScript", paramsArray);

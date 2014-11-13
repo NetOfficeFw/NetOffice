@@ -140,7 +140,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="indexFrom">optional Int32 indexFrom = -1</param>
 		/// <param name="indexTo">optional Int32 indexTo = -1</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object moveRow(object indexFrom, object indexTo)
+		public object moveRow(Int32 indexFrom, Int32 indexTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(indexFrom, indexTo);
 			object returnItem = Invoker.MethodReturn(this, "moveRow", paramsArray);
@@ -169,7 +169,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="indexFrom">optional Int32 indexFrom = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object moveRow(object indexFrom)
+		public object moveRow(Int32 indexFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(indexFrom);
 			object returnItem = Invoker.MethodReturn(this, "moveRow", paramsArray);

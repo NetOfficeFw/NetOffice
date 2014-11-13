@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace NetOfficeTools.ExtendedPPointCS4
 {
-    public partial class SamplePane : UserControl, NetOffice.PowerPointApi.Tools.ITaskPane
+    public partial class SamplePane : UserControl, NetOffice.PowerPointApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
     {
         #region Ctor
 
@@ -36,6 +36,16 @@ namespace NetOfficeTools.ExtendedPPointCS4
         public void OnDisconnection()
         {
 
+        }
+
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+            
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+            
         }
 
         #endregion

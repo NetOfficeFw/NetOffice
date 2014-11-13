@@ -19779,7 +19779,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timeScaleUnit">optional NetOffice.MSProjectApi.Enums.PjTimescaleUnit TimeScaleUnit = 3</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type, object timeScaleUnit, object count)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTaskTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit, count);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
@@ -19812,7 +19812,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjTaskTimescaledData Type = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTaskTimescaledData type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
@@ -19830,7 +19830,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timeScaleUnit">optional NetOffice.MSProjectApi.Enums.PjTimescaleUnit TimeScaleUnit = 3</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, object type, object timeScaleUnit)
+		public NetOffice.MSProjectApi.TimeScaleValues TimeScaleData(object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTaskTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startDate, endDate, type, timeScaleUnit);
 			object returnItem = Invoker.MethodReturn(this, "TimeScaleData", paramsArray);
@@ -19846,7 +19846,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
 		/// <param name="lag">optional object Lag</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void LinkPredecessors(object tasks, object link, object lag)
+		public void LinkPredecessors(object tasks, NetOffice.MSProjectApi.Enums.PjTaskLinkType link, object lag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tasks, link, lag);
 			Invoker.Method(this, "LinkPredecessors", paramsArray);
@@ -19873,7 +19873,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void LinkPredecessors(object tasks, object link)
+		public void LinkPredecessors(object tasks, NetOffice.MSProjectApi.Enums.PjTaskLinkType link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tasks, link);
 			Invoker.Method(this, "LinkPredecessors", paramsArray);
@@ -19887,7 +19887,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
 		/// <param name="lag">optional object Lag</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void LinkSuccessors(object tasks, object link, object lag)
+		public void LinkSuccessors(object tasks, NetOffice.MSProjectApi.Enums.PjTaskLinkType link, object lag)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tasks, link, lag);
 			Invoker.Method(this, "LinkSuccessors", paramsArray);
@@ -19914,7 +19914,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="link">optional NetOffice.MSProjectApi.Enums.PjTaskLinkType Link = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public void LinkSuccessors(object tasks, object link)
+		public void LinkSuccessors(object tasks, NetOffice.MSProjectApi.Enums.PjTaskLinkType link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(tasks, link);
 			Invoker.Method(this, "LinkSuccessors", paramsArray);

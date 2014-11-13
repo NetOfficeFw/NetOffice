@@ -135,7 +135,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
 		/// <param name="safeArrayOfPjField">optional object SafeArrayOfPjField</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel, object safeArrayOfPjField)
+		public void UpdateTableData(bool task, string groupName, string filterName, Int32 outlineLevel, object safeArrayOfPjField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel, safeArrayOfPjField);
 			Invoker.Method(this, "UpdateTableData", paramsArray);
@@ -162,7 +162,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="groupName">optional string GroupName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateTableData(bool task, object groupName)
+		public void UpdateTableData(bool task, string groupName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName);
 			Invoker.Method(this, "UpdateTableData", paramsArray);
@@ -177,7 +177,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filterName">optional string FilterName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateTableData(bool task, object groupName, object filterName)
+		public void UpdateTableData(bool task, string groupName, string filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName);
 			Invoker.Method(this, "UpdateTableData", paramsArray);
@@ -193,7 +193,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateTableData(bool task, object groupName, object filterName, object outlineLevel)
+		public void UpdateTableData(bool task, string groupName, string filterName, Int32 outlineLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, groupName, filterName, outlineLevel);
 			Invoker.Method(this, "UpdateTableData", paramsArray);

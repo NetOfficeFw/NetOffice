@@ -80,7 +80,7 @@ namespace NetOffice.WordApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff192802.aspx
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Location(object allUsers)
+		public string get_Location(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Location", paramsArray);
@@ -94,7 +94,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_Location(object allUsers, string value)
+		public void set_Location(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Location", paramsArray, value);
@@ -107,7 +107,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string Location(object allUsers)
+		public string Location(bool allUsers)
 		{
 			return get_Location(allUsers);
 		}
@@ -120,7 +120,7 @@ namespace NetOffice.WordApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194042.aspx
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Alias(object allUsers)
+		public string get_Alias(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "Alias", paramsArray);
@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_Alias(object allUsers, string value)
+		public void set_Alias(bool allUsers, string value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "Alias", paramsArray, value);
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public string Alias(object allUsers)
+		public string Alias(bool allUsers)
 		{
 			return get_Alias(allUsers);
 		}
@@ -160,7 +160,7 @@ namespace NetOffice.WordApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835718.aspx
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.XSLTransform get_DefaultTransform(object allUsers)
+		public NetOffice.WordApi.XSLTransform get_DefaultTransform(bool allUsers)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			object returnItem = Invoker.PropertyGet(this, "DefaultTransform", paramsArray);
@@ -175,7 +175,7 @@ namespace NetOffice.WordApi
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
+		public void set_DefaultTransform(bool allUsers, NetOffice.WordApi.XSLTransform value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(allUsers);
 			Invoker.PropertySet(this, "DefaultTransform", paramsArray, value);
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="allUsers">optional bool AllUsers</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XSLTransform DefaultTransform(object allUsers)
+		public NetOffice.WordApi.XSLTransform DefaultTransform(bool allUsers)
 		{
 			return get_DefaultTransform(allUsers);
 		}

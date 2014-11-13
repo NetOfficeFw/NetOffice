@@ -2654,7 +2654,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="saveChanges">optional NetOffice.MSProjectApi.Enums.PjSaveType SaveChanges = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void Quit(object saveChanges)
+		public static void Quit(NetOffice.MSProjectApi.Enums.PjSaveType saveChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(saveChanges);
 			Invoker.Method(_instance, "Quit", paramsArray);
@@ -2928,7 +2928,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="count">optional object Count</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, object type, object timeScaleUnit, object count)
+		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, object count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, resourceID, startDate, endDate, type, timeScaleUnit, count);
 			object returnItem = Invoker.MethodReturn(_instance, "TimescaledData", paramsArray);
@@ -2981,7 +2981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, object type)
+		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTimescaledData type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, resourceID, startDate, endDate, type);
 			object returnItem = Invoker.MethodReturn(_instance, "TimescaledData", paramsArray);
@@ -3009,7 +3009,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, object type, object timeScaleUnit)
+		public static object TimescaledData(Int32 taskID, Int32 resourceID, object startDate, object endDate, NetOffice.MSProjectApi.Enums.PjTimescaledData type, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(taskID, resourceID, startDate, endDate, type, timeScaleUnit);
 			object returnItem = Invoker.MethodReturn(_instance, "TimescaledData", paramsArray);
@@ -4031,7 +4031,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldName">string FieldName</param>
 		/// <param name="fieldType">optional NetOffice.MSProjectApi.Enums.PjFieldType FieldType = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static NetOffice.MSProjectApi.Enums.PjField FieldNameToFieldConstant(string fieldName, object fieldType)
+		public static NetOffice.MSProjectApi.Enums.PjField FieldNameToFieldConstant(string fieldName, NetOffice.MSProjectApi.Enums.PjFieldType fieldType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, fieldType);
 			object returnItem = Invoker.MethodReturn(_instance, "FieldNameToFieldConstant", paramsArray);
@@ -4199,7 +4199,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="notifyResources">optional bool NotifyResources = true</param>
 		/// <param name="notificationText">optional object NotificationText</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishNewAndChangedAssignments(object showDialog, object itemsScope, object notifyResources, object notificationText)
+		public static void PublishNewAndChangedAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources, object notificationText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources, notificationText);
 			Invoker.Method(_instance, "PublishNewAndChangedAssignments", paramsArray);
@@ -4224,7 +4224,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishNewAndChangedAssignments(object showDialog)
+		public static void PublishNewAndChangedAssignments(bool showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog);
 			Invoker.Method(_instance, "PublishNewAndChangedAssignments", paramsArray);
@@ -4238,7 +4238,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishNewAndChangedAssignments(object showDialog, object itemsScope)
+		public static void PublishNewAndChangedAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope);
 			Invoker.Method(_instance, "PublishNewAndChangedAssignments", paramsArray);
@@ -4253,7 +4253,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="notifyResources">optional bool NotifyResources = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishNewAndChangedAssignments(object showDialog, object itemsScope, object notifyResources)
+		public static void PublishNewAndChangedAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources);
 			Invoker.Method(_instance, "PublishNewAndChangedAssignments", paramsArray);
@@ -4266,7 +4266,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		/// <param name="publishFullPlan">optional bool PublishFullPlan = true</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishProjectPlan(object showDialog, object publishFullPlan)
+		public static void PublishProjectPlan(bool showDialog, bool publishFullPlan)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, publishFullPlan);
 			Invoker.Method(_instance, "PublishProjectPlan", paramsArray);
@@ -4291,7 +4291,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void PublishProjectPlan(object showDialog)
+		public static void PublishProjectPlan(bool showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog);
 			Invoker.Method(_instance, "PublishProjectPlan", paramsArray);
@@ -4319,7 +4319,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportingPeriodFrom">optional object ReportingPeriodFrom</param>
 		/// <param name="reportingPeriodTo">optional object ReportingPeriodTo</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog, object itemsScope, object notifyTaskLead, object notificationText, object reportingPeriodFrom, object reportingPeriodTo)
+		public static void RequestProgressInformation(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyTaskLead, object notificationText, object reportingPeriodFrom, object reportingPeriodTo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyTaskLead, notificationText, reportingPeriodFrom, reportingPeriodTo);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4344,7 +4344,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog)
+		public static void RequestProgressInformation(bool showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4358,7 +4358,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog, object itemsScope)
+		public static void RequestProgressInformation(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4373,7 +4373,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="notifyTaskLead">optional bool NotifyTaskLead = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog, object itemsScope, object notifyTaskLead)
+		public static void RequestProgressInformation(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyTaskLead)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyTaskLead);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4389,7 +4389,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="notificationText">optional object NotificationText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog, object itemsScope, object notifyTaskLead, object notificationText)
+		public static void RequestProgressInformation(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyTaskLead, object notificationText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyTaskLead, notificationText);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4406,7 +4406,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportingPeriodFrom">optional object ReportingPeriodFrom</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RequestProgressInformation(object showDialog, object itemsScope, object notifyTaskLead, object notificationText, object reportingPeriodFrom)
+		public static void RequestProgressInformation(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyTaskLead, object notificationText, object reportingPeriodFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyTaskLead, notificationText, reportingPeriodFrom);
 			Invoker.Method(_instance, "RequestProgressInformation", paramsArray);
@@ -4423,7 +4423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="becomeManager">optional bool BecomeManager = false</param>
 		/// <param name="notificationText">optional object NotificationText</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog, object itemsScope, object notifyResources, object overwriteActuals, object becomeManager, object notificationText)
+		public static void RepublishAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources, bool overwriteActuals, bool becomeManager, object notificationText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources, overwriteActuals, becomeManager, notificationText);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4448,7 +4448,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional bool ShowDialog = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog)
+		public static void RepublishAssignments(bool showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4462,7 +4462,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="itemsScope">optional NetOffice.MSProjectApi.Enums.PjPublishScope ItemsScope = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog, object itemsScope)
+		public static void RepublishAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4477,7 +4477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="notifyResources">optional bool NotifyResources = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog, object itemsScope, object notifyResources)
+		public static void RepublishAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4493,7 +4493,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="overwriteActuals">optional bool OverwriteActuals = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog, object itemsScope, object notifyResources, object overwriteActuals)
+		public static void RepublishAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources, bool overwriteActuals)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources, overwriteActuals);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4510,7 +4510,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="becomeManager">optional bool BecomeManager = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static void RepublishAssignments(object showDialog, object itemsScope, object notifyResources, object overwriteActuals, object becomeManager)
+		public static void RepublishAssignments(bool showDialog, NetOffice.MSProjectApi.Enums.PjPublishScope itemsScope, bool notifyResources, bool overwriteActuals, bool becomeManager)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showDialog, itemsScope, notifyResources, overwriteActuals, becomeManager);
 			Invoker.Method(_instance, "RepublishAssignments", paramsArray);
@@ -4587,7 +4587,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="yesText">optional object YesText</param>
 		/// <param name="noText">optional object NoText</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Message(string message, object type, object yesText, object noText)
+		public static bool Message(string message, NetOffice.MSProjectApi.Enums.PjMessageType type, object yesText, object noText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message, type, yesText, noText);
 			object returnItem = Invoker.MethodReturn(_instance, "Message", paramsArray);
@@ -4616,7 +4616,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjMessageType Type = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Message(string message, object type)
+		public static bool Message(string message, NetOffice.MSProjectApi.Enums.PjMessageType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message, type);
 			object returnItem = Invoker.MethodReturn(_instance, "Message", paramsArray);
@@ -4632,7 +4632,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="yesText">optional object YesText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Message(string message, object type, object yesText)
+		public static bool Message(string message, NetOffice.MSProjectApi.Enums.PjMessageType type, object yesText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(message, type, yesText);
 			object returnItem = Invoker.MethodReturn(_instance, "Message", paramsArray);
@@ -4772,7 +4772,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		/// <param name="xMLName">optional object XMLName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName)
+		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended, xMLName);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpen", paramsArray);
@@ -4821,7 +4821,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="openPool">optional NetOffice.MSProjectApi.Enums.PjPoolOpen openPool = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool)
+		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpen", paramsArray);
@@ -4847,7 +4847,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password)
+		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpen", paramsArray);
@@ -4874,7 +4874,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword)
+		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpen", paramsArray);
@@ -4902,7 +4902,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended)
+		public static bool FileOpen(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpen", paramsArray);
@@ -5043,7 +5043,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="noAuto">optional object NoAuto</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileClose(object save, object noAuto)
+		public static bool FileClose(NetOffice.MSProjectApi.Enums.PjSaveType save, object noAuto)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, noAuto);
 			object returnItem = Invoker.MethodReturn(_instance, "FileClose", paramsArray);
@@ -5070,7 +5070,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileClose(object save)
+		public static bool FileClose(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileClose", paramsArray);
@@ -5083,7 +5083,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseAll(object save)
+		public static bool FileCloseAll(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseAll", paramsArray);
@@ -5196,7 +5196,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="xMLName">optional object XMLName</param>
 		/// <param name="clearConfirmed">optional object ClearConfirmed</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts, object xMLName, object clearConfirmed)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts, object xMLName, object clearConfirmed)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts, xMLName, clearConfirmed);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5225,7 +5225,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjFileFormat Format = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5241,7 +5241,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backup">optional object Backup</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5258,7 +5258,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="readOnly">optional object ReadOnly</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5276,7 +5276,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="taskInformation">optional object TaskInformation</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5295,7 +5295,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="filtered">optional object Filtered</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5315,7 +5315,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="table">optional object Table</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5336,7 +5336,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="userID">optional object UserID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5358,7 +5358,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="databasePassWord">optional object DatabasePassWord</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5381,7 +5381,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="formatID">optional object FormatID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5405,7 +5405,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="map">optional object Map</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5430,7 +5430,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5456,7 +5456,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5483,7 +5483,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="clearBaseline">optional object ClearBaseline</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5511,7 +5511,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="clearActuals">optional object ClearActuals</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline, clearActuals);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5540,7 +5540,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="clearResourceRates">optional object ClearResourceRates</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline, clearActuals, clearResourceRates);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5570,7 +5570,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="clearFixedCosts">optional object ClearFixedCosts</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -5601,7 +5601,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="xMLName">optional object XMLName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveAs(object name, object format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts, object xMLName)
+		public static bool FileSaveAs(object name, NetOffice.MSProjectApi.Enums.PjFileFormat format, object backup, object readOnly, object taskInformation, object filtered, object table, object userID, object databasePassWord, object formatID, object map, object password, object writeResPassword, object clearBaseline, object clearActuals, object clearResourceRates, object clearFixedCosts, object xMLName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, format, backup, readOnly, taskInformation, filtered, table, userID, databasePassWord, formatID, map, password, writeResPassword, clearBaseline, clearActuals, clearResourceRates, clearFixedCosts, xMLName);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveAs", paramsArray);
@@ -6154,7 +6154,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="paperSize">optional NetOffice.MSProjectApi.Enums.PjPaperSize PaperSize = 0</param>
 		/// <param name="firstPageNumber">optional object FirstPageNumber</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupPage(object name, object portrait, object percentScale, object pagesTall, object pagesWide, object paperSize, object firstPageNumber)
+		public static bool FilePageSetupPage(object name, object portrait, object percentScale, object pagesTall, object pagesWide, NetOffice.MSProjectApi.Enums.PjPaperSize paperSize, object firstPageNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, portrait, percentScale, pagesTall, pagesWide, paperSize, firstPageNumber);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupPage", paramsArray);
@@ -6191,7 +6191,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="paperSize">optional NetOffice.MSProjectApi.Enums.PjPaperSize PaperSize = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupPage(object name, object portrait, object percentScale, object pagesTall, object pagesWide, object paperSize)
+		public static bool FilePageSetupPage(object name, object portrait, object percentScale, object pagesTall, object pagesWide, NetOffice.MSProjectApi.Enums.PjPaperSize paperSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, portrait, percentScale, pagesTall, pagesWide, paperSize);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupPage", paramsArray);
@@ -6317,7 +6317,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		/// <param name="text">optional object Text</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupHeader(object name, object alignment, object text)
+		public static bool FilePageSetupHeader(object name, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, alignment, text);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupHeader", paramsArray);
@@ -6346,7 +6346,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupHeader(object name, object alignment)
+		public static bool FilePageSetupHeader(object name, NetOffice.MSProjectApi.Enums.PjAlignment alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, alignment);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupHeader", paramsArray);
@@ -6361,7 +6361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		/// <param name="text">optional object Text</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupFooter(object name, object alignment, object text)
+		public static bool FilePageSetupFooter(object name, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, alignment, text);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupFooter", paramsArray);
@@ -6390,7 +6390,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupFooter(object name, object alignment)
+		public static bool FilePageSetupFooter(object name, NetOffice.MSProjectApi.Enums.PjAlignment alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, alignment);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupFooter", paramsArray);
@@ -6413,7 +6413,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontUnderline">object LabelFontUnderline</param>
 		/// <param name="labelFontColor">optional NetOffice.MSProjectApi.Enums.PjColor LabelFontColor = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline, object labelFontColor)
+		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline, NetOffice.MSProjectApi.Enums.PjColor labelFontColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline, labelFontColor);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegend", paramsArray);
@@ -6435,7 +6435,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontItalic">object LabelFontItalic</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic)
+		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegend", paramsArray);
@@ -6458,7 +6458,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontUnderline">object LabelFontUnderline</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline)
+		public static bool FilePageSetupLegend(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegend", paramsArray);
@@ -7611,7 +7611,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileExit(object save)
+		public static bool FileExit(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileExit", paramsArray);
@@ -7821,7 +7821,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="maxImageWidth">optional object MaxImageWidth</param>
 		/// <param name="measurementUnits">optional object MeasurementUnits</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, object scaleOption, object maxImageHeight, object maxImageWidth, object measurementUnits)
+		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, NetOffice.MSProjectApi.Enums.PjCopyPictureScaleOption scaleOption, object maxImageHeight, object maxImageWidth, object measurementUnits)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, forPrinter, selectedRows, fromDate, toDate, fileName, scaleOption, maxImageHeight, maxImageWidth, measurementUnits);
 			object returnItem = Invoker.MethodReturn(_instance, "EditCopyPicture", paramsArray);
@@ -7860,7 +7860,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="scaleOption">optional NetOffice.MSProjectApi.Enums.PjCopyPictureScaleOption ScaleOption = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, object scaleOption)
+		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, NetOffice.MSProjectApi.Enums.PjCopyPictureScaleOption scaleOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, forPrinter, selectedRows, fromDate, toDate, fileName, scaleOption);
 			object returnItem = Invoker.MethodReturn(_instance, "EditCopyPicture", paramsArray);
@@ -7881,7 +7881,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="maxImageHeight">optional object MaxImageHeight</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, object scaleOption, object maxImageHeight)
+		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, NetOffice.MSProjectApi.Enums.PjCopyPictureScaleOption scaleOption, object maxImageHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, forPrinter, selectedRows, fromDate, toDate, fileName, scaleOption, maxImageHeight);
 			object returnItem = Invoker.MethodReturn(_instance, "EditCopyPicture", paramsArray);
@@ -7903,7 +7903,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="maxImageWidth">optional object MaxImageWidth</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, object scaleOption, object maxImageHeight, object maxImageWidth)
+		public static bool EditCopyPicture(object _object, object forPrinter, object selectedRows, object fromDate, object toDate, object fileName, NetOffice.MSProjectApi.Enums.PjCopyPictureScaleOption scaleOption, object maxImageHeight, object maxImageWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(_object, forPrinter, selectedRows, fromDate, toDate, fileName, scaleOption, maxImageHeight, maxImageWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "EditCopyPicture", paramsArray);
@@ -8359,7 +8359,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="operation">optional NetOffice.MSProjectApi.Enums.PjResAssignOperation Operation = 0</param>
 		/// <param name="with">optional object With</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignment(object resources, object operation, object with)
+		public static bool ResourceAssignment(object resources, NetOffice.MSProjectApi.Enums.PjResAssignOperation operation, object with)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resources, operation, with);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignment", paramsArray);
@@ -8388,7 +8388,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="operation">optional NetOffice.MSProjectApi.Enums.PjResAssignOperation Operation = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignment(object resources, object operation)
+		public static bool ResourceAssignment(object resources, NetOffice.MSProjectApi.Enums.PjResAssignOperation operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resources, operation);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignment", paramsArray);
@@ -8797,7 +8797,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="format">optional NetOffice.MSProjectApi.Enums.PjSubscribeFormat Format = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool SubscribeTo(object edition, object format)
+		public static bool SubscribeTo(object edition, NetOffice.MSProjectApi.Enums.PjSubscribeFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(edition, format);
 			object returnItem = Invoker.MethodReturn(_instance, "SubscribeTo", paramsArray);
@@ -15661,7 +15661,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="outlineNumber">optional NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel OutlineNumber = 65535</param>
 		/// <param name="expandInsertedProjects">optional object ExpandInsertedProjects</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool OutlineShowTasks(object outlineNumber, object expandInsertedProjects)
+		public static bool OutlineShowTasks(NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel outlineNumber, object expandInsertedProjects)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumber, expandInsertedProjects);
 			object returnItem = Invoker.MethodReturn(_instance, "OutlineShowTasks", paramsArray);
@@ -15688,7 +15688,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="outlineNumber">optional NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel OutlineNumber = 65535</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool OutlineShowTasks(object outlineNumber)
+		public static bool OutlineShowTasks(NetOffice.MSProjectApi.Enums.PJTaskOutlineShowLevel outlineNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(outlineNumber);
 			object returnItem = Invoker.MethodReturn(_instance, "OutlineShowTasks", paramsArray);
@@ -18515,7 +18515,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		/// <param name="position">optional object Position</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool DetailStylesAdd(object item, object position)
+		public static bool DetailStylesAdd(NetOffice.MSProjectApi.Enums.PjTimescaledData item, object position)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item, position);
 			object returnItem = Invoker.MethodReturn(_instance, "DetailStylesAdd", paramsArray);
@@ -18542,7 +18542,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool DetailStylesAdd(object item)
+		public static bool DetailStylesAdd(NetOffice.MSProjectApi.Enums.PjTimescaledData item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.MethodReturn(_instance, "DetailStylesAdd", paramsArray);
@@ -18555,7 +18555,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool DetailStylesRemove(object item)
+		public static bool DetailStylesRemove(NetOffice.MSProjectApi.Enums.PjTimescaledData item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.MethodReturn(_instance, "DetailStylesRemove", paramsArray);
@@ -21536,7 +21536,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="display">optional NetOffice.MSProjectApi.Enums.PjGanttBarLink Display = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool GanttBarLinks(object display)
+		public static bool GanttBarLinks(NetOffice.MSProjectApi.Enums.PjGanttBarLink display)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(display);
 			object returnItem = Invoker.MethodReturn(_instance, "GanttBarLinks", paramsArray);
@@ -23002,7 +23002,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="userID">optional object UserID</param>
 		/// <param name="password">optional object Password</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, object openPool, object userID, object password)
+		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object userID, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filenames, newWindow, attachToSources, poolResources, hideSubtasks, openPool, userID, password);
 			object returnItem = Invoker.MethodReturn(_instance, "ConsolidateProjects", paramsArray);
@@ -23039,7 +23039,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="openPool">optional NetOffice.MSProjectApi.Enums.PjPoolOpen openPool = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, object openPool)
+		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filenames, newWindow, attachToSources, poolResources, hideSubtasks, openPool);
 			object returnItem = Invoker.MethodReturn(_instance, "ConsolidateProjects", paramsArray);
@@ -23059,7 +23059,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="userID">optional object UserID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, object openPool, object userID)
+		public static bool ConsolidateProjects(object filenames, object newWindow, object attachToSources, object poolResources, object hideSubtasks, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object userID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filenames, newWindow, attachToSources, poolResources, hideSubtasks, openPool, userID);
 			object returnItem = Invoker.MethodReturn(_instance, "ConsolidateProjects", paramsArray);
@@ -23073,7 +23073,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjOrganizer Type = 0</param>
 		/// <param name="task">optional object Task</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Organizer(object type, object task)
+		public static bool Organizer(NetOffice.MSProjectApi.Enums.PjOrganizer type, object task)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, task);
 			object returnItem = Invoker.MethodReturn(_instance, "Organizer", paramsArray);
@@ -23100,7 +23100,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjOrganizer Type = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Organizer(object type)
+		public static bool Organizer(NetOffice.MSProjectApi.Enums.PjOrganizer type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(_instance, "Organizer", paramsArray);
@@ -25340,7 +25340,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileQuit(object save)
+		public static bool FileQuit(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileQuit", paramsArray);
@@ -25453,7 +25453,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="item">optional NetOffice.MSProjectApi.Enums.PjTimescaledData Item = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool DetailStylesToggleItem(object item)
+		public static bool DetailStylesToggleItem(NetOffice.MSProjectApi.Enums.PjTimescaledData item)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(item);
 			object returnItem = Invoker.MethodReturn(_instance, "DetailStylesToggleItem", paramsArray);
@@ -26844,7 +26844,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional NetOffice.MSProjectApi.Enums.PjField FieldID = -1</param>
 		/// <param name="iMEMode">optional NetOffice.MSProjectApi.Enums.PjIMEMode IMEMode = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomizeIMEMode(object fieldID, object iMEMode)
+		public static bool CustomizeIMEMode(NetOffice.MSProjectApi.Enums.PjField fieldID, NetOffice.MSProjectApi.Enums.PjIMEMode iMEMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, iMEMode);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomizeIMEMode", paramsArray);
@@ -26871,7 +26871,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldID">optional NetOffice.MSProjectApi.Enums.PjField FieldID = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomizeIMEMode(object fieldID)
+		public static bool CustomizeIMEMode(NetOffice.MSProjectApi.Enums.PjField fieldID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomizeIMEMode", paramsArray);
@@ -26990,7 +26990,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="codeGenerate">optional object CodeGenerate</param>
 		/// <param name="verifyUniqueness">optional object VerifyUniqueness</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool WBSCodeMaskEdit(object codePrefix, object level, object sequence, object length, object separator, object codeGenerate, object verifyUniqueness)
+		public static bool WBSCodeMaskEdit(object codePrefix, object level, NetOffice.MSProjectApi.Enums.PjWBSSequence sequence, object length, object separator, object codeGenerate, object verifyUniqueness)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(codePrefix, level, sequence, length, separator, codeGenerate, verifyUniqueness);
 			object returnItem = Invoker.MethodReturn(_instance, "WBSCodeMaskEdit", paramsArray);
@@ -27021,7 +27021,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjWBSSequence Sequence = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool WBSCodeMaskEdit(object codePrefix, object level, object sequence)
+		public static bool WBSCodeMaskEdit(object codePrefix, object level, NetOffice.MSProjectApi.Enums.PjWBSSequence sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(codePrefix, level, sequence);
 			object returnItem = Invoker.MethodReturn(_instance, "WBSCodeMaskEdit", paramsArray);
@@ -27038,7 +27038,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="length">optional object Length</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool WBSCodeMaskEdit(object codePrefix, object level, object sequence, object length)
+		public static bool WBSCodeMaskEdit(object codePrefix, object level, NetOffice.MSProjectApi.Enums.PjWBSSequence sequence, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(codePrefix, level, sequence, length);
 			object returnItem = Invoker.MethodReturn(_instance, "WBSCodeMaskEdit", paramsArray);
@@ -27056,7 +27056,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="separator">optional object Separator</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool WBSCodeMaskEdit(object codePrefix, object level, object sequence, object length, object separator)
+		public static bool WBSCodeMaskEdit(object codePrefix, object level, NetOffice.MSProjectApi.Enums.PjWBSSequence sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(codePrefix, level, sequence, length, separator);
 			object returnItem = Invoker.MethodReturn(_instance, "WBSCodeMaskEdit", paramsArray);
@@ -27075,7 +27075,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="codeGenerate">optional object CodeGenerate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool WBSCodeMaskEdit(object codePrefix, object level, object sequence, object length, object separator, object codeGenerate)
+		public static bool WBSCodeMaskEdit(object codePrefix, object level, NetOffice.MSProjectApi.Enums.PjWBSSequence sequence, object length, object separator, object codeGenerate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(codePrefix, level, sequence, length, separator, codeGenerate);
 			object returnItem = Invoker.MethodReturn(_instance, "WBSCodeMaskEdit", paramsArray);
@@ -27098,7 +27098,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchGeneric">optional object MatchGeneric</param>
 		/// <param name="requiredCode">optional object RequiredCode</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27129,7 +27129,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27146,7 +27146,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="length">optional object Length</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27164,7 +27164,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="separator">optional object Separator</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27183,7 +27183,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLookUpTableCodes">optional object OnlyLookUpTableCodes</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27203,7 +27203,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyCompleteCodes">optional object OnlyCompleteCodes</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27224,7 +27224,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupTableLink">optional object LookupTableLink</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27246,7 +27246,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLeaves">optional object OnlyLeaves</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27269,7 +27269,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchGeneric">optional object MatchGeneric</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric)
+		public static bool CustomOutlineCodeEdit(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEdit", paramsArray);
@@ -27687,7 +27687,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">optional NetOffice.MSProjectApi.Enums.PjColor BackgroundColor = -1</param>
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern)
+		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth, NetOffice.MSProjectApi.Enums.PjColor backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEdit", paramsArray);
@@ -27705,7 +27705,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderShape">optional NetOffice.MSProjectApi.Enums.PjBoxShape BorderShape = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape)
+		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEdit", paramsArray);
@@ -27724,7 +27724,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderColor">optional NetOffice.MSProjectApi.Enums.PjColor BorderColor = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor)
+		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEdit", paramsArray);
@@ -27744,7 +27744,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth)
+		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEdit", paramsArray);
@@ -27765,7 +27765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">optional NetOffice.MSProjectApi.Enums.PjColor BackgroundColor = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor)
+		public static bool BoxStylesEdit(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth, NetOffice.MSProjectApi.Enums.PjColor backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEdit", paramsArray);
@@ -27788,7 +27788,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		/// <param name="reset">optional object Reset</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern, object reset)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth, NetOffice.MSProjectApi.Enums.PjColor backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern, reset);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27807,7 +27807,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderShape">optional NetOffice.MSProjectApi.Enums.PjBoxShape BorderShape = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27827,7 +27827,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderColor">optional NetOffice.MSProjectApi.Enums.PjColor BorderColor = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27848,7 +27848,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27870,7 +27870,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">optional NetOffice.MSProjectApi.Enums.PjColor BackgroundColor = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth, NetOffice.MSProjectApi.Enums.PjColor backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27893,7 +27893,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern)
+		public static bool BoxFormat(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, NetOffice.MSProjectApi.Enums.PjColor borderColor, object borderWidth, NetOffice.MSProjectApi.Enums.PjColor backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormat", paramsArray);
@@ -27924,7 +27924,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="email">optional object Email</param>
 		/// <param name="windowsAccount">optional object WindowsAccount</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CreateWebAccount(object serverURL, object name, object authenticationType, object accountType, object showDialog, object email, object windowsAccount)
+		public static bool CreateWebAccount(object serverURL, object name, NetOffice.MSProjectApi.Enums.PjAuthentication authenticationType, NetOffice.MSProjectApi.Enums.PjAccountType accountType, object showDialog, object email, object windowsAccount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverURL, name, authenticationType, accountType, showDialog, email, windowsAccount);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWebAccount", paramsArray);
@@ -27955,7 +27955,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="authenticationType">optional NetOffice.MSProjectApi.Enums.PjAuthentication AuthenticationType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CreateWebAccount(object serverURL, object name, object authenticationType)
+		public static bool CreateWebAccount(object serverURL, object name, NetOffice.MSProjectApi.Enums.PjAuthentication authenticationType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverURL, name, authenticationType);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWebAccount", paramsArray);
@@ -27972,7 +27972,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="accountType">optional NetOffice.MSProjectApi.Enums.PjAccountType AccountType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CreateWebAccount(object serverURL, object name, object authenticationType, object accountType)
+		public static bool CreateWebAccount(object serverURL, object name, NetOffice.MSProjectApi.Enums.PjAuthentication authenticationType, NetOffice.MSProjectApi.Enums.PjAccountType accountType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverURL, name, authenticationType, accountType);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWebAccount", paramsArray);
@@ -27990,7 +27990,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showDialog">optional object ShowDialog</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CreateWebAccount(object serverURL, object name, object authenticationType, object accountType, object showDialog)
+		public static bool CreateWebAccount(object serverURL, object name, NetOffice.MSProjectApi.Enums.PjAuthentication authenticationType, NetOffice.MSProjectApi.Enums.PjAccountType accountType, object showDialog)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverURL, name, authenticationType, accountType, showDialog);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWebAccount", paramsArray);
@@ -28009,7 +28009,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="email">optional object Email</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CreateWebAccount(object serverURL, object name, object authenticationType, object accountType, object showDialog, object email)
+		public static bool CreateWebAccount(object serverURL, object name, NetOffice.MSProjectApi.Enums.PjAuthentication authenticationType, NetOffice.MSProjectApi.Enums.PjAccountType accountType, object showDialog, object email)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(serverURL, name, authenticationType, accountType, showDialog, email);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateWebAccount", paramsArray);
@@ -28162,7 +28162,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="label">object Label</param>
 		/// <param name="dateFormat">optional NetOffice.MSProjectApi.Enums.PjDateFormat DateFormat = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel, object label, object dateFormat)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label, NetOffice.MSProjectApi.Enums.PjDateFormat dateFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label, dateFormat);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28185,7 +28185,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="horizontalAlignment">optional NetOffice.MSProjectApi.Enums.PjAlignment HorizontalAlignment = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28209,7 +28209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="verticalAlignment">optional NetOffice.MSProjectApi.Enums.PjVerticalAlignment VerticalAlignment = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28234,7 +28234,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="textLineLimit">object TextLineLimit</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28260,7 +28260,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabel">object ShowLabel</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28287,7 +28287,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="label">object Label</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel, object label)
+		public static bool BoxCellEdit(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, NetOffice.MSProjectApi.Enums.PjColor fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEdit", paramsArray);
@@ -28434,7 +28434,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlign Alignment = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxAlign(object alignment)
+		public static bool BoxAlign(NetOffice.MSProjectApi.Enums.PjAlign alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(alignment);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxAlign", paramsArray);
@@ -28550,7 +28550,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		/// <param name="required">optional object Required</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc, object graphicalIndicators, object required)
+		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators, object required)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators, required);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldProperties", paramsArray);
@@ -28579,7 +28579,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute)
+		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldProperties", paramsArray);
@@ -28595,7 +28595,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="summaryCalc">optional NetOffice.MSProjectApi.Enums.PjSummaryCalc SummaryCalc = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc)
+		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldProperties", paramsArray);
@@ -28612,7 +28612,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc, object graphicalIndicators)
+		public static bool CustomFieldProperties(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldProperties", paramsArray);
@@ -28658,7 +28658,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criteriaList">optional NetOffice.MSProjectApi.Enums.PjCriteriaList CriteriaList = 0</param>
 		/// <param name="index">optional object Index</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldIndicatorAdd(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjComparison test, string value, NetOffice.MSProjectApi.Enums.PjIndicator indicatorID, object criteriaList, object index)
+		public static bool CustomFieldIndicatorAdd(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjComparison test, string value, NetOffice.MSProjectApi.Enums.PjIndicator indicatorID, NetOffice.MSProjectApi.Enums.PjCriteriaList criteriaList, object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, test, value, indicatorID, criteriaList, index);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldIndicatorAdd", paramsArray);
@@ -28693,7 +28693,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criteriaList">optional NetOffice.MSProjectApi.Enums.PjCriteriaList CriteriaList = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldIndicatorAdd(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjComparison test, string value, NetOffice.MSProjectApi.Enums.PjIndicator indicatorID, object criteriaList)
+		public static bool CustomFieldIndicatorAdd(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjComparison test, string value, NetOffice.MSProjectApi.Enums.PjIndicator indicatorID, NetOffice.MSProjectApi.Enums.PjCriteriaList criteriaList)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, test, value, indicatorID, criteriaList);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldIndicatorAdd", paramsArray);
@@ -28769,7 +28769,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="index">Int16 Index</param>
 		/// <param name="criteriaList">optional NetOffice.MSProjectApi.Enums.PjCriteriaList CriteriaList = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldIndicatorDelete(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, Int16 index, object criteriaList)
+		public static bool CustomFieldIndicatorDelete(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, Int16 index, NetOffice.MSProjectApi.Enums.PjCriteriaList criteriaList)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, index, criteriaList);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldIndicatorDelete", paramsArray);
@@ -28803,7 +28803,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="promptOnNew">object PromptOnNew</param>
 		/// <param name="displayOrder">optional NetOffice.MSProjectApi.Enums.PjListOrder DisplayOrder = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldValueList(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object listDefault, object defaultValue, object restrictToList, object appendNew, object promptOnNew, object displayOrder)
+		public static bool CustomFieldValueList(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object listDefault, object defaultValue, object restrictToList, object appendNew, object promptOnNew, NetOffice.MSProjectApi.Enums.PjListOrder displayOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, listDefault, defaultValue, restrictToList, appendNew, promptOnNew, displayOrder);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldValueList", paramsArray);
@@ -28962,7 +28962,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		/// <param name="showIDOnly">optional object ShowIDOnly</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks, object showPageBreaks, object showIDOnly)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, NetOffice.MSProjectApi.Enums.PjColor viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks, object showIDOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks, showIDOnly);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -28980,7 +28980,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnAlignment">optional NetOffice.MSProjectApi.Enums.PjAlignment ColumnAlignment = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -28999,7 +28999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowSpacing">object RowSpacing</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29019,7 +29019,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnSpacing">object ColumnSpacing</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29040,7 +29040,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowHeight">optional NetOffice.MSProjectApi.Enums.PjRowColSize RowHeight = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29062,7 +29062,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnWidth">optional NetOffice.MSProjectApi.Enums.PjRowColSize ColumnWidth = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29085,7 +29085,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="adjustForPageBreaks">object AdjustForPageBreaks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29109,7 +29109,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showSummaryTasks">object ShowSummaryTasks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29134,7 +29134,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundColor">optional NetOffice.MSProjectApi.Enums.PjColor ViewBackgroundColor = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, NetOffice.MSProjectApi.Enums.PjColor viewBackgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29160,7 +29160,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern ViewBackgroundPattern = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, NetOffice.MSProjectApi.Enums.PjColor viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29187,7 +29187,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showProgressMarks">optional object ShowProgressMarks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, NetOffice.MSProjectApi.Enums.PjColor viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29215,7 +29215,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLayout(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks, object showPageBreaks)
+		public static bool BoxLayout(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, NetOffice.MSProjectApi.Enums.PjColor viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayout", paramsArray);
@@ -29233,7 +29233,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criticalColor">optional NetOffice.MSProjectApi.Enums.PjColor CriticalColor = 1</param>
 		/// <param name="noncriticalColor">optional NetOffice.MSProjectApi.Enums.PjColor NoncriticalColor = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLinks(object style, object showArrows, object showLabels, object colorMode, object criticalColor, object noncriticalColor)
+		public static bool BoxLinks(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, NetOffice.MSProjectApi.Enums.PjColor criticalColor, NetOffice.MSProjectApi.Enums.PjColor noncriticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor, noncriticalColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinks", paramsArray);
@@ -29248,7 +29248,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showArrows">object ShowArrows</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLinks(object style, object showArrows)
+		public static bool BoxLinks(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinks", paramsArray);
@@ -29264,7 +29264,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabels">object ShowLabels</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLinks(object style, object showArrows, object showLabels)
+		public static bool BoxLinks(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinks", paramsArray);
@@ -29281,7 +29281,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="colorMode">optional NetOffice.MSProjectApi.Enums.PjLinkColorMode ColorMode = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLinks(object style, object showArrows, object showLabels, object colorMode)
+		public static bool BoxLinks(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinks", paramsArray);
@@ -29299,7 +29299,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criticalColor">optional NetOffice.MSProjectApi.Enums.PjColor CriticalColor = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxLinks(object style, object showArrows, object showLabels, object colorMode, object criticalColor)
+		public static bool BoxLinks(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, NetOffice.MSProjectApi.Enums.PjColor criticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinks", paramsArray);
@@ -29432,7 +29432,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="yPosition">optional object YPosition</param>
 		/// <param name="projectName">optional object ProjectName</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxSet(object action, object taskID, object xPosition, object yPosition, object projectName)
+		public static bool BoxSet(NetOffice.MSProjectApi.Enums.PjBoxSet action, object taskID, object xPosition, object yPosition, object projectName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, taskID, xPosition, yPosition, projectName);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxSet", paramsArray);
@@ -29459,7 +29459,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="action">optional NetOffice.MSProjectApi.Enums.PjBoxSet Action = 4</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxSet(object action)
+		public static bool BoxSet(NetOffice.MSProjectApi.Enums.PjBoxSet action)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxSet", paramsArray);
@@ -29474,7 +29474,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="taskID">optional object TaskID</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxSet(object action, object taskID)
+		public static bool BoxSet(NetOffice.MSProjectApi.Enums.PjBoxSet action, object taskID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, taskID);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxSet", paramsArray);
@@ -29490,7 +29490,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="xPosition">optional object XPosition</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxSet(object action, object taskID, object xPosition)
+		public static bool BoxSet(NetOffice.MSProjectApi.Enums.PjBoxSet action, object taskID, object xPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, taskID, xPosition);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxSet", paramsArray);
@@ -29507,7 +29507,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="yPosition">optional object YPosition</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool BoxSet(object action, object taskID, object xPosition, object yPosition)
+		public static bool BoxSet(NetOffice.MSProjectApi.Enums.PjBoxSet action, object taskID, object xPosition, object yPosition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(action, taskID, xPosition, yPosition);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxSet", paramsArray);
@@ -29894,7 +29894,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="assignProposedResources">optional object AssignProposedResources</param>
 		/// <param name="levelProposedBookings">optional object LevelProposedBookings</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path, object assignProposedResources, object levelProposedBookings)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path, object assignProposedResources, object levelProposedBookings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate, updateProjects, saveReport, path, assignProposedResources, levelProposedBookings);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -29923,7 +29923,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="poolOption">optional NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption PoolOption = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -29939,7 +29939,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rBSorResourceList">optional object RBSorResourceList</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -29956,7 +29956,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="freezeHorizonDate">optional object FreezeHorizonDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -29974,7 +29974,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="updateProjects">optional object UpdateProjects</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate, updateProjects);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -29993,7 +29993,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="saveReport">optional object SaveReport</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate, updateProjects, saveReport);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -30013,7 +30013,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="path">optional object Path</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate, updateProjects, saveReport, path);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -30034,7 +30034,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="assignProposedResources">optional object AssignProposedResources</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResSubstitutionWizard(object projectList, object poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path, object assignProposedResources)
+		public static bool EnterpriseResSubstitutionWizard(object projectList, NetOffice.MSProjectApi.Enums.PjResSubstitutionPoolOption poolOption, object rBSorResourceList, object freezeHorizonDate, object updateProjects, object saveReport, object path, object assignProposedResources)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectList, poolOption, rBSorResourceList, freezeHorizonDate, updateProjects, saveReport, path, assignProposedResources);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResSubstitutionWizard", paramsArray);
@@ -30048,7 +30048,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="eUID">object EUID</param>
 		/// <param name="openType">optional NetOffice.MSProjectApi.Enums.PjCheckOutType OpenType = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool EnterpriseResourcesOpen(object eUID, object openType)
+		public static bool EnterpriseResourcesOpen(object eUID, NetOffice.MSProjectApi.Enums.PjCheckOutType openType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eUID, openType);
 			object returnItem = Invoker.MethodReturn(_instance, "EnterpriseResourcesOpen", paramsArray);
@@ -30249,7 +30249,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="useAvailableToWorkFilter">optional object UseAvailableToWorkFilter</param>
 		/// <param name="availableToWork">optional object AvailableToWork</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignmentDialog(object showResourceListOptions, object resourceListFields, object useNamedFilter, object filterName, object useAvailableToWorkFilter, object availableToWork)
+		public static bool ResourceAssignmentDialog(object showResourceListOptions, NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields resourceListFields, object useNamedFilter, object filterName, object useAvailableToWorkFilter, object availableToWork)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceListOptions, resourceListFields, useNamedFilter, filterName, useAvailableToWorkFilter, availableToWork);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignmentDialog", paramsArray);
@@ -30278,7 +30278,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="resourceListFields">optional NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields ResourceListFields = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignmentDialog(object showResourceListOptions, object resourceListFields)
+		public static bool ResourceAssignmentDialog(object showResourceListOptions, NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields resourceListFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceListOptions, resourceListFields);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignmentDialog", paramsArray);
@@ -30294,7 +30294,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="useNamedFilter">optional object UseNamedFilter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignmentDialog(object showResourceListOptions, object resourceListFields, object useNamedFilter)
+		public static bool ResourceAssignmentDialog(object showResourceListOptions, NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields resourceListFields, object useNamedFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceListOptions, resourceListFields, useNamedFilter);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignmentDialog", paramsArray);
@@ -30311,7 +30311,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="filterName">optional object FilterName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignmentDialog(object showResourceListOptions, object resourceListFields, object useNamedFilter, object filterName)
+		public static bool ResourceAssignmentDialog(object showResourceListOptions, NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields resourceListFields, object useNamedFilter, object filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceListOptions, resourceListFields, useNamedFilter, filterName);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignmentDialog", paramsArray);
@@ -30329,7 +30329,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="useAvailableToWorkFilter">optional object UseAvailableToWorkFilter</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool ResourceAssignmentDialog(object showResourceListOptions, object resourceListFields, object useNamedFilter, object filterName, object useAvailableToWorkFilter)
+		public static bool ResourceAssignmentDialog(object showResourceListOptions, NetOffice.MSProjectApi.Enums.PjAssignResourcesListFields resourceListFields, object useNamedFilter, object filterName, object useAvailableToWorkFilter)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(showResourceListOptions, resourceListFields, useNamedFilter, filterName, useAvailableToWorkFilter);
 			object returnItem = Invoker.MethodReturn(_instance, "ResourceAssignmentDialog", paramsArray);
@@ -30370,7 +30370,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileSaveOffline(object save)
+		public static bool FileSaveOffline(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileSaveOffline", paramsArray);
@@ -30502,7 +30502,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldName">optional NetOffice.MSProjectApi.Enums.PjSpellingField FieldName = -1</param>
 		/// <param name="enableSpellCheck">optional object EnableSpellCheck</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool SpellCheckField(object fieldName, object enableSpellCheck)
+		public static bool SpellCheckField(NetOffice.MSProjectApi.Enums.PjSpellingField fieldName, object enableSpellCheck)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, enableSpellCheck);
 			object returnItem = Invoker.MethodReturn(_instance, "SpellCheckField", paramsArray);
@@ -30529,7 +30529,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fieldName">optional NetOffice.MSProjectApi.Enums.PjSpellingField FieldName = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool SpellCheckField(object fieldName)
+		public static bool SpellCheckField(NetOffice.MSProjectApi.Enums.PjSpellingField fieldName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName);
 			object returnItem = Invoker.MethodReturn(_instance, "SpellCheckField", paramsArray);
@@ -31289,7 +31289,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="pjVisualReportsTab">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTab PjVisualReportsTab = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReports(object pjVisualReportsTab)
+		public static bool VisualReports(NetOffice.MSProjectApi.Enums.PjVisualReportsTab pjVisualReportsTab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTab);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReports", paramsArray);
@@ -31316,7 +31316,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="strNamePath">object strNamePath</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsSaveDatabase(object strNamePath, object pjVisualReportsDataLevel)
+		public static bool VisualReportsSaveDatabase(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsDataLevel);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsSaveDatabase", paramsArray);
@@ -31346,7 +31346,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsSaveCube(object strNamePath, object pjVisualReportsCubeType, object reportAllFields, object pjVisualReportsDataLevel)
+		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType, reportAllFields, pjVisualReportsDataLevel);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsSaveCube", paramsArray);
@@ -31361,7 +31361,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsSaveCube(object strNamePath, object pjVisualReportsCubeType)
+		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsSaveCube", paramsArray);
@@ -31377,7 +31377,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsSaveCube(object strNamePath, object pjVisualReportsCubeType, object reportAllFields)
+		public static bool VisualReportsSaveCube(object strNamePath, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strNamePath, pjVisualReportsCubeType, reportAllFields);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsSaveCube", paramsArray);
@@ -31393,7 +31393,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsNewTemplate(object pjVisualReportsTemplateType, object pjVisualReportsCubeType, object reportAllFields, object pjVisualReportsDataLevel)
+		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType, reportAllFields, pjVisualReportsDataLevel);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsNewTemplate", paramsArray);
@@ -31407,7 +31407,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pjVisualReportsTemplateType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType PjVisualReportsTemplateType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsNewTemplate(object pjVisualReportsTemplateType)
+		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsNewTemplate", paramsArray);
@@ -31422,7 +31422,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="pjVisualReportsCubeType">optional NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType PjVisualReportsCubeType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsNewTemplate(object pjVisualReportsTemplateType, object pjVisualReportsCubeType)
+		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsNewTemplate", paramsArray);
@@ -31438,7 +31438,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="reportAllFields">object ReportAllFields</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsNewTemplate(object pjVisualReportsTemplateType, object pjVisualReportsCubeType, object reportAllFields)
+		public static bool VisualReportsNewTemplate(NetOffice.MSProjectApi.Enums.PjVisualReportsTemplateType pjVisualReportsTemplateType, NetOffice.MSProjectApi.Enums.PjVisualReportsCubeType pjVisualReportsCubeType, object reportAllFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pjVisualReportsTemplateType, pjVisualReportsCubeType, reportAllFields);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsNewTemplate", paramsArray);
@@ -31452,7 +31452,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsView(object strVisualReportTemplateFile, object pjVisualReportsDataLevel)
+		public static bool VisualReportsView(object strVisualReportTemplateFile, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile, pjVisualReportsDataLevel);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsView", paramsArray);
@@ -31504,7 +31504,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="strVisualReportTemplateFile">object strVisualReportTemplateFile</param>
 		/// <param name="pjVisualReportsDataLevel">optional NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel PjVisualReportsDataLevel = 5</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool VisualReportsEdit(object strVisualReportTemplateFile, object pjVisualReportsDataLevel)
+		public static bool VisualReportsEdit(object strVisualReportTemplateFile, NetOffice.MSProjectApi.Enums.PjVisualReportsDataLevel pjVisualReportsDataLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strVisualReportTemplateFile, pjVisualReportsDataLevel);
 			object returnItem = Invoker.MethodReturn(_instance, "VisualReportsEdit", paramsArray);
@@ -31547,7 +31547,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="xMLName">optional object XMLName</param>
 		/// <param name="doNotLoadFromEnterprise">optional object DoNotLoadFromEnterprise</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName, object doNotLoadFromEnterprise)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName, object doNotLoadFromEnterprise)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended, xMLName, doNotLoadFromEnterprise);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31596,7 +31596,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="openPool">optional NetOffice.MSProjectApi.Enums.PjPoolOpen openPool = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31622,7 +31622,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="password">optional object Password</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31649,7 +31649,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="writeResPassword">optional object WriteResPassword</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31677,7 +31677,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="ignoreReadOnlyRecommended">optional object IgnoreReadOnlyRecommended</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31706,7 +31706,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="xMLName">optional object XMLName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, object openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName)
+		public static bool FileOpenEx(object name, object readOnly, object merge, object taskInformation, object table, object sheet, object noAuto, object userID, object databasePassWord, object formatID, object map, NetOffice.MSProjectApi.Enums.PjPoolOpen openPool, object password, object writeResPassword, object ignoreReadOnlyRecommended, object xMLName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, readOnly, merge, taskInformation, table, sheet, noAuto, userID, databasePassWord, formatID, map, openPool, password, writeResPassword, ignoreReadOnlyRecommended, xMLName);
 			object returnItem = Invoker.MethodReturn(_instance, "FileOpenEx", paramsArray);
@@ -31721,7 +31721,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="noAuto">optional object NoAuto</param>
 		/// <param name="checkIn">optional object CheckIn</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseEx(object save, object noAuto, object checkIn)
+		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object noAuto, object checkIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, noAuto, checkIn);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseEx", paramsArray);
@@ -31748,7 +31748,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseEx(object save)
+		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseEx", paramsArray);
@@ -31763,7 +31763,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="noAuto">optional object NoAuto</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseEx(object save, object noAuto)
+		public static bool FileCloseEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object noAuto)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, noAuto);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseEx", paramsArray);
@@ -31777,7 +31777,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		/// <param name="checkIn">optional object CheckIn</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseAllEx(object save, object checkIn)
+		public static bool FileCloseAllEx(NetOffice.MSProjectApi.Enums.PjSaveType save, object checkIn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save, checkIn);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseAllEx", paramsArray);
@@ -31804,7 +31804,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="save">optional NetOffice.MSProjectApi.Enums.PjSaveType Save = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool FileCloseAllEx(object save)
+		public static bool FileCloseAllEx(NetOffice.MSProjectApi.Enums.PjSaveType save)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(save);
 			object returnItem = Invoker.MethodReturn(_instance, "FileCloseAllEx", paramsArray);
@@ -33432,7 +33432,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="defaultValue">optional object DefaultValue</param>
 		/// <param name="sortOrder">optional object SortOrder</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue, object sortOrder)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue, object sortOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault, defaultValue, sortOrder);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33463,7 +33463,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="sequence">optional NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence Sequence = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33480,7 +33480,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="length">optional object Length</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33498,7 +33498,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="separator">optional object Separator</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33517,7 +33517,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLookUpTableCodes">optional object OnlyLookUpTableCodes</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33537,7 +33537,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyCompleteCodes">optional object OnlyCompleteCodes</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33558,7 +33558,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupTableLink">optional object LookupTableLink</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33580,7 +33580,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="onlyLeaves">optional object OnlyLeaves</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33603,7 +33603,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="matchGeneric">optional object MatchGeneric</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33627,7 +33627,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="requiredCode">optional object RequiredCode</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33652,7 +33652,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="lookupDefault">optional object LookupDefault</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33678,7 +33678,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="defaultValue">optional object DefaultValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, object sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue)
+		public static bool CustomOutlineCodeEditEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object level, NetOffice.MSProjectApi.Enums.PjCustomOutlineCodeSequence sequence, object length, object separator, object onlyLookUpTableCodes, object onlyCompleteCodes, object lookupTableLink, object onlyLeaves, object matchGeneric, object requiredCode, object lookupDefault, object defaultValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, level, sequence, length, separator, onlyLookUpTableCodes, onlyCompleteCodes, lookupTableLink, onlyLeaves, matchGeneric, requiredCode, lookupDefault, defaultValue);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomOutlineCodeEditEx", paramsArray);
@@ -33775,7 +33775,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="required">optional object Required</param>
 		/// <param name="automaticallyRolldownToAssn">optional object AutomaticallyRolldownToAssn</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc, object graphicalIndicators, object required, object automaticallyRolldownToAssn)
+		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators, object required, object automaticallyRolldownToAssn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators, required, automaticallyRolldownToAssn);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldPropertiesEx", paramsArray);
@@ -33804,7 +33804,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="attribute">optional NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute Attribute = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute)
+		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldPropertiesEx", paramsArray);
@@ -33820,7 +33820,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="summaryCalc">optional NetOffice.MSProjectApi.Enums.PjSummaryCalc SummaryCalc = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc)
+		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldPropertiesEx", paramsArray);
@@ -33837,7 +33837,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="graphicalIndicators">optional object GraphicalIndicators</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc, object graphicalIndicators)
+		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldPropertiesEx", paramsArray);
@@ -33855,7 +33855,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="required">optional object Required</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, object attribute, object summaryCalc, object graphicalIndicators, object required)
+		public static bool CustomFieldPropertiesEx(NetOffice.MSProjectApi.Enums.PjCustomField fieldID, NetOffice.MSProjectApi.Enums.PjCustomFieldAttribute attribute, NetOffice.MSProjectApi.Enums.PjSummaryCalc summaryCalc, object graphicalIndicators, object required)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldID, attribute, summaryCalc, graphicalIndicators, required);
 			object returnItem = Invoker.MethodReturn(_instance, "CustomFieldPropertiesEx", paramsArray);
@@ -34246,7 +34246,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="localized">optional bool Localized = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static string ValidateEnterpriseFormula(Int32 propertyID, string strFormula, object localized)
+		public static string ValidateEnterpriseFormula(Int32 propertyID, string strFormula, bool localized)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strFormula, localized);
 			object returnItem = Invoker.MethodReturn(_instance, "ValidateEnterpriseFormula", paramsArray);
@@ -34286,7 +34286,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="howManyUndos">optional Int32 HowManyUndos = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Undo(object howManyUndos)
+		public static bool Undo(Int32 howManyUndos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(howManyUndos);
 			object returnItem = Invoker.MethodReturn(_instance, "Undo", paramsArray);
@@ -34312,7 +34312,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="howManyRedos">optional Int32 HowManyRedos = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static bool Redo(object howManyRedos)
+		public static bool Redo(Int32 howManyRedos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(howManyRedos);
 			object returnItem = Invoker.MethodReturn(_instance, "Redo", paramsArray);
@@ -34378,7 +34378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="localized">optional bool Localized = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public static string ValidateGraphicalIndicators(Int32 propertyID, string strGraphicalIndicators, object localized)
+		public static string ValidateGraphicalIndicators(Int32 propertyID, string strGraphicalIndicators, bool localized)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propertyID, strGraphicalIndicators, localized);
 			object returnItem = Invoker.MethodReturn(_instance, "ValidateGraphicalIndicators", paramsArray);
@@ -34736,7 +34736,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="applyTo">object ApplyTo</param>
 		/// <param name="builtInView">optional NetOffice.MSProjectApi.Enums.PjViewType BuiltInView = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool ViewApplyEx(object name, object singlePane, object toggle, object applyTo, object builtInView)
+		public static bool ViewApplyEx(object name, object singlePane, object toggle, object applyTo, NetOffice.MSProjectApi.Enums.PjViewType builtInView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, singlePane, toggle, applyTo, builtInView);
 			object returnItem = Invoker.MethodReturn(_instance, "ViewApplyEx", paramsArray);
@@ -34819,7 +34819,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		/// <param name="column">optional object Column</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool ChangeColumnDataType(object type, object column)
+		public static bool ChangeColumnDataType(NetOffice.MSProjectApi.Enums.PjFieldTypes type, object column)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, column);
 			object returnItem = Invoker.MethodReturn(_instance, "ChangeColumnDataType", paramsArray);
@@ -34846,7 +34846,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjFieldTypes Type = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool ChangeColumnDataType(object type)
+		public static bool ChangeColumnDataType(NetOffice.MSProjectApi.Enums.PjFieldTypes type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(_instance, "ChangeColumnDataType", paramsArray);
@@ -37459,7 +37459,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern)
+		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEditEx", paramsArray);
@@ -37479,7 +37479,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth)
+		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEditEx", paramsArray);
@@ -37500,7 +37500,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor)
+		public static bool BoxStylesEditEx(NetOffice.MSProjectApi.Enums.PjBoxStyle style, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxStylesEditEx", paramsArray);
@@ -37523,7 +37523,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		/// <param name="reset">optional object Reset</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern, object reset)
+		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern, object reset)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern, reset);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormatEx", paramsArray);
@@ -37544,7 +37544,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="borderWidth">object BorderWidth</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth)
+		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormatEx", paramsArray);
@@ -37566,7 +37566,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundColor">object BackgroundColor</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor)
+		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormatEx", paramsArray);
@@ -37589,7 +37589,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="backgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern BackgroundPattern = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, object borderShape, object borderColor, object borderWidth, object backgroundColor, object backgroundPattern)
+		public static bool BoxFormatEx(object projectName, object taskID, object dataTemplate, object horizontalGridlines, object verticalGridlines, NetOffice.MSProjectApi.Enums.PjBoxShape borderShape, object borderColor, object borderWidth, object backgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern backgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectName, taskID, dataTemplate, horizontalGridlines, verticalGridlines, borderShape, borderColor, borderWidth, backgroundColor, backgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxFormatEx", paramsArray);
@@ -37616,7 +37616,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="label">object Label</param>
 		/// <param name="dateFormat">optional NetOffice.MSProjectApi.Enums.PjDateFormat DateFormat = -1</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel, object label, object dateFormat)
+		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label, NetOffice.MSProjectApi.Enums.PjDateFormat dateFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label, dateFormat);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEditEx", paramsArray);
@@ -37640,7 +37640,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="verticalAlignment">optional NetOffice.MSProjectApi.Enums.PjVerticalAlignment VerticalAlignment = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment)
+		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEditEx", paramsArray);
@@ -37665,7 +37665,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="textLineLimit">object TextLineLimit</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit)
+		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEditEx", paramsArray);
@@ -37691,7 +37691,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabel">object ShowLabel</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel)
+		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEditEx", paramsArray);
@@ -37718,7 +37718,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="label">object Label</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, object fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, object horizontalAlignment, object verticalAlignment, object textLineLimit, object showLabel, object label)
+		public static bool BoxCellEditEx(string name, NetOffice.MSProjectApi.Enums.PjCell cell, NetOffice.MSProjectApi.Enums.PjField fieldName, object font, object fontSize, object fontColor, object bold, object italic, object underline, NetOffice.MSProjectApi.Enums.PjAlignment horizontalAlignment, NetOffice.MSProjectApi.Enums.PjVerticalAlignment verticalAlignment, object textLineLimit, object showLabel, object label)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, cell, fieldName, font, fontSize, fontColor, bold, italic, underline, horizontalAlignment, verticalAlignment, textLineLimit, showLabel, label);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxCellEditEx", paramsArray);
@@ -37746,7 +37746,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		/// <param name="showIDOnly">optional object ShowIDOnly</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks, object showPageBreaks, object showIDOnly)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks, object showIDOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks, showIDOnly);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37765,7 +37765,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowSpacing">object RowSpacing</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37785,7 +37785,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnSpacing">object ColumnSpacing</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37806,7 +37806,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="rowHeight">optional NetOffice.MSProjectApi.Enums.PjRowColSize RowHeight = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37828,7 +37828,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columnWidth">optional NetOffice.MSProjectApi.Enums.PjRowColSize ColumnWidth = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37851,7 +37851,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="adjustForPageBreaks">object AdjustForPageBreaks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37875,7 +37875,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showSummaryTasks">object ShowSummaryTasks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37900,7 +37900,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundColor">object ViewBackgroundColor</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37926,7 +37926,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="viewBackgroundPattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern ViewBackgroundPattern = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37953,7 +37953,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showProgressMarks">optional object ShowProgressMarks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37981,7 +37981,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showPageBreaks">optional object ShowPageBreaks</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLayoutEx(object layoutMode, object layoutScheme, object summaryPrecedence, object rowAlignment, object columnAlignment, object rowSpacing, object columnSpacing, object rowHeight, object columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, object viewBackgroundPattern, object showProgressMarks, object showPageBreaks)
+		public static bool BoxLayoutEx(NetOffice.MSProjectApi.Enums.PjLayoutMode layoutMode, NetOffice.MSProjectApi.Enums.PjLayoutScheme layoutScheme, object summaryPrecedence, NetOffice.MSProjectApi.Enums.PjVerticalAlignment rowAlignment, NetOffice.MSProjectApi.Enums.PjAlignment columnAlignment, object rowSpacing, object columnSpacing, NetOffice.MSProjectApi.Enums.PjRowColSize rowHeight, NetOffice.MSProjectApi.Enums.PjRowColSize columnWidth, object adjustForPageBreaks, object showSummaryTasks, object viewBackgroundColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern viewBackgroundPattern, object showProgressMarks, object showPageBreaks)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(layoutMode, layoutScheme, summaryPrecedence, rowAlignment, columnAlignment, rowSpacing, columnSpacing, rowHeight, columnWidth, adjustForPageBreaks, showSummaryTasks, viewBackgroundColor, viewBackgroundPattern, showProgressMarks, showPageBreaks);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLayoutEx", paramsArray);
@@ -37999,7 +37999,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criticalColor">optional object CriticalColor</param>
 		/// <param name="noncriticalColor">optional object NoncriticalColor</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLinksEx(object style, object showArrows, object showLabels, object colorMode, object criticalColor, object noncriticalColor)
+		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, object criticalColor, object noncriticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor, noncriticalColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinksEx", paramsArray);
@@ -38014,7 +38014,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showArrows">object ShowArrows</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLinksEx(object style, object showArrows)
+		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinksEx", paramsArray);
@@ -38030,7 +38030,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="showLabels">object ShowLabels</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLinksEx(object style, object showArrows, object showLabels)
+		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinksEx", paramsArray);
@@ -38047,7 +38047,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="colorMode">optional NetOffice.MSProjectApi.Enums.PjLinkColorMode ColorMode = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLinksEx(object style, object showArrows, object showLabels, object colorMode)
+		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinksEx", paramsArray);
@@ -38065,7 +38065,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criticalColor">optional object CriticalColor</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool BoxLinksEx(object style, object showArrows, object showLabels, object colorMode, object criticalColor)
+		public static bool BoxLinksEx(NetOffice.MSProjectApi.Enums.PjLinkStyle style, object showArrows, object showLabels, NetOffice.MSProjectApi.Enums.PjLinkColorMode colorMode, object criticalColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(style, showArrows, showLabels, colorMode, criticalColor);
 			object returnItem = Invoker.MethodReturn(_instance, "BoxLinksEx", paramsArray);
@@ -38604,7 +38604,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontUnderline">optional object LabelFontUnderline</param>
 		/// <param name="labelFontColor">optional object LabelFontColor</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline, object labelFontColor)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline, object labelFontColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline, labelFontColor);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38637,7 +38637,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="alignment">optional NetOffice.MSProjectApi.Enums.PjAlignment Alignment = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38655,7 +38655,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="text">optional object Text</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38674,7 +38674,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontName">optional object LabelFontName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38694,7 +38694,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontSize">optional object LabelFontSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38715,7 +38715,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontBold">optional object LabelFontBold</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38737,7 +38737,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontItalic">optional object LabelFontItalic</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -38760,7 +38760,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="labelFontUnderline">optional object LabelFontUnderline</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, object alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline)
+		public static bool FilePageSetupLegendEx(object name, object textWidth, object legendOn, NetOffice.MSProjectApi.Enums.PjAlignment alignment, object text, object labelFontName, object labelFontSize, object labelFontBold, object labelFontItalic, object labelFontUnderline)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, textWidth, legendOn, alignment, text, labelFontName, labelFontSize, labelFontBold, labelFontItalic, labelFontUnderline);
 			object returnItem = Invoker.MethodReturn(_instance, "FilePageSetupLegendEx", paramsArray);
@@ -39928,7 +39928,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="resolveMethod">optional NetOffice.MSProjectApi.Enums.PjLevelSelectedOption ResolveMethod = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool LevelSelected(object resolveMethod)
+		public static bool LevelSelected(NetOffice.MSProjectApi.Enums.PjLevelSelectedOption resolveMethod)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(resolveMethod);
 			object returnItem = Invoker.MethodReturn(_instance, "LevelSelected", paramsArray);
@@ -40164,7 +40164,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="test2">optional object Test2</param>
 		/// <param name="criteria2">optional object Criteria2</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType, object test1, object criteria1, object operation, object test2, object criteria2)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation, object test2, object criteria2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation, test2, criteria2);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40193,7 +40193,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjAutoFilterType FilterType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40209,7 +40209,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="test1">optional object Test1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType, object test1)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40226,7 +40226,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="criteria1">optional object Criteria1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType, object test1, object criteria1)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40244,7 +40244,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="operation">optional object Operation</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType, object test1, object criteria1, object operation)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40263,7 +40263,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="test2">optional object Test2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool SetAutoFilter(object fieldName, object filterType, object test1, object criteria1, object operation, object test2)
+		public static bool SetAutoFilter(object fieldName, NetOffice.MSProjectApi.Enums.PjAutoFilterType filterType, object test1, object criteria1, object operation, object test2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, filterType, test1, criteria1, operation, test2);
 			object returnItem = Invoker.MethodReturn(_instance, "SetAutoFilter", paramsArray);
@@ -40276,7 +40276,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="filterType">optional NetOffice.MSProjectApi.Enums.PjFilterViewType FilterType = 65535</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool FilterNew(object filterType)
+		public static bool FilterNew(NetOffice.MSProjectApi.Enums.PjFilterViewType filterType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterType);
 			object returnItem = Invoker.MethodReturn(_instance, "FilterNew", paramsArray);
@@ -40398,7 +40398,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="startOnDate">optional NetOffice.MSProjectApi.Enums.PjNewTasksStartOnDate StartOnDate = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool NewTasksStartOn(object startOnDate)
+		public static bool NewTasksStartOn(NetOffice.MSProjectApi.Enums.PjNewTasksStartOnDate startOnDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startOnDate);
 			object returnItem = Invoker.MethodReturn(_instance, "NewTasksStartOn", paramsArray);
@@ -41378,7 +41378,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fromDate">optional object FromDate</param>
 		/// <param name="toDate">optional object ToDate</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate, object toDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate, toDate);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41407,7 +41407,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fileType">optional NetOffice.MSProjectApi.Enums.PjDocExportType FileType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41423,7 +41423,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="includeDocumentProperties">optional object IncludeDocumentProperties</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType, object includeDocumentProperties)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41440,7 +41440,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="includeDocumentMarkup">optional object IncludeDocumentMarkup</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41458,7 +41458,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="archiveFormat">optional object ArchiveFormat</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41477,7 +41477,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="fromDate">optional object FromDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool DocumentExport(object filename, object fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate)
+		public static bool DocumentExport(object filename, NetOffice.MSProjectApi.Enums.PjDocExportType fileType, object includeDocumentProperties, object includeDocumentMarkup, object archiveFormat, object fromDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, fileType, includeDocumentProperties, includeDocumentMarkup, archiveFormat, fromDate);
 			object returnItem = Invoker.MethodReturn(_instance, "DocumentExport", paramsArray);
@@ -41616,7 +41616,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="type">optional NetOffice.MSProjectApi.Enums.PjResourceTypes Type = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool InsertResource(object type)
+		public static bool InsertResource(NetOffice.MSProjectApi.Enums.PjResourceTypes type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(_instance, "InsertResource", paramsArray);
@@ -41685,7 +41685,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columns">optional NetOffice.MSProjectApi.Enums.PjCompareVersionColumns Columns = 0</param>
 		/// <param name="showLegend">optional object ShowLegend</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, object items, object columns, object showLegend)
+		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items, NetOffice.MSProjectApi.Enums.PjCompareVersionColumns columns, object showLegend)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items, columns, showLegend);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateComparisonReport", paramsArray);
@@ -41718,7 +41718,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="items">optional NetOffice.MSProjectApi.Enums.PjCompareVersionItems Items = 6</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, object items)
+		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateComparisonReport", paramsArray);
@@ -41736,7 +41736,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="columns">optional NetOffice.MSProjectApi.Enums.PjCompareVersionColumns Columns = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, object items, object columns)
+		public static bool CreateComparisonReport(object filename, object taskTable, object resourceTable, NetOffice.MSProjectApi.Enums.PjCompareVersionItems items, NetOffice.MSProjectApi.Enums.PjCompareVersionColumns columns)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, taskTable, resourceTable, items, columns);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateComparisonReport", paramsArray);
@@ -41846,7 +41846,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="defaultTab">optional NetOffice.MSProjectApi.Enums.PjOptionsSecurityTab DefaultTab = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool OptionsSecurityTab(object defaultTab)
+		public static bool OptionsSecurityTab(NetOffice.MSProjectApi.Enums.PjOptionsSecurityTab defaultTab)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(defaultTab);
 			object returnItem = Invoker.MethodReturn(_instance, "OptionsSecurityTab", paramsArray);
@@ -41928,7 +41928,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="page">optional NetOffice.MSProjectApi.Enums.PjServerPage Page = 0</param>
 		[SupportByVersionAttribute("MSProject", 11,14)]
-		public static bool OpenServerPage(object page)
+		public static bool OpenServerPage(NetOffice.MSProjectApi.Enums.PjServerPage page)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(page);
 			object returnItem = Invoker.MethodReturn(_instance, "OpenServerPage", paramsArray);
@@ -42859,7 +42859,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="templateId">optional NetOffice.MSProjectApi.Enums.PjReportLayoutTemplateId TemplateId = 0</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public static bool ApplyReportLayoutTemplate(object templateId)
+		public static bool ApplyReportLayoutTemplate(NetOffice.MSProjectApi.Enums.PjReportLayoutTemplateId templateId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templateId);
 			object returnItem = Invoker.MethodReturn(_instance, "ApplyReportLayoutTemplate", paramsArray);
@@ -43126,7 +43126,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
 		/// <param name="sharePointName">optional object SharePointName</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public static bool AddSiteColumn(object projectField, object sharePointName)
+		public static bool AddSiteColumn(NetOffice.MSProjectApi.Enums.PjField projectField, object sharePointName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectField, sharePointName);
 			object returnItem = Invoker.MethodReturn(_instance, "AddSiteColumn", paramsArray);
@@ -43153,7 +43153,7 @@ namespace NetOffice.MSProjectApi.GlobalHelperModules
 		/// <param name="projectField">optional NetOffice.MSProjectApi.Enums.PjField ProjectField = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public static bool AddSiteColumn(object projectField)
+		public static bool AddSiteColumn(NetOffice.MSProjectApi.Enums.PjField projectField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(projectField);
 			object returnItem = Invoker.MethodReturn(_instance, "AddSiteColumn", paramsArray);

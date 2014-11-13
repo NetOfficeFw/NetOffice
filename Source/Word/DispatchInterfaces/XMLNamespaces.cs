@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
 		/// <param name="alias">optional object Alias</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias, object installForAllUsers)
+		public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, namespaceURI, alias, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
 		/// <param name="path">string Path</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public void InstallManifest(string path, object installForAllUsers)
+		public void InstallManifest(string path, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, installForAllUsers);
 			Invoker.Method(this, "InstallManifest", paramsArray);

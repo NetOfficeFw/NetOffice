@@ -375,7 +375,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="startLine">Int32 StartLine</param>
 		/// <param name="count">optional Int32 Count = 1</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-		public void DeleteLines(Int32 startLine, object count)
+		public void DeleteLines(Int32 startLine, Int32 count)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(startLine, count);
 			Invoker.Method(this, "DeleteLines", paramsArray);
@@ -434,7 +434,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		/// <param name="patternSearch">optional bool PatternSearch = false</param>
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -471,7 +471,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -491,7 +491,7 @@ namespace NetOffice.VBIDEApi
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("VBIDE", 12,14,5.3)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);

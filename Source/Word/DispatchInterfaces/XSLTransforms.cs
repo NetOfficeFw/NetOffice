@@ -190,7 +190,7 @@ namespace NetOffice.WordApi
 		/// <param name="alias">optional object Alias</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XSLTransform Add(string location, object alias, object installForAllUsers)
+		public NetOffice.WordApi.XSLTransform Add(string location, object alias, bool installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(location, alias, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

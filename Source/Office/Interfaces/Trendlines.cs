@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		/// <param name="name">optional object Name</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -293,7 +293,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlTrendlineType Type = -4132</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="order">optional object Order</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="period">optional object Period</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -344,7 +344,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="forward">optional object Forward</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -363,7 +363,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="backward">optional object Backward</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="intercept">optional object Intercept</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -404,7 +404,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="displayEquation">optional object DisplayEquation</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -426,7 +426,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="displayRSquared">optional object DisplayRSquared</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.IMsoTrendline Add(object type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
+		public NetOffice.OfficeApi.IMsoTrendline Add(NetOffice.OfficeApi.Enums.XlTrendlineType type, object order, object period, object forward, object backward, object intercept, object displayEquation, object displayRSquared)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, order, period, forward, backward, intercept, displayEquation, displayRSquared);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

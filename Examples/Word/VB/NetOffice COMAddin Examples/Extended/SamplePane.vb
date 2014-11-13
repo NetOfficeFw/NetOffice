@@ -1,7 +1,7 @@
 ﻿Imports NetOffice.WordApi.Tools
 
 Public Class SamplePane
-    Implements ITaskPane
+    Implements ITaskPane ' Not necessary to implement ITaskPane but its helpful
 
 #Region "Properties"
 
@@ -19,6 +19,14 @@ Public Class SamplePane
     End Sub
 
     Public Sub OnDisconnection() Implements NetOffice.WordApi.Tools.ITaskPane.OnDisconnection
+
+    End Sub
+
+    Public Sub OnDockPositionChanged(ByVal position As NetOffice.OfficeApi.Enums.MsoCTPDockPosition) Implements NetOffice.WordApi.Tools.ITaskPane.OnDockPositionChanged
+
+    End Sub
+
+    Public Sub OnVisibleStateChanged(ByVal visible As Boolean) Implements NetOffice.WordApi.Tools.ITaskPane.OnVisibleStateChanged
 
     End Sub
 

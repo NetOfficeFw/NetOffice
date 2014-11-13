@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="scheme">optional NetOffice.PowerPointApi.ColorScheme Scheme = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.ColorScheme Add(object scheme)
+		public NetOffice.PowerPointApi.ColorScheme Add(NetOffice.PowerPointApi.ColorScheme scheme)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scheme);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

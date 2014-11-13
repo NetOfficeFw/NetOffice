@@ -250,7 +250,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="numBytes">optional Int32 NumBytes = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public object Read(object numBytes)
+		public object Read(Int32 numBytes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numBytes);
 			object returnItem = Invoker.MethodReturn(this, "Read", paramsArray);
@@ -296,7 +296,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName = </param>
 		/// <param name="password">optional string Password = </param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object mode, object options, object userName, object password)
+		public void Open(object source, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum options, string userName, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, mode, options, userName, password);
 			Invoker.Method(this, "Open", paramsArray);
@@ -335,7 +335,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="mode">optional NetOffice.ADODBApi.Enums.ConnectModeEnum Mode = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object mode)
+		public void Open(object source, NetOffice.ADODBApi.Enums.ConnectModeEnum mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, mode);
 			Invoker.Method(this, "Open", paramsArray);
@@ -350,7 +350,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum Options = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object mode, object options)
+		public void Open(object source, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, mode, options);
 			Invoker.Method(this, "Open", paramsArray);
@@ -366,7 +366,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userName">optional string UserName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void Open(object source, object mode, object options, object userName)
+		public void Open(object source, NetOffice.ADODBApi.Enums.ConnectModeEnum mode, NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum options, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, mode, options, userName);
 			Invoker.Method(this, "Open", paramsArray);
@@ -424,7 +424,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="destStream">NetOffice.ADODBApi._Stream_Deprecated DestStream</param>
 		/// <param name="charNumber">optional Int32 CharNumber = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream, object charNumber)
+		public void CopyTo(NetOffice.ADODBApi._Stream_Deprecated destStream, Int32 charNumber)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(destStream, charNumber);
 			Invoker.Method(this, "CopyTo", paramsArray);
@@ -461,7 +461,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="fileName">string FileName</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.SaveOptionsEnum Options = 1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void SaveToFile(string fileName, object options)
+		public void SaveToFile(string fileName, NetOffice.ADODBApi.Enums.SaveOptionsEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, options);
 			Invoker.Method(this, "SaveToFile", paramsArray);
@@ -498,7 +498,7 @@ namespace NetOffice.ADODBApi
 		/// </summary>
 		/// <param name="numChars">optional Int32 NumChars = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public string ReadText(object numChars)
+		public string ReadText(Int32 numChars)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(numChars);
 			object returnItem = Invoker.MethodReturn(this, "ReadText", paramsArray);
@@ -525,7 +525,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="data">string Data</param>
 		/// <param name="options">optional NetOffice.ADODBApi.Enums.StreamWriteEnum Options = 0</param>
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void WriteText(string data, object options)
+		public void WriteText(string data, NetOffice.ADODBApi.Enums.StreamWriteEnum options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(data, options);
 			Invoker.Method(this, "WriteText", paramsArray);

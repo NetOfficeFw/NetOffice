@@ -698,7 +698,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="useNewScaling">optional bool UseNewScaling = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Ungroup(object useNewScaling)
+		public void Ungroup(bool useNewScaling)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(useNewScaling);
 			Invoker.Method(this, "Ungroup", paramsArray);

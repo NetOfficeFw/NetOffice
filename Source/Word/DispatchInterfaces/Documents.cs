@@ -1954,7 +1954,7 @@ namespace NetOffice.WordApi
 		/// <param name="blogName">string BlogName</param>
 		/// <param name="postID">optional string PostID = </param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, object postID)
+		public NetOffice.WordApi.Document AddBlogDocument(string providerID, string postURL, string blogName, string postID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(providerID, postURL, blogName, postID);
 			object returnItem = Invoker.MethodReturn(this, "AddBlogDocument", paramsArray);

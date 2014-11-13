@@ -1009,7 +1009,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="maxDataFields">optional Int32 MaxDataFields = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void AutoLayout(object maxDataFields)
+		public void AutoLayout(Int32 maxDataFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(maxDataFields);
 			Invoker.Method(this, "AutoLayout", paramsArray);
@@ -1036,7 +1036,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="expression">string Expression</param>
 		/// <param name="solveOrder">optional Int32 SolveOrder = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotTotal AddCalculatedTotal(string name, string caption, string expression, object solveOrder)
+		public NetOffice.OWC10Api.PivotTotal AddCalculatedTotal(string name, string caption, string expression, Int32 solveOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, expression, solveOrder);
 			object returnItem = Invoker.MethodReturn(this, "AddCalculatedTotal", paramsArray);

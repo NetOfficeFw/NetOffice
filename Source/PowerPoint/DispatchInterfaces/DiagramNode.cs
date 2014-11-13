@@ -252,7 +252,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.DiagramNode AddNode(object pos, object nodeType)
+		public NetOffice.PowerPointApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -281,7 +281,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.DiagramNode AddNode(object pos)
+		public NetOffice.PowerPointApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -332,7 +332,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="swapChildren">optional bool SwapChildren = true</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode, object swapChildren)
+		public void SwapNode(NetOffice.PowerPointApi.DiagramNode targetNode, bool swapChildren)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(targetNode, swapChildren);
 			Invoker.Method(this, "SwapNode", paramsArray);
@@ -359,7 +359,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="targetNode">NetOffice.PowerPointApi.DiagramNode TargetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode, object pos)
+		public NetOffice.PowerPointApi.DiagramNode CloneNode(bool copyChildren, NetOffice.PowerPointApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);

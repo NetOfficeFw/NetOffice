@@ -1411,7 +1411,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1436,7 +1436,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">optional NetOffice.PowerPointApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1450,7 +1450,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="legendKey">optional object LegendKey</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1465,7 +1465,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1481,7 +1481,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1498,7 +1498,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1516,7 +1516,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1535,7 +1535,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showValue">optional object ShowValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1555,7 +1555,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1576,7 +1576,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		public void ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -2050,7 +2050,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void _ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
+		public void _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -2077,7 +2077,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void _ApplyDataLabels(object type)
+		public void _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -2092,7 +2092,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void _ApplyDataLabels(object type, object legendKey)
+		public void _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -2108,7 +2108,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void _ApplyDataLabels(object type, object legendKey, object autoText)
+		public void _ApplyDataLabels(NetOffice.PowerPointApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -2121,7 +2121,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="axisGroup">optional NetOffice.PowerPointApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public object Axes(object type, object axisGroup)
+		public object Axes(object type, NetOffice.PowerPointApi.Enums.XlAxisGroup axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
@@ -2441,7 +2441,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="format">optional NetOffice.PowerPointApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		/// <param name="size">optional NetOffice.PowerPointApi.Enums.XlPictureAppearance Size = 2</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void CopyPicture(object appearance, object format, object size)
+		public void CopyPicture(NetOffice.PowerPointApi.Enums.XlPictureAppearance appearance, NetOffice.PowerPointApi.Enums.XlCopyPictureFormat format, NetOffice.PowerPointApi.Enums.XlPictureAppearance size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2466,7 +2466,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="appearance">optional NetOffice.PowerPointApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void CopyPicture(object appearance)
+		public void CopyPicture(NetOffice.PowerPointApi.Enums.XlPictureAppearance appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2480,7 +2480,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="format">optional NetOffice.PowerPointApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void CopyPicture(object appearance, object format)
+		public void CopyPicture(NetOffice.PowerPointApi.Enums.XlPictureAppearance appearance, NetOffice.PowerPointApi.Enums.XlCopyPictureFormat format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			Invoker.Method(this, "CopyPicture", paramsArray);

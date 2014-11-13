@@ -740,7 +740,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="deleteContents">optional bool DeleteContents = false</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void Delete(object deleteContents)
+		public void Delete(bool deleteContents)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(deleteContents);
 			Invoker.Method(this, "Delete", paramsArray);
@@ -766,7 +766,7 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional NetOffice.WordApi.Range Range = 0</param>
 		/// <param name="text">optional string Text = </param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void SetPlaceholderText(object buildingBlock, object range, object text)
+		public void SetPlaceholderText(NetOffice.WordApi.BuildingBlock buildingBlock, NetOffice.WordApi.Range range, string text)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(buildingBlock, range, text);
 			Invoker.Method(this, "SetPlaceholderText", paramsArray);
@@ -791,7 +791,7 @@ namespace NetOffice.WordApi
 		/// <param name="buildingBlock">optional NetOffice.WordApi.BuildingBlock BuildingBlock = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void SetPlaceholderText(object buildingBlock)
+		public void SetPlaceholderText(NetOffice.WordApi.BuildingBlock buildingBlock)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(buildingBlock);
 			Invoker.Method(this, "SetPlaceholderText", paramsArray);
@@ -805,7 +805,7 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional NetOffice.WordApi.Range Range = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void SetPlaceholderText(object buildingBlock, object range)
+		public void SetPlaceholderText(NetOffice.WordApi.BuildingBlock buildingBlock, NetOffice.WordApi.Range range)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(buildingBlock, range);
 			Invoker.Method(this, "SetPlaceholderText", paramsArray);
@@ -829,7 +829,7 @@ namespace NetOffice.WordApi
 		/// <param name="characterNumber">Int32 CharacterNumber</param>
 		/// <param name="font">optional string Font = </param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void SetCheckedSymbol(Int32 characterNumber, object font)
+		public void SetCheckedSymbol(Int32 characterNumber, string font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font);
 			Invoker.Method(this, "SetCheckedSymbol", paramsArray);
@@ -855,7 +855,7 @@ namespace NetOffice.WordApi
 		/// <param name="characterNumber">Int32 CharacterNumber</param>
 		/// <param name="font">optional string Font = </param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void SetUncheckedSymbol(Int32 characterNumber, object font)
+		public void SetUncheckedSymbol(Int32 characterNumber, string font)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(characterNumber, font);
 			Invoker.Method(this, "SetUncheckedSymbol", paramsArray);

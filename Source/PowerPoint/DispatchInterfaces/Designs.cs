@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="designName">string designName</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Design Add(string designName, object index)
+		public NetOffice.PowerPointApi.Design Add(string designName, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(designName, index);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -186,7 +186,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="templateName">string TemplateName</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Design Load(string templateName, object index)
+		public NetOffice.PowerPointApi.Design Load(string templateName, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(templateName, index);
 			object returnItem = Invoker.MethodReturn(this, "Load", paramsArray);
@@ -216,7 +216,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="pOriginal">NetOffice.PowerPointApi.Design pOriginal</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal, object index)
+		public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pOriginal, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);

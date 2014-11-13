@@ -1007,7 +1007,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="siteAddress">optional string SiteAddress = </param>
 		/// <param name="listID">optional string ListID = </param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress, object listID)
+		public static void NewCurrentDatabase(string filepath, NetOffice.AccessApi.Enums.AcNewDatabaseFormat fileFormat, object template, string siteAddress, string listID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template, siteAddress, listID);
 			Invoker.Method(_instance, "NewCurrentDatabase", paramsArray);
@@ -1021,7 +1021,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void NewCurrentDatabase(string filepath, object fileFormat)
+		public static void NewCurrentDatabase(string filepath, NetOffice.AccessApi.Enums.AcNewDatabaseFormat fileFormat)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat);
 			Invoker.Method(_instance, "NewCurrentDatabase", paramsArray);
@@ -1036,7 +1036,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="template">optional object Template</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void NewCurrentDatabase(string filepath, object fileFormat, object template)
+		public static void NewCurrentDatabase(string filepath, NetOffice.AccessApi.Enums.AcNewDatabaseFormat fileFormat, object template)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template);
 			Invoker.Method(_instance, "NewCurrentDatabase", paramsArray);
@@ -1052,7 +1052,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="siteAddress">optional string SiteAddress = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress)
+		public static void NewCurrentDatabase(string filepath, NetOffice.AccessApi.Enums.AcNewDatabaseFormat fileFormat, object template, string siteAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, fileFormat, template, siteAddress);
 			Invoker.Method(_instance, "NewCurrentDatabase", paramsArray);
@@ -1065,7 +1065,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void OpenCurrentDatabase(string filepath, object exclusive)
+		public static void OpenCurrentDatabase(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
 			Invoker.Method(_instance, "OpenCurrentDatabase", paramsArray);
@@ -1079,7 +1079,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		/// <param name="bstrPassword">optional string bstrPassword = </param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void OpenCurrentDatabase(string filepath, object exclusive, object bstrPassword)
+		public static void OpenCurrentDatabase(string filepath, bool exclusive, string bstrPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive, bstrPassword);
 			Invoker.Method(_instance, "OpenCurrentDatabase", paramsArray);
@@ -1139,7 +1139,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="echoOn">Int16 EchoOn</param>
 		/// <param name="bstrStatusBarText">optional string bstrStatusBarText = </param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void Echo(Int16 echoOn, object bstrStatusBarText)
+		public static void Echo(Int16 echoOn, string bstrStatusBarText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(echoOn, bstrStatusBarText);
 			Invoker.Method(_instance, "Echo", paramsArray);
@@ -1175,7 +1175,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// </summary>
 		/// <param name="option">optional NetOffice.AccessApi.Enums.AcQuitOption Option = 1</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void Quit(object option)
+		public static void Quit(NetOffice.AccessApi.Enums.AcQuitOption option)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(option);
 			Invoker.Method(_instance, "Quit", paramsArray);
@@ -1363,7 +1363,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1396,7 +1396,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1414,7 +1414,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="parent">optional object Parent</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1433,7 +1433,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="columnName">optional object ColumnName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1453,7 +1453,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="left">optional object Left</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1474,7 +1474,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1496,7 +1496,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
+		public static NetOffice.AccessApi.Control CreateControl(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControl", paramsArray);
@@ -1518,7 +1518,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="width">optional object Width</param>
 		/// <param name="height">optional object Height</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1551,7 +1551,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="section">optional NetOffice.AccessApi.Enums.AcSection Section = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1569,7 +1569,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="parent">optional object Parent</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1588,7 +1588,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="columnName">optional object ColumnName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1608,7 +1608,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="left">optional object Left</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1629,7 +1629,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="top">optional object Top</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -1651,7 +1651,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="width">optional object Width</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
+		public static NetOffice.AccessApi.Control CreateReportControl(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControl", paramsArray);
@@ -3912,7 +3912,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
+		public static void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method, headerInfo);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -3939,7 +3939,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="subAddress">optional string SubAddress = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress)
+		public static void FollowHyperlink(string address, string subAddress)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -3954,7 +3954,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress, object newWindow)
+		public static void FollowHyperlink(string address, string subAddress, bool newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -3970,7 +3970,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory)
+		public static void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -3987,7 +3987,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="extraInfo">optional object ExtraInfo</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo)
+		public static void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -4005,7 +4005,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void FollowHyperlink(string address, object subAddress, object newWindow, object addHistory, object extraInfo, object method)
+		public static void FollowHyperlink(string address, string subAddress, bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(address, subAddress, newWindow, addHistory, extraInfo, method);
 			Invoker.Method(_instance, "FollowHyperlink", paramsArray);
@@ -4082,7 +4082,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="hyperlink">object Hyperlink</param>
 		/// <param name="part">optional NetOffice.AccessApi.Enums.AcHyperlinkPart Part = 0</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static string HyperlinkPart(object hyperlink, object part)
+		public static string HyperlinkPart(object hyperlink, NetOffice.AccessApi.Enums.AcHyperlinkPart part)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(hyperlink, part);
 			object returnItem = Invoker.MethodReturn(_instance, "HyperlinkPart", paramsArray);
@@ -4138,7 +4138,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="createNewFile">optional bool CreateNewFile = true</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName, object createNewFile)
+		public static NetOffice.AccessApi.DataAccessPage CreateDataAccessPage(object fileName, bool createNewFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, createNewFile);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateDataAccessPage", paramsArray);
@@ -4208,7 +4208,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="filepath">string filepath</param>
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public static void OpenAccessProject(string filepath, object exclusive)
+		public static void OpenAccessProject(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
 			Invoker.Method(_instance, "OpenAccessProject", paramsArray);
@@ -4311,7 +4311,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="exclusive">optional bool Exclusive = false</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void OpenCurrentDatabaseOld(string filepath, object exclusive)
+		public static void OpenCurrentDatabaseOld(string filepath, bool exclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filepath, exclusive);
 			Invoker.Method(_instance, "OpenCurrentDatabaseOld", paramsArray);
@@ -4341,7 +4341,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="workgroupID">optional string WorkgroupID =  </param>
 		/// <param name="replace">optional bool Replace = false</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void CreateNewWorkgroupFile(object path, object name, object company, object workgroupID, object replace)
+		public static void CreateNewWorkgroupFile(string path, string name, string company, string workgroupID, bool replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company, workgroupID, replace);
 			Invoker.Method(_instance, "CreateNewWorkgroupFile", paramsArray);
@@ -4366,7 +4366,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="path">optional string Path =  </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void CreateNewWorkgroupFile(object path)
+		public static void CreateNewWorkgroupFile(string path)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path);
 			Invoker.Method(_instance, "CreateNewWorkgroupFile", paramsArray);
@@ -4380,7 +4380,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="name">optional string Name =  </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void CreateNewWorkgroupFile(object path, object name)
+		public static void CreateNewWorkgroupFile(string path, string name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name);
 			Invoker.Method(_instance, "CreateNewWorkgroupFile", paramsArray);
@@ -4395,7 +4395,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="company">optional string Company =  </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void CreateNewWorkgroupFile(object path, object name, object company)
+		public static void CreateNewWorkgroupFile(string path, string name, string company)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company);
 			Invoker.Method(_instance, "CreateNewWorkgroupFile", paramsArray);
@@ -4411,7 +4411,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="workgroupID">optional string WorkgroupID =  </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void CreateNewWorkgroupFile(object path, object name, object company, object workgroupID)
+		public static void CreateNewWorkgroupFile(string path, string name, string company, string workgroupID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, name, company, workgroupID);
 			Invoker.Method(_instance, "CreateNewWorkgroupFile", paramsArray);
@@ -4451,7 +4451,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="destinationFile">string DestinationFile</param>
 		/// <param name="logFile">optional bool LogFile = false</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static bool CompactRepair(string sourceFile, string destinationFile, object logFile)
+		public static bool CompactRepair(string sourceFile, string destinationFile, bool logFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sourceFile, destinationFile, logFile);
 			object returnItem = Invoker.MethodReturn(_instance, "CompactRepair", paramsArray);
@@ -4486,7 +4486,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		/// <param name="otherFlags">optional Int32 OtherFlags = 0</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, Int32 otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4507,7 +4507,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="whereCondition">optional string WhereCondition = </param>
 		/// <param name="additionalData">optional object AdditionalData</param>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags, object whereCondition, object additionalData)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, NetOffice.AccessApi.Enums.AcExportXMLOtherFlags otherFlags, string whereCondition, object additionalData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition, additionalData);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4536,7 +4536,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="dataTarget">optional string DataTarget = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4552,7 +4552,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="schemaTarget">optional string SchemaTarget = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4569,7 +4569,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="presentationTarget">optional string PresentationTarget = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4587,7 +4587,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="imageTarget">optional string ImageTarget = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4606,7 +4606,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="encoding">optional NetOffice.AccessApi.Enums.AcExportXMLEncoding Encoding = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4627,7 +4627,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="whereCondition">optional string WhereCondition = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags, object whereCondition)
+		public static void ExportXML(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, NetOffice.AccessApi.Enums.AcExportXMLOtherFlags otherFlags, string whereCondition)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags, whereCondition);
 			Invoker.Method(_instance, "ExportXML", paramsArray);
@@ -4640,7 +4640,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="dataSource">string DataSource</param>
 		/// <param name="importOptions">optional NetOffice.AccessApi.Enums.AcImportXMLOption ImportOptions = 1</param>
 		[SupportByVersionAttribute("Access", 10,11,12,14,15)]
-		public static void ImportXML(string dataSource, object importOptions)
+		public static void ImportXML(string dataSource, NetOffice.AccessApi.Enums.AcImportXMLOption importOptions)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, importOptions);
 			Invoker.Method(_instance, "ImportXML", paramsArray);
@@ -4673,7 +4673,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="otherFlags">optional Int32 OtherFlags = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding, object otherFlags)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding, Int32 otherFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding, otherFlags);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4704,7 +4704,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4721,7 +4721,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4739,7 +4739,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4758,7 +4758,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4778,7 +4778,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, object dataTarget, object schemaTarget, object presentationTarget, object imageTarget, object encoding)
+		public static void ExportXMLOld(NetOffice.AccessApi.Enums.AcExportXMLObjectType objectType, string dataSource, string dataTarget, string schemaTarget, string presentationTarget, string imageTarget, NetOffice.AccessApi.Enums.AcExportXMLEncoding encoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(objectType, dataSource, dataTarget, schemaTarget, presentationTarget, imageTarget, encoding);
 			Invoker.Method(_instance, "ExportXMLOld", paramsArray);
@@ -4794,7 +4794,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="wellFormedXMLOutput">optional bool WellFormedXMLOutput = false</param>
 		/// <param name="scriptOption">optional NetOffice.AccessApi.Enums.AcTransformXMLScriptOption ScriptOption = 1</param>
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void TransformXML(string dataSource, string transformSource, string outputTarget, object wellFormedXMLOutput, object scriptOption)
+		public static void TransformXML(string dataSource, string transformSource, string outputTarget, bool wellFormedXMLOutput, NetOffice.AccessApi.Enums.AcTransformXMLScriptOption scriptOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget, wellFormedXMLOutput, scriptOption);
 			Invoker.Method(_instance, "TransformXML", paramsArray);
@@ -4825,7 +4825,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="wellFormedXMLOutput">optional bool WellFormedXMLOutput = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 11,12,14,15)]
-		public static void TransformXML(string dataSource, string transformSource, string outputTarget, object wellFormedXMLOutput)
+		public static void TransformXML(string dataSource, string transformSource, string outputTarget, bool wellFormedXMLOutput)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataSource, transformSource, outputTarget, wellFormedXMLOutput);
 			Invoker.Method(_instance, "TransformXML", paramsArray);
@@ -4886,7 +4886,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="height">optional object Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -4921,7 +4921,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -4940,7 +4940,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -4960,7 +4960,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -4981,7 +4981,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -5003,7 +5003,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -5026,7 +5026,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
+		public static NetOffice.AccessApi.Control CreateControlOld(string formName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(formName, controlType, section, parent, columnName, left, top, width);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateControlOld", paramsArray);
@@ -5049,7 +5049,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="height">optional object Height</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width, object height)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width, object height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width, height);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5084,7 +5084,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5103,7 +5103,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5123,7 +5123,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5144,7 +5144,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5166,7 +5166,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5189,7 +5189,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, object section, object parent, object columnName, object left, object top, object width)
+		public static NetOffice.AccessApi.Control CreateReportControlOld(string reportName, NetOffice.AccessApi.Enums.AcControlType controlType, NetOffice.AccessApi.Enums.AcSection section, object parent, object columnName, object left, object top, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(reportName, controlType, section, parent, columnName, left, top, width);
 			object returnItem = Invoker.MethodReturn(_instance, "CreateReportControlOld", paramsArray);
@@ -5331,7 +5331,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="path">string Path</param>
 		/// <param name="fAppendOnly">optional bool fAppendOnly = false</param>
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void ImportNavigationPane(string path, object fAppendOnly)
+		public static void ImportNavigationPane(string path, bool fAppendOnly)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(path, fAppendOnly);
 			Invoker.Method(_instance, "ImportNavigationPane", paramsArray);
@@ -5378,7 +5378,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		/// <param name="toPage">optional Int32 ToPage = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords, object fromPage, object toPage)
+		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, bool selectedRecords, Int32 fromPage, Int32 toPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords, fromPage, toPage);
 			Invoker.Method(_instance, "ExportCustomFixedFormat", paramsArray);
@@ -5413,7 +5413,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords)
+		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, bool selectedRecords)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords);
 			Invoker.Method(_instance, "ExportCustomFixedFormat", paramsArray);
@@ -5432,7 +5432,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 12,14,15)]
-		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, object selectedRecords, object fromPage)
+		public static void ExportCustomFixedFormat(object externalExporter, string outputFileName, string objectName, NetOffice.AccessApi.Enums.AcOutputObjectType objectType, bool selectedRecords, Int32 fromPage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(externalExporter, outputFileName, objectName, objectType, selectedRecords, fromPage);
 			Invoker.Method(_instance, "ExportCustomFixedFormat", paramsArray);

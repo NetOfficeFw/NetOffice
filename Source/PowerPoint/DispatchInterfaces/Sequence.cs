@@ -159,7 +159,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger, object index)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape, effectId, level, trigger, index);
 			object returnItem = Invoker.MethodReturn(this, "AddEffect", paramsArray);
@@ -192,7 +192,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape, effectId, level);
 			object returnItem = Invoker.MethodReturn(this, "AddEffect", paramsArray);
@@ -210,7 +210,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trigger">optional NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, object level, object trigger)
+		public NetOffice.PowerPointApi.Effect AddEffect(NetOffice.PowerPointApi.Shape shape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(shape, effectId, level, trigger);
 			object returnItem = Invoker.MethodReturn(this, "AddEffect", paramsArray);
@@ -225,7 +225,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="effect">NetOffice.PowerPointApi.Effect Effect</param>
 		/// <param name="index">optional Int32 Index = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, object index)
+		public NetOffice.PowerPointApi.Effect Clone(NetOffice.PowerPointApi.Effect effect, Int32 index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, index);
 			object returnItem = Invoker.MethodReturn(this, "Clone", paramsArray);
@@ -300,7 +300,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
 		/// <param name="dimSchemeColor">optional NetOffice.PowerPointApi.Enums.PpColorSchemeIndex DimSchemeColor = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor, object dimSchemeColor)
+		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, Int32 dimColor, NetOffice.PowerPointApi.Enums.PpColorSchemeIndex dimSchemeColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, after, dimColor, dimSchemeColor);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAfterEffect", paramsArray);
@@ -333,7 +333,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dimColor">optional Int32 DimColor = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, object dimColor)
+		public NetOffice.PowerPointApi.Effect ConvertToAfterEffect(NetOffice.PowerPointApi.Effect effect, NetOffice.PowerPointApi.Enums.MsoAnimAfterEffect after, Int32 dimColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(effect, after, dimColor);
 			object returnItem = Invoker.MethodReturn(this, "ConvertToAfterEffect", paramsArray);
@@ -397,7 +397,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bookmark">optional string bookmark = </param>
 		/// <param name="level">optional NetOffice.PowerPointApi.Enums.MsoAnimateByLevel Level = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark, object level)
+		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, string bookmark, NetOffice.PowerPointApi.Enums.MsoAnimateByLevel level)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pShape, effectId, trigger, pTriggerShape, bookmark, level);
 			object returnItem = Invoker.MethodReturn(this, "AddTriggerEffect", paramsArray);
@@ -434,7 +434,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="bookmark">optional string bookmark = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, object bookmark)
+		public NetOffice.PowerPointApi.Effect AddTriggerEffect(NetOffice.PowerPointApi.Shape pShape, NetOffice.PowerPointApi.Enums.MsoAnimEffect effectId, NetOffice.PowerPointApi.Enums.MsoAnimTriggerType trigger, NetOffice.PowerPointApi.Shape pTriggerShape, string bookmark)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pShape, effectId, trigger, pTriggerShape, bookmark);
 			object returnItem = Invoker.MethodReturn(this, "AddTriggerEffect", paramsArray);

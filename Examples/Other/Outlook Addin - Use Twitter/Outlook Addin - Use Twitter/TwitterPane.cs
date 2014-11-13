@@ -47,10 +47,15 @@ namespace Sample.Addin
             selectedButton.BackColor = Color.Goldenrod;
         }
 
-        void Client_Error(Exception exception)
+        private void Client_Error(Exception exception)
         {
             settingsPane.SetEnabled(false);
             errorPane.ShowError(exception);
+        }
+
+        private void Client_EnabledChanegd(bool value)
+        {
+            tweetGrid.Enabled = value;
         }
 
         #region ITaskPane Member
@@ -74,15 +79,21 @@ namespace Sample.Addin
             }
         }
 
-        void Client_EnabledChanegd(bool value)
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
         {
-            tweetGrid.Enabled = value;
+
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+
         }
         
         public void OnDisconnection()
         {
             Config.Save(); 
         }
+
         #endregion
     }
 }

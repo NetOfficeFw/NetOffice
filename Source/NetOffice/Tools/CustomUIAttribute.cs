@@ -21,6 +21,9 @@ namespace NetOffice.Tools
         /// <param name="value">Full qualified location</param>
         public CustomUIAttribute(string value)
         {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+
             Value = value;
         }
     }

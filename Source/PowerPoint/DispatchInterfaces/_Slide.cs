@@ -703,7 +703,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		/// <param name="scaleHeight">optional Int32 ScaleHeight = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Export(string fileName, string filterName, object scaleWidth, object scaleHeight)
+		public void Export(string fileName, string filterName, Int32 scaleWidth, Int32 scaleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName, scaleWidth, scaleHeight);
 			Invoker.Method(this, "Export", paramsArray);
@@ -732,7 +732,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Export(string fileName, string filterName, object scaleWidth)
+		public void Export(string fileName, string filterName, Int32 scaleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, filterName, scaleWidth);
 			Invoker.Method(this, "Export", paramsArray);
@@ -794,7 +794,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		/// <param name="useSlideOrder">optional bool UseSlideOrder = false</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void PublishSlides(string slideLibraryUrl, object overwrite, object useSlideOrder)
+		public void PublishSlides(string slideLibraryUrl, bool overwrite, bool useSlideOrder)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite, useSlideOrder);
 			Invoker.Method(this, "PublishSlides", paramsArray);
@@ -821,7 +821,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="overwrite">optional bool Overwrite = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void PublishSlides(string slideLibraryUrl, object overwrite)
+		public void PublishSlides(string slideLibraryUrl, bool overwrite)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(slideLibraryUrl, overwrite);
 			Invoker.Method(this, "PublishSlides", paramsArray);

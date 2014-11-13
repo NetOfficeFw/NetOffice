@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="range">NetOffice.ExcelApi.Range Range</param>
 		/// <param name="type">optional NetOffice.ExcelApi.Enums.XlFillWith Type = -4104</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void FillAcrossSheets(NetOffice.ExcelApi.Range range, object type)
+		public void FillAcrossSheets(NetOffice.ExcelApi.Range range, NetOffice.ExcelApi.Enums.XlFillWith type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type);
 			Invoker.Method(this, "FillAcrossSheets", paramsArray);

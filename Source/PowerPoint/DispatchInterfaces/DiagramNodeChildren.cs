@@ -217,7 +217,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="index">optional object Index = -1</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public NetOffice.PowerPointApi.DiagramNode AddNode(object index, object nodeType)
+		public NetOffice.PowerPointApi.DiagramNode AddNode(object index, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);

@@ -185,7 +185,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="field">NetOffice.MSProjectApi.Enums.PjField Field</param>
 		/// <param name="task">optional bool Task = true</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.Table Add(string name, NetOffice.MSProjectApi.Enums.PjField field, object task)
+		public NetOffice.MSProjectApi.Table Add(string name, NetOffice.MSProjectApi.Enums.PjField field, bool task)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, field, task);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

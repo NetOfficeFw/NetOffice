@@ -343,7 +343,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="recordsAffected">object RecordsAffected</param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, object options)
+		public NetOffice.ADODBApi._Recordset Execute(string commandText, object recordsAffected, Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(commandText, recordsAffected, options);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -410,7 +410,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password = </param>
 		/// <param name="options">optional Int32 Options = -1</param>
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID, object password, object options)
+		public void Open(string connectionString, string userID, string password, Int32 options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password, options);
 			Invoker.Method(this, "Open", paramsArray);
@@ -435,7 +435,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="connectionString">optional string ConnectionString = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object connectionString)
+		public void Open(string connectionString)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString);
 			Invoker.Method(this, "Open", paramsArray);
@@ -449,7 +449,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="userID">optional string UserID = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID)
+		public void Open(string connectionString, string userID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID);
 			Invoker.Method(this, "Open", paramsArray);
@@ -464,7 +464,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="password">optional string Password = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.1,2.5)]
-		public void Open(object connectionString, object userID, object password)
+		public void Open(string connectionString, string userID, string password)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionString, userID, password);
 			Invoker.Method(this, "Open", paramsArray);

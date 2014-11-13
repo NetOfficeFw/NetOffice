@@ -2102,7 +2102,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		/// <param name="calendarID">optional Int32 CalendarID = -1</param>
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID, object calendarID)
+		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, Int32 langID, Int32 calendarID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringOrNumber, unitsIn, unitsOut, format, langID, calendarID);
 			object returnItem = Invoker.MethodReturn(this, "FormatResultEx", paramsArray);
@@ -2137,7 +2137,7 @@ namespace NetOffice.VisioApi
 		/// <param name="langID">optional Int32 LangID = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Visio", 11,12,14,15)]
-		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, object langID)
+		public string FormatResultEx(object stringOrNumber, object unitsIn, object unitsOut, string format, Int32 langID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(stringOrNumber, unitsIn, unitsOut, format, langID);
 			object returnItem = Invoker.MethodReturn(this, "FormatResultEx", paramsArray);

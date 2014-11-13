@@ -12,9 +12,9 @@ using Visio = NetOffice.VisioApi;
 namespace NetOffice.VisioApi.Tools
 {
     /// <summary>
-    /// The class provides a lot of essential functionality for an MS-Visio COMAddin
+    /// NetOffice MS-Visio COM Addin
     /// </summary>
-	[ComVisible(true)]
+	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : IDTExtensibility2
     {
         #region Fields
@@ -278,10 +278,16 @@ namespace NetOffice.VisioApi.Tools
 				COMAddinAttribute addin = AttributeHelper.GetCOMAddinAttribute(type);
 
                 Assembly thisAssembly = Assembly.GetAssembly(type);
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + GetAssemblyVersionString(type.Assembly));
+				string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
                 
+				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
+				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
+				key.SetValue("", NetRunTimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.Close();
+
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
                 key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
@@ -393,23 +399,6 @@ namespace NetOffice.VisioApi.Tools
         #endregion
 
         #region Private Helper Methods
-
-		/// <summary>
-        /// Returns the Addin Version String
-        /// </summary>
-        /// <param name="assembly">Addin Assembly</param>
-        /// <returns>Version String</returns>
-		private static string GetAssemblyVersionString(Assembly assembly)
-        {
-            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyVersionAttribute), false);
-            if (attributes.Length > 0)
-            {
-                AssemblyVersionAttribute titleAttribute = (AssemblyVersionAttribute)attributes[0];
-                if (titleAttribute.Version != "")
-                    return titleAttribute.Version;
-            }
-            return "1.0.0.0";
-        }
 
         /// <summary>
         /// reads text file from ressource

@@ -79,7 +79,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="fetchType">optional NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_ShapeText(object fetchType)
+		public string get_ShapeText(NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fetchType);
 			object returnItem = Invoker.PropertyGet(this, "ShapeText", paramsArray);
@@ -92,7 +92,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="fetchType">optional NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string ShapeText(object fetchType)
+		public string ShapeText(NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
 		{
 			return get_ShapeText(fetchType);
 		}

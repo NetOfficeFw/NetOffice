@@ -132,7 +132,7 @@ namespace NetOffice.ADODBApi
 		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
+		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize, NetOffice.ADODBApi.Enums.FieldAttributeEnum attrib)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize, attrib);
 			Invoker.Method(this, "_Append", paramsArray);
@@ -163,7 +163,7 @@ namespace NetOffice.ADODBApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
+		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, Int32 definedSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, type, definedSize);
 			Invoker.Method(this, "_Append", paramsArray);

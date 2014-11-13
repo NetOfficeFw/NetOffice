@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi
 		/// <param name="folder">object Folder</param>
 		/// <param name="displayMode">optional NetOffice.OutlookApi.Enums.OlFolderDisplayMode DisplayMode</param>
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
-		public NetOffice.OutlookApi._Explorer Add(object folder, object displayMode)
+		public NetOffice.OutlookApi._Explorer Add(object folder, NetOffice.OutlookApi.Enums.OlFolderDisplayMode displayMode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(folder, displayMode);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

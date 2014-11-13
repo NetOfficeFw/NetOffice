@@ -84,7 +84,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -101,7 +101,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="external">optional object External</param>
 		/// <param name="relativeTo">optional object RelativeTo</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external, object relativeTo)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo);
 		}
@@ -167,7 +167,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="referenceStyle">optional NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -182,7 +182,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="columnAbsolute">optional object ColumnAbsolute</param>
 		/// <param name="referenceStyle">optional NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle);
 		}
@@ -197,7 +197,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string get_Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(rowAbsolute, columnAbsolute, referenceStyle, external);
 			object returnItem = Invoker.PropertyGet(this, "Address", paramsArray);
@@ -213,7 +213,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="referenceStyle">optional NetOffice.OWC10Api.Enums.XlReferenceStyle ReferenceStyle</param>
 		/// <param name="external">optional object External</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external)
+		public string Address(object rowAbsolute, object columnAbsolute, NetOffice.OWC10Api.Enums.XlReferenceStyle referenceStyle, object external)
 		{
 			return get_Address(rowAbsolute, columnAbsolute, referenceStyle, external);
 		}
@@ -1681,7 +1681,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="colorIndex">optional NetOffice.OWC10Api.Enums.XlColorIndex ColorIndex = -4105</param>
 		/// <param name="color">optional object Color</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void BorderAround(object lineStyle, object weight, object colorIndex, object color)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex, object color)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex, color);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1720,7 +1720,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="weight">optional NetOffice.OWC10Api.Enums.XlBorderWeight Weight = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void BorderAround(object lineStyle, object weight)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1735,7 +1735,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="colorIndex">optional NetOffice.OWC10Api.Enums.XlColorIndex ColorIndex = -4105</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void BorderAround(object lineStyle, object weight, object colorIndex)
+		public void BorderAround(object lineStyle, NetOffice.OWC10Api.Enums.XlBorderWeight weight, NetOffice.OWC10Api.Enums.XlColorIndex colorIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(lineStyle, weight, colorIndex);
 			Invoker.Method(this, "BorderAround", paramsArray);
@@ -1936,7 +1936,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="matchCase">optional object MatchCase</param>
 		/// <param name="matchByte">optional object MatchByte</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, object matchCase, object matchByte)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -2041,7 +2041,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="searchDirection">optional NetOffice.OWC10Api.Enums.XlSearchDirection SearchDirection = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -2062,7 +2062,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="matchCase">optional object MatchCase</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
+		public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, NetOffice.OWC10Api.Enums.XlSearchDirection searchDirection, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -2159,7 +2159,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="consecutiveDelimAsOne">optional bool ConsecutiveDelimAsOne = false</param>
 		/// <param name="textQualifier">optional string TextQualifier = \042</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void LoadText(string file, object delimiters, object consecutiveDelimAsOne, object textQualifier)
+		public void LoadText(string file, string delimiters, bool consecutiveDelimAsOne, string textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file, delimiters, consecutiveDelimAsOne, textQualifier);
 			Invoker.Method(this, "LoadText", paramsArray);
@@ -2186,7 +2186,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="delimiters">optional string Delimiters = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void LoadText(string file, object delimiters)
+		public void LoadText(string file, string delimiters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file, delimiters);
 			Invoker.Method(this, "LoadText", paramsArray);
@@ -2201,7 +2201,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="consecutiveDelimAsOne">optional bool ConsecutiveDelimAsOne = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void LoadText(string file, object delimiters, object consecutiveDelimAsOne)
+		public void LoadText(string file, string delimiters, bool consecutiveDelimAsOne)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(file, delimiters, consecutiveDelimAsOne);
 			Invoker.Method(this, "LoadText", paramsArray);
@@ -2240,7 +2240,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="consecutiveDelimAsOne">optional bool ConsecutiveDelimAsOne = false</param>
 		/// <param name="textQualifier">optional string TextQualifier = \042</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ParseText(string text, object delimiters, object consecutiveDelimAsOne, object textQualifier)
+		public void ParseText(string text, string delimiters, bool consecutiveDelimAsOne, string textQualifier)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, delimiters, consecutiveDelimAsOne, textQualifier);
 			Invoker.Method(this, "ParseText", paramsArray);
@@ -2267,7 +2267,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="delimiters">optional string Delimiters = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ParseText(string text, object delimiters)
+		public void ParseText(string text, string delimiters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, delimiters);
 			Invoker.Method(this, "ParseText", paramsArray);
@@ -2282,7 +2282,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="consecutiveDelimAsOne">optional bool ConsecutiveDelimAsOne = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ParseText(string text, object delimiters, object consecutiveDelimAsOne)
+		public void ParseText(string text, string delimiters, bool consecutiveDelimAsOne)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(text, delimiters, consecutiveDelimAsOne);
 			Invoker.Method(this, "ParseText", paramsArray);
@@ -2329,7 +2329,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="order">optional NetOffice.OWC10Api.Enums.XlSortOrder Order = 1</param>
 		/// <param name="header">optional NetOffice.OWC10Api.Enums.XlYesNoGuess Header = 2</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Sort(object columnKey, object order, object header)
+		public void Sort(Int32 columnKey, NetOffice.OWC10Api.Enums.XlSortOrder order, NetOffice.OWC10Api.Enums.XlYesNoGuess header)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnKey, order, header);
 			Invoker.Method(this, "Sort", paramsArray);
@@ -2354,7 +2354,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="columnKey">optional Int32 ColumnKey = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Sort(object columnKey)
+		public void Sort(Int32 columnKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnKey);
 			Invoker.Method(this, "Sort", paramsArray);
@@ -2368,7 +2368,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="order">optional NetOffice.OWC10Api.Enums.XlSortOrder Order = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Sort(object columnKey, object order)
+		public void Sort(Int32 columnKey, NetOffice.OWC10Api.Enums.XlSortOrder order)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(columnKey, order);
 			Invoker.Method(this, "Sort", paramsArray);

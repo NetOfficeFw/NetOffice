@@ -14,9 +14,9 @@ using Outlook = NetOffice.OutlookApi;
 namespace NetOffice.OutlookApi.Tools
 {
     /// <summary>
-    /// The class provides a lot of essential functionality for an MS-Outlook COMAddin
+    /// NetOffice MS-Outlook COM Addin
     /// </summary>
-	[ComVisible(true)]
+	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         #region Fields
@@ -324,40 +324,256 @@ namespace NetOffice.OutlookApi.Tools
         {
             try
             {
-                if (null != CTPFactoryInst)
+                if (null == CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
-                    foreach (TaskPaneInfo item in TaskPanes)
+                    Factory.Console.WriteLine("Warning: null argument recieved in CTPFactoryAvailable. argument name: CTPFactoryInst");
+                    return;
+                }
+
+                CustomPaneAttribute paneAttribute = AttributeHelper.GetCustomPaneAttribute(Type);
+                if (null != paneAttribute)
+                {
+                    TaskPaneInfo item = TaskPanes.Add(paneAttribute.PaneType, paneAttribute.PaneType.Name);
+                    if (!CallOnCreateTaskPaneInfo(item))
                     {
-                        string title = item.Title;
-                        Office.CustomTaskPane taskPane = TaskPaneFactory.CreateCTP(item.Type.FullName, title) as Office.CustomTaskPane;                        
-                        item.Pane = taskPane;
-                        item.AssignEvents();
-                        item.IsLoaded = true;
+                        item.Title = paneAttribute.Title;
+                        item.Visible = paneAttribute.Visible;
+                        item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), paneAttribute.DockPosition.ToString());
+                        item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), paneAttribute.DockPositionRestrict.ToString());
+                        item.Width = paneAttribute.Width;
+                        item.Height = paneAttribute.Height;
+                        item.Arguments = new object[] { this };
+                    }
 
-                        ITaskPane pane = taskPane.ContentControl as ITaskPane;
-                        if (null != pane)
-						{
-							TaskPaneInstances.Add(pane);
-							object[] argumentArray = new object[0];
+                    item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
+                    item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
+                }
 
-							if(item.Arguments != null)
-								argumentArray = item.Arguments;
+                TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    string title = item.Title;
+                    Office.CustomTaskPane taskPane = TaskPaneFactory.CreateCTP(item.Type.FullName, title) as Office.CustomTaskPane;
+                    item.Pane = taskPane;
+                    item.AssignEvents();
+                    item.IsLoaded = true;
 
-							pane.OnConnection(Application, taskPane, argumentArray);
-						}
+                    switch (taskPane.DockPosition)
+                    {
+                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft:
+                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight:
+                            taskPane.Width = item.Width;
+                            break;
+                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionTop:
+                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom:
+                            taskPane.Height = item.Height;
+                            break;
+                        case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionFloating:
+                            item.Width = paneAttribute.Width;
+                            taskPane.Height = item.Height;
+                            break;
+                        default:
+                            break;
+                    }
 
-                        foreach (KeyValuePair<string, object> property in item.ChangedProperties)
-                            if (property.Key != "Title")
-                                taskPane.GetType().InvokeMember(property.Key, BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
+                    ITaskPane pane = taskPane.ContentControl as ITaskPane;
+                    if (null != pane)
+                    {
+                        TaskPaneInstances.Add(pane);
+                        object[] argumentArray = new object[0];
+
+                        if (item.Arguments != null)
+                            argumentArray = item.Arguments;
+
+                        pane.OnConnection(Application, taskPane, argumentArray);
+                    }
+
+                    foreach (KeyValuePair<string, object> property in item.ChangedProperties)
+                    {
+                        if (property.Key == "Title")
+                            continue;
+
+                        try
+                        {
+                            if (property.Key == "Width") // avoid to set width in top and bottom align
+                            {
+                                object outValue = null;
+                                item.ChangedProperties.TryGetValue("DockPosition", out outValue);
+                                if (null != outValue)
+                                {
+
+                                    Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
+                                    if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionTop || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom)
+                                        continue;
+                                }
+                            }
+
+                            if (property.Key == "Height")   // avoid to set height in left and right align
+                            {
+                                object outValue = null;
+                                item.ChangedProperties.TryGetValue("DockPosition", out outValue);
+                                if (null == outValue)
+                                    outValue = Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight; // NetOffice default position if unset
+
+                                Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
+                                if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight)
+                                    continue;
+                            }
+
+                            taskPane.GetType().InvokeMember(property.Key, BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
+                        }
+                        catch
+                        {
+                            ;
+                        }
                     }
                 }
             }
             catch (NetRunTimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-            } 
+            }
+        }
+
+        /// <summary>
+        /// The method is called while the CustomPane attribute is processed
+        /// </summary>
+        /// <param name="paneInfo">pane definition</param>
+        /// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
+        protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Called after any visibility changes
+        /// </summary>
+        /// <param name="customTaskPaneInst">pane instance</param>
+        protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+
+        }
+
+        /// <summary>
+        /// Called after any position changes but not for size changes
+        /// </summary>
+        /// <param name="customTaskPaneInst">pane instance</param>
+        protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+
+        }
+
+        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
+                            ITaskPane target = item.Pane.ContentControl as ITaskPane;
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
+                                {
+                                    target.OnVisibleStateChanged(item.Pane.Visible);
+                                }
+                                catch (NetRunTimeSystem.Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (NetRunTimeSystem.Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
+                TaskPaneVisibleStateChanged(customTaskPaneInst);
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
+
+        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
+                            ITaskPane target = item.Pane.ContentControl as ITaskPane;
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
+                                {
+                                    target.OnDockPositionChanged(item.Pane.DockPosition);
+                                }
+                                catch (NetRunTimeSystem.Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (NetRunTimeSystem.Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
+                TaskPaneDockStateChanged(customTaskPaneInst);
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
+
+        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            try
+            {
+                return OnCreateTaskPaneInfo(paneInfo);
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
+                return false;
+            }
+        }
+
+        private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
+        {
+            try
+            {
+                CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
+
+        private void AttributePane_DockPositionStateChange(Office._CustomTaskPane CustomTaskPaneInst)
+        {
+            try
+            {
+                CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
+            }
+            catch (NetRunTimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
         }
 
         #endregion
@@ -530,10 +746,16 @@ namespace NetOffice.OutlookApi.Tools
 				COMAddinAttribute addin = AttributeHelper.GetCOMAddinAttribute(type);
 
                 Assembly thisAssembly = Assembly.GetAssembly(type);
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + GetAssemblyVersionString(type.Assembly));
+				string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
                 
+				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
+				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
+				key.SetValue("", NetRunTimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.Close();
+
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
                 key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
@@ -642,23 +864,6 @@ namespace NetOffice.OutlookApi.Tools
         #endregion
 
         #region Private Helper Methods
-
-		/// <summary>
-        /// Returns the Addin Version String
-        /// </summary>
-        /// <param name="assembly">Addin Assembly</param>
-        /// <returns>Version String</returns>
-		private static string GetAssemblyVersionString(Assembly assembly)
-        {
-            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyVersionAttribute), false);
-            if (attributes.Length > 0)
-            {
-                AssemblyVersionAttribute titleAttribute = (AssemblyVersionAttribute)attributes[0];
-                if (titleAttribute.Version != "")
-                    return titleAttribute.Version;
-            }
-            return "1.0.0.0";
-        }
 
         /// <summary>
         /// reads text file from ressource

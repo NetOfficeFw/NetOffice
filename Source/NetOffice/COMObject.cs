@@ -360,6 +360,18 @@ namespace NetOffice
         #region COMObject Properties
 
         /// <summary>
+        /// always null (Nothing in Visual Basic)
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
+        public static COMObject Empty
+        {
+            get 
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// NetOffice property: the associated factory
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
@@ -1034,7 +1046,13 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return (objectA as COMObject).EqualsOnServer(objectB);
+            {
+                COMObject a = (objectA as COMObject);
+                if (null != a)
+                    return a.EqualsOnServer(objectB);
+                else
+                    return false;
+            }
             else
                 return false;
         }
@@ -1085,13 +1103,19 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+             if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !(objectA as COMObject).EqualsOnServer(objectB);
+            {
+                COMObject a = objectA as COMObject;
+                if (null != a)
+                    return !(objectA as COMObject).EqualsOnServer(objectB);
+                else
+                    return null == objectB ? false : true;
+            }
             else
                 return true;
         }

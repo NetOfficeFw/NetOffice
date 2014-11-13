@@ -1096,7 +1096,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
 		/// <param name="fetchType">optional NetOffice.OWC10Api.Enums.DscFetchTypeEnum FetchType = 2</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption, object fetchType)
+		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption, NetOffice.OWC10Api.Enums.DscFetchTypeEnum fetchType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption, fetchType);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -1127,7 +1127,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="executeOption">optional NetOffice.ADODBApi.Enums.ExecuteOptionEnum ExecuteOption = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, object executeOption)
+		public NetOffice.ADODBApi.Recordset Execute(string recordsetName, NetOffice.ADODBApi.Enums.ExecuteOptionEnum executeOption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordsetName, executeOption);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);
@@ -1450,7 +1450,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="eEncoding">optional NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportXML(object eEncoding)
+		public void ExportXML(NetOffice.OWC10Api.Enums.DscEncodingEnum eEncoding)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(eEncoding);
 			Invoker.Method(this, "ExportXML", paramsArray);
@@ -1512,7 +1512,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="refreshType">optional NetOffice.OWC10Api.Enums.RefreshType RefreshType = 1</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Refresh(object refreshType)
+		public void Refresh(NetOffice.OWC10Api.Enums.RefreshType refreshType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(refreshType);
 			Invoker.Method(this, "Refresh", paramsArray);

@@ -588,7 +588,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="topOffset">Int32 TopOffset</param>
 		/// <param name="update">optional bool Update = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void MoveTop(NetOffice.OWC10Api.PivotRowMember top, Int32 topOffset, object update)
+		public void MoveTop(NetOffice.OWC10Api.PivotRowMember top, Int32 topOffset, bool update)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(top, topOffset, update);
 			Invoker.Method(this, "MoveTop", paramsArray);
@@ -616,7 +616,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="leftOffset">Int32 LeftOffset</param>
 		/// <param name="update">optional bool Update = true</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void MoveLeft(NetOffice.OWC10Api.PivotColumnMember left, Int32 leftOffset, object update)
+		public void MoveLeft(NetOffice.OWC10Api.PivotColumnMember left, Int32 leftOffset, bool update)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(left, leftOffset, update);
 			Invoker.Method(this, "MoveLeft", paramsArray);

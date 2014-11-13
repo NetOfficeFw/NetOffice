@@ -176,7 +176,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="loginType">optional NetOffice.MSProjectApi.Enums.PjLoginType LoginType = 1</param>
 		/// <param name="userName">optional string UserName = </param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.Profile Add(string name, string server, object loginType, object userName)
+		public NetOffice.MSProjectApi.Profile Add(string name, string server, NetOffice.MSProjectApi.Enums.PjLoginType loginType, string userName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType, userName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -209,7 +209,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="loginType">optional NetOffice.MSProjectApi.Enums.PjLoginType LoginType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.Profile Add(string name, string server, object loginType)
+		public NetOffice.MSProjectApi.Profile Add(string name, string server, NetOffice.MSProjectApi.Enums.PjLoginType loginType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, server, loginType);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

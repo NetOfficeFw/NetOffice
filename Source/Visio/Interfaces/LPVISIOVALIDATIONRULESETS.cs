@@ -238,7 +238,7 @@ namespace NetOffice.VisioApi
 		/// <param name="ruleSet">NetOffice.VisioApi.IVValidationRuleSet RuleSet</param>
 		/// <param name="nameU">optional string NameU = </param>
 		[SupportByVersionAttribute("Visio", 14,15)]
-		public NetOffice.VisioApi.IVValidationRuleSet AddCopy(NetOffice.VisioApi.IVValidationRuleSet ruleSet, object nameU)
+		public NetOffice.VisioApi.IVValidationRuleSet AddCopy(NetOffice.VisioApi.IVValidationRuleSet ruleSet, string nameU)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(ruleSet, nameU);
 			object returnItem = Invoker.MethodReturn(this, "AddCopy", paramsArray);

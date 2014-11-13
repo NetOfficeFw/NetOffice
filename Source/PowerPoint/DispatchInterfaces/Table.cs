@@ -435,7 +435,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="styleID">optional string StyleID = </param>
 		/// <param name="saveFormatting">optional bool SaveFormatting = false</param>
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void ApplyStyle(object styleID, object saveFormatting)
+		public void ApplyStyle(string styleID, bool saveFormatting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(styleID, saveFormatting);
 			Invoker.Method(this, "ApplyStyle", paramsArray);
@@ -460,7 +460,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="styleID">optional string StyleID = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 12,14,15)]
-		public void ApplyStyle(object styleID)
+		public void ApplyStyle(string styleID)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(styleID);
 			Invoker.Method(this, "ApplyStyle", paramsArray);

@@ -1367,7 +1367,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = -1</param>
 		/// <param name="height">optional Int32 Height = -1</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName, object width, object height)
+		public void ExportPicture(string filename, string filterName, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName, width, height);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1392,7 +1392,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filename">optional string Filename = chart.gif</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename)
+		public void ExportPicture(string filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1406,7 +1406,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filterName">optional string FilterName = gif</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName)
+		public void ExportPicture(string filename, string filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1421,7 +1421,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void ExportPicture(object filename, object filterName, object width)
+		public void ExportPicture(string filename, string filterName, Int32 width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filename, filterName, width);
 			Invoker.Method(this, "ExportPicture", paramsArray);
@@ -1587,7 +1587,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = -1</param>
 		/// <param name="height">optional Int32 Height = -1</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public object GetPicture(object filterName, object width, object height)
+		public object GetPicture(string filterName, Int32 width, Int32 height)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterName, width, height);
 			object returnItem = Invoker.MethodReturn(this, "GetPicture", paramsArray);
@@ -1630,7 +1630,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="filterName">optional string FilterName = gif</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public object GetPicture(object filterName)
+		public object GetPicture(string filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterName);
 			object returnItem = Invoker.MethodReturn(this, "GetPicture", paramsArray);
@@ -1653,7 +1653,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="width">optional Int32 Width = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public object GetPicture(object filterName, object width)
+		public object GetPicture(string filterName, Int32 width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(filterName, width);
 			object returnItem = Invoker.MethodReturn(this, "GetPicture", paramsArray);
@@ -1675,7 +1675,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="dataReference">string DataReference</param>
 		/// <param name="seriesByRows">optional bool SeriesByRows = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void SetSpreadsheetData(string dataReference, object seriesByRows)
+		public void SetSpreadsheetData(string dataReference, bool seriesByRows)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataReference, seriesByRows);
 			Invoker.Method(this, "SetSpreadsheetData", paramsArray);
