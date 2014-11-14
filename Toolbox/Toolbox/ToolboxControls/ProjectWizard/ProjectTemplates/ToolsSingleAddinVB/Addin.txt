@@ -1,0 +1,55 @@
+﻿Imports System.Reflection
+Imports Microsoft.Win32
+Imports Extensibility
+Imports System.Runtime.CompilerServices
+Imports System.Runtime.InteropServices
+$usingItems$
+
+<COMAddin("$safeprojectname$", "$description$", $loadbeahviour$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$")> _
+$attributes$
+Public Class Addin
+   Inherits $appName$.Tools.COMAddin
+
+	Public Sub New()
+
+		Dim onStartupCompleteHandler As OnStartupCompleteEventHandler = AddressOf Me.Addin_OnStartupComplete
+		AddHandler Me.OnStartupComplete, onStartupCompleteHandler
+
+		Dim onDisconnection As OnDisconnectionEventHandler = AddressOf Me.Addin_OnDisconnection
+		AddHandler Me.OnDisconnection, onDisconnection
+
+	End Sub
+
+$ribbonProperty$
+
+	Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
+
+$getversion$
+$classicUICreateCall$
+
+	End Sub
+
+	Private Sub Addin_OnDisconnection(ByVal RemoveMode As NetOffice.Tools.ext_DisconnectMode, ByRef custom As System.Array) Handles Me.OnDisconnection
+
+$classicUIRemoveCall$  
+
+	End Sub
+
+$ribbonLoad$
+
+$classicUICreateRemoveMethod$
+
+    Protected Overrides Sub OnError(ByVal methodKind As NetOffice.Tools.ErrorMethodKind, ByVal exception As System.Exception)
+
+        MessageBox.Show("An error occured in " & methodKind.ToString(), "$safeprojectname$")
+
+    End Sub
+
+    <RegisterErrorHandler()> _
+    Public Shared Sub RegisterErrorHandler(ByVal methodKind As RegisterErrorMethodKind, ByVal exception As Exception)
+
+        MessageBox.Show("An error occured in " & methodKind.ToString(), "$safeprojectname$")
+
+    End Sub
+
+End Class

@@ -1,0 +1,47 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Windows.Forms;
+$usingItems$
+namespace $safeprojectname$
+{
+	[COMAddin("$safeprojectname$", "$description$", $loadbehavior$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$")]
+$attributes$
+$attributes2$
+	public class Addin : $appName$.Tools.COMAddin
+	{
+		public Addin()
+		{
+			this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
+			this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
+		}
+
+$ribbonProperty$
+
+		private void Addin_OnStartupComplete(ref Array custom)
+		{
+$getversion$
+$classicUICreateCall$
+		}
+
+		private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+		{
+$classicUIRemoveCall$
+		}
+
+$ribbonLoad$
+
+$classicUICreateRemoveMethod$
+
+		protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
+		{
+			MessageBox.Show("An error occurend in " + methodKind.ToString(), "$safeprojectname$");
+		}
+
+		[RegisterErrorHandler]
+		public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, System.Exception exception)
+		{
+			MessageBox.Show("An error occurend in " + methodKind.ToString(), "$safeprojectname$");
+		}
+    }
+}

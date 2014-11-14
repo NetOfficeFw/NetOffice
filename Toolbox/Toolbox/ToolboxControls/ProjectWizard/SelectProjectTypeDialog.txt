@@ -1,0 +1,38 @@
+﻿[1031]
+this = Neues Projekt
+buttonSelect = Auswählen
+buttonClose = Abbrechen
+labelProjectType = Typ des Projekts
+radioButtonAutomationAddin = Automation Addin
+radioButtonWindowsForms = Windows Forms Projekt
+radioButtonConsole = Konsolen Projekt
+radioButtonClassLibrary = Klassenbibliothek
+labelEnvironment = Entwicklungsumgebung
+labelNet4Hint = Sie benötigen VS 2010 für die Verwendung von .NET 4
+labelProgrammingLanguage = Programmiersprache
+labelNetRuntime = .NET Laufzeitumgebung
+labelFolder = Speicherordner für das Projekt
+labelNoAdminHint = Developer Toolbox hat festgestellt das nicht für alle Ordner Schreibzugriff verfügbar ist.
+radioButtonUserFolder = Eigene Dateien
+radioButtonVSProjectFolder = VS Projekt Ordner
+radioButtonCustomFolder = Benutzerdefiniert
+[End]
+[1033]
+this = New Project
+buttonSelect = Select
+buttonClose = Cancel
+labelProjectType = Project Type
+radioButtonAutomationAddin = Automation Addin
+radioButtonWindowsForms = Windows Forms Project
+radioButtonConsole = Console Project
+radioButtonClassLibrary = Class Library
+labelEnvironment = Environment
+labelNet4Hint = You need VS 2010 for .NET 4 Development
+labelProgrammingLanguage = Language
+labelNetRuntime = .NET Runtime
+labelFolder = Project Folder
+labelNoAdminHint = Developer Toolbox has detected the write permissions are not available for some folders.
+radioButtonUserFolder = User Folder
+radioButtonVSProjectFolder = VS Project Folder
+radioButtonCustomFolder = Custom
+[End]

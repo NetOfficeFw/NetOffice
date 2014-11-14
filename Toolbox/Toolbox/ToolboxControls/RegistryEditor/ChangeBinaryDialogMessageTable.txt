@@ -1,0 +1,12 @@
+﻿[1031]
+this = Binärwert bearbeiten
+labelName = Name
+buttonOK = OK
+buttonAbort = Abbrechen
+[End]
+[1033]
+this = Edit Binary
+labelName = Name
+buttonOK = OK
+buttonAbort = Cancel
+[End]

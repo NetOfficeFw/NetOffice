@@ -1,0 +1,5 @@
+﻿				RegistryKey regKey = Registry.%HiveKey%.CreateSubKey(@"%officAddinKey%");
+				regKey.SetValue("LoadBehavior", Convert.ToInt32(%LoadBehavior%));
+				regKey.SetValue("FriendlyName", "%Name%");
+				regKey.SetValue("Description", "%Description%");
+				regKey.Close();

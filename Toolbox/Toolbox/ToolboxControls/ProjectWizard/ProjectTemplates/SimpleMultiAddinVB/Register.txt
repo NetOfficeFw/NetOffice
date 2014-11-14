@@ -1,0 +1,5 @@
+﻿			Dim regKey%AppName% as RegistryKey = Registry.%HiveKey%.CreateSubKey("%officAddinKey%")
+			regKey%AppName%.SetValue("LoadBehavior", Convert.ToInt32(%LoadBehavior%))
+			regKey%AppName%.SetValue("FriendlyName", "%Name%")
+			regKey%AppName%.SetValue("Description", "%Description%")
+			regKey%AppName%.Close()

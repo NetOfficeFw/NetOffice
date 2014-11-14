@@ -1,0 +1,12 @@
+﻿        public void AboutButton_Click(Office.IRibbonControl control)
+        {
+			MessageBox.Show(String.Format("$safeprojectname$ Version {0}", this.GetType().Assembly.GetName().Version),
+				"About $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+$tooglecode$
+
+		public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
+        {
+			RibbonUI = ribbonUI;
+        }

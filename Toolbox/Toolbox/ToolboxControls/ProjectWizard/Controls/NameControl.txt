@@ -1,0 +1,10 @@
+﻿[1031]
+labelClassName = Name
+labelDescription = Beschreibung
+labelHint = Es existiert im angegebenen Pfad bereits ein Ordner mit diesem Namen
+[End]
+[1033]
+labelClassName = Name
+labelDescription = Description
+labelHint = A folder with the target name already exists
+[End]

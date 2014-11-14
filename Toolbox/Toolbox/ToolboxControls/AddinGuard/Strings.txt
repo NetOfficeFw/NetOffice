@@ -1,0 +1,54 @@
+﻿[1031]
+labelColorLegendCaption = Farben Legende
+labelUnkownValue = Unüblicher Wert
+labelAccessError = Zugriffsfehler
+labelIconLegendCaption = Icon Legende
+labelDeaktiveElement = = Deaktiviertes Element
+labelAddinCurrentUser = = Addin unter HKEY_CURRENT_USER
+labelAddinLocalMachine = = Addin unter HKEY_LOCAL_MACHINE
+labelStatusCaption = Status
+radioButtonActivate = Aktiviert
+radioButtonDeactivate = Deaktiviert
+checkBoxRestoreLoadBehavior = LoadBehavior bei Änderung von 3 auf 2 zurück setzen
+labelNoAdminHint = Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addins verfügbar.
+labelMessageCaption = Meldung
+radioButtonMsgBox = MessageBox
+radioButtonTray = TrayInfo
+labelTrayhint = Stellen Sie sicher das TrayBallons auf ihrem System nicht deaktiviert sind.
+labelLastMessages = Letzte Meldungen
+labelMessages = <Keine>
+labelRegistrysValues = Registry Werte
+labelInfoArea = Informationsbereich
+labelClickInfo = Klicken Sie auf ein Addin oder ein deaktiviertes Element für weitere Informationen.
+labelDeactiveElementCaption = Deaktiviertes Element
+labelOfficeProductVersion = Office Produkt Version
+labelFilePath = Dateipfad
+labelRegistryKey = Registry Schlüssel
+[End]
+[1033]
+labelColorLegendCaption = Color Legend
+labelUnkownValue = Unkown Value
+labelAccessError = Access Error
+labelIconLegendCaption = Icon Legend
+labelDeaktiveElement = = Deactivated Element
+labelAddinCurrentUser = = Addin in HKEY_CURRENT_USER
+labelAddinLocalMachine = = Addin in HKEY_LOCAL_MACHINE
+labelStatusCaption = Status
+radioButtonActivate = Activated
+radioButtonDeactivate = Deactivated
+checkBoxRestoreLoadBehavior = Reset LoadBehavior on change from 3 to 2
+labelNoAdminHint = This option is only available for User Addins due to missing administrator privileges.
+labelMessageCaption = Message
+radioButtonMsgBox = MessageBox
+radioButtonTray = TrayInfo
+labelTrayhint = Make sure that TrayBalloons are not deactivated on your system if you want to be notified via TrayInfo.
+labelLastMessages = Recent Messages
+labelMessages = <None>
+labelRegistrysValues = Registry Value
+labelInfoArea = Information area
+labelClickInfo = Click on an Addin or a deactivated element for further information.
+labelDeactiveElementCaption = Deactivated Element
+labelOfficeProductVersion = Office Product Version
+labelFilePath = File path
+labelRegistryKey = Registry Key
+[End]

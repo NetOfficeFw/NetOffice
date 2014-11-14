@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B6C8DAB-83ED-4C92-8491-BFF9B8984D4B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetOffice.DeveloperToolbox</RootNamespace>
+    <AssemblyName>NetOffice.DeveloperToolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ressources\NetOffice.Icon.32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccessApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=3bfc48da42c3238a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\AccessApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ADODBApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a426381b6dbd993f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\ADODBApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DAOApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\DAOApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ExcelApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\ExcelApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MSComctlLibApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\MSComctlLibApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MSDATASRCApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=afe692b65e0db609, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\MSDATASRCApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MSHTMLApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=9fe3ce00842d84e9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\MSHTMLApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MSProjectApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b3f793e50f46b653, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\MSProjectApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.6.1.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\NetOffice.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\OfficeApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OutlookApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\OutlookApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OWC10Api, Version=1.7.1.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\OWC10Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PowerPointApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\PowerPointApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="VBIDEApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\VBIDEApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VisioApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=bfcd37a3a83f1609, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\VisioApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WordApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\Libs\WordApi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Buttons\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Text\AdvRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\About\AboutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\About\AboutControl.Designer.cs">
+      <DependentUpon>AboutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\AddinGuard\NotificationType.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\NotifyKind.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\RegistryChangeInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ToolboxControls\ControlContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ControlContainer.Designer.cs">
+      <DependentUpon>ControlContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Hex\ByteCharConverters.cs" />
+    <Compile Include="Controls\Hex\ByteCollection.cs" />
+    <Compile Include="Controls\Hex\BytePositionInfo.cs" />
+    <Compile Include="Controls\Hex\DataBlock.cs" />
+    <Compile Include="Controls\Hex\DataMap.cs" />
+    <Compile Include="Controls\Hex\DynamicByteProvider.cs" />
+    <Compile Include="Controls\Hex\FileDataBlock.cs" />
+    <Compile Include="Controls\Hex\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Hex\HexCasing.cs" />
+    <Compile Include="Controls\Hex\IByteProvider.cs" />
+    <Compile Include="Controls\Hex\MemoryDataBlock.cs" />
+    <Compile Include="Controls\Hex\NativeMethods.cs" />
+    <Compile Include="Controls\Hex\Util.cs" />
+    <Compile Include="IToolboxHost.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoLayer\InfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoLayer\InfoControl.Designer.cs">
+      <DependentUpon>InfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IToolboxControl.cs" />
+    <Compile Include="ToolboxControls\ApplicationObserver\HotKey.cs" />
+    <Compile Include="ToolboxControls\ApplicationObserver\OfficeProcessKiller.cs" />
+    <Compile Include="ToolboxControls\ApplicationObserver\ApplicationObserverControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ApplicationObserver\ApplicationObserverControl.Designer.cs">
+      <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tree\MultiSelectTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\AdvTableLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Layout\AdvTableLayoutControl.Designer.cs">
+      <DependentUpon>AdvTableLayoutControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeCompatibility\NetOfficeSupportTable.cs" />
+    <Compile Include="ToolboxControls\OfficeCompatibility\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeCompatibility\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\ApplicationWrapper.cs" />
+    <Compile Include="ToolboxControls\OfficeUI\CommandBarsWrapper.cs" />
+    <Compile Include="ToolboxControls\OfficeUI\OfficeUIControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\OfficeUIControl.Designer.cs">
+      <DependentUpon>OfficeUIControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\SelectOfficeAppControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\SelectOfficeAppControl.Designer.cs">
+      <DependentUpon>SelectOfficeAppControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\WaitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeUI\WaitControl.Designer.cs">
+      <DependentUpon>WaitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\OutlookSecurity\OutlookSecurityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OutlookSecurity\OutlookSecurityControl.Designer.cs">
+      <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\FinishControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\FinishControl.Designer.cs">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\GuiControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\GuiControl.Designer.cs">
+      <DependentUpon>GuiControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\HostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\HostControl.Designer.cs">
+      <DependentUpon>HostControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\IWizardControl.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\LoadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\LoadControl.Designer.cs">
+      <DependentUpon>LoadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\NameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\NameControl.Designer.cs">
+      <DependentUpon>NameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\EnvironmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\EnvironmentControl.Designer.cs">
+      <DependentUpon>EnvironmentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\ProjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\ProjectControl.Designer.cs">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\SummaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\Controls\SummaryControl.Designer.cs">
+      <DependentUpon>SummaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleMultiAddinConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleMultiAddinConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleSingleAddinConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleSingleAddinConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ToolsMultiAddinConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ToolsMultiAddinConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ToolsSingleAddinConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ToolsSingleAddinConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\WindowsFormsConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\WindowsFormsConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectOptions.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ConsoleConverterCS.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ConsoleConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\Converter.cs" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\FinishControl.resx">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Form1.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Form1_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Program.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Resources_Designer.txt" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectWizardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectWizardControl.Designer.cs">
+      <DependentUpon>ProjectWizardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Animation\Colors\AnimatorBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Animation\Colors\ControlBackColorAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Animation\Colors\ControlForeColorAnimator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Animation\Effects\EffectsAnimator.cs" />
+    <Compile Include="Utils\Animation\Panel\AnimatedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\Animation\Panel\ImageShape.cs" />
+    <Compile Include="Utils\Animation\Panel\Shape.cs" />
+    <Compile Include="Utils\Animation\Round\RoundedRectangleRegion.cs" />
+    <Compile Include="Utils\Registry\UtilsRegistryKeyExporter.cs" />
+    <Compile Include="Utils\Ressources\RessourceUtils.cs" />
+    <Compile Include="Translation\Translator.cs" />
+    <Compile Include="ToolboxControls\Welcome\WelcomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\Welcome\WelcomeControl.Designer.cs">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\About\AboutControl.resx">
+      <DependentUpon>AboutControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ControlContainer.resx">
+      <DependentUpon>ControlContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Hex\HexBox.resx">
+      <DependentUpon>HexBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\ApplicationObserverControl.resx">
+      <DependentUpon>ApplicationObserverControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\OfficeUIControl.resx">
+      <DependentUpon>OfficeUIControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\SelectOfficeAppControl.resx">
+      <DependentUpon>SelectOfficeAppControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\WaitControl.resx">
+      <DependentUpon>WaitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\OutlookSecurityControl.resx">
+      <DependentUpon>OutlookSecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\GuiControl.resx">
+      <DependentUpon>GuiControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\HostControl.resx">
+      <DependentUpon>HostControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\LoadControl.resx">
+      <DependentUpon>LoadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\NameControl.resx">
+      <DependentUpon>NameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\EnvironmentControl.resx">
+      <DependentUpon>EnvironmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\ProjectControl.resx">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\SummaryControl.resx">
+      <DependentUpon>SummaryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectWizardControl.resx">
+      <DependentUpon>ProjectWizardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info.1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info.1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\Welcome\WelcomeControl.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ToolboxControls\AddinGuard\AddinKeyValue.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\DisabledItems.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\DisabledKey.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\DisabledValue.cs" />
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryDialog.Designer.cs">
+      <DependentUpon>ChangeBinaryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeDWordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeDWordDialog.Designer.cs">
+      <DependentUpon>ChangeDWordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeNameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeNameDialog.Designer.cs">
+      <DependentUpon>ChangeNameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeStringDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeStringDialog.Designer.cs">
+      <DependentUpon>ChangeStringDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\RegistryEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\RegistryEditorControl.Designer.cs">
+      <DependentUpon>RegistryEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Registry\UtilsRegistry.cs" />
+    <Compile Include="Utils\Registry\UtilsRegistryEntries.cs" />
+    <Compile Include="Utils\Registry\UtilsRegistryEntry.cs" />
+    <Compile Include="Utils\Registry\UtilsRegistryKey.cs" />
+    <Compile Include="Utils\Registry\UtilsRegistryKeys.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\AddinGuardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\AddinGuard\AddinGuardControl.Designer.cs">
+      <DependentUpon>AddinGuardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\AddinGuard\WatchController.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\AddinsKey.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\AddinItems.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\AddinKey.cs" />
+    <Compile Include="ToolboxControls\AddinGuard\WatchNotify.cs" />
+    <Compile Include="ToolboxControls\OfficeCompatibility\AssemblyAnalyzer.cs" />
+    <Compile Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.Designer.cs">
+      <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\Info1031.rtf" />
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\Info1033.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\IconsAndConfig\NotRunning.ico" />
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\IconsAndConfig\Running.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\InfoLayer\InfoControl.resx">
+      <DependentUpon>InfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\IconsAndConfig\DefaultConfiguration.txt" />
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeBinaryDialog.resx">
+      <DependentUpon>ChangeBinaryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeDWordDialog.resx">
+      <DependentUpon>ChangeDWordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeNameDialog.resx">
+      <DependentUpon>ChangeNameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeStringDialog.resx">
+      <DependentUpon>ChangeStringDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\RegistryEditorControl.resx">
+      <DependentUpon>RegistryEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\AddinGuardControl.resx">
+      <DependentUpon>AddinGuardControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\OfficeCompatibilityControl.resx">
+      <DependentUpon>OfficeCompatibilityControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\Messages.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\ApplicationObserver\Strings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\Strings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\Strings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj">
+      <Project>{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}</Project>
+      <Name>NetOffice.OutlookSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\OutlookSecurity\Strings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeBinaryDialogMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeDWordDialogMessageTable.txt" />
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeNameDialogMessageTable.txt" />
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeStringDialogMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources\ErrorFormStrings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Strings.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\ReportMessageTable.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\RibbonToogleImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinCS\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\RibbonToogleImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsMultiAddinVB\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\RibbonToogleImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\RibbonToogleImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\FinishControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinCS\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ToolsSingleAddinVB\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\TaskPaneImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinCS\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\TaskPaneImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleMultiAddinVB\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\TaskPaneImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\Project_User.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\TaskPane.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\TaskPane_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\ReadResource.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\Register.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\RibbonImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\TaskPaneImplement.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\UnRegister.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\Addin.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\RibbonUI.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\SimpleSingleAddinCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Form1_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Form1.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\WindowsFormsCS\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Class1.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryCS\Class1.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ClassLibraryCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Application_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Application_myapp.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Resources_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Resources_resx.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Settings_Designer.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Settings_settings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Program.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleVB\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\Solution.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\AssemblyInfo.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\Project.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\ProjectTemplates\ConsoleCS\Program.txt" />
+    <EmbeddedResource Include="ToolboxControls\AddinGuard\DefaultConfiguration.txt" />
+    <EmbeddedResource Include="ToolboxControls\About\Strings.txt" />
+    <EmbeddedResource Include="ToolboxControls\Welcome\Strings.txt" />
+    <EmbeddedResource Include="ToolboxControls\Welcome\welcome.png" />
+    <EmbeddedResource Include="ToolboxControls\About\info_rhombus.png" />
+    <Content Include="Ressources\NetOffice.Icon.32x32.ico" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\ProjectControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\EnvironmentControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\GuiControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\LoadControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\NameControl.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Strings.txt" />
+    <EmbeddedResource Include="ToolboxControls\ProjectWizard\Icon.png" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\SelectOfficeAppControlTable.txt" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\WaitControlTable.txt" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\Strings.txt" />
+    <EmbeddedResource Include="ToolboxControls\OfficeUI\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

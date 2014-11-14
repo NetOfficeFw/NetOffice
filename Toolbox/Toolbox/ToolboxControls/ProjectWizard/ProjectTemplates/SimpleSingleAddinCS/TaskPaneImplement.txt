@@ -1,0 +1,22 @@
+﻿
+        #region ICustomTaskPaneConsumer
+
+        void Office.ICustomTaskPaneConsumer.CTPFactoryAvailable(object ctpFactoryInst)
+        {
+            try
+            {
+                Office.ICTPFactory ctpFactory = new Office.ICTPFactory(_application, ctpFactoryInst);
+                Office._CustomTaskPane taskPane = ctpFactory.CreateCTP(typeof(MyTaskPane).FullName, "My TaskPane");
+                taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
+                taskPane.Visible = true;
+                _mytaskPane = taskPane.ContentControl as MyTaskPane;
+                ctpFactory.Dispose();
+            }
+            catch (Exception exception)
+            {
+                string message = string.Format("An error occured.{0}{0}{1}", Environment.NewLine, exception.Message);
+                MessageBox.Show(message, "$safeprojectname$ - CTPFactoryAvailable", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
