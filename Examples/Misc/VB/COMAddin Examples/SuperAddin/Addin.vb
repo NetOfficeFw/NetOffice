@@ -148,8 +148,6 @@ Public Class Addin
             End If
             key.Close()
 
-            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
-
             OfficeRegistry.CreateAddinKey("Excel", _progId, _addinFriendlyName, _addinDescription)
             OfficeRegistry.CreateAddinKey("Word", _progId, _addinFriendlyName, _addinDescription)
             OfficeRegistry.CreateAddinKey("Outlook", _progId, _addinFriendlyName, _addinDescription)

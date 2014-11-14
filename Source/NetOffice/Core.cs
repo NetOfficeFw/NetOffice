@@ -939,7 +939,7 @@ namespace NetOffice
         /// <param name="name"></param>
         /// <param name="itemAssembly"></param>
         /// <returns>list of dependend assemblies</returns>
-        private string[] AddAssembly(string name, Assembly itemAssembly)
+      	private string[] AddAssembly(string name, Assembly itemAssembly)
         {
             List<string> dependAssemblies = new List<string>();
             object[] attributes = itemAssembly.GetCustomAttributes(true);
@@ -948,18 +948,43 @@ namespace NetOffice
                 string fullnameAttribute = itemAttribute.GetType().FullName;
                 if (fullnameAttribute == "NetOffice.NetOfficeAssemblyAttribute")
                 {
-                    Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
-                    NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
-
                     bool exists = false;
+                    NetOffice.IFactoryInfo factoryInfo = null;
+
                     foreach (IFactoryInfo itemFactory in _factoryList)
                     {
-                        if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                        if (("NetOffice." + name).Equals(itemFactory.AssemblyNamespace, StringComparison.InvariantCultureIgnoreCase))
                         {
+                            factoryInfo = itemFactory;
                             exists = true;
                             break;
                         }
                     }
+
+                    if (null == factoryInfo)
+                    {
+                        Type factoryInfoType = itemAssembly.GetType(name + ".Utils.ProjectInfo");
+                        object utilsResult = Activator.CreateInstance(factoryInfoType);
+                        if (null == utilsResult)
+                            throw new NetOfficeException(String.Format("Unable to create {0} factory info", name));
+                        factoryInfo = utilsResult as IFactoryInfo;
+                        if (null == factoryInfo)
+                        {
+                            throw new NetOfficeException(String.Format("Unexpected {0} factory info. Assembly {0}", name, itemAssembly));
+                        }
+                        foreach (IFactoryInfo itemFactory in _factoryList)
+                        {
+                            if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                            {
+                                exists = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (null == factoryInfo)
+                        throw new NetOfficeException(String.Format("Unable to find {0} factory info", name));
+
                     if (!exists)
                     {
                         _factoryList.Add(factoryInfo);

@@ -30,7 +30,7 @@ Imports NetOffice.OfficeApi.Enums
 '*/
 <COMAddin("NetOfficeVB4 Extended Access Addin", "This Addin shows you the COMAddin  baseclass from the NetOffice Tools", 3)> _
 <CustomUI("NetOfficeTools.ExtendedAccessVB4.RibbonUI.xml")> _
-<CustomPane(GetType(SamplePane), "NetOffice Tools - Sample Pane(VB4)", True, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)> _
+<CustomPane(GetType(SamplePane), "NetOffice Tools - Sample Pane(VB4)", True, PaneDockPosition.msoCTPDockPositionBottom, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)> _
 <RegistryLocation(RegistrySaveLocation.CurrentUser)> _
 <Guid("A3FF00C1-6894-46F8-A8BA-EEB863FBBBAF"), ProgId("ExtendedAccessVB4.Addin"), Tweak(True)> _
 Public Class Addin
@@ -62,9 +62,9 @@ Public Class Addin
         ' The application property was disposed automaticly while shutdown.
         '  We check at runtime (with a NetOffice special service) the property is available because Access 2000 and below doesn't have the Version property.
         If Application.EntityIsAvailable("Version", NetOffice.SupportEntityType.Property) Then
-            Factory.Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
+            Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
         Else
-            Factory.Console.WriteLine("Host Application Version 2000(9) or below.")
+            Console.WriteLine("Host Application Version 2000(9) or below.")
         End If
 
     End Sub

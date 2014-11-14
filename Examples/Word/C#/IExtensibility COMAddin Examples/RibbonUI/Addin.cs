@@ -137,7 +137,6 @@ namespace COMAddinRibbonExampleCS4
                 key.Close();
 
                 // add word addin key
-                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
                 Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId);
                 RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, true);
                 rk.SetValue("LoadBehavior", Convert.ToInt32(3));

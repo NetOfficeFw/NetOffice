@@ -31,7 +31,7 @@ Imports NetOffice.OfficeApi.Enums
 <COMAddin("NetOfficeVB4 Extended Excel Addin", "This Addin shows you the COMAddin  baseclass from the NetOffice Tools", 3)> _
 <CustomUI("NetOfficeTools.ExtendedExcelVB4.RibbonUI.xml")> _
 <RegistryLocation(RegistrySaveLocation.CurrentUser)> _
-<CustomPane(GetType(SamplePane), "NetOffice Tools - Sample Pane(VB4)", True, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)> _
+<CustomPane(GetType(SamplePane), "NetOffice Tools - Sample Pane(VB4)", True, PaneDockPosition.msoCTPDockPositionBottom, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)> _
 <Guid("ED20A119-9E0D-4D7B-B50A-71CFFD44A7C7"), ProgId("ExtendedExcelVB4.Addin"), Tweak(True)> _
 Public Class Addin
     Inherits COMAddin

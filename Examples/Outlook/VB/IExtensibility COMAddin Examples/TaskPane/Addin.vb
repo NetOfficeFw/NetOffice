@@ -33,7 +33,7 @@ Public Class Addin
 
             Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_outlookApplication, CTPFactoryInst)
             Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(Addin).Assembly.GetName().Name + ".SampleControl", "NetOffice Sample Pane(VB4)", Type.Missing)
-            taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight
+            taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
             taskPane.Width = 300
             taskPane.Visible = True
             _sampleControl = taskPane.ContentControl
@@ -121,7 +121,6 @@ Public Class Addin
             key.Close()
 
             ' add outlook addin key
-            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, True)
             rk.SetValue("LoadBehavior", CInt(3))

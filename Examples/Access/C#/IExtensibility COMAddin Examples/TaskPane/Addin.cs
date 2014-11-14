@@ -119,8 +119,7 @@ namespace COMAddinTaskPaneExampleCS4
                 key.Close();
 
                 // register addin in access
-                Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
+                RegistryKey regKeyExcel = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
                 regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
                 regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
                 regKeyExcel.SetValue("Description", _addinDescription);
