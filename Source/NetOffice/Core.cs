@@ -8,6 +8,10 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
 {
+    using System.Linq;
+
+    using Weakly;
+
     #region IDispatch
 
     [Guid("00020400-0000-0000-c000-000000000046"),
@@ -37,7 +41,7 @@ namespace NetOffice
 
         private bool _initalized;
         private bool _assemblyResolveEventConnected;
-        private List<COMObject> _globalObjectList = new List<COMObject>();
+        private WeakCollection<COMObject> _globalObjectList = new WeakCollection<COMObject>();
         private List<IFactoryInfo> _factoryList = new List<IFactoryInfo>();
         private Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
@@ -776,7 +780,7 @@ namespace NetOffice
         public void DisposeAllCOMProxies()
         {
             while (_globalObjectList.Count > 0)
-                _globalObjectList[0].Dispose();
+                _globalObjectList.First().Dispose();
         }
 
         /// <summary>

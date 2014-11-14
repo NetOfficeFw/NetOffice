@@ -8,6 +8,10 @@ using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
 {
+    using System.Linq;
+
+    using Weakly;
+
     /// <summary>
     /// represents a managed COM proxy 
     /// </summary>
@@ -59,7 +63,7 @@ namespace NetOffice
         /// <summary>
         ///  child instance List
         /// </summary>
-        protected internal List<COMObject> _listChildObjects = new List<COMObject>();
+        protected internal WeakCollection<COMObject> _listChildObjects = new WeakCollection<COMObject>();
 
         /// <summary>
         /// list of runtime supported entities
@@ -535,7 +539,7 @@ namespace NetOffice
         ///  child instance array
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        internal COMObject[] ListChildObjects
+        internal IEnumerable<COMObject> ListChildObjects
         {
             get
             {
