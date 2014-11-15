@@ -359,13 +359,24 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPaneType">new child</param>
         /// <param name="title">title(caption) of the child</param>
-		 /// <returns>new instance</returns>
+		/// <returns>new instance</returns>
         public TaskPaneInfo Add(Type taskPaneType, string title)
         {
 			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title);
             InnerList.Add(item);
 			return item;
         }
+
+		/// <summary>
+        /// Collection items count
+        /// </summary>
+		public int Count
+		{
+			get
+			{
+				return InnerList.Count;
+			}
+		}
 
         /// <summary>
         /// Returns an element from specified index

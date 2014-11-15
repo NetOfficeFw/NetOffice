@@ -1547,7 +1547,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
-		public void CancelUpdate(Int32 updateType)
+		public void CancelUpdate(object updateType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(updateType);
 			Invoker.Method(this, "CancelUpdate", paramsArray);
@@ -1572,7 +1572,7 @@ namespace NetOffice.DAOApi
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
 		/// <param name="force">optional bool Force = false</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
-		public void Update(Int32 updateType, bool force)
+		public void Update(object updateType, object force)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(updateType, force);
 			Invoker.Method(this, "Update", paramsArray);
@@ -1597,7 +1597,7 @@ namespace NetOffice.DAOApi
 		/// <param name="updateType">optional Int32 UpdateType = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
-		public void Update(Int32 updateType)
+		public void Update(object updateType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(updateType);
 			Invoker.Method(this, "Update", paramsArray);
@@ -1609,7 +1609,7 @@ namespace NetOffice.DAOApi
 		/// </summary>
 		/// <param name="options">optional Int32 Options = 0</param>
 		[SupportByVersionAttribute("DAO", 3.6,12.0)]
-		public void MoveLast(Int32 options)
+		public void MoveLast(object options)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(options);
 			Invoker.Method(this, "MoveLast", paramsArray);

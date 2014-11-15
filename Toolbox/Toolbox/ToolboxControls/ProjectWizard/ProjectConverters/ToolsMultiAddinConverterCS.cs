@@ -10,7 +10,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 {
     internal class ToolsMultiAddinConverterCS : Converter
     {
-          #region Fields
+        #region Fields
 
         private string _taskPaneFile;
         private string _taskPaneDesignerFile;

@@ -474,7 +474,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum Format</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OWC10Api.PivotMember get_FindMember(object nameOrPath, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
+		public NetOffice.OWC10Api.PivotMember get_FindMember(object nameOrPath, object format)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(nameOrPath, format);
 			object returnItem = Invoker.PropertyGet(this, "FindMember", paramsArray);
@@ -489,7 +489,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="nameOrPath">object NameOrPath</param>
 		/// <param name="format">optional NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum Format</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotMember FindMember(object nameOrPath, NetOffice.OWC10Api.Enums.PivotMemberFindFormatEnum format)
+		public NetOffice.OWC10Api.PivotMember FindMember(object nameOrPath, object format)
 		{
 			return get_FindMember(nameOrPath, format);
 		}
@@ -549,7 +549,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="caption">optional string Caption = </param>
 		/// <param name="before">optional object Before = 0</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotField AddCustomGroupField(string name, string caption, object before)
+		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name, object caption, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption, before);
 			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
@@ -578,7 +578,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="name">optional string Name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotField AddCustomGroupField(string name)
+		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);
@@ -594,7 +594,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="caption">optional string Caption = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.PivotField AddCustomGroupField(string name, string caption)
+		public NetOffice.OWC10Api.PivotField AddCustomGroupField(object name, object caption)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, caption);
 			object returnItem = Invoker.MethodReturn(this, "AddCustomGroupField", paramsArray);

@@ -255,7 +255,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		/// <param name="replace">optional object Replace</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels, object replace)
+		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels, replace);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -286,7 +286,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="rowcol">optional NetOffice.PowerPointApi.Enums.XlRowCol Rowcol = -4105</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol)
+		public NetOffice.PowerPointApi.Series Add(object source, object rowcol)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -303,7 +303,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="seriesLabels">optional object SeriesLabels</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels)
+		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -321,7 +321,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="categoryLabels">optional object CategoryLabels</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Series Add(object source, NetOffice.PowerPointApi.Enums.XlRowCol rowcol, object seriesLabels, object categoryLabels)
+		public NetOffice.PowerPointApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(source, rowcol, seriesLabels, categoryLabels);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

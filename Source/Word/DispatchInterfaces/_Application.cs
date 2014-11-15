@@ -4542,7 +4542,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="langId">optional Int32 LangId = 0</param>
 		[SupportByVersionAttribute("Word", 9,10,11,12,14,15)]
-		public Int32 Keyboard(Int32 langId)
+		public Int32 Keyboard(object langId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(langId);
 			object returnItem = Invoker.MethodReturn(this, "Keyboard", paramsArray);
@@ -6709,7 +6709,7 @@ namespace NetOffice.WordApi
 		/// <param name="revisedAuthor">optional string RevisedAuthor = </param>
 		/// <param name="ignoreAllComparisonWarnings">optional bool IgnoreAllComparisonWarnings = false</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves, string revisedAuthor, bool ignoreAllComparisonWarnings)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object revisedAuthor, object ignoreAllComparisonWarnings)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor, ignoreAllComparisonWarnings);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6742,7 +6742,7 @@ namespace NetOffice.WordApi
 		/// <param name="destination">optional NetOffice.WordApi.Enums.WdCompareDestination Destination = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6760,7 +6760,7 @@ namespace NetOffice.WordApi
 		/// <param name="granularity">optional NetOffice.WordApi.Enums.WdGranularity Granularity = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6779,7 +6779,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFormatting">optional bool CompareFormatting = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6799,7 +6799,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareCaseChanges">optional bool CompareCaseChanges = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6820,7 +6820,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareWhitespace">optional bool CompareWhitespace = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6842,7 +6842,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareTables">optional bool CompareTables = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6865,7 +6865,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareHeaders">optional bool CompareHeaders = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6889,7 +6889,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFootnotes">optional bool CompareFootnotes = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6914,7 +6914,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareTextboxes">optional bool CompareTextboxes = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6940,7 +6940,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFields">optional bool CompareFields = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6967,7 +6967,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareComments">optional bool CompareComments = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -6995,7 +6995,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareMoves">optional bool CompareMoves = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -7024,7 +7024,7 @@ namespace NetOffice.WordApi
 		/// <param name="revisedAuthor">optional string RevisedAuthor = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves, string revisedAuthor)
+		public NetOffice.WordApi.Document CompareDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object revisedAuthor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, revisedAuthor);
 			object returnItem = Invoker.MethodReturn(this, "CompareDocuments", paramsArray);
@@ -7054,7 +7054,7 @@ namespace NetOffice.WordApi
 		/// <param name="revisedAuthor">optional string RevisedAuthor = </param>
 		/// <param name="formatFrom">optional NetOffice.WordApi.Enums.WdMergeFormatFrom FormatFrom = 2</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves, string originalAuthor, string revisedAuthor, NetOffice.WordApi.Enums.WdMergeFormatFrom formatFrom)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor, object revisedAuthor, object formatFrom)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor, formatFrom);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7087,7 +7087,7 @@ namespace NetOffice.WordApi
 		/// <param name="destination">optional NetOffice.WordApi.Enums.WdCompareDestination Destination = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7105,7 +7105,7 @@ namespace NetOffice.WordApi
 		/// <param name="granularity">optional NetOffice.WordApi.Enums.WdGranularity Granularity = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7124,7 +7124,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFormatting">optional bool CompareFormatting = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7144,7 +7144,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareCaseChanges">optional bool CompareCaseChanges = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7165,7 +7165,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareWhitespace">optional bool CompareWhitespace = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7187,7 +7187,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareTables">optional bool CompareTables = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7210,7 +7210,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareHeaders">optional bool CompareHeaders = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7234,7 +7234,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFootnotes">optional bool CompareFootnotes = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7259,7 +7259,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareTextboxes">optional bool CompareTextboxes = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7285,7 +7285,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareFields">optional bool CompareFields = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7312,7 +7312,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareComments">optional bool CompareComments = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7340,7 +7340,7 @@ namespace NetOffice.WordApi
 		/// <param name="compareMoves">optional bool CompareMoves = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7369,7 +7369,7 @@ namespace NetOffice.WordApi
 		/// <param name="originalAuthor">optional string OriginalAuthor = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves, string originalAuthor)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);
@@ -7399,7 +7399,7 @@ namespace NetOffice.WordApi
 		/// <param name="revisedAuthor">optional string RevisedAuthor = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, NetOffice.WordApi.Enums.WdCompareDestination destination, NetOffice.WordApi.Enums.WdGranularity granularity, bool compareFormatting, bool compareCaseChanges, bool compareWhitespace, bool compareTables, bool compareHeaders, bool compareFootnotes, bool compareTextboxes, bool compareFields, bool compareComments, bool compareMoves, string originalAuthor, string revisedAuthor)
+		public NetOffice.WordApi.Document MergeDocuments(NetOffice.WordApi.Document originalDocument, NetOffice.WordApi.Document revisedDocument, object destination, object granularity, object compareFormatting, object compareCaseChanges, object compareWhitespace, object compareTables, object compareHeaders, object compareFootnotes, object compareTextboxes, object compareFields, object compareComments, object compareMoves, object originalAuthor, object revisedAuthor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(originalDocument, revisedDocument, destination, granularity, compareFormatting, compareCaseChanges, compareWhitespace, compareTables, compareHeaders, compareFootnotes, compareTextboxes, compareFields, compareComments, compareMoves, originalAuthor, revisedAuthor);
 			object returnItem = Invoker.MethodReturn(this, "MergeDocuments", paramsArray);

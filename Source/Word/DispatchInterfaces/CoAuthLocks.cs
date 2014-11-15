@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
 		/// <param name="range">optional object Range</param>
 		/// <param name="type">optional NetOffice.WordApi.Enums.WdLockType Type = 1</param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public NetOffice.WordApi.CoAuthLock Add(object range, NetOffice.WordApi.Enums.WdLockType type)
+		public NetOffice.WordApi.CoAuthLock Add(object range, object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(range, type);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

@@ -1,5 +1,5 @@
 using System;
-using NetRunTimeSystem = System;
+using NetRuntimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -119,7 +119,7 @@ namespace NetOffice.VisioApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
@@ -133,7 +133,7 @@ namespace NetOffice.VisioApi.Tools
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -147,7 +147,7 @@ namespace NetOffice.VisioApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnConnection, exception);
@@ -161,7 +161,7 @@ namespace NetOffice.VisioApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
@@ -175,7 +175,7 @@ namespace NetOffice.VisioApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
@@ -206,7 +206,7 @@ namespace NetOffice.VisioApi.Tools
 				 if (!Application.IsDisposed)
                     Application.Dispose();
 			 }
-			 catch(NetRunTimeSystem.Exception exception)
+			 catch(NetRuntimeSystem.Exception exception)
 			 {
 				 NetOffice.DebugConsole.Default.WriteException(exception);
 			 }	
@@ -232,7 +232,7 @@ namespace NetOffice.VisioApi.Tools
         /// <param name="type">type information for the class wtih static method </param>
        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
             if (null != errorMethod)
@@ -244,7 +244,7 @@ namespace NetOffice.VisioApi.Tools
         /// </summary>
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 
         }
@@ -285,7 +285,7 @@ namespace NetOffice.VisioApi.Tools
                 
 				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
-				key.SetValue("", NetRunTimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
 				key.Close();
 
                 // add bypass key
@@ -319,7 +319,7 @@ namespace NetOffice.VisioApi.Tools
                  if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                         registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
@@ -360,7 +360,7 @@ namespace NetOffice.VisioApi.Tools
                 if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                     registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
@@ -408,13 +408,13 @@ namespace NetOffice.VisioApi.Tools
         private string ReadRessourceFile(string fileName)
         {
             Assembly assembly = Type.Assembly;
-            NetRunTimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
+            NetRuntimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
             if (ressourceStream == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource Stream."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource Stream."));
 
-            NetRunTimeSystem.IO.StreamReader textStreamReader = new NetRunTimeSystem.IO.StreamReader(ressourceStream);
+            NetRuntimeSystem.IO.StreamReader textStreamReader = new NetRuntimeSystem.IO.StreamReader(ressourceStream);
             if (textStreamReader == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource File."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource File."));
 
             string text = textStreamReader.ReadToEnd();
             ressourceStream.Close();

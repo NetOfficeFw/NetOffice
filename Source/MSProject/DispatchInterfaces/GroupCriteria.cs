@@ -180,7 +180,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="startAt">optional object StartAt = 0</param>
 		/// <param name="groupInterval">optional object GroupInterval = 1</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor, NetOffice.MSProjectApi.Enums.PjColor cellColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern pattern, NetOffice.MSProjectApi.Enums.PjGroupOn groupOn, object startAt, object groupInterval)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor, object pattern, object groupOn, object startAt, object groupInterval)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn, startAt, groupInterval);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -211,7 +211,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="ascending">optional bool Ascending = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -228,7 +228,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontName">optional string FontName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontSize">optional Int32 FontSize = 8</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -265,7 +265,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontBold">optional bool FontBold = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -285,7 +285,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontItalic">optional bool FontItalic = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -306,7 +306,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontUnderLine">optional bool FontUnderLine = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -328,7 +328,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fontColor">optional NetOffice.MSProjectApi.Enums.PjColor FontColor = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -351,7 +351,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="cellColor">optional NetOffice.MSProjectApi.Enums.PjColor CellColor = 16</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor, NetOffice.MSProjectApi.Enums.PjColor cellColor)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -375,7 +375,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="pattern">optional NetOffice.MSProjectApi.Enums.PjBackgroundPattern Pattern = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor, NetOffice.MSProjectApi.Enums.PjColor cellColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern pattern)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor, object pattern)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -400,7 +400,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="groupOn">optional NetOffice.MSProjectApi.Enums.PjGroupOn GroupOn = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor, NetOffice.MSProjectApi.Enums.PjColor cellColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern pattern, NetOffice.MSProjectApi.Enums.PjGroupOn groupOn)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor, object pattern, object groupOn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -426,7 +426,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="startAt">optional object StartAt = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, bool ascending, string fontName, Int32 fontSize, bool fontBold, bool fontItalic, bool fontUnderLine, NetOffice.MSProjectApi.Enums.PjColor fontColor, NetOffice.MSProjectApi.Enums.PjColor cellColor, NetOffice.MSProjectApi.Enums.PjBackgroundPattern pattern, NetOffice.MSProjectApi.Enums.PjGroupOn groupOn, object startAt)
+		public NetOffice.MSProjectApi.GroupCriterion Add(string fieldName, object ascending, object fontName, object fontSize, object fontBold, object fontItalic, object fontUnderLine, object fontColor, object cellColor, object pattern, object groupOn, object startAt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fieldName, ascending, fontName, fontSize, fontBold, fontItalic, fontUnderLine, fontColor, cellColor, pattern, groupOn, startAt);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

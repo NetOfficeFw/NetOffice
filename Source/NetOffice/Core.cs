@@ -10,18 +10,64 @@ namespace NetOffice
 {
     #region IDispatch
 
+    /// <summary>
+    /// Exposes objects, methods and properties to programming tools and other applications that support Automation. COM components implement the IDispatch interface to enable access by Automation clients, such as Visual Basic.
+    /// </summary>
     [Guid("00020400-0000-0000-c000-000000000046"),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     internal interface IDispatch
     {
+        /// <summary>
+        /// Retrieves the number of type information interfaces that an object provides (either 0 or 1)
+        /// </summary>
+        /// <returns>
+        /// This method can return one of these values
+        /// S_OK - Success
+        /// E_NOTIMPL - Failure
+        /// </returns>
         [PreserveSig]
         int GetTypeInfoCount();
 
+        /// <summary>
+        /// Retrieves the type information for an object, which can then be used to get the type information for an interface
+        /// </summary>
+        /// <param name="iTInfo">The type information to return. Pass 0 to retrieve type information for the IDispatch implementation</param>
+        /// <param name="lcid">The locale identifier for the type information. An object may be able to return different type information for different languages. This is important for classes that support localized member names. For classes that do not support localized member names, this parameter can be ignored</param>
+        /// <returns>The requested type information object</returns>
         System.Runtime.InteropServices.ComTypes.ITypeInfo GetTypeInfo([MarshalAs(UnmanagedType.U4)] int iTInfo, [MarshalAs(UnmanagedType.U4)] int lcid);
 
+        /// <summary>
+        /// Maps a single member and an optional set of argument names to a corresponding set of integer DISPIDs, which can be used on subsequent calls to Invoke.
+        /// </summary>
+        /// <param name="riid">Reserved for future use. Must be IID_NULL</param>
+        /// <param name="rgsNames">The array of names to be mapped</param>
+        /// <param name="cNames">The count of the names to be mapped</param>
+        /// <param name="lcid">The locale context in which to interpret the names</param>
+        /// <param name="rgDispId">Caller-allocated array, each element of which contains an identifier (ID) corresponding to one of the names passed in the rgszNames array. The first element represents the member name. The subsequent elements represent each of the member's parameters</param>
+        /// <returns>
+        /// This method can return one of these values
+        /// S_OK - Success
+        /// E_OUTOFMEMORY - Out of memory
+        /// DISP_E_UNKNOWNNAME - One or more of the specified names were not known. The returned array of DISPIDs contains DISPID_UNKNOWN for each entry that corresponds to an unknown name
+        /// DISP_E_UNKNOWNLCID
+        /// </returns> - The locale identifier (LCID) was not recognized
         [PreserveSig]
         int GetIDsOfNames(ref Guid riid, [MarshalAs(UnmanagedType.LPArray, ArraySubType = UnmanagedType.LPWStr)] string[] rgsNames, int cNames, int lcid, [MarshalAs(UnmanagedType.LPArray)] int[] rgDispId);
 
+        /// <summary>
+        /// Provides access to properties and methods exposed by an object
+        /// </summary>
+        /// <param name="dispIdMember">Identifies the member. Use GetIDsOfNames or the object's documentation to obtain the dispatch identifier.</param>
+        /// <param name="riid">Reserved for future use. Must be IID_NULL</param>
+        /// <param name="lcid">The locale context in which to interpret arguments. The lcid is used by the GetIDsOfNames function, and is also passed to Invoke to allow the object to interpret its arguments specific to a locale</param>
+        /// <param name="dwFlags">Flags describing the context of the Invoke call</param>
+        /// <param name="pDispParams">Pointer to a DISPPARAMS structure containing an array of arguments, an array of argument DISPIDs for named arguments, and counts for the number of elements in the array</param>
+        /// <param name="pVarResult">Pointer to the location where the result is to be stored, or NULL if the caller expects no result. This argument is ignored if DISPATCH_PROPERTYPUT or DISPATCH_PROPERTYPUTREF is specified</param>
+        /// <param name="pExcepInfo">Pointer to a structure that contains exception information. This structure should be filled in if DISP_E_EXCEPTION is returned. Can be NULL</param>
+        /// <param name="pArgErr">The index within rgvarg of the first argument that has an error. Arguments are stored in pDispParams->rgvarg in reverse order, so the first argument is the one with the highest index in the array. This parameter is returned only when the resulting return value is DISP_E_TYPEMISMATCH or DISP_E_PARAMNOTFOUND. This argument can be set to null</param>
+        /// <returns>
+        /// See http://msdn.microsoft.com/de-de/library/windows/desktop/ms221479%28v=vs.85%29.aspx
+        /// </returns>
         [PreserveSig]
         int Invoke(int dispIdMember, ref Guid riid, [MarshalAs(UnmanagedType.U4)] int lcid, [MarshalAs(UnmanagedType.U4)] int dwFlags, ref System.Runtime.InteropServices.ComTypes.DISPPARAMS pDispParams, [Out, MarshalAs(UnmanagedType.LPArray)] object[] pVarResult, ref System.Runtime.InteropServices.ComTypes.EXCEPINFO pExcepInfo, [Out, MarshalAs(UnmanagedType.LPArray)] IntPtr[] pArgErr);
     }
@@ -172,7 +218,7 @@ namespace NetOffice
         /// <summary>
         /// ProxyCountChanged delegate
         /// </summary>
-        /// <param name="proxyCount"></param>
+        /// <param name="proxyCount">current count of com proxies</param>
         public delegate void ProxyCountChangedHandler(int proxyCount);
 
         /// <summary>
@@ -184,13 +230,29 @@ namespace NetOffice
         /// <summary>
         /// Raise the ProxyCountChanged event (and optional, send channel message to console)
         /// </summary>
-        /// <param name="proxyCount"></param>
+        /// <param name="proxyCount">current count of open com proxies</param>
         private void RaiseProxyCountChanged(int proxyCount)
         {
-            if (null != ProxyCountChanged)
-                ProxyCountChanged(proxyCount);
-            if (Settings.EnableProxyCountChannel)
-                this.Console.SendPipeChannelMessage(Settings.ProxyCountChannelName, String.Format("Current Proxy Count:{0}", proxyCount));
+            try
+            {
+                if (null != ProxyCountChanged)
+                    ProxyCountChanged(proxyCount);
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.Default.WriteException(throwedException);
+            }
+
+            try
+            {
+                if (Settings.EnableProxyCountChannel)
+                    this.Console.SendPipeChannelMessage(Settings.ProxyCountChannelName, String.Format("Current Proxy Count:{0}", proxyCount));
+            }
+            catch (Exception throwedException)
+            {
+                DebugConsole.Default.WriteException(throwedException);
+                throw;
+            }
         }
 
         #endregion
@@ -244,7 +306,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 DebugConsole.Default.WriteException(throwedException);
-                throw (throwedException);
+                throw;
             }
             finally
             {
@@ -402,7 +464,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw (throwedException);
+                throw;
             }
             finally
             {
@@ -494,10 +556,10 @@ namespace NetOffice
         /// <summary>
         /// creates a new COMObject based on wrapperClassType
         /// </summary>
-        /// <param name="caller"></param>
-        /// <param name="comProxy"></param>
-        /// <param name="wrapperClassType"></param>
-        /// <returns></returns>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxy">new created proxy</param>
+        /// <param name="wrapperClassType">type info from wrapper class</param>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
         public COMObject CreateKnownObjectFromComProxy(COMObject caller, object comProxy, Type wrapperClassType)
         {
             CheckInitialize();
@@ -524,7 +586,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -539,10 +601,10 @@ namespace NetOffice
         /// <summary>
         /// creates a new COMObject array based on wrapperClassType
         /// </summary>
-        /// <param name="caller"></param>
-        /// <param name="comProxyArray"></param>
-        /// <param name="wrapperClassType"></param>
-        /// <returns></returns>
+        /// <param name="caller">parent there have created comProxy</param>
+        /// <param name="comProxyArray">new created proxies</param>
+        /// <param name="wrapperClassType">type info from wrapper class</param>
+        /// <returns>corresponding wrapper class instances or plain COMObject</returns>
         public COMObject[] CreateKnownObjectArrayFromComProxy(COMObject caller, object[] comProxyArray, Type wrapperClassType)
         {
             CheckInitialize();
@@ -565,7 +627,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -582,7 +644,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <returns>corresponding Wrapper class Instance or plain COMObject</returns>
+        /// <returns>corresponding wrapper class instance or plain COMObject</returns>
         public COMObject CreateObjectFromComProxy(COMObject caller, object comProxy)
         {
             CheckInitialize();
@@ -613,7 +675,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -656,7 +718,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -709,7 +771,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -754,7 +816,7 @@ namespace NetOffice
             catch (Exception throwedException)
             {
                 Console.WriteException(throwedException);
-                throw throwedException;
+                throw;
             }
             finally
             {
@@ -775,14 +837,15 @@ namespace NetOffice
         /// </summary>
         public void DisposeAllCOMProxies()
         {
+            // NO is appending new proxies so we free them in reverse order
             while (_globalObjectList.Count > 0)
-                _globalObjectList[0].Dispose();
+                _globalObjectList[_globalObjectList.Count -1].Dispose();
         }
 
         /// <summary>
         /// add object to global list
         /// </summary>
-        /// <param name="proxy"></param>
+        /// <param name="proxy">com wrapper instance</param>
         internal void AddObjectToList(COMObject proxy)
         {
             bool isLocked = false;
@@ -812,7 +875,7 @@ namespace NetOffice
         /// <summary>
         /// remove object from global list
         /// </summary>
-        /// <param name="proxy"></param>
+        /// <param name="proxy">com wrapper instance</param>
         internal void RemoveObjectFromList(COMObject proxy)
         {
             bool isLocked = false;
@@ -846,8 +909,8 @@ namespace NetOffice
         /// <summary>
         /// returns info the assembly is a NetOffice Api Assembly
         /// </summary>
-        /// <param name="itemAssembly"></param>
-        /// <returns></returns>
+        /// <param name="itemAssembly">assembly informations</param>
+        /// <returns>true if NetOffice assembly, otherwise false</returns>
         private bool ContainsNetOfficeAttribute(Assembly itemAssembly)
         {
             try
@@ -870,10 +933,10 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// returns info the assembly is a NetOffice Api Assembly
+        /// returns info the assembly is a NetOffice Api Assembly with known keytoken
         /// </summary>
-        /// <param name="itemName"></param>
-        /// <returns></returns>
+        /// <param name="itemName">assembly informations</param>
+        /// <returns>true if NetOffice assembly with token, otherwise false</returns>
         private bool ContainsNetOfficePublicKeyToken(AssemblyName itemName)
         {
             try
@@ -917,8 +980,8 @@ namespace NetOffice
         /// <summary>
         /// check for loaded assembly in factory list
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">name of the assembly</param>
+        /// <returns>true if exists, otherwise false</returns>
         private bool AssemblyExistsInFactoryList(string name)
         {
             if (name.EndsWith(".dll", StringComparison.InvariantCultureIgnoreCase))
@@ -936,10 +999,10 @@ namespace NetOffice
         /// <summary>
         /// add assembly to list
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="itemAssembly"></param>
+        /// <param name="name">name of the assembly</param>
+        /// <param name="itemAssembly">assemmbly to add</param>
         /// <returns>list of dependend assemblies</returns>
-      	private string[] AddAssembly(string name, Assembly itemAssembly)
+        private string[] AddAssembly(string name, Assembly itemAssembly)
         {
             List<string> dependAssemblies = new List<string>();
             object[] attributes = itemAssembly.GetCustomAttributes(true);
@@ -1014,8 +1077,8 @@ namespace NetOffice
         /// <summary>
         /// returns id of an interface
         /// </summary>
-        /// <param name="typeInfo"></param>
-        /// <returns></returns>
+        /// <param name="typeInfo">com type informations</param>
+        /// <returns>internface id(iid)</returns>
         private static Guid GetTypeGuid(COMTypes.ITypeInfo typeInfo)
         {
             IntPtr attribPtr = IntPtr.Zero;
@@ -1029,8 +1092,8 @@ namespace NetOffice
         /// <summary>
         /// get the guid from type lib there is the type defined
         /// </summary>
-        /// <param name="comProxy"></param>
-        /// <returns></returns>
+        /// <param name="comProxy">new created proxy</param>
+        /// <returns>guid from containing component</returns>
         public Guid GetParentLibraryGuid(object comProxy)
         {
             IDispatch dispatcher = comProxy as IDispatch;
@@ -1064,8 +1127,8 @@ namespace NetOffice
         /// <summary>
         /// get wrapper class factory info 
         /// </summary>
-        /// <param name="comProxy"></param>
-        /// <returns></returns>
+        /// <param name="comProxy">new created proxy</param>
+        /// <returns>factory info from corresponding assembly</returns>
         private IFactoryInfo GetFactoryInfo(object comProxy)
         {
             if (_factoryList.Count == 0)
@@ -1084,7 +1147,7 @@ namespace NetOffice
                         return item;
             }
 
-            // failback because some types was multiple defined (not allowed in COM but in fact ms do this)
+            // failback because some types was multiple defined (not allowed in COM but in fact MS do this)
             foreach (IFactoryInfo item in _factoryList)
             {
                 if (item.Contains(className))
@@ -1100,11 +1163,11 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// AssemblyResolver Event
+        /// Occurs when the resolution of an assembly fails.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        /// <returns></returns>
+        /// <param name="sender">The source of the event</param>
+        /// <param name="args">A System.ResolveEventArgs that contains the event data</param>
+        /// <returns>The System.Reflection.Assembly that resolves the type, assembly, or resource or null if the assembly cannot be resolved</returns>
         private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             try
@@ -1125,7 +1188,7 @@ namespace NetOffice
                 }
                 else
                 {
-                    Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file file doesnt exists in current codebase.", args.Name));
+                    Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesnt exists in current codebase.", args.Name));
                     return null;
                 }
             }
@@ -1139,8 +1202,8 @@ namespace NetOffice
         /// <summary>
         /// Assembly loader for multitargeting(host) scenarios
         /// </summary>
-        /// <param name="fileName"></param>
-        /// <returns></returns>
+        /// <param name="fileName">full file name</param>
+        /// <returns>assembly instance or null</returns>
         private Assembly TryLoadAssembly(string fileName)
         {
             try
@@ -1189,8 +1252,8 @@ namespace NetOffice
         /// <summary>
         /// returns the Type for comProxy or null if param not set
         /// </summary>
-        /// <param name="comProxy"></param>
-        /// <returns></returns>
+        /// <param name="comProxy">new created proxy</param>
+        /// <returns>type info or null if unkown</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Type GetObjectType(object comProxy)
         {

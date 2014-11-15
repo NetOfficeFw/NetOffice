@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow MsoMoveRow</param>
 		/// <param name="rowNbr">optional Int32 RowNbr = 1</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, Int32 rowNbr)
+		public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(msoMoveRow, rowNbr);
 			object returnItem = Invoker.MethodReturn(this, "Move", paramsArray);
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		/// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Open(string bstrSrc, string bstrConnect, string bstrTable, Int32 fOpenExclusive, Int32 fNeverPrompt)
+		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt);
 			Invoker.Method(this, "Open", paramsArray);
@@ -274,7 +274,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrSrc">optional string bstrSrc = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Open(string bstrSrc)
+		public void Open(object bstrSrc)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc);
 			Invoker.Method(this, "Open", paramsArray);
@@ -288,7 +288,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrConnect">optional string bstrConnect = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Open(string bstrSrc, string bstrConnect)
+		public void Open(object bstrSrc, object bstrConnect)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect);
 			Invoker.Method(this, "Open", paramsArray);
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="bstrTable">optional string bstrTable = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Open(string bstrSrc, string bstrConnect, string bstrTable)
+		public void Open(object bstrSrc, object bstrConnect, object bstrTable)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable);
 			Invoker.Method(this, "Open", paramsArray);
@@ -319,7 +319,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void Open(string bstrSrc, string bstrConnect, string bstrTable, Int32 fOpenExclusive)
+		public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
 			Invoker.Method(this, "Open", paramsArray);
@@ -336,7 +336,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortField3">optional string SortField3 = </param>
 		/// <param name="sortAscending3">optional bool SortAscending3 = true</param>
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2, string sortField3, bool sortAscending3)
+		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
@@ -363,7 +363,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending1">optional bool SortAscending1 = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void SetSortOrder(string sortField1, bool sortAscending1)
+		public void SetSortOrder(string sortField1, object sortAscending1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
@@ -378,7 +378,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortField2">optional string SortField2 = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2)
+		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
@@ -394,7 +394,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortAscending2">optional bool SortAscending2 = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2)
+		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2);
 			Invoker.Method(this, "SetSortOrder", paramsArray);
@@ -411,7 +411,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="sortField3">optional string SortField3 = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 10,11,12,14,15)]
-		public void SetSortOrder(string sortField1, bool sortAscending1, string sortField2, bool sortAscending2, string sortField3)
+		public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(sortField1, sortAscending1, sortField2, sortAscending2, sortField3);
 			Invoker.Method(this, "SetSortOrder", paramsArray);

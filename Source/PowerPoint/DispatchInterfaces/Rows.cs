@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="beforeRow">optional Int32 BeforeRow = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Row Add(Int32 beforeRow)
+		public NetOffice.PowerPointApi.Row Add(object beforeRow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeRow);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

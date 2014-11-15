@@ -470,7 +470,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
 		/// <param name="videoBitRate">optional Int32 VideoBitRate = 7000000</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate, Int32 audioSamplingRate, Int32 videoBitRate)
+		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate, object videoBitRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate, audioSamplingRate, videoBitRate);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -495,7 +495,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="trim">optional bool Trim = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim)
+		public void Resample(object trim)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -509,7 +509,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="sampleHeight">optional Int32 SampleHeight = 768</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim, Int32 sampleHeight)
+		public void Resample(object trim, object sampleHeight)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -524,7 +524,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="sampleWidth">optional Int32 SampleWidth = 1280</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth)
+		public void Resample(object trim, object sampleHeight, object sampleWidth)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -540,7 +540,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="videoFrameRate">optional Int32 VideoFrameRate = 24</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate)
+		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -557,7 +557,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="audioSamplingRate">optional Int32 AudioSamplingRate = 48000</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void Resample(bool trim, Int32 sampleHeight, Int32 sampleWidth, Int32 videoFrameRate, Int32 audioSamplingRate)
+		public void Resample(object trim, object sampleHeight, object sampleWidth, object videoFrameRate, object audioSamplingRate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(trim, sampleHeight, sampleWidth, videoFrameRate, audioSamplingRate);
 			Invoker.Method(this, "Resample", paramsArray);
@@ -569,7 +569,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="profile">optional NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile = 2</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public void ResampleFromProfile(NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile)
+		public void ResampleFromProfile(object profile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(profile);
 			Invoker.Method(this, "ResampleFromProfile", paramsArray);

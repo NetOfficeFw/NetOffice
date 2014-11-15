@@ -360,7 +360,7 @@
             this.checkBoxRestoreLoadBehavior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxRestoreLoadBehavior.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
-            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(242, 36);
+            this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(242, 35);
             this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
             this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(337, 21);
             this.checkBoxRestoreLoadBehavior.TabIndex = 49;

@@ -1,5 +1,5 @@
 using System;
-using NetRunTimeSystem = System;
+using NetRuntimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -145,7 +145,7 @@ namespace NetOffice.AccessApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
@@ -159,7 +159,7 @@ namespace NetOffice.AccessApi.Tools
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -173,7 +173,7 @@ namespace NetOffice.AccessApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnConnection, exception);
@@ -187,7 +187,7 @@ namespace NetOffice.AccessApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
@@ -235,7 +235,7 @@ namespace NetOffice.AccessApi.Tools
 				{
 					item.OnDisconnection();
 				}
-				catch(NetRunTimeSystem.Exception exception)
+				catch(NetRuntimeSystem.Exception exception)
 				{
 					NetOffice.DebugConsole.Default.WriteException(exception);
 				}			
@@ -248,7 +248,7 @@ namespace NetOffice.AccessApi.Tools
 					if(null != item.Pane && !item.Pane.IsDisposed)
 	                    item.Pane.Dispose();
 				}
-				catch(NetRunTimeSystem.Exception exception)
+				catch(NetRuntimeSystem.Exception exception)
 				{
 					NetOffice.DebugConsole.Default.WriteException(exception);
 				}		
@@ -259,7 +259,7 @@ namespace NetOffice.AccessApi.Tools
 				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
 					TaskPaneFactory.Dispose();
 			 }
-			 catch(NetRunTimeSystem.Exception exception)
+			 catch(NetRuntimeSystem.Exception exception)
 			 {
 				 NetOffice.DebugConsole.Default.WriteException(exception);
 			 }	
@@ -269,7 +269,7 @@ namespace NetOffice.AccessApi.Tools
 				 if (!Application.IsDisposed)
                     Application.Dispose();
 			 }
-			 catch(NetRunTimeSystem.Exception exception)
+			 catch(NetRuntimeSystem.Exception exception)
 			 {
 				 NetOffice.DebugConsole.Default.WriteException(exception);
 			 }	
@@ -304,7 +304,7 @@ namespace NetOffice.AccessApi.Tools
                 else
                     return string.Empty;
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
@@ -330,24 +330,24 @@ namespace NetOffice.AccessApi.Tools
                     return;
                 }
 
-                CustomPaneAttribute paneAttribute = AttributeHelper.GetCustomPaneAttribute(Type);
-                if (null != paneAttribute)
-                {
-                    TaskPaneInfo item = TaskPanes.Add(paneAttribute.PaneType, paneAttribute.PaneType.Name);
-                    if (!CallOnCreateTaskPaneInfo(item))
-                    {
-                        item.Title = paneAttribute.Title;
-                        item.Visible = paneAttribute.Visible;
+				CustomPaneAttribute paneAttribute = AttributeHelper.GetCustomPaneAttribute(Type);
+				if(null != paneAttribute)
+				{
+					TaskPaneInfo item = TaskPanes.Add(paneAttribute.PaneType, paneAttribute.PaneType.Name);
+					if(!CallOnCreateTaskPaneInfo(item))
+					{
+						item.Title = paneAttribute.Title;
+						item.Visible = paneAttribute.Visible;
                         item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), paneAttribute.DockPosition.ToString());
                         item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), paneAttribute.DockPositionRestrict.ToString());
                         item.Width = paneAttribute.Width;
                         item.Height = paneAttribute.Height;
-                        item.Arguments = new object[] { this };
-                    }
+						item.Arguments = new object[] { this };
+					}
 
-                    item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
-                    item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
-                }
+					item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
+					item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
+				}
 
                 TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
                 foreach (TaskPaneInfo item in TaskPanes)
@@ -429,151 +429,151 @@ namespace NetOffice.AccessApi.Tools
                     }
                 }
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-            }
+            } 
         }
 
         /// <summary>
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
         /// <param name="paneInfo">pane definition</param>
-        /// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
-        protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-        {
-            return false;
-        }
-
+		/// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
+		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+		{
+			return false;
+		}
+		
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-        protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-        {
+		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+	
+		}
 
-        }
-
-        /// <summary>
+		/// <summary>
         /// Called after any position changes but not for size changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-        protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-        {
+		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			
+		}
 
-        }
-
-        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-        {
-            try
-            {
-                foreach (TaskPaneInfo item in TaskPanes)
-                {
-                    if (item.Pane == customTaskPaneInst)
-                    {
-                        try
-                        {
+		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			try
+			{
+				foreach(TaskPaneInfo item in TaskPanes)
+				{
+					if(item.Pane == customTaskPaneInst)
+					{
+						try
+						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-                            if (null != target && item.Pane == customTaskPaneInst)
-                            {
-                                try
+							if (null != target && item.Pane == customTaskPaneInst)
+							{
+								try
                                 {
-                                    target.OnVisibleStateChanged(item.Pane.Visible);
-                                }
-                                catch (Exception exception)
-                                {
-                                    Factory.Console.WriteException(exception);
-                                }
-                            }
-                        }
-                        catch (Exception exception)
-                        {
-                            Factory.Console.WriteException(exception);
-                        }
-                    }
-                }
+									target.OnVisibleStateChanged(item.Pane.Visible);
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
+							}
+						}
+						catch(Exception exception)
+						{
+							Factory.Console.WriteException(exception);
+						}
+					}
+				}
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
-            }
-        }
+			}
+			catch(Exception exception)
+			{
+			   Factory.Console.WriteException(exception);
+			}
+		}
 
-        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-        {
-            try
-            {
-                foreach (TaskPaneInfo item in TaskPanes)
-                {
-                    if (item.Pane == customTaskPaneInst)
-                    {
-                        try
-                        {
+		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			try
+			{
+				foreach(TaskPaneInfo item in TaskPanes)
+				{
+					if(item.Pane == customTaskPaneInst)
+					{
+						try
+						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-                            if (null != target && item.Pane == customTaskPaneInst)
-                            {
-                                try
-                                {
+							if (null != target && item.Pane == customTaskPaneInst)
+							{
+								try
+								{
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-                                }
-                                catch (Exception exception)
-                                {
-                                    Factory.Console.WriteException(exception);
-                                }
-                            }
-                        }
-                        catch (Exception exception)
-                        {
-                            Factory.Console.WriteException(exception);
-                        }
-                    }
-                }
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
+							}
+						}
+						catch(Exception exception)
+						{
+							Factory.Console.WriteException(exception);
+						}
+					}
+				}
                 TaskPaneDockStateChanged(customTaskPaneInst);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
-            }
-        }
+			}
+			catch(Exception exception)
+			{
+			   Factory.Console.WriteException(exception);
+			}
+		}
 
-        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-        {
-            try
-            {
-                return OnCreateTaskPaneInfo(paneInfo);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
+		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+		{
+			try
+			{
+				return OnCreateTaskPaneInfo(paneInfo);
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-                return false;
-            }
-        }
-
+				return false;
+			}
+		}
+		
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {
-            try
-            {
-                CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
-            }
+        {           
+			try
+			{
+				CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
+			}
         }
 
         private void AttributePane_DockPositionStateChange(Office._CustomTaskPane CustomTaskPaneInst)
         {
-            try
-            {
+			try
+			{
                 CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
-            }
-            catch (Exception exception)
-            {
-                Factory.Console.WriteException(exception);
-            }
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
+			}            
         }
 
         #endregion
@@ -682,7 +682,7 @@ namespace NetOffice.AccessApi.Tools
             {
                 return CreateFactory();
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.CreateFactory, exception);
@@ -700,7 +700,7 @@ namespace NetOffice.AccessApi.Tools
         /// <param name="type">type information for the class wtih static method </param>
        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
             if (null != errorMethod)
@@ -712,7 +712,7 @@ namespace NetOffice.AccessApi.Tools
         /// </summary>
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 
         }
@@ -753,7 +753,7 @@ namespace NetOffice.AccessApi.Tools
                 
 				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
-				key.SetValue("", NetRunTimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
 				key.Close();
 
                 // add bypass key
@@ -787,7 +787,7 @@ namespace NetOffice.AccessApi.Tools
                  if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                         registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
@@ -828,7 +828,7 @@ namespace NetOffice.AccessApi.Tools
                 if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                     registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
@@ -876,13 +876,13 @@ namespace NetOffice.AccessApi.Tools
         private string ReadRessourceFile(string fileName)
         {
             Assembly assembly = Type.Assembly;
-            NetRunTimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
+            NetRuntimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
             if (ressourceStream == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource Stream."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource Stream."));
 
-            NetRunTimeSystem.IO.StreamReader textStreamReader = new NetRunTimeSystem.IO.StreamReader(ressourceStream);
+            NetRuntimeSystem.IO.StreamReader textStreamReader = new NetRuntimeSystem.IO.StreamReader(ressourceStream);
             if (textStreamReader == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource File."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource File."));
 
             string text = textStreamReader.ReadToEnd();
             ressourceStream.Close();

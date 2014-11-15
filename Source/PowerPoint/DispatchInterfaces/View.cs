@@ -368,7 +368,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		/// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel, NetOffice.OfficeApi.Enums.MsoTriState link)
+		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -393,7 +393,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType)
+		public void PasteSpecial(object dataType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -407,7 +407,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon)
+		public void PasteSpecial(object dataType, object displayAsIcon)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -422,7 +422,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconFileName">optional string IconFileName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName)
+		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -438,7 +438,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconIndex">optional Int32 IconIndex = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex)
+		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -455,7 +455,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="iconLabel">optional string IconLabel = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PasteSpecial(NetOffice.PowerPointApi.Enums.PpPasteDataType dataType, NetOffice.OfficeApi.Enums.MsoTriState displayAsIcon, string iconFileName, Int32 iconIndex, string iconLabel)
+		public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(dataType, displayAsIcon, iconFileName, iconIndex, iconLabel);
 			Invoker.Method(this, "PasteSpecial", paramsArray);
@@ -471,7 +471,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		/// <param name="collate">optional NetOffice.OfficeApi.Enums.MsoTriState Collate = -99</param>
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies, NetOffice.OfficeApi.Enums.MsoTriState collate)
+		public void PrintOut(object from, object to, object printToFile, object copies, object collate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies, collate);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -496,7 +496,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="from">optional Int32 From = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PrintOut(Int32 from)
+		public void PrintOut(object from)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -510,7 +510,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="to">optional Int32 To = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PrintOut(Int32 from, Int32 to)
+		public void PrintOut(object from, object to)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -525,7 +525,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="printToFile">optional string PrintToFile = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile)
+		public void PrintOut(object from, object to, object printToFile)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile);
 			Invoker.Method(this, "PrintOut", paramsArray);
@@ -541,7 +541,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="copies">optional Int32 Copies = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 10,11,12,14,15)]
-		public void PrintOut(Int32 from, Int32 to, string printToFile, Int32 copies)
+		public void PrintOut(object from, object to, object printToFile, object copies)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(from, to, printToFile, copies);
 			Invoker.Method(this, "PrintOut", paramsArray);

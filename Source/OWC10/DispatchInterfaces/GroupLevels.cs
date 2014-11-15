@@ -136,7 +136,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="recordSource">string RecordSource</param>
 		/// <param name="failIfThere">optional bool FailIfThere = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public NetOffice.OWC10Api.GroupLevel Add(string recordSource, bool failIfThere)
+		public NetOffice.OWC10Api.GroupLevel Add(string recordSource, object failIfThere)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(recordSource, failIfThere);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

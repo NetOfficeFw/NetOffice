@@ -147,7 +147,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup</param>
 		[SupportByVersionAttribute("Office", 14,15)]
 		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item")]
-		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup]
+		public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, object axisGroup]
 		{
 			get
 {			

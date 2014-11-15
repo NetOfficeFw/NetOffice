@@ -362,7 +362,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="modifyPassword">optional string ModifyPassword = </param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.Presentation Edit(string modifyPassword)
+		public NetOffice.PowerPointApi.Presentation Edit(object modifyPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(modifyPassword);
 			object returnItem = Invoker.MethodReturn(this, "Edit", paramsArray);

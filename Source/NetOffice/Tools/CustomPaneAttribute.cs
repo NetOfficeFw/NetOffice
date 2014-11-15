@@ -36,12 +36,12 @@ namespace NetOffice.Tools
         public PaneDockPositionRestrict DockPositionRestrict;
 
         /// <summary>
-        /// Pane Width (Default is 60)
+        /// Pane Width (Default is 150)
         /// </summary>
         public readonly int Width;
 
         /// <summary>
-        /// Pane Height (Default is 60)
+        /// Pane Height (Default is 150)
         /// </summary>
         public readonly int Height;
 
@@ -58,8 +58,8 @@ namespace NetOffice.Tools
             Visible = true;
             DockPosition = PaneDockPosition.msoCTPDockPositionRight;
             DockPositionRestrict = PaneDockPositionRestrict.msoCTPDockPositionRestrictNone;
-            Width = 60;
-            Height = 60;
+            Width = 150;
+            Height = 150;
         }
 
         /// <summary>
@@ -75,8 +75,8 @@ namespace NetOffice.Tools
             Visible = true;
             DockPosition = PaneDockPosition.msoCTPDockPositionRight;
             DockPositionRestrict = PaneDockPositionRestrict.msoCTPDockPositionRestrictNone;
-            Width = 60;
-            Height = 60;
+            Width = 150;
+            Height = 150;
         }
 
         /// <summary>
@@ -94,8 +94,8 @@ namespace NetOffice.Tools
             Visible = visible;
             DockPosition = PaneDockPosition.msoCTPDockPositionRight;
             DockPositionRestrict = PaneDockPositionRestrict.msoCTPDockPositionRestrictNone;
-            Width = 60;
-            Height = 60;
+            Width = 150;
+            Height = 150;
         }
 
         /// <summary>
@@ -114,8 +114,8 @@ namespace NetOffice.Tools
             Visible = visible;
             DockPosition = dockPosition;
             DockPositionRestrict = PaneDockPositionRestrict.msoCTPDockPositionRestrictNone;
-            Width = 60;
-            Height = 60;
+            Width = 150;
+            Height = 150;
         }
 
         /// <summary>
@@ -135,8 +135,8 @@ namespace NetOffice.Tools
             Visible = visible;
             DockPosition = dockPosition;
             DockPositionRestrict = restriction;
-            Width = 60;
-            Height = 60;
+            Width = 150;
+            Height = 150;
         }
 
         /// <summary>

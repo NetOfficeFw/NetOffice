@@ -305,7 +305,7 @@ namespace NetOffice.WordApi
 		/// <param name="fileName">optional object FileName</param>
 		/// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
 		[SupportByVersionAttribute("Word", 11,12,14,15)]
-		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, bool installForAllUsers)
+		public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(namespaceURI, alias, fileName, installForAllUsers);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

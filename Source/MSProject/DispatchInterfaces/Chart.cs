@@ -232,7 +232,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="fBackWall">optional bool fBackWall</param>
 		[SupportByVersionAttribute("MSProject", 11)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.OfficeApi.IMsoWalls get_Walls(bool fBackWall)
+		public NetOffice.OfficeApi.IMsoWalls get_Walls(object fBackWall)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(fBackWall);
 			object returnItem = Invoker.PropertyGet(this, "Walls", paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.MSProjectApi
 		/// </summary>
 		/// <param name="fBackWall">optional bool fBackWall</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public NetOffice.OfficeApi.IMsoWalls Walls(bool fBackWall)
+		public NetOffice.OfficeApi.IMsoWalls Walls(object fBackWall)
 		{
 			return get_Walls(fBackWall);
 		}
@@ -1612,7 +1612,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+		public void _ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -1639,7 +1639,7 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type)
+		public void _ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -1654,7 +1654,7 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey)
+		public void _ApplyDataLabels(object type, object iMsoLegendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -1670,7 +1670,7 @@ namespace NetOffice.MSProjectApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void _ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText)
+		public void _ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
 			Invoker.Method(this, "_ApplyDataLabels", paramsArray);
@@ -1691,7 +1691,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1716,7 +1716,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional NetOffice.OfficeApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type)
+		public void ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1730,7 +1730,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="iMsoLegendKey">optional object IMsoLegendKey</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey)
+		public void ApplyDataLabels(object type, object iMsoLegendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1745,7 +1745,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1761,7 +1761,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1778,7 +1778,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1796,7 +1796,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1815,7 +1815,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showValue">optional object ShowValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1835,7 +1835,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1856,7 +1856,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void ApplyDataLabels(NetOffice.OfficeApi.Enums.XlDataLabelsType type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		public void ApplyDataLabels(object type, object iMsoLegendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, iMsoLegendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1937,7 +1937,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public object Axes(object type, NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup)
+		public object Axes(object type, object axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
@@ -2229,7 +2229,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="format">optional Int32 Format = -4147</param>
 		/// <param name="size">optional Int32 Size = 2</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void CopyPicture(Int32 appearance, Int32 format, Int32 size)
+		public void CopyPicture(object appearance, object format, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2254,7 +2254,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="appearance">optional Int32 Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void CopyPicture(Int32 appearance)
+		public void CopyPicture(object appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2268,7 +2268,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="format">optional Int32 Format = -4147</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void CopyPicture(Int32 appearance, Int32 format)
+		public void CopyPicture(object appearance, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2838,7 +2838,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="startDate">optional object StartDate</param>
 		/// <param name="finishDate">optional object FinishDate</param>
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, Int32 timescaleUnitCount, object startDate, object finishDate)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, object timeScaleUnit, object timescaleUnitCount, object startDate, object finishDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField, safeArrayOfPjTimescaledData, timeScaleUnit, timescaleUnitCount, startDate, finishDate);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2867,7 +2867,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="groupName">optional string GroupName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName)
+		public void UpdateChartData(bool task, bool timephased, object groupName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2883,7 +2883,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="filterName">optional string FilterName = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2900,7 +2900,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="labelField">optional NetOffice.MSProjectApi.Enums.PjField LabelField = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2918,7 +2918,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="outlineLevel">optional Int32 OutlineLevel = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2937,7 +2937,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="safeArrayOfPjField">optional object SafeArrayOfPjField</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2957,7 +2957,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="safeArrayOfPjTimescaledData">optional object SafeArrayOfPjTimescaledData</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField, safeArrayOfPjTimescaledData);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -2978,7 +2978,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timeScaleUnit">optional NetOffice.MSProjectApi.Enums.PjTimescaleUnit TimeScaleUnit = 4</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, object timeScaleUnit)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField, safeArrayOfPjTimescaledData, timeScaleUnit);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -3000,7 +3000,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="timescaleUnitCount">optional Int32 TimescaleUnitCount = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, Int32 timescaleUnitCount)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, object timeScaleUnit, object timescaleUnitCount)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField, safeArrayOfPjTimescaledData, timeScaleUnit, timescaleUnitCount);
 			Invoker.Method(this, "UpdateChartData", paramsArray);
@@ -3023,7 +3023,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="startDate">optional object StartDate</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11)]
-		public void UpdateChartData(bool task, bool timephased, string groupName, string filterName, NetOffice.MSProjectApi.Enums.PjField labelField, Int32 outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, NetOffice.MSProjectApi.Enums.PjTimescaleUnit timeScaleUnit, Int32 timescaleUnitCount, object startDate)
+		public void UpdateChartData(bool task, bool timephased, object groupName, object filterName, object labelField, object outlineLevel, object safeArrayOfPjField, object safeArrayOfPjTimescaledData, object timeScaleUnit, object timescaleUnitCount, object startDate)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(task, timephased, groupName, filterName, labelField, outlineLevel, safeArrayOfPjField, safeArrayOfPjTimescaledData, timeScaleUnit, timescaleUnitCount, startDate);
 			Invoker.Method(this, "UpdateChartData", paramsArray);

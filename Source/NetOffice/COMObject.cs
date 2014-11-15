@@ -95,7 +95,7 @@ namespace NetOffice
             _instanceType = replacedObject.InstanceType;
 
             // copy childs
-            foreach (COMObject item in replacedObject.ListChildObjects)
+            foreach (COMObject item in replacedObject.ChildObjects)
                 AddChildObject(item);
 
             // remove old object from parent chain
@@ -132,7 +132,7 @@ namespace NetOffice
             _instanceType = replacedObject.InstanceType;
 
             // copy childs
-            foreach (COMObject item in replacedObject.ListChildObjects)
+            foreach (COMObject item in replacedObject.ChildObjects)
                 AddChildObject(item);
 
             // remove old object from parent chain
@@ -544,14 +544,14 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  child instance array
+        /// Child instances
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        internal COMObject[] ListChildObjects
+        internal IEnumerable<COMObject> ChildObjects
         {
             get
             {
-                return _listChildObjects.ToArray();
+                return _listChildObjects;
             }
         }
 
@@ -710,6 +710,9 @@ namespace NetOffice
             bool isLocked = false;
             try
             {
+                Monitor.Enter(_childListLock);
+                isLocked = true;
+
                 _listChildObjects.Remove(childObject);
             }
             catch (Exception throwedException)
@@ -1103,7 +1106,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
-             if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverlads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))

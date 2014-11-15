@@ -174,7 +174,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="before">optional Int32 Before = -1</param>
 		/// <param name="autoWrap">optional bool AutoWrap = true</param>
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle, Int32 before, bool autoWrap)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle, object before, object autoWrap)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle, before, autoWrap);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -205,7 +205,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="alignData">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignData = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -222,7 +222,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="width">optional Int32 Width = 10</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -240,7 +240,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="title">optional string Title = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -259,7 +259,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="alignTitle">optional NetOffice.MSProjectApi.Enums.PjAlignment AlignTitle = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -279,7 +279,7 @@ namespace NetOffice.MSProjectApi
 		/// <param name="before">optional Int32 Before = -1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSProject", 11,12,14)]
-		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, NetOffice.MSProjectApi.Enums.PjAlignment alignData, Int32 width, string title, NetOffice.MSProjectApi.Enums.PjAlignment alignTitle, Int32 before)
+		public NetOffice.MSProjectApi.TableField Add(NetOffice.MSProjectApi.Enums.PjField field, object alignData, object width, object title, object alignTitle, object before)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(field, alignData, width, title, alignTitle, before);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

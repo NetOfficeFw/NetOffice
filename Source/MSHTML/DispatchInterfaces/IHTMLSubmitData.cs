@@ -102,7 +102,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		/// <param name="value">optional string value = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void appendNameValuePair(string name, string value)
+		public void appendNameValuePair(object name, object value)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, value);
 			Invoker.Method(this, "appendNameValuePair", paramsArray);
@@ -127,7 +127,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void appendNameValuePair(string name)
+		public void appendNameValuePair(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "appendNameValuePair", paramsArray);
@@ -140,7 +140,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		/// <param name="filename">optional string filename = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void appendNameFilePair(string name, string filename)
+		public void appendNameFilePair(object name, object filename)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, filename);
 			Invoker.Method(this, "appendNameFilePair", paramsArray);
@@ -165,7 +165,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="name">optional string name = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void appendNameFilePair(string name)
+		public void appendNameFilePair(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "appendNameFilePair", paramsArray);

@@ -283,7 +283,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="scrollIntoView">optional bool ScrollIntoView = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void MakeCurrent(bool scrollIntoView)
+		public void MakeCurrent(object scrollIntoView)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(scrollIntoView);
 			Invoker.Method(this, "MakeCurrent", paramsArray);

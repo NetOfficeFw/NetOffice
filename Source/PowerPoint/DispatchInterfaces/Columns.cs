@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="beforeColumn">optional Int32 BeforeColumn = -1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public NetOffice.PowerPointApi.Column Add(Int32 beforeColumn)
+		public NetOffice.PowerPointApi.Column Add(object beforeColumn)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(beforeColumn);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);

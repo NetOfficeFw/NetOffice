@@ -1427,7 +1427,7 @@ namespace NetOffice.WordApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		/// <param name="separator">optional object Separator</param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1452,7 +1452,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type)
+		public void ApplyDataLabels(object type)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1466,7 +1466,7 @@ namespace NetOffice.WordApi
 		/// <param name="legendKey">optional object LegendKey</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey)
+		public void ApplyDataLabels(object type, object legendKey)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1481,7 +1481,7 @@ namespace NetOffice.WordApi
 		/// <param name="autoText">optional object AutoText</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText)
+		public void ApplyDataLabels(object type, object legendKey, object autoText)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1497,7 +1497,7 @@ namespace NetOffice.WordApi
 		/// <param name="hasLeaderLines">optional object HasLeaderLines</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1514,7 +1514,7 @@ namespace NetOffice.WordApi
 		/// <param name="showSeriesName">optional object ShowSeriesName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1532,7 +1532,7 @@ namespace NetOffice.WordApi
 		/// <param name="showCategoryName">optional object ShowCategoryName</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1551,7 +1551,7 @@ namespace NetOffice.WordApi
 		/// <param name="showValue">optional object ShowValue</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1571,7 +1571,7 @@ namespace NetOffice.WordApi
 		/// <param name="showPercentage">optional object ShowPercentage</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1592,7 +1592,7 @@ namespace NetOffice.WordApi
 		/// <param name="showBubbleSize">optional object ShowBubbleSize</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void ApplyDataLabels(NetOffice.WordApi.Enums.XlDataLabelsType type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
+		public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize);
 			Invoker.Method(this, "ApplyDataLabels", paramsArray);
@@ -1682,7 +1682,7 @@ namespace NetOffice.WordApi
 		/// <param name="type">optional object Type</param>
 		/// <param name="axisGroup">optional NetOffice.WordApi.Enums.XlAxisGroup AxisGroup = 1</param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public object Axes(object type, NetOffice.WordApi.Enums.XlAxisGroup axisGroup)
+		public object Axes(object type, object axisGroup)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(type, axisGroup);
 			object returnItem = Invoker.MethodReturn(this, "Axes", paramsArray);
@@ -1976,7 +1976,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		/// <param name="size">optional NetOffice.WordApi.Enums.XlPictureAppearance Size = 2</param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void CopyPicture(NetOffice.WordApi.Enums.XlPictureAppearance appearance, NetOffice.WordApi.Enums.XlCopyPictureFormat format, NetOffice.WordApi.Enums.XlPictureAppearance size)
+		public void CopyPicture(object appearance, object format, object size)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format, size);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2001,7 +2001,7 @@ namespace NetOffice.WordApi
 		/// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void CopyPicture(NetOffice.WordApi.Enums.XlPictureAppearance appearance)
+		public void CopyPicture(object appearance)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance);
 			Invoker.Method(this, "CopyPicture", paramsArray);
@@ -2015,7 +2015,7 @@ namespace NetOffice.WordApi
 		/// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void CopyPicture(NetOffice.WordApi.Enums.XlPictureAppearance appearance, NetOffice.WordApi.Enums.XlCopyPictureFormat format)
+		public void CopyPicture(object appearance, object format)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(appearance, format);
 			Invoker.Method(this, "CopyPicture", paramsArray);

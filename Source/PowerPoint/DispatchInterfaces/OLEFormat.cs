@@ -210,7 +210,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="index">optional Int32 index = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void DoVerb(Int32 index)
+		public void DoVerb(object index)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(index);
 			Invoker.Method(this, "DoVerb", paramsArray);

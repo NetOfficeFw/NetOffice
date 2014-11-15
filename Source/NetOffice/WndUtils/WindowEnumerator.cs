@@ -64,8 +64,8 @@ namespace NetOffice.WndUtils
         /// <summary>
         /// Enumerates all top level windows on desktop. WARNING: The method returns null if operation timeout is reached.
         /// </summary>
-        /// <param name="milliSecondsTimeout">a timeout for the operation. when a desktop is busy or non responding these method freeze. you can handle this with the operation timeout</param>
-        /// <returns>Result Array or null</returns>
+        /// <param name="milliSecondsTimeout">a timeout for the operation. when a desktop windows is busy or non responding these method freeze. you can handle this with the operation timeout</param>
+        /// <returns>result array or null</returns>
         public IntPtr[] EnumerateWindows(int milliSecondsTimeout)
         {
             try
@@ -91,7 +91,6 @@ namespace NetOffice.WndUtils
                     {
                         _currentInstance = null;
                     }
-
                 }
                 return Result.ToArray();
             }

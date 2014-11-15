@@ -242,7 +242,7 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 AddOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
-		public NetOffice.VisioApi.IVDataRecordset Add(object connectionIDOrString, string commandString, Int32 addOptions, string name)
+		public NetOffice.VisioApi.IVDataRecordset Add(object connectionIDOrString, string commandString, Int32 addOptions, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(connectionIDOrString, commandString, addOptions, name);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -275,7 +275,7 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 AddOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
-		public NetOffice.VisioApi.IVDataRecordset AddFromXML(string xMLString, Int32 addOptions, string name)
+		public NetOffice.VisioApi.IVDataRecordset AddFromXML(string xMLString, Int32 addOptions, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xMLString, addOptions, name);
 			object returnItem = Invoker.MethodReturn(this, "AddFromXML", paramsArray);
@@ -307,7 +307,7 @@ namespace NetOffice.VisioApi
 		/// <param name="addOptions">Int32 AddOptions</param>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersionAttribute("Visio", 12,14,15)]
-		public NetOffice.VisioApi.IVDataRecordset AddFromConnectionFile(string fileName, Int32 addOptions, string name)
+		public NetOffice.VisioApi.IVDataRecordset AddFromConnectionFile(string fileName, Int32 addOptions, object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, addOptions, name);
 			object returnItem = Invoker.MethodReturn(this, "AddFromConnectionFile", paramsArray);

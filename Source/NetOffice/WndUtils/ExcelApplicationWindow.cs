@@ -62,7 +62,11 @@ namespace NetOffice.WndUtils
             }
         }
 
-
+        /// <summary>
+        /// Returns a list with application proxies
+        /// </summary>
+        /// <param name="hwnds">main window handles</param>
+        /// <returns>list of application proxies</returns>
         internal static List<object> GetApplicationProxiesFromHandle(IntPtr[] hwnds)
         {
             if (null == hwnds)
@@ -83,7 +87,6 @@ namespace NetOffice.WndUtils
                 DebugConsole.Default.WriteException(exception);
                 throw;
             }
-            
         }
 
         #endregion

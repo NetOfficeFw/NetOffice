@@ -139,7 +139,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="count">optional Int32 Count</param>
 		[SupportByVersionAttribute("OWC10", 1)]
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public string get_Format(object value, Int32 count)
+		public string get_Format(object value, object count)
 		{		
 			object[] paramsArray = Invoker.ValidateParamsArray(value, count);
 			object returnItem = Invoker.PropertyGet(this, "Format", paramsArray);
@@ -153,7 +153,7 @@ namespace NetOffice.OWC10Api
 		/// <param name="value">object Value</param>
 		/// <param name="count">optional Int32 Count</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public string Format(object value, Int32 count)
+		public string Format(object value, object count)
 		{
 			return get_Format(value, count);
 		}

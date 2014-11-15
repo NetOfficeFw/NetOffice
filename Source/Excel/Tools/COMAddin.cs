@@ -1,5 +1,5 @@
-﻿using System;
-using NetRunTimeSystem = System;
+using System;
+using NetRuntimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -14,7 +14,7 @@ using Excel = NetOffice.ExcelApi;
 namespace NetOffice.ExcelApi.Tools
 {
     /// <summary>
-    /// The class provides a lot of essential functionality for an MS-Excel COMAddin
+    /// NetOffice MS-Excel COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -187,7 +187,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi.Tools
 				{
 					item.OnDisconnection();
 				}
-				catch(NetRunTimeSystem.Exception exception)
+				catch(NetRuntimeSystem.Exception exception)
 				{
                     Factory.Console.WriteException(exception);
 				}			
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi.Tools
 					if(null != item.Pane && !item.Pane.IsDisposed)
 	                    item.Pane.Dispose();
 				}
-				catch(NetRunTimeSystem.Exception exception)
+				catch(NetRuntimeSystem.Exception exception)
 				{
                     Factory.Console.WriteException(exception);
 				}		
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi.Tools
 				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
 					TaskPaneFactory.Dispose();
 			 }
-			 catch(NetRunTimeSystem.Exception exception)
+			 catch(NetRuntimeSystem.Exception exception)
 			 {
                  Factory.Console.WriteException(exception);
 			 }	
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi.Tools
 				 if (!Application.IsDisposed)
                     Application.Dispose();
 			 }
-			 catch(NetRunTimeSystem.Exception exception)
+			 catch(NetRuntimeSystem.Exception exception)
 			 {
                  Factory.Console.WriteException(exception);
 			 }	
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Tools
                 else
                     return string.Empty;
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi.Tools
                     }
                 }
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
@@ -475,16 +475,16 @@ namespace NetOffice.ExcelApi.Tools
 						try
 						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-                            if (null != target && item.Pane == customTaskPaneInst)
+							if (null != target && item.Pane == customTaskPaneInst)
 							{
-                                try
+								try
                                 {
-                                    target.OnVisibleStateChanged(item.Pane.Visible);
-                                }
-                                catch (Exception exception)
-                                {
-                                    Factory.Console.WriteException(exception);
-                                }
+									target.OnVisibleStateChanged(item.Pane.Visible);
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
 							}
 						}
 						catch(Exception exception)
@@ -512,16 +512,16 @@ namespace NetOffice.ExcelApi.Tools
 						try
 						{
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-                            if (null != target && item.Pane == customTaskPaneInst)
+							if (null != target && item.Pane == customTaskPaneInst)
 							{
-                                try
-                                {
+								try
+								{
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-                                }
-                                catch (Exception exception)
-                                {
-                                    Factory.Console.WriteException(exception);
-                                }
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
 							}
 						}
 						catch(Exception exception)
@@ -681,7 +681,7 @@ namespace NetOffice.ExcelApi.Tools
             {
                 return CreateFactory();
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.CreateFactory, exception);
@@ -699,7 +699,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <param name="type">type information for the class wtih static method </param>
        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
             if (null != errorMethod)
@@ -711,7 +711,7 @@ namespace NetOffice.ExcelApi.Tools
         /// </summary>
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 
         }
@@ -752,7 +752,7 @@ namespace NetOffice.ExcelApi.Tools
                 
 				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
-				key.SetValue("", NetRunTimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
 				key.Close();
 
                 // add bypass key
@@ -786,7 +786,7 @@ namespace NetOffice.ExcelApi.Tools
                  if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                         registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
@@ -827,7 +827,7 @@ namespace NetOffice.ExcelApi.Tools
                 if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                     registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
@@ -875,13 +875,13 @@ namespace NetOffice.ExcelApi.Tools
         private string ReadRessourceFile(string fileName)
         {
             Assembly assembly = Type.Assembly;
-            NetRunTimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
+            NetRuntimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
             if (ressourceStream == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource Stream."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource Stream."));
 
-            NetRunTimeSystem.IO.StreamReader textStreamReader = new NetRunTimeSystem.IO.StreamReader(ressourceStream);
+            NetRuntimeSystem.IO.StreamReader textStreamReader = new NetRuntimeSystem.IO.StreamReader(ressourceStream);
             if (textStreamReader == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource File."));
+                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource File."));
 
             string text = textStreamReader.ReadToEnd();
             ressourceStream.Close();

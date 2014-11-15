@@ -3604,7 +3604,7 @@ namespace NetOffice.AccessApi
 		/// <param name="right">optional Int32 Right = 0</param>
 		/// <param name="down">optional Int32 Down = 0</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void GoToPage(Int32 pageNumber, Int32 right, Int32 down)
+		public void GoToPage(Int32 pageNumber, object right, object down)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right, down);
 			Invoker.Method(this, "GoToPage", paramsArray);
@@ -3631,7 +3631,7 @@ namespace NetOffice.AccessApi
 		/// <param name="right">optional Int32 Right = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void GoToPage(Int32 pageNumber, Int32 right)
+		public void GoToPage(Int32 pageNumber, object right)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pageNumber, right);
 			Invoker.Method(this, "GoToPage", paramsArray);

@@ -12,14 +12,14 @@ namespace NetOffice.AccessApi.Tools
         /// After startup to serve the application instance and custom arguments(if set)
         /// </summary>
         /// <param name="application">host application instance</param>
-        /// <param name="parentPane">custom task pane definition </param>
-        /// <param name="customArguments">custom arguments</param>
+		/// <param name="parentPane">custom task pane definition </param>
+		/// <param name="customArguments">custom arguments</param>
         void OnConnection(Access.Application application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
 
-        /// <summary>
+		/// <summary>
         /// While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
         /// </summary>
-        void OnDisconnection();
+		void OnDisconnection();
 
         /// <summary>
         /// Called after any position changes but not for size changes. Use the UserControl.Resize event instead for size changes
@@ -32,5 +32,5 @@ namespace NetOffice.AccessApi.Tools
         /// </summary>
         /// <param name="visible">the current visibility for the instance</param>
         void OnVisibleStateChanged(bool visible);
-    }
+	}
 }

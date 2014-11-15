@@ -486,7 +486,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             string assembliesTempTarget = TempNetOfficePath;
 
             File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.xml"), Path.Combine(assembliesTempTarget, "NetOffice.xml"));
-            foreach (var item in officeApps)
+            foreach (var item in apps)
                 File.Copy(Path.Combine(assembliesFolderPath, item + "Api.xml"), Path.Combine(assembliesTempTarget, item + "Api.xml"));
 
             if (runtime == NetVersion.Net4 || runtime == NetVersion.Net4Client)

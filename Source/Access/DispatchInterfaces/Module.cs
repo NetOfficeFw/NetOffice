@@ -451,7 +451,7 @@ namespace NetOffice.AccessApi
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		/// <param name="patternSearch">optional bool PatternSearch = false</param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase, bool patternSearch)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase, object patternSearch)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase, patternSearch);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -488,7 +488,7 @@ namespace NetOffice.AccessApi
 		/// <param name="wholeWord">optional bool WholeWord = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);
@@ -508,7 +508,7 @@ namespace NetOffice.AccessApi
 		/// <param name="matchCase">optional bool MatchCase = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, bool wholeWord, bool matchCase)
+		public bool Find(string target, Int32 startLine, Int32 startColumn, Int32 endLine, Int32 endColumn, object wholeWord, object matchCase)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(target, startLine, startColumn, endLine, endColumn, wholeWord, matchCase);
 			object returnItem = Invoker.MethodReturn(this, "Find", paramsArray);

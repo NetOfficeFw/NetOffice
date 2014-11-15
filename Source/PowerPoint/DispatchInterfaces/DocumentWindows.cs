@@ -152,7 +152,7 @@ namespace NetOffice.PowerPointApi
 		/// </summary>
 		/// <param name="arrangeStyle">optional NetOffice.PowerPointApi.Enums.PpArrangeStyle arrangeStyle = 1</param>
 		[SupportByVersionAttribute("PowerPoint", 9,10,11,12,14,15)]
-		public void Arrange(NetOffice.PowerPointApi.Enums.PpArrangeStyle arrangeStyle)
+		public void Arrange(object arrangeStyle)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(arrangeStyle);
 			Invoker.Method(this, "Arrange", paramsArray);

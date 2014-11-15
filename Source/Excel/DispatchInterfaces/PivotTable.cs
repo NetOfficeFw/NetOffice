@@ -3057,7 +3057,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="name">string Name</param>
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		public void PivotSelect(string name, NetOffice.ExcelApi.Enums.XlPTSelectionMode mode)
+		public void PivotSelect(string name, object mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, mode);
 			Invoker.Method(this, "PivotSelect", paramsArray);
@@ -3071,7 +3071,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
 		/// <param name="useStandardName">optional object UseStandardName</param>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void PivotSelect(string name, NetOffice.ExcelApi.Enums.XlPTSelectionMode mode, object useStandardName)
+		public void PivotSelect(string name, object mode, object useStandardName)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, mode, useStandardName);
 			Invoker.Method(this, "PivotSelect", paramsArray);
@@ -3121,7 +3121,7 @@ namespace NetOffice.ExcelApi
 		/// <param name="mode">optional NetOffice.ExcelApi.Enums.XlPTSelectionMode Mode = 0</param>
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void _PivotSelect(string name, NetOffice.ExcelApi.Enums.XlPTSelectionMode mode)
+		public void _PivotSelect(string name, object mode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, mode);
 			Invoker.Method(this, "_PivotSelect", paramsArray);

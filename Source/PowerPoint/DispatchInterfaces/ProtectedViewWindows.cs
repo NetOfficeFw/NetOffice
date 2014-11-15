@@ -157,7 +157,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="readPassword">optional string ReadPassword = </param>
 		/// <param name="openAndRepair">optional NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair = 0</param>
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, string readPassword, NetOffice.OfficeApi.Enums.MsoTriState openAndRepair)
+		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword, object openAndRepair)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword, openAndRepair);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
 		/// <param name="readPassword">optional string ReadPassword = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("PowerPoint", 14,15)]
-		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, string readPassword)
+		public NetOffice.PowerPointApi.ProtectedViewWindow Open(string fileName, object readPassword)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(fileName, readPassword);
 			object returnItem = Invoker.MethodReturn(this, "Open", paramsArray);

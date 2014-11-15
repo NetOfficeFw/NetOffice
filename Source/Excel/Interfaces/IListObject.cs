@@ -784,7 +784,7 @@ namespace NetOffice.ExcelApi
 		/// </summary>
 		/// <param name="iConflictType">optional NetOffice.ExcelApi.Enums.XlListConflict iConflictType = 0</param>
 		[SupportByVersionAttribute("Excel", 11,12,14,15)]
-		public Int32 UpdateChanges(NetOffice.ExcelApi.Enums.XlListConflict iConflictType)
+		public Int32 UpdateChanges(object iConflictType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(iConflictType);
 			object returnItem = Invoker.MethodReturn(this, "UpdateChanges", paramsArray);

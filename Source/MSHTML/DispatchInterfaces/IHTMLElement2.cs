@@ -1103,7 +1103,7 @@ namespace NetOffice.MSHTMLApi
 		/// </summary>
 		/// <param name="containerCapture">optional bool containerCapture = true</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setCapture(bool containerCapture)
+		public void setCapture(object containerCapture)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(containerCapture);
 			Invoker.Method(this, "setCapture", paramsArray);
@@ -1204,7 +1204,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="expression">string expression</param>
 		/// <param name="language">optional string language = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setExpression(string propname, string expression, string language)
+		public void setExpression(string propname, string expression, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, expression, language);
 			Invoker.Method(this, "setExpression", paramsArray);

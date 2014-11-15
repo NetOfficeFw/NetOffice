@@ -189,7 +189,7 @@ namespace NetOffice.OWC10Api
 		/// </summary>
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[SupportByVersionAttribute("OWC10", 1)]
-		public void Follow(bool newWindow)
+		public void Follow(object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow);
 			Invoker.Method(this, "Follow", paramsArray);

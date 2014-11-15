@@ -201,7 +201,7 @@ namespace NetOffice.WordApi
 		/// </summary>
 		/// <param name="name">optional string Name = </param>
 		[SupportByVersionAttribute("Word", 14,15)]
-		public void StartCustomRecord(string name)
+		public void StartCustomRecord(object name)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name);
 			Invoker.Method(this, "StartCustomRecord", paramsArray);

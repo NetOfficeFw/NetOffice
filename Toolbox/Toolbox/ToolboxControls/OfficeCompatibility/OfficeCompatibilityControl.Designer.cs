@@ -221,7 +221,7 @@
             this.buttonSelectAssembly.ForeColor = System.Drawing.Color.White;
             this.buttonSelectAssembly.Image = ((System.Drawing.Image)(resources.GetObject("buttonSelectAssembly.Image")));
             this.buttonSelectAssembly.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSelectAssembly.Location = new System.Drawing.Point(783, 16);
+            this.buttonSelectAssembly.Location = new System.Drawing.Point(783, 15);
             this.buttonSelectAssembly.Name = "buttonSelectAssembly";
             this.buttonSelectAssembly.Size = new System.Drawing.Size(125, 25);
             this.buttonSelectAssembly.TabIndex = 2;

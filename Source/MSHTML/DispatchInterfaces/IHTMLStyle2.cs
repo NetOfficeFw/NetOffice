@@ -746,7 +746,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="expression">string expression</param>
 		/// <param name="language">optional string language = </param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public void setExpression(string propname, string expression, string language)
+		public void setExpression(string propname, string expression, object language)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(propname, expression, language);
 			Invoker.Method(this, "setExpression", paramsArray);

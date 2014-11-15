@@ -1412,7 +1412,7 @@ namespace NetOffice.WordApi
 		/// <param name="level8">optional Int16 Level8 = 0</param>
 		/// <param name="level9">optional Int16 Level9 = 0</param>
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4, Int16 level5, Int16 level6, Int16 level7, Int16 level8, Int16 level9)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7, object level8, object level9)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4, level5, level6, level7, level8, level9);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1437,7 +1437,7 @@ namespace NetOffice.WordApi
 		/// <param name="level1">optional Int16 Level1 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1)
+		public void ListAdvanceTo(object level1)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1451,7 +1451,7 @@ namespace NetOffice.WordApi
 		/// <param name="level2">optional Int16 Level2 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2)
+		public void ListAdvanceTo(object level1, object level2)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1466,7 +1466,7 @@ namespace NetOffice.WordApi
 		/// <param name="level3">optional Int16 Level3 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3)
+		public void ListAdvanceTo(object level1, object level2, object level3)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1482,7 +1482,7 @@ namespace NetOffice.WordApi
 		/// <param name="level4">optional Int16 Level4 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1499,7 +1499,7 @@ namespace NetOffice.WordApi
 		/// <param name="level5">optional Int16 Level5 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4, Int16 level5)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4, level5);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1517,7 +1517,7 @@ namespace NetOffice.WordApi
 		/// <param name="level6">optional Int16 Level6 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4, Int16 level5, Int16 level6)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4, level5, level6);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1536,7 +1536,7 @@ namespace NetOffice.WordApi
 		/// <param name="level7">optional Int16 Level7 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4, Int16 level5, Int16 level6, Int16 level7)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4, level5, level6, level7);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);
@@ -1556,7 +1556,7 @@ namespace NetOffice.WordApi
 		/// <param name="level8">optional Int16 Level8 = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 12,14,15)]
-		public void ListAdvanceTo(Int16 level1, Int16 level2, Int16 level3, Int16 level4, Int16 level5, Int16 level6, Int16 level7, Int16 level8)
+		public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7, object level8)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(level1, level2, level3, level4, level5, level6, level7, level8);
 			Invoker.Method(this, "ListAdvanceTo", paramsArray);

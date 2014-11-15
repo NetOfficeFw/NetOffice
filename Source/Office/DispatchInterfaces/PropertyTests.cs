@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="secondValue">optional object SecondValue</param>
 		/// <param name="connector">optional NetOffice.OfficeApi.Enums.MsoConnector Connector = 1</param>
 		[SupportByVersionAttribute("Office", 9,10,11,12,14,15)]
-		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, NetOffice.OfficeApi.Enums.MsoConnector connector)
+		public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(name, condition, value, secondValue, connector);
 			Invoker.Method(this, "Add", paramsArray);

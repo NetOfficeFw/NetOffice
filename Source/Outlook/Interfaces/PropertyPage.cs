@@ -20,11 +20,11 @@ namespace NetOffice.OutlookApi
 
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8448)]
-		Int32 GetPageInfo([In, MarshalAs(UnmanagedType.BStr)]string HelpFile, [In]Int32 HelpContext);
+		void GetPageInfo([In, MarshalAs(UnmanagedType.BStr)]string HelpFile, [In]Int32 HelpContext);
 
 		[SupportByVersionAttribute("Outlook", 9,10,11,12,14,15)]
 		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8450)]
-		Int32 Apply();
+		void Apply();
 
 		#endregion
 

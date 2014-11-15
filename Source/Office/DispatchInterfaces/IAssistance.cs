@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="helpId">optional string HelpId = </param>
 		/// <param name="scope">optional string Scope = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ShowHelp(string helpId, string scope)
+		public void ShowHelp(object helpId, object scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId, scope);
 			Invoker.Method(this, "ShowHelp", paramsArray);
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="helpId">optional string HelpId = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void ShowHelp(string helpId)
+		public void ShowHelp(object helpId)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(helpId);
 			Invoker.Method(this, "ShowHelp", paramsArray);
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="query">string Query</param>
 		/// <param name="scope">optional string Scope = </param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public void SearchHelp(string query, string scope)
+		public void SearchHelp(string query, object scope)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(query, scope);
 			Invoker.Method(this, "SearchHelp", paramsArray);

@@ -153,7 +153,7 @@ namespace NetOffice.AccessApi
 		/// </summary>
 		/// <param name="bstrParameters">optional string bstrParameters = </param>
 		[SupportByVersionAttribute("Access", 14,15)]
-		public object Execute(string bstrParameters)
+		public object Execute(object bstrParameters)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(bstrParameters);
 			object returnItem = Invoker.MethodReturn(this, "Execute", paramsArray);

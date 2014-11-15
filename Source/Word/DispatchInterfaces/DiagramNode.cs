@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		/// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public NetOffice.WordApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos, NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType)
+		public NetOffice.WordApi.DiagramNode AddNode(object pos, object nodeType)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos, nodeType);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -280,7 +280,7 @@ namespace NetOffice.WordApi
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public NetOffice.WordApi.DiagramNode AddNode(NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.WordApi.DiagramNode AddNode(object pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(pos);
 			object returnItem = Invoker.MethodReturn(this, "AddNode", paramsArray);
@@ -337,7 +337,7 @@ namespace NetOffice.WordApi
 		/// <param name="targetNode">NetOffice.WordApi.DiagramNode TargetNode</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = -1</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public void SwapNode(out NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public void SwapNode(out NetOffice.WordApi.DiagramNode targetNode, object pos)
 		{
 			ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false);
 			targetNode = null;
@@ -370,7 +370,7 @@ namespace NetOffice.WordApi
 		/// <param name="targetNode">optional NetOffice.WordApi.DiagramNode TargetNode = 0</param>
 		/// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, NetOffice.WordApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
+		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, object targetNode, object pos)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode, pos);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);
@@ -401,7 +401,7 @@ namespace NetOffice.WordApi
 		/// <param name="targetNode">optional NetOffice.WordApi.DiagramNode TargetNode = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Word", 10,11,12,14,15)]
-		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, NetOffice.WordApi.DiagramNode targetNode)
+		public NetOffice.WordApi.DiagramNode CloneNode(bool copyChildren, object targetNode)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(copyChildren, targetNode);
 			object returnItem = Invoker.MethodReturn(this, "CloneNode", paramsArray);

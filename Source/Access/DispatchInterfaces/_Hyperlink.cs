@@ -221,7 +221,7 @@ namespace NetOffice.AccessApi
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		/// <param name="headerInfo">optional string HeaderInfo = </param>
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method, string headerInfo)
+		public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method, headerInfo);
 			Invoker.Method(this, "Follow", paramsArray);
@@ -246,7 +246,7 @@ namespace NetOffice.AccessApi
 		/// <param name="newWindow">optional bool NewWindow = false</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void Follow(bool newWindow)
+		public void Follow(object newWindow)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow);
 			Invoker.Method(this, "Follow", paramsArray);
@@ -260,7 +260,7 @@ namespace NetOffice.AccessApi
 		/// <param name="addHistory">optional bool AddHistory = true</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void Follow(bool newWindow, bool addHistory)
+		public void Follow(object newWindow, object addHistory)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory);
 			Invoker.Method(this, "Follow", paramsArray);
@@ -275,7 +275,7 @@ namespace NetOffice.AccessApi
 		/// <param name="extraInfo">optional object ExtraInfo</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo)
+		public void Follow(object newWindow, object addHistory, object extraInfo)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo);
 			Invoker.Method(this, "Follow", paramsArray);
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
 		/// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Access", 9,10,11,12,14,15)]
-		public void Follow(bool newWindow, bool addHistory, object extraInfo, NetOffice.OfficeApi.Enums.MsoExtraInfoMethod method)
+		public void Follow(object newWindow, object addHistory, object extraInfo, object method)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(newWindow, addHistory, extraInfo, method);
 			Invoker.Method(this, "Follow", paramsArray);

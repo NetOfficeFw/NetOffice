@@ -1773,7 +1773,7 @@ namespace NetOffice.MSHTMLApi
 		/// <param name="strAttributeName">string strAttributeName</param>
 		/// <param name="lFlags">optional Int32 lFlags = 0</param>
 		[SupportByVersionAttribute("MSHTML", 4)]
-		public object getAttribute(string strAttributeName, Int32 lFlags)
+		public object getAttribute(string strAttributeName, object lFlags)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(strAttributeName, lFlags);
 			object returnItem = Invoker.MethodReturn(this, "getAttribute", paramsArray);

@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="xML">optional string XML = </param>
 		/// <param name="schemaCollection">optional object SchemaCollection</param>
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLPart Add(string xML, object schemaCollection)
+		public NetOffice.OfficeApi.CustomXMLPart Add(object xML, object schemaCollection)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML, schemaCollection);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
@@ -184,7 +184,7 @@ namespace NetOffice.OfficeApi
 		/// <param name="xML">optional string XML = </param>
 		[CustomMethodAttribute]
 		[SupportByVersionAttribute("Office", 12,14,15)]
-		public NetOffice.OfficeApi.CustomXMLPart Add(string xML)
+		public NetOffice.OfficeApi.CustomXMLPart Add(object xML)
 		{
 			object[] paramsArray = Invoker.ValidateParamsArray(xML);
 			object returnItem = Invoker.MethodReturn(this, "Add", paramsArray);
