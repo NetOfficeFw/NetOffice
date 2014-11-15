@@ -53,6 +53,7 @@
             this.checkBoxSupressEnabled.AutoSize = true;
             this.checkBoxSupressEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxSupressEnabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxSupressEnabled.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxSupressEnabled.Location = new System.Drawing.Point(23, 31);
             this.checkBoxSupressEnabled.Name = "checkBoxSupressEnabled";
             this.checkBoxSupressEnabled.Size = new System.Drawing.Size(194, 20);

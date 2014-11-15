@@ -17,25 +17,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationObserverControl));
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Excel",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Winword",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Outlook",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "PowerPnt",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "MsAccess",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "WinProj",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Visio",
             ""}, -1);
             this.labelNoOfficeAppRunning = new System.Windows.Forms.Label();
@@ -142,6 +142,7 @@
             this.checkBoxAppKill.AutoSize = true;
             this.checkBoxAppKill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAppKill.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAppKill.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxAppKill.Location = new System.Drawing.Point(52, 331);
             this.checkBoxAppKill.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAppKill.Name = "checkBoxAppKill";
@@ -160,22 +161,23 @@
             this.columnName,
             this.columnInstances});
             this.listViewApps.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewApps.ForeColor = System.Drawing.Color.Blue;
             this.listViewApps.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            listViewItem29.StateImageIndex = 0;
-            listViewItem30.StateImageIndex = 0;
-            listViewItem31.StateImageIndex = 0;
-            listViewItem32.StateImageIndex = 0;
-            listViewItem33.StateImageIndex = 0;
-            listViewItem34.StateImageIndex = 0;
-            listViewItem35.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
             this.listViewApps.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem29,
-            listViewItem30,
-            listViewItem31,
-            listViewItem32,
-            listViewItem33,
-            listViewItem34,
-            listViewItem35});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
             this.listViewApps.Location = new System.Drawing.Point(49, 52);
             this.listViewApps.Margin = new System.Windows.Forms.Padding(4);
             this.listViewApps.Name = "listViewApps";
@@ -201,6 +203,7 @@
             this.checkBoxAppsTray.AutoSize = true;
             this.checkBoxAppsTray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAppsTray.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAppsTray.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxAppsTray.Location = new System.Drawing.Point(50, 520);
             this.checkBoxAppsTray.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAppsTray.Name = "checkBoxAppsTray";
@@ -308,6 +311,7 @@
             this.checkBoxShowQuestion.AutoSize = true;
             this.checkBoxShowQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxShowQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowQuestion.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxShowQuestion.Location = new System.Drawing.Point(52, 360);
             this.checkBoxShowQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShowQuestion.Name = "checkBoxShowQuestion";

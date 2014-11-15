@@ -41,16 +41,17 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             {
                 CreatePlayers();
 
-                string txt = _lcid == 1031 ? "Nun aber an die Arbeit" : "Thanks for using Developer Toolbox";
+                string txt = _lcid == 1031 ? "Nun aber schnell wieder an die Arbeit" : "Thanks for using Developer Toolbox";
 
                 List<Control> list = new List<Control>();
-                int i = 140;
+                int i = 0;
                 foreach (var item in txt.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     Label text = new Label();
                     text.AutoSize = true;
-                    text.Location = new Point(i + 10, 30);
+                    text.Location = new Point(i + 4, 30);
                     text.Font = panelMessage.Font;
+                    text.ForeColor = panelMessage.ForeColor;
                     text.Text = item;
                     text.Visible = true;
                     list.Add(text);
@@ -63,12 +64,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                 timerText.Interval = 400;
                 timerText.Enabled = true;
                 int ctrlIndex = 0;
+                int delayTicks = 0;
                 bool playWait = false;
                 DateTime playWaitStart = DateTime.Now;
                 timerText.Tick += delegate(object sender, EventArgs e)
                 {
                     if (ctrlIndex >= list.Count)
                     {
+                        delayTicks++;
+                        if (delayTicks < 5)
+                            return;
                         if (!playWait)
                         {
                             pictureBoxWait.Visible = true;
@@ -84,6 +89,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                             if (DateTime.Now.Subtract(playWaitStart).TotalSeconds >= 18.0)
                             {
                                 timerText.Enabled = false;
+                                DisposePlayers();
                                 RaiseDone();
                                 return;
                             }

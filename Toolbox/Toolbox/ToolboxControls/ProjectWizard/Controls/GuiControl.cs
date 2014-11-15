@@ -191,10 +191,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 result[0] += Environment.NewLine + LocalizedUglyUI;
                 result[1] += Environment.NewLine + LocalizedNo;
             }
-
+            
             string toogle = true == checkBoxToogleButton.Checked ? " + Toogle" : "";
             result[0] += Environment.NewLine + "TaskPane";
-            result[1] += Environment.NewLine + (checkBoxTaskPaneSupport.Checked == true && checkBoxTaskPaneSupport.Visible == true ? LocalizedYes + toogle : LocalizedNo);
+            if (checkBoxRibbonUISupport.Checked)
+                result[1] += Environment.NewLine + LocalizedYes + toogle;
+            else
+                result[1] += Environment.NewLine + LocalizedNo;
 
             return result;
         }

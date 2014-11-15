@@ -62,7 +62,8 @@
             // 
             // panelMessage
             // 
-            this.panelMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMessage.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMessage.ForeColor = System.Drawing.Color.DarkKhaki;
             this.panelMessage.Location = new System.Drawing.Point(180, 41);
             this.panelMessage.Name = "panelMessage";
             this.panelMessage.Size = new System.Drawing.Size(553, 100);

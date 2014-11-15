@@ -178,7 +178,13 @@
     <Compile Include="Controls\Buttons\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\Check\GlowCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\Label\GlowLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Radio\GlowRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\Text\AdvRichTextBox.cs">

@@ -63,11 +63,11 @@ namespace NOBuildTools.VersionUpdater
                 return false;
             }
 
-            if (GetSelectedFromNetVersion() == GetSelectedToNetVersion())
-            {
-                MessageBox.Show("Same .NET versions.", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            //if (GetSelectedFromNetVersion() == GetSelectedToNetVersion())
+            //{
+            //    MessageBox.Show("Same .NET versions.", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return false;
+            //}
 
             return true;
         }
@@ -352,6 +352,11 @@ namespace NOBuildTools.VersionUpdater
                     string fileContent = File.ReadAllText(file);
                     string csMarkerSource = "CS" + netFromVersion.Replace(".", "");
                     string csMarkerTarget = "CS" + netToVersion.Replace(".", "");
+                    if (csMarkerSource.EndsWith("0"))
+                        csMarkerSource = csMarkerSource.Substring(0, csMarkerSource.Length - 1);
+                    if (csMarkerTarget.EndsWith("0"))
+                        csMarkerTarget = csMarkerTarget.Substring(0, csMarkerTarget.Length - 1);
+
                     if (fileContent.IndexOf(csMarkerSource) > -1)
                     {
                         fileContent = fileContent.Replace(csMarkerSource, csMarkerTarget);
@@ -364,6 +369,11 @@ namespace NOBuildTools.VersionUpdater
                     string fileContent = File.ReadAllText(file);
                     string vbMarkerSource = "VB" + netFromVersion.Replace(".", "");
                     string vbMarkerTarget = "VB" + netToVersion.Replace(".", "");
+                    if (vbMarkerSource.EndsWith("0"))
+                        vbMarkerSource = vbMarkerSource.Substring(0, vbMarkerSource.Length - 1);
+                    if (vbMarkerTarget.EndsWith("0"))
+                        vbMarkerTarget = vbMarkerTarget.Substring(0, vbMarkerTarget.Length - 1);
+
                     if (fileContent.IndexOf(vbMarkerSource) > -1)
                     {
                         fileContent = fileContent.Replace(vbMarkerSource, vbMarkerTarget);

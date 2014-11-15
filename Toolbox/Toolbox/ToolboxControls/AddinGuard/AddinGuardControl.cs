@@ -463,7 +463,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
                 RadioButton button = sender as RadioButton;
 
                 if (button.Checked)
-                    checkBoxRestoreLoadBehavior.ForeColor = Color.Black;
+                    checkBoxRestoreLoadBehavior.ForeColor = Color.Blue;
                 else
                     checkBoxRestoreLoadBehavior.ForeColor = Color.Gray;
 

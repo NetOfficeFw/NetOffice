@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NetOffice DeveloperToolbox")]
-[assembly: AssemblyDescription("a candle in the wind for office developers")]
+[assembly: AssemblyDescription("some stuff in a box")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("netoffice.codeplex.com")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NetOffice")]
 [assembly: AssemblyCopyright("Copyright ©  2011 Sebastian Lange")]
 [assembly: AssemblyTrademark("")]

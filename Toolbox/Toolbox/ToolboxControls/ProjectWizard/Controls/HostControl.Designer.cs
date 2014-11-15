@@ -29,108 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostControl));
-            this.checkBoxAccess = new System.Windows.Forms.CheckBox();
-            this.checkBoxPowerPoint = new System.Windows.Forms.CheckBox();
-            this.checkBoxOutlook = new System.Windows.Forms.CheckBox();
-            this.checkBoxWord = new System.Windows.Forms.CheckBox();
-            this.checkBoxExcel = new System.Windows.Forms.CheckBox();
-            this.checkBoxProject = new System.Windows.Forms.CheckBox();
-            this.checkBoxVisio = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxVisio = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxProject = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxAccess = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxPowerPoint = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxOutlook = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxWord = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxExcel = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkBoxAccess
-            // 
-            this.checkBoxAccess.AutoSize = true;
-            this.checkBoxAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxAccess.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAccess.Location = new System.Drawing.Point(40, 130);
-            this.checkBoxAccess.Name = "checkBoxAccess";
-            this.checkBoxAccess.Size = new System.Drawing.Size(63, 21);
-            this.checkBoxAccess.TabIndex = 9;
-            this.checkBoxAccess.Text = "Access";
-            this.checkBoxAccess.UseVisualStyleBackColor = true;
-            this.checkBoxAccess.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxPowerPoint
-            // 
-            this.checkBoxPowerPoint.AutoSize = true;
-            this.checkBoxPowerPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxPowerPoint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPowerPoint.Location = new System.Drawing.Point(40, 107);
-            this.checkBoxPowerPoint.Name = "checkBoxPowerPoint";
-            this.checkBoxPowerPoint.Size = new System.Drawing.Size(93, 21);
-            this.checkBoxPowerPoint.TabIndex = 8;
-            this.checkBoxPowerPoint.Text = "Power Point";
-            this.checkBoxPowerPoint.UseVisualStyleBackColor = true;
-            this.checkBoxPowerPoint.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxOutlook
-            // 
-            this.checkBoxOutlook.AutoSize = true;
-            this.checkBoxOutlook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxOutlook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOutlook.Location = new System.Drawing.Point(40, 82);
-            this.checkBoxOutlook.Name = "checkBoxOutlook";
-            this.checkBoxOutlook.Size = new System.Drawing.Size(70, 21);
-            this.checkBoxOutlook.TabIndex = 7;
-            this.checkBoxOutlook.Text = "Outlook";
-            this.checkBoxOutlook.UseVisualStyleBackColor = true;
-            this.checkBoxOutlook.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxWord
-            // 
-            this.checkBoxWord.AutoSize = true;
-            this.checkBoxWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxWord.Location = new System.Drawing.Point(40, 57);
-            this.checkBoxWord.Name = "checkBoxWord";
-            this.checkBoxWord.Size = new System.Drawing.Size(57, 21);
-            this.checkBoxWord.TabIndex = 6;
-            this.checkBoxWord.Text = "Word";
-            this.checkBoxWord.UseVisualStyleBackColor = true;
-            this.checkBoxWord.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxExcel
-            // 
-            this.checkBoxExcel.AutoSize = true;
-            this.checkBoxExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxExcel.Location = new System.Drawing.Point(40, 33);
-            this.checkBoxExcel.Name = "checkBoxExcel";
-            this.checkBoxExcel.Size = new System.Drawing.Size(53, 21);
-            this.checkBoxExcel.TabIndex = 5;
-            this.checkBoxExcel.Text = "Excel";
-            this.checkBoxExcel.UseVisualStyleBackColor = true;
-            this.checkBoxExcel.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxProject
-            // 
-            this.checkBoxProject.AutoSize = true;
-            this.checkBoxProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxProject.Location = new System.Drawing.Point(40, 153);
-            this.checkBoxProject.Name = "checkBoxProject";
-            this.checkBoxProject.Size = new System.Drawing.Size(64, 21);
-            this.checkBoxProject.TabIndex = 10;
-            this.checkBoxProject.Text = "Project";
-            this.checkBoxProject.UseVisualStyleBackColor = true;
-            this.checkBoxProject.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxVisio
-            // 
-            this.checkBoxVisio.AutoSize = true;
-            this.checkBoxVisio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxVisio.Location = new System.Drawing.Point(40, 176);
-            this.checkBoxVisio.Name = "checkBoxVisio";
-            this.checkBoxVisio.Size = new System.Drawing.Size(52, 21);
-            this.checkBoxVisio.TabIndex = 11;
-            this.checkBoxVisio.Text = "Visio";
-            this.checkBoxVisio.UseVisualStyleBackColor = true;
-            this.checkBoxVisio.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // pictureBox2
             // 
@@ -153,6 +62,104 @@
             this.label1.Size = new System.Drawing.Size(432, 16);
             this.label1.TabIndex = 119;
             this.label1.Text = "Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar";
+            // 
+            // checkBoxVisio
+            // 
+            this.checkBoxVisio.AutoSize = true;
+            this.checkBoxVisio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxVisio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxVisio.Location = new System.Drawing.Point(40, 176);
+            this.checkBoxVisio.Name = "checkBoxVisio";
+            this.checkBoxVisio.Size = new System.Drawing.Size(52, 21);
+            this.checkBoxVisio.TabIndex = 11;
+            this.checkBoxVisio.Text = "Visio";
+            this.checkBoxVisio.UseVisualStyleBackColor = true;
+            this.checkBoxVisio.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxProject
+            // 
+            this.checkBoxProject.AutoSize = true;
+            this.checkBoxProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxProject.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxProject.Location = new System.Drawing.Point(40, 153);
+            this.checkBoxProject.Name = "checkBoxProject";
+            this.checkBoxProject.Size = new System.Drawing.Size(64, 21);
+            this.checkBoxProject.TabIndex = 10;
+            this.checkBoxProject.Text = "Project";
+            this.checkBoxProject.UseVisualStyleBackColor = true;
+            this.checkBoxProject.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxAccess
+            // 
+            this.checkBoxAccess.AutoSize = true;
+            this.checkBoxAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxAccess.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAccess.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxAccess.Location = new System.Drawing.Point(40, 130);
+            this.checkBoxAccess.Name = "checkBoxAccess";
+            this.checkBoxAccess.Size = new System.Drawing.Size(63, 21);
+            this.checkBoxAccess.TabIndex = 9;
+            this.checkBoxAccess.Text = "Access";
+            this.checkBoxAccess.UseVisualStyleBackColor = true;
+            this.checkBoxAccess.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxPowerPoint
+            // 
+            this.checkBoxPowerPoint.AutoSize = true;
+            this.checkBoxPowerPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxPowerPoint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPowerPoint.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxPowerPoint.Location = new System.Drawing.Point(40, 107);
+            this.checkBoxPowerPoint.Name = "checkBoxPowerPoint";
+            this.checkBoxPowerPoint.Size = new System.Drawing.Size(93, 21);
+            this.checkBoxPowerPoint.TabIndex = 8;
+            this.checkBoxPowerPoint.Text = "Power Point";
+            this.checkBoxPowerPoint.UseVisualStyleBackColor = true;
+            this.checkBoxPowerPoint.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxOutlook
+            // 
+            this.checkBoxOutlook.AutoSize = true;
+            this.checkBoxOutlook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxOutlook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxOutlook.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxOutlook.Location = new System.Drawing.Point(40, 82);
+            this.checkBoxOutlook.Name = "checkBoxOutlook";
+            this.checkBoxOutlook.Size = new System.Drawing.Size(70, 21);
+            this.checkBoxOutlook.TabIndex = 7;
+            this.checkBoxOutlook.Text = "Outlook";
+            this.checkBoxOutlook.UseVisualStyleBackColor = true;
+            this.checkBoxOutlook.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxWord
+            // 
+            this.checkBoxWord.AutoSize = true;
+            this.checkBoxWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxWord.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxWord.Location = new System.Drawing.Point(40, 57);
+            this.checkBoxWord.Name = "checkBoxWord";
+            this.checkBoxWord.Size = new System.Drawing.Size(57, 21);
+            this.checkBoxWord.TabIndex = 6;
+            this.checkBoxWord.Text = "Word";
+            this.checkBoxWord.UseVisualStyleBackColor = true;
+            this.checkBoxWord.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxExcel
+            // 
+            this.checkBoxExcel.AutoSize = true;
+            this.checkBoxExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxExcel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxExcel.Location = new System.Drawing.Point(40, 33);
+            this.checkBoxExcel.Name = "checkBoxExcel";
+            this.checkBoxExcel.Size = new System.Drawing.Size(53, 21);
+            this.checkBoxExcel.TabIndex = 5;
+            this.checkBoxExcel.Text = "Excel";
+            this.checkBoxExcel.UseVisualStyleBackColor = true;
+            this.checkBoxExcel.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // HostControl
             // 
@@ -178,13 +185,13 @@
 
         #endregion
 
-        internal System.Windows.Forms.CheckBox checkBoxAccess;
-        internal System.Windows.Forms.CheckBox checkBoxPowerPoint;
-        internal System.Windows.Forms.CheckBox checkBoxOutlook;
-        internal System.Windows.Forms.CheckBox checkBoxWord;
-        internal System.Windows.Forms.CheckBox checkBoxExcel;
-        internal System.Windows.Forms.CheckBox checkBoxProject;
-        internal System.Windows.Forms.CheckBox checkBoxVisio;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxAccess;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxPowerPoint;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxOutlook;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxWord;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxExcel;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxProject;
+        internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxVisio;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
 

@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectControl));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.radioButtonClassLibrary = new System.Windows.Forms.RadioButton();
-            this.radioButtonWindowsForms = new System.Windows.Forms.RadioButton();
-            this.radioButtonConsole = new System.Windows.Forms.RadioButton();
+            this.radioButtonClassLibrary = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonWindowsForms = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonConsole = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.labelProjectType = new System.Windows.Forms.Label();
-            this.radioButtonAutomationAddin = new System.Windows.Forms.RadioButton();
+            this.radioButtonAutomationAddin = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
             this.buttonChooseFolder = new System.Windows.Forms.Button();
             this.textBoxCustomFolder = new System.Windows.Forms.TextBox();
-            this.radioButtonCustomFolder = new System.Windows.Forms.RadioButton();
-            this.radioButtonVSProjectFolder = new System.Windows.Forms.RadioButton();
-            this.radioButtonDesktop = new System.Windows.Forms.RadioButton();
-            this.radioButtonUserFolder = new System.Windows.Forms.RadioButton();
-            this.radioButtonApplicationData = new System.Windows.Forms.RadioButton();
+            this.radioButtonCustomFolder = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonVSProjectFolder = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonDesktop = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonUserFolder = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonApplicationData = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelFolder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.checkBoxUseTools = new System.Windows.Forms.CheckBox();
+            this.checkBoxUseTools = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
             this.linkLabelNSTOInfo = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -70,6 +70,7 @@
             this.radioButtonClassLibrary.AutoSize = true;
             this.radioButtonClassLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonClassLibrary.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonClassLibrary.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonClassLibrary.Location = new System.Drawing.Point(522, 60);
             this.radioButtonClassLibrary.Name = "radioButtonClassLibrary";
             this.radioButtonClassLibrary.Size = new System.Drawing.Size(126, 21);
@@ -83,6 +84,7 @@
             this.radioButtonWindowsForms.AutoSize = true;
             this.radioButtonWindowsForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonWindowsForms.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonWindowsForms.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonWindowsForms.Location = new System.Drawing.Point(209, 60);
             this.radioButtonWindowsForms.Name = "radioButtonWindowsForms";
             this.radioButtonWindowsForms.Size = new System.Drawing.Size(162, 21);
@@ -96,6 +98,7 @@
             this.radioButtonConsole.AutoSize = true;
             this.radioButtonConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonConsole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonConsole.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonConsole.Location = new System.Drawing.Point(388, 60);
             this.radioButtonConsole.Name = "radioButtonConsole";
             this.radioButtonConsole.Size = new System.Drawing.Size(123, 21);
@@ -121,6 +124,7 @@
             this.radioButtonAutomationAddin.Checked = true;
             this.radioButtonAutomationAddin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonAutomationAddin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAutomationAddin.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonAutomationAddin.Location = new System.Drawing.Point(73, 59);
             this.radioButtonAutomationAddin.Name = "radioButtonAutomationAddin";
             this.radioButtonAutomationAddin.Size = new System.Drawing.Size(130, 21);
@@ -175,6 +179,7 @@
             this.radioButtonCustomFolder.AutoSize = true;
             this.radioButtonCustomFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonCustomFolder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCustomFolder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonCustomFolder.Location = new System.Drawing.Point(40, 106);
             this.radioButtonCustomFolder.Name = "radioButtonCustomFolder";
             this.radioButtonCustomFolder.Size = new System.Drawing.Size(123, 21);
@@ -188,6 +193,7 @@
             this.radioButtonVSProjectFolder.AutoSize = true;
             this.radioButtonVSProjectFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonVSProjectFolder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVSProjectFolder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonVSProjectFolder.Location = new System.Drawing.Point(184, 77);
             this.radioButtonVSProjectFolder.Name = "radioButtonVSProjectFolder";
             this.radioButtonVSProjectFolder.Size = new System.Drawing.Size(190, 21);
@@ -201,6 +207,7 @@
             this.radioButtonDesktop.AutoSize = true;
             this.radioButtonDesktop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonDesktop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDesktop.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonDesktop.Location = new System.Drawing.Point(184, 51);
             this.radioButtonDesktop.Name = "radioButtonDesktop";
             this.radioButtonDesktop.Size = new System.Drawing.Size(73, 21);
@@ -215,6 +222,7 @@
             this.radioButtonUserFolder.Checked = true;
             this.radioButtonUserFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonUserFolder.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonUserFolder.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonUserFolder.Location = new System.Drawing.Point(40, 50);
             this.radioButtonUserFolder.Name = "radioButtonUserFolder";
             this.radioButtonUserFolder.Size = new System.Drawing.Size(112, 21);
@@ -229,6 +237,7 @@
             this.radioButtonApplicationData.AutoSize = true;
             this.radioButtonApplicationData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonApplicationData.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonApplicationData.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonApplicationData.Location = new System.Drawing.Point(40, 76);
             this.radioButtonApplicationData.Name = "radioButtonApplicationData";
             this.radioButtonApplicationData.Size = new System.Drawing.Size(121, 21);
@@ -282,6 +291,7 @@
             this.checkBoxUseTools.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxUseTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxUseTools.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxUseTools.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxUseTools.Location = new System.Drawing.Point(72, 95);
             this.checkBoxUseTools.Name = "checkBoxUseTools";
             this.checkBoxUseTools.Size = new System.Drawing.Size(182, 21);
@@ -342,23 +352,23 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.RadioButton radioButtonClassLibrary;
-        private System.Windows.Forms.RadioButton radioButtonWindowsForms;
-        private System.Windows.Forms.RadioButton radioButtonConsole;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonClassLibrary;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonWindowsForms;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonConsole;
         private System.Windows.Forms.Label labelProjectType;
-        private System.Windows.Forms.RadioButton radioButtonAutomationAddin;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonAutomationAddin;
         private System.Windows.Forms.Label labelNoAdminHint;
         private System.Windows.Forms.Button buttonChooseFolder;
         private System.Windows.Forms.TextBox textBoxCustomFolder;
-        private System.Windows.Forms.RadioButton radioButtonCustomFolder;
-        private System.Windows.Forms.RadioButton radioButtonVSProjectFolder;
-        private System.Windows.Forms.RadioButton radioButtonDesktop;
-        private System.Windows.Forms.RadioButton radioButtonUserFolder;
-        private System.Windows.Forms.RadioButton radioButtonApplicationData;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonCustomFolder;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVSProjectFolder;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonDesktop;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonUserFolder;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonApplicationData;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelFolder;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBoxUseTools;
+        private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxUseTools;
         private System.Windows.Forms.LinkLabel linkLabelNSTOInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

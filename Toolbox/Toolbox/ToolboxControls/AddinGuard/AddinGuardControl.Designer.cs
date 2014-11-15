@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Excel");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Word");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Outlook");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PowerPoint");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Access");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("MSProject");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Visio");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Excel");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Word");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Outlook");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PowerPoint");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Access");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("MSProject");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Visio");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddinGuardControl));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeViewRegistry = new System.Windows.Forms.TreeView();
@@ -164,28 +164,28 @@
             this.treeViewRegistry.Location = new System.Drawing.Point(3, 3);
             this.treeViewRegistry.Margin = new System.Windows.Forms.Padding(0);
             this.treeViewRegistry.Name = "treeViewRegistry";
-            treeNode8.Name = "Excel";
-            treeNode8.Text = "Excel";
-            treeNode9.Name = "Word";
-            treeNode9.Text = "Word";
-            treeNode10.Name = "Outlook";
-            treeNode10.Text = "Outlook";
-            treeNode11.Name = "PowerPoint";
-            treeNode11.Text = "PowerPoint";
-            treeNode12.Name = "Access";
-            treeNode12.Text = "Access";
-            treeNode13.Name = "MSProject";
-            treeNode13.Text = "MSProject";
-            treeNode14.Name = "Visio";
-            treeNode14.Text = "Visio";
+            treeNode1.Name = "Excel";
+            treeNode1.Text = "Excel";
+            treeNode2.Name = "Word";
+            treeNode2.Text = "Word";
+            treeNode3.Name = "Outlook";
+            treeNode3.Text = "Outlook";
+            treeNode4.Name = "PowerPoint";
+            treeNode4.Text = "PowerPoint";
+            treeNode5.Name = "Access";
+            treeNode5.Text = "Access";
+            treeNode6.Name = "MSProject";
+            treeNode6.Text = "MSProject";
+            treeNode7.Name = "Visio";
+            treeNode7.Text = "Visio";
             this.treeViewRegistry.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
             this.treeViewRegistry.SelectedImageIndex = 1;
             this.treeViewRegistry.Size = new System.Drawing.Size(295, 582);
             this.treeViewRegistry.TabIndex = 36;
@@ -259,6 +259,7 @@
             // 
             this.radioButtonTray.AutoSize = true;
             this.radioButtonTray.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTray.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonTray.Location = new System.Drawing.Point(116, 10);
             this.radioButtonTray.Name = "radioButtonTray";
             this.radioButtonTray.Size = new System.Drawing.Size(73, 21);
@@ -271,6 +272,7 @@
             this.radioButtonMsgBox.AutoSize = true;
             this.radioButtonMsgBox.Checked = true;
             this.radioButtonMsgBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMsgBox.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonMsgBox.Location = new System.Drawing.Point(10, 9);
             this.radioButtonMsgBox.Name = "radioButtonMsgBox";
             this.radioButtonMsgBox.Size = new System.Drawing.Size(100, 21);
@@ -355,11 +357,12 @@
             // checkBoxRestoreLoadBehavior
             // 
             this.checkBoxRestoreLoadBehavior.AutoSize = true;
+            this.checkBoxRestoreLoadBehavior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxRestoreLoadBehavior.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
             this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(242, 36);
             this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
-            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(340, 21);
+            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(337, 21);
             this.checkBoxRestoreLoadBehavior.TabIndex = 49;
             this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
             this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
@@ -389,6 +392,7 @@
             // 
             this.radioButtonActivate.AutoSize = true;
             this.radioButtonActivate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonActivate.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
             this.radioButtonActivate.Name = "radioButtonActivate";
             this.radioButtonActivate.Size = new System.Drawing.Size(72, 21);
@@ -402,6 +406,7 @@
             this.radioButtonDeactivate.AutoSize = true;
             this.radioButtonDeactivate.Checked = true;
             this.radioButtonDeactivate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonDeactivate.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
             this.radioButtonDeactivate.Name = "radioButtonDeactivate";
             this.radioButtonDeactivate.Size = new System.Drawing.Size(87, 21);

@@ -31,8 +31,8 @@
             this.labelUserCaption = new System.Windows.Forms.Label();
             this.comboBoxLoadBehavior = new System.Windows.Forms.ComboBox();
             this.labelLoadCaption = new System.Windows.Forms.Label();
-            this.radioButtonLocalMachine = new System.Windows.Forms.RadioButton();
-            this.radioButtonCurrentUser = new System.Windows.Forms.RadioButton();
+            this.radioButtonLocalMachine = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonCurrentUser = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.SuspendLayout();
             // 
             // labelUserCaption
@@ -77,6 +77,7 @@
             this.radioButtonLocalMachine.AutoSize = true;
             this.radioButtonLocalMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonLocalMachine.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonLocalMachine.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonLocalMachine.Location = new System.Drawing.Point(46, 81);
             this.radioButtonLocalMachine.Name = "radioButtonLocalMachine";
             this.radioButtonLocalMachine.Size = new System.Drawing.Size(124, 20);
@@ -91,6 +92,7 @@
             this.radioButtonCurrentUser.Checked = true;
             this.radioButtonCurrentUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonCurrentUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCurrentUser.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonCurrentUser.Location = new System.Drawing.Point(46, 58);
             this.radioButtonCurrentUser.Name = "radioButtonCurrentUser";
             this.radioButtonCurrentUser.Size = new System.Drawing.Size(234, 20);
@@ -122,7 +124,7 @@
         private System.Windows.Forms.Label labelUserCaption;
         private System.Windows.Forms.ComboBox comboBoxLoadBehavior;
         private System.Windows.Forms.Label labelLoadCaption;
-        private System.Windows.Forms.RadioButton radioButtonLocalMachine;
-        private System.Windows.Forms.RadioButton radioButtonCurrentUser;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonLocalMachine;
+        private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonCurrentUser;
     }
 }

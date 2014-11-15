@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuiControl));
-            this.checkBoxClassicUISupport = new System.Windows.Forms.CheckBox();
-            this.checkBoxRibbonUISupport = new System.Windows.Forms.CheckBox();
-            this.checkBoxTaskPaneSupport = new System.Windows.Forms.CheckBox();
-            this.checkBoxToogleButton = new System.Windows.Forms.CheckBox();
+            this.checkBoxClassicUISupport = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxRibbonUISupport = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxTaskPaneSupport = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
+            this.checkBoxToogleButton = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
             this.labelHint = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -43,6 +43,7 @@
             this.checkBoxClassicUISupport.AutoSize = true;
             this.checkBoxClassicUISupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxClassicUISupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxClassicUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxClassicUISupport.Location = new System.Drawing.Point(40, 33);
             this.checkBoxClassicUISupport.Name = "checkBoxClassicUISupport";
             this.checkBoxClassicUISupport.Size = new System.Drawing.Size(441, 21);
@@ -58,6 +59,7 @@
             this.checkBoxRibbonUISupport.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRibbonUISupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxRibbonUISupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxRibbonUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxRibbonUISupport.Location = new System.Drawing.Point(40, 61);
             this.checkBoxRibbonUISupport.Name = "checkBoxRibbonUISupport";
             this.checkBoxRibbonUISupport.Size = new System.Drawing.Size(446, 21);
@@ -73,6 +75,7 @@
             this.checkBoxTaskPaneSupport.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTaskPaneSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxTaskPaneSupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxTaskPaneSupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxTaskPaneSupport.Location = new System.Drawing.Point(40, 89);
             this.checkBoxTaskPaneSupport.Name = "checkBoxTaskPaneSupport";
             this.checkBoxTaskPaneSupport.Size = new System.Drawing.Size(305, 21);
@@ -88,6 +91,7 @@
             this.checkBoxToogleButton.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxToogleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxToogleButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxToogleButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxToogleButton.Location = new System.Drawing.Point(40, 117);
             this.checkBoxToogleButton.Name = "checkBoxToogleButton";
             this.checkBoxToogleButton.Size = new System.Drawing.Size(451, 21);
@@ -140,10 +144,10 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBoxClassicUISupport;
-        private System.Windows.Forms.CheckBox checkBoxRibbonUISupport;
-        private System.Windows.Forms.CheckBox checkBoxTaskPaneSupport;
-        private System.Windows.Forms.CheckBox checkBoxToogleButton;
+        private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxClassicUISupport;
+        private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxRibbonUISupport;
+        private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxTaskPaneSupport;
+        private NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxToogleButton;
         private System.Windows.Forms.Label labelHint;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

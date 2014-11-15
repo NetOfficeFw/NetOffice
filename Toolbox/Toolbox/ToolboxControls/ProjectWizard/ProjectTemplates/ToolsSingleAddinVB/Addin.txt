@@ -1,8 +1,4 @@
-﻿Imports System.Reflection
-Imports Microsoft.Win32
-Imports Extensibility
-Imports System.Runtime.CompilerServices
-Imports System.Runtime.InteropServices
+﻿Imports System.Runtime.InteropServices
 $usingItems$
 
 <COMAddin("$safeprojectname$", "$description$", $loadbeahviour$), ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$")> _
