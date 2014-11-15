@@ -57,6 +57,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         public MainForm(): this(new string[0])
         {
             InitializeComponent();
+            Singleton = this;
         } 
 
         /// <summary>
@@ -68,6 +69,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             try
             {
                 InitializeComponent();
+                Singleton = this;
                 LoadRuntimeControls();
                 LoadConfiguration();
                 CommandLineArgs = args;
@@ -86,6 +88,8 @@ namespace NetOffice.DeveloperToolbox.Forms
         /// given commandline arguments from the application
         /// </summary>
         private string[] CommandLineArgs { get; set; }
+
+        internal static MainForm Singleton { get; private set; }
 
         #endregion
 

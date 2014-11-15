@@ -92,17 +92,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
         {
             get
             {
-                string resultPath = String.Empty;
-
-                #if DEBUG
-                    resultPath = Path.Combine(Program.GetRelativeDebugPath(), "Libs");
-                #else
-                    resultPath = Path.Combine(Application.StartupPath, "Bin");
-                #endif
-
-                if (!Directory.Exists(resultPath))
-                    throw new DirectoryNotFoundException(resultPath);
-                return resultPath;
+                return Program.SubFolder;
             }
         }
 

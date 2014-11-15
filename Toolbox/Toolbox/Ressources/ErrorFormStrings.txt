@@ -12,5 +12,5 @@ labelErrorCaption = An error is occured.
 labelExitMessage = Das Programm wird beendet.
 buttonDetails = << Details
 buttonOK = OK
-buttonCopyToClipboard = In die Zwischenablage kopieren
+buttonCopyToClipboard = Copy to Clipboard
 [End]

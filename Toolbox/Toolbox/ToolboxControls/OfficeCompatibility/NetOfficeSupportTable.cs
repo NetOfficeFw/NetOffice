@@ -399,9 +399,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         private string GetPhysicalPath(AssemblyName assemblyName)
         {
-
-            string directoryName = _thisAssembly.CodeBase.Substring(0, _thisAssembly.CodeBase.LastIndexOf("/"));
-            directoryName = directoryName.Replace("/", "\\").Substring(8);
+            string directoryName = Program.SubFolder;
             string fileName = assemblyName.Name;
             if (fileName.IndexOf(",") > -1)
                 fileName = assemblyName.Name.Substring(0, assemblyName.Name.IndexOf(","));

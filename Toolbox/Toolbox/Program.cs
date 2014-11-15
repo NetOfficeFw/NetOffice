@@ -24,8 +24,6 @@ namespace NetOffice.DeveloperToolbox
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                //Form1 mainForm = new Form1();
-                //Application.Run(mainForm);
 
                 Forms.MainForm mainForm = new Forms.MainForm(args);
                 Application.Run(mainForm);
@@ -64,23 +62,11 @@ namespace NetOffice.DeveloperToolbox
                     case "VisioApi.dll":
                     case "WordApi.dll":
                     {
-                        #if DEBUG
-
-                            assemblyFullPath = Path.Combine(GetRelativeDebugPath(), "Libs", assemblyName);
-                            if (File.Exists(assemblyFullPath))
-                                return System.Reflection.Assembly.LoadFile(assemblyFullPath);
-                            else
-                                throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
-
-                        #else
-
-                            assemblyFullPath = string.Format("{0}\\Toolbox Bin\\{1}", Application.StartupPath, assemblyName);
-                            if (File.Exists(assemblyFullPath))
-                                return System.Reflection.Assembly.LoadFile(assemblyFullPath);
-                            else
-                                throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
-
-                        #endif
+                        assemblyFullPath = Path.Combine(Program.SubFolder, assemblyName);
+                        if (File.Exists(assemblyFullPath))
+                            return System.Reflection.Assembly.LoadFile(assemblyFullPath);
+                        else
+                            throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
                     }
                     default:
                         break;
@@ -92,6 +78,29 @@ namespace NetOffice.DeveloperToolbox
             {
                 Forms.ErrorForm.ShowError(null, exception, Forms.ErrorCategory.Penalty, 1033);
                 return null;
+            }
+        }
+
+        public static string SubFolder
+        {
+            get
+            {
+                string resultPath = String.Empty;
+
+                #if DEBUG
+                
+                    resultPath = Path.Combine(GetRelativeDebugPath(), "Libs");
+                
+                #else
+                    
+                    resultPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Toolbox Binaries");
+                
+                #endif
+
+                if (!Directory.Exists(resultPath))
+                    throw new DirectoryNotFoundException(resultPath);
+
+                return resultPath;
             }
         }
 

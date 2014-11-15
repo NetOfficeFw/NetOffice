@@ -12,8 +12,8 @@ namespace NetOffice.DeveloperToolbox.Forms
     {
         #region Fields
 
-        ErrorCategory _category;
-        bool _isExpanded;
+        private ErrorCategory _category;
+        private bool _isExpanded;
 
         #endregion
 
@@ -30,7 +30,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             DisplayException(exception);
             currentLanguageID = ValidateLanguageID(currentLanguageID);
             Translation.Translator.TranslateControls(this, "Ressources.ErrorFormStrings.txt", currentLanguageID);
-            this.Height = buttonOK.Top + buttonOK.Height + 40;
+            this.Height = pictureBoxSplitter1.Top + (ClientRectangle.Height - DisplayRectangle.Height);
         }
 
         public ErrorForm(Exception exception, ErrorCategory category, int currentLanguageID)
@@ -42,7 +42,75 @@ namespace NetOffice.DeveloperToolbox.Forms
             DisplayException(exception);
             currentLanguageID = ValidateLanguageID(currentLanguageID);
             Translation.Translator.TranslateControls(this, "Ressources.ErrorFormStrings.txt", currentLanguageID);
-            this.Height = buttonOK.Top + buttonOK.Height + 40;
+            this.Height = pictureBoxSplitter1.Top + (ClientRectangle.Height - DisplayRectangle.Height);
+        }
+
+        #endregion
+
+        #region Methods
+
+        public static void ShowError(Exception exception, ErrorCategory category, int currentLanguageID)
+        {
+            ErrorForm form = new ErrorForm(exception, category, currentLanguageID);
+            if (null != MainForm.Singleton && MainForm.Singleton.Visible)
+                form.ShowDialog(MainForm.Singleton);
+            else
+            {
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.ShowDialog();
+            }
+        }
+
+        public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category, int currentLanguageID)
+        {
+            ErrorForm form = new ErrorForm(exception, category, currentLanguageID);
+            form.ShowDialog(parent);
+        }
+
+        public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category)
+        {
+            ErrorForm form = new ErrorForm(exception, category, 1033 );
+            form.ShowDialog(parent);
+        }
+
+        public static void ShowError(IWin32Window parent, Exception exception)
+        {
+            ErrorForm form = new ErrorForm(exception, Forms.ErrorCategory.NonCritical, 1033);
+            form.ShowDialog(parent);
+        }
+
+        private int ValidateLanguageID(int currentLanguageID)
+        {
+            switch (currentLanguageID)
+            {
+                case 1:
+                    currentLanguageID = 1031;
+                    break;
+                default:
+                    currentLanguageID = 1033;
+                    break;
+
+            }
+
+            return currentLanguageID;
+        }
+
+        private void DisplayException(Exception exception)
+        {
+            int i = 1;
+            while (exception != null)
+            {
+                ListViewItem viewItem = listViewTrace.Items.Add(i.ToString());
+                viewItem.SubItems.Add(exception.Message);
+                viewItem.SubItems.Add(exception.GetType().Name.ToString());
+                if (null != exception.TargetSite)
+                    viewItem.SubItems.Add(exception.TargetSite.ToString());
+                else
+                    viewItem.SubItems.Add("");
+                viewItem.Tag = exception;
+                exception = exception.InnerException;
+                i++;
+            }
         }
 
         #endregion
@@ -53,23 +121,11 @@ namespace NetOffice.DeveloperToolbox.Forms
         {
             if (_isExpanded)
             {
-                this.Height = buttonOK.Top + buttonOK.Height + 40;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-                listViewTrace.Anchor = AnchorStyles.None;
-                listViewTrace.Left = 26;
-                listViewTrace.Top = 130;
-                listViewTrace.Width = 374;
-                listViewTrace.Height = 164;
+                this.Height = pictureBoxSplitter1.Top + (ClientRectangle.Height - DisplayRectangle.Height);
             }
             else
-            { 
-                this.Height = 360;
-                this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-                listViewTrace.Left = 26;
-                listViewTrace.Top = 130;
-                listViewTrace.Width = (buttonOK.Left + buttonOK.Width) - listViewTrace.Left;
-                listViewTrace.Height = 164;
-                listViewTrace.Anchor = AnchorStyles.Bottom | AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            {
+                this.Height = pictureBoxSplitter2.Top + pictureBoxSplitter2.Height + (ClientRectangle.Height - DisplayRectangle.Height);
             }
             _isExpanded = !_isExpanded;
         }
@@ -103,58 +159,16 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
         }
 
-        #endregion
-
-        #region Methods
-
-        public static void ShowError(Exception exception, ErrorCategory category, int currentLanguageID)
+        private void listViewTrace_DoubleClick(object sender, EventArgs e)
         {
-            ErrorForm form = new ErrorForm(exception, category, currentLanguageID);
-            form.ShowDialog();
-        }
-
-        public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category, int currentLanguageID)
-        {
-            ErrorForm form = new ErrorForm(exception, category, currentLanguageID);
-            form.ShowDialog(parent);
-        }
-
-        public static void ShowError(IWin32Window parent, Exception exception)
-        {
-            ErrorForm form = new ErrorForm(exception, Forms.ErrorCategory.NonCritical, 1033);
-            form.ShowDialog(parent);
-        }
-
-        private int ValidateLanguageID(int currentLanguageID)
-        {
-            switch (currentLanguageID)
+            if (listViewTrace.SelectedItems.Count > 0)
             {
-                case 1:
-                    currentLanguageID = 1031;
-                    break;
-                default:
-                    currentLanguageID = 1033;
-                    break;
-               
-            }
-
-            return currentLanguageID;
-        }
-
-        private void DisplayException(Exception exception)
-        {
-            int i = 1;
-            while (exception != null)
-            {
-                ListViewItem viewItem = listViewTrace.Items.Add(i.ToString());
-                viewItem.SubItems.Add(exception.Message);
-                viewItem.SubItems.Add(exception.GetType().Name.ToString());
-                if (null != exception.TargetSite)
-                    viewItem.SubItems.Add(exception.TargetSite.ToString());
-                else
-                    viewItem.SubItems.Add("");
-                exception = exception.InnerException;
-                i++;
+                Exception exception = listViewTrace.SelectedItems[0].Tag as Exception;
+                if (null != exception)
+                {
+                    string details = String.Format("{0}{2}{2}{1}", exception.Message, exception, Environment.NewLine);
+                    MessageBox.Show(this, details, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
             }
         }
 
