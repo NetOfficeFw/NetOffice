@@ -9,7 +9,8 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
-    public partial class GuiControl : UserControl, IWizardControl
+    [RessourceTable("ToolboxControls.ProjectWizard.Controls.GuiControl.txt")]
+    public partial class GuiControl : UserControl, IWizardControl, ILocalizationDesign
     {
         XmlDocument _settings;
 
@@ -17,18 +18,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             InitializeComponent();
             CreateSettingsDocument();
-            if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
-            {
-                checkBoxClassicUISupport.Text = "Ich möchte die klassische Benutzeroberfläche in älteren Office Versionen erweitern";
-                checkBoxRibbonUISupport.Text = "Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern";
-                checkBoxTaskPaneSupport.Text = "Ich möchte eine Task Pane zur Verfügung stellen";
-            }
-            else
-            {
-                checkBoxClassicUISupport.Text = "I want customize the classic User Interface";
-                checkBoxRibbonUISupport.Text = "I want customize the Ribbon User Interface";
-                checkBoxTaskPaneSupport.Text = "I want a custom Task Pane";
-            }
+            //if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
+            //{
+            //    checkBoxClassicUISupport.Text = "Ich möchte die klassische Benutzeroberfläche in älteren Office Versionen erweitern";
+            //    checkBoxRibbonUISupport.Text = "Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern";
+            //    checkBoxTaskPaneSupport.Text = "Ich möchte eine Task Pane zur Verfügung stellen";
+            //}
+            //else
+            //{
+            //    checkBoxClassicUISupport.Text = "I want customize the classic User Interface";
+            //    checkBoxRibbonUISupport.Text = "I want customize the Ribbon User Interface";
+            //    checkBoxTaskPaneSupport.Text = "I want a custom Task Pane";
+            //}
         }
 
         public bool ClassicUIEnabled
@@ -63,7 +64,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        #region IWizardControl Member
+        #region IWizardControl
 
         public event ReadyStateChangedHandler ReadyStateChanged;
 
@@ -76,7 +77,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Benutzerschnittstelle";
                 else
                     return "User Interface";
@@ -87,7 +88,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Der Assistent kann die Implementierung für Sie vorbereiten.";
                 else
                     return "The assistent prepare the implementation for you.";
@@ -104,7 +105,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Translate()
         {
-            Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.GuiControl.txt", ProjectWizardControl.Singleton.Host.CurrentLanguageID);
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components["Project Wizard - Gui"];
+                Translation.Translator.TranslateControls(this, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.GuiControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
+            }
         }
 
         public new void KeyDown(KeyEventArgs e)
@@ -173,33 +183,78 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             if (_settings.FirstChild.SelectSingleNode("UseClassicUI").InnerText.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
             {
                 result[0] += LocalizedClassicUI;
-                result[1] += LocalizedYes;
+                result[1] += ProjectWizardControl.Singleton.Localized.Yes;
             }
             else
             {
                 result[0] += LocalizedClassicUI;
-                result[1] += LocalizedNo;
+                result[1] += ProjectWizardControl.Singleton.Localized.No;
             }
 
             if (_settings.FirstChild.SelectSingleNode("UseRibbonUI").InnerText.Equals("TRUE", StringComparison.InvariantCultureIgnoreCase))
             {
                 result[0] += Environment.NewLine + LocalizedUglyUI;
-                result[1] += Environment.NewLine + LocalizedYes;
+                result[1] += Environment.NewLine + ProjectWizardControl.Singleton.Localized.Yes;
             }
             else
             {
                 result[0] += Environment.NewLine + LocalizedUglyUI;
-                result[1] += Environment.NewLine + LocalizedNo;
+                result[1] += Environment.NewLine + ProjectWizardControl.Singleton.Localized.No;
             }
-            
+           
             string toogle = true == checkBoxToogleButton.Checked ? " + Toogle" : "";
             result[0] += Environment.NewLine + "TaskPane";
             if (checkBoxRibbonUISupport.Checked)
-                result[1] += Environment.NewLine + LocalizedYes + toogle;
+                result[1] += Environment.NewLine + ProjectWizardControl.Singleton.Localized.Yes + toogle;
             else
-                result[1] += Environment.NewLine + LocalizedNo;
+                result[1] += Environment.NewLine + ProjectWizardControl.Singleton.Localized.No;
 
             return result;
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
         }
 
         #endregion
@@ -228,7 +283,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Ribbon UI:";
                 else
                     return "Ribbon UI:";
@@ -239,35 +294,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Klassische UI:";
                 else
                     return "Classic UI:";
             }
         }
-
-        private string LocalizedYes
-        {
-            get
-            {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
-                    return "Ja";
-                else
-                    return "Yes";
-            }
-        }
-
-        private string LocalizedNo
-        {
-            get
-            {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
-                    return "Nein";
-                else
-                    return "No";
-            }
-        }
-
          
         private void ChangeSettings()
         {

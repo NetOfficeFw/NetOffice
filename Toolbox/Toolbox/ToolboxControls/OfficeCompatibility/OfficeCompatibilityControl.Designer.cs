@@ -225,7 +225,7 @@
             this.buttonSelectAssembly.Name = "buttonSelectAssembly";
             this.buttonSelectAssembly.Size = new System.Drawing.Size(125, 25);
             this.buttonSelectAssembly.TabIndex = 2;
-            this.buttonSelectAssembly.Text = "   Auswählen";
+            this.buttonSelectAssembly.Text = "Choose";
             this.buttonSelectAssembly.UseVisualStyleBackColor = true;
             this.buttonSelectAssembly.Click += new System.EventHandler(this.buttonSelectAssembly_Click);
             // 
@@ -235,7 +235,7 @@
             this.panelNoNetOfficeReferences.Controls.Add(this.labelNoNetOfficeReferences);
             this.panelNoNetOfficeReferences.Location = new System.Drawing.Point(115, 44);
             this.panelNoNetOfficeReferences.Name = "panelNoNetOfficeReferences";
-            this.panelNoNetOfficeReferences.Size = new System.Drawing.Size(578, 24);
+            this.panelNoNetOfficeReferences.Size = new System.Drawing.Size(578, 20);
             this.panelNoNetOfficeReferences.TabIndex = 74;
             this.panelNoNetOfficeReferences.Visible = false;
             // 
@@ -243,7 +243,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(20, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(4, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(16, 16);
             this.pictureBox5.TabIndex = 81;
@@ -252,13 +252,13 @@
             // labelNoNetOfficeReferences
             // 
             this.labelNoNetOfficeReferences.AutoSize = true;
-            this.labelNoNetOfficeReferences.BackColor = System.Drawing.SystemColors.Control;
+            this.labelNoNetOfficeReferences.BackColor = System.Drawing.Color.Transparent;
             this.labelNoNetOfficeReferences.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelNoNetOfficeReferences.Location = new System.Drawing.Point(42, 7);
+            this.labelNoNetOfficeReferences.Location = new System.Drawing.Point(26, 4);
             this.labelNoNetOfficeReferences.Name = "labelNoNetOfficeReferences";
-            this.labelNoNetOfficeReferences.Size = new System.Drawing.Size(290, 13);
+            this.labelNoNetOfficeReferences.Size = new System.Drawing.Size(256, 13);
             this.labelNoNetOfficeReferences.TabIndex = 72;
-            this.labelNoNetOfficeReferences.Text = "Dieses Assembly hat keine direkte Verbindung zu NetOffice.";
+            this.labelNoNetOfficeReferences.Text = "This assembly has no direct connection to NetOffice.";
             // 
             // buttonReport
             // 
@@ -274,7 +274,7 @@
             this.buttonReport.Name = "buttonReport";
             this.buttonReport.Size = new System.Drawing.Size(126, 26);
             this.buttonReport.TabIndex = 75;
-            this.buttonReport.Text = "Bericht";
+            this.buttonReport.Text = "Report";
             this.buttonReport.UseVisualStyleBackColor = true;
             this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
             // 
@@ -302,14 +302,14 @@
             // 
             this.linkLabelNotSupported.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabelNotSupported.AutoSize = true;
-            this.linkLabelNotSupported.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.linkLabelNotSupported.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelNotSupported.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelNotSupported.Location = new System.Drawing.Point(453, 315);
             this.linkLabelNotSupported.Name = "linkLabelNotSupported";
-            this.linkLabelNotSupported.Size = new System.Drawing.Size(190, 17);
+            this.linkLabelNotSupported.Size = new System.Drawing.Size(157, 17);
             this.linkLabelNotSupported.TabIndex = 88;
             this.linkLabelNotSupported.TabStop = true;
-            this.linkLabelNotSupported.Text = "= Version wird nicht unterstützt";
+            this.linkLabelNotSupported.Text = "= Version is unsupported";
             this.linkLabelNotSupported.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNotSupported_LinkClicked);
             // 
             // pictureBoxNotSupported
@@ -327,28 +327,28 @@
             // 
             this.labelVersionNotOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelVersionNotOk.AutoSize = true;
-            this.labelVersionNotOk.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelVersionNotOk.BackColor = System.Drawing.Color.Transparent;
             this.labelVersionNotOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersionNotOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersionNotOk.Location = new System.Drawing.Point(227, 315);
             this.labelVersionNotOk.Name = "labelVersionNotOk";
-            this.labelVersionNotOk.Size = new System.Drawing.Size(182, 17);
+            this.labelVersionNotOk.Size = new System.Drawing.Size(170, 17);
             this.labelVersionNotOk.TabIndex = 85;
-            this.labelVersionNotOk.Text = "= Version ist nicht kompatibel";
+            this.labelVersionNotOk.Text = "= Version is not compatible";
             // 
             // labelVersionOk
             // 
             this.labelVersionOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelVersionOk.AutoSize = true;
-            this.labelVersionOk.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelVersionOk.BackColor = System.Drawing.Color.Transparent;
             this.labelVersionOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersionOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersionOk.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelVersionOk.Location = new System.Drawing.Point(30, 315);
             this.labelVersionOk.Name = "labelVersionOk";
-            this.labelVersionOk.Size = new System.Drawing.Size(151, 17);
+            this.labelVersionOk.Size = new System.Drawing.Size(147, 17);
             this.labelVersionOk.TabIndex = 84;
-            this.labelVersionOk.Text = "= Version ist kompatibel";
+            this.labelVersionOk.Text = "= Version is compatible";
             // 
             // pictureBoxOk
             // 
@@ -375,7 +375,7 @@
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(125, 27);
             this.buttonRefresh.TabIndex = 77;
-            this.buttonRefresh.Text = "Wiederholen";
+            this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -790,7 +790,7 @@
             this.labelLibrary.Name = "labelLibrary";
             this.labelLibrary.Size = new System.Drawing.Size(303, 29);
             this.labelLibrary.TabIndex = 76;
-            this.labelLibrary.Text = "Bibliothek";
+            this.labelLibrary.Text = "Library";
             this.labelLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelVersion10
@@ -1233,9 +1233,10 @@
             // 
             // panelInvalidAssembly
             // 
+            this.panelInvalidAssembly.BackColor = System.Drawing.Color.Transparent;
             this.panelInvalidAssembly.Controls.Add(this.pictureBox27);
             this.panelInvalidAssembly.Controls.Add(this.labelInvalidAssembly);
-            this.panelInvalidAssembly.Location = new System.Drawing.Point(114, 40);
+            this.panelInvalidAssembly.Location = new System.Drawing.Point(115, 44);
             this.panelInvalidAssembly.Name = "panelInvalidAssembly";
             this.panelInvalidAssembly.Size = new System.Drawing.Size(578, 24);
             this.panelInvalidAssembly.TabIndex = 77;
@@ -1245,7 +1246,7 @@
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(20, 5);
+            this.pictureBox27.Location = new System.Drawing.Point(4, 3);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(16, 16);
             this.pictureBox27.TabIndex = 81;
@@ -1257,31 +1258,31 @@
             this.labelInvalidAssembly.BackColor = System.Drawing.SystemColors.Control;
             this.labelInvalidAssembly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInvalidAssembly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInvalidAssembly.Location = new System.Drawing.Point(42, 7);
+            this.labelInvalidAssembly.Location = new System.Drawing.Point(26, 4);
             this.labelInvalidAssembly.Name = "labelInvalidAssembly";
-            this.labelInvalidAssembly.Size = new System.Drawing.Size(511, 16);
+            this.labelInvalidAssembly.Size = new System.Drawing.Size(458, 16);
             this.labelInvalidAssembly.TabIndex = 72;
-            this.labelInvalidAssembly.Text = "Die angegebene Datei ist kein gültges .NET Assembly. (BadImageFormatException)";
+            this.labelInvalidAssembly.Text = "The choosen file is not a valid .NET assembly. (BadImageFormatException)";
             // 
             // labelVersionTable
             // 
             this.labelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVersionTable.AutoSize = true;
-            this.labelVersionTable.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelVersionTable.BackColor = System.Drawing.Color.Transparent;
             this.labelVersionTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVersionTable.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersionTable.ForeColor = System.Drawing.Color.White;
             this.labelVersionTable.Location = new System.Drawing.Point(24, 4);
             this.labelVersionTable.Name = "labelVersionTable";
-            this.labelVersionTable.Size = new System.Drawing.Size(97, 17);
+            this.labelVersionTable.Size = new System.Drawing.Size(81, 17);
             this.labelVersionTable.TabIndex = 78;
-            this.labelVersionTable.Text = "Versionstabelle";
+            this.labelVersionTable.Text = "Versiontable";
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
@@ -1295,7 +1296,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
@@ -1309,7 +1310,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
@@ -1323,7 +1324,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
@@ -1337,7 +1338,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
@@ -1377,7 +1378,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Blue;
@@ -1390,36 +1391,37 @@
             // labelNetOfficeVersion
             // 
             this.labelNetOfficeVersion.AutoSize = true;
-            this.labelNetOfficeVersion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelNetOfficeVersion.BackColor = System.Drawing.Color.Transparent;
             this.labelNetOfficeVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelNetOfficeVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNetOfficeVersion.ForeColor = System.Drawing.Color.DimGray;
             this.labelNetOfficeVersion.Location = new System.Drawing.Point(107, 73);
             this.labelNetOfficeVersion.Name = "labelNetOfficeVersion";
-            this.labelNetOfficeVersion.Size = new System.Drawing.Size(511, 17);
+            this.labelNetOfficeVersion.Size = new System.Drawing.Size(509, 17);
             this.labelNetOfficeVersion.TabIndex = 92;
-            this.labelNetOfficeVersion.Text = "Diese Version von OfficeCompatibility ist kompatibel mit dem NetOffice Release:";
+            this.labelNetOfficeVersion.Text = "This version of OfficeCompatibility is full compatible with the NetOffice Release" +
+                ":";
             // 
             // labelDebugHint
             // 
             this.labelDebugHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelDebugHint.AutoSize = true;
-            this.labelDebugHint.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelDebugHint.BackColor = System.Drawing.Color.Transparent;
             this.labelDebugHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelDebugHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDebugHint.ForeColor = System.Drawing.Color.DimGray;
             this.labelDebugHint.Location = new System.Drawing.Point(132, 480);
             this.labelDebugHint.Name = "labelDebugHint";
-            this.labelDebugHint.Size = new System.Drawing.Size(606, 13);
+            this.labelDebugHint.Size = new System.Drawing.Size(545, 13);
             this.labelDebugHint.TabIndex = 93;
-            this.labelDebugHint.Text = "Prüfen Sie Ihr Assembly immer in der Debug Konfiguration da Optimierungen zu Info" +
-                "rmationsverlust führen können ";
+            this.labelDebugHint.Text = "Check your assembly alywas in the debug version. an optimized release assembly lo" +
+                "st some informations.";
             this.labelDebugHint.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -1447,14 +1449,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.panelInvalidAssembly);
             this.Controls.Add(this.labelDebugHint);
             this.Controls.Add(this.labelNetOfficeVersion);
             this.Controls.Add(this.panelVersionTable);
-            this.Controls.Add(this.panelInvalidAssembly);
-            this.Controls.Add(this.panelNoNetOfficeReferences);
             this.Controls.Add(this.buttonSelectAssembly);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelResultTable);
+            this.Controls.Add(this.panelNoNetOfficeReferences);
             this.Name = "OfficeCompatibilityControl";
             this.Size = new System.Drawing.Size(924, 496);
             this.panelNoNetOfficeReferences.ResumeLayout(false);

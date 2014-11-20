@@ -85,9 +85,9 @@
             this.labelMessage.ForeColor = System.Drawing.Color.SteelBlue;
             this.labelMessage.Location = new System.Drawing.Point(65, 11);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(348, 25);
+            this.labelMessage.Size = new System.Drawing.Size(342, 25);
             this.labelMessage.TabIndex = 30;
-            this.labelMessage.Text = "Das Projekt wurde erfolgreich erstellt.";
+            this.labelMessage.Text = "The Project is successfully completed.";
             // 
             // pictureBox1
             // 
@@ -121,7 +121,7 @@
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(244, 36);
             this.buttonClose.TabIndex = 2;
-            this.buttonClose.Text = "Schliessen";
+            this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
@@ -137,7 +137,7 @@
             this.buttonOpenFolder.Name = "buttonOpenFolder";
             this.buttonOpenFolder.Size = new System.Drawing.Size(244, 36);
             this.buttonOpenFolder.TabIndex = 1;
-            this.buttonOpenFolder.Text = "Ordner anzeigen";
+            this.buttonOpenFolder.Text = "Open Folder";
             this.buttonOpenFolder.UseVisualStyleBackColor = true;
             this.buttonOpenFolder.Click += new System.EventHandler(this.buttonOpenFolder_Click);
             // 
@@ -154,7 +154,7 @@
             this.buttonOpenSolution.Name = "buttonOpenSolution";
             this.buttonOpenSolution.Size = new System.Drawing.Size(244, 36);
             this.buttonOpenSolution.TabIndex = 0;
-            this.buttonOpenSolution.Text = "Solution Öffnen";
+            this.buttonOpenSolution.Text = "Open Solution";
             this.buttonOpenSolution.UseVisualStyleBackColor = true;
             this.buttonOpenSolution.Click += new System.EventHandler(this.buttonOpenSolution_Click);
             // 

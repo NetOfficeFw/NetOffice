@@ -56,9 +56,9 @@
             this.checkBoxSupressEnabled.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxSupressEnabled.Location = new System.Drawing.Point(23, 31);
             this.checkBoxSupressEnabled.Name = "checkBoxSupressEnabled";
-            this.checkBoxSupressEnabled.Size = new System.Drawing.Size(194, 20);
+            this.checkBoxSupressEnabled.Size = new System.Drawing.Size(135, 20);
             this.checkBoxSupressEnabled.TabIndex = 21;
-            this.checkBoxSupressEnabled.Text = "Unterdrückung eingeschaltet";
+            this.checkBoxSupressEnabled.Text = "Suppress enabled";
             this.checkBoxSupressEnabled.UseVisualStyleBackColor = true;
             this.checkBoxSupressEnabled.CheckedChanged += new System.EventHandler(this.checkBoxSupressEnabeld_CheckedChanged);
             // 
@@ -77,7 +77,7 @@
             this.labelMessages.ReadOnly = true;
             this.labelMessages.Size = new System.Drawing.Size(882, 192);
             this.labelMessages.TabIndex = 68;
-            this.labelMessages.Text = "<Keine Einträge>";
+            this.labelMessages.Text = "<No Entries>";
             this.labelMessages.WordWrap = false;
             // 
             // labelLog
@@ -86,9 +86,9 @@
             this.labelLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLog.Location = new System.Drawing.Point(20, 263);
             this.labelLog.Name = "labelLog";
-            this.labelLog.Size = new System.Drawing.Size(61, 16);
+            this.labelLog.Size = new System.Drawing.Size(58, 16);
             this.labelLog.TabIndex = 67;
-            this.labelLog.Text = "Protokoll";
+            this.labelLog.Text = "Protocol";
             // 
             // pictureBox4
             // 
@@ -109,7 +109,7 @@
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(337, 15);
             this.labelCaption.TabIndex = 70;
-            this.labelCaption.Text = "Unterdrücken Sie die Security Abfrage in Outlook.";
+            this.labelCaption.Text = "Suppress the Security Conformation in Outlook.";
             // 
             // pictureBox1
             // 
@@ -128,8 +128,8 @@
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(432, 36);
             this.labelHint.TabIndex = 73;
-            this.labelHint.Text = "Outlook bietet je nach Version verschiedene Wege an diesen Dialog für Ihr Addin n" +
-                "icht anzuzeigen.";
+            this.labelHint.Text = "Outlook provides -depending on the version- several ways to suppress this dialog " +
+                "for your Addin.";
             // 
             // labelSources
             // 
@@ -193,9 +193,9 @@
             this.labelDidYouKnow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDidYouKnow.Location = new System.Drawing.Point(426, 59);
             this.labelDidYouKnow.Name = "labelDidYouKnow";
-            this.labelDidYouKnow.Size = new System.Drawing.Size(141, 16);
+            this.labelDidYouKnow.Size = new System.Drawing.Size(107, 16);
             this.labelDidYouKnow.TabIndex = 78;
-            this.labelDidYouKnow.Text = "Wussten Sie schon... ?";
+            this.labelDidYouKnow.Text = "Did you know... ?";
             // 
             // labelSupressThisDialog
             // 
@@ -207,7 +207,7 @@
             this.labelSupressThisDialog.Name = "labelSupressThisDialog";
             this.labelSupressThisDialog.Size = new System.Drawing.Size(213, 19);
             this.labelSupressThisDialog.TabIndex = 80;
-            this.labelSupressThisDialog.Text = "Diesen Dialog unterdrücken";
+            this.labelSupressThisDialog.Text = "Supress this Dialog";
             // 
             // OutlookSecurityControl
             // 

@@ -11,9 +11,10 @@ using System.Windows.Forms;
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
     //step  2
-    public partial class EnvironmentControl : UserControl, IWizardControl
+    [RessourceTable("ToolboxControls.ProjectWizard.Controls.EnvironmentControl.txt")]
+    public partial class EnvironmentControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
+        private XmlDocument _settings;
 
         public EnvironmentControl()
         {
@@ -37,7 +38,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Umgebung";
                 else
                     return "Environment";
@@ -48,7 +49,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Der Assistent kann die Implementierung für Sie vorbereiten.";
                 else
                     return "The assistent prepare the implementation for you.";
@@ -65,7 +66,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Translate()
         {
-            Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.EnvironmentControl.txt", ProjectWizardControl.Singleton.Host.CurrentLanguageID);
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components["Project Wizard - Environment"];
+                Translation.Translator.TranslateControls(this, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.EnvironmentControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
+            }
         }
 
         public void Activate()
@@ -85,18 +95,64 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public string[] GetSettingsSummary()
         {
+            
             string[] result = new string[2];
-            result[0] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? "Language" + Environment.NewLine : "Sprache" + Environment.NewLine;
-            result[1] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? SelectedLanguage + Environment.NewLine : SelectedLanguage + Environment.NewLine;
+            result[0] += ProjectWizardControl.Singleton.Localized.Language + Environment.NewLine;
+            result[1] += SelectedLanguage + Environment.NewLine;
 
-            result[0] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? "IDE" + Environment.NewLine : "IDE" + Environment.NewLine;
-            result[1] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? "VS " + SelectedIDE + Environment.NewLine : "VS " + SelectedIDE + Environment.NewLine;
+            result[0] += "IDE" + Environment.NewLine;
+            result[1] += "VS " + SelectedIDE + Environment.NewLine;
 
-            result[0] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? ".NET Runtime" : ".NET Lautzeitumgebung";
-            result[1] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? SelectedRuntime : SelectedRuntime;
+            result[0] += ProjectWizardControl.Singleton.Localized.Runtime;
+            result[1] += SelectedRuntime;
 
             return result;
         }
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+            labelNet45Hint.Visible = true;
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
+        }
+
+        #endregion
 
         internal string SelectedLanguage
         { 

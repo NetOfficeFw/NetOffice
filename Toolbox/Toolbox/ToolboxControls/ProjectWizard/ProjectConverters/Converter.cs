@@ -360,7 +360,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             if (!Directory.Exists(TargetSolutionPath))
                 Directory.Move(TempSolutionPath, TargetSolutionPath);
             else
-                throw new InvalidOperationException(ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031 ? "Der angegebene Ordner existiert bereits." : "Directory already exists.");
+                throw new InvalidOperationException(Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Der angegebene Ordner existiert bereits." : "Directory already exists.");
         }
 
         protected internal string GetNetOfficeProjectReferenceItems()

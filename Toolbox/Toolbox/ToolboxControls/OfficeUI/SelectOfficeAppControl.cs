@@ -11,17 +11,23 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 {
     public delegate void SelectOfficeEventHandler(string officeAppName);
 
-    public partial class SelectOfficeAppControl : UserControl
+    [RessourceTable("ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt")]
+    public partial class SelectOfficeAppControl : UserControl, ILocalizationDesign
     {
         SelectOfficeEventHandler _eventHandler;
         int _currentLanguageID;
+        
+        public SelectOfficeAppControl( )
+        {
+            InitializeComponent();
+        }
 
         public SelectOfficeAppControl(int currentLanguageID, SelectOfficeEventHandler handler)
         {
             InitializeComponent();
             _eventHandler = handler;
             _currentLanguageID = currentLanguageID;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.SelectOfficeAppControlTable.txt", _currentLanguageID);
+            Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt", _currentLanguageID);
         }
 
         public string SelectedApplication
@@ -67,8 +73,51 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
             }
         }
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+           
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        #endregion
+
     }
 }

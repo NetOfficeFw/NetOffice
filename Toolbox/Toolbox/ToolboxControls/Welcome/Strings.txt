@@ -11,7 +11,7 @@ labelUpdate = auf ein Update prüfen
 labelQuestion = eine Frage stellen
 labelMailMe = einen Verbesserungsvorschlag machen
 labelLanguage = Sprache
-
+buttonLanguageEditor = Sprachen Editor
 [End]
 [1033]
 labelBeginTitle = Welcome
@@ -26,4 +26,5 @@ labelUpdate = check for an update
 labelQuestion = ask a question
 labelMailMe = make a suggestion
 labelLanguage = Language
+buttonLanguageEditor = Language Editor
 [End]

@@ -41,9 +41,9 @@
             this.labelUserCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUserCaption.Location = new System.Drawing.Point(40, 33);
             this.labelUserCaption.Name = "labelUserCaption";
-            this.labelUserCaption.Size = new System.Drawing.Size(355, 16);
+            this.labelUserCaption.Size = new System.Drawing.Size(317, 16);
             this.labelUserCaption.TabIndex = 21;
-            this.labelUserCaption.Text = "Für wen soll Ihr Automations Addin verfügbar sein?";
+            this.labelUserCaption.Text = "Choose addin is available for all users or not";
             // 
             // comboBoxLoadBehavior
             // 
@@ -68,9 +68,9 @@
             this.labelLoadCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLoadCaption.Location = new System.Drawing.Point(43, 119);
             this.labelLoadCaption.Name = "labelLoadCaption";
-            this.labelLoadCaption.Size = new System.Drawing.Size(353, 16);
+            this.labelLoadCaption.Size = new System.Drawing.Size(230, 16);
             this.labelLoadCaption.TabIndex = 19;
-            this.labelLoadCaption.Text = "Wann soll Ihr Automations Addin geladen werden?";
+            this.labelLoadCaption.Text = "Decide when it has to be loaded";
             // 
             // radioButtonLocalMachine
             // 
@@ -80,9 +80,9 @@
             this.radioButtonLocalMachine.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonLocalMachine.Location = new System.Drawing.Point(46, 81);
             this.radioButtonLocalMachine.Name = "radioButtonLocalMachine";
-            this.radioButtonLocalMachine.Size = new System.Drawing.Size(124, 20);
+            this.radioButtonLocalMachine.Size = new System.Drawing.Size(79, 20);
             this.radioButtonLocalMachine.TabIndex = 18;
-            this.radioButtonLocalMachine.Text = "Für alle Benutzer";
+            this.radioButtonLocalMachine.Text = "All Users";
             this.radioButtonLocalMachine.UseVisualStyleBackColor = true;
             this.radioButtonLocalMachine.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
@@ -95,10 +95,10 @@
             this.radioButtonCurrentUser.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonCurrentUser.Location = new System.Drawing.Point(46, 58);
             this.radioButtonCurrentUser.Name = "radioButtonCurrentUser";
-            this.radioButtonCurrentUser.Size = new System.Drawing.Size(234, 20);
+            this.radioButtonCurrentUser.Size = new System.Drawing.Size(99, 20);
             this.radioButtonCurrentUser.TabIndex = 17;
             this.radioButtonCurrentUser.TabStop = true;
-            this.radioButtonCurrentUser.Text = "Nur für den angemeldeten Benutzer";
+            this.radioButtonCurrentUser.Text = "Current User";
             this.radioButtonCurrentUser.UseVisualStyleBackColor = true;
             this.radioButtonCurrentUser.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 

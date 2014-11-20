@@ -13,6 +13,7 @@ using NetOffice.DeveloperToolbox.Utils.Registry;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    [RessourceTable("ToolboxControls.RegistryEditor.Strings.txt")]
     public partial class RegistryEditorControl : UserControl, IToolboxControl
     {
         #region Fields
@@ -58,7 +59,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
             }
         }
 
@@ -176,7 +177,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.RegistryEditor.Info" + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if (null != language)
+            {
+                string content = language.Components["Registry Editor - Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.RegistryEditor.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Activate(bool firstTime)
@@ -216,7 +224,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -238,13 +246,53 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
         public void Release()
         {
 
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[]{new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
+            }
         }
 
         #endregion
@@ -805,7 +853,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -817,7 +865,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -829,7 +877,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -854,7 +902,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -913,7 +961,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -928,7 +976,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -958,7 +1006,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -980,7 +1028,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
          
@@ -1032,7 +1080,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1056,7 +1104,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1071,7 +1119,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1087,7 +1135,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1110,7 +1158,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1125,7 +1173,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1137,7 +1185,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1164,7 +1212,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1192,7 +1240,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1244,7 +1292,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1266,7 +1314,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1288,7 +1336,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1310,7 +1358,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1326,7 +1374,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1354,7 +1402,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -1367,7 +1415,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 

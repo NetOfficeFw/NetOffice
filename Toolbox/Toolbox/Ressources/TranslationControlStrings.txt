@@ -1,0 +1,11 @@
+﻿[1031]
+toolStripAddLanguage = Neue Sprache
+toolStripRemoveLanguage = Entfernen
+labelDoubleClickHint = Doppelklick für Bearbeiten
+[End]
+[1033]
+this = Error
+toolStripAddLanguage = New Language
+toolStripRemoveLanguage = Remove
+labelDoubleClickHint = Double click to edit
+[End]

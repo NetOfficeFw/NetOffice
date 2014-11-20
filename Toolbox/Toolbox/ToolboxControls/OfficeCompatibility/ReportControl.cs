@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
-    public partial class ReportControl : UserControl
+    [RessourceTable("ToolboxControls.OfficeCompatibility.ReportControlStrings.txt")]
+    public partial class ReportControl : UserControl, ILocalizationDesign
     {
         #region Fields
 
@@ -22,6 +23,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         #region Construction
 
+        public ReportControl()
+        {
+            InitializeComponent();
+
+            pictureBoxField.Image = imageList1.Images[3];
+            pictureBoxProperty.Image = imageList1.Images[7];
+            pictureBoxMethod.Image = imageList1.Images[5];
+        }
+
         public ReportControl(AnalyzerResult report, int currentLanguageID)
         {
             InitializeComponent();
@@ -30,7 +40,17 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             _report = report;
             _currentLanguageID = currentLanguageID;
             comboBoxFilter.SelectedIndex = 0;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeCompatibility.ReportMessageTable.txt", _currentLanguageID);
+
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == currentLanguageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components["OfficeCompatibility - Report"];
+                Translation.Translator.TranslateControls(this, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeCompatibility.ReportControlStrings.txt", currentLanguageID);
+            }
 
             pictureBoxField.Image = imageList1.Images[3];
             pictureBoxProperty.Image = imageList1.Images[7];
@@ -40,6 +60,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         #endregion
 
         #region Methods
+
+        private int GetPercent(int value, int percent)
+        {
+            return value / 100 * percent;
+        }
 
         private int GetImageClassIndex(XElement itemClass)
         {
@@ -412,10 +437,50 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         #endregion
 
-        private int GetPercent(int value, int percent)
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
         {
-            return value / 100 * percent;
+           
         }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
+        }
+
+        #endregion
 
         #region Trigger
 
@@ -540,7 +605,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
             }
         }
 
@@ -552,7 +617,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
             }
         }
 
@@ -585,11 +650,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, _currentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
             }
         }
 
         #endregion
-        
+
     }
 }

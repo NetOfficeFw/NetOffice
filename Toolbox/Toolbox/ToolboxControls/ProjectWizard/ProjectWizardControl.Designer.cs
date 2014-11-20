@@ -54,10 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelHint = new System.Windows.Forms.Label();
             this.panelHint = new System.Windows.Forms.Panel();
+            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
-            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.controlBackColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.Colors.ControlBackColorAnimator(this.components);
             this.panelLeftHeader.SuspendLayout();
@@ -266,7 +266,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(119, 25);
             this.cancelButton.TabIndex = 85;
-            this.cancelButton.Text = "      Abbrechen ";
+            this.cancelButton.Text = "Cancel";
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // finishButton
@@ -281,7 +281,7 @@
             this.finishButton.Name = "finishButton";
             this.finishButton.Size = new System.Drawing.Size(98, 25);
             this.finishButton.TabIndex = 84;
-            this.finishButton.Text = "Fertig  ";
+            this.finishButton.Text = "Finish";
             this.finishButton.Visible = false;
             this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
@@ -298,7 +298,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(110, 25);
             this.backButton.TabIndex = 83;
-            this.backButton.Text = " Zurück";
+            this.backButton.Text = "Back";
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // nextButton
@@ -314,7 +314,7 @@
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(110, 25);
             this.nextButton.TabIndex = 82;
-            this.nextButton.Text = "Weiter ";
+            this.nextButton.Text = "Next";
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // panelWizardHost
@@ -353,9 +353,9 @@
             this.labelHint.ForeColor = System.Drawing.Color.Blue;
             this.labelHint.Location = new System.Drawing.Point(252, 7);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(464, 21);
+            this.labelHint.Size = new System.Drawing.Size(486, 21);
             this.labelHint.TabIndex = 92;
-            this.labelHint.Text = "Klicken Sie auf die Schaltfläche \'Ein neues Projekt erstellen\'";
+            this.labelHint.Text = " Hit the button \'Create New Project\' to start the project wizard.";
             // 
             // panelHint
             // 
@@ -363,10 +363,27 @@
             this.panelHint.Controls.Add(this.pictureBoxLogo);
             this.panelHint.Controls.Add(this.pictureBox8);
             this.panelHint.Controls.Add(this.labelHint);
-            this.panelHint.Location = new System.Drawing.Point(3, 10);
+            this.panelHint.Location = new System.Drawing.Point(158, 74);
             this.panelHint.Name = "panelHint";
             this.panelHint.Size = new System.Drawing.Size(918, 373);
             this.panelHint.TabIndex = 93;
+            // 
+            // buttonCreateProject
+            // 
+            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
+            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
+            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
+            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateProject.Location = new System.Drawing.Point(316, 341);
+            this.buttonCreateProject.Name = "buttonCreateProject";
+            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
+            this.buttonCreateProject.TabIndex = 95;
+            this.buttonCreateProject.Text = "Create New Project";
+            this.buttonCreateProject.UseVisualStyleBackColor = true;
+            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // pictureBoxLogo
             // 
@@ -394,23 +411,6 @@
             this.imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListIcons.Images.SetKeyName(0, "question.png");
             this.imageListIcons.Images.SetKeyName(1, "information.png");
-            // 
-            // buttonCreateProject
-            // 
-            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
-            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
-            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateProject.Location = new System.Drawing.Point(316, 341);
-            this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
-            this.buttonCreateProject.TabIndex = 95;
-            this.buttonCreateProject.Text = "   Ein neues Projekt erstellen";
-            this.buttonCreateProject.UseVisualStyleBackColor = true;
-            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // controlForeColorAnimator1
             // 

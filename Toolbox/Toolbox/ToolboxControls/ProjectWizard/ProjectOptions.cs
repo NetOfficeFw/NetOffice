@@ -47,8 +47,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         public ProjectOptions(List<IWizardControl> controls)
         {
             ProjectControl projectControl = GetProjectControl(controls);
-            ProjectType = ToProjectType(projectControl.SelectedProjectType(1033), projectControl.UseTools);
-            ProjectFolderType = projectControl.SelectedProjectFolderType(1033);
+            ProjectType = projectControl.SelectedProjectType(); // ToProjectType(projectControl.SelectedProjectType(1033), projectControl.UseTools);
+            ProjectFolderType = projectControl.SelectedProjectFolderType();
             ProjectFolder = projectControl.CalculatedFolder;
 
             EnvironmentControl envControl = GetEnvironmentControl(controls);

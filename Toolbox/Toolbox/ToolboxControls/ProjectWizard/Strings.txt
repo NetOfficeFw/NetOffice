@@ -5,18 +5,12 @@ cancelButton = Abbrechen
 backButton = Zurück
 nextButton = Weiter
 finishButton = Fertig
-labelConfigHeader = Einstellungen
-labelProgrammingLanguage = Sprache
-labelEnvironment = Entwicklungsumgebung
 [End]
 [1033]
 labelHint = Hit the button 'Create New Project' to start the project wizard.
 buttonCreateProject = Create New Project
-cancelButton = &Cancel
+cancelButton = Cancel
 backButton = Back
 nextButton = Next
 finishButton = Finish
-labelConfigHeader = Settings
-labelProgrammingLanguage = Language
-labelEnvironment = Environment
 [End]

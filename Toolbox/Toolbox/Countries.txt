@@ -1,0 +1,237 @@
+Afrikaans - South Africa
+Albanian - Albania
+Alsatian
+Amharic - Ethiopia
+Arabic - Saudi Arabia
+Arabic - Algeria
+Arabic - Bahrain
+Arabic - Egypt
+Arabic - Iraq
+Arabic - Jordan
+Arabic - Kuwait
+Arabic - Lebanon
+Arabic - Libya
+Arabic - Morocco
+Arabic - Oman
+Arabic - Qatar
+Arabic - Syria
+Arabic - Tunisia
+Arabic - U.A.E.
+Arabic - Yemen
+Armenian - Armenia
+Assamese
+Azeri (Cyrillic)
+Azeri (Latin)
+Bashkir
+Basque
+Belarusian
+Bengali (India)
+Bengali (Bangladesh)
+Bosnian (Bosnia/Herzegovina)
+Breton
+Bulgarian
+Burmese
+Catalan
+Cherokee - United States
+Chinese - People's Republic of China
+Chinese - Singapore
+Chinese - Taiwan
+Chinese - Hong Kong SAR
+Chinese - Macao SAR
+Corsican
+Croatian
+Croatian (Bosnia/Herzegovina)
+Czech
+Danish
+Dari
+Divehi
+Dutch - Netherlands
+Dutch - Belgium
+Edo
+English - United States
+English - United Kingdom
+English - Australia
+English - Belize
+English - Canada
+English - Caribbean
+English - Hong Kong SAR
+English - India
+English - Indonesia
+English - Ireland
+English - Jamaica
+English - Malaysia
+English - New Zealand
+English - Philippines
+English - Singapore
+English - South Africa
+English - Trinidad
+English - Zimbabwe
+Estonian
+Faroese
+Farsi
+Filipino
+Finnish
+French - France
+French - Belgium
+French - Cameroon
+French - Canada
+French - Democratic Rep. of Congo
+French - Cote d'Ivoire
+French - Haiti
+French - Luxembourg
+French - Mali
+French - Monaco
+French - Morocco
+French - North Africa
+French - Reunion
+French - Senegal
+French - Switzerland
+French - West Indies
+Frisian - Netherlands
+Fulfulde - Nigeria
+FYRO Macedonian
+Galician
+Georgian
+German - Germany
+German - Austria
+German - Liechtenstein
+German - Luxembourg
+German - Switzerland
+Greek
+Greenlandic
+Guarani - Paraguay
+Gujarati
+Hausa - Nigeria
+Hawaiian - United States
+Hebrew
+Hindi
+Hungarian
+Ibibio - Nigeria
+Icelandic
+Igbo - Nigeria
+Indonesian
+Inuktitut
+Irish
+Italian - Italy
+Italian - Switzerland
+Japanese
+K'iche
+Kannada
+Kanuri - Nigeria
+Kashmiri
+Kashmiri (Arabic)
+Kazakh
+Khmer
+Kinyarwanda
+Konkani
+Korean
+Kyrgyz (Cyrillic)
+Lao
+Latin
+Latvian
+Lithuanian
+Luxembourgish
+Malay - Malaysia
+Malay - Brunei Darussalam
+Malayalam
+Maltese
+Manipuri
+Maori - New Zealand
+Mapudungun
+Marathi
+Mohawk
+Mongolian (Cyrillic)
+Mongolian (Mongolian)
+Nepali
+Nepali - India
+Norwegian (Bokm�l)
+Norwegian (Nynorsk)
+Occitan
+Oriya
+Oromo
+Papiamentu
+Pashto
+Polish
+Portuguese - Brazil
+Portuguese - Portugal
+Punjabi
+Punjabi (Pakistan)
+Quecha - Bolivia
+Quecha - Ecuador
+Quecha - Peru
+Rhaeto-Romanic
+Romanian
+Romanian - Moldava
+Russian
+Russian - Moldava
+Sami (Lappish)
+Sanskrit
+Scottish Gaelic
+Sepedi
+Serbian (Cyrillic)
+Serbian (Latin)
+Sindhi - India
+Sindhi - Pakistan
+Sinhalese - Sri Lanka
+Slovak
+Slovenian
+Somali
+Sorbian
+Spanish - Spain (Modern Sort)
+Spanish - Spain (Traditional Sort)
+Spanish - Argentina
+Spanish - Bolivia
+Spanish - Chile
+Spanish - Colombia
+Spanish - Costa Rica
+Spanish - Dominican Republic
+Spanish - Ecuador
+Spanish - El Salvador
+Spanish - Guatemala
+Spanish - Honduras
+Spanish - Latin America
+Spanish - Mexico
+Spanish - Nicaragua
+Spanish - Panama
+Spanish - Paraguay
+Spanish - Peru
+Spanish - Puerto Rico
+Spanish - United States
+Spanish - Uruguay
+Spanish - Venezuela
+Sutu
+Swahili
+Swedish
+Swedish - Finland
+Syriac
+Tajik
+Tamazight (Arabic)
+Tamazight (Latin)
+Tamil
+Tatar
+Telugu
+Thai
+Tibetan - Bhutan
+Tibetan - People's Republic of China
+Tigrigna - Eritrea
+Tigrigna - Ethiopia
+Tsonga
+Tswana
+Turkish
+Turkmen
+Uighur - China
+Ukrainian
+Urdu
+Urdu - India
+Uzbek (Cyrillic)
+Uzbek (Latin)
+Venda
+Vietnamese
+Welsh
+Wolof
+Xhosa
+Yakut
+Yi
+Yiddish
+Yoruba
+Zulu

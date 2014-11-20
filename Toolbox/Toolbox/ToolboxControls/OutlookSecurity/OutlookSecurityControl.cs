@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 {
+    [RessourceTable("ToolboxControls.OutlookSecurity.Strings.txt")]
     public partial class OutlookSecurityControl : UserControl, IToolboxControl
     { 
         #region Fields
@@ -23,7 +24,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         #endregion
 
-        #region Construction
+        #region Ctor
 
         public OutlookSecurityControl()
         {
@@ -38,7 +39,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
             }
         }
 
@@ -56,7 +57,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
        
         #endregion
 
-        #region IToolboxControl Member
+        #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
 
@@ -156,7 +157,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -177,7 +178,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -188,12 +189,59 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.OutlookSecurity.Info" + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if (null != language)
+            {
+                string content = language.Components["Outlook Security - Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.OutlookSecurity.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Release()
         {
 
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[] { new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
+            }
         }
 
         #endregion
@@ -209,7 +257,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -223,7 +271,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -242,7 +290,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             } 
         }
 
@@ -263,7 +311,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             } 
        }
 

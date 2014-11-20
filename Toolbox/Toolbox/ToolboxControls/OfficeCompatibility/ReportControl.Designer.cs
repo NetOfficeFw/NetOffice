@@ -33,7 +33,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeViewReport = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelExplorerHeader = new System.Windows.Forms.Label();
             this.buttonSaveReport = new System.Windows.Forms.Button();
             this.panelNativeView = new System.Windows.Forms.Panel();
             this.textBoxReport = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.treeViewReport);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.labelExplorerHeader);
             this.splitContainer1.Panel1.Controls.Add(this.buttonSaveReport);
             // 
             // splitContainer1.Panel2
@@ -88,6 +88,7 @@
             this.treeViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeViewReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeViewReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewReport.HideSelection = false;
             this.treeViewReport.ImageIndex = 0;
@@ -113,18 +114,18 @@
             this.imageList1.Images.SetKeyName(7, "VSObject_Properties.bmp");
             this.imageList1.Images.SetKeyName(8, "VSObject_Properties_Private.bmp");
             // 
-            // label1
+            // labelExplorerHeader
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.labelExplorerHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.Khaki;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 21);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Assembly Explorer";
+            this.labelExplorerHeader.BackColor = System.Drawing.Color.Khaki;
+            this.labelExplorerHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelExplorerHeader.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelExplorerHeader.Location = new System.Drawing.Point(0, 0);
+            this.labelExplorerHeader.Name = "labelExplorerHeader";
+            this.labelExplorerHeader.Size = new System.Drawing.Size(265, 21);
+            this.labelExplorerHeader.TabIndex = 75;
+            this.labelExplorerHeader.Text = "Assembly Explorer";
             // 
             // buttonSaveReport
             // 
@@ -132,20 +133,22 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveReport.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonSaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveReport.ForeColor = System.Drawing.Color.Blue;
             this.buttonSaveReport.Location = new System.Drawing.Point(2, 358);
             this.buttonSaveReport.Name = "buttonSaveReport";
             this.buttonSaveReport.Size = new System.Drawing.Size(262, 24);
             this.buttonSaveReport.TabIndex = 74;
-            this.buttonSaveReport.Text = "Bericht in Datei speichern";
+            this.buttonSaveReport.Text = "Save report as file";
             this.buttonSaveReport.UseVisualStyleBackColor = true;
             this.buttonSaveReport.Click += new System.EventHandler(this.buttonSaveReport_Click);
             // 
             // panelNativeView
             // 
+            this.panelNativeView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelNativeView.Controls.Add(this.textBoxReport);
-            this.panelNativeView.Location = new System.Drawing.Point(28, 229);
+            this.panelNativeView.Location = new System.Drawing.Point(3, 192);
             this.panelNativeView.Name = "panelNativeView";
-            this.panelNativeView.Size = new System.Drawing.Size(497, 93);
+            this.panelNativeView.Size = new System.Drawing.Size(522, 93);
             this.panelNativeView.TabIndex = 73;
             this.panelNativeView.Visible = false;
             // 
@@ -158,16 +161,17 @@
             this.textBoxReport.Name = "textBoxReport";
             this.textBoxReport.ReadOnly = true;
             this.textBoxReport.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxReport.Size = new System.Drawing.Size(497, 93);
+            this.textBoxReport.Size = new System.Drawing.Size(520, 91);
             this.textBoxReport.TabIndex = 0;
             this.textBoxReport.WordWrap = false;
             // 
             // panelView
             // 
+            this.panelView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelView.Controls.Add(this.listView1);
-            this.panelView.Location = new System.Drawing.Point(28, 12);
+            this.panelView.Location = new System.Drawing.Point(1, 5);
             this.panelView.Name = "panelView";
-            this.panelView.Size = new System.Drawing.Size(497, 168);
+            this.panelView.Size = new System.Drawing.Size(524, 168);
             this.panelView.TabIndex = 0;
             // 
             // listView1
@@ -177,7 +181,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(497, 168);
+            this.listView1.Size = new System.Drawing.Size(522, 166);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -187,11 +191,11 @@
             // 
             this.checkBoxNativeView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxNativeView.AutoSize = true;
-            this.checkBoxNativeView.Location = new System.Drawing.Point(652, 6);
+            this.checkBoxNativeView.Location = new System.Drawing.Point(661, 6);
             this.checkBoxNativeView.Name = "checkBoxNativeView";
-            this.checkBoxNativeView.Size = new System.Drawing.Size(95, 17);
+            this.checkBoxNativeView.Size = new System.Drawing.Size(86, 17);
             this.checkBoxNativeView.TabIndex = 73;
-            this.checkBoxNativeView.Text = "Native Ansicht";
+            this.checkBoxNativeView.Text = "Native View";
             this.checkBoxNativeView.UseVisualStyleBackColor = true;
             this.checkBoxNativeView.Visible = false;
             this.checkBoxNativeView.CheckedChanged += new System.EventHandler(this.checkBoxNativeView_CheckedChanged);
@@ -248,10 +252,9 @@
             this.labelFilterHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelFilterHint.Location = new System.Drawing.Point(385, 27);
             this.labelFilterHint.Name = "labelFilterHint";
-            this.labelFilterHint.Size = new System.Drawing.Size(493, 13);
+            this.labelFilterHint.Size = new System.Drawing.Size(358, 13);
             this.labelFilterHint.TabIndex = 71;
-            this.labelFilterHint.Text = "Nutzen Sie den Filter um nur Funktionalitäten anzuzeigen die eine bestimmte Versi" +
-                "on nicht unterstützen.";
+            this.labelFilterHint.Text = "Use the filter to show entities without support for a specific version.";
             // 
             // pictureBoxField
             // 
@@ -333,6 +336,7 @@
             this.Controls.Add(this.pictureBoxField);
             this.Controls.Add(this.buttonClose2);
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ReportControl";
             this.Size = new System.Drawing.Size(800, 429);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -364,7 +368,7 @@
         private System.Windows.Forms.Panel panelView;
         private System.Windows.Forms.Panel panelNativeView;
         private System.Windows.Forms.CheckBox checkBoxNativeView;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelExplorerHeader;
         private System.Windows.Forms.Button buttonSaveReport;
         private System.Windows.Forms.PictureBox pictureBoxField;
         private System.Windows.Forms.Label labelFieldHint;

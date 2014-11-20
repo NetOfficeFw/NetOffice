@@ -13,6 +13,7 @@ using Mono.Cecil.Cil;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
+    [RessourceTable("ToolboxControls.OfficeCompatibility.Strings.txt")]
     public partial class OfficeCompatibilityControl : UserControl, IToolboxControl
     {
         #region Fields
@@ -46,7 +47,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         public new void KeyDown(KeyEventArgs e)
         { 
-        
+            
         }
 
         public string ControlName
@@ -136,12 +137,61 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.OfficeCompatibility.Info" + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if (null != language)
+            {
+                string content = language.Components["Office Compatibility-Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.OfficeCompatibility.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Release()
         {
            
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+            panelInvalidAssembly.Visible = true;
+            panelNoNetOfficeReferences.Visible = true;
+            labelDebugHint.Visible = true;
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[] { new LocalizationDefaultChildInfo("Report", typeof(ReportControl)), new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
+            }
         }
 
         #endregion
@@ -162,7 +212,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -181,7 +231,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -231,7 +281,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -246,7 +296,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
         

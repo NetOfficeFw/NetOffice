@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Excel");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Word");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Outlook");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PowerPoint");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Access");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("MSProject");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Visio");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Excel");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Word");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Outlook");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PowerPoint");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Access");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("MSProject");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Visio");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddinGuardControl));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeViewRegistry = new System.Windows.Forms.TreeView();
@@ -164,28 +164,28 @@
             this.treeViewRegistry.Location = new System.Drawing.Point(3, 3);
             this.treeViewRegistry.Margin = new System.Windows.Forms.Padding(0);
             this.treeViewRegistry.Name = "treeViewRegistry";
-            treeNode1.Name = "Excel";
-            treeNode1.Text = "Excel";
-            treeNode2.Name = "Word";
-            treeNode2.Text = "Word";
-            treeNode3.Name = "Outlook";
-            treeNode3.Text = "Outlook";
-            treeNode4.Name = "PowerPoint";
-            treeNode4.Text = "PowerPoint";
-            treeNode5.Name = "Access";
-            treeNode5.Text = "Access";
-            treeNode6.Name = "MSProject";
-            treeNode6.Text = "MSProject";
-            treeNode7.Name = "Visio";
-            treeNode7.Text = "Visio";
+            treeNode8.Name = "Excel";
+            treeNode8.Text = "Excel";
+            treeNode9.Name = "Word";
+            treeNode9.Text = "Word";
+            treeNode10.Name = "Outlook";
+            treeNode10.Text = "Outlook";
+            treeNode11.Name = "PowerPoint";
+            treeNode11.Text = "PowerPoint";
+            treeNode12.Name = "Access";
+            treeNode12.Text = "Access";
+            treeNode13.Name = "MSProject";
+            treeNode13.Text = "MSProject";
+            treeNode14.Name = "Visio";
+            treeNode14.Text = "Visio";
             this.treeViewRegistry.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7});
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14});
             this.treeViewRegistry.SelectedImageIndex = 1;
             this.treeViewRegistry.Size = new System.Drawing.Size(295, 582);
             this.treeViewRegistry.TabIndex = 36;
@@ -243,7 +243,7 @@
             this.labelMessages.ReadOnly = true;
             this.labelMessages.Size = new System.Drawing.Size(594, 42);
             this.labelMessages.TabIndex = 66;
-            this.labelMessages.Text = "<Keine>";
+            this.labelMessages.Text = " <None>";
             this.labelMessages.WordWrap = false;
             // 
             // panel2
@@ -289,9 +289,9 @@
             this.labelLastMessages.ForeColor = System.Drawing.Color.DimGray;
             this.labelLastMessages.Location = new System.Drawing.Point(3, 67);
             this.labelLastMessages.Name = "labelLastMessages";
-            this.labelLastMessages.Size = new System.Drawing.Size(119, 17);
+            this.labelLastMessages.Size = new System.Drawing.Size(112, 17);
             this.labelLastMessages.TabIndex = 61;
-            this.labelLastMessages.Text = "Letzte Meldungen";
+            this.labelLastMessages.Text = "Recent Messages";
             // 
             // labelTrayhint
             // 
@@ -304,7 +304,8 @@
             this.labelTrayhint.Name = "labelTrayhint";
             this.labelTrayhint.Size = new System.Drawing.Size(373, 34);
             this.labelTrayhint.TabIndex = 49;
-            this.labelTrayhint.Text = "Stellen Sie sicher das TrayBallons auf ihrem System nicht deaktiviert sind.";
+            this.labelTrayhint.Text = "Make sure that TrayBalloons are not deactivated on your system if you want to be " +
+                "notified via TrayInfo.";
             // 
             // labelMessageCaption
             // 
@@ -313,9 +314,9 @@
             this.labelMessageCaption.ForeColor = System.Drawing.Color.DimGray;
             this.labelMessageCaption.Location = new System.Drawing.Point(3, 4);
             this.labelMessageCaption.Name = "labelMessageCaption";
-            this.labelMessageCaption.Size = new System.Drawing.Size(67, 16);
+            this.labelMessageCaption.Size = new System.Drawing.Size(80, 16);
             this.labelMessageCaption.TabIndex = 41;
-            this.labelMessageCaption.Text = "Meldung";
+            this.labelMessageCaption.Text = "Messsage";
             // 
             // label3
             // 
@@ -362,9 +363,9 @@
             this.checkBoxRestoreLoadBehavior.ForeColor = System.Drawing.Color.Gray;
             this.checkBoxRestoreLoadBehavior.Location = new System.Drawing.Point(242, 35);
             this.checkBoxRestoreLoadBehavior.Name = "checkBoxRestoreLoadBehavior";
-            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(337, 21);
+            this.checkBoxRestoreLoadBehavior.Size = new System.Drawing.Size(274, 21);
             this.checkBoxRestoreLoadBehavior.TabIndex = 49;
-            this.checkBoxRestoreLoadBehavior.Text = "LoadBehavior bei Änderung von 3 auf 2 zurück setzen";
+            this.checkBoxRestoreLoadBehavior.Text = "Reset LoadBehavior on change from 3 to 2";
             this.checkBoxRestoreLoadBehavior.UseVisualStyleBackColor = true;
             this.checkBoxRestoreLoadBehavior.CheckedChanged += new System.EventHandler(this.checkBoxRestoreLoadBehavior_CheckedChanged);
             // 
@@ -395,9 +396,9 @@
             this.radioButtonActivate.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonActivate.Location = new System.Drawing.Point(10, 9);
             this.radioButtonActivate.Name = "radioButtonActivate";
-            this.radioButtonActivate.Size = new System.Drawing.Size(72, 21);
+            this.radioButtonActivate.Size = new System.Drawing.Size(79, 21);
             this.radioButtonActivate.TabIndex = 57;
-            this.radioButtonActivate.Text = "Aktiviert";
+            this.radioButtonActivate.Text = "Activated";
             this.radioButtonActivate.UseVisualStyleBackColor = true;
             this.radioButtonActivate.CheckedChanged += new System.EventHandler(this.radioButtonActivate_CheckedChanged);
             // 
@@ -409,10 +410,10 @@
             this.radioButtonDeactivate.ForeColor = System.Drawing.Color.Blue;
             this.radioButtonDeactivate.Location = new System.Drawing.Point(111, 10);
             this.radioButtonDeactivate.Name = "radioButtonDeactivate";
-            this.radioButtonDeactivate.Size = new System.Drawing.Size(87, 21);
+            this.radioButtonDeactivate.Size = new System.Drawing.Size(94, 21);
             this.radioButtonDeactivate.TabIndex = 53;
             this.radioButtonDeactivate.TabStop = true;
-            this.radioButtonDeactivate.Text = "Deaktiviert";
+            this.radioButtonDeactivate.Text = "Deactivated";
             this.radioButtonDeactivate.UseVisualStyleBackColor = true;
             // 
             // labelNoAdminHint
@@ -423,8 +424,8 @@
             this.labelNoAdminHint.Name = "labelNoAdminHint";
             this.labelNoAdminHint.Size = new System.Drawing.Size(322, 34);
             this.labelNoAdminHint.TabIndex = 68;
-            this.labelNoAdminHint.Text = "Diese Option ist aufgrund fehlender Administrator Berechtigung nur für User Addin" +
-                "s verfügbar.";
+            this.labelNoAdminHint.Text = "This option is only available for User Addins due to missing administrator privil" +
+                "eges.";
             this.labelNoAdminHint.Visible = false;
             // 
             // labelNoAdminHintIcon
@@ -462,7 +463,7 @@
             this.panelInfos.Controls.Add(this.labelInfoArea);
             this.panelInfos.Location = new System.Drawing.Point(1, 36);
             this.panelInfos.Name = "panelInfos";
-            this.panelInfos.Size = new System.Drawing.Size(373, 309);
+            this.panelInfos.Size = new System.Drawing.Size(555, 309);
             this.panelInfos.TabIndex = 72;
             this.panelInfos.Visible = false;
             // 
@@ -494,9 +495,9 @@
             this.labelInfoArea.ForeColor = System.Drawing.Color.DimGray;
             this.labelInfoArea.Location = new System.Drawing.Point(3, 1);
             this.labelInfoArea.Name = "labelInfoArea";
-            this.labelInfoArea.Size = new System.Drawing.Size(133, 17);
+            this.labelInfoArea.Size = new System.Drawing.Size(425, 17);
             this.labelInfoArea.TabIndex = 62;
-            this.labelInfoArea.Text = "Informationsbereich";
+            this.labelInfoArea.Text = "Click on an Addin or a deactivated element for further information.";
             // 
             // labelRegistryValues
             // 
@@ -505,9 +506,9 @@
             this.labelRegistryValues.ForeColor = System.Drawing.Color.DimGray;
             this.labelRegistryValues.Location = new System.Drawing.Point(3, -1);
             this.labelRegistryValues.Name = "labelRegistryValues";
-            this.labelRegistryValues.Size = new System.Drawing.Size(99, 17);
+            this.labelRegistryValues.Size = new System.Drawing.Size(97, 17);
             this.labelRegistryValues.TabIndex = 62;
-            this.labelRegistryValues.Text = "Registry Werte";
+            this.labelRegistryValues.Text = "Registry Value";
             // 
             // dataGridViewValues
             // 
@@ -589,9 +590,9 @@
             this.labelDeactiveElementCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeactiveElementCaption.Location = new System.Drawing.Point(3, 0);
             this.labelDeactiveElementCaption.Name = "labelDeactiveElementCaption";
-            this.labelDeactiveElementCaption.Size = new System.Drawing.Size(131, 13);
+            this.labelDeactiveElementCaption.Size = new System.Drawing.Size(125, 13);
             this.labelDeactiveElementCaption.TabIndex = 62;
-            this.labelDeactiveElementCaption.Text = "Deaktiviertes Element";
+            this.labelDeactiveElementCaption.Text = "Deactivated Element";
             // 
             // labelDisabledRegistryPath
             // 
@@ -680,9 +681,9 @@
             this.labelAddinCurrentUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddinCurrentUser.Location = new System.Drawing.Point(219, 2);
             this.labelAddinCurrentUser.Name = "labelAddinCurrentUser";
-            this.labelAddinCurrentUser.Size = new System.Drawing.Size(222, 17);
+            this.labelAddinCurrentUser.Size = new System.Drawing.Size(202, 17);
             this.labelAddinCurrentUser.TabIndex = 41;
-            this.labelAddinCurrentUser.Text = "= Addin unter HKEY_CURRENT_USER";
+            this.labelAddinCurrentUser.Text = "= Addin in HKEY_CURRENT_USER";
             // 
             // labelDeaktiveElement
             // 
@@ -690,9 +691,9 @@
             this.labelDeaktiveElement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeaktiveElement.Location = new System.Drawing.Point(22, 2);
             this.labelDeaktiveElement.Name = "labelDeaktiveElement";
-            this.labelDeaktiveElement.Size = new System.Drawing.Size(145, 17);
+            this.labelDeaktiveElement.Size = new System.Drawing.Size(139, 17);
             this.labelDeaktiveElement.TabIndex = 42;
-            this.labelDeaktiveElement.Text = "= Deaktiviertes Element";
+            this.labelDeaktiveElement.Text = "= Deactivated Element";
             // 
             // labelIconLegendCaption
             // 
@@ -701,9 +702,9 @@
             this.labelIconLegendCaption.ForeColor = System.Drawing.Color.DimGray;
             this.labelIconLegendCaption.Location = new System.Drawing.Point(3, 0);
             this.labelIconLegendCaption.Name = "labelIconLegendCaption";
-            this.labelIconLegendCaption.Size = new System.Drawing.Size(86, 17);
+            this.labelIconLegendCaption.Size = new System.Drawing.Size(148, 17);
             this.labelIconLegendCaption.TabIndex = 43;
-            this.labelIconLegendCaption.Text = "Icon Legende";
+            this.labelIconLegendCaption.Text = "labelIconLegendCaption";
             // 
             // panel3
             // 
@@ -724,15 +725,16 @@
             this.labelColorLegendCaption.ForeColor = System.Drawing.Color.DimGray;
             this.labelColorLegendCaption.Location = new System.Drawing.Point(94, 0);
             this.labelColorLegendCaption.Name = "labelColorLegendCaption";
-            this.labelColorLegendCaption.Size = new System.Drawing.Size(102, 17);
+            this.labelColorLegendCaption.Size = new System.Drawing.Size(87, 17);
             this.labelColorLegendCaption.TabIndex = 46;
-            this.labelColorLegendCaption.Text = "Farben Legende";
+            this.labelColorLegendCaption.Text = "Color Legend";
             this.labelColorLegendCaption.Visible = false;
             // 
             // buttonChangeLegend
             // 
             this.buttonChangeLegend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonChangeLegend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonChangeLegend.ForeColor = System.Drawing.Color.Blue;
             this.buttonChangeLegend.Location = new System.Drawing.Point(856, 22);
             this.buttonChangeLegend.Name = "buttonChangeLegend";
             this.buttonChangeLegend.Size = new System.Drawing.Size(29, 21);
@@ -775,9 +777,9 @@
             this.labelUnkownValue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUnkownValue.Location = new System.Drawing.Point(326, 2);
             this.labelUnkownValue.Name = "labelUnkownValue";
-            this.labelUnkownValue.Size = new System.Drawing.Size(102, 17);
+            this.labelUnkownValue.Size = new System.Drawing.Size(81, 17);
             this.labelUnkownValue.TabIndex = 45;
-            this.labelUnkownValue.Text = "Unüblicher Wert";
+            this.labelUnkownValue.Text = "Access Error";
             // 
             // labelAccessError
             // 
@@ -857,9 +859,9 @@
             this.labelAddinLocalMachine.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddinLocalMachine.Location = new System.Drawing.Point(488, 2);
             this.labelAddinLocalMachine.Name = "labelAddinLocalMachine";
-            this.labelAddinLocalMachine.Size = new System.Drawing.Size(229, 17);
+            this.labelAddinLocalMachine.Size = new System.Drawing.Size(201, 17);
             this.labelAddinLocalMachine.TabIndex = 43;
-            this.labelAddinLocalMachine.Text = "= Addin unter HKEY_LOCAL_MACHINE";
+            this.labelAddinLocalMachine.Text = "= ddin in HKEY_LOCAL_MACHINE";
             // 
             // imageListEntries
             // 

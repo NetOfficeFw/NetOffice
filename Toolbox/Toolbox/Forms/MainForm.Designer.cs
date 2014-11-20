@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.imageListTabMain = new System.Windows.Forms.ImageList(this.components);
             this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.translationEditor = new NetOffice.DeveloperToolbox.Translation.TranslationControl();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageListTabMain
@@ -48,7 +54,6 @@
             this.tabControlMain.ImageList = this.imageListTabMain;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(0);
-            this.tabControlMain.MinimumSize = new System.Drawing.Size(916, 641);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(916, 641);
@@ -56,13 +61,50 @@
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.TabControlMain_SelectedIndexChanged);
             this.tabControlMain.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlMain_Deselecting);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tabControlMain);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.translationEditor);
+            this.splitContainer1.Panel2Collapsed = true;
+            this.splitContainer1.Panel2MinSize = 200;
+            this.splitContainer1.Size = new System.Drawing.Size(916, 641);
+            this.splitContainer1.SplitterDistance = 25;
+            this.splitContainer1.SplitterWidth = 1;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // translationEditor
+            // 
+            this.translationEditor.BackColor = System.Drawing.SystemColors.Control;
+            this.translationEditor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.translationEditor.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.translationEditor.Location = new System.Drawing.Point(0, 0);
+            this.translationEditor.Margin = new System.Windows.Forms.Padding(0);
+            this.translationEditor.Name = "translationEditor";
+            this.translationEditor.Size = new System.Drawing.Size(96, 100);
+            this.translationEditor.TabIndex = 0;
+            this.translationEditor.UserClose += new System.EventHandler(this.TranslationEditor_UserClose);
+            this.translationEditor.UserTranslationAbout += new System.EventHandler(this.translationEditor_UserTranslationAbout);
+            this.translationEditor.LanguageChanged += new NetOffice.DeveloperToolbox.Translation.LanuageChangedEventHandler(this.translationEditor_LanguageChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(916, 641);
-            this.Controls.Add(this.tabControlMain);
+            this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -76,6 +118,10 @@
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -84,6 +130,8 @@
 
         private System.Windows.Forms.ImageList imageListTabMain;
         private System.Windows.Forms.TabControl tabControlMain;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private Translation.TranslationControl translationEditor;
     }
 }
 

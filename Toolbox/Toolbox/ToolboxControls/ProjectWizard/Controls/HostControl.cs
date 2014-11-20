@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
     // step 3
-    public partial class HostControl : UserControl , IWizardControl
+    [RessourceTable("ToolboxControls.ProjectWizard.Controls.HostControl.txt")]
+    public partial class HostControl : UserControl, IWizardControl, ILocalizationDesign
     {
         XmlDocument _settings;
 
@@ -67,7 +68,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             get
             {
 
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Welche Office Anwendungen möchten Sie unterstützen?";
                 else
                     return "Which Office applications you want support?";
@@ -78,7 +79,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Wählen Sie eine oder mehrere Office Anwendungen.";
                 else
                     return "Select one or more Office application(s).";
@@ -103,10 +104,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Translate()
         {
-            if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
-                label1.Text = "Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar";
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components["Project Wizard - Host"];
+                Translation.Translator.TranslateControls(this, component.ControlRessources);
+            }
             else
-                label1.Text = "Use also number keys(1-7) on your keyboard to select/deselect an application";
+            {
+                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.HostControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
+            }
         }
 
         public void Activate()
@@ -139,10 +146,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         public string[] GetSettingsSummary()
         {
             string[] result = new string[2];
-            if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
-                result[0] = "Office Anwendungen:";
-            else
-                result[0] = "Office Applications:";
+                result[0] = ProjectWizardControl.Singleton.Localized.Applications;
 
             result[1] = "";
 
@@ -156,7 +160,52 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         }
 
         #endregion
-       
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
+        }
+
+        #endregion
+
         #region Methods
 
         private void RaiseChangeEvent()

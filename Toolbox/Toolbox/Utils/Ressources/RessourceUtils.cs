@@ -45,17 +45,36 @@ namespace NetOffice.DeveloperToolbox.Ressources
             return ressourceStream;
         }
 
-        internal static string ReadString(string ressourcePath)
+        internal static Stream CreateStreamFromString(string stringValue)
+        {
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(stringValue);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
+        }
+
+        internal static string ReadString(string ressourcePath, bool autoPrevRootNameSpace = true, bool throwExceptionIfNotFound = true)
         {
             System.IO.Stream ressourceStream = null;
             System.IO.StreamReader textStreamReader = null;
             try
             {
                 string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                ressourcePath = assemblyName + "." + ressourcePath;
+                if(true == autoPrevRootNameSpace)
+                    ressourcePath = assemblyName + "." + ressourcePath;
                 ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(ressourcePath);
                 if (ressourceStream == null)
-                    throw (new System.IO.IOException("Error accessing resource Stream."));
+                {
+                    if (throwExceptionIfNotFound)
+                        throw (new System.IO.IOException("Error accessing resource Stream."));
+                    else
+                    {
+                        Console.WriteLine("Error accessin resource Stream {0}", ressourcePath);
+                        return null;
+                    }
+                }
 
                 textStreamReader = new System.IO.StreamReader(ressourceStream);
                 if (textStreamReader == null)

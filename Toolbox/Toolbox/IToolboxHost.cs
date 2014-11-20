@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using NetOffice.DeveloperToolbox.Translation;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -11,8 +12,23 @@ namespace NetOffice.DeveloperToolbox
     /// </summary>
     public interface IToolboxHost
     {
+        ToolLanguages Languages { get; }
+
         /// <summary>
-        /// Current Language ID (1031 or 1033)
+        /// The host is supporting a language editor
+        /// </summary>
+        bool SupportsLanguageEditor { get; }
+
+        /// <summary>
+        /// Get or set language editor visibilty
+        /// </summary>
+        bool LanguageEditorVisible { get; set; }
+
+        // Occurs when the langage editor visibilty has been changed
+        event EventHandler LanguageEditorVisibleChanged;
+
+        /// <summary>
+        /// Current Language ID
         /// </summary>
         int CurrentLanguageID { get; set; }
 

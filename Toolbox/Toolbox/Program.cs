@@ -30,7 +30,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(null, exception, Forms.ErrorCategory.Penalty, 1033);
+                Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty, 1033);
             }
          }
 
@@ -76,7 +76,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(null, exception, Forms.ErrorCategory.Penalty, 1033);
+                Forms.ErrorForm.ShowError(null, exception,ErrorCategory.Penalty, 1033);
                 return null;
             }
         }
@@ -180,7 +180,7 @@ namespace NetOffice.DeveloperToolbox
         /// <param name="e">args</param>
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Forms.ErrorForm.ShowError(null, e.ExceptionObject as Exception, Forms.ErrorCategory.Penalty, 1033);
+            Forms.ErrorForm.ShowError(null, e.ExceptionObject as Exception,ErrorCategory.Penalty, 1033);
         }
     }
 }

@@ -1,0 +1,6 @@
+﻿[1031]
+labelHint = Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar
+[End]
+[1033]
+labelHint = Use also number keys(1-7) on your keyboard to select/deselect an application
+[End]

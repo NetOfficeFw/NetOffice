@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxHelpContent = new System.Windows.Forms.RichTextBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonClose2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox
+            // richTextBoxHelpContent
             // 
-            this.richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.richTextBoxHelpContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox.BackColor = System.Drawing.Color.White;
-            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox.Location = new System.Drawing.Point(0, 51);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.ReadOnly = true;
-            this.richTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.richTextBox.Size = new System.Drawing.Size(924, 388);
-            this.richTextBox.TabIndex = 1;
-            this.richTextBox.Text = "";
-            this.richTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
+            this.richTextBoxHelpContent.BackColor = System.Drawing.Color.White;
+            this.richTextBoxHelpContent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxHelpContent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxHelpContent.Location = new System.Drawing.Point(0, 51);
+            this.richTextBoxHelpContent.Name = "richTextBoxHelpContent";
+            this.richTextBoxHelpContent.ReadOnly = true;
+            this.richTextBoxHelpContent.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.richTextBoxHelpContent.Size = new System.Drawing.Size(924, 388);
+            this.richTextBoxHelpContent.TabIndex = 1;
+            this.richTextBoxHelpContent.Text = "";
+            this.richTextBoxHelpContent.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox_LinkClicked);
             // 
             // buttonClose
             // 
@@ -86,7 +86,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.buttonClose2);
             this.Controls.Add(this.buttonClose);
-            this.Controls.Add(this.richTextBox);
+            this.Controls.Add(this.richTextBoxHelpContent);
             this.Name = "InfoControl";
             this.Size = new System.Drawing.Size(924, 496);
             this.ResumeLayout(false);
@@ -95,7 +95,7 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox;
+        private System.Windows.Forms.RichTextBox richTextBoxHelpContent;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonClose2;
     }

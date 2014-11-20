@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 {
+    [RessourceTable("ToolboxControls.About.Strings.txt")]
     public partial class AboutControl : UserControl, IToolboxControl
     {
         #region Ctor
@@ -131,6 +132,46 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         #endregion
 
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
+        }
+
+        #endregion
+
         #region Trigger
 
         private void AboutControl_Resize(object sender, EventArgs e)
@@ -141,7 +182,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -154,7 +195,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -172,7 +213,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -189,7 +230,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 

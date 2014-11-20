@@ -669,7 +669,10 @@ namespace NetOffice.MSProjectApi.Tools
         /// <returns>new Settings instance</returns>
         protected virtual Core CreateFactory()
         {
-            return new Core();
+            // MSProject has known issues without
+            Core core = new Core();
+            core.Settings.MessageFilter.Enabled = true;
+            return core;
         }
 
         /// <summary>

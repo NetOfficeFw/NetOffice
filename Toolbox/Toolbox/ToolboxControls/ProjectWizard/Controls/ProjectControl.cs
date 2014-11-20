@@ -13,25 +13,22 @@ using Microsoft.Win32;
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
     //step 1
-    public partial class ProjectControl : UserControl, IWizardControl
+    [RessourceTable("ToolboxControls.ProjectWizard.Controls.ProjectControl.txt")]
+    public partial class ProjectControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
+        private XmlDocument _settings;
 
         public ProjectControl()
         {
             InitializeComponent(); 
             CreateSettingsDocument();
             if (!IsAdministrator())
-            {
                 labelNoAdminHint.Visible = true;
-            }
             else
-            {
                 labelNoAdminHint.Visible = false;
-            }
         }
 
-        #region IWizardControl Member
+        #region IWizardControl
 
         public event ReadyStateChangedHandler ReadyStateChanged;
 
@@ -50,7 +47,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Project Typ";
                 else
                     return "Project Type";
@@ -61,7 +58,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                if (ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1031)
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     return "Was für ein Projekt soll erstellt werden?";
                 else
                     return "Select your project type.";
@@ -78,7 +75,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Translate()
         {
-            Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.ProjectControl.txt", ProjectWizardControl.Singleton.Host.CurrentLanguageID);
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components["Project Wizard - Project"];
+                Translation.Translator.TranslateControls(this, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(this, "ToolboxControls.ProjectWizard.Controls.ProjectControl.txt", Forms.MainForm.Singleton.CurrentLanguageID);
+            }
         }
 
         public void Activate()
@@ -106,13 +112,58 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             string[] result = new string[2];
 
-            result[0] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? "Project Type" + Environment.NewLine : "Projekt Typ" + Environment.NewLine;
-            result[1] += SelectedProjectType(1033) + Environment.NewLine;
+            result[0] += ProjectWizardControl.Singleton.Localized.ProjectType + Environment.NewLine;
+            result[1] += SelectedProjectType() + Environment.NewLine;
 
-            result[0] += ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033 ? "Project Folder" : "Projekt Ordner";
-            result[1] += SelectedProjectFolderType(1033);
+            result[0] += ProjectWizardControl.Singleton.Localized.ProjectFolder;
+            result[1] += SelectedProjectFolderType();
 
             return result;
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+            labelNoAdminHint.Visible = true;
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public IContainer Components
+        {
+            get { return components; }
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
         }
 
         #endregion
@@ -144,36 +195,37 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        internal string SelectedProjectType(int languageID)
+        internal ProjectType SelectedProjectType()
         {
+            
             if (radioButtonAutomationAddin.Checked)
             {
                 if(checkBoxUseTools.Checked)
-                    return languageID == 1033 ? "NetOffice Addin" : "NetOffice Addin";
+                    return ProjectType.NetOfficeAddin;
                 else
-                    return languageID == 1033 ? "Simple Automation Addin" : "Einfaches Automation Addin";
+                    return ProjectType.NetOfficeAddin;
             }
             if (radioButtonWindowsForms.Checked)
-                return languageID == 1033 ? "WindowsForms" : "WindowsForms";
+                return ProjectType.WindowsForms;
             if (radioButtonConsole.Checked)
-                return languageID == 1033 ? "Console" : "Konsole";
+                return  ProjectType.Console;
             if (radioButtonClassLibrary.Checked)
-                return languageID == 1033 ? "ClassLibrary" : "Klassenbibliothek";
+                return  ProjectType.ClassLibrary;
             throw new IndexOutOfRangeException("SelectedProjectType");
         }
 
-        internal string SelectedProjectFolderType(int languageID)
+        internal string SelectedProjectFolderType()
         {
             if (radioButtonApplicationData.Checked)
-                return languageID == 1033 ? "ApplicationData" : "ApplicationData";
+                return radioButtonApplicationData.Text;
             if (radioButtonDesktop.Checked)
-                return languageID == 1033 ? "Desktop" : "Desktop";
+                return radioButtonDesktop.Text;
             if (radioButtonUserFolder.Checked)
-                return languageID == 1033 ? "User" : "Eigene Dateien";
+                return radioButtonUserFolder.Text;
             if (radioButtonVSProjectFolder.Checked)
-                return languageID == 1033 ? "VSProject" : "Visual Studio Projektordner";                   
+                return radioButtonVSProjectFolder.Text;
             if (radioButtonCustomFolder.Checked)
-                return languageID == 1033 ? "Custom" : "Benutzerdefiniert";  
+                return radioButtonVSProjectFolder.Text;
             throw new IndexOutOfRangeException("SelectedProjectFolderType");
         }
 
@@ -192,7 +244,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             get
             {
-                switch (SelectedProjectFolderType(1033))
+                switch (SelectedProjectFolderType())
                 {
                     case "Custom":
                         return textBoxCustomFolder.Text;
@@ -204,8 +256,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         private void ChangeSettings()
         {
-            _settings.FirstChild.SelectSingleNode("ProjectType").InnerText = SelectedProjectType(1033);
-            _settings.FirstChild.SelectSingleNode("ProjectFolderType").InnerText = SelectedProjectFolderType(1033);
+            _settings.FirstChild.SelectSingleNode("ProjectType").InnerText = SelectedProjectType().ToString();
+            _settings.FirstChild.SelectSingleNode("ProjectFolderType").InnerText = SelectedProjectFolderType();
             _settings.FirstChild.SelectSingleNode("ProjectFolder").InnerText = SelectedFolder;
         }
 
@@ -253,7 +305,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
             }
         }
 
@@ -268,7 +320,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             try
             {
-                switch (ProjectWizardControl.Singleton.Host.CurrentLanguageID)
+                switch (Forms.MainForm.Singleton.CurrentLanguageID)
                 {
                     case 1049:
                         System.Diagnostics.Process.Start("http://netoffice.codeplex.com/wikipage?title=Tools_RS");
@@ -283,7 +335,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, 1033);
             }
         }
     }

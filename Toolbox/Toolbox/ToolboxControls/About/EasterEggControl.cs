@@ -199,7 +199,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
     }

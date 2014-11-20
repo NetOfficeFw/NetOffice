@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 {
+    [RessourceTable("ToolboxControls.AddinGuard.Strings.txt")]
     public partial class AddinGuardControl : UserControl, IToolboxControl
     {
         #region Fields
@@ -58,7 +59,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, 1033);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
             }
         }
          
@@ -117,7 +118,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 
         #endregion
 
-        #region IToolboxControl Member
+        #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
 
@@ -240,13 +241,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 
         public void SetLanguage(int id)
         {
-            _controller.ActiveLanguageID = id;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.AddinGuard.MessageTable.txt", id);
+            //_controller.ActiveLanguageID = id;
+            //Translation.Translator.TranslateControls(this, "ToolboxControls.AddinGuard.MessageTable.txt", id);
         }
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.AddinGuard.Info" + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if(null != language)
+            {
+                string content = language.Components["AddinGuard-Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.AddinGuard.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Release()
@@ -255,7 +263,47 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
         }
 
         #endregion
-     
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[]{new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl))};
+            }
+        }
+
+        #endregion
+
         #region PropertyChanged Trigger
 
         private void WatchNotify_MessageFiredInvoke()
@@ -271,7 +319,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -284,7 +332,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -301,7 +349,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -341,7 +389,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
  
@@ -374,7 +422,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -390,7 +438,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -413,7 +461,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }  
 
@@ -433,7 +481,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -452,7 +500,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -474,7 +522,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -520,7 +568,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -532,7 +580,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -544,7 +592,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -572,7 +620,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 

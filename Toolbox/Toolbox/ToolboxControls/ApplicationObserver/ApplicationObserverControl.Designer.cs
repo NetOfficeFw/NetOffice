@@ -17,25 +17,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationObserverControl));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem85 = new System.Windows.Forms.ListViewItem(new string[] {
             "Excel",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem86 = new System.Windows.Forms.ListViewItem(new string[] {
             "Winword",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem87 = new System.Windows.Forms.ListViewItem(new string[] {
             "Outlook",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem88 = new System.Windows.Forms.ListViewItem(new string[] {
             "PowerPnt",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem89 = new System.Windows.Forms.ListViewItem(new string[] {
             "MsAccess",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem90 = new System.Windows.Forms.ListViewItem(new string[] {
             "WinProj",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem91 = new System.Windows.Forms.ListViewItem(new string[] {
             "Visio",
             ""}, -1);
             this.labelNoOfficeAppRunning = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.labelNoOfficeAppRunning.Name = "labelNoOfficeAppRunning";
             this.labelNoOfficeAppRunning.Size = new System.Drawing.Size(405, 20);
             this.labelNoOfficeAppRunning.TabIndex = 25;
-            this.labelNoOfficeAppRunning.Text = "Keine der ausgewählten Anwendungen aktiv";
+            this.labelNoOfficeAppRunning.Text = "None of the chose applications are active";
             // 
             // labelOneOrMoreIsRunning
             // 
@@ -96,7 +96,7 @@
             this.labelOneOrMoreIsRunning.Name = "labelOneOrMoreIsRunning";
             this.labelOneOrMoreIsRunning.Size = new System.Drawing.Size(405, 20);
             this.labelOneOrMoreIsRunning.TabIndex = 24;
-            this.labelOneOrMoreIsRunning.Text = "Eine oder mehrere der ausgewählten Anwendungen aktiv";
+            this.labelOneOrMoreIsRunning.Text = "One or more of the chosen applications are active";
             // 
             // pictureBoxRunningOff
             // 
@@ -133,7 +133,7 @@
             this.buttonKillApps.Name = "buttonKillApps";
             this.buttonKillApps.Size = new System.Drawing.Size(433, 34);
             this.buttonKillApps.TabIndex = 21;
-            this.buttonKillApps.Text = "   Beenden";
+            this.buttonKillApps.Text = "Kill";
             this.buttonKillApps.UseVisualStyleBackColor = true;
             this.buttonKillApps.Click += new System.EventHandler(this.buttonKillApps_Click);
             // 
@@ -146,9 +146,9 @@
             this.checkBoxAppKill.Location = new System.Drawing.Point(52, 331);
             this.checkBoxAppKill.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAppKill.Name = "checkBoxAppKill";
-            this.checkBoxAppKill.Size = new System.Drawing.Size(100, 21);
+            this.checkBoxAppKill.Size = new System.Drawing.Size(58, 21);
             this.checkBoxAppKill.TabIndex = 20;
-            this.checkBoxAppKill.Text = "Eingeschaltet";
+            this.checkBoxAppKill.Text = "Active";
             this.checkBoxAppKill.UseVisualStyleBackColor = true;
             this.checkBoxAppKill.CheckedChanged += new System.EventHandler(this.checkBoxAppKill_CheckedChanged);
             // 
@@ -163,21 +163,21 @@
             this.listViewApps.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewApps.ForeColor = System.Drawing.Color.Blue;
             this.listViewApps.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            listViewItem1.StateImageIndex = 0;
-            listViewItem2.StateImageIndex = 0;
-            listViewItem3.StateImageIndex = 0;
-            listViewItem4.StateImageIndex = 0;
-            listViewItem5.StateImageIndex = 0;
-            listViewItem6.StateImageIndex = 0;
-            listViewItem7.StateImageIndex = 0;
+            listViewItem85.StateImageIndex = 0;
+            listViewItem86.StateImageIndex = 0;
+            listViewItem87.StateImageIndex = 0;
+            listViewItem88.StateImageIndex = 0;
+            listViewItem89.StateImageIndex = 0;
+            listViewItem90.StateImageIndex = 0;
+            listViewItem91.StateImageIndex = 0;
             this.listViewApps.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem85,
+            listViewItem86,
+            listViewItem87,
+            listViewItem88,
+            listViewItem89,
+            listViewItem90,
+            listViewItem91});
             this.listViewApps.Location = new System.Drawing.Point(49, 52);
             this.listViewApps.Margin = new System.Windows.Forms.Padding(4);
             this.listViewApps.Name = "listViewApps";
@@ -207,9 +207,9 @@
             this.checkBoxAppsTray.Location = new System.Drawing.Point(50, 520);
             this.checkBoxAppsTray.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxAppsTray.Name = "checkBoxAppsTray";
-            this.checkBoxAppsTray.Size = new System.Drawing.Size(100, 21);
+            this.checkBoxAppsTray.Size = new System.Drawing.Size(58, 21);
             this.checkBoxAppsTray.TabIndex = 18;
-            this.checkBoxAppsTray.Text = "Eingeschaltet";
+            this.checkBoxAppsTray.Text = "Active";
             this.checkBoxAppsTray.UseVisualStyleBackColor = true;
             this.checkBoxAppsTray.CheckedChanged += new System.EventHandler(this.checkBoxAppsTray_CheckedChanged);
             // 
@@ -224,7 +224,7 @@
             this.labelShowTray.Name = "labelShowTray";
             this.labelShowTray.Size = new System.Drawing.Size(433, 20);
             this.labelShowTray.TabIndex = 17;
-            this.labelShowTray.Text = "Information als Tray Icon anzeigen";
+            this.labelShowTray.Text = "Show information as tray icon";
             // 
             // labelInsertHotkey
             // 
@@ -236,8 +236,7 @@
             this.labelInsertHotkey.Name = "labelInsertHotkey";
             this.labelInsertHotkey.Size = new System.Drawing.Size(433, 36);
             this.labelInsertHotkey.TabIndex = 16;
-            this.labelInsertHotkey.Text = "Geben Sie eine Tastenkombination ein mit der Sie ausgewählte Office Anwendungen a" +
-                "us dem Speicher entfernen möchten";
+            this.labelInsertHotkey.Text = "Enter the hotkey which you want to assign to remove the application from memory";
             // 
             // textBoxHotKey
             // 
@@ -264,7 +263,7 @@
             this.labelMain.Name = "labelMain";
             this.labelMain.Size = new System.Drawing.Size(433, 20);
             this.labelMain.TabIndex = 14;
-            this.labelMain.Text = "Wählen Sie die Office Anwendungen aus die Sie überwachen möchten";
+            this.labelMain.Text = "Choose your Office application(s) you want to observe";
             // 
             // labelOfficeApplication
             // 
@@ -277,7 +276,7 @@
             this.labelOfficeApplication.Name = "labelOfficeApplication";
             this.labelOfficeApplication.Size = new System.Drawing.Size(97, 18);
             this.labelOfficeApplication.TabIndex = 27;
-            this.labelOfficeApplication.Text = "Anwendung";
+            this.labelOfficeApplication.Text = "Application";
             // 
             // labelOfficeApplicationInstanceCount
             // 
@@ -290,7 +289,7 @@
             this.labelOfficeApplicationInstanceCount.Name = "labelOfficeApplicationInstanceCount";
             this.labelOfficeApplicationInstanceCount.Size = new System.Drawing.Size(173, 18);
             this.labelOfficeApplicationInstanceCount.TabIndex = 28;
-            this.labelOfficeApplicationInstanceCount.Text = "Instanzen im Speicher";
+            this.labelOfficeApplicationInstanceCount.Text = "Instances in memory";
             // 
             // labelActiveProcessList
             // 
@@ -304,7 +303,7 @@
             this.labelActiveProcessList.Name = "labelActiveProcessList";
             this.labelActiveProcessList.Size = new System.Drawing.Size(388, 20);
             this.labelActiveProcessList.TabIndex = 30;
-            this.labelActiveProcessList.Text = "Aktive Prozesse";
+            this.labelActiveProcessList.Text = "Active Processes";
             // 
             // checkBoxShowQuestion
             // 
@@ -315,9 +314,9 @@
             this.checkBoxShowQuestion.Location = new System.Drawing.Point(52, 360);
             this.checkBoxShowQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShowQuestion.Name = "checkBoxShowQuestion";
-            this.checkBoxShowQuestion.Size = new System.Drawing.Size(168, 21);
+            this.checkBoxShowQuestion.Size = new System.Drawing.Size(124, 21);
             this.checkBoxShowQuestion.TabIndex = 31;
-            this.checkBoxShowQuestion.Text = "Vor Beenden nachfragen";
+            this.checkBoxShowQuestion.Text = "Ask before killing";
             this.checkBoxShowQuestion.UseVisualStyleBackColor = true;
             this.checkBoxShowQuestion.CheckedChanged += new System.EventHandler(this.checkBoxShowQuestion_CheckedChanged);
             // 
@@ -326,12 +325,12 @@
             this.labelKillQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKillQuestion.BackColor = System.Drawing.SystemColors.Control;
             this.labelKillQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelKillQuestion.Location = new System.Drawing.Point(616, 624);
+            this.labelKillQuestion.Location = new System.Drawing.Point(572, 616);
             this.labelKillQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelKillQuestion.Name = "labelKillQuestion";
             this.labelKillQuestion.Size = new System.Drawing.Size(235, 15);
             this.labelKillQuestion.TabIndex = 32;
-            this.labelKillQuestion.Text = "Ausgewählte Instanzen löschen?";
+            this.labelKillQuestion.Text = "Kill selected Instances?";
             this.labelKillQuestion.Visible = false;
             this.labelKillQuestion.TextChanged += new System.EventHandler(this.labelKillQuestion_TextChanged);
             // 

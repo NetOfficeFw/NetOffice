@@ -11,6 +11,7 @@ using NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 {
+    [RessourceTable("ToolboxControls.ProjectWizard.Strings.txt")]
     public partial class ProjectWizardControl : UserControl, IToolboxControl
     {
         #region Fields
@@ -26,6 +27,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         public ProjectWizardControl()
         {
             InitializeComponent();
+            Localized = new LocalizedContent();
+            Captions = new LocalizedCaptions();
             Singleton = this;
         }
 
@@ -44,6 +47,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         internal static ProjectWizardControl Singleton { get; private set; }
 
         private bool IsCurrentlyActive { get { return panelWizardHost.Visible; } }
+
+        internal LocalizedContent Localized { get; private set; }
+
+        internal LocalizedCaptions Captions { get; private set; }
 
         #endregion
 
@@ -169,7 +176,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.ProjectWizard.Info." + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if (null != language)
+            {
+                string content = language.Components["Project Wizard - Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.ProjectWizard.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Release()
@@ -180,6 +194,59 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         public IContainer Components
         {
             get { return components; }
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new LocalizationDefaultChildInfo[] { 
+                    new LocalizationDefaultChildInfo("Captions", typeof(LocalizedCaptionsControl)),
+                    new LocalizationDefaultChildInfo("Messages", typeof(LocalizationStringsControl)),
+                    new LocalizationDefaultChildInfo("Environment", typeof(LocalizationStringsControl)),
+                    new LocalizationDefaultChildInfo("Host", typeof(HostControl)),
+                    new LocalizationDefaultChildInfo("Load", typeof(LoadControl)),
+                    new LocalizationDefaultChildInfo("Gui", typeof(EnvironmentControl)),
+                    new LocalizationDefaultChildInfo("Environment", typeof(GuiControl)),
+                    new LocalizationDefaultChildInfo("Name", typeof(NameControl)),
+                    new LocalizationDefaultChildInfo("Project", typeof(ProjectControl)),
+                    new LocalizationDefaultChildInfo("Summary", typeof(SummaryControl)),
+                    new LocalizationDefaultChildInfo("Finish", typeof(FinishControl)),
+                    new LocalizationDefaultChildInfo("Help", typeof(NetOffice.DeveloperToolbox.Controls.InfoLayer.InfoControl)) 
+                };
+            }
         }
 
         #endregion
@@ -332,16 +399,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                     ProjectControl ctrl = item as ProjectControl;
                     if (null != ctrl)
                     {
-                        if (ProjectWizard.ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033)
-                        {
-                            if ("NetOffice Addin" == ctrl.SelectedProjectType(1033) || "Simple Automation Addin" == ctrl.SelectedProjectType(1033))
-                                return true;
-                        }
-                        else
-                        {
-                            if ("NetOffice Addin" == ctrl.SelectedProjectType(1031) || "Einfaches Automation Addin" == ctrl.SelectedProjectType(1031))
-                                return true;
-                        }
+                        if (ProjectType.NetOfficeAddin == ctrl.SelectedProjectType() || ProjectType.SimpleAddin == ctrl.SelectedProjectType())
+                            return true;
                     }
                 }
                 return false;
@@ -357,16 +416,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                     ProjectControl ctrl = item as ProjectControl;
                     if (null != ctrl)
                     {
-                        if (ProjectWizard.ProjectWizardControl.Singleton.Host.CurrentLanguageID == 1033)
-                        {
-                            if ("Simple Automation Addin" == ctrl.SelectedProjectType(1033))
-                                return true;
-                        }
-                        else
-                        {
-                            if ("Einfaches Automation Addin" == ctrl.SelectedProjectType(1031))
-                                return true;
-                        }
+                        if (ProjectType.SimpleAddin == ctrl.SelectedProjectType())
+                            return true;
                     }
                 }
                 return false;
@@ -419,11 +470,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                     nextButton.Visible = true;
                     finishButton.Visible = false;
                 }
-
+                
                 (_currentControl as IWizardControl).Translate();
                 (_currentControl as IWizardControl).Activate();
-                labelCaption.Text = (_currentControl as IWizardControl).Caption;
-                labelDescription.Text = (_currentControl as IWizardControl).Description;
+                labelCaption.Text = Captions.GetCaption(_currentControl as IWizardControl);
+                labelDescription.Text = Captions.GetDescription(_currentControl as IWizardControl);
                 if ((_currentControl as IWizardControl).Image == ImageType.Question)
                     imageBox.Image = imageListIcons.Images[0];
                 else
@@ -435,11 +486,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                 if (currentIndex > totalCount)
                     currentIndex = totalCount;
 
-                if (Host.CurrentLanguageID == 1031)
-                    labelCurrentStep.Text = string.Format("Schritt {0} von {1}", currentIndex, totalCount);
-
-                else
-                    labelCurrentStep.Text = string.Format("Step {0} of {1}", currentIndex, totalCount);
+                labelCurrentStep.Text = Localized.StepProgress.Replace("{0}", currentIndex.ToString()).Replace("{1}", totalCount.ToString());
 
                 labelCurrentStep.Tag = new string[] { (GetControlIndex(_currentControl) + 1).ToString(), _listControls.Count.ToString() };
 
@@ -471,8 +518,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 
             _finishControl.Translate();
             _finishControl.Activate();
-
-            labelCurrentStep.Text = Host.CurrentLanguageID == 1031 ? "Abgeschlossen" : "Completed";
+            
+            labelCurrentStep.Text = Localized.Completed;;
             labelCaption.Text = _finishControl.Caption;
             labelDescription.Text = _finishControl.Description;
             if (_finishControl.Image == ImageType.Question)
@@ -575,6 +622,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             try
             {
+                foreach (var item in _listControls)
+                    item.Translate();
                 CreateNewProject();
             }
             catch (Exception exception)
@@ -637,7 +686,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             try
             {
-                string message = Host.CurrentLanguageID == 1031 ? "Das Projekt wurde erstellt." : "The project is complete.";
                 ProjectConverters.Converter converter = ProjectConverters.Converter.CreateConverter(new ProjectOptions(_listControls));
                 string solutionPath = converter.CreateSolution();
                 converter.Dispose();

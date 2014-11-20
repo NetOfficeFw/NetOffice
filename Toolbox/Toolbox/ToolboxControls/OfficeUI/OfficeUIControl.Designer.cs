@@ -137,9 +137,9 @@
             this.checkBoxScanForProperties.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxScanForProperties.Location = new System.Drawing.Point(13, 420);
             this.checkBoxScanForProperties.Name = "checkBoxScanForProperties";
-            this.checkBoxScanForProperties.Size = new System.Drawing.Size(157, 20);
+            this.checkBoxScanForProperties.Size = new System.Drawing.Size(110, 20);
             this.checkBoxScanForProperties.TabIndex = 1;
-            this.checkBoxScanForProperties.Text = "Eigenschaften abrufen";
+            this.checkBoxScanForProperties.Text = "Get Properties";
             this.checkBoxScanForProperties.UseVisualStyleBackColor = true;
             // 
             // propertyGridItems
@@ -170,7 +170,7 @@
             this.buttonCloseOfficeApp.Name = "buttonCloseOfficeApp";
             this.buttonCloseOfficeApp.Size = new System.Drawing.Size(256, 28);
             this.buttonCloseOfficeApp.TabIndex = 4;
-            this.buttonCloseOfficeApp.Text = "Office Anwendung schliessen";
+            this.buttonCloseOfficeApp.Text = "Close Application";
             this.buttonCloseOfficeApp.UseVisualStyleBackColor = true;
             this.buttonCloseOfficeApp.Click += new System.EventHandler(this.buttonCloseOfficeApp_Click);
             // 
@@ -185,7 +185,7 @@
             this.buttonStartApplication.Name = "buttonStartApplication";
             this.buttonStartApplication.Size = new System.Drawing.Size(193, 29);
             this.buttonStartApplication.TabIndex = 3;
-            this.buttonStartApplication.Text = "Anwendung auswählen";
+            this.buttonStartApplication.Text = "Choose Application";
             this.buttonStartApplication.UseVisualStyleBackColor = true;
             this.buttonStartApplication.Click += new System.EventHandler(this.buttonStartApplication_Click);
             // 
@@ -219,9 +219,9 @@
             this.labelInfo.ForeColor = System.Drawing.Color.DimGray;
             this.labelInfo.Location = new System.Drawing.Point(42, 5);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(469, 16);
+            this.labelInfo.Size = new System.Drawing.Size(355, 16);
             this.labelInfo.TabIndex = 72;
-            this.labelInfo.Text = "Nutzen Sie das Kontextmenü in der linken Übersicht um Elemente zu entfernen.";
+            this.labelInfo.Text = "Use the context menu in the left area to remove an element.";
             // 
             // OfficeUIControl
             // 

@@ -31,22 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnvironmentControl));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelProgrammingLanguage = new System.Windows.Forms.Label();
-            this.labelRuntimeHeader = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
             this.comboBoxNetRuntime = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelNetRuntime = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelEnvironment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonVB = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.radioButtonCSharp = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNet45Hint = new System.Windows.Forms.Label();
-            this.labelSharpDevelop = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.radioButtonVS2013 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.radioButtonVS2012 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
             this.radioButtonVS2010 = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
-            this.radioButtonVB = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
-            this.radioButtonCSharp = new NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton();
+            this.labelSharpDevelop = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,21 +72,21 @@
             this.labelProgrammingLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProgrammingLanguage.Location = new System.Drawing.Point(42, 11);
             this.labelProgrammingLanguage.Name = "labelProgrammingLanguage";
-            this.labelProgrammingLanguage.Size = new System.Drawing.Size(131, 17);
+            this.labelProgrammingLanguage.Size = new System.Drawing.Size(65, 17);
             this.labelProgrammingLanguage.TabIndex = 96;
-            this.labelProgrammingLanguage.Text = "Programmiersprache";
+            this.labelProgrammingLanguage.Text = "Language";
             // 
-            // labelRuntimeHeader
+            // labelVersion
             // 
-            this.labelRuntimeHeader.AutoSize = true;
-            this.labelRuntimeHeader.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.labelRuntimeHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRuntimeHeader.ForeColor = System.Drawing.Color.Blue;
-            this.labelRuntimeHeader.Location = new System.Drawing.Point(63, 213);
-            this.labelRuntimeHeader.Name = "labelRuntimeHeader";
-            this.labelRuntimeHeader.Size = new System.Drawing.Size(52, 17);
-            this.labelRuntimeHeader.TabIndex = 102;
-            this.labelRuntimeHeader.Text = "Version";
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersion.ForeColor = System.Drawing.Color.Blue;
+            this.labelVersion.Location = new System.Drawing.Point(63, 213);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(52, 17);
+            this.labelVersion.TabIndex = 102;
+            this.labelVersion.Text = "Version";
             // 
             // comboBoxNetRuntime
             // 
@@ -124,9 +124,9 @@
             this.labelNetRuntime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNetRuntime.Location = new System.Drawing.Point(65, 181);
             this.labelNetRuntime.Name = "labelNetRuntime";
-            this.labelNetRuntime.Size = new System.Drawing.Size(146, 17);
+            this.labelNetRuntime.Size = new System.Drawing.Size(86, 17);
             this.labelNetRuntime.TabIndex = 99;
-            this.labelNetRuntime.Text = ".NET Laufzeitumgebung";
+            this.labelNetRuntime.Text = ".NET Runtime";
             // 
             // pictureBox1
             // 
@@ -145,9 +145,9 @@
             this.labelEnvironment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEnvironment.Location = new System.Drawing.Point(45, 7);
             this.labelEnvironment.Name = "labelEnvironment";
-            this.labelEnvironment.Size = new System.Drawing.Size(147, 17);
+            this.labelEnvironment.Size = new System.Drawing.Size(80, 17);
             this.labelEnvironment.TabIndex = 105;
-            this.labelEnvironment.Text = "Entwicklungsumgebung:";
+            this.labelEnvironment.Text = "Environment";
             // 
             // panel1
             // 
@@ -159,6 +159,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 71);
             this.panel1.TabIndex = 108;
+            // 
+            // radioButtonVB
+            // 
+            this.radioButtonVB.AutoSize = true;
+            this.radioButtonVB.Checked = true;
+            this.radioButtonVB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonVB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonVB.ForeColor = System.Drawing.Color.Blue;
+            this.radioButtonVB.Location = new System.Drawing.Point(48, 41);
+            this.radioButtonVB.Name = "radioButtonVB";
+            this.radioButtonVB.Size = new System.Drawing.Size(67, 21);
+            this.radioButtonVB.TabIndex = 97;
+            this.radioButtonVB.TabStop = true;
+            this.radioButtonVB.Text = "VB.NET";
+            this.radioButtonVB.UseVisualStyleBackColor = true;
+            this.radioButtonVB.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
+            // 
+            // radioButtonCSharp
+            // 
+            this.radioButtonCSharp.AutoSize = true;
+            this.radioButtonCSharp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonCSharp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCSharp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.radioButtonCSharp.Location = new System.Drawing.Point(134, 41);
+            this.radioButtonCSharp.Name = "radioButtonCSharp";
+            this.radioButtonCSharp.Size = new System.Drawing.Size(41, 21);
+            this.radioButtonCSharp.TabIndex = 95;
+            this.radioButtonCSharp.Text = "C#";
+            this.radioButtonCSharp.UseVisualStyleBackColor = true;
+            this.radioButtonCSharp.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
             // 
             // panel2
             // 
@@ -180,32 +210,10 @@
             this.labelNet45Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNet45Hint.Location = new System.Drawing.Point(455, 7);
             this.labelNet45Hint.Name = "labelNet45Hint";
-            this.labelNet45Hint.Size = new System.Drawing.Size(222, 16);
+            this.labelNet45Hint.Size = new System.Drawing.Size(205, 16);
             this.labelNet45Hint.TabIndex = 109;
-            this.labelNet45Hint.Text = ".NET 4.5 benötigt Visual Studio 2013";
+            this.labelNet45Hint.Text = ".NET 4.5 need Visual Studio 2013";
             this.labelNet45Hint.Visible = false;
-            // 
-            // labelSharpDevelop
-            // 
-            this.labelSharpDevelop.AutoSize = true;
-            this.labelSharpDevelop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSharpDevelop.ForeColor = System.Drawing.Color.DimGray;
-            this.labelSharpDevelop.Location = new System.Drawing.Point(294, 64);
-            this.labelSharpDevelop.Name = "labelSharpDevelop";
-            this.labelSharpDevelop.Size = new System.Drawing.Size(394, 17);
-            this.labelSharpDevelop.TabIndex = 110;
-            this.labelSharpDevelop.Text = "Für #SharpDevelop 4.3 kann Visual Studio 2010 verwendet werden";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(272, 64);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 18);
-            this.pictureBox4.TabIndex = 117;
-            this.pictureBox4.TabStop = false;
             // 
             // radioButtonVS2013
             // 
@@ -250,35 +258,27 @@
             this.radioButtonVS2010.UseVisualStyleBackColor = true;
             this.radioButtonVS2010.CheckedChanged += new System.EventHandler(this.radioButtonIDE_CheckedChanged);
             // 
-            // radioButtonVB
+            // labelSharpDevelop
             // 
-            this.radioButtonVB.AutoSize = true;
-            this.radioButtonVB.Checked = true;
-            this.radioButtonVB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonVB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonVB.ForeColor = System.Drawing.Color.Blue;
-            this.radioButtonVB.Location = new System.Drawing.Point(48, 41);
-            this.radioButtonVB.Name = "radioButtonVB";
-            this.radioButtonVB.Size = new System.Drawing.Size(67, 21);
-            this.radioButtonVB.TabIndex = 97;
-            this.radioButtonVB.TabStop = true;
-            this.radioButtonVB.Text = "VB.NET";
-            this.radioButtonVB.UseVisualStyleBackColor = true;
-            this.radioButtonVB.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
+            this.labelSharpDevelop.AutoSize = true;
+            this.labelSharpDevelop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSharpDevelop.ForeColor = System.Drawing.Color.DimGray;
+            this.labelSharpDevelop.Location = new System.Drawing.Point(294, 64);
+            this.labelSharpDevelop.Name = "labelSharpDevelop";
+            this.labelSharpDevelop.Size = new System.Drawing.Size(323, 17);
+            this.labelSharpDevelop.TabIndex = 110;
+            this.labelSharpDevelop.Text = "Use Visual Studio 2010 if you want #SharpDevelop 4.3";
             // 
-            // radioButtonCSharp
+            // pictureBox4
             // 
-            this.radioButtonCSharp.AutoSize = true;
-            this.radioButtonCSharp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonCSharp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCSharp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radioButtonCSharp.Location = new System.Drawing.Point(134, 41);
-            this.radioButtonCSharp.Name = "radioButtonCSharp";
-            this.radioButtonCSharp.Size = new System.Drawing.Size(41, 21);
-            this.radioButtonCSharp.TabIndex = 95;
-            this.radioButtonCSharp.Text = "C#";
-            this.radioButtonCSharp.UseVisualStyleBackColor = true;
-            this.radioButtonCSharp.CheckedChanged += new System.EventHandler(this.radioButtonLanguage_CheckedChanged);
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(272, 64);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 18);
+            this.pictureBox4.TabIndex = 117;
+            this.pictureBox4.TabStop = false;
             // 
             // EnvironmentControl
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.labelSharpDevelop);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelRuntimeHeader);
+            this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.comboBoxNetRuntime);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelNetRuntime);
@@ -315,7 +315,7 @@
         private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonVB;
         private System.Windows.Forms.Label labelProgrammingLanguage;
         private NetOffice.DeveloperToolbox.Controls.Radio.GlowRadioButton radioButtonCSharp;
-        private System.Windows.Forms.Label labelRuntimeHeader;
+        private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.ComboBox comboBoxNetRuntime;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelNetRuntime;

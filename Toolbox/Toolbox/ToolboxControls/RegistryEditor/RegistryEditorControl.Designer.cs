@@ -80,7 +80,7 @@
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(276, 23);
             this.labelTitle.TabIndex = 29;
-            this.labelTitle.Text = "Office Registry Keys auf einen Blick.";
+            this.labelTitle.Text = "Office Registry Keys at a glance";
             // 
             // buttonRefresh
             // 
@@ -95,7 +95,7 @@
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(120, 32);
             this.buttonRefresh.TabIndex = 30;
-            this.buttonRefresh.Text = "&Aktualisieren";
+            this.buttonRefresh.Text = "&Refresh";
             this.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
@@ -287,7 +287,7 @@
             // 
             this.toolStripCreateStringEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateStringEntry.Image")));
             this.toolStripCreateStringEntry.Name = "toolStripCreateStringEntry";
-            this.toolStripCreateStringEntry.Size = new System.Drawing.Size(143, 22);
+            this.toolStripCreateStringEntry.Size = new System.Drawing.Size(146, 22);
             this.toolStripCreateStringEntry.Text = "Zeichenfolge";
             this.toolStripCreateStringEntry.Click += new System.EventHandler(this.toolStripCreateStringEntry_Click);
             // 
@@ -295,7 +295,7 @@
             // 
             this.toolStripCreateBinaryEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateBinaryEntry.Image")));
             this.toolStripCreateBinaryEntry.Name = "toolStripCreateBinaryEntry";
-            this.toolStripCreateBinaryEntry.Size = new System.Drawing.Size(143, 22);
+            this.toolStripCreateBinaryEntry.Size = new System.Drawing.Size(146, 22);
             this.toolStripCreateBinaryEntry.Text = "Binärwert";
             this.toolStripCreateBinaryEntry.Click += new System.EventHandler(this.toolStripCreateBinaryEntry_Click);
             // 
@@ -303,7 +303,7 @@
             // 
             this.toolStripCreateDWORDEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateDWORDEntry.Image")));
             this.toolStripCreateDWORDEntry.Name = "toolStripCreateDWORDEntry";
-            this.toolStripCreateDWORDEntry.Size = new System.Drawing.Size(143, 22);
+            this.toolStripCreateDWORDEntry.Size = new System.Drawing.Size(146, 22);
             this.toolStripCreateDWORDEntry.Text = "DWORD";
             this.toolStripCreateDWORDEntry.Click += new System.EventHandler(this.toolStripCreateDWORDEntry_Click);
             // 
@@ -408,9 +408,9 @@
             this.checkBoxDeleteQuestion.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(314, 0);
             this.checkBoxDeleteQuestion.Name = "checkBoxDeleteQuestion";
-            this.checkBoxDeleteQuestion.Size = new System.Drawing.Size(195, 21);
+            this.checkBoxDeleteQuestion.Size = new System.Drawing.Size(138, 21);
             this.checkBoxDeleteQuestion.TabIndex = 36;
-            this.checkBoxDeleteQuestion.Text = "Vor dem Löschen nachfragen";
+            this.checkBoxDeleteQuestion.Text = "Ask before deleting";
             this.checkBoxDeleteQuestion.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
@@ -434,8 +434,8 @@
             this.labelNoAdminHint.Name = "labelNoAdminHint";
             this.labelNoAdminHint.Size = new System.Drawing.Size(712, 16);
             this.labelNoAdminHint.TabIndex = 41;
-            this.labelNoAdminHint.Text = "Aufgrund fehlender Administratorberechtigung können Sie keine Werte im HiveKey Lo" +
-                "calMachine hinzufügen, löschen oder ändern.";
+            this.labelNoAdminHint.Text = "Due to missing administrator privileges you cannot add, delete or change values i" +
+                "n the HiveKey LocalMachine.";
             this.labelNoAdminHint.Visible = false;
             // 
             // contextMenuStripNoAdmin
@@ -473,9 +473,9 @@
             this.labelSearch.ForeColor = System.Drawing.Color.Blue;
             this.labelSearch.Location = new System.Drawing.Point(628, 2);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(49, 17);
+            this.labelSearch.Size = new System.Drawing.Size(47, 17);
             this.labelSearch.TabIndex = 43;
-            this.labelSearch.Text = "Suchen";
+            this.labelSearch.Text = "Search";
             // 
             // pictureBoxNoResult
             // 

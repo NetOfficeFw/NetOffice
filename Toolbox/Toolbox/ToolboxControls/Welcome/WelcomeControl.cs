@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 {
+    [RessourceTable("ToolboxControls.Welcome.Strings.txt")]
     public partial class WelcomeControl : UserControl, IToolboxControl
     {
         #region Ctor
@@ -83,9 +84,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         }
 
         public void InitializeControl(IToolboxHost host)
-        {
+        {            
             Host = host;
+            comboBoxLanguage.DataSource = host.Languages;
             Host.Minimized += new EventHandler(Host_Minimized);
+            Host.LanguageEditorVisibleChanged += new EventHandler(Host_LanguageEditorVisibleChanged);            
         }
 
         public void Activate(bool firstTime)
@@ -123,10 +126,34 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
                 checkBoxMinimizeToTray.Checked = Convert.ToBoolean(trayNode.InnerText);
             if(null != startupNode)
                 checkBoxStartAppWithWindows.Checked = Convert.ToBoolean(startupNode.InnerText);
+
             if (null != languageNode)
-                comboBoxLanguage.SelectedIndex = Convert.ToInt32(languageNode.InnerText);
+            { 
+                int lcid = 1033;
+                if (!int.TryParse((languageNode.InnerText), out lcid))
+                    lcid = 1033;
+                SelectLanguage(lcid);
+            }
             else
-                comboBoxLanguage.SelectedIndex = 0;
+                SelectLanguage(1033);
+        }
+
+        private void SelectLanguage(int lcid)
+        {
+            Translation.ToolLanguages languages = comboBoxLanguage.DataSource as Translation.ToolLanguages;
+            if (null != languages)
+            {
+                Translation.ToolLanguage language = languages.Where(l => l.LCID == lcid).FirstOrDefault();
+                if (null != language)
+                {
+                    comboBoxLanguage.SelectedItem = language;
+                }
+                else
+                {
+                    language = languages.First(l => l.LCID == 1033);
+                    comboBoxLanguage.SelectedItem = language;
+                }
+            }
         }
 
         public void SaveConfiguration(System.Xml.XmlNode configNode)
@@ -163,7 +190,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             minimizeNode.InnerText = checkBoxStartAppMinimized.Checked.ToString();
             trayNode.InnerText = checkBoxMinimizeToTray.Checked.ToString();
             startupNode.InnerText = checkBoxStartAppWithWindows.Checked.ToString();
-            languageNode.InnerText = comboBoxLanguage.SelectedIndex.ToString();
+            languageNode.InnerText = (comboBoxLanguage.SelectedItem as Translation.ToolLanguage).LCID.ToString();
 
             SetupAutoRunEntry();
         }
@@ -196,7 +223,52 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 
         #endregion
 
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[0];
+            }
+        }
+
+        #endregion
+
         #region Methods
+
+        internal void SetDefaultLanguage(int lcid, string parentComponentName)
+        {
+            comboBoxLanguage.SelectedIndex = 0;
+        }
 
         private void SetupAutoRunEntry()
         {
@@ -266,11 +338,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         {
             try
             {
-                Host.CurrentLanguageID = comboBoxLanguage.SelectedIndex == 0 ? 1033 : 1031;
+                Translation.ToolLanguage selectedLanguage = comboBoxLanguage.SelectedItem as Translation.ToolLanguage;
+                if (null != selectedLanguage && selectedLanguage.LCID != 0)
+                    Host.CurrentLanguageID = selectedLanguage.LCID;
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -283,7 +357,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -295,7 +369,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                 Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -308,7 +382,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -321,7 +395,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -334,8 +408,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
+        }
+
+        private void Host_LanguageEditorVisibleChanged(object sender, EventArgs e)
+        {
+            buttonLanguageEditor.Enabled = !Host.LanguageEditorVisible;
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)
@@ -346,8 +425,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
+        }
+
+        private void buttonLanguageEditor_Click(object sender, EventArgs e)
+        {
+            Host.LanguageEditorVisible = !Host.LanguageEditorVisible;
         }
 
         #endregion

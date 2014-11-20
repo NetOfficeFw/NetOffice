@@ -12,6 +12,7 @@ using NetOffice;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 {
+    [RessourceTable("ToolboxControls.OfficeUI.Strings.txt")]
     public partial class OfficeUIControl : UserControl, IToolboxControl
     {
         #region Fields
@@ -36,7 +37,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 
         #endregion
 
-        #region IToolboxControl Member
+        #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
 
@@ -129,7 +130,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 
         public Stream GetHelpText(int lcid)
         {
-            return Ressources.RessourceUtils.ReadStream("ToolboxControls.OfficeUI.Info" + lcid.ToString() + ".rtf");
+            Translation.ToolLanguage language = Host.Languages[lcid, false];
+            if (null != language)
+            {
+                string content = language.Components["Office UI - Help"].ControlRessources["richTextBoxHelpContent"].Value2;
+                return Ressources.RessourceUtils.CreateStreamFromString(content);
+            }
+            else
+                return Ressources.RessourceUtils.ReadStream("ToolboxControls.OfficeUI.Info" + lcid.ToString() + ".rtf");
         }
 
         public void Release()
@@ -142,6 +150,46 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             get
             {
                 return components;
+            }
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            Translation.Translator.TranslateControls(this, strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            Translation.Translator.TranslateControl(this, name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return Translation.Translator.TryGetControlText(this, name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return new ILocalizationChildInfo[] { new LocalizationDefaultChildInfo("Select App", typeof(SelectOfficeAppControl)), new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
             }
         }
 
@@ -240,7 +288,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -277,7 +325,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
             finally
             {
@@ -310,7 +358,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
             finally
             {
@@ -341,7 +389,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 
@@ -375,7 +423,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, Forms.ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
             }
         }
 

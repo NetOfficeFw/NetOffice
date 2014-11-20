@@ -1,0 +1,8 @@
+﻿[1031]
+buttonClose = Schliessen
+richTextBoxHelpContent = {0:$HelpContent}
+[End]
+[1033]
+buttonClose = Close
+richTextBoxHelpContent = {0:$HelpContent}
+[End]

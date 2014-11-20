@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostControl));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelHint = new System.Windows.Forms.Label();
             this.checkBoxVisio = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
             this.checkBoxProject = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
             this.checkBoxAccess = new NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox();
@@ -52,16 +52,16 @@
             this.pictureBox2.TabIndex = 118;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // labelHint
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(211, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 16);
-            this.label1.TabIndex = 119;
-            this.label1.Text = "Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar";
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.DimGray;
+            this.labelHint.Location = new System.Drawing.Point(211, 38);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(432, 16);
+            this.labelHint.TabIndex = 119;
+            this.labelHint.Text = "Diese Einstellungen sind auch mit den Tasten 1-7 der Tastatur änderbar";
             // 
             // checkBoxVisio
             // 
@@ -166,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelHint);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.checkBoxVisio);
             this.Controls.Add(this.checkBoxProject);
@@ -193,7 +193,7 @@
         internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxProject;
         internal NetOffice.DeveloperToolbox.Controls.Check.GlowCheckBox checkBoxVisio;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelHint;
 
     }
 }

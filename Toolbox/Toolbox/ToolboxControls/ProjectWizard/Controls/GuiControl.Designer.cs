@@ -46,9 +46,9 @@
             this.checkBoxClassicUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxClassicUISupport.Location = new System.Drawing.Point(40, 33);
             this.checkBoxClassicUISupport.Name = "checkBoxClassicUISupport";
-            this.checkBoxClassicUISupport.Size = new System.Drawing.Size(441, 21);
+            this.checkBoxClassicUISupport.Size = new System.Drawing.Size(237, 21);
             this.checkBoxClassicUISupport.TabIndex = 23;
-            this.checkBoxClassicUISupport.Text = "Ich möchte die Benutzeroberfläche in älteren Office Versionen erweitern";
+            this.checkBoxClassicUISupport.Text = "I want customize the classic Office UI";
             this.checkBoxClassicUISupport.UseVisualStyleBackColor = true;
             this.checkBoxClassicUISupport.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
@@ -62,9 +62,9 @@
             this.checkBoxRibbonUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxRibbonUISupport.Location = new System.Drawing.Point(40, 61);
             this.checkBoxRibbonUISupport.Name = "checkBoxRibbonUISupport";
-            this.checkBoxRibbonUISupport.Size = new System.Drawing.Size(446, 21);
+            this.checkBoxRibbonUISupport.Size = new System.Drawing.Size(204, 21);
             this.checkBoxRibbonUISupport.TabIndex = 22;
-            this.checkBoxRibbonUISupport.Text = "Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern";
+            this.checkBoxRibbonUISupport.Text = "I want customize the Ribbon UI";
             this.checkBoxRibbonUISupport.UseVisualStyleBackColor = true;
             this.checkBoxRibbonUISupport.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
@@ -78,9 +78,9 @@
             this.checkBoxTaskPaneSupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxTaskPaneSupport.Location = new System.Drawing.Point(40, 89);
             this.checkBoxTaskPaneSupport.Name = "checkBoxTaskPaneSupport";
-            this.checkBoxTaskPaneSupport.Size = new System.Drawing.Size(305, 21);
+            this.checkBoxTaskPaneSupport.Size = new System.Drawing.Size(190, 21);
             this.checkBoxTaskPaneSupport.TabIndex = 24;
-            this.checkBoxTaskPaneSupport.Text = "Ich möchte eine Task Pane zur Verfügung stellen";
+            this.checkBoxTaskPaneSupport.Text = "Ich want a custom Task Pane";
             this.checkBoxTaskPaneSupport.UseVisualStyleBackColor = true;
             this.checkBoxTaskPaneSupport.CheckedChanged += new System.EventHandler(this.checkBoxTaskPaneSupport_CheckedChanged);
             // 
@@ -94,9 +94,9 @@
             this.checkBoxToogleButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxToogleButton.Location = new System.Drawing.Point(40, 117);
             this.checkBoxToogleButton.Name = "checkBoxToogleButton";
-            this.checkBoxToogleButton.Size = new System.Drawing.Size(451, 21);
+            this.checkBoxToogleButton.Size = new System.Drawing.Size(323, 21);
             this.checkBoxToogleButton.TabIndex = 25;
-            this.checkBoxToogleButton.Text = "Für die Task Pane einen Toogle Button zum ein- und ausblenden erstellen";
+            this.checkBoxToogleButton.Text = "Create a Toogle Button for the Task Pane (Visibility)";
             this.checkBoxToogleButton.UseVisualStyleBackColor = true;
             this.checkBoxToogleButton.Visible = false;
             this.checkBoxToogleButton.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -108,9 +108,9 @@
             this.labelHint.ForeColor = System.Drawing.Color.DimGray;
             this.labelHint.Location = new System.Drawing.Point(63, 174);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(432, 16);
+            this.labelHint.Size = new System.Drawing.Size(443, 16);
             this.labelHint.TabIndex = 121;
-            this.labelHint.Text = "Diese Einstellungen sind auch mit den Tasten 1-4 der Tastatur änderbar";
+            this.labelHint.Text = "Use also number keys(1-4) on your keyboard to select/deselect an option";
             // 
             // pictureBox2
             // 

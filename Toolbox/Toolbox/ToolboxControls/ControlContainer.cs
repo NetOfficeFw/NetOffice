@@ -131,8 +131,19 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls
 
         public void SetLanguage(int id)
         {
-            string space = InnerInstance.ControlName.Substring(0, InnerInstance.ControlName.IndexOf("."));
-            Translation.Translator.TranslateControls(InnerInstance as Control, String.Format("ToolboxControls.{0}.Strings.txt", space), id);
+            Translation.ToolLanguage language =  Host.Languages.Where(l => l.LCID == id).FirstOrDefault();
+            if (null != language)
+            {
+                string space = InnerInstance.ControlName.Substring(0, InnerInstance.ControlName.IndexOf("."));
+                var component = language.Components[space];
+                Translation.Translator.TranslateControls(InnerInstance as Control, component.ControlRessources);
+            }
+            else 
+            {
+                string space = InnerInstance.ControlName.Substring(0, InnerInstance.ControlName.IndexOf("."));
+                Translation.Translator.TranslateControls(InnerInstance as Control, String.Format("ToolboxControls.{0}.Strings.txt", space), id);
+            }
+
             SetupInfoMessage();
         }
 
@@ -154,6 +165,46 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls
         public IContainer Components
         {
             get { return InnerInstance.Components; }
+        }
+
+        #endregion
+
+        #region ILocalizationDesign
+
+        public void EnableDesignView(int lcid, string parentComponentName)
+        {
+            InnerInstance.EnableDesignView(lcid, parentComponentName);
+        }
+
+        public void Localize(Translation.ItemCollection strings)
+        {
+            InnerInstance.Localize(strings);
+        }
+
+        public void Localize(string name, string text)
+        {
+            InnerInstance.Localize(name, text);
+        }
+
+        public string GetCurrentText(string name)
+        {
+            return InnerInstance.GetCurrentText(name);
+        }
+
+        public string NameLocalization
+        {
+            get
+            {
+                return InnerInstance.NameLocalization;
+            }
+        }
+
+        public IEnumerable<ILocalizationChildInfo> Childs
+        {
+            get
+            {
+                return InnerInstance.Childs;
+            }
         }
 
         #endregion
@@ -209,7 +260,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(this, exception, Forms.ErrorCategory.NonCritical, InnerInstance.Host.CurrentLanguageID);
+                Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, InnerInstance.Host.CurrentLanguageID);
             }
         }
 

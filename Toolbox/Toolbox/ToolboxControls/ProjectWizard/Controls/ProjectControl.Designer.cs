@@ -73,9 +73,9 @@
             this.radioButtonClassLibrary.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonClassLibrary.Location = new System.Drawing.Point(522, 60);
             this.radioButtonClassLibrary.Name = "radioButtonClassLibrary";
-            this.radioButtonClassLibrary.Size = new System.Drawing.Size(126, 21);
+            this.radioButtonClassLibrary.Size = new System.Drawing.Size(99, 21);
             this.radioButtonClassLibrary.TabIndex = 98;
-            this.radioButtonClassLibrary.Text = "Klassenbibliothek";
+            this.radioButtonClassLibrary.Text = "Class Library";
             this.radioButtonClassLibrary.UseVisualStyleBackColor = true;
             this.radioButtonClassLibrary.CheckedChanged += new System.EventHandler(this.radioButtonProjectType_CheckedChanged);
             // 
@@ -89,7 +89,7 @@
             this.radioButtonWindowsForms.Name = "radioButtonWindowsForms";
             this.radioButtonWindowsForms.Size = new System.Drawing.Size(162, 21);
             this.radioButtonWindowsForms.TabIndex = 97;
-            this.radioButtonWindowsForms.Text = "Windows Forms Projekt";
+            this.radioButtonWindowsForms.Text = "Windows Forms Project";
             this.radioButtonWindowsForms.UseVisualStyleBackColor = true;
             this.radioButtonWindowsForms.CheckedChanged += new System.EventHandler(this.radioButtonProjectType_CheckedChanged);
             // 
@@ -101,9 +101,9 @@
             this.radioButtonConsole.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonConsole.Location = new System.Drawing.Point(388, 60);
             this.radioButtonConsole.Name = "radioButtonConsole";
-            this.radioButtonConsole.Size = new System.Drawing.Size(123, 21);
+            this.radioButtonConsole.Size = new System.Drawing.Size(116, 21);
             this.radioButtonConsole.TabIndex = 96;
-            this.radioButtonConsole.Text = "Konsolen Projekt";
+            this.radioButtonConsole.Text = "Console Project";
             this.radioButtonConsole.UseVisualStyleBackColor = true;
             this.radioButtonConsole.CheckedChanged += new System.EventHandler(this.radioButtonProjectType_CheckedChanged);
             // 
@@ -114,9 +114,9 @@
             this.labelProjectType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProjectType.Location = new System.Drawing.Point(67, 33);
             this.labelProjectType.Name = "labelProjectType";
-            this.labelProjectType.Size = new System.Drawing.Size(113, 16);
+            this.labelProjectType.Size = new System.Drawing.Size(85, 16);
             this.labelProjectType.TabIndex = 95;
-            this.labelProjectType.Text = "Typ des Projekts:";
+            this.labelProjectType.Text = "Project Type";
             // 
             // radioButtonAutomationAddin
             // 
@@ -141,10 +141,10 @@
             this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoAdminHint.Location = new System.Drawing.Point(40, 148);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
-            this.labelNoAdminHint.Size = new System.Drawing.Size(517, 16);
+            this.labelNoAdminHint.Size = new System.Drawing.Size(538, 16);
             this.labelNoAdminHint.TabIndex = 112;
-            this.labelNoAdminHint.Text = "Developer Toolbox hat festgestellt das nicht für alle Ordner Schreibzugriff verfü" +
-                "gbar ist.";
+            this.labelNoAdminHint.Text = "Developer Toolbox has detected the write permissions are not available for some f" +
+                "olders.";
             this.labelNoAdminHint.Visible = false;
             // 
             // buttonChooseFolder
@@ -182,9 +182,9 @@
             this.radioButtonCustomFolder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonCustomFolder.Location = new System.Drawing.Point(40, 106);
             this.radioButtonCustomFolder.Name = "radioButtonCustomFolder";
-            this.radioButtonCustomFolder.Size = new System.Drawing.Size(123, 21);
+            this.radioButtonCustomFolder.Size = new System.Drawing.Size(69, 21);
             this.radioButtonCustomFolder.TabIndex = 109;
-            this.radioButtonCustomFolder.Text = "Benutzerdefiniert";
+            this.radioButtonCustomFolder.Text = "Custom";
             this.radioButtonCustomFolder.UseVisualStyleBackColor = true;
             this.radioButtonCustomFolder.CheckedChanged += new System.EventHandler(this.radioButtonProjectFolder_CheckedChanged);
             // 
@@ -196,9 +196,9 @@
             this.radioButtonVSProjectFolder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.radioButtonVSProjectFolder.Location = new System.Drawing.Point(184, 77);
             this.radioButtonVSProjectFolder.Name = "radioButtonVSProjectFolder";
-            this.radioButtonVSProjectFolder.Size = new System.Drawing.Size(190, 21);
+            this.radioButtonVSProjectFolder.Size = new System.Drawing.Size(199, 21);
             this.radioButtonVSProjectFolder.TabIndex = 108;
-            this.radioButtonVSProjectFolder.Text = "Visual Studio Projekt Ordner";
+            this.radioButtonVSProjectFolder.Text = "VS Project Folder (if available)";
             this.radioButtonVSProjectFolder.UseVisualStyleBackColor = true;
             this.radioButtonVSProjectFolder.CheckedChanged += new System.EventHandler(this.radioButtonProjectFolder_CheckedChanged);
             // 
@@ -263,9 +263,9 @@
             this.labelFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFolder.Location = new System.Drawing.Point(39, 21);
             this.labelFolder.Name = "labelFolder";
-            this.labelFolder.Size = new System.Drawing.Size(189, 16);
+            this.labelFolder.Size = new System.Drawing.Size(92, 16);
             this.labelFolder.TabIndex = 103;
-            this.labelFolder.Text = "Speicherordner für das Projekt";
+            this.labelFolder.Text = "Project Folder";
             // 
             // panel1
             // 
@@ -294,9 +294,9 @@
             this.checkBoxUseTools.ForeColor = System.Drawing.SystemColors.ControlText;
             this.checkBoxUseTools.Location = new System.Drawing.Point(72, 95);
             this.checkBoxUseTools.Name = "checkBoxUseTools";
-            this.checkBoxUseTools.Size = new System.Drawing.Size(182, 21);
+            this.checkBoxUseTools.Size = new System.Drawing.Size(141, 21);
             this.checkBoxUseTools.TabIndex = 114;
-            this.checkBoxUseTools.Text = "NetOffice Tools verwenden";
+            this.checkBoxUseTools.Text = "Use NetOffice Tools";
             this.checkBoxUseTools.UseVisualStyleBackColor = true;
             // 
             // linkLabelNSTOInfo
@@ -305,10 +305,10 @@
             this.linkLabelNSTOInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelNSTOInfo.Location = new System.Drawing.Point(286, 97);
             this.linkLabelNSTOInfo.Name = "linkLabelNSTOInfo";
-            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(383, 16);
+            this.linkLabelNSTOInfo.Size = new System.Drawing.Size(368, 16);
             this.linkLabelNSTOInfo.TabIndex = 115;
             this.linkLabelNSTOInfo.TabStop = true;
-            this.linkLabelNSTOInfo.Text = "Gewusst wie: Verwenden der NetOffice Tools für Addin Projekte";
+            this.linkLabelNSTOInfo.Text = "Nice to know: How to use the NetOffice tools in addin projects";
             this.linkLabelNSTOInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNSTOInfo_LinkClicked);
             // 
             // pictureBox1

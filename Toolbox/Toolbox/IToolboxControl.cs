@@ -32,7 +32,7 @@ namespace NetOffice.DeveloperToolbox
     /// <summary>
     /// Represents a toolbox content control
     /// </summary>
-    public interface IToolboxControl : IDisposable 
+    public interface IToolboxControl : ILocalizationDesign, IDisposable 
     {
         /// <summary>
         /// parent host application
@@ -132,10 +132,5 @@ namespace NetOffice.DeveloperToolbox
         /// custom instance destructor
         /// </summary>
         void Release();
-
-        /// <summary>
-        /// components from control (translation stuff)
-        /// </summary>
-        System.ComponentModel.IContainer Components { get; }
     }
 }
