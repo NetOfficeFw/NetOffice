@@ -86,10 +86,8 @@
       <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Mono.Cecil">
       <HintPath>..\Libs\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="MSComctlLibApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -216,6 +214,12 @@
     </Compile>
     <Compile Include="Controls\Text\RichTextEditor.designer.cs">
       <DependentUpon>RichTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Text\Scroller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Text\Scroller.designer.cs">
+      <DependentUpon>Scroller.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Tree\TreeGridCell.cs" />
     <Compile Include="Controls\Tree\TreeGridEvents.cs" />
@@ -428,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Text\RichTextEditor.resx">
       <DependentUpon>RichTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Text\Scroller.resx">
+      <DependentUpon>Scroller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectLanguageForm.resx">
       <DependentUpon>SelectLanguageForm.cs</DependentUpon>

@@ -82,6 +82,7 @@
             // 
             resources.ApplyResources(this.toolLanguageControl1, "toolLanguageControl1");
             this.toolLanguageControl1.Name = "toolLanguageControl1";
+            this.toolLanguageControl1.SelectedNodeTextChanged += new System.EventHandler(this.toolLanguageControl1_SelectedNodeTextChanged);
             this.toolLanguageControl1.SelectedTabChanged += new System.EventHandler(this.toolLanguageControl1_SelectedTabChanged);
             // 
             // overlayPainter1

@@ -466,6 +466,9 @@ namespace NetOffice.DeveloperToolbox.Forms
                     item.LoadComplete();
                 foreach (var item in _toolboxControls)
                     item.SetLanguage(_currentLanguageID);
+
+                var ts = DateTime.Now - Program.StartTime;
+                Console.WriteLine("Loaded in {0} seconds", ts.TotalSeconds);
             }
             catch (Exception exception)
             {

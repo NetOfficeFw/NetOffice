@@ -202,7 +202,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-
+            panelWizardHost.Visible = true;
+            finishButton.Visible = true;
+            cancelButton.Visible = true;
+            backButton.Visible = true;
+            nextButton.Visible = true;
+            panelLeftHeader.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
         }
 
         public void Localize(Translation.ItemCollection strings)

@@ -17,6 +17,7 @@ namespace NetOffice.DeveloperToolbox
         {
             try
             {
+                StartTime = DateTime.Now;
                 ProceedCommandLineArguments(args);
                 if (PerformSelfElevation())
                     return;
@@ -32,7 +33,12 @@ namespace NetOffice.DeveloperToolbox
             {
                 Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty, 1033);
             }
-         }
+        }
+
+        /// <summary>
+        /// How long we need to be loaded
+        /// </summary>
+        internal static DateTime StartTime { get; set; }
 
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {

@@ -94,6 +94,7 @@
             this.languageApplicationControl1.Name = "languageApplicationControl1";
             this.languageApplicationControl1.Size = new System.Drawing.Size(843, 515);
             this.languageApplicationControl1.TabIndex = 0;
+            this.languageApplicationControl1.SelectionChanged += new System.EventHandler(this.languageApplicationControl1_SelectionChanged);
             // 
             // tabPage3
             // 
@@ -113,6 +114,7 @@
             this.languageComponentsControl1.Name = "languageComponentsControl1";
             this.languageComponentsControl1.Size = new System.Drawing.Size(849, 521);
             this.languageComponentsControl1.TabIndex = 0;
+            this.languageComponentsControl1.SelectionChanged += new System.EventHandler(this.languageComponentsControl1_SelectionChanged);
             // 
             // ToolLanguageControl
             // 

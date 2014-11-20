@@ -50,7 +50,7 @@ namespace NetOffice.DeveloperToolbox.Translation
        {
            get
            {
-               return DefaultLanguageName == ToolDefaultLanguageName.German ? "Sebastian Lange" : "Matthias Viehweger/Sebastian Lange";
+               return DefaultLanguageName == ToolDefaultLanguageName.German ? "Sebastian Lange" : "Matthias Viehweger / Sebastian Lange";
            }
            set
            {
@@ -74,7 +74,7 @@ namespace NetOffice.DeveloperToolbox.Translation
        {
            get
            {
-               return DefaultLanguageName == ToolDefaultLanguageName.German ? "netoffice.codeplex.com" : "kronn.de/netoffice.codeplex.com";
+               return DefaultLanguageName == ToolDefaultLanguageName.German ? "netoffice.codeplex.com" : "kronn.de / netoffice.codeplex.com";
            }
            set
            {

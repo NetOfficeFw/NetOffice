@@ -43,7 +43,33 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #endregion
 
+        #region Events
+
+        public event EventHandler SelectionChanged;
+
+        private void RaiseSelectionChanged()
+        {
+            if (null != SelectionChanged)
+                SelectionChanged(null, EventArgs.Empty);
+        }
+
+        #endregion
+
         #region Properties
+
+        internal string SelectedNodeText
+        {
+            get
+            {
+                if (treeGridView1.SelectedRows.Count > 0)
+                {
+                    TreeGridNode node = treeGridView1.SelectedRows[0] as TreeGridNode;
+                    return node.Cells[0].Value as string;
+                }
+                else
+                    return null;
+            }
+        }
 
         internal ToolLanguage SelectedLanguage
         {
@@ -64,7 +90,7 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         internal void HandleKeyDown()
         {
-            if (treeGridView1.SelectedRows.Count == 0)
+            if (treeGridView1.SelectedRows.Count == 0 || treeGridView1.Focused)
                 return;
 
             TreeGridNode selectedNode = treeGridView1.SelectedRows[0] as TreeGridNode;
@@ -91,7 +117,7 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         internal void HandleKeyUp()
         {
-            if (treeGridView1.SelectedRows.Count == 0)
+            if (treeGridView1.SelectedRows.Count == 0 || treeGridView1.Focused)
                 return;
 
             TreeGridNode selectedNode = treeGridView1.SelectedRows[0] as TreeGridNode;
@@ -234,6 +260,7 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         private void treeGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            RaiseSelectionChanged();
             Clear();
             if(null == _owner)
                 _owner = FindOwner(this);

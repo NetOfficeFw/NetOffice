@@ -10,6 +10,8 @@ namespace NetOffice.DeveloperToolbox.Ressources
 {
     internal static class RessourceUtils
     {
+        private static Dictionary<string, string> _cache = new Dictionary<string, string>();
+
         internal static Image ReadImageFromRessource(string ressourcePath)
         {
             System.IO.Stream ressourceStream = null;
@@ -57,6 +59,10 @@ namespace NetOffice.DeveloperToolbox.Ressources
 
         internal static string ReadString(string ressourcePath, bool autoPrevRootNameSpace = true, bool throwExceptionIfNotFound = true)
         {
+            string s = null;
+            if (_cache.TryGetValue(ressourcePath, out s))
+                return s;
+
             System.IO.Stream ressourceStream = null;
             System.IO.StreamReader textStreamReader = null;
             try
@@ -81,6 +87,7 @@ namespace NetOffice.DeveloperToolbox.Ressources
                     throw (new System.IO.IOException("Error accessing resource File."));
 
                 string text = textStreamReader.ReadToEnd();
+                _cache.Add(ressourcePath, text);
                 return text;
             }
             catch (Exception exception)

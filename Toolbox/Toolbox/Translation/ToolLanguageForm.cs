@@ -163,5 +163,10 @@ namespace NetOffice.DeveloperToolbox.Translation
 
             this.Close();
         }
+
+        private void toolLanguageControl1_SelectedNodeTextChanged(object sender, EventArgs e)
+        {
+            Text = " Edit Language " + toolLanguageControl1.SelectedNodeText;
+        }
     }
 }

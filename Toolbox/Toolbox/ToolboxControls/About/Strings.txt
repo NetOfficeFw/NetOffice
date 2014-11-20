@@ -10,7 +10,7 @@ labelTechnicalDetails = Technische Details
 labelContainsExistingWorks = Dieses Programm enthält Code von anderen Open Source Projekten
 labelHotKey = Systemweite Hotkey-Klasse
 labelLicense = Die Developer Toolbox steht unter der MIT Lizenz (MIT)
-
+labelLanguageCredits = Sprachpakete
 [End]
 [1033]
 labelAboutNetOffice = About NetOffice Developer Toolbox
@@ -24,4 +24,5 @@ labelTechnicalDetails = Technical Details
 labelContainsExistingWorks = This program contains code from other open source projects
 labelHotKey = systemwide hotkey-class
 labelLicense = The developer toolbox is licensed under the MIT License (MIT)
+labelLanguageCredits = Language Credits
 [End]

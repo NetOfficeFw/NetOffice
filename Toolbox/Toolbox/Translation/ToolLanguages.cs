@@ -68,6 +68,9 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         internal void ValidateFiles()
         {
+            if (!Directory.Exists(ToolLanguages.DirectoryPath))
+                return;
+
             List<string> files = new List<string>();
             foreach (var item in Directory.GetFiles(ToolLanguages.DirectoryPath, ExtensionWildCard, SearchOption.TopDirectoryOnly))
             {

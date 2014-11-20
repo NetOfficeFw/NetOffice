@@ -82,11 +82,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 
         public void Activate(bool firstTime)
         {
+            scroller1.TextToScroll = GetLanguageCredits();
+            scroller1.Start();
             controlForeColorAnimator1.Start(false);
         }
 
         public void Deactivated()
         {
+            scroller1.Stop();
             controlForeColorAnimator1.Stop();
         }
 
@@ -168,6 +171,29 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             {
                 return new ILocalizationChildInfo[0];
             }
+        }
+
+        #endregion
+
+        #region Methods
+
+        private string GetLanguageCredits()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var item in Host.Languages)
+            {
+                if (!String.IsNullOrWhiteSpace(item.Author))
+                {
+                    string lng = String.Format("{0}{1}{2}{3}{4}{4}{4}",
+                        item.DisplayName + Environment.NewLine + Environment.NewLine, 
+                        item.Author + Environment.NewLine, 
+                        String.IsNullOrWhiteSpace(item.AuthorMail) ? "" : "   " + item.AuthorMail + Environment.NewLine,
+                        String.IsNullOrWhiteSpace(item.AuthorSite) ? "" : "   " + item.AuthorSite + Environment.NewLine,
+                        Environment.NewLine);
+                    sb.Append(lng);
+                }
+            }
+            return sb.ToString();
         }
 
         #endregion

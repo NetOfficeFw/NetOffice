@@ -37,11 +37,14 @@
             this.textBoxWideString = new System.Windows.Forms.TextBox();
             this.textBoxString = new System.Windows.Forms.TextBox();
             this.imageStrip = new System.Windows.Forms.ImageList(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelHint = new System.Windows.Forms.Label();
             this.treeGridView1 = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridView();
             this.ColumnName = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridColumn();
             this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,9 +77,11 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage2.Controls.Add(this.textBoxRichString);
             this.tabPage2.Controls.Add(this.textBoxWideString);
             this.tabPage2.Controls.Add(this.textBoxString);
+            this.tabPage2.Controls.Add(this.textBoxRichString);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Controls.Add(this.labelHint);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -114,6 +119,28 @@
             this.imageStrip.Images.SetKeyName(1, "text.png");
             this.imageStrip.Images.SetKeyName(2, "text_rich.png");
             this.imageStrip.Images.SetKeyName(3, "text_rich_colored.png");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 512);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelHint
+            // 
+            this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelHint.Location = new System.Drawing.Point(42, 508);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(510, 21);
+            this.labelHint.TabIndex = 5;
+            this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
             // 
             // treeGridView1
             // 
@@ -187,6 +214,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treeGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -203,5 +231,7 @@
         private System.Windows.Forms.TextBox textBoxString;
         private System.Windows.Forms.TextBox textBoxWideString;
         private Controls.Text.RichTextEditor textBoxRichString;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelHint;
     }
 }

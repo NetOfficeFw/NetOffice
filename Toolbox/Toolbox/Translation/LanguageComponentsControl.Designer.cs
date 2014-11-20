@@ -34,14 +34,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelHint = new System.Windows.Forms.Label();
+            this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.textBoxWideString = new System.Windows.Forms.TextBox();
             this.textBoxString = new System.Windows.Forms.TextBox();
             this.imageStrip = new System.Windows.Forms.ImageList(this.components);
-            this.labelHint = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treeGridView1 = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridView();
             this.ColumnName = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridColumn();
-            this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,17 +77,51 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.labelHint);
             this.tabPage2.Controls.Add(this.textBoxRichString);
             this.tabPage2.Controls.Add(this.textBoxWideString);
             this.tabPage2.Controls.Add(this.textBoxString);
+            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Controls.Add(this.labelHint);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(726, 539);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "String Editor";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 512);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelHint
+            // 
+            this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelHint.Location = new System.Drawing.Point(42, 508);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(510, 21);
+            this.labelHint.TabIndex = 3;
+            this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
+            // 
+            // textBoxRichString
+            // 
+            this.textBoxRichString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxRichString.Location = new System.Drawing.Point(31, 302);
+            this.textBoxRichString.Name = "textBoxRichString";
+            this.textBoxRichString.RichText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft S" +
+                "ans Serif;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
+            this.textBoxRichString.Size = new System.Drawing.Size(555, 114);
+            this.textBoxRichString.TabIndex = 2;
+            this.textBoxRichString.Visible = false;
+            this.textBoxRichString.TextChanged += new System.EventHandler(this.textBoxRichString_TextChanged);
             // 
             // textBoxWideString
             // 
@@ -119,28 +153,6 @@
             this.imageStrip.Images.SetKeyName(1, "text.png");
             this.imageStrip.Images.SetKeyName(2, "text_rich.png");
             this.imageStrip.Images.SetKeyName(3, "text_rich_colored.png");
-            // 
-            // labelHint
-            // 
-            this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelHint.AutoSize = true;
-            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHint.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHint.Location = new System.Drawing.Point(42, 508);
-            this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(510, 21);
-            this.labelHint.TabIndex = 3;
-            this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 512);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // treeGridView1
             // 
@@ -189,18 +201,6 @@
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // textBoxRichString
-            // 
-            this.textBoxRichString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxRichString.Location = new System.Drawing.Point(31, 302);
-            this.textBoxRichString.Name = "textBoxRichString";
-            this.textBoxRichString.RichText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft S" +
-                "ans Serif;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
-            this.textBoxRichString.Size = new System.Drawing.Size(555, 114);
-            this.textBoxRichString.TabIndex = 2;
-            this.textBoxRichString.Visible = false;
-            this.textBoxRichString.TextChanged += new System.EventHandler(this.textBoxRichString_TextChanged);
             // 
             // LanguageComponentsControl
             // 

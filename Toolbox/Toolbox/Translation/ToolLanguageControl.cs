@@ -18,6 +18,28 @@ namespace NetOffice.DeveloperToolbox.Translation
             InitializeComponent();
         }
 
+
+        public event EventHandler SelectedNodeTextChanged;
+
+        private void RaiseSelectedNodeTextChanged()
+        {
+            if (null != SelectedNodeTextChanged)
+                SelectedNodeTextChanged(null, EventArgs.Empty);
+        }
+
+        internal string SelectedNodeText
+        {
+            get
+            {
+                if (tabControl1.SelectedIndex == 1)
+                    return languageApplicationControl1.SelectedNodeText;
+                else if (tabControl1.SelectedIndex == 2)
+                    return languageComponentsControl1.SelectedNodeText;
+                else
+                    return "Summary";
+            }
+        }
+
         public event EventHandler SelectedTabChanged;
 
         private void RaiseSelectedTabChanged()
@@ -63,9 +85,20 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RaiseSelectedNodeTextChanged();
             languageApplicationControl1.DisableComponents();
             languageComponentsControl1.DisableComponents();
             RaiseSelectedTabChanged();
+        }
+
+        private void languageApplicationControl1_SelectionChanged(object sender, EventArgs e)
+        {
+            RaiseSelectedNodeTextChanged();
+        }
+
+        private void languageComponentsControl1_SelectionChanged(object sender, EventArgs e)
+        {
+            RaiseSelectedNodeTextChanged();
         }
     }
 }
