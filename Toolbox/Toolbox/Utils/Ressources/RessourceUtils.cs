@@ -87,7 +87,8 @@ namespace NetOffice.DeveloperToolbox.Ressources
                     throw (new System.IO.IOException("Error accessing resource File."));
 
                 string text = textStreamReader.ReadToEnd();
-                _cache.Add(ressourcePath, text);
+                if(!_cache.ContainsKey(ressourcePath))
+                    _cache.Add(ressourcePath, text);
                 return text;
             }
             catch (Exception exception)

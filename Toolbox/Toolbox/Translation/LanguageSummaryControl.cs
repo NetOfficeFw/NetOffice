@@ -13,7 +13,6 @@ namespace NetOffice.DeveloperToolbox.Translation
     {
         private ToolLanguage _selectedLanguage;
         private bool _initialize;
-        private bool _firstChangePassed;
 
         public LanguageSummaryControl()
         {
@@ -121,20 +120,15 @@ namespace NetOffice.DeveloperToolbox.Translation
             {
                 if (_initialize)
                     return;
-                if (!_firstChangePassed)
-                {
-                    _firstChangePassed = true;
-                    return;
-                }
-
+   
                 string lcid = GetLanguageLCID(textBoxNameGlobal.Text.Trim());
-                if (null != lcid)
+                if (null != lcid && textBoxLanguageID.Text.Trim() == "0")
                 {
                     textBoxLanguageID.Text = lcid;
                     textBoxNameLocal.Text = textBoxNameGlobal.Text;
                 }
             }
-            catch 
+            catch(Exception exception)
             {
                 ;
             }

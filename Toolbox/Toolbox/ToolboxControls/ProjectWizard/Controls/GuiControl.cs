@@ -218,7 +218,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-
+            checkBoxToogleButton.Visible = true;
         }
 
         public void Localize(Translation.ItemCollection strings)
