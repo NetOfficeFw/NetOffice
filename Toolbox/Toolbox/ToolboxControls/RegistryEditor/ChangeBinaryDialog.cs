@@ -16,10 +16,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         public ChangeBinaryDialog(string name, byte[] value, int currentLanguageID)
         {
             InitializeComponent();
-            textBoxName.Text = name;
-            DynamicByteProvider provider = new DynamicByteProvider(value);
-            hexBox.ByteProvider = provider;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt", currentLanguageID);
+            changeBinaryControl1.SetArguments(name, value);
+            Translation.Translator.AutoTranslateControls(changeBinaryControl1, "Registry Editor - ChangeBinary", "ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt", currentLanguageID);
+            this.Text = changeBinaryControl1.Text;
         }
         
         #endregion
@@ -30,54 +29,35 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             get 
             {
-                DynamicByteProvider provider = hexBox.ByteProvider as DynamicByteProvider;
-                return provider.Bytes.ToArray();
+                return changeBinaryControl1.Bytes;
             }
         }
 
         #endregion
+
 
         #region Trigger
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ChangeBinaryDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
-        }
-
-        private void buttonAbort_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void ChangeBinaryDialog_Resize(object sender, EventArgs e)
-        {
-             hexBox.BytesPerLine = this.Width / 56;
-        }
-
-        #endregion
-
-        #region Helper
-
-        private string ByteArrayToString(byte[] byteArray)
-        {
-            string result = "";
-            foreach (byte value in byteArray)
+            if (e.KeyCode == Keys.Escape)
             {
-               char output = Convert.ToChar(value);
-               result += output;
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
             }
-            return result;
+            else if (e.KeyCode == Keys.Return)
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
+            }
         }
 
-        private static byte[] StringToByteArray(string str)
+        private void changeBinaryControl1_Close(object sender, EventArgs e)
         {
-            if (null == str)
-                return null;
-            System.Text.UnicodeEncoding enc = new System.Text.UnicodeEncoding();
-            return enc.GetBytes(str);
+            this.DialogResult = changeBinaryControl1.DialogResult;
+            this.Close();
         }
-
+        
         #endregion
     }
 }

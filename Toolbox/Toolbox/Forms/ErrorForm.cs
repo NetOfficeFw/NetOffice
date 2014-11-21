@@ -9,7 +9,6 @@ using NetOffice.DeveloperToolbox.Controls.Error;
 
 namespace NetOffice.DeveloperToolbox.Forms
 {
-    //[Designer(typeof(NetOffice.DeveloperToolbox.Controls.Design.SpecialControlDesigner))]
     partial class ErrorForm : Form
     {
         #region Construction
@@ -67,26 +66,13 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #endregion
 
-        //#region Trigger
-
-        //private void buttonDetails_Click(object sender, EventArgs e)
-        //{
-        //    if (_isExpanded)
-        //    {
-        //        this.Height = pictureBoxSplitter1.Top + (ClientRectangle.Height - DisplayRectangle.Height);
-        //    }
-        //    else
-        //    {
-        //        this.Height = pictureBoxSplitter2.Top + pictureBoxSplitter2.Height + (ClientRectangle.Height - DisplayRectangle.Height);
-        //    }
-        //    _isExpanded = !_isExpanded;
-        //}
-
-        //#endregion
+        #region Trigger
 
         private void errorControl1_UserClose(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        #endregion
     }
 }

@@ -53,6 +53,20 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        public static void AutoTranslateControls(Control control, string componentName, string ressourceFileName, int lanuageID)
+        {
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == lanuageID).FirstOrDefault();
+            if (null != language)
+            {
+                var component = language.Components[componentName];
+                Translation.Translator.TranslateControls(control, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(control, ressourceFileName, lanuageID);
+            }
+        }
+
         public static void TranslateControls(Control control, ItemCollection strings)
         {
             string caption = "";

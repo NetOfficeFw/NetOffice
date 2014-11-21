@@ -15,10 +15,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         public ChangeStringDialog(string name, string value, int currentLanguageID)
         {
             InitializeComponent();
-            textBoxName.Text = name;
-            textBoxValue.Text = value;
-            Translation.Translator.TranslateControls(this, "ToolboxControls.RegistryEditor.ChangeStringDialogMessageTable.txt", currentLanguageID);
-            textBoxValue.Focus();
+            changeStringControl1.SetArguments(name, value);
+            Translation.Translator.AutoTranslateControls(changeStringControl1, "Registry Editor - ChangeString", "ToolboxControls.RegistryEditor.ChangeStringDialogMessageTable.txt", currentLanguageID);
+            this.Text = changeStringControl1.Text;
         }
 
         #endregion
@@ -29,7 +28,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             get 
             {
-                return textBoxName.Text;
+                return changeStringControl1.EntryName;
             } 
         }
 
@@ -37,7 +36,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             get
             {
-                return textBoxValue.Text;
+                return changeStringControl1.EntryValue;
             }
         }
 
@@ -45,15 +44,24 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Trigger
 
-        private void buttonAbort_Click(object sender, EventArgs e)
+        private void changeStringControl1_Close(object sender, EventArgs e)
         {
+            this.DialogResult = changeStringControl1.DialogResult;
             this.Close();
         }
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void ChangeStringDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
+            }
+            else if (e.KeyCode == Keys.Return)
+            {
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
+            }
         }
 
         #endregion

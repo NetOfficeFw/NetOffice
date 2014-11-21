@@ -291,7 +291,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             get
             {
-                return new ILocalizationChildInfo[]{new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
+                return new ILocalizationChildInfo[]{
+                    new LocalizationDefaultChildInfo("ChangeName", typeof(ChangeNameControl)),
+                    new LocalizationDefaultChildInfo("ChangeString", typeof(ChangeStringControl)),
+                    new LocalizationDefaultChildInfo("ChangeDWORD", typeof(ChangeDWORDControl)),
+                    new LocalizationDefaultChildInfo("ChangeBinary", typeof(ChangeBinaryControl)),
+                    new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) 
+                };
             }
         }
 

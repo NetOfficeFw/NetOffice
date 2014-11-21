@@ -128,7 +128,7 @@ namespace NetOffice.DeveloperToolbox.Translation
                     textBoxNameLocal.Text = textBoxNameGlobal.Text;
                 }
             }
-            catch(Exception exception)
+            catch
             {
                 ;
             }

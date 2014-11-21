@@ -16,20 +16,21 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         public ChangeDWordDialog(string name, object value, int currentLanguageID)
         {
             InitializeComponent();
-            textBoxName.Text = name;
-            textBoxValue.Text = InitialConvertValue(value);
-            Translation.Translator.TranslateControls(this, "ToolboxControls.RegistryEditor.ChangeDWordDialogMessageTable.txt", currentLanguageID);
+            changeDWORDControl1.SetArguments(name, value);
+            Translation.Translator.AutoTranslateControls(changeDWORDControl1, "Registry Editor - ChangeDWORD", "ToolboxControls.RegistryEditor.ChangeDWordDialogMessageTable.txt", currentLanguageID);
+            this.Text = changeDWORDControl1.Text;
+            changeDWORDControl1.SetFocus();
         }
-        
+
         #endregion
 
         #region Properties
 
         public string EntryName
         {
-            get 
+            get
             {
-                return textBoxName.Text;
+                return changeDWORDControl1.EntryName;
             }
         }
 
@@ -37,7 +38,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             get
             {
-                return FinalConvertValue(textBoxValue.Text);
+                return changeDWORDControl1.EntryValue;
             }
         }
 
@@ -45,74 +46,23 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Trigger
 
-        private void buttonOK_Click(object sender, EventArgs e)
+        private void changeDWORDControl1_Close(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = changeDWORDControl1.DialogResult;
             this.Close();
         }
 
-        private void buttonAbort_Click(object sender, EventArgs e)
+        private void ChangeDWORDDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            this.Close();
-        }
-
-        private void textBoxValue_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ("1234567890,\b".IndexOf(e.KeyChar.ToString()) < 0)
-                e.Handled = true;
-        }
-
-        private void radioButtonHex_CheckedChanged(object sender, EventArgs e)
-        {
-            object value = ConvertValue(textBoxValue.Text);
-            textBoxValue.Text = value.ToString() ;
-        }
-
-        #endregion
-
-        #region Methods
-
-        private object ConvertValue(string value)
-        {
-           
-            if (radioButtonHex.Checked == true)
-                return ConvertDecimalStringToHexValue(value);
-            else
-                return ConvertHexStringToDecimal(value);
-        }
-
-        private object ConvertDecimalStringToHexValue(string value)
-        {
-            int objectValue = Convert.ToInt32(value);
-            return string.Format("{0:x}", objectValue);
-        }
-
-        private object ConvertHexStringToDecimal(string value)
-        {
-            return Int32.Parse(value, System.Globalization.NumberStyles.HexNumber);
-        }
-
-        private string InitialConvertValue(object value)
-        {
-            if (radioButtonHex.Checked == true)
+            if (e.KeyCode == Keys.Escape)
             {
-                int val = Convert.ToInt32(value);
-                return string.Format("{0:x}", value);
+                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                this.Close();
             }
-            else
-                return value.ToString();
-        }
-
-        private string FinalConvertValue(string value)
-        {
-            if (radioButtonHex.Checked == true)
+            else if (e.KeyCode == Keys.Return)
             {
-                int decValue = Int32.Parse(value, System.Globalization.NumberStyles.HexNumber);
-                return decValue.ToString();
-            }
-            else
-            { 
-                return value.ToString();
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                this.Close();
             }
         }
 

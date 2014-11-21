@@ -463,6 +463,30 @@
       <DependentUpon>ProjectWizardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.Designer.cs">
+      <DependentUpon>ChangeBinaryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeDWORDControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeDWORDControl.Designer.cs">
+      <DependentUpon>ChangeDWORDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeNameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeNameControl.Designer.cs">
+      <DependentUpon>ChangeNameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeStringControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxControls\RegistryEditor\ChangeStringControl.Designer.cs">
+      <DependentUpon>ChangeStringControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Translation\ItemCollection.cs" />
     <Compile Include="Translation\LanguageApplicationControl.cs">
       <SubType>UserControl</SubType>
@@ -617,6 +641,18 @@
     <EmbeddedResource Include="ToolboxControls\OfficeUI\Info1033.rtf" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info1031.rtf" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Info1033.rtf" />
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeBinaryControl.resx">
+      <DependentUpon>ChangeBinaryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeDWORDControl.resx">
+      <DependentUpon>ChangeDWORDControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeNameControl.resx">
+      <DependentUpon>ChangeNameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxControls\RegistryEditor\ChangeStringControl.resx">
+      <DependentUpon>ChangeStringControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ToolboxControls\Welcome\WelcomeControl.resx">
       <DependentUpon>WelcomeControl.cs</DependentUpon>
     </EmbeddedResource>

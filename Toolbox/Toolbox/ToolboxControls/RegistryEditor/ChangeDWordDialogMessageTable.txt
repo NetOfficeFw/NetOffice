@@ -9,7 +9,7 @@ buttonOK = OK
 buttonAbort = Abbrechen
 [End]
 [1033]
-this = Edit DWORD-Wert Value
+this = Edit DWORD Value
 labelName = Name
 labelValue = Value
 groupBoxBase = Base

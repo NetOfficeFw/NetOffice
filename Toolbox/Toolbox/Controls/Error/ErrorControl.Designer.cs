@@ -140,7 +140,7 @@
             // 
             this.labelErrorCaption.AutoSize = true;
             this.labelErrorCaption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorCaption.Location = new System.Drawing.Point(98, 23);
+            this.labelErrorCaption.Location = new System.Drawing.Point(96, 23);
             this.labelErrorCaption.Name = "labelErrorCaption";
             this.labelErrorCaption.Size = new System.Drawing.Size(157, 21);
             this.labelErrorCaption.TabIndex = 30;

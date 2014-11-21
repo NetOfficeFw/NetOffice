@@ -62,7 +62,8 @@ namespace NetOffice.DeveloperToolbox.Controls.Hex
 			get { return _bytes; }
 		}
 
-		#region IByteProvider Members
+		#region IByteProvider
+
 		/// <summary>
 		/// True, when changes are done.
 		/// </summary>
@@ -88,7 +89,6 @@ namespace NetOffice.DeveloperToolbox.Controls.Hex
 		/// Occurs, when InsertBytes or DeleteBytes method is called.
 		/// </summary>
 		public event EventHandler LengthChanged;
-
 
 		/// <summary>
 		/// Reads a byte from the byte collection.

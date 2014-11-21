@@ -41,16 +41,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             _currentLanguageID = currentLanguageID;
             comboBoxFilter.SelectedIndex = 0;
 
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == currentLanguageID).FirstOrDefault();
-            if (null != language)
-            {
-                var component = language.Components["OfficeCompatibility - Report"];
-                Translation.Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeCompatibility.ReportControlStrings.txt", currentLanguageID);
-            }
+            Translation.Translator.AutoTranslateControls(this, "ToolboxControls.OfficeCompatibility.ReportControlStrings.txt", "OfficeCompatibility - Report", currentLanguageID);
 
             pictureBoxField.Image = imageList1.Images[3];
             pictureBoxProperty.Image = imageList1.Images[7];
