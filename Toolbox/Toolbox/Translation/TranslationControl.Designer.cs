@@ -78,7 +78,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(258, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(258, 498);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
@@ -155,10 +155,10 @@
             this.panel1.Controls.Add(this.labelDoubleClickHint);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 575);
+            this.panel1.Size = new System.Drawing.Size(259, 567);
             this.panel1.TabIndex = 2;
             // 
             // labelDoubleClickHint
@@ -167,7 +167,7 @@
             this.labelDoubleClickHint.AutoSize = true;
             this.labelDoubleClickHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDoubleClickHint.ForeColor = System.Drawing.Color.White;
-            this.labelDoubleClickHint.Location = new System.Drawing.Point(57, 535);
+            this.labelDoubleClickHint.Location = new System.Drawing.Point(57, 527);
             this.labelDoubleClickHint.Name = "labelDoubleClickHint";
             this.labelDoubleClickHint.Size = new System.Drawing.Size(107, 13);
             this.labelDoubleClickHint.TabIndex = 2;
@@ -177,7 +177,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 534);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 526);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 17);
             this.pictureBox1.TabIndex = 1;

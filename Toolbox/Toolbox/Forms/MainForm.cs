@@ -116,7 +116,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 else
                 {
                     translationEditor.ShowLanguages();
-                    this.MinimumSize = new Size(1167, 668);
+                    this.MinimumSize = new Size(1197, 698);
                     splitContainer1.SplitterDistance = 919;
                 }
 

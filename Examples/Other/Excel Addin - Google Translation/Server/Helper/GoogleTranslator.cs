@@ -161,6 +161,7 @@ namespace Sample.Server
                         }
                         i--;
                     }
+                if(endClean > 0)
                     this.Translation = strTranslation.Substring (startClean, endClean - startClean + 1).Replace ("\"", "");
                 #endregion
             }

@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonSaveChanges.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>Bottom, Right</value>
   </data>
   <data name="buttonSaveChanges.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -152,7 +152,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="buttonSaveChanges.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 604</value>
+    <value>851, 635</value>
   </data>
   <data name="buttonSaveChanges.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 25</value>
@@ -177,7 +177,7 @@
     <value>2</value>
   </data>
   <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>Bottom, Right</value>
   </data>
   <data name="buttonCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -211,7 +211,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>995, 604</value>
+    <value>1026, 635</value>
   </data>
   <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 25</value>
@@ -310,7 +310,7 @@
     <value>Bottom, Left</value>
   </data>
   <data name="panelDefaultHint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 607</value>
+    <value>69, 637</value>
   </data>
   <data name="panelDefaultHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>477, 22</value>
@@ -337,7 +337,7 @@
     <value>0, 1</value>
   </data>
   <data name="toolLanguageControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1169, 591</value>
+    <value>1199, 621</value>
   </data>
   <data name="toolLanguageControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -364,7 +364,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1166, 641</value>
+    <value>1196, 671</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

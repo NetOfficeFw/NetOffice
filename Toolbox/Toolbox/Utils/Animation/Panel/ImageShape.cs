@@ -52,17 +52,17 @@ namespace NetOffice.DeveloperToolbox.Utils.Animation.Panel
 
         #region Overrides
 
-        public override void RenderObject(Graphics g)
+        public override void RenderObject(Graphics graphic)
         {
             if (null != Image)
             {
                 if (null != _attributes)
                 {
-                    g.DrawImage(Image, new Rectangle(0, 0, Image.Width, Image.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, _attributes);
+                    graphic.DrawImage(Image, new Rectangle(0, 0, Image.Width, Image.Height), 0, 0, Image.Width, Image.Height, GraphicsUnit.Pixel, _attributes);
                 }
                 else
                 {
-                    g.DrawImage(Image, new Rectangle(0, 0, Image.Width, Image.Height));
+                    graphic.DrawImage(Image, new Rectangle(Location.X, Location.Y, Size.Width, Size.Height));
                 }            
             }
         }
