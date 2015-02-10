@@ -1,0 +1,18 @@
+﻿[1031]
+labelFieldHint = Feld
+labelPropertyHint = Eigenschaft
+labelMethodHint = Methode
+labelExplorerHeader = Assembly Explorer
+labelFilterCaption = Negativ-Filter
+labelFilterHint = Nutzen Sie den Filter um nur Funktionalitäten anzuzeigen die eine bestimmte Version nicht unterstützen.
+buttonSaveReport = Bericht als Datei speichern
+[End]
+[1033]
+labelFieldHint = Field
+labelPropertyHint = Property
+labelMethodHint = Method
+labelExplorerHeader = Assembly Explorer
+labelFilterCaption = Negativ-Filter
+labelFilterHint = Use the filter to show entities without support for a specific version.
+buttonSaveReport = Save report as file
+[End]

@@ -14,6 +14,9 @@ namespace NetOffice.DeveloperToolbox
 
         public RessourceTableAttribute(string address)
         {
+            if (address == "ToolboxControls.OfficeCompatibility.Strings.txt")
+            { 
+            }
             Address = address;
         }
         
@@ -23,7 +26,6 @@ namespace NetOffice.DeveloperToolbox
             Assembly assembly = type.Assembly;
             object[] obj = type.GetCustomAttributes(typeof(RessourceTableAttribute), false);
             RessourceTableAttribute attrib = obj[0] as RessourceTableAttribute;
-
             return Translation.Translator.GetTranslateRessources(control, attrib.Address, languageID);
         }
 

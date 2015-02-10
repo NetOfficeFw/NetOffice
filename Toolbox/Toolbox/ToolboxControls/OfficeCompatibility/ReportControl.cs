@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
-    [RessourceTable("ToolboxControls.OfficeCompatibility.ReportControlStrings.txt")]
+    [RessourceTable("ToolboxControls.OfficeCompatibility.Report.txt")]
     public partial class ReportControl : UserControl, ILocalizationDesign
     {
         #region Fields
@@ -41,7 +41,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             _currentLanguageID = currentLanguageID;
             comboBoxFilter.SelectedIndex = 0;
 
-            Translation.Translator.AutoTranslateControls(this, "ToolboxControls.OfficeCompatibility.ReportControlStrings.txt", "OfficeCompatibility - Report", currentLanguageID);
+            Translation.Translator.AutoTranslateControls(this, "OfficeCompatibility - Report", "ToolboxControls.OfficeCompatibility.Report.txt", currentLanguageID);
 
             pictureBoxField.Image = imageList1.Images[3];
             pictureBoxProperty.Image = imageList1.Images[7];

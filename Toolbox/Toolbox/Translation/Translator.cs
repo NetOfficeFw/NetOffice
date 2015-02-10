@@ -267,14 +267,7 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         private static void ForEachItems(ToolStripItem item, ItemCollection translateTable)
         {
-            //foreach (ToolStripItem subItem in item.Items)
-            //{
-            //    string message = "";
-            //    translateTable.TryGetValue(subItem.Name, out message);
-            //    if (!string.IsNullOrEmpty(message))
-            //        subItem.Text = message;
-            //    ForEachItems(subItem, translateTable);
-            //}
+            // dumy
         }
 
         private static void ForEachItems(ToolStripMenuItem item, ItemCollection translateTable)

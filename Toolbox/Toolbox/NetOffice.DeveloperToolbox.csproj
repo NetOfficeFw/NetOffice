@@ -86,7 +86,8 @@
       <HintPath>..\Libs\ICSharpCode.SharpZipLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Mono.Cecil">
+    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="MSComctlLibApi, Version=1.7.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715, processorArchitecture=MSIL">
@@ -832,7 +833,7 @@
     <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Strings.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\ReportControlStrings.txt" />
+    <EmbeddedResource Include="ToolboxControls\OfficeCompatibility\Report.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Translation\Countries.txt" />
