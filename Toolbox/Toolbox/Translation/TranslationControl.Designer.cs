@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TranslationControl));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripAddLanguage = new System.Windows.Forms.ToolStripButton();
             this.toolStripRemoveLanguage = new System.Windows.Forms.ToolStripButton();
@@ -42,7 +43,6 @@
             this.labelDoubleClickHint = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,14 +63,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnName});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
@@ -82,6 +82,14 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnName.DataPropertyName = "NameGlobal";
+            this.ColumnName.HeaderText = "";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -115,6 +123,7 @@
             this.toolStripRemoveLanguage.Name = "toolStripRemoveLanguage";
             this.toolStripRemoveLanguage.Size = new System.Drawing.Size(66, 22);
             this.toolStripRemoveLanguage.Text = "Remove";
+            this.toolStripRemoveLanguage.ToolTipText = "Remove Language";
             this.toolStripRemoveLanguage.Click += new System.EventHandler(this.toolStripRemoveLanguage_Click);
             // 
             // toolStripSeparator1
@@ -129,6 +138,7 @@
             this.toolStripAbout.Name = "toolStripAbout";
             this.toolStripAbout.Size = new System.Drawing.Size(23, 22);
             this.toolStripAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolStripAbout.ToolTipText = "Credits";
             this.toolStripAbout.Click += new System.EventHandler(this.toolStripAbout_Click);
             // 
             // toolStripSeparator2
@@ -143,7 +153,7 @@
             this.toolStripClose.Name = "toolStripClose";
             this.toolStripClose.Size = new System.Drawing.Size(23, 22);
             this.toolStripClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.toolStripClose.ToolTipText = "Close";
+            this.toolStripClose.ToolTipText = "Hide Sidebar";
             this.toolStripClose.Click += new System.EventHandler(this.toolStripClose_Click);
             // 
             // panel1
@@ -190,14 +200,6 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColumnName.DataPropertyName = "NameGlobal";
-            this.ColumnName.HeaderText = "";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
             // 
             // TranslationControl
             // 

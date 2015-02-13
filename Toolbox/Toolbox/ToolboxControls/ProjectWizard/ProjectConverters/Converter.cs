@@ -88,13 +88,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             }
         }
 
-        protected internal string AssembliesFolderPath
-        {
-            get
-            {
-                return Program.SubFolder;
-            }
-        }
+        //protected internal string AssembliesFolderPath
+        //{
+        //    get
+        //    {
+        //        return Program.SubFolder;
+        //    }
+        //}
 
         protected internal string TempPath
         {
@@ -482,7 +482,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 
             List<string> apps = CreateValidatedReferenceList(officeApps);
 
-            string assembliesFolderPath = AssembliesFolderPath;
+            string assembliesFolderPath = Program.DependencySubFolder;
             string assembliesTempTarget = TempNetOfficePath;
 
             File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.xml"), Path.Combine(assembliesTempTarget, "NetOffice.xml"));

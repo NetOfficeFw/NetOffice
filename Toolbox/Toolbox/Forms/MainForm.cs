@@ -78,7 +78,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception, ErrorCategory.Critical, CurrentLanguageID);;
+                Forms.ErrorForm.ShowError(exception, ErrorCategory.Critical, CurrentLanguageID);
             }
         }
 
@@ -86,8 +86,14 @@ namespace NetOffice.DeveloperToolbox.Forms
   
         #region Properties
 
+        /// <summary>
+        /// Commandline arguments
+        /// </summary>
         private string[] CommandLineArgs { get; set; }
 
+        /// <summary>
+        /// Shared singleton instance in the AppDomain
+        /// </summary>
         internal static MainForm Singleton { get; private set; }
 
         #endregion
@@ -207,20 +213,30 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         private void LoadRuntimeControls()
         {
-            _isCurrentlyLoading = true;
-            tabControlMain.TabPages.Clear();
-            _toolboxControls = new List<IToolboxControl>();
-            _toolBoxControlsFirstShowPassed = new List<IToolboxControl>();
-            LoadRuntimeControl(typeof(ToolboxControls.Welcome.WelcomeControl));
-            LoadRuntimeControl(typeof(ToolboxControls.OfficeCompatibility.OfficeCompatibilityControl));
-            LoadRuntimeControl(typeof(ToolboxControls.ApplicationObserver.ApplicationObserverControl));
-            LoadRuntimeControl(typeof(ToolboxControls.RegistryEditor.RegistryEditorControl));
-            LoadRuntimeControl(typeof(ToolboxControls.AddinGuard.AddinGuardControl));
-            LoadRuntimeControl(typeof(ToolboxControls.OfficeUI.OfficeUIControl));
-            LoadRuntimeControl(typeof(ToolboxControls.OutlookSecurity.OutlookSecurityControl));
-            LoadRuntimeControl(typeof(ToolboxControls.ProjectWizard.ProjectWizardControl));
-            LoadRuntimeControl(typeof(ToolboxControls.About.AboutControl));
-            _isCurrentlyLoading = false;
+            try
+            {
+                _isCurrentlyLoading = true;
+                tabControlMain.TabPages.Clear();
+                _toolboxControls = new List<IToolboxControl>();
+                _toolBoxControlsFirstShowPassed = new List<IToolboxControl>();
+                LoadRuntimeControl(typeof(ToolboxControls.Welcome.WelcomeControl));
+                LoadRuntimeControl(typeof(ToolboxControls.OfficeCompatibility.OfficeCompatibilityControl));
+                LoadRuntimeControl(typeof(ToolboxControls.ApplicationObserver.ApplicationObserverControl));
+                LoadRuntimeControl(typeof(ToolboxControls.RegistryEditor.RegistryEditorControl));
+                LoadRuntimeControl(typeof(ToolboxControls.AddinGuard.AddinGuardControl));
+                LoadRuntimeControl(typeof(ToolboxControls.OfficeUI.OfficeUIControl));
+                LoadRuntimeControl(typeof(ToolboxControls.OutlookSecurity.OutlookSecurityControl));
+                LoadRuntimeControl(typeof(ToolboxControls.ProjectWizard.ProjectWizardControl));
+                LoadRuntimeControl(typeof(ToolboxControls.About.AboutControl));
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                _isCurrentlyLoading = false;
+            }
         }
 
         private void LoadRuntimeControl(Type type)
@@ -466,9 +482,6 @@ namespace NetOffice.DeveloperToolbox.Forms
                     item.LoadComplete();
                 foreach (var item in _toolboxControls)
                     item.SetLanguage(_currentLanguageID);
-
-                var ts = DateTime.Now - Program.StartTime;
-                Console.WriteLine("Loaded in {0} seconds", ts.TotalSeconds);
             }
             catch (Exception exception)
             {

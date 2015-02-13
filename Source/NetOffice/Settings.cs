@@ -225,7 +225,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the Initialize method perform a deep level analyzing(may cause security issues)
+        /// Get or set the Initialize method perform a deep level analyzing(may cause security issues). true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EnableDeepLoading

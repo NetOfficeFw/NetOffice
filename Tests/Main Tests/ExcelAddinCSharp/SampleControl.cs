@@ -31,5 +31,15 @@ namespace ExcelAddinCSharp
         {
              
         }
+
+        void NetOffice.ExcelApi.Tools.ITaskPane.OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+           
+        }
+
+        void NetOffice.ExcelApi.Tools.ITaskPane.OnVisibleStateChanged(bool visible)
+        {
+
+        }
     }
 }

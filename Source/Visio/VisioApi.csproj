@@ -10,12 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetOffice.VisioApi</RootNamespace>
     <AssemblyName>VisioApi</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>VisioApi_v3.5.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>VisioApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -530,6 +529,9 @@
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VisioApi_v4.0.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

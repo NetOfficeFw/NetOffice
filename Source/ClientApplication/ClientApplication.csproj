@@ -10,9 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClientApplication</RootNamespace>
     <AssemblyName>ClientApplication</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +50,10 @@
     <ProjectReference Include="..\Excel\ExcelApi.csproj">
       <Project>{43C2FFD2-1680-490A-B0CF-BE425D6EEC7C}</Project>
       <Name>ExcelApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSForms\MSFormsApi.csproj">
+      <Project>{F1A3EBA7-5C09-4986-9821-244E8468FBAE}</Project>
+      <Name>MSFormsApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Office\OfficeApi.csproj">
       <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>

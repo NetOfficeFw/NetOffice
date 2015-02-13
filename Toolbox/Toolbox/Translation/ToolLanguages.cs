@@ -38,12 +38,11 @@ namespace NetOffice.DeveloperToolbox.Translation
         {
             get
             {
-                
-                #if DEBUG                 
-                    return Path.Combine(Program.SubFolder, "Languages");
-                #else
+                //#if DEBUG                 
+                //    return Path.Combine(Program.SubFolder, "Languages");
+                //#else
                     return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NODevBox\\Languages");
-                #endif
+//                #endif
             }
         }
 

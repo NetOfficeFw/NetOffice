@@ -100,7 +100,7 @@ namespace NetOffice
         private static object _defaultLock = new object();
 
         private static readonly string _noAssemblyAttributeName = "NetOffice.NetOfficeAssemblyAttribute";
-        private static readonly string[] _tryLoadAssemblyNames = new string[] { "ExcelApi.dll", "WordApi.dll", "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll", "VisioApi.dll", "MSProjectApi.dll" };
+        private static readonly string[] _tryLoadAssemblyNames = new string[] { "ExcelApi.dll", "WordApi.dll", "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll", "VisioApi.dll", "MSProjectApi.dll", "MSFormsApi.dll" };
 
         #endregion
 

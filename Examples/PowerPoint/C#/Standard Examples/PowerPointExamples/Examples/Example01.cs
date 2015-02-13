@@ -22,7 +22,7 @@ namespace PowerPointExamplesCS4
         {
             // start powerpoint
             PowerPoint.Application powerApplication = new PowerPoint.Application();
-
+ 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
             presentation.Slides.Add(1, PpSlideLayout.ppLayoutClipArtAndVerticalText);
