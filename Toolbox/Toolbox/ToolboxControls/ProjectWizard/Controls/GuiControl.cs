@@ -18,18 +18,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             InitializeComponent();
             CreateSettingsDocument();
-            //if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-            //{
-            //    checkBoxClassicUISupport.Text = "Ich möchte die klassische Benutzeroberfläche in älteren Office Versionen erweitern";
-            //    checkBoxRibbonUISupport.Text = "Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern";
-            //    checkBoxTaskPaneSupport.Text = "Ich möchte eine Task Pane zur Verfügung stellen";
-            //}
-            //else
-            //{
-            //    checkBoxClassicUISupport.Text = "I want customize the classic User Interface";
-            //    checkBoxRibbonUISupport.Text = "I want customize the Ribbon User Interface";
-            //    checkBoxTaskPaneSupport.Text = "I want a custom Task Pane";
-            //}
         }
 
         public bool ClassicUIEnabled

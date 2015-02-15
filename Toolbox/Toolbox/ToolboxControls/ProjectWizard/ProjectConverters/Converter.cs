@@ -34,7 +34,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             Directory.CreateDirectory(TempProjectPath);
             Directory.CreateDirectory(TempPropertiesPath);
             Directory.CreateDirectory(TempNetOfficePath);
-            Environments = new EnvironmenVersions();
+            Environments = new EnvironmentVersions();
             SolutionFormats = new SolutionFormatVersions();
             Tools = new ToolsVersions();
             Runtimes = new RuntimeVersions();
@@ -44,7 +44,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 
         #region Properties
 
-        protected internal EnvironmenVersions Environments { get; private set; }
+        protected internal EnvironmentVersions Environments { get; private set; }
 
         protected internal SolutionFormatVersions SolutionFormats { get; private set; }
 
@@ -87,14 +87,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                 return targetFolder;
             }
         }
-
-        //protected internal string AssembliesFolderPath
-        //{
-        //    get
-        //    {
-        //        return Program.SubFolder;
-        //    }
-        //}
 
         protected internal string TempPath
         {
@@ -358,7 +350,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
         protected internal void MoveTempSolutionFolderToTarget()
         {
             if (!Directory.Exists(TargetSolutionPath))
-                Directory.Move(TempSolutionPath, TargetSolutionPath);
+                FileSystem.DirectoryMove(TempSolutionPath, TargetSolutionPath);
             else
                 throw new InvalidOperationException(Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Der angegebene Ordner existiert bereits." : "Directory already exists.");
         }
@@ -368,7 +360,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             string[] officeApps = Options.OfficeApps;
 
             StringBuilder sb = new StringBuilder();
-            string templateItem = "    <Reference Include=\"%Name%, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL\">\r\n" +
+            string templateItem = "    <Reference Include=\"%Name%, Version=" + Program.CurrentNetOfficeVersion + ", Culture=neutral, processorArchitecture=MSIL\">\r\n" +
                                   "      <SpecificVersion>False</SpecificVersion>\r\n" +
                                   "      <HintPath>..\\NetOffice\\%RealName%.dll</HintPath>\r\n" +
                                   "    </Reference>";
@@ -484,7 +476,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
 
             string assembliesFolderPath = Program.DependencySubFolder;
             string assembliesTempTarget = TempNetOfficePath;
-
             File.Copy(Path.Combine(assembliesFolderPath, "NetOffice.xml"), Path.Combine(assembliesTempTarget, "NetOffice.xml"));
             foreach (var item in apps)
                 File.Copy(Path.Combine(assembliesFolderPath, item + "Api.xml"), Path.Combine(assembliesTempTarget, item + "Api.xml"));
@@ -622,114 +613,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
             {
                 case NetVersion.Net45:
                     if (options.IDE != IDE.VS2013)
-                        throw new ArgumentException("Invalid settings");
+                        throw new ArgumentException("Invalid Framework=>IDE settings");
                     break;
             }
         }
 
         #endregion
-    }
-
-    internal enum RegistryHive
-    { 
-        HKEY_Local_Machine = 0,
-        HKEY_Current_User
-    }
-
-    internal class EnvironmenVersions
-    {
-        public string this[IDE environment, ProgrammingLanguage language]
-        {
-            get
-            {
-                switch (environment)
-                {
-                    case IDE.VS2010:
-                        if (language == ProgrammingLanguage.CSharp)
-                            return "# Visual C# Express 2010";
-                        else
-                            return "# Visual Basic Express 2010";
-                    case IDE.VS2012:
-                        if (language == ProgrammingLanguage.CSharp)
-                            return "# Visual C# Express 2012";
-                        else
-                            return "# Visual Basic Express 2012";
-                    case IDE.VS2013:
-                        return "# Visual Studio Express 2013 for Windows Desktop\r\nVisualStudioVersion = 12.0.30723.0\r\nMinimumVisualStudioVersion = 10.0.40219.1";
-                    default:
-                        throw new ArgumentOutOfRangeException("environment");
-                }
-            }
-        }
-    }
-
-    internal class SolutionFormatVersions
-    {
-        public string this[IDE environment]
-        {
-            get 
-            {
-                switch (environment)
-                {
-                    case IDE.VS2010:
-                        return "11.00";
-                    case IDE.VS2012:
-                        return "11.00";
-                    case IDE.VS2013:
-                        return "12.00";
-                    default:
-                        throw new ArgumentOutOfRangeException("environment");
-                }
-            }
-        }
-    }
-
-    internal class ToolsVersions
-    {
-        public string this[IDE environment]
-        {
-            get
-            {
-                switch (environment)
-                {
-                    case IDE.VS2010:
-                        return "4.0";
-                    case IDE.VS2012:
-                        return "4.0";
-                    case IDE.VS2013:
-                        return "12.00";
-                    default:
-                        throw new ArgumentOutOfRangeException("environment");
-                }
-            }
-        }
-    }
-
-    internal class RuntimeVersions
-    {
-        public string this[NetVersion runtime]
-        {
-            get
-            {
-                switch (runtime)
-                {
-                    case NetVersion.Net2:
-                        return "    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>";
-                    case NetVersion.Net3:
-                        return "    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>";
-                    case NetVersion.Net35:
-                        return "    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>";
-                    case NetVersion.Net4:
-                        return "    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>";
-                    case NetVersion.Net4Client:
-                        return "    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>\r\n    <TargetFrameworkProfile>Client</TargetFrameworkProfile>";
-                    case NetVersion.Net45:
-                        return "    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>";
-                    default:
-                        throw new ArgumentOutOfRangeException("runtime");
-                }
-            }
-        }
     }
 }
  

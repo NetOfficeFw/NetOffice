@@ -22,7 +22,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             InitializeComponent(); 
             CreateSettingsDocument();
-            if (!IsAdministrator())
+            if (!Program.IsAdmin)
                 labelNoAdminHint.Visible = true;
             else
                 labelNoAdminHint.Visible = false;
@@ -301,21 +301,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             {
                 FolderBrowserDialog dialog = new FolderBrowserDialog();
                 if (DialogResult.OK == dialog.ShowDialog(this))
+                {
                     textBoxCustomFolder.Text = dialog.SelectedPath;
+                    ChangeSettings();
+                    RaiseChangeEvent();
+                }
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
             }
         }
-
-        private bool IsAdministrator()
-        {
-            WindowsIdentity myWindowsIdentity = WindowsIdentity.GetCurrent();
-            WindowsPrincipal myWindowsPrincipal = new WindowsPrincipal(myWindowsIdentity);
-            return myWindowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
+        
         private void linkLabelNSTOInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try

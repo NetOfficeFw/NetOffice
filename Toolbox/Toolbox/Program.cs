@@ -7,8 +7,13 @@ using System.Diagnostics;
 
 namespace NetOffice.DeveloperToolbox
 {
-    static class Program
+    internal static class Program
     {
+        /// <summary>
+        /// cache field to check program has admin privileges only at once
+        /// </summary>
+        private static bool? _isAdmin;
+
         /// <summary>
         /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future.
         /// </summary>
@@ -76,6 +81,17 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
+        /// Current NO public release version
+        /// </summary>
+        public static string CurrentNetOfficeVersion
+        {
+            get 
+            {
+                return "1.7.2.0";
+            }
+        }
+
+        /// <summary>
         /// Find the local root folder in debug mode. The method use the Application.Startup method path and returns the folder 3x upward.
         /// </summary>
         /// <returns>The current related debug root folder</returns>
@@ -108,11 +124,15 @@ namespace NetOffice.DeveloperToolbox
         {
             get 
             {
-                WindowsIdentity identity = WindowsIdentity.GetCurrent();
-                WindowsPrincipal principal = new WindowsPrincipal(identity);                
-                bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
-                identity.Dispose();
-                return result;
+                if (null == _isAdmin)
+                { 
+                    WindowsIdentity identity = WindowsIdentity.GetCurrent();
+                    WindowsPrincipal principal = new WindowsPrincipal(identity);                
+                    bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
+                    identity.Dispose();
+                    _isAdmin = result;
+                }
+                return (bool)_isAdmin;
             }
         }
 

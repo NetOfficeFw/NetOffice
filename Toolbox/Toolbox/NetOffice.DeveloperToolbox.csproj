@@ -411,6 +411,7 @@
     <Compile Include="ToolboxControls\ProjectWizard\LocalizedContent.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterCS.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ClassLibraryConverterVB.cs" />
+    <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\ConverterUtils.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleMultiAddinConverterCS.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleMultiAddinConverterVB.cs" />
     <Compile Include="ToolboxControls\ProjectWizard\ProjectConverters\SimpleSingleAddinConverterCS.cs" />

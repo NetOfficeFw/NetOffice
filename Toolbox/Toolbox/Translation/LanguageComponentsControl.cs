@@ -209,19 +209,19 @@ namespace NetOffice.DeveloperToolbox.Translation
             {
                 if (item is LocalizableRTFString)
                 {
-                    textBoxRichString.RichText = item.Value2; // (component.Design as ILocalizationDesign).GetCurrentText(item.Value);
+                    textBoxRichString.RichText = item.Value2; 
                     textBoxRichString.Enabled = true;
                     textBoxRichString.Visible = true;
                 }
                 else if (item is LocalizableWideString)
                 {
-                    textBoxWideString.Text = item.Value2; // (component.Design as ILocalizationDesign).GetCurrentText(item.Value);
+                    textBoxWideString.Text = item.Value2;
                     textBoxWideString.Enabled = true;
                     textBoxWideString.Visible = true;
                 }
                 else 
                 {
-                    textBoxString.Text = item.Value2; // (component.Design as ILocalizationDesign).GetCurrentText(item.Value);
+                    textBoxString.Text = item.Value2;
                     textBoxString.Enabled = true;
                     textBoxString.Visible = true;
                 }

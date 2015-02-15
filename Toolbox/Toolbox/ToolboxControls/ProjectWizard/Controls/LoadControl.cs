@@ -188,7 +188,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-            comboBoxLoadBehavior.Visible = false;
+            //comboBoxLoadBehavior.Visible = false;
         }
 
         public void Localize(Translation.ItemCollection strings)
