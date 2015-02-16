@@ -19,11 +19,12 @@ using NetOffice.DAOApi.Constants;
 
 namespace AccessExamplesCS4
 {
-    class Example03 : IExample
+    /// <summary>
+    /// Example 3 - Use CompactDatabase
+    /// </summary>
+    internal class Example03 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -32,7 +33,7 @@ namespace AccessExamplesCS4
 
             // create database name 
             string fileExtension = GetDefaultExtension(accessApplication);
-            string documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example03{1}", HostApplication.RootDirectory, fileExtension);
 
 
             // delete old database if exists
@@ -62,7 +63,7 @@ namespace AccessExamplesCS4
 
             // now we do CompactDatabase            
 
-            string newDocumentFile = string.Format("{0}\\CompactDatabase{1}", _hostApplication, fileExtension);
+            string newDocumentFile = string.Format("{0}\\CompactDatabase{1}", HostApplication, fileExtension);
             if (File.Exists(newDocumentFile))
                 File.Delete(newDocumentFile);
 
@@ -73,28 +74,34 @@ namespace AccessExamplesCS4
             accessApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Use CompactDatabase" : "CompactDatabase ausführen"; }
+            get { return HostApplication.LCID == 1033 ? "Use CompactDatabase" : "CompactDatabase ausführen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

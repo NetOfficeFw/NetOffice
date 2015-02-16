@@ -14,9 +14,7 @@ namespace TutorialsCS4
 {
     public partial class Tutorial01 : ITutorial
     {
-        IHost _hostApplication;
-
-        #region ITutorial Member
+        #region ITutorial
 
         public void Run()
         {
@@ -53,12 +51,12 @@ namespace TutorialsCS4
             * the excel instance are now removed from process list
             */
 
-            _hostApplication.ShowFinishDialog();
+            HostApplication.ShowFinishDialog();
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public void Disconnect()
@@ -73,7 +71,7 @@ namespace TutorialsCS4
 
         public string Uri 
         {
-             get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial01_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial01_DE_CS"; }
+            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial01_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial01_DE_CS"; }
         }
 
         public string Caption
@@ -84,13 +82,19 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Understand COM Proxy Management" : "COM Proxy Management verstehen"; }
+            get { return HostApplication.LCID == 1033 ? "Understand COM Proxy Management" : "COM Proxy Management verstehen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

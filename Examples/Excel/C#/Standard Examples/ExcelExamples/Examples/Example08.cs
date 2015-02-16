@@ -13,19 +13,31 @@ using NetOffice.ExcelApi.Enums;
 
 namespace ExcelExamplesCS4
 {
+    /// <summary>
+    /// Example 8 - Using Events
+    /// </summary>
     partial class Example08 : UserControl , IExample
     {
-        IHost _hostApplication;
+        #region Fields/Delegates
 
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Example08()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
-         
+
+        #endregion
+
         #region IExample Member
 
         public void RunExample()
@@ -36,17 +48,17 @@ namespace ExcelExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example08" : "Beispiel08"; }
+            get { return HostApplication.LCID == 1033 ? "Example08" : "Beispiel08"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
         }
 
         public UserControl Panel
@@ -54,6 +66,24 @@ namespace ExcelExamplesCS4
             get { return this; }
         }
  
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateTextbox(string message)
+        {
+            textBoxEvents.AppendText(message + "\r\n");
+        }
+
         #endregion
 
         #region UI Trigger
@@ -87,45 +117,40 @@ namespace ExcelExamplesCS4
 
         #region Excel Trigger
 
-        void _excelApplication_SheetDeactivateEvent(COMObject Sh)
+        private void _excelApplication_SheetDeactivateEvent(COMObject Sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetDeactivate called." });
             Sh.Dispose();
         }
 
-        void _excelApplication_SheetActivateEvent(COMObject Sh)
+        private void _excelApplication_SheetActivateEvent(COMObject Sh)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event SheetActivate called." });
             Sh.Dispose();
         }
 
-        void excelApplication_NewWorkbook(Excel.Workbook Wb)
+        private void excelApplication_NewWorkbook(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event NewWorkbook called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookBeforeClose(Excel.Workbook Wb, ref bool Cancel)
+        private void excelApplication_WorkbookBeforeClose(Excel.Workbook Wb, ref bool Cancel)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookBeforeClose called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookActivate(Excel.Workbook Wb)
+        private void excelApplication_WorkbookActivate(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookActivate called." });
             Wb.Dispose();
         }
 
-        void excelApplication_WorkbookDeactivate(Excel.Workbook Wb)
+        private void excelApplication_WorkbookDeactivate(Excel.Workbook Wb)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event WorkbookDeactivate called." });
             Wb.Dispose();
-        }
-
-        private void UpdateTextbox(string message)
-        {
-            textBoxEvents.AppendText(message + "\r\n");
         }
 
         #endregion

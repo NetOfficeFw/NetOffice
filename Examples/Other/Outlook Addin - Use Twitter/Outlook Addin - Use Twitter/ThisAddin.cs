@@ -10,21 +10,27 @@ using NetOffice.OutlookApi.Tools;
 namespace Sample.Addin
 {
     /// <summary>
-    /// The main addin for MS-Word. The Addin use the base class COMAddin from NetOffice.WordApi.Tools.
-    /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
+    /// The main addin for MS-Word. The Addin use the base class COMAddin from NetOffice.OutlookApi.Tools.
     /// </summary>
     [ProgId("Sample.TwitterAddin"), Guid("60875BD5-C5A5-4315-8954-BEEF3112DA82")]
     [COMAddin("Outlook Twitter Addin", "This Addin provides Twitter functionality", 3), Tweak(true)]
+    [CustomPane(typeof(TwitterPane), "Twitter (powered by Linq2Twitter)", true, PaneDockPosition.msoCTPDockPositionRight, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal, 300, 300)]
     public class ThisAddin : COMAddin
     {
         public ThisAddin()
         {
-            // we create the taskpane
-            TaskPanes.Add(typeof(TwitterPane), "Twitter (powered by Linq2Twitter)");
-            TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionRight;
-            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoHorizontal;
-            TaskPanes[0].Width = 300;
-            TaskPanes[0].Visible = true;
+            this.OnStartupComplete += new OnStartupCompleteEventHandler(ThisAddin_OnStartupComplete);
+            this.OnDisconnection += new OnDisconnectionEventHandler(ThisAddin_OnDisconnection);
+        }
+
+        private void ThisAddin_OnStartupComplete(ref Array custom)
+        {
+
+        }
+
+        private void ThisAddin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        {
+
         }
     }
 }

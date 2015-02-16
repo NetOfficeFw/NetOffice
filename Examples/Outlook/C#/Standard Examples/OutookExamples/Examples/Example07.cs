@@ -15,20 +15,28 @@ using NetOffice.OfficeApi.Enums;
 
 namespace OutlookExamplesCS4
 {
-    public partial class Example07 : UserControl, IExample
+    /// <summary>
+    /// Example 7 - Customize ui
+    /// </summary>
+    internal partial class Example07 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Fields/Delegates
 
-        Outlook.Application _outlookApplication;
-
+        private Outlook.Application _outlookApplication;
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example07()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -40,17 +48,17 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public UserControl Panel
@@ -59,7 +67,13 @@ namespace OutlookExamplesCS4
         }
 
         #endregion
-         
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
@@ -94,7 +108,7 @@ namespace OutlookExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -121,7 +135,7 @@ namespace OutlookExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 

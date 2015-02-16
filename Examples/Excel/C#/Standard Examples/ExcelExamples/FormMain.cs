@@ -15,7 +15,6 @@ namespace ExcelExamplesCS4
         public FormMain()
         {
             InitializeComponent();
-
             this.Text = "NetOffice Excel Examples in C#";
             LoadExamples();
         }

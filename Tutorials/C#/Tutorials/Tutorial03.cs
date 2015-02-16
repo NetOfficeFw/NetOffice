@@ -33,7 +33,7 @@ namespace TutorialsCS4
 
         #endregion
 
-        #region ITutorial Member
+        #region ITutorial
 
         public void Run()
         { 
@@ -84,6 +84,12 @@ namespace TutorialsCS4
         {
             get { return this; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

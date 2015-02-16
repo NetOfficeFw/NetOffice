@@ -15,10 +15,8 @@ namespace OutlookExamplesCS4
         public FormMain()
         {
             InitializeComponent();
-
             this.Text = "NetOffice Outlook Examples in C#";
             LoadExamples();
-
         }
 
         private void LoadExamples()

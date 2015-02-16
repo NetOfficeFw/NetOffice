@@ -5,8 +5,17 @@ using System.Text;
 
 namespace ExampleBase
 {
-    class Translator
+    /// <summary>
+    /// Translation helper
+    /// </summary>
+    internal class Translator
     {
+        /// <summary>
+        /// Translate form controls
+        /// </summary>
+        /// <param name="form">target form to localize</param>
+        /// <param name="ressourceFile">localization resource file adress</param>
+        /// <param name="languageId">language LCID</param>
         public static void TranslateControls(FormBase form, string ressourceFile, int languageId)
         {
             string ressourceContent = ReadString(ressourceFile);

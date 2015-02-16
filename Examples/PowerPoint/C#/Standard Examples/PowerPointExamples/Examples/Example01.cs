@@ -12,11 +12,12 @@ using NetOffice.OfficeApi.Enums;
 
 namespace PowerPointExamplesCS4
 {
-    class Example01 : IExample 
+    /// <summary>
+    /// Example 1 - Create a presentation
+    /// </summary>
+    internal class Example01 : IExample 
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -29,7 +30,7 @@ namespace PowerPointExamplesCS4
             
             // save the document 
             string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example01{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, fileExtension);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -37,28 +38,34 @@ namespace PowerPointExamplesCS4
             powerApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create a presentation with 1 empty slide" : "Eine neue Präsentation erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create a presentation with 1 empty slide" : "Eine neue Präsentation erstellen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

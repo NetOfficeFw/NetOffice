@@ -13,11 +13,12 @@ using NetOffice.ExcelApi.Enums;
 
 namespace ExcelExamplesCS4
 {
-    class Example01 : IExample
-    {
-        IHost _hostApplication;
-        
-        #region IExample Member
+    /// <summary>
+    /// Example 1 - Background Colors and Borders for Cells
+    /// </summary>
+    internal class Example01 : IExample
+    {        
+        #region IExample
 
         public void RunExample()
         {
@@ -43,7 +44,7 @@ namespace ExcelExamplesCS4
 
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example01{1}", _hostApplication.RootDirectory, fileExtension);
+            string workbookFile = String.Format("{0}\\Example01{1}", HostApplication.RootDirectory, fileExtension);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -51,28 +52,37 @@ namespace ExcelExamplesCS4
             excelApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, workbookFile);
+            HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Background Colors and Borders for Cells" : "Hintergrundfarben und Rahmen in Zellen"; }
+            get { return HostApplication.LCID == 1033 ? "Background Colors and Borders for Cells" : "Hintergrundfarben und Rahmen in Zellen"; }
         }
 
         public UserControl Panel 
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

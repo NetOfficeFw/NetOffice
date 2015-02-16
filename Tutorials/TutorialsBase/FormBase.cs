@@ -9,7 +9,6 @@ using System.Windows.Forms;
 
 namespace TutorialsBase
 {
-   
     /// <summary>
     /// the main form for the application, implements also IHost to represent the host application for the examples.
     /// this is not -state of the art- in software development but example code has to keep the lines of code as small as possible.
@@ -22,7 +21,7 @@ namespace TutorialsBase
 
         #endregion
 
-        #region .ctor
+        #region Ctor
 
         public FormBase()
         {
@@ -33,7 +32,7 @@ namespace TutorialsBase
 
         #endregion
 
-        #region IHost Member
+        #region IHost
 
         public DialogResult ShowQuestion(string message)
         {
@@ -106,7 +105,7 @@ namespace TutorialsBase
 
         #endregion
 
-        #region Private Methods
+        #region Methods
 
         private void ApplyConfiguration()
         {

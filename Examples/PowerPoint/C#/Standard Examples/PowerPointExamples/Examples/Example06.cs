@@ -14,12 +14,19 @@ using NetOffice.OfficeApi.Enums;
 
 namespace PowerPointExamplesCS4
 {
-    partial class Example06 : UserControl, IExample
+    /// <summary>
+    /// Example 6 - Using events
+    /// </summary>
+    internal partial class Example06 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Fields/Delegates
 
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example06()
         {
@@ -27,7 +34,9 @@ namespace PowerPointExamplesCS4
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
 
-        #region IExample Member
+        #endregion
+
+        #region IExample
 
         public void RunExample()
         {
@@ -37,22 +46,37 @@ namespace PowerPointExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
         }
 
         public UserControl Panel
         {
             get { return this; }
+        }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateTextbox(string message)
+        {
+            textBoxEvents.AppendText(message + "\r\n");
         }
 
         #endregion
@@ -89,21 +113,16 @@ namespace PowerPointExamplesCS4
 
         #region PowerPoint Trigger
 
-        void powerApplication_PresentationCloseEvent(NetOffice.PowerPointApi.Presentation Pres)
+        private void powerApplication_PresentationCloseEvent(NetOffice.PowerPointApi.Presentation Pres)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event PresentationClose called." });
             Pres.Dispose();
         }
 
-        void powerApplication_AfterNewPresentationEvent(NetOffice.PowerPointApi.Presentation Pres)
+        private void powerApplication_AfterNewPresentationEvent(NetOffice.PowerPointApi.Presentation Pres)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event AfterNewPresentation called." });
             Pres.Dispose();
-        }
-
-        private void UpdateTextbox(string message)
-        {
-            textBoxEvents.AppendText(message + "\r\n");
         }
 
         #endregion

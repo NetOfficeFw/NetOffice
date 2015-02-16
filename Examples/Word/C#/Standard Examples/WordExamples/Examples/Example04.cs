@@ -14,16 +14,17 @@ using NetOffice.WordApi.Enums;
 
 namespace WordExamplesCS4
 {
-    class Example04 : IExample
+    /// <summary>
+    /// Example 4 - Using a datasource
+    /// </summary>
+    internal class Example04 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // create simple a csv-file as datasource
-            string fileName = string.Format("{0}\\DataSource.csv", _hostApplication.RootDirectory);
+            string fileName = string.Format("{0}\\DataSource.csv", HostApplication.RootDirectory);
              
             // if file exists then delete
             if (File.Exists(fileName))
@@ -67,7 +68,7 @@ namespace WordExamplesCS4
             wordApplication.ActiveWindow.View.ShowFieldCodes = false;
 
             // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example04{1}", _hostApplication.RootDirectory, ".doc");
+            string documentFile = string.Format("{0}\\Example04{1}", HostApplication.RootDirectory, ".doc");
             double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
             if (wordVersion >= 12.0)
                 newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
@@ -79,28 +80,34 @@ namespace WordExamplesCS4
             wordApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using data source" : "Verwendung von DataSource"; }
+            get { return HostApplication.LCID == 1033 ? "Using data source" : "Verwendung von DataSource"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

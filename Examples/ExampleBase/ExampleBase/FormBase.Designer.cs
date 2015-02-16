@@ -65,11 +65,14 @@
             this.listViewExamples.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewExamples.BackColor = System.Drawing.Color.White;
+            this.listViewExamples.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewExamples.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
             this.listViewExamples.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listViewExamples.FullRowSelect = true;
+            this.listViewExamples.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewExamples.HideSelection = false;
             this.listViewExamples.Location = new System.Drawing.Point(24, 61);
             this.listViewExamples.Name = "listViewExamples";
@@ -110,6 +113,8 @@
             // buttonStartExample
             // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartExample.Enabled = false;
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStartExample.Location = new System.Drawing.Point(619, 18);
@@ -216,11 +221,12 @@
             // buttonOptions
             // 
             this.buttonOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonOptions.Image")));
             this.buttonOptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOptions.Location = new System.Drawing.Point(517, 18);
+            this.buttonOptions.Location = new System.Drawing.Point(506, 18);
             this.buttonOptions.Name = "buttonOptions";
-            this.buttonOptions.Size = new System.Drawing.Size(94, 29);
+            this.buttonOptions.Size = new System.Drawing.Size(105, 29);
             this.buttonOptions.TabIndex = 12;
             this.buttonOptions.Text = "Options";
             this.buttonOptions.UseVisualStyleBackColor = true;
@@ -257,14 +263,14 @@
             // linkLabelDeveloperToolbox
             // 
             this.linkLabelDeveloperToolbox.AutoSize = true;
-            this.linkLabelDeveloperToolbox.Location = new System.Drawing.Point(10, 120);
+            this.linkLabelDeveloperToolbox.Location = new System.Drawing.Point(10, 132);
             this.linkLabelDeveloperToolbox.Name = "linkLabelDeveloperToolbox";
             this.linkLabelDeveloperToolbox.Size = new System.Drawing.Size(97, 13);
             this.linkLabelDeveloperToolbox.TabIndex = 20;
             this.linkLabelDeveloperToolbox.TabStop = true;
             this.linkLabelDeveloperToolbox.Tag = "/wikipage?title=DeveloperToolbox_English#/wikipage?title=DeveloperToolbox_German";
             this.linkLabelDeveloperToolbox.Text = "Developer Toolbox";
-            this.linkLabelDeveloperToolbox.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
+            this.linkLabelDeveloperToolbox.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessource_LinkClicked);
             // 
             // linkLabelTutorialOverview
             // 
@@ -276,34 +282,34 @@
             this.linkLabelTutorialOverview.TabStop = true;
             this.linkLabelTutorialOverview.Tag = "/wikipage?title=TutorialOverview_EN#/wikipage?title=TutorialOverview_DE";
             this.linkLabelTutorialOverview.Text = "Tutorials";
-            this.linkLabelTutorialOverview.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
+            this.linkLabelTutorialOverview.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessource_LinkClicked);
             // 
             // linkLabelTecFaq
             // 
             this.linkLabelTecFaq.AutoSize = true;
-            this.linkLabelTecFaq.Location = new System.Drawing.Point(10, 100);
+            this.linkLabelTecFaq.Location = new System.Drawing.Point(10, 109);
             this.linkLabelTecFaq.Name = "linkLabelTecFaq";
             this.linkLabelTecFaq.Size = new System.Drawing.Size(78, 13);
             this.linkLabelTecFaq.TabIndex = 14;
             this.linkLabelTecFaq.TabStop = true;
             this.linkLabelTecFaq.Tag = "/wikipage?title=Tec_Faq_English#/wikipage?title=Tec_Faq_German";
             this.linkLabelTecFaq.Text = "Technical FAQ";
-            this.linkLabelTecFaq.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
+            this.linkLabelTecFaq.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessource_LinkClicked);
             // 
             // labelRessourceHeader
             // 
             this.labelRessourceHeader.AutoSize = true;
-            this.labelRessourceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRessourceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRessourceHeader.Location = new System.Drawing.Point(10, 12);
             this.labelRessourceHeader.Name = "labelRessourceHeader";
-            this.labelRessourceHeader.Size = new System.Drawing.Size(73, 13);
+            this.labelRessourceHeader.Size = new System.Drawing.Size(67, 13);
             this.labelRessourceHeader.TabIndex = 18;
-            this.labelRessourceHeader.Text = "Ressources";
+            this.labelRessourceHeader.Text = "Resources";
             // 
             // linkLabelTecDocumentation
             // 
             this.linkLabelTecDocumentation.AutoSize = true;
-            this.linkLabelTecDocumentation.Location = new System.Drawing.Point(10, 80);
+            this.linkLabelTecDocumentation.Location = new System.Drawing.Point(10, 86);
             this.linkLabelTecDocumentation.Name = "linkLabelTecDocumentation";
             this.linkLabelTecDocumentation.Size = new System.Drawing.Size(129, 13);
             this.linkLabelTecDocumentation.TabIndex = 13;
@@ -311,19 +317,19 @@
             this.linkLabelTecDocumentation.Tag = "/wikipage?title=Tec_Documentation_English#/wikipage?title=Tec_Documentation_Germa" +
                 "n";
             this.linkLabelTecDocumentation.Text = "Technical Documentation";
-            this.linkLabelTecDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
+            this.linkLabelTecDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessource_LinkClicked);
             // 
             // linkLabelDocumentation
             // 
             this.linkLabelDocumentation.AutoSize = true;
-            this.linkLabelDocumentation.Location = new System.Drawing.Point(10, 60);
+            this.linkLabelDocumentation.Location = new System.Drawing.Point(10, 63);
             this.linkLabelDocumentation.Name = "linkLabelDocumentation";
             this.linkLabelDocumentation.Size = new System.Drawing.Size(79, 13);
             this.linkLabelDocumentation.TabIndex = 15;
             this.linkLabelDocumentation.TabStop = true;
             this.linkLabelDocumentation.Tag = "/documentation#/wikipage?title=Documentation_German";
             this.linkLabelDocumentation.Text = "Documentation";
-            this.linkLabelDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessouce_LinkClicked);
+            this.linkLabelDocumentation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRessource_LinkClicked);
             // 
             // FormBase
             // 

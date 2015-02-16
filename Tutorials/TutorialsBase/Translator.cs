@@ -5,8 +5,16 @@ using System.Text;
 
 namespace TutorialsBase
 {
-    class Translator
+    /// <summary>
+    /// Localization helper
+    /// </summary>
+    internal static class Translator
     {
+        /// <summary>
+        /// Translate tutorial form controls
+        /// </summary>
+        /// <param name="form">target form to translate</param>
+        /// <param name="ressourceFile">resource file adress</param>
         public static void TranslateControls(TutorialForm form, string ressourceFile)
         {
             int languageId = FormOptions.LCID;

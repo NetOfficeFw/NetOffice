@@ -14,11 +14,12 @@ using NetOffice.WordApi.Enums;
 
 namespace WordExamplesCS4
 {
-    class Example01 : IExample
+    /// <summary>
+    /// Example 1 - Create a document
+    /// </summary>
+    internal class Example01 : IExample
     {
-        IHost _hostApplication;
-        
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -38,7 +39,7 @@ namespace WordExamplesCS4
             wordApplication.Selection.Font.Size = 18;
 
             // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example01{1}", _hostApplication.RootDirectory, ".doc");
+            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, ".doc");
             double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
             if (wordVersion >= 12.0)
                 newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
@@ -50,28 +51,34 @@ namespace WordExamplesCS4
             wordApplication.Dispose();
             
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create a document write text and save" : "Dokument erstellen, Text schreiben und speichern"; }
+            get { return HostApplication.LCID == 1033 ? "Create a document write text and save" : "Dokument erstellen, Text schreiben und speichern"; }
         }
 
         public UserControl Panel 
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

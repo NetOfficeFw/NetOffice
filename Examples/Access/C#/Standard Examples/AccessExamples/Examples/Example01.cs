@@ -17,11 +17,12 @@ using NetOffice.DAOApi.Constants;
 
 namespace AccessExamplesCS4
 {
-    class Example01 : IExample 
+    /// <summary>
+    /// Example 1 - Create new Database
+    /// </summary>
+    internal class Example01 : IExample 
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -30,7 +31,7 @@ namespace AccessExamplesCS4
              
             // create database name 
             string fileExtension = GetDefaultExtension(accessApplication);
-            string documentFile = string.Format("{0}\\Example01{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, fileExtension);
 
             // delete old database if exists
             if (System.IO.File.Exists(documentFile))
@@ -44,28 +45,34 @@ namespace AccessExamplesCS4
             accessApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create new Database" : "Eine neue Datenbank erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create new Database" : "Eine neue Datenbank erstellen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

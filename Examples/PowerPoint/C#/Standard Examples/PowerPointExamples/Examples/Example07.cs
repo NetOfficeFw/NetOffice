@@ -16,13 +16,20 @@ using NetOffice.OfficeApi.Enums;
 
 namespace PowerPointExamplesCS4
 {
-    public partial class Example07 : UserControl, IExample 
+    /// <summary>
+    /// Example 7 - Customize ui
+    /// </summary>
+    internal partial class Example07 : UserControl, IExample
     {
-        IHost _hostApplication;
-        PowerPoint.Application _powerApplication;
+        #region Fields/Delegates
 
+        private PowerPoint.Application _powerApplication;
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example07()
         {
@@ -30,7 +37,9 @@ namespace PowerPointExamplesCS4
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
 
-        #region IExample Member
+        #endregion
+
+        #region IExample
 
         public void RunExample()
         {
@@ -40,22 +49,37 @@ namespace PowerPointExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return HostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
         }
      
         public UserControl Panel
         {
             get { return this; }
+        }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateTextbox(string Message)
+        {
+            textBoxEvents.AppendText(Message + "\r\n");
         }
 
         #endregion
@@ -94,7 +118,7 @@ namespace PowerPointExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -121,7 +145,7 @@ namespace PowerPointExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -162,15 +186,10 @@ namespace PowerPointExamplesCS4
 
         #region PowerPoint Trigger
 
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Click called." });
             Ctrl.Dispose();
-        }
-
-        private void UpdateTextbox(string Message)
-        {
-            textBoxEvents.AppendText(Message + "\r\n");
         }
 
         #endregion

@@ -9,12 +9,37 @@ using System.IO;
 
 namespace NOBuildTools.SourceUpdater
 {
+    /// <summary>
+    /// Main form in the application
+    /// </summary>
     public partial class Form1 : Form
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Methods
+
+        private bool GetIsInSvnFolder(string file)
+        {
+            if (file.IndexOf(".svn",StringComparison.InvariantCultureIgnoreCase) > -1)
+                return true;
+            else
+                return false;
+
+        }
+
+        #endregion
+
+        #region Trigger
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
@@ -30,16 +55,16 @@ namespace NOBuildTools.SourceUpdater
                 return;
             }
 
-            int i=0;
+            int i = 0;
             string[] codeFiles = Directory.GetFiles(textBoxSource.Text, "*.*", SearchOption.AllDirectories);
             foreach (string item in codeFiles)
             {
                 bool isInSvnFolder = GetIsInSvnFolder(item);
                 if (false == isInSvnFolder)
                 {
-                    textBoxLog.Text = item; 
+                    textBoxLog.Text = item;
                     string newFilePath = GetNewFilePath(textBoxSource.Text, textBoxDest.Text, item);
-                    if(File.Exists(newFilePath))
+                    if (File.Exists(newFilePath))
                         File.Delete(newFilePath);
 
                     if (!Directory.Exists(Path.GetDirectoryName(newFilePath)))
@@ -51,15 +76,6 @@ namespace NOBuildTools.SourceUpdater
             }
 
             textBoxLog.Text = "Finish " + i.ToString() + " Files.";
-        }
-
-        private bool GetIsInSvnFolder(string file)
-        {
-            if (file.IndexOf(".svn",StringComparison.InvariantCultureIgnoreCase) > -1)
-                return true;
-            else
-                return false;
-
         }
 
         private string GetNewFilePath(string sourceDir, string DestDir, string file)
@@ -79,8 +95,10 @@ namespace NOBuildTools.SourceUpdater
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (DialogResult.OK == fbd.ShowDialog(this))
-                textBoxDest.Text = fbd.SelectedPath;  
-
+                textBoxDest.Text = fbd.SelectedPath;
         }
+
+        #endregion
+
     }
 }

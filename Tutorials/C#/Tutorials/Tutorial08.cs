@@ -15,9 +15,7 @@ namespace TutorialsCS4
 {
     public partial class Tutorial08 : ITutorial 
     {
-        IHost _hostApplication;
-
-        #region ITutorial Member
+        #region ITutorial
 
         public void Run()
         {
@@ -40,12 +38,12 @@ namespace TutorialsCS4
             application.Quit();
             application.Dispose();
 
-            _hostApplication.ShowFinishDialog();
+            HostApplication.ShowFinishDialog();
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public void Disconnect()
@@ -60,7 +58,7 @@ namespace TutorialsCS4
 
         public string Uri
         {
-            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial08_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial08_DE_CS"; }
+            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial08_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial08_DE_CS"; }
 
         }
 
@@ -71,13 +69,19 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using the Invoker" : "Den Invoker verwenden"; }
+            get { return HostApplication.LCID == 1033 ? "Using the Invoker" : "Den Invoker verwenden"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

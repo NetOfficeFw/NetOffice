@@ -15,12 +15,20 @@ using NetOffice.OfficeApi.Enums;
 
 namespace WordExamplesCS4
 {
-    public partial class Example07 : UserControl, IExample
-    {        
-        IHost _hostApplication;
-        Word.Application _wordApplication;
+    /// <summary>
+    /// Example 7 - Customize ui
+    /// </summary>
+    internal partial class Example07 : UserControl, IExample
+    {
+        #region Fields
+
+        private Word.Application _wordApplication;
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+        
+        #endregion
+
+        #region Ctor
 
         public Example07()
         {
@@ -28,7 +36,9 @@ namespace WordExamplesCS4
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
 
-        #region IExample Member
+        #endregion
+
+        #region IExample
 
         public void RunExample()
         {
@@ -38,17 +48,17 @@ namespace WordExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Customize UI" : "UI Items erstellen"; }
         }
 
         public UserControl Panel
@@ -58,7 +68,37 @@ namespace WordExamplesCS4
 
         #endregion
 
-        #region UI Trigger
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private Word.Template GetNormalDotTemplate()
+        {
+            foreach (Word.Template installedTemplate in _wordApplication.Templates)
+            {
+                //  returns normal.dot template (normal.dotm in modern word versions)
+                if (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    return installedTemplate;
+                }
+                installedTemplate.Dispose();
+            }
+
+            throw new IndexOutOfRangeException("Template not found.");
+        }
+
+        private void UpdateTextbox(string Message)
+        {
+            textBoxEvents.AppendText(Message + "\r\n");
+        }
+
+        #endregion
+
+        #region Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
@@ -95,7 +135,7 @@ namespace WordExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -122,7 +162,7 @@ namespace WordExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -160,42 +200,12 @@ namespace WordExamplesCS4
             buttonQuitExample.Enabled = false;
         }
 
-        #endregion
-
-        #region Word Trigger
-
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Click called." });
             Ctrl.Dispose();
         }
-
-        private void UpdateTextbox(string Message)
-        {
-            textBoxEvents.AppendText(Message + "\r\n");
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        /// <summary>
-        /// returns normal.dot template (normal.dotm in modern word versions)
-        /// </summary>
-        private Word.Template GetNormalDotTemplate()
-        {
-            foreach (Word.Template installedTemplate in _wordApplication.Templates)
-            {
-                if (installedTemplate.Name.StartsWith("normal", StringComparison.InvariantCultureIgnoreCase))
-                {
-                    return installedTemplate;
-                }
-                installedTemplate.Dispose();
-            }
-
-            throw new IndexOutOfRangeException("Template not found.");
-        }
-
+     
         #endregion
     }
 }

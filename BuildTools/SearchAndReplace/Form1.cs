@@ -9,13 +9,25 @@ using System.Windows.Forms;
 
 namespace NOBuildTools.SearchAndReplace
 {
+    /// <summary>
+    /// Main form in the application
+    /// </summary>
     public partial class Form1 : Form
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
             TextBoxFolder.Text = Application.StartupPath;
         }
+
+        #endregion
+
+        #region Methods
 
         private void LogAction(string message)
         {
@@ -23,6 +35,10 @@ namespace NOBuildTools.SearchAndReplace
                 RichTextBoxLog.Text = message + Environment.NewLine + RichTextBoxLog.Text;
             this.Refresh();
         }
+
+        #endregion
+
+        #region Triger
 
         private void ButtonChooseFolder_Click(object sender, EventArgs e)
         {
@@ -90,5 +106,7 @@ namespace NOBuildTools.SearchAndReplace
                 ExceptionDisplayer.ShowException(this, exception);
             }
         }
+
+        #endregion
     }
 }

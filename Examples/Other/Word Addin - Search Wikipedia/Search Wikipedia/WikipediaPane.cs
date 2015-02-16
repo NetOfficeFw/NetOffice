@@ -15,10 +15,11 @@ namespace Sample.Addin
 { 
     /// <summary>
     /// Custom pane for Word. The control implements the ITaskPane interface from NetOffice.WordApi.Tools
-    /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
     /// </summary>
-    public partial class WikipediaPane : UserControl, ITaskPane 
+    public partial class WikipediaPane : UserControl, ITaskPane
     {
+        #region Ctor
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
@@ -35,8 +36,17 @@ namespace Sample.Addin
                 DisplayError(exception);
             }
         }
-    
-        WikipediaContext Datacontext { get; set; }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// The connection to wikipedia
+        /// </summary>
+        internal WikipediaContext Datacontext { get; private set; }
+        
+        #endregion
 
         #region UI Trigger
 
@@ -108,7 +118,7 @@ namespace Sample.Addin
 
         #region Word Trigger
 
-        void Application_WindowSelectionChangeEvent(NetOffice.WordApi.Selection Sel)
+        private void Application_WindowSelectionChangeEvent(NetOffice.WordApi.Selection Sel)
         {
             try
             {

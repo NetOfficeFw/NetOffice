@@ -1,26 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+
 using NetOffice.OutlookApi.Tools;
 
 namespace Sample.Addin
-{
+{ 
+    /// <summary>
+    /// Custom pane for Outlook. The control implements the ITaskPane interface from NetOffice.Outlook.Tools
+    /// </summary>
     public partial class TwitterPane : UserControl, ITaskPane
     {
-        internal static TwitterTimer Client { get; set; }
-        internal static Properties.Settings Config { get; set; }
+        #region Ctor
 
         public TwitterPane()
         {
             Config = new Properties.Settings();
             InitializeComponent();
         }
-       
+
+        #endregion
+
+        #region Properties
+
+        internal static TwitterTimer Client { get; set; }
+        internal static Properties.Settings Config { get; set; }
+
+        #endregion
+
+        #region Methods
+
         internal void InitializeTaskPane()
         {
             tweetGrid.Visible = false;           
@@ -33,30 +43,7 @@ namespace Sample.Addin
             buttonAddinSettings.Tag = settingsPane;
         }
 
-        private void button_Click(object sender, EventArgs e)
-        {
-            errorPane.ClearError();
-            tweetGrid.Visible = false;
-            settingsPane.Visible = false;
-            buttonMain.BackColor = Color.LightSteelBlue;
-            buttonAddinSettings.BackColor = Color.LightSteelBlue;
-
-            Button selectedButton = sender as Button;
-            Control panel = selectedButton.Tag as Control;
-            panel.Visible = true;
-            selectedButton.BackColor = Color.Goldenrod;
-        }
-
-        private void Client_Error(Exception exception)
-        {
-            settingsPane.SetEnabled(false);
-            errorPane.ShowError(exception);
-        }
-
-        private void Client_EnabledChanegd(bool value)
-        {
-            tweetGrid.Enabled = value;
-        }
+        #endregion
 
         #region ITaskPane Member
 
@@ -79,6 +66,11 @@ namespace Sample.Addin
             }
         }
 
+        public void OnDisconnection()
+        {
+            Config.Save();
+        }
+
         public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
         {
 
@@ -88,10 +80,34 @@ namespace Sample.Addin
         {
 
         }
-        
-        public void OnDisconnection()
+    
+        #endregion
+
+        #region Trigger
+
+        private void button_Click(object sender, EventArgs e)
         {
-            Config.Save(); 
+            errorPane.ClearError();
+            tweetGrid.Visible = false;
+            settingsPane.Visible = false;
+            buttonMain.BackColor = Color.LightSteelBlue;
+            buttonAddinSettings.BackColor = Color.LightSteelBlue;
+
+            Button selectedButton = sender as Button;
+            Control panel = selectedButton.Tag as Control;
+            panel.Visible = true;
+            selectedButton.BackColor = Color.Goldenrod;
+        }
+
+        void Client_EnabledChanegd(bool value)
+        {
+            tweetGrid.Enabled = value;
+        }
+
+        void Client_Error(Exception exception)
+        {
+            settingsPane.SetEnabled(false);
+            errorPane.ShowError(exception);
         }
 
         #endregion

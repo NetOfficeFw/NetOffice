@@ -34,17 +34,18 @@
             this.buttonOpenDocument = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBoxDeleteDocument = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDocumentPath
             // 
             this.labelDocumentPath.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelDocumentPath.Location = new System.Drawing.Point(44, 47);
+            this.labelDocumentPath.Location = new System.Drawing.Point(44, 56);
             this.labelDocumentPath.Name = "labelDocumentPath";
-            this.labelDocumentPath.Size = new System.Drawing.Size(321, 41);
+            this.labelDocumentPath.Size = new System.Drawing.Size(394, 70);
             this.labelDocumentPath.TabIndex = 9;
-            this.labelDocumentPath.Text = "labelWorkbookPath";
+            this.labelDocumentPath.Text = "labelDocumentPath";
             // 
             // labelMessage
             // 
@@ -57,11 +58,12 @@
             // 
             // buttonOpenDocument
             // 
+            this.buttonOpenDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenDocument.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenDocument.Image")));
             this.buttonOpenDocument.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonOpenDocument.Location = new System.Drawing.Point(45, 91);
+            this.buttonOpenDocument.Location = new System.Drawing.Point(43, 130);
             this.buttonOpenDocument.Name = "buttonOpenDocument";
-            this.buttonOpenDocument.Size = new System.Drawing.Size(133, 22);
+            this.buttonOpenDocument.Size = new System.Drawing.Size(133, 25);
             this.buttonOpenDocument.TabIndex = 7;
             this.buttonOpenDocument.Text = "Open Document";
             this.buttonOpenDocument.UseVisualStyleBackColor = true;
@@ -69,11 +71,13 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClose.Location = new System.Drawing.Point(263, 91);
+            this.buttonClose.Location = new System.Drawing.Point(320, 130);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(102, 22);
+            this.buttonClose.Size = new System.Drawing.Size(119, 25);
             this.buttonClose.TabIndex = 6;
             this.buttonClose.Text = "Ok";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -88,11 +92,27 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // checkBoxDeleteDocument
+            // 
+            this.checkBoxDeleteDocument.AutoSize = true;
+            this.checkBoxDeleteDocument.Checked = true;
+            this.checkBoxDeleteDocument.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDeleteDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxDeleteDocument.Location = new System.Drawing.Point(43, 173);
+            this.checkBoxDeleteDocument.Name = "checkBoxDeleteDocument";
+            this.checkBoxDeleteDocument.Size = new System.Drawing.Size(161, 17);
+            this.checkBoxDeleteDocument.TabIndex = 11;
+            this.checkBoxDeleteDocument.Text = "Delete document immediately";
+            this.checkBoxDeleteDocument.UseVisualStyleBackColor = true;
+            // 
             // FormFinish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 135);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.CancelButton = this.buttonClose;
+            this.ClientSize = new System.Drawing.Size(482, 205);
+            this.Controls.Add(this.checkBoxDeleteDocument);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelDocumentPath);
             this.Controls.Add(this.labelMessage);
@@ -117,5 +137,6 @@
         private System.Windows.Forms.Button buttonOpenDocument;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBoxDeleteDocument;
     }
 }

@@ -12,20 +12,36 @@ using System.Windows.Forms;
 
 namespace NOBuildTools.ReferenceAnalyzer
 {
+    /// <summary>
+    /// Main form in the application
+    /// </summary>
     public partial class Form1 : Form
     {
+        #region
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Methods
 
         private void LogAction(string message)
         {
             if (!String.IsNullOrWhiteSpace(message))
                 RichTextBoxLog.Text = message + Environment.NewLine + RichTextBoxLog.Text;
             this.Refresh();
-            Application.DoEvents();
+            Application.DoEvents(); // not nice but okay for this simple one
         }
+
+        #endregion
+
+        #region Trigger
 
         private void ButttonChooseFile_Click(object sender, EventArgs e)
         {
@@ -52,5 +68,7 @@ namespace NOBuildTools.ReferenceAnalyzer
                 ExceptionDisplayer.ShowException(this, exception);
             }
         }
+
+        #endregion
     }
 }

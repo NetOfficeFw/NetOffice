@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
@@ -22,6 +23,7 @@ namespace Sample.ServerHost
             {
                 RegisterServer();
                 DisplayStartMessage();
+                InitializeTranslationTab();
             }
             else
             {
@@ -81,7 +83,19 @@ namespace Sample.ServerHost
             Repeater.Translation += new TranslationEventHandler(ServiceOnTranslation);
             Service.AddEventRepeater(Repeater);
         }
-       
+
+        /// <summary>
+        /// Initialize the local Localization
+        /// </summary>
+        private void InitializeTranslationTab()
+        {
+            // we need a copy from the available languages to fool the currency manager
+            comboBoxSourceLanguage.DataSource = CopyStringArray(Service.AvailableTranslations);
+            comboBoxTargetLanguage.DataSource = CopyStringArray(Service.AvailableTranslations);
+            comboBoxSourceLanguage.SelectedItem = "English";
+            comboBoxTargetLanguage.SelectedItem = "German";
+        }
+
         /// <summary>
         /// Helper method to perform a status update in UI thread
         /// </summary>
@@ -147,8 +161,37 @@ namespace Sample.ServerHost
         {
             listView1.Items.Clear();
             ListViewItem item = listView1.Items.Add(DateTime.Now.ToString());
-            item.SubItems.Add("Server application started. Register the Addin from the VS Solution and start MS-Excel.");
+            item.SubItems.Add("Server application started. Use Translation from MS-Excel Addin or Translation Tab.");
             item.ImageIndex = 0;
+        }
+
+        /// <summary>
+        /// Creates an array copy
+        /// </summary>
+        /// <param name="array">array to copy them</param>
+        /// <returns>deep array clone</returns>
+        private static string[] CopyStringArray(string[] array)
+        {
+            List<string> list = new List<string>();
+            foreach (string item in array)
+                list.Add(item);
+            return list.ToArray();
+        }
+
+        private void buttonTranslate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string translatedText = Service.Translate(
+                                                     comboBoxSourceLanguage.SelectedItem as string,
+                                                     comboBoxTargetLanguage.SelectedItem as string,
+                                                     textBoxRequested.Text);
+                textBoxTranslation.Text = translatedText;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(String.Format("An errror occured. Details: {0}", exception.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }         
         }
     }
 }

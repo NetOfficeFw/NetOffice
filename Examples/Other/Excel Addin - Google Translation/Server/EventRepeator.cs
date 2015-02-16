@@ -17,5 +17,6 @@ namespace Sample.Server
     }
 
     public class DataEventRepeators : List<DataEventRepeator>
-    { }
+    {
+    }
 }

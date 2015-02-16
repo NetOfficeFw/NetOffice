@@ -7,8 +7,7 @@ using NetOffice.ExcelApi.Tools;
 namespace Sample.ExcelAddin
 {
     /// <summary>
-    /// Custom pane for Excel. The control implements the ITaskPane interface from NetOffice.ExcelApi.Tools
-    /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
+    /// Custom pane for MS-Excel. The control implements the ITaskPane interface from NetOffice.ExcelApi.Tools(no need for but helpful)
     /// </summary>
     public partial class TranslationPane : UserControl, ITaskPane
     {
@@ -22,13 +21,7 @@ namespace Sample.ExcelAddin
             try
             {
                 InitializeComponent();
-
-                // create the IPC proxy to the translation service and initialize the panel
-                Client = new TranslationClient();
-                comboBoxSourceLanguage.DataSource = Client.DataService.AvailableTranslations;
-                comboBoxTargetLanguage.DataSource = Client.DataService.AvailableTranslations;
-                comboBoxSourceLanguage.SelectedItem = "English";
-                comboBoxTargetLanguage.SelectedItem = "German";
+                InitializeTranslationClient();              
             }
             catch (Exception exception)
             {
@@ -92,15 +85,28 @@ namespace Sample.ExcelAddin
             }
         }
 
+        private void buttonDoLocalConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClearError();
+                InitializeTranslationClient();
+            }
+            catch (Exception exception)
+            {
+                ShowError(string.Format("An errror occured. Details: {0}", exception.Message));
+            }
+        }
+
         #endregion
 
         #region Excel Trigger
 
         /// <summary>
-        /// This method was called from the host instance after selecion changed. The selectedRange parameter was disposed from the Addin after this call
+        /// This method was called from the host instance after selection changed.
         /// </summary>
         /// <param name="selectedRange">active selection</param>
-        void Application_SheetSelectionChangeEvent(NetOffice.COMObject Sh, Excel.Range selectedRange)
+        private void Application_SheetSelectionChangeEvent(NetOffice.COMObject sh, Excel.Range selectedRange)
         {
             try
             {
@@ -123,7 +129,7 @@ namespace Sample.ExcelAddin
                     }
                 }
 
-                Sh.Dispose();
+                sh.Dispose();
                 selectedRange.Dispose();
             }
             catch (Exception exception)
@@ -167,6 +173,21 @@ namespace Sample.ExcelAddin
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Initialize the local translation client
+        /// </summary>
+        private void InitializeTranslationClient()
+        {
+            // create the IPC proxy to the translation service and initialize the panel
+            if (null != Client)
+                Client.Dispose();
+            Client = new TranslationClient();
+            comboBoxSourceLanguage.DataSource = Client.DataService.AvailableTranslations;
+            comboBoxTargetLanguage.DataSource = Client.DataService.AvailableTranslations;
+            comboBoxSourceLanguage.SelectedItem = "English";
+            comboBoxTargetLanguage.SelectedItem = "German";
+        }
 
         /// <summary>
         /// Clear Error Panel

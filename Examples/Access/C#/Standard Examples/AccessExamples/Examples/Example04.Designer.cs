@@ -40,7 +40,7 @@
             this.treeViewInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeViewInfo.BackColor = System.Drawing.Color.DarkKhaki;
+            this.treeViewInfo.BackColor = System.Drawing.Color.Orange;
             this.treeViewInfo.Location = new System.Drawing.Point(65, 58);
             this.treeViewInfo.Name = "treeViewInfo";
             this.treeViewInfo.Size = new System.Drawing.Size(591, 207);
@@ -49,6 +49,7 @@
             // buttonSelectDatabase
             // 
             this.buttonSelectDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSelectDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelectDatabase.Location = new System.Drawing.Point(664, 20);
             this.buttonSelectDatabase.Name = "buttonSelectDatabase";
             this.buttonSelectDatabase.Size = new System.Drawing.Size(40, 21);
@@ -71,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Khaki;
+            this.label2.BackColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(64, 280);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 13);
@@ -91,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.treeViewInfo);
             this.Controls.Add(this.buttonSelectDatabase);
             this.Controls.Add(this.textBoxFilePath);

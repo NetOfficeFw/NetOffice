@@ -41,6 +41,7 @@
             this.listViewContacts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listViewContacts.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewContacts.Location = new System.Drawing.Point(36, 111);
             this.listViewContacts.Name = "listViewContacts";
             this.listViewContacts.Size = new System.Drawing.Size(665, 168);
@@ -73,6 +74,7 @@
             // 
             // buttonStartExample
             // 
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,6 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.listViewContacts);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonStartExample);

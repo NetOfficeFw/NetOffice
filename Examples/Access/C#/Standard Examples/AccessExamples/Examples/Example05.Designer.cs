@@ -41,6 +41,7 @@
             this.buttonQuitExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonQuitExample.Enabled = false;
+            this.buttonQuitExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonQuitExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuitExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonQuitExample.Image")));
             this.buttonQuitExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -69,6 +70,7 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEvents.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxEvents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEvents.Location = new System.Drawing.Point(30, 205);
             this.textBoxEvents.Multiline = true;
             this.textBoxEvents.Name = "textBoxEvents";
@@ -93,6 +95,7 @@
             // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,6 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.buttonQuitExample);
             this.Controls.Add(this.labelEventLogHeader);
             this.Controls.Add(this.textBoxEvents);

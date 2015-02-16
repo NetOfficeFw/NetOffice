@@ -14,9 +14,7 @@ namespace TutorialsCS4
 {
     public partial class Tutorial02 : ITutorial
     {
-        IHost _hostApplication;
-         
-        #region ITutorial Member
+        #region ITutorial
 
         public void Run()
         {
@@ -57,12 +55,12 @@ namespace TutorialsCS4
             
             // the Dispose() call for application release the instance and created childs Workbooks and Workbook
 
-            _hostApplication.ShowFinishDialog();
+            HostApplication.ShowFinishDialog();
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public void Disconnect()
@@ -77,7 +75,7 @@ namespace TutorialsCS4
 
         public string Uri
         {
-            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_CS"; }
+            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial02_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial02_DE_CS"; }
 
         }
 
@@ -88,13 +86,19 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Dispose & DisposeChildInstances" : "Verwenden von Dispose und DisposeChildInstances"; }
+            get { return HostApplication.LCID == 1033 ? "Using Dispose & DisposeChildInstances" : "Verwenden von Dispose und DisposeChildInstances"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

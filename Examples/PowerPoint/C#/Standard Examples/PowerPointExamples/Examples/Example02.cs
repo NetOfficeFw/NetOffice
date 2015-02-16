@@ -12,11 +12,12 @@ using NetOffice.OfficeApi.Enums;
 
 namespace PowerPointExamplesCS4
 {
-    class Example02 : IExample
+    /// <summary>
+    /// Example 2 - Create shapes
+    /// </summary>
+    internal class Example02 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -43,7 +44,7 @@ namespace PowerPointExamplesCS4
 
             // save the document 
             string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example02{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example02{1}", HostApplication.RootDirectory, fileExtension);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -51,28 +52,34 @@ namespace PowerPointExamplesCS4
             powerApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create some kind of shapes" : "Verschiede Shapes erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create some kind of shapes" : "Verschiede Shapes erstellen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

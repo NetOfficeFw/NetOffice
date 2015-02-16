@@ -15,10 +15,11 @@ using NetOffice.VBIDEApi.Enums;
 
 namespace ExcelExamplesCS4
 {
-    class Example07 : IExample
+    /// <summary>
+    /// Example 7 - Attach VBA Code to a workbook
+    /// </summary>
+    internal class Example07 : IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -57,14 +58,14 @@ namespace ExcelExamplesCS4
                 // save the book 
                 string fileExtension = GetDefaultExtension(excelApplication);
                 XlFileFormat fileFormat = GetFileFormat(excelApplication);
-                workbookFile = string.Format("{0}\\Example07{1}", _hostApplication.RootDirectory, fileExtension);
+                workbookFile = string.Format("{0}\\Example07{1}", HostApplication.RootDirectory, fileExtension);
                 workBook.SaveAs(workbookFile, fileFormat);
 
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {
                 isFailed = true;
-                _hostApplication.ShowErrorDialog("VBA Error", throwedException);
+                HostApplication.ShowErrorDialog("VBA Error", throwedException);
             }
             finally
             {
@@ -73,23 +74,23 @@ namespace ExcelExamplesCS4
                 excelApplication.Dispose();
 
                 if ((null != workbookFile) && (!isFailed))
-                    _hostApplication.ShowFinishDialog(null, workbookFile);
+                    HostApplication.ShowFinishDialog(null, workbookFile);
             }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
+            get { return HostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
         }
 
         public UserControl Panel
@@ -97,6 +98,15 @@ namespace ExcelExamplesCS4
             get { return null; }
         }
   
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
+
         #endregion
 
         #region Helper
@@ -117,7 +127,7 @@ namespace ExcelExamplesCS4
         }
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
+        /// Returns the valid file extension for the instance. for example ".xls" or ".xlsx"
         /// </summary>
         /// <param name="application">the instance</param>
         /// <returns>the extension</returns>
@@ -130,7 +140,12 @@ namespace ExcelExamplesCS4
                 return ".xls";
         }
 
-        private XlFileFormat GetFileFormat(Excel.Application application)
+        /// <summary>
+        /// Returns the valid file format for the instance. Documents with macro's need a bit xtra config since 2007
+        /// </summary>
+        /// <param name="application">the instance</param>
+        /// <returns>the format</returns>
+        private static XlFileFormat GetFileFormat(Excel.Application application)
         {
             double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
             if (Version >= 12.00)

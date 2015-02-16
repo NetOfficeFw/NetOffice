@@ -16,10 +16,11 @@ using NetOffice.VBIDEApi.Enums;
 
 namespace WordExamplesCS4
 {
-    class Example05 : IExample
+    /// <summary>
+    /// Example 5 - Create macros
+    /// </summary>
+    internal class Example05 : IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -48,7 +49,7 @@ namespace WordExamplesCS4
             wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro");
 
             string fileExtension = GetFileExtension(wordApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = string.Format("{0}\\Example05{1}", HostApplication.RootDirectory, fileExtension);
             double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
             if (wordVersion >= 12.0)
                 newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatXMLDocumentMacroEnabled);
@@ -60,22 +61,22 @@ namespace WordExamplesCS4
             wordApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create vba macros. The option Trust access to Visual Basic Project must be set." : "Erstellen von VBA Macros. Die Option Visual Basic Projekten vertrauen muss aktiviert sein."; }
+            get { return HostApplication.LCID == 1033 ? "Create vba macros. The option Trust access to Visual Basic Project must be set." : "Erstellen von VBA Macros. Die Option Visual Basic Projekten vertrauen muss aktiviert sein."; }
         }
 
         public UserControl Panel
@@ -84,7 +85,13 @@ namespace WordExamplesCS4
         }
 
         #endregion
-        
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
         #region Helper
 
         string GetFileExtension(Word.Application application)

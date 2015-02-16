@@ -64,9 +64,10 @@
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
+            this.radioButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton8.Location = new System.Drawing.Point(14, 180);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(111, 17);
+            this.radioButton8.Size = new System.Drawing.Size(110, 17);
             this.radioButton8.TabIndex = 15;
             this.radioButton8.Text = "xlDialogApplyStyle";
             this.radioButton8.UseVisualStyleBackColor = true;
@@ -74,9 +75,10 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
+            this.radioButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton7.Location = new System.Drawing.Point(14, 157);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(131, 17);
+            this.radioButton7.Size = new System.Drawing.Size(130, 17);
             this.radioButton7.TabIndex = 14;
             this.radioButton7.Text = "xlDialogFormatNumber";
             this.radioButton7.UseVisualStyleBackColor = true;
@@ -84,9 +86,10 @@
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
+            this.radioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton6.Location = new System.Drawing.Point(14, 134);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(120, 17);
+            this.radioButton6.Size = new System.Drawing.Size(119, 17);
             this.radioButton6.TabIndex = 13;
             this.radioButton6.Text = "xlDialogPrinterSetup";
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -94,9 +97,10 @@
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
+            this.radioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton5.Location = new System.Drawing.Point(14, 111);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(96, 17);
+            this.radioButton5.Size = new System.Drawing.Size(95, 17);
             this.radioButton5.TabIndex = 12;
             this.radioButton5.Text = "xlDialogSearch";
             this.radioButton5.UseVisualStyleBackColor = true;
@@ -104,9 +108,10 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton4.Location = new System.Drawing.Point(14, 88);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(122, 17);
+            this.radioButton4.Size = new System.Drawing.Size(121, 17);
             this.radioButton4.TabIndex = 11;
             this.radioButton4.Text = "xlDialogGallery3dBar";
             this.radioButton4.UseVisualStyleBackColor = true;
@@ -114,9 +119,10 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton3.Location = new System.Drawing.Point(14, 65);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(104, 17);
+            this.radioButton3.Size = new System.Drawing.Size(103, 17);
             this.radioButton3.TabIndex = 10;
             this.radioButton3.Text = "xlDialogEditColor";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -124,9 +130,10 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton2.Location = new System.Drawing.Point(14, 42);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(83, 17);
+            this.radioButton2.Size = new System.Drawing.Size(82, 17);
             this.radioButton2.TabIndex = 9;
             this.radioButton2.Text = "xlDialogFont";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -135,9 +142,10 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton1.Location = new System.Drawing.Point(14, 19);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(131, 17);
+            this.radioButton1.Size = new System.Drawing.Size(130, 17);
             this.radioButton1.TabIndex = 8;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "xlDialogAddinManager";
@@ -155,14 +163,15 @@
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(507, 205);
             this.textBoxDescription.TabIndex = 17;
-            this.textBoxDescription.Text = "This example contains code to work with dialogs.\r\nStart excel and it shows the se" +
-                "lected Dialog\r\nand waits for user input. Excel has more than 50 different dialog" +
-                "s, this is only a sample selection.";
+            this.textBoxDescription.Text = "This example contains code to work with dialogs.\r\nStart excel and it shows the di" +
+                "alog and waits for user input.\r\n \r\nExcel has more than 50 different dialogs, thi" +
+                "s is only a sample selection.";
             // 
             // buttonStartExample
             // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,6 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.panelSelection);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.buttonStartExample);

@@ -188,6 +188,7 @@
             // 
             // buttonRunTutorial
             // 
+            this.buttonRunTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRunTutorial.Font = new System.Drawing.Font("MS Reference Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRunTutorial.Image = ((System.Drawing.Image)(resources.GetObject("buttonRunTutorial.Image")));
             this.buttonRunTutorial.Location = new System.Drawing.Point(194, 89);
@@ -245,6 +246,7 @@
             // buttonOptions
             // 
             this.buttonOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonOptions.Image")));
             this.buttonOptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOptions.Location = new System.Drawing.Point(813, 519);
@@ -291,7 +293,7 @@
             // linkLabelAccess
             // 
             this.linkLabelAccess.AutoSize = true;
-            this.linkLabelAccess.Location = new System.Drawing.Point(10, 223);
+            this.linkLabelAccess.Location = new System.Drawing.Point(10, 256);
             this.linkLabelAccess.Name = "linkLabelAccess";
             this.linkLabelAccess.Size = new System.Drawing.Size(90, 13);
             this.linkLabelAccess.TabIndex = 21;
@@ -303,7 +305,7 @@
             // linkLabelDeveloperToolbox
             // 
             this.linkLabelDeveloperToolbox.AutoSize = true;
-            this.linkLabelDeveloperToolbox.Location = new System.Drawing.Point(10, 120);
+            this.linkLabelDeveloperToolbox.Location = new System.Drawing.Point(10, 138);
             this.linkLabelDeveloperToolbox.Name = "linkLabelDeveloperToolbox";
             this.linkLabelDeveloperToolbox.Size = new System.Drawing.Size(97, 13);
             this.linkLabelDeveloperToolbox.TabIndex = 20;
@@ -315,7 +317,7 @@
             // linkLabelTutorialOverview
             // 
             this.linkLabelTutorialOverview.AutoSize = true;
-            this.linkLabelTutorialOverview.Location = new System.Drawing.Point(10, 40);
+            this.linkLabelTutorialOverview.Location = new System.Drawing.Point(10, 46);
             this.linkLabelTutorialOverview.Name = "linkLabelTutorialOverview";
             this.linkLabelTutorialOverview.Size = new System.Drawing.Size(90, 13);
             this.linkLabelTutorialOverview.TabIndex = 19;
@@ -327,7 +329,7 @@
             // linkLabelPowerPoint
             // 
             this.linkLabelPowerPoint.AutoSize = true;
-            this.linkLabelPowerPoint.Location = new System.Drawing.Point(10, 203);
+            this.linkLabelPowerPoint.Location = new System.Drawing.Point(10, 233);
             this.linkLabelPowerPoint.Name = "linkLabelPowerPoint";
             this.linkLabelPowerPoint.Size = new System.Drawing.Size(109, 13);
             this.linkLabelPowerPoint.TabIndex = 14;
@@ -339,7 +341,7 @@
             // linkLabelTecFaq
             // 
             this.linkLabelTecFaq.AutoSize = true;
-            this.linkLabelTecFaq.Location = new System.Drawing.Point(10, 100);
+            this.linkLabelTecFaq.Location = new System.Drawing.Point(10, 115);
             this.linkLabelTecFaq.Name = "linkLabelTecFaq";
             this.linkLabelTecFaq.Size = new System.Drawing.Size(78, 13);
             this.linkLabelTecFaq.TabIndex = 14;
@@ -351,17 +353,17 @@
             // labelRessourceHeader
             // 
             this.labelRessourceHeader.AutoSize = true;
-            this.labelRessourceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRessourceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRessourceHeader.Location = new System.Drawing.Point(10, 12);
             this.labelRessourceHeader.Name = "labelRessourceHeader";
-            this.labelRessourceHeader.Size = new System.Drawing.Size(73, 13);
+            this.labelRessourceHeader.Size = new System.Drawing.Size(67, 13);
             this.labelRessourceHeader.TabIndex = 18;
-            this.labelRessourceHeader.Text = "Ressources";
+            this.labelRessourceHeader.Text = "Resources";
             // 
             // linkLabelOutlook
             // 
             this.linkLabelOutlook.AutoSize = true;
-            this.linkLabelOutlook.Location = new System.Drawing.Point(10, 183);
+            this.linkLabelOutlook.Location = new System.Drawing.Point(10, 210);
             this.linkLabelOutlook.Name = "linkLabelOutlook";
             this.linkLabelOutlook.Size = new System.Drawing.Size(92, 13);
             this.linkLabelOutlook.TabIndex = 13;
@@ -373,7 +375,7 @@
             // linkLabelTecDocumentation
             // 
             this.linkLabelTecDocumentation.AutoSize = true;
-            this.linkLabelTecDocumentation.Location = new System.Drawing.Point(10, 80);
+            this.linkLabelTecDocumentation.Location = new System.Drawing.Point(10, 92);
             this.linkLabelTecDocumentation.Name = "linkLabelTecDocumentation";
             this.linkLabelTecDocumentation.Size = new System.Drawing.Size(129, 13);
             this.linkLabelTecDocumentation.TabIndex = 13;
@@ -386,7 +388,7 @@
             // linkLabelExcel
             // 
             this.linkLabelExcel.AutoSize = true;
-            this.linkLabelExcel.Location = new System.Drawing.Point(10, 142);
+            this.linkLabelExcel.Location = new System.Drawing.Point(10, 163);
             this.linkLabelExcel.Name = "linkLabelExcel";
             this.linkLabelExcel.Size = new System.Drawing.Size(81, 13);
             this.linkLabelExcel.TabIndex = 15;
@@ -398,7 +400,7 @@
             // linkLabelWord
             // 
             this.linkLabelWord.AutoSize = true;
-            this.linkLabelWord.Location = new System.Drawing.Point(10, 163);
+            this.linkLabelWord.Location = new System.Drawing.Point(10, 187);
             this.linkLabelWord.Name = "linkLabelWord";
             this.linkLabelWord.Size = new System.Drawing.Size(81, 13);
             this.linkLabelWord.TabIndex = 16;
@@ -410,7 +412,7 @@
             // linkLabelDocumentation
             // 
             this.linkLabelDocumentation.AutoSize = true;
-            this.linkLabelDocumentation.Location = new System.Drawing.Point(10, 60);
+            this.linkLabelDocumentation.Location = new System.Drawing.Point(10, 69);
             this.linkLabelDocumentation.Name = "linkLabelDocumentation";
             this.linkLabelDocumentation.Size = new System.Drawing.Size(79, 13);
             this.linkLabelDocumentation.TabIndex = 15;
@@ -433,6 +435,7 @@
             // 
             this.listViewTutorials.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.listViewTutorials.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewTutorials.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.listViewTutorials.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;

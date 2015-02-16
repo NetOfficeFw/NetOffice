@@ -14,11 +14,12 @@ using NetOffice.VBIDEApi.Enums;
 
 namespace ExcelExamplesCS4
 {
-    class Example03 : IExample
+    /// <summary>
+    /// Example 3 - Using Numberformats
+    /// </summary>
+    internal class Example03 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {         
@@ -114,7 +115,7 @@ namespace ExcelExamplesCS4
 
             // save the book 
             string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+            string workbookFile = string.Format("{0}\\Example03{1}", HostApplication.RootDirectory, fileExtension);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -122,28 +123,37 @@ namespace ExcelExamplesCS4
             excelApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, workbookFile);
+            HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Numberformats" : "Zellen formatieren mit NumberFormat"; }
+            get { return HostApplication.LCID == 1033 ? "Using Numberformats" : "Zellen formatieren mit NumberFormat"; }
         }
      
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

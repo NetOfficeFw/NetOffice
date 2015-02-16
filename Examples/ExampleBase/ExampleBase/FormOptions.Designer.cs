@@ -44,9 +44,10 @@
             // 
             this.radioButtonCommonFolder.AutoSize = true;
             this.radioButtonCommonFolder.Checked = true;
+            this.radioButtonCommonFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonCommonFolder.Location = new System.Drawing.Point(19, 29);
             this.radioButtonCommonFolder.Name = "radioButtonCommonFolder";
-            this.radioButtonCommonFolder.Size = new System.Drawing.Size(122, 17);
+            this.radioButtonCommonFolder.Size = new System.Drawing.Size(121, 17);
             this.radioButtonCommonFolder.TabIndex = 0;
             this.radioButtonCommonFolder.TabStop = true;
             this.radioButtonCommonFolder.Text = "Common Files Folder";
@@ -55,9 +56,10 @@
             // radioButtonApplicationFolder
             // 
             this.radioButtonApplicationFolder.AutoSize = true;
+            this.radioButtonApplicationFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonApplicationFolder.Location = new System.Drawing.Point(19, 52);
             this.radioButtonApplicationFolder.Name = "radioButtonApplicationFolder";
-            this.radioButtonApplicationFolder.Size = new System.Drawing.Size(109, 17);
+            this.radioButtonApplicationFolder.Size = new System.Drawing.Size(108, 17);
             this.radioButtonApplicationFolder.TabIndex = 1;
             this.radioButtonApplicationFolder.Text = "Application Folder";
             this.radioButtonApplicationFolder.UseVisualStyleBackColor = true;
@@ -67,6 +69,7 @@
             this.groupBoxFolder.Controls.Add(this.label1);
             this.groupBoxFolder.Controls.Add(this.radioButtonApplicationFolder);
             this.groupBoxFolder.Controls.Add(this.radioButtonCommonFolder);
+            this.groupBoxFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxFolder.Location = new System.Drawing.Point(23, 24);
             this.groupBoxFolder.Name = "groupBoxFolder";
             this.groupBoxFolder.Size = new System.Drawing.Size(282, 89);
@@ -87,6 +90,7 @@
             // 
             this.groupBoxLanguage.Controls.Add(this.radioButtonLanguage1031);
             this.groupBoxLanguage.Controls.Add(this.radioButtonLanguage1033);
+            this.groupBoxLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxLanguage.Location = new System.Drawing.Point(23, 130);
             this.groupBoxLanguage.Name = "groupBoxLanguage";
             this.groupBoxLanguage.Size = new System.Drawing.Size(282, 89);
@@ -97,9 +101,10 @@
             // radioButtonLanguage1031
             // 
             this.radioButtonLanguage1031.AutoSize = true;
+            this.radioButtonLanguage1031.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonLanguage1031.Location = new System.Drawing.Point(19, 53);
             this.radioButtonLanguage1031.Name = "radioButtonLanguage1031";
-            this.radioButtonLanguage1031.Size = new System.Drawing.Size(111, 17);
+            this.radioButtonLanguage1031.Size = new System.Drawing.Size(110, 17);
             this.radioButtonLanguage1031.TabIndex = 3;
             this.radioButtonLanguage1031.Text = "German (Deutsch)";
             this.radioButtonLanguage1031.UseVisualStyleBackColor = true;
@@ -108,9 +113,10 @@
             // 
             this.radioButtonLanguage1033.AutoSize = true;
             this.radioButtonLanguage1033.Checked = true;
+            this.radioButtonLanguage1033.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButtonLanguage1033.Location = new System.Drawing.Point(19, 30);
             this.radioButtonLanguage1033.Name = "radioButtonLanguage1033";
-            this.radioButtonLanguage1033.Size = new System.Drawing.Size(83, 17);
+            this.radioButtonLanguage1033.Size = new System.Drawing.Size(82, 17);
             this.radioButtonLanguage1033.TabIndex = 2;
             this.radioButtonLanguage1033.TabStop = true;
             this.radioButtonLanguage1033.Text = "English (US)";
@@ -120,6 +126,8 @@
             // buttonDone
             // 
             this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
             this.buttonDone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonDone.Location = new System.Drawing.Point(134, 242);
@@ -132,8 +140,11 @@
             // 
             // FormOptions
             // 
+            this.AcceptButton = this.buttonDone;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.CancelButton = this.buttonDone;
             this.ClientSize = new System.Drawing.Size(333, 283);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.groupBoxLanguage);

@@ -13,16 +13,21 @@ using NetOffice.OutlookApi.Enums;
 
 namespace OutlookExamplesCS4
 {
-    public partial class Example01 : UserControl , IExample 
+    /// <summary>
+    /// Example 1 - Inbox Folder
+    /// </summary>
+    internal partial class Example01 : UserControl , IExample
     {
-        IHost _hostApplication;
+        #region Ctor
 
         public Example01()
         {
             InitializeComponent();
         }
 
-        #region IExample Member
+        #endregion
+
+        #region IExample
 
         public void RunExample()
         {
@@ -32,17 +37,17 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Inbox Folder" : "Posteingang"; }
+            get { return HostApplication.LCID == 1033 ? "Inbox Folder" : "Posteingang"; }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public UserControl Panel
@@ -51,7 +56,13 @@ namespace OutlookExamplesCS4
         }
         
         #endregion
-        
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
         #region UI Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)

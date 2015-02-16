@@ -14,9 +14,7 @@ namespace TutorialsCS4
 {
     public partial class Tutorial07 : ITutorial
     {
-        IHost _hostApplication;
-
-        #region ITutorial Member
+        #region ITutorial
 
         public void Run()
         {
@@ -43,12 +41,12 @@ namespace TutorialsCS4
             application.Quit();
             application.Dispose();
 
-            _hostApplication.ShowMessage(result);
+            HostApplication.ShowMessage(result);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public void Disconnect()
@@ -63,7 +61,7 @@ namespace TutorialsCS4
 
         public string Uri
         {
-            get { return _hostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial07_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial07_DE_CS"; }
+            get { return HostApplication.LCID == 1033 ? "http://netoffice.codeplex.com/wikipage?title=Tutorial07_EN_CS" : "http://netoffice.codeplex.com/wikipage?title=Tutorial07_DE_CS"; }
         }
 
         public string Caption
@@ -73,13 +71,19 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Versionindependent Development" : "Versionsunabhängige Entwicklung"; }
+            get { return HostApplication.LCID == 1033 ? "Versionindependent Development" : "Versionsunabhängige Entwicklung"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

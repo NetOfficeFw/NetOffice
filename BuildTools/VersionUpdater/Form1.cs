@@ -9,8 +9,16 @@ using System.Windows.Forms;
 
 namespace NOBuildTools.VersionUpdater
 {
+    /// <summary>
+    /// Main form in the application
+    /// </summary>
     public partial class Form1 : Form
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +27,10 @@ namespace NOBuildTools.VersionUpdater
             comboBoxToNetVersion.SelectedIndex = 0;             
         }
 
+        #endregion
+
+        #region Methods
+        
         private string GetSelectedFromNetVersion()
         {
             switch (comboBoxFromNetVersion.SelectedIndex)
@@ -62,12 +74,6 @@ namespace NOBuildTools.VersionUpdater
                 MessageBox.Show("Directory not exists", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-
-            //if (GetSelectedFromNetVersion() == GetSelectedToNetVersion())
-            //{
-            //    MessageBox.Show("Same .NET versions.", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return false;
-            //}
 
             return true;
         }
@@ -292,6 +298,10 @@ namespace NOBuildTools.VersionUpdater
             }
         }
 
+        #endregion
+
+        #region Trigger
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (!CheckPrequsits())
@@ -312,7 +322,7 @@ namespace NOBuildTools.VersionUpdater
 
                     ChangeNetVersionEntryInProjectFile(ref fileContent, netToVersion);
                     ChangeToolsVersionEntryInProjectFile(ref fileContent);
-                    if(checkBoxChangeKeyFiles.Checked)
+                    if (checkBoxChangeKeyFiles.Checked)
                         ChangeKeyFileInProjectFile(ref fileContent, System.IO.Path.GetDirectoryName(file), System.IO.Path.GetFileNameWithoutExtension(file), netToVersion);
 
                     File.Delete(file);
@@ -389,7 +399,6 @@ namespace NOBuildTools.VersionUpdater
             FolderBrowserDialog fdg = new FolderBrowserDialog();
             if (DialogResult.OK == fdg.ShowDialog(this))
                 textBoxFolder.Text = fdg.SelectedPath;
-
         }
 
         private void buttonLoadConfig_Click(object sender, EventArgs e)
@@ -442,5 +451,6 @@ namespace NOBuildTools.VersionUpdater
             }
         }
 
+        #endregion
     }
 }

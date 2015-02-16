@@ -10,10 +10,9 @@ namespace Sample.ExcelAddin
 {
     /// <summary>
     /// The main addin for MS-Excel. The Addin use the base class COMAddin from NetOffice.ExcelApi.Tools.
-    /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
     /// </summary>
-    [Guid("fa65093e-8fd1-4e24-825a-11c00f1bcadf"), ProgId("Sample.ExcelAddin"), Tweak(true)]
-    [COMAddin("Google Translation Addin", "This Addin provides Google Translation functionality", 3)]
+    [COMAddin("Google Translation Addin", "This Addin provides Google Translation functionality", 3), Guid("fa65093e-8fd1-4e24-825a-11c00f1bcadf"), ProgId("NOSample.GoogleTranslation"), Tweak(true)]
+    [CustomPane(typeof(TranslationPane), "NetOffice - Google Translation Sample", true, PaneDockPosition.msoCTPDockPositionBottom, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoVertical, 150, 150)]
     public class ThisAddIn : COMAddin 
     {
         /// <summary>
@@ -21,13 +20,6 @@ namespace Sample.ExcelAddin
         /// </summary>
         public ThisAddIn()
         {
-            // we create the taskpane
-            TaskPanes.Add(typeof(TranslationPane), "Google Translation - NetOffice Local Shared Data Sample");
-            TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionBottom;
-            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoVertical;
-            TaskPanes[0].Height = 150;
-            TaskPanes[0].Visible = true;
-
             // register some typical addin events
             this.OnConnection += new OnConnectionEventHandler(ThisAddIn_OnConnection);
             this.OnDisconnection += new OnDisconnectionEventHandler(ThisAddIn_OnDisconnection);
@@ -40,7 +32,7 @@ namespace Sample.ExcelAddin
         /// <param name="ConnectMode"></param>
         /// <param name="AddInInst"></param>
         /// <param name="custom"></param>
-        void ThisAddIn_OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        private void ThisAddIn_OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
              
         }
@@ -50,12 +42,12 @@ namespace Sample.ExcelAddin
         /// </summary>
         /// <param name="RemoveMode"></param>
         /// <param name="custom"></param>
-        void ThisAddIn_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        private  void ThisAddIn_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             
         }
 
-        // this error handler is used for IExtensibility2 methods (your code) and the COMAddin methods GetCustomUI and CTPFactoryAvailable        
+        // Catch errors from our event triggers and COMAddin base methods here         
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)
         {
             
