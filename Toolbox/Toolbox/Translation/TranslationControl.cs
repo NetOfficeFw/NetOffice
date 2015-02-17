@@ -9,17 +9,37 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Currents used language changed event handler
+    /// </summary>
+    /// <param name="sender">translation sender</param>
+    /// <param name="lcid">language id</param>
     public delegate void LanuageChangedEventHandler(object sender, int lcid);
 
+    /// <summary>
+    /// Shows all available languages
+    /// </summary>
     [RessourceTable("Ressources.TranslationControlStrings.txt")]
     public partial class TranslationControl : UserControl, ILocalizationDesign
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public TranslationControl()
         {
             InitializeComponent();
             dataGridView1.AutoGenerateColumns = false;
         }
 
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// User want close the instance
+        /// </summary>
         [Category("!A")]
         public event EventHandler UserClose;
 
@@ -29,12 +49,21 @@ namespace NetOffice.DeveloperToolbox.Translation
                 UserClose(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// User want see the about pane
+        /// </summary>
         [Category("!A")]
         public event EventHandler UserTranslationAbout;
 
+        /// <summary>
+        /// User selected another language
+        /// </summary>
         [Category("!A")]
         public event LanuageChangedEventHandler LanguageChanged;
 
+        /// <summary>
+        /// User want delete a language
+        /// </summary>
         [Category("!A")]
         public event LanuageChangedEventHandler LanguageDeleted;
 
@@ -50,6 +79,10 @@ namespace NetOffice.DeveloperToolbox.Translation
                 LanguageDeleted(this, lcid);
         }
 
+        #endregion
+
+        #region Properties
+
         private ToolLanguage Selected
         {
             get
@@ -60,6 +93,45 @@ namespace NetOffice.DeveloperToolbox.Translation
                 DataGridViewRow row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
                 ToolLanguage selLanguage = row.Tag as ToolLanguage;
                 return selLanguage;
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Show all available languages
+        /// </summary>
+        internal void ShowLanguages()
+        {
+            Forms.MainForm.Singleton.Languages.ListChanged += new ListChangedEventHandler(Languages_ListChanged);
+            dataGridView1.Rows.Clear();
+            foreach (var item in Forms.MainForm.Singleton.Languages)
+            {
+                var row = new DataGridViewRow();
+                row.CreateCells(dataGridView1, new object[] { String.IsNullOrWhiteSpace(item.NameGlobal) == true ? "<Empty>" : item.NameGlobal });
+                row.Tag = item;
+                dataGridView1.Rows.Add(row);
+
+            }
+        }
+
+        /// <summary>
+        /// Change current used language
+        /// </summary>
+        /// <param name="lcid">language id</param>
+        internal void SetLanguage(int lcid)
+        {
+            ToolLanguage language = Forms.MainForm.Singleton.Languages[lcid, false];
+            if (null != language)
+            {
+                var component = language.Application.Components["Language Selector"];
+                Translator.TranslateControls(this, component.ControlRessources);
+            }
+            else
+            {
+                Translation.Translator.TranslateControls(this, "Ressources.TranslationControlStrings.txt", lcid);
             }
         }
 
@@ -80,74 +152,7 @@ namespace NetOffice.DeveloperToolbox.Translation
                 UserTranslationAbout(this, EventArgs.Empty);
         }
 
-        internal void ShowLanguages()
-        {
-            Forms.MainForm.Singleton.Languages.ListChanged += new ListChangedEventHandler(Languages_ListChanged);
-            dataGridView1.Rows.Clear();
-            foreach (var item in Forms.MainForm.Singleton.Languages)
-            {
-                var row = new DataGridViewRow();
-                row.CreateCells(dataGridView1, new object[] { String.IsNullOrWhiteSpace(item.NameGlobal) == true ? "<Empty>" : item.NameGlobal });
-                row.Tag = item;
-                dataGridView1.Rows.Add(row);
-
-            }
-        }
-
-        private void Languages_ListChanged(object sender, ListChangedEventArgs e)
-        {
-            switch (e.ListChangedType)
-            {
-                case ListChangedType.ItemAdded:
-                {
-                    ToolLanguage language = Forms.MainForm.Singleton.Languages[e.NewIndex];
-                    var row = new DataGridViewRow();
-                    row.CreateCells(dataGridView1, new object[] { language.NameGlobal });
-                    row.Tag = language;
-                    dataGridView1.Rows.Add(row);
-                    break;
-                }
-                case ListChangedType.ItemChanged:
-                {
-                    var language = Forms.MainForm.Singleton.Languages[e.NewIndex];
-                    var row = GetRow(language);
-                    if (null != row)
-                        row.Cells[0].Value = String.IsNullOrWhiteSpace(language.NameGlobal) == true ? "<Empty>" : language.NameGlobal;
-                    break;
-                }
-                case ListChangedType.ItemDeleted:
-                {
-                    List<DataGridViewRow> listRows = new List<DataGridViewRow>();
-                    foreach (DataGridViewRow item in dataGridView1.Rows)
-                    {
-                        ToolLanguage lang = item.Tag as ToolLanguage;
-                        if (!Forms.MainForm.Singleton.Languages.Contains(lang))
-                            listRows.Add(item);
-                    }
-                    foreach (var item in listRows)
-                        dataGridView1.Rows.Remove(item);
-
-                    break;
-                }
-                case ListChangedType.Reset:
-                    ShowLanguages();
-                    break;
-            }
-        }
-
-        internal void SetLanguage(int lcid)
-        {
-            ToolLanguage language = Forms.MainForm.Singleton.Languages[lcid, false];
-            if (null != language)
-            {
-                var component =language.Application.Components["Language Selector"];
-                Translator.TranslateControls(this, component.ControlRessources);
-            }
-            else
-            {
-                Translation.Translator.TranslateControls(this, "Ressources.TranslationControlStrings.txt", lcid);
-            }
-        }
+        #endregion
 
         #region ILocalizationDesign
 
@@ -197,6 +202,49 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #endregion
 
+        #region Trigger
+
+        private void Languages_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            switch (e.ListChangedType)
+            {
+                case ListChangedType.ItemAdded:
+                    {
+                        ToolLanguage language = Forms.MainForm.Singleton.Languages[e.NewIndex];
+                        var row = new DataGridViewRow();
+                        row.CreateCells(dataGridView1, new object[] { language.NameGlobal });
+                        row.Tag = language;
+                        dataGridView1.Rows.Add(row);
+                        break;
+                    }
+                case ListChangedType.ItemChanged:
+                    {
+                        var language = Forms.MainForm.Singleton.Languages[e.NewIndex];
+                        var row = GetRow(language);
+                        if (null != row)
+                            row.Cells[0].Value = String.IsNullOrWhiteSpace(language.NameGlobal) == true ? "<Empty>" : language.NameGlobal;
+                        break;
+                    }
+                case ListChangedType.ItemDeleted:
+                    {
+                        List<DataGridViewRow> listRows = new List<DataGridViewRow>();
+                        foreach (DataGridViewRow item in dataGridView1.Rows)
+                        {
+                            ToolLanguage lang = item.Tag as ToolLanguage;
+                            if (!Forms.MainForm.Singleton.Languages.Contains(lang))
+                                listRows.Add(item);
+                        }
+                        foreach (var item in listRows)
+                            dataGridView1.Rows.Remove(item);
+
+                        break;
+                    }
+                case ListChangedType.Reset:
+                    ShowLanguages();
+                    break;
+            }
+        }
+
         private void toolStripClose_Click(object sender, EventArgs e)
         {
             RaiseUserClose();
@@ -212,7 +260,7 @@ namespace NetOffice.DeveloperToolbox.Translation
             if (null != Selected)
             {
                 bool b = ToolLanguageForm.ShowForm(this, Selected);
-                if(b)
+                if (b)
                     RaiseLanguageChanged(Selected.LCID);
             }
         }
@@ -225,7 +273,7 @@ namespace NetOffice.DeveloperToolbox.Translation
                 this.Refresh();
                 ToolLanguage newLanguage = new ToolLanguage(Forms.MainForm.Singleton.Languages, template);
                 Forms.MainForm.Singleton.Languages.Add(newLanguage);
-                if(dataGridView1.SelectedCells.Count > 0)
+                if (dataGridView1.SelectedCells.Count > 0)
                     dataGridView1.SelectedCells[0].Selected = false;
                 dataGridView1.Rows[dataGridView1.Rows.Count - 1].Selected = true;
                 dataGridView1_DoubleClick(dataGridView1, EventArgs.Empty);
@@ -251,5 +299,7 @@ namespace NetOffice.DeveloperToolbox.Translation
             Forms.MainForm.Singleton.Languages.ValidateFiles();
             RaiseLanguageDeleted(lcid);
         }
+
+        #endregion
     }
 }

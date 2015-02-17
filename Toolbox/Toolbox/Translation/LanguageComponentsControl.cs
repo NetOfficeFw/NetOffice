@@ -11,6 +11,9 @@ using NetOffice.DeveloperToolbox.Controls.Tree;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Localize all plugin components
+    /// </summary>
     public partial class LanguageComponentsControl : UserControl
     {
         #region API
@@ -33,6 +36,9 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public LanguageComponentsControl()
         {
             InitializeComponent();
@@ -45,6 +51,9 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Events
 
+        /// <summary>
+        /// The selected (sub)component has been changed
+        /// </summary>
         public event EventHandler SelectionChanged;
 
         private void RaiseSelectionChanged()
@@ -57,6 +66,9 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Properties
 
+        /// <summary>
+        /// Current selected component name
+        /// </summary>
         internal string SelectedNodeText
         {
             get 
@@ -71,6 +83,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Current selected language
+        /// </summary>
         internal ToolLanguage SelectedLanguage
         {
             get
@@ -88,6 +103,9 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Methods
 
+        /// <summary>
+        /// Handle key arrow down to change the selection
+        /// </summary>
         internal void HandleKeyDown()
         {
             if (treeGridView1.SelectedRows.Count == 0 || treeGridView1.Focused)
@@ -115,6 +133,9 @@ namespace NetOffice.DeveloperToolbox.Translation
                 textBoxRichString.Focus();
         }
 
+        /// <summary>
+        /// Handle key arrow up to change the selection
+        /// </summary>
         internal void HandleKeyUp()
         {
             if (treeGridView1.SelectedRows.Count == 0 || treeGridView1.Focused)

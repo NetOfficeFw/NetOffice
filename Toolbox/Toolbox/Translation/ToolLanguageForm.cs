@@ -9,23 +9,42 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Application Language Edit Form
+    /// </summary>
     public partial class ToolLanguageForm : Form
     {
+        #region API
+
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern IntPtr GetForegroundWindow();
 
+        #endregion
+
+        #region Fields
+
         private Control _highlightControl1;
         private Control _highlightControl2;
-        private Pen _highlightPen;
-        
+        private Pen _highlightPen;        
         private int _selectedTabIndex;
         private ToolLanguage _language;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ToolLanguageForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="language">edit language</param>
         internal ToolLanguageForm(ToolLanguage language)
         {
             InitializeComponent();
@@ -43,16 +62,18 @@ namespace NetOffice.DeveloperToolbox.Translation
             overlayPainter1.Owner = this;
         }
 
-        internal static bool ShowForm(IWin32Window owner, ToolLanguage language)
-        {
-            ToolLanguageForm dlg = new ToolLanguageForm(language);
-            dlg.ShowDialog(owner);
-            dlg.Dispose(true);
-            return dlg.Changed;
-        }
+        #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Unsaved changes on the edit language
+        /// </summary>
         public bool Changed { get; private set; }
 
+        /// <summary>
+        /// The window is currently visible and in front
+        /// </summary>
         private bool IsActive
         {
             get
@@ -61,23 +82,55 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Creates an instance of ToolLanguageForm and show
+        /// </summary>
+        /// <param name="owner">modal owner</param>
+        /// <param name="language">edit language</param>
+        /// <returns>contains unsaved changes</returns>
+        internal static bool ShowForm(IWin32Window owner, ToolLanguage language)
+        {
+            ToolLanguageForm dlg = new ToolLanguageForm(language);
+            dlg.ShowDialog(owner);
+            dlg.Dispose(true);
+            return dlg.Changed;
+        }
+
+        /// <summary>
+        /// Draw rectangle arround given control
+        /// </summary>
+        /// <param name="ctrl">control to highlight</param>
         internal void StartHighLightControl1(Control ctrl)
         {
             StopHighLightControl1();
             _highlightControl1 = ctrl;
         }
 
+        /// <summary>
+        /// Stop drawing rectangle arround controls
+        /// </summary>
         internal void StopHighLightControl1()
         {
             _highlightControl1 = null;
         }
 
+        /// <summary>
+        /// Draw rectangle arround given control
+        /// </summary>
+        /// <param name="ctrl">control to highlight</param>
         internal void StartHighLightControl2(Control ctrl)
         {
             StopHighLightControl2();
             _highlightControl2 = ctrl;
         }
 
+        /// <summary>
+        /// Stop drawing rectangle arround controls
+        /// </summary>
         internal void StopHighLightControl2()
         {
             _highlightControl2 = null;
@@ -91,6 +144,10 @@ namespace NetOffice.DeveloperToolbox.Translation
             Point relativeLoc = new Point(controlLoc.X - formLoc.X, controlLoc.Y - formLoc.Y);
             return new Rectangle(relativeLoc.X, relativeLoc.Y, ctrl.Width, ctrl.Height+1);
         }
+
+        #endregion
+
+        #region Trigger
 
         private void overlayPainter1_Paint(object sender, PaintEventArgs e)
         {
@@ -168,5 +225,7 @@ namespace NetOffice.DeveloperToolbox.Translation
         {
             Text = " Edit Language " + toolLanguageControl1.SelectedNodeText;
         }
+
+        #endregion
     }
 }

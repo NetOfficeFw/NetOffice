@@ -8,8 +8,14 @@ using ICSharpCode.SharpZipLib;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Contains all supported languages
+    /// </summary>
     public class ToolLanguages : BindingList<ToolLanguage>, IDisposable
     {
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         internal ToolLanguages()
         {
             Add(new ToolDefaultLanguage(this, ToolDefaultLanguageName.English));
@@ -18,6 +24,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             this[1].Initialize();
         }
 
+        /// <summary>
+        /// File extension to load and save languages from file
+        /// </summary>
         internal static string Extension
         {
             get 
@@ -26,6 +35,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// File extension pattern to load files
+        /// </summary>
         internal static string ExtensionWildCard
         {
             get
@@ -34,23 +46,33 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Directory to load and save languages
+        /// </summary>
         internal static string DirectoryPath
         {
             get
-            {
-                //#if DEBUG                 
-                //    return Path.Combine(Program.SubFolder, "Languages");
-                //#else
-                    return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NODevBox\\Languages");
-//                #endif
+            { 
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "NODevBox\\Languages");
             }
         }
 
+        /// <summary>
+        /// Contains a language
+        /// </summary>
+        /// <param name="lcid">language id</param>
+        /// <returns>true if exists otherwise false</returns>
         public bool Contains(int lcid)
         {
             return null != this.Where(l => l.LCID == lcid).FirstOrDefault();        
         }
 
+        /// <summary>
+        /// Get application language
+        /// </summary>
+        /// <param name="lcid">language id</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if not found otherwise return null</param>
+        /// <returns>language or null</returns>
         public ToolLanguage this[int lcid, bool throwExceptionIfNotFound]
         {
             get 
@@ -65,6 +87,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Try to find non-used languages in directory and delete them
+        /// </summary>
         internal void ValidateFiles()
         {
             if (!Directory.Exists(ToolLanguages.DirectoryPath))
@@ -93,6 +118,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Load all languages from folder
+        /// </summary>
         internal void LoadFromFolder()
         {
             Clear();
@@ -124,6 +152,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Dispose the instance
+        /// </summary>
         public void Dispose()
         {
             // unsafed

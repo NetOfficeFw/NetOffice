@@ -8,10 +8,18 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox.Ressources
 {
+    /// <summary>
+    /// Resource helper
+    /// </summary>
     internal static class RessourceUtils
     {
         private static Dictionary<string, string> _cache = new Dictionary<string, string>();
 
+        /// <summary>
+        /// Read resource image
+        /// </summary>
+        /// <param name="ressourcePath">resource path</param>
+        /// <returns>image instance from resource</returns>
         internal static Image ReadImageFromRessource(string ressourcePath)
         {
             System.IO.Stream ressourceStream = null;
@@ -24,6 +32,11 @@ namespace NetOffice.DeveloperToolbox.Ressources
             return newIcon;
         }
 
+        /// <summary>
+        /// Read resource icon
+        /// </summary>
+        /// <param name="ressourcePath">resource path</param>
+        /// <returns>icon instance from resource</returns>
         internal static Image ReadIconImageFromRessource(string ressourcePath)
         {
             System.IO.Stream ressourceStream = null;
@@ -36,6 +49,11 @@ namespace NetOffice.DeveloperToolbox.Ressources
             return newIcon;
         }
 
+        /// <summary>
+        /// Read resource stream
+        /// </summary>
+        /// <param name="ressourcePath">resource path</param>
+        /// <returns>stream from resource</returns>
         internal static Stream ReadStream(string ressourcePath)
         {
             Assembly ass = Assembly.GetExecutingAssembly();
@@ -47,6 +65,11 @@ namespace NetOffice.DeveloperToolbox.Ressources
             return ressourceStream;
         }
 
+        /// <summary>
+        /// Converts a string to a memory stream
+        /// </summary>
+        /// <param name="stringValue">stream to convert</param>
+        /// <returns>memory stream instance</returns>
         internal static Stream CreateStreamFromString(string stringValue)
         {
             MemoryStream stream = new MemoryStream();
@@ -57,6 +80,13 @@ namespace NetOffice.DeveloperToolbox.Ressources
             return stream;
         }
 
+        /// <summary>
+        /// Read resource file string content
+        /// </summary>
+        /// <param name="ressourcePath">resource path</param>
+        /// <param name="autoPrevRootNameSpace">use application root namespace before resource path</param>
+        /// <param name="throwExceptionIfNotFound">throw exception if not found, otherwise return null</param>
+        /// <returns>System.String or null</returns>
         internal static string ReadString(string ressourcePath, bool autoPrevRootNameSpace = true, bool throwExceptionIfNotFound = true)
         {
             string s = null;

@@ -7,8 +7,53 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Translation helper
+    /// </summary>
     public class Translator
     {
+        /// <summary>
+        /// Read content as string from resource file
+        /// </summary>
+        /// <param name="ressourcePath">path to resource file</param>
+        /// <returns>content of resource file</returns>
+        public static string ReadString(string ressourcePath)
+        {
+            System.IO.Stream ressourceStream = null;
+            System.IO.StreamReader textStreamReader = null;
+            try
+            {
+                string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+                ressourcePath = assemblyName + "." + ressourcePath;
+                ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(ressourcePath);
+                if (ressourceStream == null)
+                    throw (new System.IO.IOException("Error accessing resource Stream."));
+
+                textStreamReader = new System.IO.StreamReader(ressourceStream);
+                if (textStreamReader == null)
+                    throw (new System.IO.IOException("Error accessing resource File."));
+
+                string text = textStreamReader.ReadToEnd();
+                return text;
+            }
+            catch (Exception exception)
+            {
+                throw (exception);
+            }
+            finally
+            {
+                if (null != textStreamReader)
+                    textStreamReader.Close();
+                if (null != ressourceStream)
+                    ressourceStream.Close();
+            }
+        }
+
+        /// <summary>
+        /// Read resource localization file value names
+        /// </summary>
+        /// <param name="ressourceContent">resource adress</param>
+        /// <returns>names from resource file</returns>
         public static string[] ReadRessourceNames(string ressourceContent)
         {
             List<String> list = new List<string>();
@@ -19,6 +64,12 @@ namespace NetOffice.DeveloperToolbox.Translation
             return list.ToArray();
         }
 
+        /// <summary>
+        /// Translate a control and its sub controls
+        /// </summary>
+        /// <param name="rootControl">control to translate</param>
+        /// <param name="name">name of the control</param>
+        /// <param name="text">text for the root instance</param>
         public static void TranslateControl(Control rootControl, string name, string text)
         {
             if (name.Equals("this", StringComparison.InvariantCulture))
@@ -53,6 +104,13 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Translate a control and its sub controls based on a language id
+        /// </summary>
+        /// <param name="control">target control to translate</param>
+        /// <param name="componentName">name of the control</param>
+        /// <param name="ressourceFileName">resource file to use</param>
+        /// <param name="lanuageID">target language id</param>
         public static void AutoTranslateControls(Control control, string componentName, string ressourceFileName, int lanuageID)
         {
             Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == lanuageID).FirstOrDefault();
@@ -67,6 +125,11 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Translate a control an its sub controls
+        /// </summary>
+        /// <param name="control">target control to translate</param>
+        /// <param name="strings">language items for translation</param>
         public static void TranslateControls(Control control, ItemCollection strings)
         {
             string caption = "";
@@ -144,7 +207,12 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
-        
+        /// <summary>
+        /// Translate a control and its sub controls based on a language id
+        /// </summary>
+        /// <param name="control">control to translate</param>
+        /// <param name="ressourceFile">used resource file</param>
+        /// <param name="languageId">language id</param>
         public static void TranslateControls(Control control, string ressourceFile, int languageId)
         {
             string ressourceContent = ReadString(ressourceFile);
@@ -195,6 +263,13 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Get a localized value from resource file
+        /// </summary>
+        /// <param name="ressourceFile">resource adress</param>
+        /// <param name="languageId">target language id</param>
+        /// <param name="ressourceName">target value name</param>
+        /// <returns>target value</returns>
         public static string GetRessourceValue(string ressourceFile, int languageId, string ressourceName)
         {
             string ressourceContent = ReadString(ressourceFile);
@@ -207,6 +282,13 @@ namespace NetOffice.DeveloperToolbox.Translation
                 return null;
         }
     
+        /// <summary>
+        /// Get all localized name values from a resource file based on language id
+        /// </summary>
+        /// <param name="control">target control as replace provider</param>
+        /// <param name="ressourceFile">resource adress</param>
+        /// <param name="languageId">language id</param>
+        /// <returns>localized names & values</returns>
         public static Dictionary<string, string> GetTranslateRessources(Control control, string ressourceFile, int languageId)
         {
             string ressourceContent = ReadString(ressourceFile);
@@ -215,6 +297,12 @@ namespace NetOffice.DeveloperToolbox.Translation
             return translateTable;
         }
 
+        /// <summary>
+        /// Try get text from a sub control
+        /// </summary>
+        /// <param name="rootControl">target root control</param>
+        /// <param name="name">name of the sub control</param>
+        /// <returns>sub control text or null</returns>
         internal static string TryGetControlText(Control rootControl, string name)
         {
             if (name.Equals("this", StringComparison.InvariantCulture))
@@ -240,6 +328,12 @@ namespace NetOffice.DeveloperToolbox.Translation
             return null;
         }
 
+        /// <summary>
+        /// Try get sub control from a control instance
+        /// </summary>
+        /// <param name="rootControl">target control</param>
+        /// <param name="name">name of sub control</param>
+        /// <returns>sub control or null</returns>
         internal static Control TryGetControl(Control rootControl, string name)
         {
             if(name.Equals("this", StringComparison.InvariantCulture))
@@ -342,7 +436,6 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
 
             return resultDictionary;
-            //throw new IndexOutOfRangeException(languageId.ToString() + " not found.");
         }
 
         private static void AddToDictionary(Dictionary<string, string> resultDictionary, string[] lines, ILocalizationReplaceProvider provider = null)
@@ -373,38 +466,6 @@ namespace NetOffice.DeveloperToolbox.Translation
 
                     resultDictionary.Add(name, value);
                 }
-            }
-        }
-
-        public static string ReadString(string ressourcePath)
-        {
-            System.IO.Stream ressourceStream = null;
-            System.IO.StreamReader textStreamReader = null;
-            try
-            {
-                string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                ressourcePath = assemblyName + "." + ressourcePath;
-                ressourceStream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(ressourcePath);
-                if (ressourceStream == null)
-                    throw (new System.IO.IOException("Error accessing resource Stream."));
-
-                textStreamReader = new System.IO.StreamReader(ressourceStream);
-                if (textStreamReader == null)
-                    throw (new System.IO.IOException("Error accessing resource File."));
-
-                string text = textStreamReader.ReadToEnd();
-                return text;
-            }
-            catch (Exception exception)
-            {
-                throw (exception);
-            }
-            finally
-            {
-                if (null != textStreamReader)
-                    textStreamReader.Close();
-                if (null != ressourceStream)
-                    ressourceStream.Close();
             }
         }
     }

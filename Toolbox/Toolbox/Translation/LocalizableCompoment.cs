@@ -7,6 +7,9 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Represents a localizable component
+    /// </summary>
     internal class LocalizableCompoment : NotifyPropertyChanged
     {
         #region Fields
@@ -18,7 +21,12 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Ctor
 
-        // root component
+        /// <summary>
+        /// Creates an instance of the class as root component
+        /// </summary>
+        /// <param name="parent">parent language</param>
+        /// <param name="name">name of the component</param>
+        /// <param name="controlType">component type to create an instance from</param>
         internal LocalizableCompoment(ToolLanguage parent, string name, Type controlType)
         {
             Parent = parent;
@@ -59,7 +67,13 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
-        // sub component
+        /// <summary>
+        /// Creates an instance as sub component
+        /// </summary>
+        /// <param name="parent">parent language</param>
+        /// <param name="parentComponentName">name of the parent component</param>
+        /// <param name="name">name of the component</param>
+        /// <param name="controlType">component type to create an instance from</param>
         internal LocalizableCompoment(ToolLanguage parent, string parentComponentName, string name, Type controlType)
         {
             Parent = parent;
@@ -103,8 +117,16 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Parent Language
+        /// </summary>
         internal ToolLanguage Parent { get; private set; }
 
+        /// <summary>
+        /// Attribute from the component class
+        /// </summary>
         internal RessourceTableAttribute Attribute
         {
             get
@@ -115,6 +137,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Component instance in design mode
+        /// </summary>
         internal UserControl Design
         {
             get             
@@ -130,6 +155,11 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Localizable resources from the component
+        /// </summary>
         internal ItemCollection ControlRessources { get; private set; }
+
+        #endregion
     }
 }

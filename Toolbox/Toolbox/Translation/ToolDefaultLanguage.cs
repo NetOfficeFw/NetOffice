@@ -7,19 +7,40 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Default Language Kind
+    /// </summary>
     internal enum ToolDefaultLanguageName
     { 
+        /// <summary>
+        /// En-us
+        /// </summary>
         English = 0,
+
+        /// <summary>
+        /// de-de
+        /// </summary>
         German = 1
     }
 
+    /// <summary>
+    /// Application default language settings(not changeble)
+    /// </summary>
     internal class ToolDefaultLanguage : ToolLanguage
     {
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="parent">parent collection</param>
+        /// <param name="name">default kind</param>
        internal ToolDefaultLanguage(ToolLanguages parent, ToolDefaultLanguageName name) : base(parent, "", 1000)
        {
            DefaultLanguageName = name;
        }
 
+       /// <summary>
+       /// Default Kind
+       /// </summary>
        internal ToolDefaultLanguageName DefaultLanguageName { get; private set; }
 
        public override string Name

@@ -12,6 +12,9 @@ using ICSharpCode.SharpZipLib.Zip;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Configurable language settings
+    /// </summary>
     public class ToolLanguage : INotifyPropertyChanged
     {
         #region Fields
@@ -28,7 +31,12 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Ctor
 
-        // existing 
+        /// <summary>
+        /// Creates an instance of the class as existing language
+        /// </summary>
+        /// <param name="parent">parent collection</param>
+        /// <param name="nameGlobal">international name</param>
+        /// <param name="lcid">language id</param>
         internal ToolLanguage(ToolLanguages parent, string nameGlobal, int lcid)
         {
             _parent = parent;
@@ -36,7 +44,11 @@ namespace NetOffice.DeveloperToolbox.Translation
             _lcid = lcid;
         }
 
-        // new
+        /// <summary>
+        /// Creates an instance of the class as new language
+        /// </summary>
+        /// <param name="parent">parent collection</param>
+        /// <param name="template">role model</param>
         internal ToolLanguage(ToolLanguages parent, ToolLanguage template)
         {
             _parent = parent;
@@ -66,10 +78,19 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Properties
 
+        /// <summary>
+        /// Language is new and unsaved
+        /// </summary>
         internal bool IsNew { get; set; }
 
+        /// <summary>
+        /// Language contains unsaved changed
+        /// </summary>
         internal bool IsDirty { get; set; }
 
+        /// <summary>
+        /// The user level name
+        /// </summary>
         public virtual string DisplayName
         {
             get
@@ -83,6 +104,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// The logical name
+        /// </summary>
         public virtual string Name
         {
             get 
@@ -96,6 +120,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// The international name
+        /// </summary>
         public virtual string NameGlobal
         {
             get
@@ -109,6 +136,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Name of the author from the language
+        /// </summary>
         public virtual string Author
         {
             get
@@ -122,6 +152,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Mail adress from the author
+        /// </summary>
         public virtual string AuthorMail
         {
             get
@@ -135,6 +168,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Website from the author
+        /// </summary>
         public virtual string AuthorSite
         {
             get
@@ -148,6 +184,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Language ID
+        /// </summary>
         public virtual int LCID
         {
             get
@@ -166,14 +205,24 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Application Root Components
+        /// </summary>
         internal ToolLanguageApplication Application { get; private set; }
 
+        /// <summary>
+        /// Application Plugin Components
+        /// </summary>
         internal LocalizableCompoments Components { get; private set; }
 
         #endregion
 
         #region Methods
 
+        /// <summary>
+        /// Returns the language contains all necessary informations to save them to filesystem
+        /// </summary>
+        /// <returns></returns>
         internal bool IsValid()
         {
             if (String.IsNullOrWhiteSpace(_nameGlobal))
@@ -184,11 +233,20 @@ namespace NetOffice.DeveloperToolbox.Translation
             return true;
         }
 
+        /// <summary>
+        /// Get localizable values (Not implemented)
+        /// </summary>
+        /// <param name="componentName">name of the component</param>
+        /// <returns>items</returns>
         internal virtual ItemCollection GetValues(string componentName)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Load language from filesystem
+        /// </summary>
+        /// <param name="fileName">full qualified file name</param>
         internal virtual void Load(string fileName)
         {
             using (ZipFile file = new ZipFile(fileName))
@@ -219,6 +277,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
         }
 
+        /// <summary>
+        /// Save language to file
+        /// </summary>
         internal virtual void Save()
         {
             if (!IsValid())
@@ -278,6 +339,9 @@ namespace NetOffice.DeveloperToolbox.Translation
             IsDirty = false;
         }
 
+        /// <summary>
+        /// Initialize the language
+        /// </summary>
         internal virtual void Initialize()
         {
             Application = new ToolLanguageApplication(this);
@@ -422,6 +486,10 @@ namespace NetOffice.DeveloperToolbox.Translation
 
         #region Overrides
 
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return String.Format("ToolLanguage {0}", String.IsNullOrWhiteSpace(NameGlobal) ? "<NoName>" : NameGlobal);

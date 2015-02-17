@@ -8,18 +8,31 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox
 {
+    /// <summary>
+    /// Contains information about coresponding localization resource file
+    /// </summary>
     public class RessourceTableAttribute : System.Attribute
     {
+        /// <summary>
+        /// Localization Resource File Adress
+        /// </summary>
         public readonly string Address;
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="address">localization resource file adress</param>
         public RessourceTableAttribute(string address)
         {
-            if (address == "ToolboxControls.OfficeCompatibility.Strings.txt")
-            { 
-            }
             Address = address;
         }
         
+        /// <summary>
+        /// Return all names and values for localization based on language
+        /// </summary>
+        /// <param name="control">instance must have a RessourceTable attribute</param>
+        /// <param name="languageID">target language id</param>
+        /// <returns>target names and values</returns>
         public static Dictionary<string, string> GetRessourceValues(Control control, int languageID)
         {
             Type type = control.GetType();
@@ -29,6 +42,11 @@ namespace NetOffice.DeveloperToolbox
             return Translation.Translator.GetTranslateRessources(control, attrib.Address, languageID);
         }
 
+        /// <summary>
+        /// Returns all names for localization
+        /// </summary>
+        /// <param name="type">type of instance(must have RessourceTableAttribute)</param>
+        /// <returns>target names</returns>
         public static string[] GetRessourceNames(Type type)
         {
             object[] obj = type.GetCustomAttributes(typeof(RessourceTableAttribute), false);

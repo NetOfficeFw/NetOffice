@@ -9,16 +9,35 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Translation
 {
+    /// <summary>
+    /// Edit language summary informations
+    /// </summary>
     public partial class LanguageSummaryControl : UserControl
     {
+        #region Fields
+
         private ToolLanguage _selectedLanguage;
         private bool _initialize;
 
+        #endregion
+        
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public LanguageSummaryControl()
         {
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current edit language
+        /// </summary>
         internal ToolLanguage SelectedLanguage
         {
             get
@@ -31,6 +50,10 @@ namespace NetOffice.DeveloperToolbox.Translation
                 ShowLanguage();
             }
         }
+
+        #endregion
+
+        #region Methods
 
         private void ShowLanguage()
         {
@@ -85,7 +108,6 @@ namespace NetOffice.DeveloperToolbox.Translation
             return array2[languageIndex-1];
         }
 
-
         private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             _selectedLanguage.IsDirty = true;
@@ -133,5 +155,7 @@ namespace NetOffice.DeveloperToolbox.Translation
                 ;
             }
         }
+
+        #endregion
     }
 }
