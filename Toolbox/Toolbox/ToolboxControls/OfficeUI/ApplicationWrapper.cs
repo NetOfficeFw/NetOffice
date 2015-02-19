@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NetOffice;
-
 using Excel = NetOffice.ExcelApi;
 using Word = NetOffice.WordApi;
 using Outlook = NetOffice.OutlookApi;
@@ -16,23 +15,43 @@ using Office = NetOffice.OfficeApi;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 {
-    class ApplicationWrapper
+    /// <summary>
+    /// Office product application wrapper to create and dispose/get commandbars
+    /// </summary>
+    internal class ApplicationWrapper
     {
-        string _officeApp;
-        Excel.Application _excelApplication;
-        Word.Application _wordApplication;
-        Outlook.Application _outlookApplication;
-        PowerPoint.Application _powerpointApplication;
-        Access.Application _accessApplication;
-        Project.Application _projectApplication;
-        Visio.Application _visioApplication;
+        #region Fields
 
+        private string _officeApp;
+        private Excel.Application _excelApplication;
+        private Word.Application _wordApplication;
+        private Outlook.Application _outlookApplication;
+        private PowerPoint.Application _powerpointApplication;
+        private Access.Application _accessApplication;
+        private Project.Application _projectApplication;
+        private Visio.Application _visioApplication;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="officeApp">name of the office application to create</param>
         internal ApplicationWrapper(string officeApp)
         {
             _officeApp = officeApp;
             CreateOfficeApplication();
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// CommandBars from the application user interface
+        /// </summary>
         public Office.CommandBars CommandBars
         {
             get
@@ -62,6 +81,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Quit application
+        /// </summary>
         public void Quit()
         {
             switch (_officeApp)
@@ -92,6 +118,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
         }
 
+        /// <summary>
+        /// Dispose application
+        /// </summary>
         public void Dispose()
         {
             switch (_officeApp)
@@ -122,6 +151,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
         }
 
+        /// <summary>
+        /// Create application
+        /// </summary>
         private void CreateOfficeApplication()
         {
             switch (_officeApp)
@@ -151,5 +183,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                     throw new ArgumentOutOfRangeException("officeApp");
             }
         }
+
+        #endregion
     }
 }

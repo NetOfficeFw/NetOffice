@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// DWORD Value Editor
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeDWordDialogMessageTable.txt")]
     public partial class ChangeDWORDControl : UserControl, ILocalizationDesign
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ChangeDWORDControl()
         {
             InitializeComponent();
@@ -23,6 +29,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Events
 
+        /// <summary>
+        /// User want close the dialog
+        /// </summary>
         public event EventHandler Close;
 
         private void RaiseClose()
@@ -35,8 +44,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Properties
 
+        /// <summary>
+        /// User want proceed or abort edit
+        /// </summary>
         public DialogResult DialogResult { get; private set; }
 
+        /// <summary>
+        /// Name of the value
+        /// </summary>
         public string EntryName
         {
             get
@@ -45,6 +60,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
+        /// <summary>
+        /// Value to edit
+        /// </summary>
         public object EntryValue
         {
             get
@@ -102,12 +120,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Methods
 
+        /// <summary>
+        /// Set edit arguments
+        /// </summary>
+        /// <param name="name">name of the value</param>
+        /// <param name="value">value to edit</param>
         public void SetArguments(string name, object value)
         {
             textBoxName.Text = name;
             textBoxValue.Text = InitialConvertValue(value);
         }
 
+        /// <summary>
+        /// Set focus to the edit value
+        /// </summary>
         public void SetFocus()
         {
             textBoxValue.Focus();
@@ -163,25 +189,53 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.OK;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            RaiseClose();
+            try
+            {
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void textBoxValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("1234567890,\b".IndexOf(e.KeyChar.ToString()) < 0)
-                e.Handled = true;
+            try
+            {
+                if ("1234567890,\b".IndexOf(e.KeyChar.ToString()) < 0)
+                    e.Handled = true;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void radioButtonHex_CheckedChanged(object sender, EventArgs e)
         {
-            object value = ConvertValue(textBoxValue.Text);
-            textBoxValue.Text = value.ToString();
+            try
+            {
+                object value = ConvertValue(textBoxValue.Text);
+                textBoxValue.Text = value.ToString();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         #endregion

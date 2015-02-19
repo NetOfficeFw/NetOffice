@@ -8,10 +8,19 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// String edit host dialog
+    /// </summary>
     partial class ChangeStringDialog : Form
     {
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="name">name of the value</param>
+        /// <param name="value">value to edit</param>
+        /// <param name="currentLanguageID">current user language id</param>
         public ChangeStringDialog(string name, string value, int currentLanguageID)
         {
             InitializeComponent();
@@ -24,6 +33,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Properties
 
+        /// <summary>
+        /// Value name
+        /// </summary>
         public string EntryName
         {
             get 
@@ -32,6 +44,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             } 
         }
 
+        /// <summary>
+        /// New value
+        /// </summary>
         public string EntryValue
         {
             get
@@ -46,21 +61,35 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void changeStringControl1_Close(object sender, EventArgs e)
         {
-            this.DialogResult = changeStringControl1.DialogResult;
-            this.Close();
+            try
+            {
+                this.DialogResult = changeStringControl1.DialogResult;
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void ChangeStringDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            try
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                this.Close();
+                if (e.KeyCode == Keys.Escape)
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                    this.Close();
+                }
+                else if (e.KeyCode == Keys.Return)
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
             }
-            else if (e.KeyCode == Keys.Return)
+            catch (Exception exception)
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 

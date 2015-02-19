@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// String Value Editor
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeStringDialogMessageTable.txt")]
     public partial class ChangeStringControl : UserControl, ILocalizationDesign
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ChangeStringControl()
         {
             InitializeComponent();
@@ -23,6 +29,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Events
 
+        /// <summary>
+        /// User want close the dialog
+        /// </summary>
         public event EventHandler Close;
 
         private void RaiseClose()
@@ -35,8 +44,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Properties
 
+        /// <summary>
+        /// User want proceed edit or abort
+        /// </summary>
         public DialogResult DialogResult { get; private set; }
 
+        /// <summary>
+        /// Value name
+        /// </summary>
         public string EntryName
         {
             get
@@ -45,6 +60,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
+        /// <summary>
+        /// New value
+        /// </summary>
         public string EntryValue
         {
             get
@@ -57,12 +75,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Methods
 
+        /// <summary>
+        /// Set arguments to edit
+        /// </summary>
+        /// <param name="name">name of the value</param>
+        /// <param name="value">value to edit</param>
         public void SetArguments(string name, string value)
         {
             textBoxName.Text = name;
             textBoxValue.Text = value;
         }
 
+        /// <summary>
+        /// Set focus to edit value
+        /// </summary>
         public void SetFocus()
         {
             textBoxValue.Focus();
@@ -119,14 +145,28 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.Cancel;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.OK;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         #endregion

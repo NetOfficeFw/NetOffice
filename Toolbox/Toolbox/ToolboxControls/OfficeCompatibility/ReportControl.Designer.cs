@@ -38,9 +38,9 @@
             this.panelNativeView = new System.Windows.Forms.Panel();
             this.textBoxReport = new System.Windows.Forms.TextBox();
             this.panelView = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewDetail = new System.Windows.Forms.ListView();
             this.checkBoxNativeView = new System.Windows.Forms.CheckBox();
-            this.buttonClose2 = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.labelFilterCaption = new System.Windows.Forms.Label();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.labelFilterHint = new System.Windows.Forms.Label();
@@ -168,24 +168,24 @@
             // panelView
             // 
             this.panelView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelView.Controls.Add(this.listView1);
+            this.panelView.Controls.Add(this.listViewDetail);
             this.panelView.Location = new System.Drawing.Point(1, 5);
             this.panelView.Name = "panelView";
             this.panelView.Size = new System.Drawing.Size(524, 168);
             this.panelView.TabIndex = 0;
             // 
-            // listView1
+            // listViewDetail
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(522, 166);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.Resize += new System.EventHandler(this.listView1_Resize);
+            this.listViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewDetail.FullRowSelect = true;
+            this.listViewDetail.Location = new System.Drawing.Point(0, 0);
+            this.listViewDetail.Name = "listViewDetail";
+            this.listViewDetail.Size = new System.Drawing.Size(522, 166);
+            this.listViewDetail.TabIndex = 1;
+            this.listViewDetail.UseCompatibleStateImageBehavior = false;
+            this.listViewDetail.View = System.Windows.Forms.View.Details;
+            this.listViewDetail.Resize += new System.EventHandler(this.listViewDetail_Resize);
             // 
             // checkBoxNativeView
             // 
@@ -200,19 +200,19 @@
             this.checkBoxNativeView.Visible = false;
             this.checkBoxNativeView.CheckedChanged += new System.EventHandler(this.checkBoxNativeView_CheckedChanged);
             // 
-            // buttonClose2
+            // buttonClose
             // 
-            this.buttonClose2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonClose2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose2.Location = new System.Drawing.Point(755, 0);
-            this.buttonClose2.Name = "buttonClose2";
-            this.buttonClose2.Size = new System.Drawing.Size(28, 28);
-            this.buttonClose2.TabIndex = 30;
-            this.buttonClose2.Text = "X";
-            this.buttonClose2.UseVisualStyleBackColor = true;
-            this.buttonClose2.Click += new System.EventHandler(this.buttonClose2_Click);
+            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(755, 0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(28, 28);
+            this.buttonClose.TabIndex = 30;
+            this.buttonClose.Text = "X";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // labelFilterCaption
             // 
@@ -334,7 +334,7 @@
             this.Controls.Add(this.pictureBoxProperty);
             this.Controls.Add(this.labelFieldHint);
             this.Controls.Add(this.pictureBoxField);
-            this.Controls.Add(this.buttonClose2);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ReportControl";
@@ -359,12 +359,12 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TreeView treeViewReport;
         private System.Windows.Forms.TextBox textBoxReport;
-        private System.Windows.Forms.Button buttonClose2;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label labelFilterCaption;
         private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.Label labelFilterHint;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewDetail;
         private System.Windows.Forms.Panel panelView;
         private System.Windows.Forms.Panel panelNativeView;
         private System.Windows.Forms.CheckBox checkBoxNativeView;

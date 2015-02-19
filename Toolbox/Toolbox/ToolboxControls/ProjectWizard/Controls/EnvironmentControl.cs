@@ -10,18 +10,78 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
-    //step  2
+    /// <summary>
+    /// Step 2 in wizard to select programming language / ide / .net version
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.EnvironmentControl.txt")]
     public partial class EnvironmentControl : UserControl, IWizardControl, ILocalizationDesign
     {
+        #region Fields
+
         private XmlDocument _settings;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public EnvironmentControl()
         {
             InitializeComponent();
             CreateSettingsDocument();
             comboBoxNetRuntime.SelectedIndex = 3;
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Selected language (C# or VB)
+        /// </summary>
+        internal string SelectedLanguage
+        {
+            get
+            {
+                if (radioButtonCSharp.Checked)
+                    return "C#";
+                else
+                    return "VB";
+            }
+        }
+
+        /// <summary>
+        /// Selected IDE like VS2010
+        /// </summary>
+        internal string SelectedIDE
+        {
+            get
+            {
+                if (radioButtonVS2010.Checked)
+                    return "2010";
+                else if (radioButtonVS2012.Checked)
+                    return "2012";
+                else
+                    return "2013";
+            }
+        }
+
+        /// <summary>
+        /// Selected .NET Runtime
+        /// </summary>
+        internal string SelectedRuntime
+        {
+            get
+            {
+                return comboBoxNetRuntime.Text;
+            }
+        }
+
+        #endregion
+
+        #region IWizardControl
 
         public event ReadyStateChangedHandler ReadyStateChanged;
         
@@ -66,7 +126,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Translate()
         {
-            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.Where(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID).FirstOrDefault();
+            Translation.ToolLanguage language = Forms.MainForm.Singleton.Languages.FirstOrDefault(l => l.LCID == Forms.MainForm.Singleton.CurrentLanguageID);
             if (null != language)
             {
                 var component = language.Components["Project Wizard - Environment"];
@@ -108,6 +168,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
             return result;
         }
+
+        #endregion
 
         #region ILocalizationDesign
 
@@ -154,37 +216,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
-        internal string SelectedLanguage
-        { 
-            get
-            {
-                if (radioButtonCSharp.Checked)
-                    return "C#";
-                else
-                    return "VB";
-            }
-        }
-
-        internal string SelectedIDE
-        {
-            get
-            {
-                if (radioButtonVS2010.Checked)
-                    return "2010";
-                else if (radioButtonVS2012.Checked)
-                    return "2012";
-                else
-                    return "2013";
-            }
-        }
-
-        internal string SelectedRuntime
-        {
-            get
-            {
-                return comboBoxNetRuntime.Text;                 
-            }
-        }
+        #region Mehtods
 
         private void ChangeSettings()
         {
@@ -208,39 +240,66 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 ReadyStateChanged(this);
         }
 
+        #endregion
+
+        #region Trigger
+
         private void radioButtonLanguage_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
+            try
+            {
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            } 
         }
 
         private void radioButtonIDE_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
+            try
+            {
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            } 
         }
 
         private void comboBoxNetRuntime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
-            if (comboBoxNetRuntime.SelectedIndex == 5)
+            try
             {
-                // .net 4.5
-                labelNet45Hint.Visible = true;
-                radioButtonVS2010.Enabled = false;
-                radioButtonVS2012.Enabled = false;
-                radioButtonVS2013.Enabled = true;
-                radioButtonVS2013.Checked = true;
+                ChangeSettings();
+                RaiseChangeEvent();
+                if (comboBoxNetRuntime.SelectedIndex == 5)
+                {
+                    // .net 4.5
+                    labelNet45Hint.Visible = true;
+                    radioButtonVS2010.Enabled = false;
+                    radioButtonVS2012.Enabled = false;
+                    radioButtonVS2013.Enabled = true;
+                    radioButtonVS2013.Checked = true;
+                }
+                else
+                {
+                    // else
+                    labelNet45Hint.Visible = false;
+                    radioButtonVS2010.Enabled = true;
+                    radioButtonVS2012.Enabled = true;
+                    radioButtonVS2013.Enabled = true;
+                }
             }
-            else
+            catch (Exception exception)
             {
-                // else
-                labelNet45Hint.Visible = false;
-                radioButtonVS2010.Enabled = true;
-                radioButtonVS2012.Enabled = true;
-                radioButtonVS2013.Enabled = true;
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
+
+        #endregion
     }
 }

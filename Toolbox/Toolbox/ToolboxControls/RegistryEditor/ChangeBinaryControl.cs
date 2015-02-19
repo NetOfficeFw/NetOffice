@@ -9,11 +9,17 @@ using NetOffice.DeveloperToolbox.Controls.Hex;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// Binary Value Editor
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeBinaryDialogMessageTable.txt")]
     public partial class ChangeBinaryControl : UserControl, ILocalizationDesign
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ChangeBinaryControl()
         {
             InitializeComponent();
@@ -23,6 +29,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Events
 
+        /// <summary>
+        /// User want close the dialog
+        /// </summary>
         public event EventHandler Close;
 
         private void RaiseClose()
@@ -35,8 +44,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Properties
 
+        /// <summary>
+        /// User want proceed or abort edit
+        /// </summary>
         public DialogResult DialogResult { get; private set; }
 
+        /// <summary>
+        /// New value
+        /// </summary>
         public Byte[] Bytes
         {
             get
@@ -50,7 +65,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Methods
 
-        public void SetArguments(string name, byte[] value)
+        /// <summary>
+        /// Set name and value to edit
+        /// </summary>
+        /// <param name="name">name of the value</param>
+        /// <param name="value">value to edit</param>
+        internal void SetArguments(string name, byte[] value)
         {
             DynamicByteProvider provider = new DynamicByteProvider(value);
             hexBox.ByteProvider = provider;
@@ -58,7 +78,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             hexBox.ByteProvider = provider;
         }
 
-        public void SetFocus()
+        /// <summary>
+        /// Set focus to the edit value
+        /// </summary>
+        internal void SetFocus()
         {
             hexBox.Focus();
         }
@@ -133,19 +156,40 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.OK;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }           
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.Cancel;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void ChangeBinaryControl_Resize(object sender, EventArgs e)
         {
-            hexBox.BytesPerLine = this.Width / 56;
+            try
+            {
+                hexBox.BytesPerLine = this.Width / 56;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         #endregion

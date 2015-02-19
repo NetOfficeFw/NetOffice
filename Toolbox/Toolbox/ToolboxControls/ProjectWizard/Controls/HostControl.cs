@@ -10,19 +10,37 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
-    // step 3
+    /// <summary>
+    /// Supported office applications want selected here
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.HostControl.txt")]
     public partial class HostControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
+        #region Fields
 
+        private XmlDocument _settings;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public HostControl()
         {
             InitializeComponent();
             CreateSettingsDocument();
         }
 
-        public List<string> HostApplications
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// User selected applications
+        /// </summary>
+        internal List<string> HostApplications
         {
             get 
             {
@@ -44,6 +62,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 return list;
             }
         }
+
+        #endregion
 
         #region IWizardControl Member
 
@@ -116,6 +136,38 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
+
+        public new void KeyDown(KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.D1:
+                    checkBoxExcel.Checked = !checkBoxExcel.Checked;
+                    break;
+                case Keys.D2:
+                    checkBoxWord.Checked = !checkBoxWord.Checked;
+                    break;
+                case Keys.D3:
+                    checkBoxOutlook.Checked = !checkBoxOutlook.Checked;
+                    break;
+                case Keys.D4:
+                    checkBoxPowerPoint.Checked = !checkBoxPowerPoint.Checked;
+                    break;
+                case Keys.D5:
+                    checkBoxAccess.Checked = !checkBoxAccess.Checked;
+                    break;
+                case Keys.D6:
+                    checkBoxProject.Checked = !checkBoxProject.Checked;
+                    break;
+                case Keys.D7:
+                    if (checkBoxVisio.Enabled)
+                        checkBoxVisio.Checked = !checkBoxVisio.Checked;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void Activate()
         {
             foreach (var item in ProjectWizardControl.Singleton.WizardControls)
@@ -123,7 +175,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 ProjectControl ctrl = item as ProjectControl;
                 if (null != ctrl)
                 {
-
+                    // visio is not supported in NetOffice Tools because it works much different under the hood
                     if (ctrl.IsToolAddinProject)
                     {
                         checkBoxVisio.Checked = false;
@@ -252,41 +304,21 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
+        #region Trigger
+
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
-        }
-
-        public new void KeyDown(KeyEventArgs e)
-        {
-            switch (e.KeyCode)
+            try
             {
-                case Keys.D1:
-                    checkBoxExcel.Checked = !checkBoxExcel.Checked;
-                    break;
-                case Keys.D2:
-                    checkBoxWord.Checked = !checkBoxWord.Checked;
-                    break;
-                case Keys.D3:
-                    checkBoxOutlook.Checked = !checkBoxOutlook.Checked;
-                    break;
-                case Keys.D4:
-                    checkBoxPowerPoint.Checked = !checkBoxPowerPoint.Checked;
-                    break;
-                case Keys.D5:
-                    checkBoxAccess.Checked = !checkBoxAccess.Checked;
-                    break;
-                case Keys.D6:
-                    checkBoxProject.Checked = !checkBoxProject.Checked;
-                    break;
-                case Keys.D7:
-                    if(checkBoxVisio.Enabled)
-                        checkBoxVisio.Checked = !checkBoxVisio.Checked;
-                    break;
-                default:
-                    break;
+                ChangeSettings();
+                RaiseChangeEvent();
             }
-        }
+            catch (Exception exception)
+            {                
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+       }
+       
+       #endregion
     }
 }

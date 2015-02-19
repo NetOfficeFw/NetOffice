@@ -9,18 +9,37 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
+    /// <summary>
+    /// User interface options in addin projects
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.GuiControl.txt")]
     public partial class GuiControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
+        #region Fields
 
+        private XmlDocument _settings;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public GuiControl()
         {
             InitializeComponent();
             CreateSettingsDocument();
         }
 
-        public bool ClassicUIEnabled
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// User want support classic ui
+        /// </summary>
+        internal bool ClassicUIEnabled
         {
             get 
             {
@@ -28,7 +47,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        public bool RibbonUIEnabled
+        /// <summary>
+        /// User want support ugly ui
+        /// </summary>
+        internal bool RibbonUIEnabled
         {
             get
             {
@@ -36,7 +58,21 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        public bool ToogleEnabled
+        /// <summary>
+        /// User want support a task pane
+        /// </summary>
+        internal bool TaskPaneEnabled
+        {
+            get
+            {
+                return checkBoxTaskPaneSupport.Checked;
+            }
+        }
+
+        /// <summary>
+        /// User want a ribbon toogle button for taskpane visibilty
+        /// </summary>
+        internal bool ToogleEnabled
         {
             get
             {
@@ -44,13 +80,29 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
-        public bool TaskPaneEnabled
+        private string LocalizedUglyUI
         {
             get
             {
-                return checkBoxTaskPaneSupport.Checked;
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
+                    return "Ribbon UI:";
+                else
+                    return "Ribbon UI:";
             }
         }
+
+        private string LocalizedClassicUI
+        {
+            get
+            {
+                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
+                    return "Klassische UI:";
+                else
+                    return "Classic UI:";
+            }
+        }
+
+        #endregion
 
         #region IWizardControl
 
@@ -247,48 +299,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
-        private void checkBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxToogleButton.Enabled = checkBoxTaskPaneSupport.Checked && checkBoxRibbonUISupport.Checked;
-            if (!checkBoxToogleButton.Enabled && checkBoxToogleButton.Checked)
-                checkBoxToogleButton.Checked = false;
-            ChangeSettings();
-            RaiseChangeEvent();
-        }
-
-        private void checkBoxTaskPaneSupport_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxToogleButton.Enabled = checkBoxTaskPaneSupport.Checked && checkBoxRibbonUISupport.Checked;
-            if (!checkBoxToogleButton.Enabled && checkBoxToogleButton.Checked)
-                checkBoxToogleButton.Checked = false;
-            ChangeSettings();
-            RaiseChangeEvent();
-        }
 
         #region Methods
-
-        private string LocalizedUglyUI
-        {
-            get
-            {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Ribbon UI:";
-                else
-                    return "Ribbon UI:";
-            }
-        }
-
-        private string LocalizedClassicUI
-        {
-            get
-            {
-                if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-                    return "Klassische UI:";
-                else
-                    return "Classic UI:";
-            }
-        }
-         
+       
         private void ChangeSettings()
         {
             _settings.FirstChild.SelectSingleNode("UseClassicUI").InnerText = checkBoxClassicUISupport.Checked.ToString();
@@ -314,5 +327,41 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         }
 
         #endregion   
+
+        #region Trigger
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                checkBoxToogleButton.Enabled = checkBoxTaskPaneSupport.Checked && checkBoxRibbonUISupport.Checked;
+                if (!checkBoxToogleButton.Enabled && checkBoxToogleButton.Checked)
+                    checkBoxToogleButton.Checked = false;
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            } 
+        }
+
+        private void checkBoxTaskPaneSupport_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                checkBoxToogleButton.Enabled = checkBoxTaskPaneSupport.Checked && checkBoxRibbonUISupport.Checked;
+                if (!checkBoxToogleButton.Enabled && checkBoxToogleButton.Checked)
+                    checkBoxToogleButton.Checked = false;
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            } 
+        }
+
+        #endregion
     }
 }

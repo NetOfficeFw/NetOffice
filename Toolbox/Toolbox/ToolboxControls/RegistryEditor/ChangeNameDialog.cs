@@ -8,9 +8,19 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// Name edit host dialog
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeNameDialogMessageTable.txt")]
     partial class ChangeNameDialog : Form
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="name">name to edit</param>
+        /// <param name="currentLanguageID">current user language id</param>
         public ChangeNameDialog(string name, int currentLanguageID)
         {
             InitializeComponent();
@@ -20,6 +30,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             changeNameControl1.SetFocus();
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// New name
+        /// </summary>
         public string EntryNewName
         {
             get 
@@ -28,25 +45,41 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
+        #endregion
+
         #region Trigger
 
         private void changeNameControl1_Close(object sender, EventArgs e)
         {
-            this.DialogResult = changeNameControl1.DialogResult;
-            this.Close();
+            try
+            {
+                this.DialogResult = changeNameControl1.DialogResult;
+                this.Close();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void ChangeNameDialog_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
+            try
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                this.Close();
+                if (e.KeyCode == Keys.Escape)
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+                    this.Close();
+                }
+                else if (e.KeyCode == Keys.Return && false == String.IsNullOrWhiteSpace(EntryNewName))
+                {
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
+                }
             }
-            else if (e.KeyCode == Keys.Return && false == String.IsNullOrWhiteSpace(EntryNewName))
+            catch (Exception exception)
             {
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
             }
         }
 

@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 {
+    /// <summary>
+    /// Observe MS processes and kill easy
+    /// </summary>
     [RessourceTable("ToolboxControls.ApplicationObserver.Strings.txt")]
     public partial class ApplicationObserverControl : UserControl, IToolboxControl
     {
@@ -22,12 +25,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ApplicationObserverControl()
         {
             try
             {
                 InitializeComponent();
-                if (!DesignMode)
+                if (!Program.IsDesign)
                 {
                     _applicationObserver = new OfficeApplicationObserver(listViewApps);
                     textBoxHotKey.Text = _applicationObserver.HotKey.ToString();
@@ -43,18 +49,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         #endregion
         
-        #region Properties
-
-        private new bool DesignMode
-        {
-            get
-            {
-                return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
-            }
-        }
-       
-        #endregion
-
         #region IToolboxControl
 
         public IToolboxHost Host { get; private set; }
@@ -221,7 +215,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         public void Release()
         {
-            if ((null != _applicationObserver) && (!this.DesignMode))
+            if ((null != _applicationObserver) && (!Program.IsDesign))
             {
                 _applicationObserver.Dispose();
                 _applicationObserver = null;
@@ -266,6 +260,35 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             {
                 return new ILocalizationChildInfo[] { new LocalizationDefaultChildInfo("Help", typeof(Controls.InfoLayer.InfoControl)) };
             }
+        }
+
+        #endregion
+
+        #region Methods
+
+        private static int GetProcessImageIndex(string processName)
+        {
+            processName = processName.Trim().ToUpper();
+            switch (processName)
+            {
+                case "EXCEL":
+                    return 1;
+                case "WINWORD":
+                    return 2;
+                case "OUTLOOK":
+                    return 3;
+                case "POWERPNT":
+                    return 4;
+                case "MSACCESS":
+                    return 5;
+                case "WINPROJ":
+                    return 6;
+                case "VISIO":
+                    return 6;
+                default:
+                    return 0;
+            }
+
         }
 
         #endregion
@@ -443,39 +466,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         {
             try
             {
-                _applicationObserver.ShowQuesionBeforeKill = checkBoxShowQuestion.Checked;
+                _applicationObserver.ShowQuestionBeforeKill = checkBoxShowQuestion.Checked;
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
-            }
-        }
-
-        #endregion
-
-        #region Helper
-
-        private static int GetProcessImageIndex(string processName)
-        {
-            processName = processName.Trim().ToUpper();
-            switch (processName)
-            {
-                case "EXCEL":
-                    return 1;
-                case "WINWORD":
-                    return 2;
-                case "OUTLOOK":
-                    return 3;
-                case "POWERPNT":
-                    return 4;
-                case "MSACCESS":
-                    return 5;
-                case "WINPROJ":
-                    return 6;
-                case "VISIO":
-                    return 6;
-                default:
-                    return 0;
             }
         }
 

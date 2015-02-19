@@ -312,6 +312,7 @@
     <Compile Include="Controls\Layout\AdvTableLayoutControl.Designer.cs">
       <DependentUpon>AdvTableLayoutControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToolboxControls\OfficeCompatibility\AnalyzerResult.cs" />
     <Compile Include="ToolboxControls\OfficeCompatibility\NetOfficeSupportTable.cs" />
     <Compile Include="ToolboxControls\OfficeCompatibility\ReportControl.cs">
       <SubType>UserControl</SubType>

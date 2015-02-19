@@ -11,13 +11,23 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
+    /// <summary>
+    /// Last wizard step to show summary settings
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.FinishControl.txt")]
     public partial class FinishControl : UserControl, IWizardControl, ILocalizationDesign
     {
+        #region Fields
+
         private string _solutionPath;
+
+        #endregion
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public FinishControl()
         {
             InitializeComponent();
@@ -25,18 +35,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
-        #region Trigger
-
-        private void FinishControl_Resize(object sender, EventArgs e)
-        {
-            panelHeader.Left = (animatedPanel1.Width / 2) - (panelHeader.Width / 2);
-            panelButtons.Left = (animatedPanel1.Width / 2) - (panelButtons.Width / 2);            
-        }
-
-        #endregion
-
         #region Methods
 
+        /// <summary>
+        /// Set target solution path
+        /// </summary>
+        /// <param name="solutionPath">target solution path</param>
         internal void SetSolutionPath(string solutionPath)
         {
             _solutionPath = solutionPath;
@@ -180,6 +184,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         #endregion
 
         #region Trigger
+
+
+        private void FinishControl_Resize(object sender, EventArgs e)
+        {
+            try
+            {
+                panelHeader.Left = (animatedPanel1.Width / 2) - (panelHeader.Width / 2);
+                panelButtons.Left = (animatedPanel1.Width / 2) - (panelButtons.Width / 2);
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            } 
+        }
 
         private void buttonOpenSolution_Click(object sender, EventArgs e)
         {

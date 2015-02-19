@@ -10,8 +10,13 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Forms
 {
+    /// <summary>
+    /// User can select a language here in translation editor
+    /// </summary>
     public partial class SelectLanguageForm : Form
     {
+        #region API
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -21,13 +26,24 @@ namespace NetOffice.DeveloperToolbox.Forms
             int nBottomRect, // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
-         );
+        );
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public SelectLanguageForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="header">header text to display</param>
         public SelectLanguageForm(string header)
         {
             InitializeComponent();
@@ -40,6 +56,13 @@ namespace NetOffice.DeveloperToolbox.Forms
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current selected language
+        /// </summary>
         public Translation.ToolLanguage Selected
         {
             get 
@@ -51,6 +74,16 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Creates an instance of SelectLanguageForm and show
+        /// </summary>
+        /// <param name="owner">modal owner</param>
+        /// <param name="header">header text to display</param>
+        /// <returns>selected language from dialog instance</returns>
         public static Translation.ToolLanguage ShowForm(IWin32Window owner, string header = null)
         {
             SelectLanguageForm dlg = new SelectLanguageForm(header);
@@ -60,6 +93,10 @@ namespace NetOffice.DeveloperToolbox.Forms
             else
                 return null;
         }
+
+        #endregion
+
+        #region Trigger
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -83,5 +120,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             if (dataGridView1.SelectedCells.Count > 0)
                 buttonSelect_Click(buttonSelect, EventArgs.Empty);
         }
+
+        #endregion
     }
 }

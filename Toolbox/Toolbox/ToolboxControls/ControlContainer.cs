@@ -11,18 +11,30 @@ using NetOffice.DeveloperToolbox.Controls.InfoLayer;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls
 {
+    /// <summary>
+    /// Wraps a toolbox control instance as a proxy to communicate between host and toolbox control instance
+    /// </summary>
     public partial class ControlContainer : UserControl, IToolboxControl
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ControlContainer()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="innerInstance">instance to wrap into</param>
         public ControlContainer(IToolboxControl innerInstance)
         {
             InitializeComponent();
+            if (null == innerInstance)
+                throw new ArgumentNullException("innerInstance");
             InnerInstance = innerInstance;
             panelToolboxControl.Controls.Add(innerInstance as Control);
             (innerInstance as Control).Dock = DockStyle.Fill;
@@ -32,6 +44,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls
 
         #region Properties
 
+        /// <summary>
+        /// Inner(real) toolbox instance 
+        /// </summary>
         internal IToolboxControl InnerInstance { get; private set; }
 
         #endregion

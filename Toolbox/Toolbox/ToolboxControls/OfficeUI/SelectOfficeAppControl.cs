@@ -9,19 +9,40 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 {
+    /// <summary>
+    /// User selection completed event handler
+    /// </summary>
+    /// <param name="officeAppName">target application name</param>
     public delegate void SelectOfficeEventHandler(string officeAppName);
 
+    /// <summary>
+    /// Shows supported office application to create an analyze one of them
+    /// </summary>
     [RessourceTable("ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt")]
     public partial class SelectOfficeAppControl : UserControl, ILocalizationDesign
     {
-        SelectOfficeEventHandler _eventHandler;
-        int _currentLanguageID;
-        
+        #region Fields
+
+        private SelectOfficeEventHandler _eventHandler;
+        private int _currentLanguageID;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public SelectOfficeAppControl( )
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="currentLanguageID">current language id</param>
+        /// <param name="handler">close handler</param>
         public SelectOfficeAppControl(int currentLanguageID, SelectOfficeEventHandler handler)
         {
             InitializeComponent();
@@ -30,6 +51,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             Translation.Translator.TranslateControls(this, "ToolboxControls.OfficeUI.SelectOfficeAppControlStrings.txt", _currentLanguageID);
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Name of selected application
+        /// </summary>
         public string SelectedApplication
         {
             get 
@@ -38,50 +66,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
             }
         }
 
+        /// <summary>
+        /// Indicates yes want to proceed or abort
+        /// </summary>
         public DialogResult Result { get; set; }
-        
-        private void buttonClose2_Click(object sender, EventArgs e)
-        {
-            Result = DialogResult.Cancel;
-            this.Hide();
-        }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Result = DialogResult.Cancel;
-            this.Hide();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonSelect.Enabled  = (listView1.SelectedIndices.Count > 0);            
-        }
-
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if ((listView1.SelectedIndices.Count > 0))
-                buttonSelect_Click(this, new EventArgs());
-        }
-
-        private void buttonSelect_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Result = DialogResult.OK;
-                this.Hide();
-                _eventHandler(SelectedApplication);
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
-            }
-        }
+        #endregion
 
         #region ILocalizationDesign
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-           
+
         }
 
         public void Localize(Translation.ItemCollection strings)
@@ -119,5 +115,45 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 
         #endregion
 
+        #region Trigger
+
+        private void buttonClose2_Click(object sender, EventArgs e)
+        {
+            Result = DialogResult.Cancel;
+            this.Hide();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Result = DialogResult.Cancel;
+            this.Hide();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonSelect.Enabled  = (listView1.SelectedIndices.Count > 0);            
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if ((listView1.SelectedIndices.Count > 0))
+                buttonSelect_Click(this, new EventArgs());
+        }
+
+        private void buttonSelect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Result = DialogResult.OK;
+                this.Hide();
+                _eventHandler(SelectedApplication);
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, _currentLanguageID);
+            }
+        }
+
+        #endregion
     }
 }

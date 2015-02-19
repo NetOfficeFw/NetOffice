@@ -13,6 +13,9 @@ using Mono.Cecil.Cil;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
+    /// <summary>
+    /// Analyze assemblies for NetOffice requests to check how compatible is the solution
+    /// </summary>
     [RessourceTable("ToolboxControls.OfficeCompatibility.Strings.txt")]
     public partial class OfficeCompatibilityControl : UserControl, IToolboxControl
     {
@@ -25,6 +28,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public OfficeCompatibilityControl()
         {
             InitializeComponent();
@@ -32,11 +38,42 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                
         #endregion
 
-        #region Properties
+        #region Methods
 
-        public void InitializeControl(IToolboxHost host)
+        private void SetImage(PictureBox box, SupportVersion version)
         {
-            Host = host;
+            switch (version)
+            {
+                case SupportVersion.Support:
+                    box.BackgroundImage = pictureBoxOk.Image;
+                    break;
+                case SupportVersion.NotSupport:
+                    box.BackgroundImage = pictureBoxProblem.Image;
+                    break;
+                default:
+                    box.BackgroundImage = null;
+                    break;
+            }
+        }
+
+        private void SetupVersionInfo(SupportInfo[] info, string name)
+        {
+            PictureBox box09 = tableLayoutResult.Controls["pictureBox" + name + "09"] as PictureBox;
+            PictureBox box10 = tableLayoutResult.Controls["pictureBox" + name + "10"] as PictureBox;
+            PictureBox box11 = tableLayoutResult.Controls["pictureBox" + name + "11"] as PictureBox;
+            PictureBox box12 = tableLayoutResult.Controls["pictureBox" + name + "12"] as PictureBox;
+            PictureBox box14 = tableLayoutResult.Controls["pictureBox" + name + "14"] as PictureBox;
+            PictureBox box15 = tableLayoutResult.Controls["pictureBox" + name + "15"] as PictureBox;
+
+            if (name != "Project" && name != "Visio")
+            {
+                SetImage(box09, info[0].Support);
+                SetImage(box10, info[1].Support);
+            }
+            SetImage(box11, info[2].Support);
+            SetImage(box12, info[3].Support);
+            SetImage(box14, info[4].Support);
+            SetImage(box15, info[5].Support);
         }
 
         #endregion
@@ -135,6 +172,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
            
         }
 
+        public void InitializeControl(IToolboxHost host)
+        {
+            Host = host;
+        }
+
         public Stream GetHelpText(int lcid)
         {
             Translation.ToolLanguage language = Host.Languages[lcid, false];
@@ -196,7 +238,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         #endregion
 
-        #region Gui Trigger
+        #region Trigger
         
         private void buttonSelectAssembly_Click(object sender, EventArgs e)
         {
@@ -300,46 +342,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
         }
         
-        #endregion
-
-        #region Methods
-
-        private void SetImage(PictureBox box, SupportVersion version)
-        {
-            switch (version)
-            {
-                case SupportVersion.Support:
-                    box.BackgroundImage = pictureBoxOk.Image;
-                    break;
-                case SupportVersion.NotSupport:
-                    box.BackgroundImage = pictureBoxProblem.Image;
-                    break;
-                default:
-                    box.BackgroundImage = null;
-                    break;
-            }
-        }
-
-        private void SetupVersionInfo(SupportInfo[] info, string name)
-        {
-            PictureBox box09 = tableLayoutResult.Controls["pictureBox" + name + "09"] as PictureBox;
-            PictureBox box10 = tableLayoutResult.Controls["pictureBox" + name + "10"] as PictureBox;
-            PictureBox box11 = tableLayoutResult.Controls["pictureBox" + name + "11"] as PictureBox;
-            PictureBox box12 = tableLayoutResult.Controls["pictureBox" + name + "12"] as PictureBox;
-            PictureBox box14 = tableLayoutResult.Controls["pictureBox" + name + "14"] as PictureBox;
-            PictureBox box15 = tableLayoutResult.Controls["pictureBox" + name + "15"] as PictureBox;
-
-            if (name != "Project" && name != "Visio")
-            { 
-                SetImage(box09, info[0].Support);
-                SetImage(box10, info[1].Support);
-            }
-            SetImage(box11, info[2].Support);
-            SetImage(box12, info[3].Support);
-            SetImage(box14, info[4].Support);
-            SetImage(box15, info[5].Support);
-        }
-
         #endregion
     }
 }

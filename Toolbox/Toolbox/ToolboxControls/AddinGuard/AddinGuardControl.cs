@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 {
+    /// <summary>
+    /// An observer for the ms-office addin keys
+    /// </summary>
     [RessourceTable("ToolboxControls.AddinGuard.Strings.txt")]
     public partial class AddinGuardControl : UserControl, IToolboxControl
     {
@@ -28,12 +31,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public AddinGuardControl()
         {
             try
             {
                 InitializeComponent();
-                if (!DesignMode)
+                if (!Program.IsDesign)
                 {
                     panelDeactivatedElements.Location = panelRegistryValues.Location;
                     panelDeactivatedElements.Size = panelRegistryValues.Size;
@@ -48,13 +54,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
                     panelColorLegend.Size = panelIconLegend.Size;
 
                     _controller = new WatchController();
-                    _controller.PropertyChanged += new PropertyChangedEventHandler(_controller_PropertyChanged);
+                    _controller.PropertyChanged += new PropertyChangedEventHandler(Controller_PropertyChanged);
                     _controller.WatchNotify.MessageFired += new EventHandler(WatchNotify_MessageFired);
 
-                    pictureBoxNoAdmin.Visible = !IsAdministrator();
-                    labelNoAdminHint.Visible = !IsAdministrator();
-                    labelNoAdminHintIcon.Visible = !IsAdministrator();
-                    _controller.ReadOnlyModeForMachineKeys = !IsAdministrator();
+                    pictureBoxNoAdmin.Visible = !Program.IsAdmin;
+                    labelNoAdminHint.Visible = !Program.IsAdmin;
+                    labelNoAdminHintIcon.Visible = !Program.IsAdmin;
+                    _controller.ReadOnlyModeForMachineKeys = !Program.IsAdmin;
+                    
                 }
             }
             catch (Exception exception)
@@ -66,21 +73,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
         #endregion
 
         #region Properties
-
-        private bool IsAdministrator()
-        {
-            WindowsIdentity myWindowsIdentity = WindowsIdentity.GetCurrent();
-            WindowsPrincipal myWindowsPrincipal = new WindowsPrincipal(myWindowsIdentity);
-            return myWindowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
-        private new bool DesignMode
-        {
-            get
-            {
-                return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
-            }
-        }
 
         private TreeNode SelectedWatcherNode
         {
@@ -241,8 +233,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
 
         public void SetLanguage(int id)
         {
-            //_controller.ActiveLanguageID = id;
-            //Translation.Translator.TranslateControls(this, "ToolboxControls.AddinGuard.MessageTable.txt", id);
+        
         }
 
         public Stream GetHelpText(int lcid)
@@ -353,7 +344,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
         }
 
-        private void _controller_AddinsKeyChangedInvoke()
+        private void Controller_AddinsKeyChangedInvoke()
         {
             try
             {
@@ -393,7 +384,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
         }
  
-        private void _controller_DisabledKeyChangedInvoke()
+        private void Controller_DisabledKeyChangedInvoke()
         {
             try
             {
@@ -426,7 +417,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
         }
 
-        private void _controller_PropertyChangedInvoke()
+        private void Controller_PropertyChangedInvoke()
         {
             try
             {
@@ -442,7 +433,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
         }
 
-        private void _controller_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void Controller_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             try
             {
@@ -451,11 +442,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
                 _displayedException = sender as Exception;
 
                 if (null != _addinsItemToDisplay)
-                    this.Invoke(new MethodInvoker(_controller_AddinsKeyChangedInvoke));
+                    this.Invoke(new MethodInvoker(Controller_AddinsKeyChangedInvoke));
                 else if (null != _disabledItemToDisplay)
-                    this.Invoke(new MethodInvoker(_controller_DisabledKeyChangedInvoke));
+                    this.Invoke(new MethodInvoker(Controller_DisabledKeyChangedInvoke));
                 else if (sender is WatchController)
-                    this.Invoke(new MethodInvoker(_controller_PropertyChangedInvoke));
+                    this.Invoke(new MethodInvoker(Controller_PropertyChangedInvoke));
                 else if (sender is Exception)
                     this.Invoke(new MethodInvoker(WatchNotify_ExceptionThrownInvoke));
             }
@@ -659,6 +650,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             return Color.Transparent;
         }
 
+        private static string BoolToString(bool b)
+        {
+            if (b)
+                return "true";
+            else
+                return "false";
+        }
 
         private static void SelectNode(TreeView treeView, string key)
         {
@@ -753,18 +751,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard
             }
         }
        
-        #endregion
-
-        #region Static Methods
-
-        private static string BoolToString(bool b)
-        {
-            if (b)
-                return "true";
-            else
-                return "false";
-        }
-
         #endregion
     }
 }

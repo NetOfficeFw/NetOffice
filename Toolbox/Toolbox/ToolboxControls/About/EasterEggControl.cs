@@ -13,24 +13,49 @@ using ICSharpCode.SharpZipLib.Zip;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 {
+    /// <summary>
+    /// A small easter egg to make people smile :)
+    /// </summary>
     public partial class EasterEggControl : UserControl
     {
+        #region Fields
+
         private SoundPlayer _playerGunshot;
         private SoundPlayer _playerWait;
         private int _lcid = 1033;
         private Stream _waitStream;
+        private string _messageDefault = "Thanks for using Developer Toolbox";
+        private string _messageGerman = "Java Script? Dieses beschränkte kleine...";
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public EasterEggControl()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="lcid">current user language id</param>
         public EasterEggControl(int lcid)
         {
             InitializeComponent();
             _lcid = lcid;
         }
 
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// Egg is done and want close
+        /// </summary>
         internal event EventHandler Done;
 
         private void RaiseDone()
@@ -39,13 +64,20 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                 Done(this, EventArgs.Empty);
         }
 
-        internal void ShowwGernot()
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Show the angry old men
+        /// </summary>
+        internal void ShowGernot()
         {
             try
             {
                 CreatePlayers();
 
-                string txt = _lcid == 1031 ? "Nun aber schnell wieder an die Arbeit" : "Thanks for using Developer Toolbox";
+                string txt = _lcid == 1031 ? _messageGerman : _messageDefault;
 
                 List<Control> list = new List<Control>();
                 int i = 0;
@@ -190,6 +222,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
             }          
         }
 
+        #endregion
+
+        #region Trigger
+
         private void EasterEggControl_Resize(object sender, EventArgs e)
         {
             try
@@ -202,5 +238,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical);
             }
         }
+
+        #endregion
     }
 }

@@ -11,18 +11,24 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
+    /// <summary>
+    /// Shows a detailed usage report for an analyzed assembly
+    /// </summary>
     [RessourceTable("ToolboxControls.OfficeCompatibility.Report.txt")]
     public partial class ReportControl : UserControl, ILocalizationDesign
     {
         #region Fields
 
-        AnalyzerResult _report;
-        int _currentLanguageID;
+        private AnalyzerResult _report;
+        private int _currentLanguageID;
 
         #endregion
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ReportControl()
         {
             InitializeComponent();
@@ -32,6 +38,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             pictureBoxMethod.Image = imageList1.Images[5];
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="report">detailed report</param>
+        /// <param name="currentLanguageID">current user language id</param>
         public ReportControl(AnalyzerResult report, int currentLanguageID)
         {
             InitializeComponent();
@@ -193,7 +204,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
                     if (FilterPassed(item.Element("SupportByLibrary")))
                     { 
-                        ListViewItem paramViewItem = listView1.Items.Add("Call Method: " + name);
+                        ListViewItem paramViewItem = listViewDetail.Items.Add("Call Method: " + name);
                         paramViewItem.SubItems.Add(type);
                         string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                         foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
@@ -209,7 +220,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                             if (!FilterPassed(paramItem.Element("SupportByLibrary")))
                                 continue;
 
-                            ListViewItem paramViewItem2 = listView1.Items.Add("   Parameter");
+                            ListViewItem paramViewItem2 = listViewDetail.Items.Add("   Parameter");
                             paramViewItem2.SubItems.Add(paramItem.Element("SupportByLibrary").Attribute("Name").Value);
                             string supportText = paramItem.Element("SupportByLibrary").Attribute("Api").Value + " ";
                             foreach (XElement itemVersionParam in paramItem.Element("SupportByLibrary").Elements("Version"))
@@ -220,7 +231,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         
                     }
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -234,14 +245,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Set Local Variable " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listViewDetail.Items.Add("Set Local Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
                     string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -255,14 +266,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Set Class Field " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listViewDetail.Items.Add("Set Class Field " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Element("SupportByLibrary").Attribute("Name").Value);
                     string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -276,14 +287,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("new " + item.Attribute("Type").Value + "()");
+                    ListViewItem paramViewItem = listViewDetail.Items.Add("new " + item.Attribute("Type").Value + "()");
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
                     string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -297,14 +308,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Locale Variable " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listViewDetail.Items.Add("Locale Variable " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
                     string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement itemVersion in item.Element("SupportByLibrary").Elements("Version"))
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -318,7 +329,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     if (!FilterPassed(item.Element("SupportByLibrary")))
                         continue;
 
-                    ListViewItem paramViewItem = listView1.Items.Add("Parameter " + item.Attribute("Name").Value);
+                    ListViewItem paramViewItem = listViewDetail.Items.Add("Parameter " + item.Attribute("Name").Value);
                     paramViewItem.SubItems.Add(item.Attribute("Type").Value);
 
                     string supportText = item.Element("SupportByLibrary").Attribute("Api").Value + " ";
@@ -326,7 +337,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         supportText += itemVersion.Value + " ";
                     paramViewItem.SubItems.Add(supportText);
                 }
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -339,7 +350,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     return;
 
                 string valType = returnValueNode.Element("Entity").Attribute("FullType").Value;
-                ListViewItem viewItem = listView1.Items.Add("Return Value");
+                ListViewItem viewItem = listViewDetail.Items.Add("Return Value");
 
                 viewItem.SubItems.Add(valType);
                 string supportText = returnValueNode.Element("Entity").Element("SupportByLibrary").Attribute("Api").Value + " ";
@@ -347,7 +358,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     supportText += versionItem.Value + " ";
                 viewItem.SubItems.Add(supportText);
 
-                listView1.Items.Add("");
+                listViewDetail.Items.Add("");
             }
         }
 
@@ -475,14 +486,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         #region Trigger
 
-        private void buttonClose2_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
 
         private void ShowDetails(List<XElement> elements)
         {
-            listView1.Items.Clear();
+            listViewDetail.Items.Clear();
             foreach (XElement element in elements)
                 ShowDetails(element, false);
         }
@@ -492,63 +503,63 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             switch (element.Name.ToString())
             {
                 case "Assembly":
-                    listView1.Columns.Clear();
-                    listView1.Columns.Add("");
-                    listView1.Columns[0].Width = listView1.Width - 50;
-                    listView1.Columns[0].Text = "Assenbly";
-                    listView1.Items.Add(element.Attribute("Name").Value);
+                    listViewDetail.Columns.Clear();
+                    listViewDetail.Columns.Add("");
+                    listViewDetail.Columns[0].Width = listViewDetail.Width - 50;
+                    listViewDetail.Columns[0].Text = "Assenbly";
+                    listViewDetail.Items.Add(element.Attribute("Name").Value);
                     break;
                 case "Class":
-                    listView1.Items.Clear();
-                    listView1.Columns.Clear();
-                    listView1.Columns.Add("");
-                    listView1.Columns[0].Width = listView1.Width - 50;
-                    listView1.Columns[0].Text = "Class";
-                    listView1.Items.Add(element.Attribute("Name").Value);
+                    listViewDetail.Items.Clear();
+                    listViewDetail.Columns.Clear();
+                    listViewDetail.Columns.Add("");
+                    listViewDetail.Columns[0].Width = listViewDetail.Width - 50;
+                    listViewDetail.Columns[0].Text = "Class";
+                    listViewDetail.Items.Add(element.Attribute("Name").Value);
                     break;
                 case "Entity":
 
-                    listView1.Items.Clear();
-                    listView1.Columns.Clear();
+                    listViewDetail.Items.Clear();
+                    listViewDetail.Columns.Clear();
 
-                    listView1.Columns.Add("Name");
-                    listView1.Columns.Add("Type");
-                    listView1.Columns.Add("Support");
+                    listViewDetail.Columns.Add("Name");
+                    listViewDetail.Columns.Add("Type");
+                    listViewDetail.Columns.Add("Support");
 
-                    listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
-                    listView1.Columns[0].Tag = 25;
-                    listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
-                    listView1.Columns[1].Tag = 50;
-                    listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
-                    listView1.Columns[2].Tag = 25;
+                    listViewDetail.Columns[0].Width = GetPercent(listViewDetail.Width, 25);
+                    listViewDetail.Columns[0].Tag = 25;
+                    listViewDetail.Columns[1].Width = GetPercent(listViewDetail.Width, 50);
+                    listViewDetail.Columns[1].Tag = 50;
+                    listViewDetail.Columns[2].Width = GetPercent(listViewDetail.Width, 25);
+                    listViewDetail.Columns[2].Tag = 25;
 
                     if (!FilterPassed(element.Element("SupportByLibrary")))
                         break;
 
-                    listView1.Items.Add(element.Attribute("Name").Value);
-                    listView1.Items[0].SubItems.Add(element.Attribute("Type").Value);
+                    listViewDetail.Items.Add(element.Attribute("Name").Value);
+                    listViewDetail.Items[0].SubItems.Add(element.Attribute("Type").Value);
 
                     string supportText = element.Element("SupportByLibrary").Attribute("Api").Value + " ";
                     foreach (XElement item in element.Element("SupportByLibrary").Elements("Version"))
                         supportText += item.Value + " ";
 
-                    listView1.Items[0].SubItems.Add(supportText);
+                    listViewDetail.Items[0].SubItems.Add(supportText);
 
                     break;
                 case "Method":
                     if (clearOldItems)
-                        listView1.Items.Clear();
-                    listView1.Columns.Clear();
-                    listView1.Columns.Add("");
-                    listView1.Columns.Add("");
-                    listView1.Columns.Add("Support");
+                        listViewDetail.Items.Clear();
+                    listViewDetail.Columns.Clear();
+                    listViewDetail.Columns.Add("");
+                    listViewDetail.Columns.Add("");
+                    listViewDetail.Columns.Add("Support");
 
-                    listView1.Columns[0].Width = GetPercent(listView1.Width, 25);
-                    listView1.Columns[0].Tag = 25;
-                    listView1.Columns[1].Width = GetPercent(listView1.Width, 50);
-                    listView1.Columns[1].Tag = 50;
-                    listView1.Columns[2].Width = GetPercent(listView1.Width, 25);
-                    listView1.Columns[2].Tag = 25;
+                    listViewDetail.Columns[0].Width = GetPercent(listViewDetail.Width, 25);
+                    listViewDetail.Columns[0].Tag = 25;
+                    listViewDetail.Columns[1].Width = GetPercent(listViewDetail.Width, 50);
+                    listViewDetail.Columns[1].Tag = 50;
+                    listViewDetail.Columns[2].Width = GetPercent(listViewDetail.Width, 25);
+                    listViewDetail.Columns[2].Tag = 25;
 
                     SetMethodReturnValue(element);
                     SetMethodParameters(element);
@@ -559,8 +570,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     SetMethodCalls(element);
                     break;
                 default:
-                    listView1.Items.Clear();
-                    listView1.Columns.Clear();
+                    listViewDetail.Items.Clear();
+                    listViewDetail.Columns.Clear();
                     break;
             }
 
@@ -612,14 +623,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             }
         }
 
-        private void listView1_Resize(object sender, EventArgs e)
+        private void listViewDetail_Resize(object sender, EventArgs e)
         {
-            foreach (ColumnHeader item in listView1.Columns)
+            foreach (ColumnHeader item in listViewDetail.Columns)
             {
                 if (item.Tag != null)
                 {
                     int percentValue = Convert.ToInt32(item.Tag);
-                    item.Width = GetPercent(listView1.Width, percentValue);
+                    item.Width = GetPercent(listViewDetail.Width, percentValue);
                 }
             }
         }
@@ -646,6 +657,5 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         }
 
         #endregion
-
     }
 }

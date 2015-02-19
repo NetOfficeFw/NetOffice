@@ -9,24 +9,41 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
+    /// <summary>
+    /// Show all selected options as summary
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.SummaryControl.txt")]
     public partial class SummaryControl : UserControl, IWizardControl, ILocalizationDesign
     {
+        #region Fields
+
         private List<IWizardControl> _listControls;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public SummaryControl()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="listControls">all used wizard steps with options</param>
         public SummaryControl(List<IWizardControl> listControls)
         {
             InitializeComponent();
             _listControls = listControls;
-            //Translate();
         }
 
-        #region IWizardControl 
+        #endregion
+
+        #region IWizardControl
 
         public new void KeyDown(KeyEventArgs e)
         {

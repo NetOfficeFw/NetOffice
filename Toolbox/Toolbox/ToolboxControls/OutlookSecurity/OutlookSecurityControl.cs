@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 {
+    /// <summary>
+    /// Suspend outlook security dialog through NetOffice.OutlookSecurity
+    /// </summary>
     [RessourceTable("ToolboxControls.OutlookSecurity.Strings.txt")]
     public partial class OutlookSecurityControl : UserControl, IToolboxControl
     { 
@@ -26,12 +29,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public OutlookSecurityControl()
         {
             try
             {
                 InitializeComponent();
-                if (!DesignMode)
+                if (!Program.IsDesign)
                 {
                     NetOffice.OutlookSecurity.Supress.OnAction += new NetOffice.OutlookSecurity.Supress.SecurityDialogAction(Supress_OnAction);
                     NetOffice.OutlookSecurity.Supress.OnError += new NetOffice.OutlookSecurity.Supress.ErrorOccuredEventHandler(Supress_OnError);
@@ -43,18 +49,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             }
         }
 
-        #endregion
-
-        #region Properties
-
-        private new bool DesignMode
-        {
-            get
-            {
-                return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
-            }
-        }
-       
         #endregion
 
         #region IToolboxControl
@@ -246,6 +240,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         #endregion
 
+        #region Methods
+
+        private static string BoolToString(bool b)
+        {
+            if (b)
+                return "true";
+            else
+                return "false";
+        }
+
+        #endregion
+
         #region UI Trigger
 
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -294,7 +300,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             } 
         }
 
-        private  void Supress_OnError(Exception exception)
+        private void Supress_OnError(Exception exception)
         {
             _exception= exception;
             if (this.InvokeRequired)
@@ -317,28 +323,23 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
 
         private void Supress_OnAction(NetOffice.OutlookSecurity.SecurityDialog dialog, NetOffice.OutlookSecurity.SecurityDialogCheckBox targetBox, NetOffice.OutlookSecurity.SecurityDialogLeftButton targetButton)
         {
-            _dialog = dialog;
-            _targetBox = targetBox;
-            _targetButton = targetButton;
-            if (this.InvokeRequired)
-                this.Invoke(new MethodInvoker(Supress_OnAction));
-            else
-                Supress_OnAction();            
-
+            try
+            {
+                _dialog = dialog;
+                _targetBox = targetBox;
+                _targetButton = targetButton;
+                if (this.InvokeRequired)
+                    this.Invoke(new MethodInvoker(Supress_OnAction));
+                else
+                    Supress_OnAction();
+            }
+            catch (Exception exception)
+            {
+                // avoid default error dialog because we may not in UI thread
+                MessageBox.Show(this, exception.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        #endregion
-
-        #region Methods
-
-        private static string BoolToString(bool b)
-        {
-            if (b)
-                return "true";
-            else
-                return "false";
-        }
-        
         #endregion
     }
 }

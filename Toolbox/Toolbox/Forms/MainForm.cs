@@ -13,7 +13,6 @@ using System.Reflection;
 using NetOffice.DeveloperToolbox.Translation;
 using NetOffice.DeveloperToolbox.ToolboxControls;
 
-
 namespace NetOffice.DeveloperToolbox.Forms
 {
     /// <summary>
@@ -67,19 +66,12 @@ namespace NetOffice.DeveloperToolbox.Forms
         /// <param name="args">commandline argument array</param>
         public MainForm(string[] args)
         {
-            try
-            {
-                InitializeComponent();
-                Singleton = this;
-                LoadLanguages();
-                LoadRuntimeControls();
-                LoadConfiguration();
-                CommandLineArgs = args;
-            }
-            catch (Exception exception)
-            {
-                Forms.ErrorForm.ShowError(exception, ErrorCategory.Critical, CurrentLanguageID);
-            }
+            InitializeComponent();
+            Singleton = this;
+            LoadLanguages();
+            LoadRuntimeControls();
+            LoadConfiguration();
+            CommandLineArgs = args;
         }
 
         #endregion
@@ -341,6 +333,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 bool handled = false;
                 if (e.Modifiers == Keys.Alt)
                 {
+                    // use keyboard number keys on the right as tab change command
                     switch (e.KeyCode)
                     {
                         case Keys.D1:
@@ -382,6 +375,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                     }
                 }
 
+                // no tab change command, we shift key input to current visible toolbox control(s)
                 if (!handled)
                 {
                     foreach (var item in ToolboxControls)

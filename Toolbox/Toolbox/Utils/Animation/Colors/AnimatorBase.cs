@@ -567,7 +567,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Animation
         /// </summary>
         protected void SynchronizeToSource()
         {
-            if (!base.DesignMode)
+            if (!Program.IsDesign)
                 return;
 
             switch (_syncMode)
@@ -588,7 +588,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Animation
         /// </summary>
         protected void SynchronizeFromSource()
         {
-            if (!base.DesignMode)
+            if (!Program.IsDesign)
                 return;
 
             switch (_syncMode)
@@ -840,7 +840,7 @@ namespace NetOffice.DeveloperToolbox.Utils.Animation
 
             if (synchronizationMode == SynchronizationMode.ResetToCurrent)
             {
-                if (!base.DesignMode)
+                if (!Program.IsDesign)
                     return;
 
                 ResetValues();

@@ -13,11 +13,17 @@ using System.Runtime.InteropServices;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 {
+    /// <summary>
+    /// The first title page of the application
+    /// </summary>
     [RessourceTable("ToolboxControls.Welcome.Strings.txt")]
     public partial class WelcomeControl : UserControl, IToolboxControl
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public WelcomeControl()
         {
             InitializeComponent();
@@ -28,6 +34,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 
         #region Properties
 
+        /// <summary>
+        /// Corresponding tray icon in the bottom right area
+        /// </summary>
         private NotifyIcon TrayIcon { get; set; }
 
         #endregion
@@ -264,11 +273,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
         #endregion
 
         #region Methods
-
-        internal void SetDefaultLanguage(int lcid, string parentComponentName)
-        {
-            comboBoxLanguage.SelectedIndex = 0;
-        }
 
         private void SetupAutoRunEntry()
         {

@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.About
 {
+    /// <summary>
+    /// Application about panel
+    /// </summary>
     [RessourceTable("ToolboxControls.About.Strings.txt")]
     public partial class AboutControl : UserControl, IToolboxControl
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public AboutControl()
         {
             InitializeComponent();
@@ -235,7 +241,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.About
                 ctrl.BringToFront();
                 ctrl.Done += new EventHandler(EasterEgg_Done);
                 ctrl.Visible = true;
-                ctrl.ShowwGernot();
+                ctrl.ShowGernot();
             }
             catch (Exception exception)
             {

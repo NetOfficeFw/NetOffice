@@ -12,12 +12,23 @@ using Microsoft.Win32;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
-    //step 1
+    /// <summary>
+    /// Project type want selected here as first
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.ProjectControl.txt")]
     public partial class ProjectControl : UserControl, IWizardControl, ILocalizationDesign
     {
+        #region Fields
+
         private XmlDocument _settings;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ProjectControl()
         {
             InitializeComponent(); 
@@ -27,6 +38,77 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             else
                 labelNoAdminHint.Visible = false;
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Returns project is a NetOffice Tools addin project
+        /// </summary>
+        internal bool IsToolAddinProject
+        {
+            get
+            {
+                return checkBoxUseTools.Checked;
+            }
+        }
+
+        /// <summary>
+        /// Returns selected output folder
+        /// </summary>
+        internal string CalculatedFolder
+        {
+            get
+            {
+                if (radioButtonCustomFolder.Checked)
+                    return textBoxCustomFolder.Text;
+                else
+                {
+                    if (radioButtonDesktop.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    if (radioButtonUserFolder.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                    if (radioButtonApplicationData.Checked)
+                        return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                    return ProjectOptions.GetVisualStudioProjectFolder();
+                }
+            }
+        }
+
+        /// <summary>
+        /// User want use the NetOffice tools
+        /// </summary>
+        internal bool UseTools
+        {
+            get
+            {
+                if (checkBoxUseTools.Checked && radioButtonAutomationAddin.Checked)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
+        /// <summary>
+        /// Current selected folder kind
+        /// </summary>
+        internal string SelectedFolder
+        {
+            get
+            {
+                switch (SelectedProjectFolderType())
+                {
+                    case "Custom":
+                        return textBoxCustomFolder.Text;
+                    default:
+                        return "";
+                }
+            }
+
+        }
+      
+        #endregion
 
         #region IWizardControl
 
@@ -168,39 +250,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
-        internal bool IsToolAddinProject
-        {
-            get
-            {
-                return checkBoxUseTools.Checked;
-            }
-        }
+        #region Methods
 
-        internal string CalculatedFolder
-        { 
-            get
-            {
-                if (radioButtonCustomFolder.Checked)
-                    return textBoxCustomFolder.Text;
-                else 
-                {
-                    if (radioButtonDesktop.Checked)
-                        return Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                    if (radioButtonUserFolder.Checked)
-                        return Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-                    if (radioButtonApplicationData.Checked)
-                        return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                    return ProjectOptions.GetVisualStudioProjectFolder();
-                }
-            }
-        }
-
+        /// <summary>
+        /// Current selected project type
+        /// </summary>
+        /// <returns></returns>
         internal ProjectType SelectedProjectType()
         {
-            
+
             if (radioButtonAutomationAddin.Checked)
             {
-                if(checkBoxUseTools.Checked)
+                if (checkBoxUseTools.Checked)
                     return ProjectType.NetOfficeAddin;
                 else
                     return ProjectType.NetOfficeAddin;
@@ -208,12 +269,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             if (radioButtonWindowsForms.Checked)
                 return ProjectType.WindowsForms;
             if (radioButtonConsole.Checked)
-                return  ProjectType.Console;
+                return ProjectType.Console;
             if (radioButtonClassLibrary.Checked)
-                return  ProjectType.ClassLibrary;
+                return ProjectType.ClassLibrary;
             throw new IndexOutOfRangeException("SelectedProjectType");
         }
 
+        /// <summary>
+        /// Current selected project folder type
+        /// </summary>
+        /// <returns></returns>
         internal string SelectedProjectFolderType()
         {
             if (radioButtonApplicationData.Checked)
@@ -227,31 +292,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             if (radioButtonCustomFolder.Checked)
                 return radioButtonVSProjectFolder.Text;
             throw new IndexOutOfRangeException("SelectedProjectFolderType");
-        }
-
-        internal bool UseTools
-        { 
-            get
-            {
-                if (checkBoxUseTools.Checked && radioButtonAutomationAddin.Checked)
-                    return true;
-                else
-                    return false;
-            }
-        }
-        
-        internal string SelectedFolder
-        {
-            get
-            {
-                switch (SelectedProjectFolderType())
-                {
-                    case "Custom":
-                        return textBoxCustomFolder.Text;
-                    default:
-                        return "";
-                }
-            }
         }
 
         private void ChangeSettings()
@@ -276,23 +316,41 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 ReadyStateChanged(this);
         }
 
+        #endregion
+
+        #region Trigger
+
         private void radioButtonProjectType_CheckedChanged(object sender, EventArgs e)
         {
-            checkBoxUseTools.Enabled = radioButtonAutomationAddin.Checked;
-            checkBoxUseTools.Checked = radioButtonAutomationAddin.Checked;
-            ChangeSettings();
-            RaiseChangeEvent();
+            try
+            {
+                checkBoxUseTools.Enabled = radioButtonAutomationAddin.Checked;
+                checkBoxUseTools.Checked = radioButtonAutomationAddin.Checked;
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, 1033);
+            }
         }
 
         private void radioButtonProjectFolder_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
+            try
+            {
+                ChangeSettings();
+                RaiseChangeEvent();
 
-            RadioButton button = sender as RadioButton;
-            buttonChooseFolder.Enabled = radioButtonCustomFolder.Checked;            
-            if (radioButtonCustomFolder.Checked && string.IsNullOrWhiteSpace(textBoxCustomFolder.Text) & button == radioButtonCustomFolder)
-                buttonChooseFolder_Click(buttonChooseFolder, new EventArgs());
+                RadioButton button = sender as RadioButton;
+                buttonChooseFolder.Enabled = radioButtonCustomFolder.Checked;
+                if (radioButtonCustomFolder.Checked && string.IsNullOrWhiteSpace(textBoxCustomFolder.Text) & button == radioButtonCustomFolder)
+                    buttonChooseFolder_Click(buttonChooseFolder, new EventArgs());
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, 1033);
+            }
         }
 
         private void buttonChooseFolder_Click(object sender, EventArgs e)
@@ -335,5 +393,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 Forms.ErrorForm.ShowError(this, exception,ErrorCategory.NonCritical, 1033);
             }
         }
+
+        #endregion
     }
 }

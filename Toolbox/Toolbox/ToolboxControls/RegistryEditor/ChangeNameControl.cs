@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// Name Value Editor
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.ChangeNameDialogMessageTable.txt")]
     public partial class ChangeNameControl : UserControl, ILocalizationDesign
     {
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ChangeNameControl()
         {
             InitializeComponent();
@@ -23,6 +29,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Events
 
+        /// <summary>
+        /// User want close the dialog
+        /// </summary>
         public event EventHandler Close;
 
         private void RaiseClose()
@@ -35,8 +44,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Properties
 
+        /// <summary>
+        /// User want proceed edit or abort
+        /// </summary>
         public DialogResult DialogResult { get; private set; }
 
+        /// <summary>
+        /// New name
+        /// </summary>
         public string EntryNewName
         {
             get
@@ -49,12 +64,19 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Methods
 
+        /// <summary>
+        /// Set name to edit
+        /// </summary>
+        /// <param name="name">name to edit</param>
         public void SetArguments(string name)
         {
             textBoxName.Text = name;
             textBoxValue.Text = name;
         }
 
+        /// <summary>
+        /// Set focus to name edit
+        /// </summary>
         public void SetFocus()
         {
             textBoxValue.Focus();
@@ -111,20 +133,41 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (textBoxValue.Text.Trim() != textBoxName.Text)
-                this.DialogResult = DialogResult.OK;
-            RaiseClose();
+            try
+            {
+                if (textBoxValue.Text.Trim() != textBoxName.Text)
+                    this.DialogResult = DialogResult.OK;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            RaiseClose();
+            try
+            {
+                this.DialogResult = DialogResult.Cancel;
+                RaiseClose();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         private void textBoxValue_TextChanged(object sender, EventArgs e)
         {
-            buttonOK.Enabled = !String.IsNullOrWhiteSpace(textBoxValue.Text);
+            try
+            {
+                buttonOK.Enabled = !String.IsNullOrWhiteSpace(textBoxValue.Text);
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         #endregion

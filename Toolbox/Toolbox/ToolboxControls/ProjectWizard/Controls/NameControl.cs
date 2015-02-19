@@ -10,74 +10,52 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
-    // step 4
+    /// <summary>
+    /// Name and its description for the target assembly
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.NameControl.txt")]
     public partial class NameControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
+        #region Fields
 
+        private XmlDocument _settings;
+        private bool _firstActivateFlag;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public NameControl()
         {
             InitializeComponent();
             CreateSettingsDocument();
-
             ChangeSettings();
         }
 
-        private void SetEnglishDefaultName()
-        {
-          if (!ProjectWizardControl.Singleton.FolderExists("MyAssembly"))
-            {
-                textBoxClassName.Text = "MyAssembly";
-                textBoxDescription.Text = "Assembly Description";
-            }
-            else
-            {
-                for (int i = 2; i < 999; i++)
-                {
-                    string name = "MyAssembly" + i.ToString();
-                    if (!ProjectWizardControl.Singleton.FolderExists(name))
-                    {
-                        textBoxClassName.Text = name;
-                        textBoxDescription.Text = "Assembly Description";
-                        return;
-                    }
-                }
-            }
-        }
+        #endregion
 
-        private void SetGermanDefaultName()
-        {
-            if (!ProjectWizardControl.Singleton.FolderExists("MeinAssembly"))
-            {
-                textBoxClassName.Text = "MeinAssembly";
-                textBoxDescription.Text = "Assembly Beschreibung";
-            }
-            else
-            {
-                for (int i = 2; i < 999; i++)
-                {
-                    string name = "MeinAssembly" + i.ToString();
-                    if (!ProjectWizardControl.Singleton.FolderExists(name))
-                    {
-                        textBoxClassName.Text = name;
-                        textBoxDescription.Text = "Assembly Beschreibung";
-                        return;
-                    }
-                }
-            }
-        }
+        #region Properties
 
-        public string AssemblyName
+        /// <summary>
+        /// Name for the assembly
+        /// </summary>
+        internal string AssemblyName
         {
             get { return textBoxClassName.Text.Trim(); }
         }
 
-        public string AssemblyDescription
+        /// <summary>
+        /// Description for the assembly
+        /// </summary>
+        internal string AssemblyDescription
         {
             get { return textBoxDescription.Text; }
         }
 
+        #endregion
 
         #region IWizardControl
 
@@ -164,18 +142,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                 SetEnglishDefaultName();
         }
 
-        bool FirstActivateFlag = false;
-
         public void Activate()
         {
             textBoxClassName.Focus();
-            if (FirstActivateFlag == false)
+            if (_firstActivateFlag == false)
             {
                 if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
                     SetGermanDefaultName();
                 else
                     SetEnglishDefaultName();
-                FirstActivateFlag = true;
+                _firstActivateFlag = true;
             }
         }
 
@@ -248,6 +224,50 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #region Methods
 
+        private void SetEnglishDefaultName()
+        {
+            if (!ProjectWizardControl.Singleton.FolderExists("MyAssembly"))
+            {
+                textBoxClassName.Text = "MyAssembly";
+                textBoxDescription.Text = "Assembly Description";
+            }
+            else
+            {
+                for (int i = 2; i < 999; i++)
+                {
+                    string name = "MyAssembly" + i.ToString();
+                    if (!ProjectWizardControl.Singleton.FolderExists(name))
+                    {
+                        textBoxClassName.Text = name;
+                        textBoxDescription.Text = "Assembly Description";
+                        return;
+                    }
+                }
+            }
+        }
+
+        private void SetGermanDefaultName()
+        {
+            if (!ProjectWizardControl.Singleton.FolderExists("MeinAssembly"))
+            {
+                textBoxClassName.Text = "MeinAssembly";
+                textBoxDescription.Text = "Assembly Beschreibung";
+            }
+            else
+            {
+                for (int i = 2; i < 999; i++)
+                {
+                    string name = "MeinAssembly" + i.ToString();
+                    if (!ProjectWizardControl.Singleton.FolderExists(name))
+                    {
+                        textBoxClassName.Text = name;
+                        textBoxDescription.Text = "Assembly Beschreibung";
+                        return;
+                    }
+                }
+            }
+        }
+
         private void RaiseChangeEvent()
         {
             try
@@ -310,29 +330,40 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
+        #region Trigger
+
         private void textBox_TextChanged(object sender, EventArgs e)
         {
-            ChangeSettings();
-            RaiseChangeEvent();
-            if (ProjectWizardControl.Singleton.FolderExists(textBoxClassName.Text.Trim()))
-                labelHint.Visible = true;
-            else
-                labelHint.Visible = false;
-
-            string res = ClassNameInvalid();
-            if (null != res)
+            try
             {
-                errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Zeichen: " + res : "Invalid Char: " + res);
-                return;
-            }
+                ChangeSettings();
+                RaiseChangeEvent();
+                if (ProjectWizardControl.Singleton.FolderExists(textBoxClassName.Text.Trim()))
+                    labelHint.Visible = true;
+                else
+                    labelHint.Visible = false;
 
-            if (textBoxClassName.Text.IndexOf(" ") > -1)
-            { 
-                errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Leerzeichen" : "Invalid empty space");
-                return;
-            }
+                string res = ClassNameInvalid();
+                if (null != res)
+                {
+                    errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Zeichen: " + res : "Invalid Char: " + res);
+                    return;
+                }
 
-            errorProvider1.Clear();
+                if (textBoxClassName.Text.IndexOf(" ") > -1)
+                {
+                    errorProvider1.SetError(textBoxClassName, Forms.MainForm.Singleton.CurrentLanguageID == 1031 ? "Ungültiges Leerzeichen" : "Invalid empty space");
+                    return;
+                }
+
+                errorProvider1.Clear();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
+
+        #endregion
     }
 }

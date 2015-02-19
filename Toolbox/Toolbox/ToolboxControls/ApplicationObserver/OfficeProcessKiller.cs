@@ -7,6 +7,9 @@ using System.Diagnostics;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 {
+    /// <summary>
+    /// process watcher for ms-office products
+    /// </summary>
     internal class OfficeApplicationObserver : IDisposable 
     {
         #region Fields
@@ -32,15 +35,12 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         #endregion
 
-        #region Events
-
-        public event EventHandler AllProcessesChanged;
-        public event EventHandler InstanceRunningCountChanged;
-
-        #endregion
-
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="listViewApps">view control</param>
         internal OfficeApplicationObserver(ListView listViewApps)
         {
             string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
@@ -51,14 +51,31 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             AttachedControl = listViewApps;          
             _timer = new Timer();
             _timer.Interval = 100;
-            _timer.Tick += new EventHandler(_timer_Tick);
+            _timer.Tick += new EventHandler(Timer_Tick);
             _timer.Enabled = true;
         }
 
         #endregion
 
+        #region Events
+
+        /// <summary>
+        /// The whole process list has been changed
+        /// </summary>
+        public event EventHandler AllProcessesChanged;
+
+        /// <summary>
+        /// an office process has been started or terminated
+        /// </summary>
+        public event EventHandler InstanceRunningCountChanged;
+
+        #endregion
+
         #region Properties
 
+        /// <summary>
+        /// Current user language id
+        /// </summary>
         public int CurrentLanguageID
         {
             get 
@@ -71,6 +88,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
+        /// <summary>
+        /// Question for the user before kill someone
+        /// </summary>
         public string KillQuestion
         { 
             get
@@ -83,7 +103,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
-        public bool ShowQuesionBeforeKill
+        /// <summary>
+        /// Show KillQuestion as message box before kill
+        /// </summary>
+        public bool ShowQuestionBeforeKill
         {
             get
             {
@@ -95,6 +118,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
+        /// <summary>
+        /// Show tray icon to indicates one ore more (selected) office application is running
+        /// </summary>
         public bool TrayIcon
         {
             get
@@ -107,8 +133,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
+        /// <summary>
+        /// View control to show current processes in real time
+        /// </summary>
         public ListView AttachedControl{get;set;}
 
+        /// <summary>
+        /// Hotkey definition to kill instances with one hit
+        /// </summary>
         public Keys HotKey
         {
             get 
@@ -125,12 +157,15 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                         _hotKey.Dispose();
                     }
                    _hotKey = Hotkey.Register(value);
-                   _hotKey.HotkeyPressed += new EventHandler(_hotKey_HotkeyPressed);
+                   _hotKey.HotkeyPressed += new EventHandler(HotKey_HotkeyPressed);
                 }
                 _key = value;
             }
         }
 
+        /// <summary>
+        /// Hotkey definition is enabled
+        /// </summary>
         public bool HotKeyEnabled 
         {
             get
@@ -147,7 +182,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                         _hotKey.Dispose();
                     }
                     _hotKey = Hotkey.Register(_key);
-                    _hotKey.HotkeyPressed += new EventHandler(_hotKey_HotkeyPressed);
+                    _hotKey.HotkeyPressed += new EventHandler(HotKey_HotkeyPressed);
                 }
                 else
                 {
@@ -157,6 +192,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             } 
         }
 
+        /// <summary>
+        /// Refresh intervall for the process list
+        /// </summary>
         public int WatchIntervallMs
         {
             get 
@@ -169,6 +207,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }            
         }
 
+        /// <summary>
+        /// Enable to observe the process list
+        /// </summary>
         public bool WatchEnabled
         {
             get 
@@ -181,16 +222,34 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
+        /// <summary>
+        /// Enable to kill excel
+        /// </summary>
         public bool Excel{get;set;}
 
+        /// <summary>
+        /// Enable to kill word
+        /// </summary>
         public bool Word { get; set; }
 
+        /// <summary>
+        /// Enable to kill outlook
+        /// </summary>
         public bool Outlook { get; set; }
 
+        /// <summary>
+        /// Enable to kill power point
+        /// </summary>
         public bool PowerPoint { get; set; }
 
+        /// <summary>
+        /// Enable to kill access
+        /// </summary>
         public bool Access { get; set; }
 
+        /// <summary>
+        /// Enable to kill project
+        /// </summary>
         public bool Project { get; set; }
 
         public bool Visio { get; set; }
@@ -199,6 +258,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
         #region Methods
 
+        /// <summary>
+        /// Kill selected processes if running
+        /// </summary>
         public void KillProcesses()
         {
             if(DialogResult.Yes != MessageBox.Show(_killQuestion, "NetOffice Developer Toolbox", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
@@ -336,15 +398,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             return result;
         }
 
-        #endregion
-
-        #region Watch
-
-        void _hotKey_HotkeyPressed(object sender, EventArgs e)
-        {
-            KillProcesses();
-        }
-
         private static bool IsOfficeProcess(Process process)
         {
             string name = process.ProcessName.ToUpper();
@@ -366,15 +419,24 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         private static Process[] SortProcesses(Process[] allNewProcs)
         {
             List<Process> resultList = new List<Process>();
-            foreach (Process  item in allNewProcs)
+            foreach (Process item in allNewProcs)
             {
-                if(IsOfficeProcess(item))
-                    resultList.Insert(0,item);
+                if (IsOfficeProcess(item))
+                    resultList.Insert(0, item);
                 else
                     resultList.Add(item);
             }
 
             return resultList.ToArray();
+        }
+
+        #endregion
+
+        #region Watch
+
+        private void HotKey_HotkeyPressed(object sender, EventArgs e)
+        {
+            KillProcesses();
         }
 
         private void CheckChangedProcs(Process[] allNewProcs)
@@ -436,7 +498,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 
         }
         
-        void _timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             try
             {
@@ -487,7 +549,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         
         #endregion
 
-        #region IDisposable Members
+        #region IDisposable
 
         public void Dispose()
         {

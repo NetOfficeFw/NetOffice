@@ -4,21 +4,8 @@ using System.Text;
 
 namespace NetOffice.DeveloperToolbox.Controls.Hex
 {
-    static class Util
+    internal static class Util
     {
-        /// <summary>
-        /// Contains true, if we are in design mode of Visual Studio
-        /// </summary>
-        private static bool _designMode;
-
-        /// <summary>
-        /// Initializes an instance of Util class
-        /// </summary>
-        static Util()
-        {
-            _designMode = (System.Diagnostics.Process.GetCurrentProcess().ProcessName.ToLower() == "devenv");
-        }
-
         /// <summary>
         /// Gets true, if we are in design mode of Visual Studio
         /// </summary>
@@ -30,9 +17,8 @@ namespace NetOffice.DeveloperToolbox.Controls.Hex
         {
             get
             {
-                return _designMode;
+                return Program.IsDesign;
             }
         }
-
     }
 }

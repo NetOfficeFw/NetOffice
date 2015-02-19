@@ -12,19 +12,25 @@ using NetOffice;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 {
+    /// <summary>
+    /// Allows to analyze the office user interface object model
+    /// </summary>
     [RessourceTable("ToolboxControls.OfficeUI.Strings.txt")]
     public partial class OfficeUIControl : UserControl, IToolboxControl
     {
         #region Fields
       
-        ApplicationWrapper _officeApplication;
-        WaitControl _waitControl;
+        private ApplicationWrapper _officeApplication;
+        private  WaitControl _waitControl;
         private bool _wait;
 
         #endregion
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public OfficeUIControl()
         {
             InitializeComponent();
@@ -429,7 +435,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
 
         private void buttonCloseOfficeApp_Click(object sender, EventArgs e)
         {
-            DisposeCurrentOpenOfficeApplication();
+            try
+            {
+                DisposeCurrentOpenOfficeApplication();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, Host.CurrentLanguageID);
+            }
         }
 
         #endregion

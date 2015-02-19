@@ -9,13 +9,25 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 {
+    /// <summary>
+    /// Message Table Helper
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.CaptionStrings.txt")]
     public partial class LocalizedCaptionsControl : UserControl, ILocalizationDesign
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public LocalizedCaptionsControl()
         {
             InitializeComponent();
         }
+
+        #endregion 
+
+        #region ILocalizedDesign
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
@@ -51,5 +63,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
         {
             get { throw new NotImplementedException(); }
         }
+
+        #endregion
     }
 }

@@ -11,6 +11,9 @@ using NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 {
+    /// <summary>
+    /// Allows to create new development projects in c# or vb
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Strings.txt")]
     public partial class ProjectWizardControl : UserControl, IToolboxControl
     {
@@ -24,6 +27,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ProjectWizardControl()
         {
             InitializeComponent();
@@ -36,6 +42,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
 
         #region Properties
 
+        /// <summary>
+        /// All wizard steps
+        /// </summary>
         public List<IWizardControl> WizardControls
         {
             get
@@ -44,12 +53,24 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
             }
         }
 
+        /// <summary>
+        /// Singleton to made easy access for wizard controls
+        /// </summary>
         internal static ProjectWizardControl Singleton { get; private set; }
 
+        /// <summary>
+        /// Wizard has been started
+        /// </summary>
         private bool IsCurrentlyActive { get { return panelWizardHost.Visible; } }
 
+        /// <summary>
+        /// Localized messages
+        /// </summary>
         internal LocalizedContent Localized { get; private set; }
 
+        /// <summary>
+        /// Localized captions
+        /// </summary>
         internal LocalizedCaptions Captions { get; private set; }
 
         #endregion

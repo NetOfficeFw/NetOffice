@@ -21,8 +21,14 @@ namespace NetOffice.DeveloperToolbox
             TypeLocalization = typeLocalization;
         }
 
+        /// <summary>
+        /// Caption in language editor
+        /// </summary>
         public string NameLocalization { get; private set; }
 
+        /// <summary>
+        /// Type of sub control
+        /// </summary>
         public Type TypeLocalization { get; private set; }
     }
 }

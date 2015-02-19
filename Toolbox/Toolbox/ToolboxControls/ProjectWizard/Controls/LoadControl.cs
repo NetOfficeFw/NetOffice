@@ -9,40 +9,37 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 {
+    /// <summary>
+    /// Loadbehavior in addin projects
+    /// </summary>
     [RessourceTable("ToolboxControls.ProjectWizard.Controls.LoadControl.txt")]
     public partial class LoadControl : UserControl, IWizardControl, ILocalizationDesign
     {
-        XmlDocument _settings;
-        bool noChangeEventFlag;
+        #region Fields
 
+        private XmlDocument _settings;
+        private bool noChangeEventFlag;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public LoadControl()
         {
             InitializeComponent();
             CreateSettingsDocument();
             comboBoxLoadBehavior.SelectedIndex = 0;
         }
-       
-        public new void KeyDown(KeyEventArgs e)
-        {
 
-        }
+        #endregion
 
-        private void radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            ChangeSettings();
-            RaiseChangeEvent();
-        }
-
-        private void comboBoxLoadBehavior_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (noChangeEventFlag)
-                return;
-
-            ChangeSettings();
-            RaiseChangeEvent();
-        }
-
-        public string LoadBehaviour
+        /// <summary>
+        /// LoadBehavior Registry Value
+        /// </summary>
+        internal string LoadBehaviour
         {
             get
             {
@@ -62,6 +59,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             }
         }
 
+        /// <summary>
+        /// Addin Root RegistryKey (Current user or local machine)
+        /// </summary>
         public string Hivekey
         {
             get 
@@ -110,6 +110,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             {
                 return ImageType.Question;
             }
+        }
+
+        public new void KeyDown(KeyEventArgs e)
+        {
+
         }
 
         public void Translate()
@@ -188,7 +193,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-            //comboBoxLoadBehavior.Visible = false;
+           
         }
 
         public void Localize(Translation.ItemCollection strings)
@@ -231,50 +236,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #region Methods
          
-        //private string LocalizedLoadBehavior
-        //{
-        //    get
-        //    {
-        //        if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //            return "Ladeverhalten:";
-        //        else
-        //            return "Load Behavior:";
-        //    }
-        //}
-
-        //private string LocalizedRegistryModeMachine
-        //{
-        //    get
-        //    {
-        //        if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //            return "Für alle Benutzer";
-        //        else
-        //            return "All Users";
-        //    }
-        //}
-
-        //private string LocalizedRegistryModeCurrentUser
-        //{
-        //    get
-        //    {
-        //        if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //            return "Nur für den aktuellen Benutzer";
-        //        else
-        //            return "Current User";
-        //    }
-        //}
-
-        //private string LocalizedRegistry
-        //{
-        //    get
-        //    {
-        //        if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //            return "Registrierung:";
-        //        else
-        //            return "Registry:";
-        //    }
-        //}
-
         private string TranslateLoadBehavior()
         {
             int index = comboBoxLoadBehavior.Text.IndexOf("=");
@@ -286,36 +247,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             else
                 return comboBoxLoadBehavior.Text;
         }
-
-        //private string TranslateLoadBehavior(string value)
-        //{
-        //    switch (value)
-        //    {
-        //        case "3":
-        //            if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //                return "Beim Start der Office Anwendung";
-        //            else
-        //                return "Load at startup";
-        //        case "2":
-        //            if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //                return "Bei Bedarf";
-        //            else
-        //                return "On Demand";
-        //        case "1":
-        //            if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //                return "Nicht automatisch laden";
-        //            else
-        //                return "Not automatically";
-        //        case "16":
-        //            if (Forms.MainForm.Singleton.CurrentLanguageID == 1031)
-        //                return "Beim ersten Start automatisch, danach bei Bedarf";
-        //            else
-        //                return "Load first time, then load on demand";
-        //        default:
-        //            throw new ArgumentOutOfRangeException("TranslateLoadBehavior:value");
-        //    }
-        //}
-
+     
         private void ChangeSettings()
         {
             _settings.FirstChild.SelectSingleNode("RegisterHKeyLocalMachine").InnerText = radioButtonLocalMachine.Checked.ToString();
@@ -354,6 +286,39 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         {
             if (null != ReadyStateChanged)
                 ReadyStateChanged(this);
+        }
+
+        #endregion
+
+        #region Trigger
+
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
+        }
+
+        private void comboBoxLoadBehavior_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (noChangeEventFlag)
+                    return;
+
+                ChangeSettings();
+                RaiseChangeEvent();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(this, exception, ErrorCategory.NonCritical);
+            }
         }
 
         #endregion

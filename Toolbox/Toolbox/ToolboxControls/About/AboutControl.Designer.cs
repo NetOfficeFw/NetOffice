@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutControl));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelThanks = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabelMono = new System.Windows.Forms.LinkLabel();
             this.labelHotKey = new System.Windows.Forms.Label();
             this.labelContainsExistingWorks = new System.Windows.Forms.Label();
             this.linkLabelHotKey = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo5 = new System.Windows.Forms.PictureBox();
             this.labelHexBox = new System.Windows.Forms.Label();
             this.linkLabelHexBox = new System.Windows.Forms.LinkLabel();
             this.panelAboutDetails = new System.Windows.Forms.Panel();
@@ -45,53 +45,53 @@
             this.labelCopyrightText = new System.Windows.Forms.Label();
             this.labelVersionText = new System.Windows.Forms.Label();
             this.labelTechnicalDetails = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo4 = new System.Windows.Forms.PictureBox();
             this.panelAboutWarranty = new System.Windows.Forms.Panel();
             this.labelWarranty3 = new System.Windows.Forms.Label();
             this.labelWarranty2 = new System.Windows.Forms.Label();
             this.labelWarranty1 = new System.Windows.Forms.Label();
             this.labelAboutWarranty = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo3 = new System.Windows.Forms.PictureBox();
             this.panelAboutTop = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo1 = new System.Windows.Forms.PictureBox();
             this.labelAboutNetOffice = new System.Windows.Forms.Label();
             this.labelStallmanSays = new System.Windows.Forms.Label();
+            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelLanguageCredits = new System.Windows.Forms.Panel();
             this.labelLanguageCredits = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxInfo2 = new System.Windows.Forms.PictureBox();
             this.scroller1 = new NetOffice.DeveloperToolbox.Controls.Text.Scroller();
-            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelThanks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo5)).BeginInit();
             this.panelAboutDetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo4)).BeginInit();
             this.panelAboutWarranty.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo3)).BeginInit();
             this.panelAboutTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo1)).BeginInit();
             this.panelMain.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelLanguageCredits.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlForeColorAnimator1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelThanks
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.linkLabelMono);
-            this.panel1.Controls.Add(this.labelHotKey);
-            this.panel1.Controls.Add(this.labelContainsExistingWorks);
-            this.panel1.Controls.Add(this.linkLabelHotKey);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.labelHexBox);
-            this.panel1.Controls.Add(this.linkLabelHexBox);
-            this.panel1.Location = new System.Drawing.Point(0, 427);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 92);
-            this.panel1.TabIndex = 92;
+            this.panelThanks.Controls.Add(this.label2);
+            this.panelThanks.Controls.Add(this.linkLabelMono);
+            this.panelThanks.Controls.Add(this.labelHotKey);
+            this.panelThanks.Controls.Add(this.labelContainsExistingWorks);
+            this.panelThanks.Controls.Add(this.linkLabelHotKey);
+            this.panelThanks.Controls.Add(this.pictureBoxInfo5);
+            this.panelThanks.Controls.Add(this.labelHexBox);
+            this.panelThanks.Controls.Add(this.linkLabelHexBox);
+            this.panelThanks.Location = new System.Drawing.Point(0, 427);
+            this.panelThanks.Name = "panelThanks";
+            this.panelThanks.Size = new System.Drawing.Size(786, 92);
+            this.panelThanks.TabIndex = 92;
             // 
             // label2
             // 
@@ -146,15 +146,15 @@
             this.linkLabelHotKey.TabStop = true;
             this.linkLabelHotKey.Text = "http://mycsharp.de/wbb2/thread.php?threadid=65760";
             // 
-            // pictureBox1
+            // pictureBoxInfo5
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 80;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxInfo5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo5.Image")));
+            this.pictureBoxInfo5.Location = new System.Drawing.Point(1, 1);
+            this.pictureBoxInfo5.Name = "pictureBoxInfo5";
+            this.pictureBoxInfo5.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxInfo5.TabIndex = 80;
+            this.pictureBoxInfo5.TabStop = false;
             // 
             // labelHexBox
             // 
@@ -184,7 +184,7 @@
             this.panelAboutDetails.Controls.Add(this.labelCopyrightText);
             this.panelAboutDetails.Controls.Add(this.labelVersionText);
             this.panelAboutDetails.Controls.Add(this.labelTechnicalDetails);
-            this.panelAboutDetails.Controls.Add(this.pictureBox7);
+            this.panelAboutDetails.Controls.Add(this.pictureBoxInfo4);
             this.panelAboutDetails.Location = new System.Drawing.Point(0, 320);
             this.panelAboutDetails.Name = "panelAboutDetails";
             this.panelAboutDetails.Size = new System.Drawing.Size(786, 88);
@@ -243,15 +243,15 @@
             this.labelTechnicalDetails.TabIndex = 83;
             this.labelTechnicalDetails.Text = "Technische Details";
             // 
-            // pictureBox7
+            // pictureBoxInfo4
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox7.TabIndex = 80;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxInfo4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo4.Image")));
+            this.pictureBoxInfo4.Location = new System.Drawing.Point(1, 1);
+            this.pictureBoxInfo4.Name = "pictureBoxInfo4";
+            this.pictureBoxInfo4.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxInfo4.TabIndex = 80;
+            this.pictureBoxInfo4.TabStop = false;
             // 
             // panelAboutWarranty
             // 
@@ -259,7 +259,7 @@
             this.panelAboutWarranty.Controls.Add(this.labelWarranty2);
             this.panelAboutWarranty.Controls.Add(this.labelWarranty1);
             this.panelAboutWarranty.Controls.Add(this.labelAboutWarranty);
-            this.panelAboutWarranty.Controls.Add(this.pictureBox5);
+            this.panelAboutWarranty.Controls.Add(this.pictureBoxInfo3);
             this.panelAboutWarranty.Location = new System.Drawing.Point(0, 217);
             this.panelAboutWarranty.Name = "panelAboutWarranty";
             this.panelAboutWarranty.Size = new System.Drawing.Size(786, 86);
@@ -309,19 +309,19 @@
             this.labelAboutWarranty.TabIndex = 83;
             this.labelAboutWarranty.Text = "Verpflichtungserklärung";
             // 
-            // pictureBox5
+            // pictureBoxInfo3
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox5.TabIndex = 80;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxInfo3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo3.Image")));
+            this.pictureBoxInfo3.Location = new System.Drawing.Point(1, 1);
+            this.pictureBoxInfo3.Name = "pictureBoxInfo3";
+            this.pictureBoxInfo3.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxInfo3.TabIndex = 80;
+            this.pictureBoxInfo3.TabStop = false;
             // 
             // panelAboutTop
             // 
-            this.panelAboutTop.Controls.Add(this.pictureBox3);
+            this.panelAboutTop.Controls.Add(this.pictureBoxInfo1);
             this.panelAboutTop.Controls.Add(this.labelAboutNetOffice);
             this.panelAboutTop.Controls.Add(this.labelStallmanSays);
             this.panelAboutTop.Controls.Add(this.labelNetOfficeIsFree);
@@ -331,15 +331,15 @@
             this.panelAboutTop.Size = new System.Drawing.Size(786, 92);
             this.panelAboutTop.TabIndex = 89;
             // 
-            // pictureBox3
+            // pictureBoxInfo1
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox3.TabIndex = 86;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxInfo1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo1.Image")));
+            this.pictureBoxInfo1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBoxInfo1.Name = "pictureBoxInfo1";
+            this.pictureBoxInfo1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxInfo1.TabIndex = 86;
+            this.pictureBoxInfo1.TabStop = false;
             // 
             // labelAboutNetOffice
             // 
@@ -364,6 +364,20 @@
             this.labelStallmanSays.Text = "\"Freie Software bedeutet den Benutzer nicht hinters Licht zu führen und ihm alle " +
                 "Möglichkeiten der Kontrolle zu überlassen\".";
             // 
+            // labelNetOfficeIsFree
+            // 
+            this.labelNetOfficeIsFree.AutoSize = true;
+            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
+            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
+            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
+            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
+            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
+            this.labelNetOfficeIsFree.TabIndex = 83;
+            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
+            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -378,8 +392,8 @@
             // panelMain
             // 
             this.panelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelMain.Controls.Add(this.panel2);
-            this.panelMain.Controls.Add(this.panel1);
+            this.panelMain.Controls.Add(this.panelLanguageCredits);
+            this.panelMain.Controls.Add(this.panelThanks);
             this.panelMain.Controls.Add(this.panelAboutDetails);
             this.panelMain.Controls.Add(this.panelAboutWarranty);
             this.panelMain.Controls.Add(this.panelAboutTop);
@@ -388,15 +402,15 @@
             this.panelMain.Size = new System.Drawing.Size(789, 536);
             this.panelMain.TabIndex = 93;
             // 
-            // panel2
+            // panelLanguageCredits
             // 
-            this.panel2.Controls.Add(this.labelLanguageCredits);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.scroller1);
-            this.panel2.Location = new System.Drawing.Point(1, 97);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 118);
-            this.panel2.TabIndex = 93;
+            this.panelLanguageCredits.Controls.Add(this.labelLanguageCredits);
+            this.panelLanguageCredits.Controls.Add(this.pictureBoxInfo2);
+            this.panelLanguageCredits.Controls.Add(this.scroller1);
+            this.panelLanguageCredits.Location = new System.Drawing.Point(1, 97);
+            this.panelLanguageCredits.Name = "panelLanguageCredits";
+            this.panelLanguageCredits.Size = new System.Drawing.Size(786, 118);
+            this.panelLanguageCredits.TabIndex = 93;
             // 
             // labelLanguageCredits
             // 
@@ -409,15 +423,15 @@
             this.labelLanguageCredits.TabIndex = 83;
             this.labelLanguageCredits.Text = "Language Credits";
             // 
-            // pictureBox2
+            // pictureBoxInfo2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox2.TabIndex = 80;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxInfo2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxInfo2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxInfo2.Image")));
+            this.pictureBoxInfo2.Location = new System.Drawing.Point(1, 1);
+            this.pictureBoxInfo2.Name = "pictureBoxInfo2";
+            this.pictureBoxInfo2.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxInfo2.TabIndex = 80;
+            this.pictureBoxInfo2.TabStop = false;
             // 
             // scroller1
             // 
@@ -434,20 +448,6 @@
             this.scroller1.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scroller1.TextToScroll = " ";
             this.scroller1.TopPartSizePercent = 70;
-            // 
-            // labelNetOfficeIsFree
-            // 
-            this.labelNetOfficeIsFree.AutoSize = true;
-            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
-            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
-            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
-            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
-            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
-            this.labelNetOfficeIsFree.TabIndex = 83;
-            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
-            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
             // 
             // controlForeColorAnimator1
             // 
@@ -467,22 +467,22 @@
             this.Name = "AboutControl";
             this.Size = new System.Drawing.Size(886, 536);
             this.Resize += new System.EventHandler(this.AboutControl_Resize);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelThanks.ResumeLayout(false);
+            this.panelThanks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo5)).EndInit();
             this.panelAboutDetails.ResumeLayout(false);
             this.panelAboutDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo4)).EndInit();
             this.panelAboutWarranty.ResumeLayout(false);
             this.panelAboutWarranty.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo3)).EndInit();
             this.panelAboutTop.ResumeLayout(false);
             this.panelAboutTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo1)).EndInit();
             this.panelMain.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelLanguageCredits.ResumeLayout(false);
+            this.panelLanguageCredits.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlForeColorAnimator1)).EndInit();
             this.ResumeLayout(false);
 
@@ -490,13 +490,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelThanks;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabelMono;
         private System.Windows.Forms.Label labelHotKey;
         private System.Windows.Forms.Label labelContainsExistingWorks;
         private System.Windows.Forms.LinkLabel linkLabelHotKey;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxInfo5;
         private System.Windows.Forms.Label labelHexBox;
         private System.Windows.Forms.LinkLabel linkLabelHexBox;
         private System.Windows.Forms.Panel panelAboutDetails;
@@ -504,15 +504,15 @@
         private System.Windows.Forms.Label labelCopyrightText;
         private System.Windows.Forms.Label labelVersionText;
         private System.Windows.Forms.Label labelTechnicalDetails;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBoxInfo4;
         private System.Windows.Forms.Panel panelAboutWarranty;
         private System.Windows.Forms.Label labelWarranty3;
         private System.Windows.Forms.Label labelWarranty2;
         private System.Windows.Forms.Label labelWarranty1;
         private System.Windows.Forms.Label labelAboutWarranty;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBoxInfo3;
         private System.Windows.Forms.Panel panelAboutTop;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxInfo1;
         private System.Windows.Forms.Label labelAboutNetOffice;
         private System.Windows.Forms.Label labelStallmanSays;
         private NetOffice.DeveloperToolbox.Controls.Label.GlowLabel labelNetOfficeIsFree;
@@ -520,9 +520,9 @@
         private System.Windows.Forms.Panel panelMain;
         private Utils.Animation.ControlForeColorAnimator controlForeColorAnimator1;
         private System.Windows.Forms.Label labelLicense;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelLanguageCredits;
         private Controls.Text.Scroller scroller1;
         private System.Windows.Forms.Label labelLanguageCredits;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxInfo2;
     }
 }

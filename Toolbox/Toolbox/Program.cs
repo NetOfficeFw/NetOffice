@@ -7,6 +7,9 @@ using System.Diagnostics;
 
 namespace NetOffice.DeveloperToolbox
 {
+    /// <summary>
+    /// Well known assembly loader class
+    /// </summary>
     internal static class Program
     {
         /// <summary>
@@ -107,7 +110,7 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// Analyze commandline arguments for self elevation
         /// </summary>
-        /// <param name="args"></param>
+        /// <param name="args">arguments from command line</param>
         private static void ProceedCommandLineElevationArguments(string[] args)
         {
             foreach (string item in args)
@@ -137,6 +140,17 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
+        /// Returns the assembly is currently in design mode
+        /// </summary>
+        internal static bool IsDesign
+        {
+            get
+            {
+                return (System.ComponentModel.LicenseManager.UsageMode == System.ComponentModel.LicenseUsageMode.Designtime);
+            }
+        }
+
+        /// <summary>
         /// Hold the info to perform self elevation at start if necessary
         /// </summary>
         internal static bool SelfElevation { get; set; }
@@ -144,7 +158,7 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// Perform self elevation if necessary and wanted
         /// </summary>
-        /// <returns>new process started is sucsessfuly started</returns>
+        /// <returns>new process is sucsessfuly started</returns>
         private static bool PerformSelfElevation()
         {
             if (!IsAdmin && SelfElevation)
@@ -211,6 +225,7 @@ namespace NetOffice.DeveloperToolbox
                     case "VBIDEApi.dll":
                     case "VisioApi.dll":
                     case "WordApi.dll":
+                    case "MSFormsApi.dll":
                         {
                             assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);
                             if (File.Exists(assemblyFullPath))

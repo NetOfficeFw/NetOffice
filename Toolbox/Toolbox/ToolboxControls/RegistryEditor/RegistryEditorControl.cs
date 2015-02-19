@@ -13,6 +13,9 @@ using NetOffice.DeveloperToolbox.Utils.Registry;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 {
+    /// <summary>
+    /// Registry editor clone for the ms-office hive keys
+    /// </summary>
     [RessourceTable("ToolboxControls.RegistryEditor.Strings.txt")]
     public partial class RegistryEditorControl : UserControl, IToolboxControl
     {
@@ -31,16 +34,19 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Construction
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public RegistryEditorControl()
         {
             try
             {
                 InitializeComponent();
-                if (!DesignMode)
+                if (!Program.IsDesign)
                 {
                     _localMachine32 = new UtilsRegistry(Registry.LocalMachine, @"Software\Microsoft\Office");
                     _currentUser32 = new UtilsRegistry(Registry.CurrentUser, @"Software\Microsoft\Office");
-                    if (Is64Bit)
+                    if (System.Environment.Is64BitOperatingSystem)
                     {
                         _localMachine64 = new UtilsRegistry(Registry.LocalMachine, @"Software\Wow6432Node\Microsoft\Office");
                         _currentUser64 = new UtilsRegistry(Registry.CurrentUser, @"Software\Wow6432Node\Microsoft\Office");
@@ -53,40 +59,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                         _currentUser = _currentUser32;
                     }
 
-                    _userIsAdmin = IsAdministrator();
+                    _userIsAdmin = Program.IsAdmin;
                     _supportsInfoMessage = !_userIsAdmin;                 
                 }
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, 1033);
-            }
-        }
-
-        #endregion
-
-        #region Properties
-
-        public bool Is64Bit
-        {
-            get
-            {
-                return System.Environment.Is64BitOperatingSystem;
-            }
-        }
-
-        private bool IsAdministrator()
-        {
-            WindowsIdentity myWindowsIdentity = WindowsIdentity.GetCurrent();
-            WindowsPrincipal myWindowsPrincipal = new WindowsPrincipal(myWindowsIdentity);
-            return myWindowsPrincipal.IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
-        private new bool DesignMode
-        {
-            get
-            {
-                return (System.Diagnostics.Process.GetCurrentProcess().ProcessName == "devenv");
             }
         }
 
@@ -305,6 +284,28 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         #region Methods
 
+        private static string BoolToString(bool b)
+        {
+            if (b)
+                return "true";
+            else
+                return "false";
+        }
+
+        private Image GetValueKindImage(RegistryValueKind kind)
+        {
+            switch (kind)
+            {
+                case RegistryValueKind.ExpandString:
+                case RegistryValueKind.MultiString:
+                case RegistryValueKind.String:
+                case RegistryValueKind.Unknown:
+                    return imageListValueTypes.Images[0];
+                default:
+                    return imageListValueTypes.Images[1];
+            }
+        }
+
         private void ShowKeys()
         {
             treeViewRegistry.Nodes.Clear();
@@ -326,7 +327,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
                     ShowRegNode(key, node);
             }
 
-            if (Is64Bit)
+            if (System.Environment.Is64BitOperatingSystem)
             {
                 if (_localMachine64.Exists)
                 {
@@ -1425,32 +1426,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
             }
         }
 
-        #endregion
-
-        #region Helper Methods
-
-        private static string BoolToString(bool b)
-        {
-            if (b)
-                return "true";
-            else
-                return "false";
-        }
-
-        Image GetValueKindImage(RegistryValueKind kind)
-        {
-            switch (kind)
-            {
-                case RegistryValueKind.ExpandString:
-                case RegistryValueKind.MultiString:
-                case RegistryValueKind.String:
-                case RegistryValueKind.Unknown:
-                    return imageListValueTypes.Images[0];
-                default:
-                    return imageListValueTypes.Images[1];
-            }
-        }
-        
         #endregion
     }
 }
