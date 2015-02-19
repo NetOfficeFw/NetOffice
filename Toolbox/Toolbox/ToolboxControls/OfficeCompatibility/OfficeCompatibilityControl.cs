@@ -76,6 +76,29 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             SetImage(box15, info[5].Support);
         }
 
+        private void ShowBadImageFormatError()
+        {
+            labelErrorMessage.Text = labelBadImageError.Text;
+            panelAssemblyError.Visible = true;
+        }
+
+        private void ShowNoNetOfficeError()
+        {
+            labelErrorMessage.Text = labelNoNetOfficeError.Text;
+            panelAssemblyError.Visible = true;
+        }
+
+        private void ShowUnexpectedError(Exception exception)
+        {
+            labelErrorMessage.Text = exception.Message;
+            panelAssemblyError.Visible = true;
+        }
+
+        private void HideError()
+        {
+            panelAssemblyError.Visible = false;
+        }
+
         #endregion
 
         #region IToolboxControl
@@ -200,9 +223,10 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         public void EnableDesignView(int lcid, string parentComponentName)
         {
-            panelInvalidAssembly.Visible = true;
-            panelNoNetOfficeReferences.Visible = true;
+            panelAssemblyError.Visible = true;
             labelDebugHint.Visible = true;
+            labelBadImageError.Visible = true;
+            labelNoNetOfficeError.Visible = true;
         }
 
         public void Localize(Translation.ItemCollection strings)
@@ -281,6 +305,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         {
             try
             {
+                HideError();
+
                 AssemblyDefinition assemblyDefinition = AssemblyDefinition.ReadAssembly(_assemblyFullFileName);
                 textBoxAssembly.Text = assemblyDefinition.Name.ToString();
 
@@ -289,10 +315,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                 {
                     buttonRefresh.Enabled = true;
                     buttonReport.Enabled = true;
-                    panelInvalidAssembly.Visible = false;
-                    panelVersionTable.Visible = true;
-                    panelNoNetOfficeReferences.Visible = false;
-                    panelResultTable.Visible = true;
                     SetupVersionInfo(_result.Office, "Office");
                     SetupVersionInfo(_result.Excel, "Excel");
                     SetupVersionInfo(_result.Word, "Word");
@@ -306,24 +328,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                 {
                     buttonRefresh.Enabled = false;
                     buttonReport.Enabled = false;
-                    panelInvalidAssembly.Visible = false;
-                    panelVersionTable.Visible = false;
-                    panelNoNetOfficeReferences.Visible = true;
-                    panelResultTable.Visible = false;
+                    ShowNoNetOfficeError();
                 }
             }
             catch (BadImageFormatException)
             {
                     buttonRefresh.Enabled = false;
                     buttonReport.Enabled = false;
-                    panelVersionTable.Visible = false;
-                    panelNoNetOfficeReferences.Visible = false;
-                    panelResultTable.Visible = false;
-                    panelInvalidAssembly.Visible = true;
+                    ShowBadImageFormatError();
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(exception,ErrorCategory.NonCritical, Host.CurrentLanguageID);
+                ShowUnexpectedError(exception);
             }
         }
 

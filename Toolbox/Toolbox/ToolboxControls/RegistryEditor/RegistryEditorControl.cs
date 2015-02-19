@@ -169,6 +169,11 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         public void Activate(bool firstTime)
         {
             buttonRefresh_Click(this, new EventArgs());
+            if (firstTime)
+            {
+                foreach (TreeNode item in treeViewRegistry.Nodes)
+                    item.Expand();
+            }
         }
 
         public void Deactivated()
@@ -1417,7 +1422,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
         {
             try
             {
-                labelTitle.Width = splitContainer1.Panel1.Width-24;
                 checkBoxDeleteQuestion.Left = splitContainer1.Panel1.Width + 20;
             }
             catch (Exception exception)

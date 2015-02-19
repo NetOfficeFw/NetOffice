@@ -56,13 +56,13 @@
             this.pictureBoxInfo1 = new System.Windows.Forms.PictureBox();
             this.labelAboutNetOffice = new System.Windows.Forms.Label();
             this.labelStallmanSays = new System.Windows.Forms.Label();
-            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLanguageCredits = new System.Windows.Forms.Panel();
             this.labelLanguageCredits = new System.Windows.Forms.Label();
             this.pictureBoxInfo2 = new System.Windows.Forms.PictureBox();
             this.scroller1 = new NetOffice.DeveloperToolbox.Controls.Text.Scroller();
+            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.panelThanks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo5)).BeginInit();
@@ -364,20 +364,6 @@
             this.labelStallmanSays.Text = "\"Freie Software bedeutet den Benutzer nicht hinters Licht zu führen und ihm alle " +
                 "Möglichkeiten der Kontrolle zu überlassen\".";
             // 
-            // labelNetOfficeIsFree
-            // 
-            this.labelNetOfficeIsFree.AutoSize = true;
-            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
-            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
-            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
-            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
-            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
-            this.labelNetOfficeIsFree.TabIndex = 83;
-            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
-            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -448,6 +434,20 @@
             this.scroller1.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scroller1.TextToScroll = " ";
             this.scroller1.TopPartSizePercent = 70;
+            // 
+            // labelNetOfficeIsFree
+            // 
+            this.labelNetOfficeIsFree.AutoSize = true;
+            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
+            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
+            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
+            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
+            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
+            this.labelNetOfficeIsFree.TabIndex = 83;
+            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
+            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
             // 
             // controlForeColorAnimator1
             // 

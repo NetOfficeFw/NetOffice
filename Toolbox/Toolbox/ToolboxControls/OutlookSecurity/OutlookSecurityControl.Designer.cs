@@ -92,19 +92,20 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackColor = System.Drawing.Color.Orange;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(23, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox4.Size = new System.Drawing.Size(20, 16);
             this.pictureBox4.TabIndex = 71;
             this.pictureBox4.TabStop = false;
             // 
             // labelCaption
             // 
-            this.labelCaption.BackColor = System.Drawing.Color.LightGray;
+            this.labelCaption.BackColor = System.Drawing.Color.Orange;
             this.labelCaption.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaption.ForeColor = System.Drawing.Color.Black;
             this.labelCaption.Location = new System.Drawing.Point(42, 1);
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(337, 15);
@@ -192,10 +193,10 @@
             this.labelDidYouKnow.AutoSize = true;
             this.labelDidYouKnow.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelDidYouKnow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelDidYouKnow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDidYouKnow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDidYouKnow.Location = new System.Drawing.Point(426, 59);
             this.labelDidYouKnow.Name = "labelDidYouKnow";
-            this.labelDidYouKnow.Size = new System.Drawing.Size(107, 16);
+            this.labelDidYouKnow.Size = new System.Drawing.Size(124, 16);
             this.labelDidYouKnow.TabIndex = 78;
             this.labelDidYouKnow.Text = "Did you know... ?";
             // 
@@ -209,7 +210,7 @@
             this.labelSupressThisDialog.Name = "labelSupressThisDialog";
             this.labelSupressThisDialog.Size = new System.Drawing.Size(213, 19);
             this.labelSupressThisDialog.TabIndex = 80;
-            this.labelSupressThisDialog.Text = "Supress this Dialog";
+            this.labelSupressThisDialog.Text = "Suppress this Dialog";
             // 
             // OutlookSecurityControl
             // 

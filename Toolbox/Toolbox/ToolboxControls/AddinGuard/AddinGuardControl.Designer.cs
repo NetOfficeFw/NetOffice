@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Excel");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Word");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Outlook");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PowerPoint");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Access");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("MSProject");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Visio");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Excel");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Word");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Outlook");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PowerPoint");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Access");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("MSProject");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Visio");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddinGuardControl));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeViewRegistry = new System.Windows.Forms.TreeView();
@@ -67,9 +67,6 @@
             this.labelRegistryValues = new System.Windows.Forms.Label();
             this.dataGridViewValues = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnWert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDeactivatedElements = new System.Windows.Forms.Panel();
             this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
             this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
@@ -99,6 +96,12 @@
             this.panelIconLegend = new System.Windows.Forms.Panel();
             this.labelAddinLocalMachine = new System.Windows.Forms.Label();
             this.imageListEntries = new System.Windows.Forms.ImageList(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnWert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -164,28 +167,28 @@
             this.treeViewRegistry.Location = new System.Drawing.Point(3, 3);
             this.treeViewRegistry.Margin = new System.Windows.Forms.Padding(0);
             this.treeViewRegistry.Name = "treeViewRegistry";
-            treeNode8.Name = "Excel";
-            treeNode8.Text = "Excel";
-            treeNode9.Name = "Word";
-            treeNode9.Text = "Word";
-            treeNode10.Name = "Outlook";
-            treeNode10.Text = "Outlook";
-            treeNode11.Name = "PowerPoint";
-            treeNode11.Text = "PowerPoint";
-            treeNode12.Name = "Access";
-            treeNode12.Text = "Access";
-            treeNode13.Name = "MSProject";
-            treeNode13.Text = "MSProject";
-            treeNode14.Name = "Visio";
-            treeNode14.Text = "Visio";
+            treeNode1.Name = "Excel";
+            treeNode1.Text = "Excel";
+            treeNode2.Name = "Word";
+            treeNode2.Text = "Word";
+            treeNode3.Name = "Outlook";
+            treeNode3.Text = "Outlook";
+            treeNode4.Name = "PowerPoint";
+            treeNode4.Text = "PowerPoint";
+            treeNode5.Name = "Access";
+            treeNode5.Text = "Access";
+            treeNode6.Name = "MSProject";
+            treeNode6.Text = "MSProject";
+            treeNode7.Name = "Visio";
+            treeNode7.Text = "Visio";
             this.treeViewRegistry.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
             this.treeViewRegistry.SelectedImageIndex = 1;
             this.treeViewRegistry.Size = new System.Drawing.Size(295, 582);
             this.treeViewRegistry.TabIndex = 36;
@@ -221,7 +224,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Khaki;
+            this.pictureBox9.BackColor = System.Drawing.Color.Orange;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
             this.pictureBox9.Location = new System.Drawing.Point(211, 20);
             this.pictureBox9.Name = "pictureBox9";
@@ -297,7 +300,7 @@
             // 
             this.labelTrayhint.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTrayhint.BackColor = System.Drawing.Color.Khaki;
+            this.labelTrayhint.BackColor = System.Drawing.Color.Orange;
             this.labelTrayhint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelTrayhint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrayhint.Location = new System.Drawing.Point(230, 20);
@@ -322,7 +325,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.Khaki;
+            this.label3.BackColor = System.Drawing.Color.Orange;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Location = new System.Drawing.Point(211, 21);
             this.label3.Name = "label3";
@@ -346,7 +349,7 @@
             // 
             // pictureBoxNoAdmin
             // 
-            this.pictureBoxNoAdmin.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxNoAdmin.BackColor = System.Drawing.Color.Orange;
             this.pictureBoxNoAdmin.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNoAdmin.Image")));
             this.pictureBoxNoAdmin.Location = new System.Drawing.Point(241, 3);
             this.pictureBoxNoAdmin.Name = "pictureBoxNoAdmin";
@@ -418,7 +421,7 @@
             // 
             // labelNoAdminHint
             // 
-            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHint.BackColor = System.Drawing.Color.Orange;
             this.labelNoAdminHint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoAdminHint.Location = new System.Drawing.Point(260, 3);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
@@ -432,7 +435,7 @@
             // 
             this.labelNoAdminHintIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHintIcon.BackColor = System.Drawing.Color.Orange;
             this.labelNoAdminHintIcon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelNoAdminHintIcon.Location = new System.Drawing.Point(241, 3);
             this.labelNoAdminHintIcon.Name = "labelNoAdminHintIcon";
@@ -544,27 +547,6 @@
             this.Image.Name = "Image";
             this.Image.ReadOnly = true;
             this.Image.Width = 30;
-            // 
-            // columnName
-            // 
-            this.columnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnName.Frozen = true;
-            this.columnName.HeaderText = "Name";
-            this.columnName.Name = "columnName";
-            this.columnName.Width = 61;
-            // 
-            // columnTyp
-            // 
-            this.columnTyp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnTyp.HeaderText = "Typ";
-            this.columnTyp.Name = "columnTyp";
-            this.columnTyp.Width = 49;
-            // 
-            // columnWert
-            // 
-            this.columnWert.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnWert.HeaderText = "Value";
-            this.columnWert.Name = "columnWert";
             // 
             // panelDeactivatedElements
             // 
@@ -698,16 +680,18 @@
             // labelIconLegendCaption
             // 
             this.labelIconLegendCaption.AutoSize = true;
-            this.labelIconLegendCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIconLegendCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIconLegendCaption.ForeColor = System.Drawing.Color.DimGray;
             this.labelIconLegendCaption.Location = new System.Drawing.Point(3, 0);
             this.labelIconLegendCaption.Name = "labelIconLegendCaption";
-            this.labelIconLegendCaption.Size = new System.Drawing.Size(148, 17);
+            this.labelIconLegendCaption.Size = new System.Drawing.Size(157, 17);
             this.labelIconLegendCaption.TabIndex = 43;
             this.labelIconLegendCaption.Text = "labelIconLegendCaption";
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.labelColorLegendCaption);
             this.panel3.Controls.Add(this.buttonChangeLegend);
             this.panel3.Controls.Add(this.labelIconLegendCaption);
@@ -721,11 +705,11 @@
             // labelColorLegendCaption
             // 
             this.labelColorLegendCaption.AutoSize = true;
-            this.labelColorLegendCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelColorLegendCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelColorLegendCaption.ForeColor = System.Drawing.Color.DimGray;
             this.labelColorLegendCaption.Location = new System.Drawing.Point(94, 0);
             this.labelColorLegendCaption.Name = "labelColorLegendCaption";
-            this.labelColorLegendCaption.Size = new System.Drawing.Size(87, 17);
+            this.labelColorLegendCaption.Size = new System.Drawing.Size(90, 17);
             this.labelColorLegendCaption.TabIndex = 46;
             this.labelColorLegendCaption.Text = "Color Legend";
             this.labelColorLegendCaption.Visible = false;
@@ -733,14 +717,15 @@
             // buttonChangeLegend
             // 
             this.buttonChangeLegend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonChangeLegend.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonChangeLegend.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonChangeLegend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeLegend.ForeColor = System.Drawing.Color.Blue;
-            this.buttonChangeLegend.Location = new System.Drawing.Point(856, 22);
+            this.buttonChangeLegend.Location = new System.Drawing.Point(865, 22);
             this.buttonChangeLegend.Name = "buttonChangeLegend";
-            this.buttonChangeLegend.Size = new System.Drawing.Size(29, 21);
+            this.buttonChangeLegend.Size = new System.Drawing.Size(28, 21);
             this.buttonChangeLegend.TabIndex = 44;
             this.buttonChangeLegend.Text = ">";
-            this.buttonChangeLegend.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonChangeLegend.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.buttonChangeLegend.UseVisualStyleBackColor = true;
             this.buttonChangeLegend.Click += new System.EventHandler(this.buttonChangeLegend_Click);
             // 
@@ -870,6 +855,48 @@
             this.imageListEntries.Images.SetKeyName(0, "StringType.ico");
             this.imageListEntries.Images.SetKeyName(1, "OtherType.ico");
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Typ";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // columnName
+            // 
+            this.columnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnName.Frozen = true;
+            this.columnName.HeaderText = "Name";
+            this.columnName.Name = "columnName";
+            this.columnName.Width = 61;
+            // 
+            // columnTyp
+            // 
+            this.columnTyp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnTyp.HeaderText = "Typ";
+            this.columnTyp.Name = "columnTyp";
+            this.columnTyp.Width = 49;
+            // 
+            // columnWert
+            // 
+            this.columnWert.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnWert.HeaderText = "Value";
+            this.columnWert.Name = "columnWert";
+            // 
             // AddinGuardControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -983,5 +1010,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnTyp;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnWert;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

@@ -118,7 +118,7 @@
             // 
             this.labelExplorerHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelExplorerHeader.BackColor = System.Drawing.Color.Khaki;
+            this.labelExplorerHeader.BackColor = System.Drawing.Color.Orange;
             this.labelExplorerHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExplorerHeader.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelExplorerHeader.Location = new System.Drawing.Point(0, 0);
@@ -133,6 +133,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveReport.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonSaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveReport.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveReport.ForeColor = System.Drawing.Color.Blue;
             this.buttonSaveReport.Location = new System.Drawing.Point(2, 358);
             this.buttonSaveReport.Name = "buttonSaveReport";
@@ -155,6 +156,7 @@
             // textBoxReport
             // 
             this.textBoxReport.BackColor = System.Drawing.Color.White;
+            this.textBoxReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxReport.Location = new System.Drawing.Point(0, 0);
             this.textBoxReport.Multiline = true;
@@ -191,6 +193,7 @@
             // 
             this.checkBoxNativeView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxNativeView.AutoSize = true;
+            this.checkBoxNativeView.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxNativeView.Location = new System.Drawing.Point(661, 6);
             this.checkBoxNativeView.Name = "checkBoxNativeView";
             this.checkBoxNativeView.Size = new System.Drawing.Size(86, 17);
@@ -248,7 +251,7 @@
             // labelFilterHint
             // 
             this.labelFilterHint.AutoSize = true;
-            this.labelFilterHint.BackColor = System.Drawing.Color.Khaki;
+            this.labelFilterHint.BackColor = System.Drawing.Color.Orange;
             this.labelFilterHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelFilterHint.Location = new System.Drawing.Point(385, 27);
             this.labelFilterHint.Name = "labelFilterHint";

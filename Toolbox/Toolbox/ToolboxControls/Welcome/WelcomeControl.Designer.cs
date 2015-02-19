@@ -35,7 +35,7 @@
             this.labelBeginBottom = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.labelBeginTop = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.labelBeginTitle = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIconLeft = new System.Windows.Forms.PictureBox();
             this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
             this.checkBoxStartAppMinimized = new System.Windows.Forms.CheckBox();
             this.checkBoxMinimizeToTray = new System.Windows.Forms.CheckBox();
@@ -48,7 +48,7 @@
             this.labelQuestion = new System.Windows.Forms.Label();
             this.linkLabelNetOfficeQuestions = new System.Windows.Forms.LinkLabel();
             this.labelUpdate = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIconRight = new System.Windows.Forms.PictureBox();
             this.labelBug = new System.Windows.Forms.Label();
             this.linkLabelNetOfficeIssues = new System.Windows.Forms.LinkLabel();
             this.labelIWant = new System.Windows.Forms.Label();
@@ -58,10 +58,10 @@
             this.pictureBoxHeader = new System.Windows.Forms.PictureBox();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.panelMainLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelMainRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconRight)).BeginInit();
             this.panelOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlForeColorAnimator1)).BeginInit();
@@ -87,10 +87,10 @@
             this.panelMainLeft.Controls.Add(this.labelBeginBottom);
             this.panelMainLeft.Controls.Add(this.labelBeginTop);
             this.panelMainLeft.Controls.Add(this.labelBeginTitle);
-            this.panelMainLeft.Controls.Add(this.pictureBox2);
-            this.panelMainLeft.Location = new System.Drawing.Point(20, 75);
+            this.panelMainLeft.Controls.Add(this.pictureBoxIconLeft);
+            this.panelMainLeft.Location = new System.Drawing.Point(20, 68);
             this.panelMainLeft.Name = "panelMainLeft";
-            this.panelMainLeft.Size = new System.Drawing.Size(271, 298);
+            this.panelMainLeft.Size = new System.Drawing.Size(271, 304);
             this.panelMainLeft.TabIndex = 99;
             // 
             // labelBeginBottom
@@ -135,15 +135,15 @@
             this.labelBeginTitle.TabIndex = 79;
             this.labelBeginTitle.Text = "Welcome";
             // 
-            // pictureBox2
+            // pictureBoxIconLeft
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox2.TabIndex = 77;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxIconLeft.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxIconLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconLeft.Image")));
+            this.pictureBoxIconLeft.Location = new System.Drawing.Point(17, 10);
+            this.pictureBoxIconLeft.Name = "pictureBoxIconLeft";
+            this.pictureBoxIconLeft.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxIconLeft.TabIndex = 77;
+            this.pictureBoxIconLeft.TabStop = false;
             // 
             // checkBoxStartAppWithWindows
             // 
@@ -195,7 +195,7 @@
             this.labelLanguage.AutoSize = true;
             this.labelLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.Color.Blue;
-            this.labelLanguage.Location = new System.Drawing.Point(642, 14);
+            this.labelLanguage.Location = new System.Drawing.Point(643, 14);
             this.labelLanguage.Name = "labelLanguage";
             this.labelLanguage.Size = new System.Drawing.Size(65, 17);
             this.labelLanguage.TabIndex = 97;
@@ -204,6 +204,7 @@
             // comboBoxLanguage
             // 
             this.comboBoxLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxLanguage.BackColor = System.Drawing.Color.Orange;
             this.comboBoxLanguage.DisplayMember = "DisplayName";
             this.comboBoxLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -239,14 +240,14 @@
             this.panelMainRight.Controls.Add(this.labelQuestion);
             this.panelMainRight.Controls.Add(this.linkLabelNetOfficeQuestions);
             this.panelMainRight.Controls.Add(this.labelUpdate);
-            this.panelMainRight.Controls.Add(this.pictureBox4);
+            this.panelMainRight.Controls.Add(this.pictureBoxIconRight);
             this.panelMainRight.Controls.Add(this.labelBug);
             this.panelMainRight.Controls.Add(this.linkLabelNetOfficeIssues);
             this.panelMainRight.Controls.Add(this.labelIWant);
             this.panelMainRight.Controls.Add(this.linkLabelNetOfficeUpdates);
-            this.panelMainRight.Location = new System.Drawing.Point(633, 75);
+            this.panelMainRight.Location = new System.Drawing.Point(633, 68);
             this.panelMainRight.Name = "panelMainRight";
-            this.panelMainRight.Size = new System.Drawing.Size(271, 298);
+            this.panelMainRight.Size = new System.Drawing.Size(271, 304);
             this.panelMainRight.TabIndex = 98;
             // 
             // labelMailMe
@@ -308,15 +309,15 @@
             this.labelUpdate.TabIndex = 75;
             this.labelUpdate.Text = "check for an update";
             // 
-            // pictureBox4
+            // pictureBoxIconRight
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(17, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox4.TabIndex = 77;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxIconRight.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxIconRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconRight.Image")));
+            this.pictureBoxIconRight.Location = new System.Drawing.Point(17, 10);
+            this.pictureBoxIconRight.Name = "pictureBoxIconRight";
+            this.pictureBoxIconRight.Size = new System.Drawing.Size(17, 17);
+            this.pictureBoxIconRight.TabIndex = 77;
+            this.pictureBoxIconRight.TabStop = false;
             // 
             // labelBug
             // 
@@ -434,11 +435,11 @@
             this.Resize += new System.EventHandler(this.WelcomeControl_Resize);
             this.panelMainLeft.ResumeLayout(false);
             this.panelMainLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelMainRight.ResumeLayout(false);
             this.panelMainRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconRight)).EndInit();
             this.panelOptions.ResumeLayout(false);
             this.panelOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).EndInit();
@@ -453,7 +454,7 @@
         private System.Windows.Forms.Label labelVersionHint;
         private System.Windows.Forms.Panel panelMainLeft;
         private System.Windows.Forms.Label labelBeginTitle;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxIconLeft;
         private System.Windows.Forms.CheckBox checkBoxStartAppWithWindows;
         private System.Windows.Forms.CheckBox checkBoxStartAppMinimized;
         private System.Windows.Forms.CheckBox checkBoxMinimizeToTray;
@@ -466,7 +467,7 @@
         private System.Windows.Forms.Label labelQuestion;
         private System.Windows.Forms.LinkLabel linkLabelNetOfficeQuestions;
         private System.Windows.Forms.Label labelUpdate;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxIconRight;
         private System.Windows.Forms.Label labelBug;
         private System.Windows.Forms.LinkLabel linkLabelNetOfficeIssues;
         private System.Windows.Forms.Label labelIWant;

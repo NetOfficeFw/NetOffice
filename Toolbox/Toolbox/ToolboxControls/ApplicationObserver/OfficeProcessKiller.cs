@@ -298,9 +298,13 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 foreach (Process p in procs)
                     p.Kill();
             }
-            catch (System.ComponentModel.Win32Exception){;}
-            catch (NotSupportedException){;}
-            catch (InvalidOperationException){;}
+            catch (System.ComponentModel.Win32Exception) { ;}
+            catch (NotSupportedException) { ;}
+            catch (InvalidOperationException) { ;}
+            catch(Exception)
+            {
+                throw;
+            }
         }
 
         private void ShowProcesses(string name, Process[] procs)

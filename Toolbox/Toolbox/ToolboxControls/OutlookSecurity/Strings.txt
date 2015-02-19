@@ -11,7 +11,7 @@ labelMessages = <Keine Einträge>
 [1033]
 labelCaption = Suppress the Security Conformation in Outlook.
 checkBoxSupressEnabled = Suppress enabled
-labelSupressThisDialog = Supress this Dialog
+labelSupressThisDialog = Suppress this Dialog
 labelDidYouKnow = Did you know... ?
 labelHint = Outlook provides -depending on the version- several ways to suppress this dialog for your Addin.
 labelSources = Sources of information:

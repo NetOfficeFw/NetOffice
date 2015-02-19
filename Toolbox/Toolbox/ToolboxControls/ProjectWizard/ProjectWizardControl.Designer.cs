@@ -54,10 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelHint = new System.Windows.Forms.Label();
             this.panelHint = new System.Windows.Forms.Panel();
-            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
+            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.controlBackColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.Colors.ControlBackColorAnimator(this.components);
             this.panelLeftHeader.SuspendLayout();
@@ -272,9 +272,9 @@
             // finishButton
             // 
             this.finishButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.finishButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.finishButton.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.finishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finishButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finishButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finishButton.Image = ((System.Drawing.Image)(resources.GetObject("finishButton.Image")));
             this.finishButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.finishButton.Location = new System.Drawing.Point(406, 445);
@@ -351,7 +351,7 @@
             this.labelHint.AutoSize = true;
             this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHint.ForeColor = System.Drawing.Color.Blue;
-            this.labelHint.Location = new System.Drawing.Point(252, 7);
+            this.labelHint.Location = new System.Drawing.Point(164, 7);
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(486, 21);
             this.labelHint.TabIndex = 92;
@@ -365,30 +365,13 @@
             this.panelHint.Controls.Add(this.labelHint);
             this.panelHint.Location = new System.Drawing.Point(158, 74);
             this.panelHint.Name = "panelHint";
-            this.panelHint.Size = new System.Drawing.Size(918, 373);
+            this.panelHint.Size = new System.Drawing.Size(747, 373);
             this.panelHint.TabIndex = 93;
-            // 
-            // buttonCreateProject
-            // 
-            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
-            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
-            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateProject.Location = new System.Drawing.Point(316, 341);
-            this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
-            this.buttonCreateProject.TabIndex = 95;
-            this.buttonCreateProject.Text = "Create New Project";
-            this.buttonCreateProject.UseVisualStyleBackColor = true;
-            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(315, 79);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(229, 79);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(284, 257);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -399,7 +382,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(216, 1);
+            this.pictureBox8.Location = new System.Drawing.Point(128, 1);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(31, 34);
             this.pictureBox8.TabIndex = 93;
@@ -411,6 +394,23 @@
             this.imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListIcons.Images.SetKeyName(0, "question.png");
             this.imageListIcons.Images.SetKeyName(1, "information.png");
+            // 
+            // buttonCreateProject
+            // 
+            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
+            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
+            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
+            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateProject.Location = new System.Drawing.Point(230, 341);
+            this.buttonCreateProject.Name = "buttonCreateProject";
+            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
+            this.buttonCreateProject.TabIndex = 95;
+            this.buttonCreateProject.Text = "Create New Project";
+            this.buttonCreateProject.UseVisualStyleBackColor = true;
+            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // controlForeColorAnimator1
             // 

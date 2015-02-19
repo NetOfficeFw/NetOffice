@@ -22,9 +22,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripKeys = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripKeyCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripKeyDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,9 +32,6 @@
             this.imageListRegistry = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewRegistry = new System.Windows.Forms.DataGridView();
             this.TypeIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripEntries = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripCreateEntry = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripCreateStringEntry = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +43,6 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -59,6 +52,13 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.pictureBoxNoResult = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
+            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
@@ -73,14 +73,17 @@
             // 
             // labelTitle
             // 
-            this.labelTitle.BackColor = System.Drawing.Color.LightGray;
+            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTitle.BackColor = System.Drawing.Color.Orange;
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(27, 4);
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(30, 1);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(276, 23);
+            this.labelTitle.Size = new System.Drawing.Size(883, 21);
             this.labelTitle.TabIndex = 29;
             this.labelTitle.Text = "Office Registry Keys at a glance";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonRefresh
             // 
@@ -100,24 +103,6 @@
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Value";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
             // contextMenuStripKeys
             // 
             this.contextMenuStripKeys.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -128,13 +113,13 @@
             this.toolStripMenuItem2,
             this.toolStripKeyExport});
             this.contextMenuStripKeys.Name = "contextMenuStripKeys";
-            this.contextMenuStripKeys.Size = new System.Drawing.Size(147, 104);
+            this.contextMenuStripKeys.Size = new System.Drawing.Size(149, 104);
             // 
             // toolStripKeyCreate
             // 
             this.toolStripKeyCreate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyCreate.Image")));
             this.toolStripKeyCreate.Name = "toolStripKeyCreate";
-            this.toolStripKeyCreate.Size = new System.Drawing.Size(146, 22);
+            this.toolStripKeyCreate.Size = new System.Drawing.Size(148, 22);
             this.toolStripKeyCreate.Text = "Neu";
             this.toolStripKeyCreate.Click += new System.EventHandler(this.toolStripKeyCreate_Click);
             // 
@@ -142,34 +127,34 @@
             // 
             this.toolStripKeyDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyDelete.Image")));
             this.toolStripKeyDelete.Name = "toolStripKeyDelete";
-            this.toolStripKeyDelete.Size = new System.Drawing.Size(146, 22);
+            this.toolStripKeyDelete.Size = new System.Drawing.Size(148, 22);
             this.toolStripKeyDelete.Text = "Löschen";
             this.toolStripKeyDelete.Click += new System.EventHandler(this.toolStripKeyDelete_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
             // 
             // toolStripKeyEdit
             // 
             this.toolStripKeyEdit.Enabled = false;
             this.toolStripKeyEdit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyEdit.Image")));
             this.toolStripKeyEdit.Name = "toolStripKeyEdit";
-            this.toolStripKeyEdit.Size = new System.Drawing.Size(146, 22);
+            this.toolStripKeyEdit.Size = new System.Drawing.Size(148, 22);
             this.toolStripKeyEdit.Text = "Umbenennen";
             this.toolStripKeyEdit.Click += new System.EventHandler(this.toolStripKeyEdit_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(145, 6);
             // 
             // toolStripKeyExport
             // 
             this.toolStripKeyExport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripKeyExport.Image")));
             this.toolStripKeyExport.Name = "toolStripKeyExport";
-            this.toolStripKeyExport.Size = new System.Drawing.Size(146, 22);
+            this.toolStripKeyExport.Size = new System.Drawing.Size(148, 22);
             this.toolStripKeyExport.Text = "Export";
             this.toolStripKeyExport.Click += new System.EventHandler(this.toolStripKeyExport_Click);
             // 
@@ -239,27 +224,6 @@
             this.TypeIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TypeIcon.Width = 30;
             // 
-            // regName
-            // 
-            this.regName.Frozen = true;
-            this.regName.HeaderText = "Name";
-            this.regName.Name = "regName";
-            this.regName.ReadOnly = true;
-            this.regName.Width = 180;
-            // 
-            // regType
-            // 
-            this.regType.HeaderText = "Type";
-            this.regType.Name = "regType";
-            this.regType.ReadOnly = true;
-            // 
-            // regValue
-            // 
-            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regValue.HeaderText = "Value";
-            this.regValue.Name = "regValue";
-            this.regValue.ReadOnly = true;
-            // 
             // contextMenuStripEntries
             // 
             this.contextMenuStripEntries.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -269,7 +233,7 @@
             this.toolStripDeleteEntry,
             this.toolStripEditEntryName});
             this.contextMenuStripEntries.Name = "contextMenuStripEntries";
-            this.contextMenuStripEntries.Size = new System.Drawing.Size(147, 98);
+            this.contextMenuStripEntries.Size = new System.Drawing.Size(149, 98);
             this.contextMenuStripEntries.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripEntries_Opening);
             // 
             // toolStripCreateEntry
@@ -280,7 +244,7 @@
             this.toolStripCreateDWORDEntry});
             this.toolStripCreateEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCreateEntry.Image")));
             this.toolStripCreateEntry.Name = "toolStripCreateEntry";
-            this.toolStripCreateEntry.Size = new System.Drawing.Size(146, 22);
+            this.toolStripCreateEntry.Size = new System.Drawing.Size(148, 22);
             this.toolStripCreateEntry.Text = "Neuer Wert";
             // 
             // toolStripCreateStringEntry
@@ -310,13 +274,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(143, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(145, 6);
             // 
             // toolStripEditEntryValue
             // 
             this.toolStripEditEntryValue.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditEntryValue.Image")));
             this.toolStripEditEntryValue.Name = "toolStripEditEntryValue";
-            this.toolStripEditEntryValue.Size = new System.Drawing.Size(146, 22);
+            this.toolStripEditEntryValue.Size = new System.Drawing.Size(148, 22);
             this.toolStripEditEntryValue.Text = "Wert ändern";
             this.toolStripEditEntryValue.Click += new System.EventHandler(this.toolStripEditEntryValue_Click);
             // 
@@ -324,7 +288,7 @@
             // 
             this.toolStripDeleteEntry.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDeleteEntry.Image")));
             this.toolStripDeleteEntry.Name = "toolStripDeleteEntry";
-            this.toolStripDeleteEntry.Size = new System.Drawing.Size(146, 22);
+            this.toolStripDeleteEntry.Size = new System.Drawing.Size(148, 22);
             this.toolStripDeleteEntry.Text = "Löschen";
             this.toolStripDeleteEntry.Click += new System.EventHandler(this.toolStripDeleteEntry_Click);
             // 
@@ -332,7 +296,7 @@
             // 
             this.toolStripEditEntryName.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEditEntryName.Image")));
             this.toolStripEditEntryName.Name = "toolStripEditEntryName";
-            this.toolStripEditEntryName.Size = new System.Drawing.Size(146, 22);
+            this.toolStripEditEntryName.Size = new System.Drawing.Size(148, 22);
             this.toolStripEditEntryName.Text = "Umbenennen";
             this.toolStripEditEntryName.Click += new System.EventHandler(this.toolStripEditEntryName_Click);
             // 
@@ -368,29 +332,6 @@
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 34;
             // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
-            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
-            this.treeViewRegistry.TabIndex = 33;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
-            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
-            // 
             // imageListValueTypes
             // 
             this.imageListValueTypes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListValueTypes.ImageStream")));
@@ -401,25 +342,27 @@
             // checkBoxDeleteQuestion
             // 
             this.checkBoxDeleteQuestion.AutoSize = true;
+            this.checkBoxDeleteQuestion.BackColor = System.Drawing.Color.Orange;
             this.checkBoxDeleteQuestion.Checked = true;
             this.checkBoxDeleteQuestion.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxDeleteQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxDeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxDeleteQuestion.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(314, 0);
+            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(314, 1);
             this.checkBoxDeleteQuestion.Name = "checkBoxDeleteQuestion";
             this.checkBoxDeleteQuestion.Size = new System.Drawing.Size(138, 21);
             this.checkBoxDeleteQuestion.TabIndex = 36;
             this.checkBoxDeleteQuestion.Text = "Ask before deleting";
-            this.checkBoxDeleteQuestion.UseVisualStyleBackColor = true;
+            this.checkBoxDeleteQuestion.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox4.BackColor = System.Drawing.Color.Orange;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 1);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 19);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 21);
             this.pictureBox4.TabIndex = 40;
             this.pictureBox4.TabStop = false;
             // 
@@ -443,14 +386,14 @@
             this.contextMenuStripNoAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.contextMenuStripNoAdmin.Name = "contextMenuStripNoAdmin";
-            this.contextMenuStripNoAdmin.Size = new System.Drawing.Size(219, 26);
+            this.contextMenuStripNoAdmin.Size = new System.Drawing.Size(216, 26);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Enabled = false;
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(218, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(215, 22);
             this.toolStripMenuItem1.Text = "Keine Administrator Rechte";
             // 
             // textBoxSearch
@@ -469,9 +412,10 @@
             // 
             this.labelSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSearch.AutoSize = true;
+            this.labelSearch.BackColor = System.Drawing.Color.Orange;
             this.labelSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.Blue;
-            this.labelSearch.Location = new System.Drawing.Point(628, 2);
+            this.labelSearch.Location = new System.Drawing.Point(630, 2);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(47, 17);
             this.labelSearch.TabIndex = 43;
@@ -489,6 +433,71 @@
             this.pictureBoxNoResult.TabStop = false;
             this.pictureBoxNoResult.Visible = false;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // treeViewRegistry
+            // 
+            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
+            // 
+            // regName
+            // 
+            this.regName.Frozen = true;
+            this.regName.HeaderText = "Name";
+            this.regName.Name = "regName";
+            this.regName.ReadOnly = true;
+            this.regName.Width = 180;
+            // 
+            // regType
+            // 
+            this.regType.HeaderText = "Type";
+            this.regType.Name = "regType";
+            this.regType.ReadOnly = true;
+            // 
+            // regValue
+            // 
+            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regValue.HeaderText = "Value";
+            this.regValue.Name = "regValue";
+            this.regValue.ReadOnly = true;
+            // 
             // RegistryEditorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,14 +505,14 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.pictureBoxNoResult);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelNoAdminHint);
             this.Controls.Add(this.buttonRefresh);
+            this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.checkBoxDeleteQuestion);
             this.Controls.Add(this.labelCurrentPath);
+            this.Controls.Add(this.labelTitle);
             this.Name = "RegistryEditorControl";
             this.Size = new System.Drawing.Size(916, 641);
             this.Resize += new System.EventHandler(this.RegistryEditorControl_Resize);

@@ -85,7 +85,7 @@
             this.labelInfoMessage.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelInfoMessage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInfoMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoMessage.ForeColor = System.Drawing.Color.DimGray;
+            this.labelInfoMessage.ForeColor = System.Drawing.Color.Gray;
             this.labelInfoMessage.Location = new System.Drawing.Point(52, 19);
             this.labelInfoMessage.Name = "labelInfoMessage";
             this.labelInfoMessage.Size = new System.Drawing.Size(116, 17);

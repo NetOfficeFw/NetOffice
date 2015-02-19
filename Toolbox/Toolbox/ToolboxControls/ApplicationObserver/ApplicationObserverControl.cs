@@ -308,6 +308,16 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                     vieItem.SubItems.Add(item.ProcessName);
                     vieItem.ImageIndex = GetProcessImageIndex(item.ProcessName);
                 }
+
+                int i = 0;
+                foreach (ListViewItem item in listViewProcess.Items)
+                {
+                    Color color = i % 2 != 0 ? Color.White : Color.LightGray;
+                    item.BackColor = color;
+                    foreach (ListViewItem.ListViewSubItem subItem in item.SubItems)
+                        subItem.BackColor = color;
+                    i++;
+                }
             }
             catch (Exception exception)
             {
