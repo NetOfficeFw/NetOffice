@@ -56,13 +56,13 @@
             this.pictureBoxInfo1 = new System.Windows.Forms.PictureBox();
             this.labelAboutNetOffice = new System.Windows.Forms.Label();
             this.labelStallmanSays = new System.Windows.Forms.Label();
+            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelLanguageCredits = new System.Windows.Forms.Panel();
             this.labelLanguageCredits = new System.Windows.Forms.Label();
             this.pictureBoxInfo2 = new System.Windows.Forms.PictureBox();
             this.scroller1 = new NetOffice.DeveloperToolbox.Controls.Text.Scroller();
-            this.labelNetOfficeIsFree = new NetOffice.DeveloperToolbox.Controls.Label.GlowLabel();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.panelThanks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo5)).BeginInit();
@@ -97,6 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(383, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
@@ -118,6 +119,7 @@
             // 
             this.labelHotKey.AutoSize = true;
             this.labelHotKey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHotKey.ForeColor = System.Drawing.Color.Black;
             this.labelHotKey.Location = new System.Drawing.Point(383, 74);
             this.labelHotKey.Name = "labelHotKey";
             this.labelHotKey.Size = new System.Drawing.Size(165, 17);
@@ -160,6 +162,7 @@
             // 
             this.labelHexBox.AutoSize = true;
             this.labelHexBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHexBox.ForeColor = System.Drawing.Color.Black;
             this.labelHexBox.Location = new System.Drawing.Point(383, 51);
             this.labelHexBox.Name = "labelHexBox";
             this.labelHexBox.Size = new System.Drawing.Size(240, 17);
@@ -194,6 +197,7 @@
             // 
             this.labelLicense.AutoSize = true;
             this.labelLicense.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLicense.ForeColor = System.Drawing.Color.Black;
             this.labelLicense.Location = new System.Drawing.Point(29, 48);
             this.labelLicense.Name = "labelLicense";
             this.labelLicense.Size = new System.Drawing.Size(371, 17);
@@ -216,6 +220,7 @@
             // 
             this.labelCopyrightText.AutoSize = true;
             this.labelCopyrightText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCopyrightText.ForeColor = System.Drawing.Color.Black;
             this.labelCopyrightText.Location = new System.Drawing.Point(146, 26);
             this.labelCopyrightText.Name = "labelCopyrightText";
             this.labelCopyrightText.Size = new System.Drawing.Size(117, 17);
@@ -226,6 +231,7 @@
             // 
             this.labelVersionText.AutoSize = true;
             this.labelVersionText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionText.ForeColor = System.Drawing.Color.Black;
             this.labelVersionText.Location = new System.Drawing.Point(29, 26);
             this.labelVersionText.Name = "labelVersionText";
             this.labelVersionText.Size = new System.Drawing.Size(104, 17);
@@ -269,6 +275,7 @@
             // 
             this.labelWarranty3.AutoSize = true;
             this.labelWarranty3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarranty3.ForeColor = System.Drawing.Color.Black;
             this.labelWarranty3.Location = new System.Drawing.Point(29, 63);
             this.labelWarranty3.Name = "labelWarranty3";
             this.labelWarranty3.Size = new System.Drawing.Size(500, 17);
@@ -280,6 +287,7 @@
             // 
             this.labelWarranty2.AutoSize = true;
             this.labelWarranty2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarranty2.ForeColor = System.Drawing.Color.Black;
             this.labelWarranty2.Location = new System.Drawing.Point(29, 44);
             this.labelWarranty2.Name = "labelWarranty2";
             this.labelWarranty2.Size = new System.Drawing.Size(706, 17);
@@ -291,6 +299,7 @@
             // 
             this.labelWarranty1.AutoSize = true;
             this.labelWarranty1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarranty1.ForeColor = System.Drawing.Color.Black;
             this.labelWarranty1.Location = new System.Drawing.Point(29, 26);
             this.labelWarranty1.Name = "labelWarranty1";
             this.labelWarranty1.Size = new System.Drawing.Size(725, 17);
@@ -364,6 +373,20 @@
             this.labelStallmanSays.Text = "\"Freie Software bedeutet den Benutzer nicht hinters Licht zu führen und ihm alle " +
                 "Möglichkeiten der Kontrolle zu überlassen\".";
             // 
+            // labelNetOfficeIsFree
+            // 
+            this.labelNetOfficeIsFree.AutoSize = true;
+            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
+            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
+            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
+            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
+            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
+            this.labelNetOfficeIsFree.TabIndex = 83;
+            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
+            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -434,20 +457,6 @@
             this.scroller1.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scroller1.TextToScroll = " ";
             this.scroller1.TopPartSizePercent = 70;
-            // 
-            // labelNetOfficeIsFree
-            // 
-            this.labelNetOfficeIsFree.AutoSize = true;
-            this.labelNetOfficeIsFree.BackColor = System.Drawing.Color.Transparent;
-            this.labelNetOfficeIsFree.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelNetOfficeIsFree.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetOfficeIsFree.ForeColor = System.Drawing.Color.White;
-            this.labelNetOfficeIsFree.Location = new System.Drawing.Point(282, 67);
-            this.labelNetOfficeIsFree.Name = "labelNetOfficeIsFree";
-            this.labelNetOfficeIsFree.Size = new System.Drawing.Size(221, 21);
-            this.labelNetOfficeIsFree.TabIndex = 83;
-            this.labelNetOfficeIsFree.Text = "NetOffice ist freie Software.";
-            this.labelNetOfficeIsFree.Click += new System.EventHandler(this.labelNetOfficeIsFree_Click);
             // 
             // controlForeColorAnimator1
             // 

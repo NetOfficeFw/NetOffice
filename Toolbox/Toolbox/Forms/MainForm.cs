@@ -16,7 +16,7 @@ using NetOffice.DeveloperToolbox.ToolboxControls;
 namespace NetOffice.DeveloperToolbox.Forms
 {
     /// <summary>
-    /// mainform in the application
+    /// Main form in the application
     /// </summary>
     public partial class MainForm : Form, IToolboxHost
     {
@@ -333,7 +333,7 @@ namespace NetOffice.DeveloperToolbox.Forms
                 bool handled = false;
                 if (e.Modifiers == Keys.Alt)
                 {
-                    // use keyboard number keys on the right as tab change command
+                    // use Alt + number key as tab change command
                     switch (e.KeyCode)
                     {
                         case Keys.D1:

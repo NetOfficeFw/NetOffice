@@ -78,12 +78,13 @@
             this.labelNoOfficeAppRunning.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelNoOfficeAppRunning.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelNoOfficeAppRunning.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoOfficeAppRunning.ForeColor = System.Drawing.Color.Black;
             this.labelNoOfficeAppRunning.Location = new System.Drawing.Point(74, 588);
             this.labelNoOfficeAppRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNoOfficeAppRunning.Name = "labelNoOfficeAppRunning";
             this.labelNoOfficeAppRunning.Size = new System.Drawing.Size(405, 20);
             this.labelNoOfficeAppRunning.TabIndex = 25;
-            this.labelNoOfficeAppRunning.Text = "None of the chose applications are active";
+            this.labelNoOfficeAppRunning.Text = "None of the chosen applications are active";
             // 
             // labelOneOrMoreIsRunning
             // 
@@ -91,6 +92,7 @@
             this.labelOneOrMoreIsRunning.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelOneOrMoreIsRunning.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelOneOrMoreIsRunning.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOneOrMoreIsRunning.ForeColor = System.Drawing.Color.Black;
             this.labelOneOrMoreIsRunning.Location = new System.Drawing.Point(74, 559);
             this.labelOneOrMoreIsRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOneOrMoreIsRunning.Name = "labelOneOrMoreIsRunning";
@@ -102,7 +104,7 @@
             // 
             this.pictureBoxRunningOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBoxRunningOff.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRunningOff.Image")));
-            this.pictureBoxRunningOff.Location = new System.Drawing.Point(46, 588);
+            this.pictureBoxRunningOff.Location = new System.Drawing.Point(46, 589);
             this.pictureBoxRunningOff.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxRunningOff.Name = "pictureBoxRunningOff";
             this.pictureBoxRunningOff.Size = new System.Drawing.Size(24, 22);
@@ -134,7 +136,7 @@
             this.buttonKillApps.Name = "buttonKillApps";
             this.buttonKillApps.Size = new System.Drawing.Size(433, 34);
             this.buttonKillApps.TabIndex = 21;
-            this.buttonKillApps.Text = "Kill";
+            this.buttonKillApps.Text = "Close";
             this.buttonKillApps.UseVisualStyleBackColor = true;
             this.buttonKillApps.Click += new System.EventHandler(this.buttonKillApps_Click);
             // 
@@ -220,6 +222,7 @@
             this.labelShowTray.BackColor = System.Drawing.Color.Orange;
             this.labelShowTray.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelShowTray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShowTray.ForeColor = System.Drawing.Color.Black;
             this.labelShowTray.Location = new System.Drawing.Point(49, 497);
             this.labelShowTray.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShowTray.Name = "labelShowTray";
@@ -232,6 +235,7 @@
             this.labelInsertHotkey.BackColor = System.Drawing.Color.Orange;
             this.labelInsertHotkey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInsertHotkey.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInsertHotkey.ForeColor = System.Drawing.Color.Black;
             this.labelInsertHotkey.Location = new System.Drawing.Point(49, 258);
             this.labelInsertHotkey.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelInsertHotkey.Name = "labelInsertHotkey";
@@ -258,7 +262,7 @@
             this.labelMain.BackColor = System.Drawing.Color.Orange;
             this.labelMain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelMain.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMain.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelMain.ForeColor = System.Drawing.Color.Black;
             this.labelMain.Location = new System.Drawing.Point(49, 7);
             this.labelMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMain.Name = "labelMain";
@@ -299,6 +303,7 @@
             this.labelActiveProcessList.BackColor = System.Drawing.Color.Orange;
             this.labelActiveProcessList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelActiveProcessList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelActiveProcessList.ForeColor = System.Drawing.Color.Black;
             this.labelActiveProcessList.Location = new System.Drawing.Point(509, 7);
             this.labelActiveProcessList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActiveProcessList.Name = "labelActiveProcessList";

@@ -112,6 +112,7 @@
             this.labelProjectType.AutoSize = true;
             this.labelProjectType.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelProjectType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProjectType.ForeColor = System.Drawing.Color.Black;
             this.labelProjectType.Location = new System.Drawing.Point(67, 33);
             this.labelProjectType.Name = "labelProjectType";
             this.labelProjectType.Size = new System.Drawing.Size(85, 16);
@@ -137,7 +138,7 @@
             // labelNoAdminHint
             // 
             this.labelNoAdminHint.AutoSize = true;
-            this.labelNoAdminHint.BackColor = System.Drawing.Color.Khaki;
+            this.labelNoAdminHint.BackColor = System.Drawing.Color.Orange;
             this.labelNoAdminHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoAdminHint.Location = new System.Drawing.Point(40, 148);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
@@ -261,6 +262,7 @@
             this.labelFolder.AutoSize = true;
             this.labelFolder.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelFolder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolder.ForeColor = System.Drawing.Color.Black;
             this.labelFolder.Location = new System.Drawing.Point(39, 21);
             this.labelFolder.Name = "labelFolder";
             this.labelFolder.Size = new System.Drawing.Size(92, 16);

@@ -34,32 +34,8 @@
             this.buttonSelectAssembly = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.panelResultTable = new System.Windows.Forms.Panel();
-            this.linkLabelNotSupported = new System.Windows.Forms.LinkLabel();
-            this.pictureBoxNotSupported = new System.Windows.Forms.PictureBox();
-            this.labelVersionNotOk = new System.Windows.Forms.Label();
-            this.labelVersionOk = new System.Windows.Forms.Label();
-            this.pictureBoxOk = new System.Windows.Forms.PictureBox();
-            this.buttonRefresh = new System.Windows.Forms.Button();
-            this.pictureBoxProblem = new System.Windows.Forms.PictureBox();
-            this.panelAssemblyError = new System.Windows.Forms.Panel();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.labelErrorMessage = new System.Windows.Forms.Label();
-            this.labelVersionTable = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelVersionTable = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelNetOfficeVersion = new System.Windows.Forms.Label();
-            this.labelDebugHint = new System.Windows.Forms.Label();
-            this.labelCurrentNetOffice = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelBadImageError = new System.Windows.Forms.Label();
-            this.labelNoNetOfficeError = new System.Windows.Forms.Label();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.tableLayoutResult = new NetOffice.DeveloperToolbox.Controls.Layout.AdvTableLayoutControl();
             this.pictureBoxVisio12 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVisio10 = new System.Windows.Forms.PictureBox();
@@ -124,15 +100,31 @@
             this.pictureBoxAccess09 = new System.Windows.Forms.PictureBox();
             this.pictureBoxVisio15 = new System.Windows.Forms.PictureBox();
             this.labelVisio = new System.Windows.Forms.Label();
+            this.labelCurrentNetOffice = new System.Windows.Forms.Label();
+            this.labelNetOfficeVersion = new System.Windows.Forms.Label();
+            this.linkLabelNotSupported = new System.Windows.Forms.LinkLabel();
+            this.pictureBoxNotSupported = new System.Windows.Forms.PictureBox();
+            this.labelVersionNotOk = new System.Windows.Forms.Label();
+            this.labelVersionOk = new System.Windows.Forms.Label();
+            this.pictureBoxOk = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProblem = new System.Windows.Forms.PictureBox();
+            this.panelAssemblyError = new System.Windows.Forms.Panel();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.labelErrorMessage = new System.Windows.Forms.Label();
+            this.labelVersionTable = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelVersionTable = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelDebugHint = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelBadImageError = new System.Windows.Forms.Label();
+            this.labelNoNetOfficeError = new System.Windows.Forms.Label();
             this.panelResultTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotSupported)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).BeginInit();
-            this.panelAssemblyError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelVersionTable.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisio12)).BeginInit();
@@ -183,13 +175,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisio15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotSupported)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).BeginInit();
+            this.panelAssemblyError.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelVersionTable.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(23, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 17);
@@ -263,64 +263,16 @@
             this.panelResultTable.Size = new System.Drawing.Size(654, 339);
             this.panelResultTable.TabIndex = 76;
             // 
-            // linkLabelNotSupported
+            // pictureBox2
             // 
-            this.linkLabelNotSupported.AutoSize = true;
-            this.linkLabelNotSupported.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabelNotSupported.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelNotSupported.Location = new System.Drawing.Point(560, 72);
-            this.linkLabelNotSupported.Name = "linkLabelNotSupported";
-            this.linkLabelNotSupported.Size = new System.Drawing.Size(157, 17);
-            this.linkLabelNotSupported.TabIndex = 88;
-            this.linkLabelNotSupported.TabStop = true;
-            this.linkLabelNotSupported.Text = "= Version is unsupported";
-            this.linkLabelNotSupported.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNotSupported_LinkClicked);
-            // 
-            // pictureBoxNotSupported
-            // 
-            this.pictureBoxNotSupported.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxNotSupported.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotSupported.Image")));
-            this.pictureBoxNotSupported.Location = new System.Drawing.Point(537, 72);
-            this.pictureBoxNotSupported.Name = "pictureBoxNotSupported";
-            this.pictureBoxNotSupported.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxNotSupported.TabIndex = 86;
-            this.pictureBoxNotSupported.TabStop = false;
-            // 
-            // labelVersionNotOk
-            // 
-            this.labelVersionNotOk.AutoSize = true;
-            this.labelVersionNotOk.BackColor = System.Drawing.Color.Transparent;
-            this.labelVersionNotOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelVersionNotOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersionNotOk.ForeColor = System.Drawing.Color.DimGray;
-            this.labelVersionNotOk.Location = new System.Drawing.Point(334, 72);
-            this.labelVersionNotOk.Name = "labelVersionNotOk";
-            this.labelVersionNotOk.Size = new System.Drawing.Size(170, 17);
-            this.labelVersionNotOk.TabIndex = 85;
-            this.labelVersionNotOk.Text = "= Version is not compatible";
-            // 
-            // labelVersionOk
-            // 
-            this.labelVersionOk.AutoSize = true;
-            this.labelVersionOk.BackColor = System.Drawing.Color.Transparent;
-            this.labelVersionOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelVersionOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersionOk.ForeColor = System.Drawing.Color.DimGray;
-            this.labelVersionOk.Location = new System.Drawing.Point(137, 72);
-            this.labelVersionOk.Name = "labelVersionOk";
-            this.labelVersionOk.Size = new System.Drawing.Size(147, 17);
-            this.labelVersionOk.TabIndex = 84;
-            this.labelVersionOk.Text = "= Version is compatible";
-            // 
-            // pictureBoxOk
-            // 
-            this.pictureBoxOk.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxOk.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOk.Image")));
-            this.pictureBoxOk.Location = new System.Drawing.Point(115, 73);
-            this.pictureBoxOk.Name = "pictureBoxOk";
-            this.pictureBoxOk.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxOk.TabIndex = 83;
-            this.pictureBoxOk.TabStop = false;
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(8, 316);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox2.TabIndex = 96;
+            this.pictureBox2.TabStop = false;
             // 
             // buttonRefresh
             // 
@@ -339,273 +291,6 @@
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            // 
-            // pictureBoxProblem
-            // 
-            this.pictureBoxProblem.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProblem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProblem.Image")));
-            this.pictureBoxProblem.Location = new System.Drawing.Point(313, 72);
-            this.pictureBoxProblem.Name = "pictureBoxProblem";
-            this.pictureBoxProblem.Size = new System.Drawing.Size(16, 16);
-            this.pictureBoxProblem.TabIndex = 82;
-            this.pictureBoxProblem.TabStop = false;
-            // 
-            // panelAssemblyError
-            // 
-            this.panelAssemblyError.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelAssemblyError.BackColor = System.Drawing.Color.Transparent;
-            this.panelAssemblyError.Controls.Add(this.pictureBox27);
-            this.panelAssemblyError.Controls.Add(this.labelErrorMessage);
-            this.panelAssemblyError.Location = new System.Drawing.Point(104, 42);
-            this.panelAssemblyError.Name = "panelAssemblyError";
-            this.panelAssemblyError.Size = new System.Drawing.Size(654, 24);
-            this.panelAssemblyError.TabIndex = 77;
-            this.panelAssemblyError.Visible = false;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(4, 3);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox27.TabIndex = 81;
-            this.pictureBox27.TabStop = false;
-            // 
-            // labelErrorMessage
-            // 
-            this.labelErrorMessage.AutoSize = true;
-            this.labelErrorMessage.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.labelErrorMessage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErrorMessage.ForeColor = System.Drawing.Color.Red;
-            this.labelErrorMessage.Location = new System.Drawing.Point(26, 4);
-            this.labelErrorMessage.Name = "labelErrorMessage";
-            this.labelErrorMessage.Size = new System.Drawing.Size(185, 16);
-            this.labelErrorMessage.TabIndex = 72;
-            this.labelErrorMessage.Text = "Unable to load assembly.";
-            // 
-            // labelVersionTable
-            // 
-            this.labelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelVersionTable.AutoSize = true;
-            this.labelVersionTable.BackColor = System.Drawing.Color.Transparent;
-            this.labelVersionTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelVersionTable.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVersionTable.ForeColor = System.Drawing.Color.White;
-            this.labelVersionTable.Location = new System.Drawing.Point(24, 4);
-            this.labelVersionTable.Name = "labelVersionTable";
-            this.labelVersionTable.Size = new System.Drawing.Size(81, 17);
-            this.labelVersionTable.TabIndex = 78;
-            this.labelVersionTable.Text = "Versiontable";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(10, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 17);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "09 = Office 2000";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(10, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 17);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "10 = Office 2002";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(10, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 17);
-            this.label5.TabIndex = 87;
-            this.label5.Text = "11 = Office 2003";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(10, 118);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 17);
-            this.label6.TabIndex = 88;
-            this.label6.Text = "12 = Office 2007";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(10, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 17);
-            this.label7.TabIndex = 89;
-            this.label7.Text = "14 = Office 2010";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelVersionTable
-            // 
-            this.panelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelVersionTable.Controls.Add(this.label8);
-            this.panelVersionTable.Controls.Add(this.pictureBox1);
-            this.panelVersionTable.Controls.Add(this.label7);
-            this.panelVersionTable.Controls.Add(this.label6);
-            this.panelVersionTable.Controls.Add(this.label5);
-            this.panelVersionTable.Controls.Add(this.label4);
-            this.panelVersionTable.Controls.Add(this.label3);
-            this.panelVersionTable.Controls.Add(this.labelVersionTable);
-            this.panelVersionTable.Location = new System.Drawing.Point(780, 68);
-            this.panelVersionTable.Name = "panelVersionTable";
-            this.panelVersionTable.Size = new System.Drawing.Size(132, 213);
-            this.panelVersionTable.TabIndex = 91;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(10, 173);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 17);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "15 = Office 2013";
-            // 
-            // labelNetOfficeVersion
-            // 
-            this.labelNetOfficeVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNetOfficeVersion.AutoSize = true;
-            this.labelNetOfficeVersion.BackColor = System.Drawing.Color.Transparent;
-            this.labelNetOfficeVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelNetOfficeVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNetOfficeVersion.ForeColor = System.Drawing.Color.White;
-            this.labelNetOfficeVersion.Location = new System.Drawing.Point(80, 316);
-            this.labelNetOfficeVersion.Name = "labelNetOfficeVersion";
-            this.labelNetOfficeVersion.Size = new System.Drawing.Size(162, 17);
-            this.labelNetOfficeVersion.TabIndex = 92;
-            this.labelNetOfficeVersion.Text = "Highest NO compatibilty";
-            // 
-            // labelDebugHint
-            // 
-            this.labelDebugHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelDebugHint.AutoSize = true;
-            this.labelDebugHint.BackColor = System.Drawing.Color.Transparent;
-            this.labelDebugHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelDebugHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDebugHint.ForeColor = System.Drawing.Color.DimGray;
-            this.labelDebugHint.Location = new System.Drawing.Point(107, 480);
-            this.labelDebugHint.Name = "labelDebugHint";
-            this.labelDebugHint.Size = new System.Drawing.Size(550, 13);
-            this.labelDebugHint.TabIndex = 93;
-            this.labelDebugHint.Text = "Check your assembly alyways in the debug version. an optimized release assembly l" +
-                "ost some informations.";
-            this.labelDebugHint.Visible = false;
-            // 
-            // labelCurrentNetOffice
-            // 
-            this.labelCurrentNetOffice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelCurrentNetOffice.AutoSize = true;
-            this.labelCurrentNetOffice.BackColor = System.Drawing.Color.Transparent;
-            this.labelCurrentNetOffice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelCurrentNetOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentNetOffice.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelCurrentNetOffice.Location = new System.Drawing.Point(27, 317);
-            this.labelCurrentNetOffice.Name = "labelCurrentNetOffice";
-            this.labelCurrentNetOffice.Size = new System.Drawing.Size(52, 16);
-            this.labelCurrentNetOffice.TabIndex = 95;
-            this.labelCurrentNetOffice.Text = "1.7.2.0";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Orange;
-            this.panel1.Controls.Add(this.textBoxAssembly);
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(104, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 25);
-            this.panel1.TabIndex = 96;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 316);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox2.TabIndex = 96;
-            this.pictureBox2.TabStop = false;
-            // 
-            // labelBadImageError
-            // 
-            this.labelBadImageError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelBadImageError.AutoSize = true;
-            this.labelBadImageError.BackColor = System.Drawing.SystemColors.Control;
-            this.labelBadImageError.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelBadImageError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBadImageError.ForeColor = System.Drawing.Color.DimGray;
-            this.labelBadImageError.Location = new System.Drawing.Point(108, 449);
-            this.labelBadImageError.Name = "labelBadImageError";
-            this.labelBadImageError.Size = new System.Drawing.Size(361, 13);
-            this.labelBadImageError.TabIndex = 97;
-            this.labelBadImageError.Text = "The choosen file is not a valid .NET assembly. (BadImageFormatException)";
-            this.labelBadImageError.Visible = false;
-            // 
-            // labelNoNetOfficeError
-            // 
-            this.labelNoNetOfficeError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNoNetOfficeError.AutoSize = true;
-            this.labelNoNetOfficeError.BackColor = System.Drawing.Color.Transparent;
-            this.labelNoNetOfficeError.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelNoNetOfficeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoNetOfficeError.ForeColor = System.Drawing.Color.DimGray;
-            this.labelNoNetOfficeError.Location = new System.Drawing.Point(107, 464);
-            this.labelNoNetOfficeError.Name = "labelNoNetOfficeError";
-            this.labelNoNetOfficeError.Size = new System.Drawing.Size(256, 13);
-            this.labelNoNetOfficeError.TabIndex = 98;
-            this.labelNoNetOfficeError.Text = "This assembly has no direct connection to NetOffice.";
-            this.labelNoNetOfficeError.Visible = false;
             // 
             // tableLayoutResult
             // 
@@ -937,7 +622,7 @@
             this.labelOutlook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelOutlook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelOutlook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOutlook.ForeColor = System.Drawing.Color.DimGray;
+            this.labelOutlook.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelOutlook.Location = new System.Drawing.Point(5, 125);
             this.labelOutlook.Name = "labelOutlook";
             this.labelOutlook.Size = new System.Drawing.Size(307, 29);
@@ -967,7 +652,7 @@
             this.labelExcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExcel.ForeColor = System.Drawing.Color.DimGray;
+            this.labelExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelExcel.Location = new System.Drawing.Point(5, 63);
             this.labelExcel.Name = "labelExcel";
             this.labelExcel.Size = new System.Drawing.Size(307, 29);
@@ -1307,7 +992,7 @@
             this.labelAccess.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelAccess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelAccess.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccess.ForeColor = System.Drawing.Color.DimGray;
+            this.labelAccess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelAccess.Location = new System.Drawing.Point(5, 187);
             this.labelAccess.Name = "labelAccess";
             this.labelAccess.Size = new System.Drawing.Size(307, 34);
@@ -1449,13 +1134,328 @@
             this.labelVisio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelVisio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVisio.ForeColor = System.Drawing.Color.DimGray;
+            this.labelVisio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelVisio.Location = new System.Drawing.Point(5, 256);
             this.labelVisio.Name = "labelVisio";
             this.labelVisio.Size = new System.Drawing.Size(307, 31);
             this.labelVisio.TabIndex = 111;
             this.labelVisio.Text = "Visio";
             this.labelVisio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelCurrentNetOffice
+            // 
+            this.labelCurrentNetOffice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelCurrentNetOffice.AutoSize = true;
+            this.labelCurrentNetOffice.BackColor = System.Drawing.Color.Transparent;
+            this.labelCurrentNetOffice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelCurrentNetOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrentNetOffice.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelCurrentNetOffice.Location = new System.Drawing.Point(27, 317);
+            this.labelCurrentNetOffice.Name = "labelCurrentNetOffice";
+            this.labelCurrentNetOffice.Size = new System.Drawing.Size(52, 16);
+            this.labelCurrentNetOffice.TabIndex = 95;
+            this.labelCurrentNetOffice.Text = "1.7.2.0";
+            // 
+            // labelNetOfficeVersion
+            // 
+            this.labelNetOfficeVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNetOfficeVersion.AutoSize = true;
+            this.labelNetOfficeVersion.BackColor = System.Drawing.Color.Transparent;
+            this.labelNetOfficeVersion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelNetOfficeVersion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNetOfficeVersion.ForeColor = System.Drawing.Color.White;
+            this.labelNetOfficeVersion.Location = new System.Drawing.Point(80, 316);
+            this.labelNetOfficeVersion.Name = "labelNetOfficeVersion";
+            this.labelNetOfficeVersion.Size = new System.Drawing.Size(162, 17);
+            this.labelNetOfficeVersion.TabIndex = 92;
+            this.labelNetOfficeVersion.Text = "Highest NO compatibilty";
+            // 
+            // linkLabelNotSupported
+            // 
+            this.linkLabelNotSupported.AutoSize = true;
+            this.linkLabelNotSupported.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabelNotSupported.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelNotSupported.Location = new System.Drawing.Point(560, 72);
+            this.linkLabelNotSupported.Name = "linkLabelNotSupported";
+            this.linkLabelNotSupported.Size = new System.Drawing.Size(157, 17);
+            this.linkLabelNotSupported.TabIndex = 88;
+            this.linkLabelNotSupported.TabStop = true;
+            this.linkLabelNotSupported.Text = "= Version is unsupported";
+            this.linkLabelNotSupported.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelNotSupported_LinkClicked);
+            // 
+            // pictureBoxNotSupported
+            // 
+            this.pictureBoxNotSupported.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxNotSupported.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNotSupported.Image")));
+            this.pictureBoxNotSupported.Location = new System.Drawing.Point(537, 72);
+            this.pictureBoxNotSupported.Name = "pictureBoxNotSupported";
+            this.pictureBoxNotSupported.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxNotSupported.TabIndex = 86;
+            this.pictureBoxNotSupported.TabStop = false;
+            // 
+            // labelVersionNotOk
+            // 
+            this.labelVersionNotOk.AutoSize = true;
+            this.labelVersionNotOk.BackColor = System.Drawing.Color.Transparent;
+            this.labelVersionNotOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelVersionNotOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionNotOk.ForeColor = System.Drawing.Color.DimGray;
+            this.labelVersionNotOk.Location = new System.Drawing.Point(334, 72);
+            this.labelVersionNotOk.Name = "labelVersionNotOk";
+            this.labelVersionNotOk.Size = new System.Drawing.Size(170, 17);
+            this.labelVersionNotOk.TabIndex = 85;
+            this.labelVersionNotOk.Text = "= Version is not compatible";
+            // 
+            // labelVersionOk
+            // 
+            this.labelVersionOk.AutoSize = true;
+            this.labelVersionOk.BackColor = System.Drawing.Color.Transparent;
+            this.labelVersionOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelVersionOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionOk.ForeColor = System.Drawing.Color.DimGray;
+            this.labelVersionOk.Location = new System.Drawing.Point(137, 72);
+            this.labelVersionOk.Name = "labelVersionOk";
+            this.labelVersionOk.Size = new System.Drawing.Size(147, 17);
+            this.labelVersionOk.TabIndex = 84;
+            this.labelVersionOk.Text = "= Version is compatible";
+            // 
+            // pictureBoxOk
+            // 
+            this.pictureBoxOk.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxOk.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOk.Image")));
+            this.pictureBoxOk.Location = new System.Drawing.Point(115, 73);
+            this.pictureBoxOk.Name = "pictureBoxOk";
+            this.pictureBoxOk.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxOk.TabIndex = 83;
+            this.pictureBoxOk.TabStop = false;
+            // 
+            // pictureBoxProblem
+            // 
+            this.pictureBoxProblem.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProblem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProblem.Image")));
+            this.pictureBoxProblem.Location = new System.Drawing.Point(313, 72);
+            this.pictureBoxProblem.Name = "pictureBoxProblem";
+            this.pictureBoxProblem.Size = new System.Drawing.Size(16, 16);
+            this.pictureBoxProblem.TabIndex = 82;
+            this.pictureBoxProblem.TabStop = false;
+            // 
+            // panelAssemblyError
+            // 
+            this.panelAssemblyError.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelAssemblyError.BackColor = System.Drawing.Color.Transparent;
+            this.panelAssemblyError.Controls.Add(this.pictureBox27);
+            this.panelAssemblyError.Controls.Add(this.labelErrorMessage);
+            this.panelAssemblyError.Location = new System.Drawing.Point(104, 42);
+            this.panelAssemblyError.Name = "panelAssemblyError";
+            this.panelAssemblyError.Size = new System.Drawing.Size(654, 24);
+            this.panelAssemblyError.TabIndex = 77;
+            this.panelAssemblyError.Visible = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
+            this.pictureBox27.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox27.TabIndex = 81;
+            this.pictureBox27.TabStop = false;
+            // 
+            // labelErrorMessage
+            // 
+            this.labelErrorMessage.AutoSize = true;
+            this.labelErrorMessage.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelErrorMessage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.labelErrorMessage.Location = new System.Drawing.Point(26, 4);
+            this.labelErrorMessage.Name = "labelErrorMessage";
+            this.labelErrorMessage.Size = new System.Drawing.Size(185, 16);
+            this.labelErrorMessage.TabIndex = 72;
+            this.labelErrorMessage.Text = "Unable to load assembly.";
+            // 
+            // labelVersionTable
+            // 
+            this.labelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelVersionTable.AutoSize = true;
+            this.labelVersionTable.BackColor = System.Drawing.Color.Transparent;
+            this.labelVersionTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelVersionTable.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVersionTable.ForeColor = System.Drawing.Color.White;
+            this.labelVersionTable.Location = new System.Drawing.Point(24, 4);
+            this.labelVersionTable.Name = "labelVersionTable";
+            this.labelVersionTable.Size = new System.Drawing.Size(81, 17);
+            this.labelVersionTable.TabIndex = 78;
+            this.labelVersionTable.Text = "Versiontable";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(10, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 17);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "09 = Office 2000";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(10, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 17);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "10 = Office 2002";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(10, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 17);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "11 = Office 2003";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(10, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 17);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "12 = Office 2007";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(10, 145);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 17);
+            this.label7.TabIndex = 89;
+            this.label7.Text = "14 = Office 2010";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.TabIndex = 90;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panelVersionTable
+            // 
+            this.panelVersionTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelVersionTable.Controls.Add(this.label8);
+            this.panelVersionTable.Controls.Add(this.pictureBox1);
+            this.panelVersionTable.Controls.Add(this.label7);
+            this.panelVersionTable.Controls.Add(this.label6);
+            this.panelVersionTable.Controls.Add(this.label5);
+            this.panelVersionTable.Controls.Add(this.label4);
+            this.panelVersionTable.Controls.Add(this.label3);
+            this.panelVersionTable.Controls.Add(this.labelVersionTable);
+            this.panelVersionTable.Location = new System.Drawing.Point(780, 68);
+            this.panelVersionTable.Name = "panelVersionTable";
+            this.panelVersionTable.Size = new System.Drawing.Size(132, 213);
+            this.panelVersionTable.TabIndex = 91;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Blue;
+            this.label8.Location = new System.Drawing.Point(10, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 17);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "15 = Office 2013";
+            // 
+            // labelDebugHint
+            // 
+            this.labelDebugHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelDebugHint.AutoSize = true;
+            this.labelDebugHint.BackColor = System.Drawing.Color.Transparent;
+            this.labelDebugHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelDebugHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDebugHint.ForeColor = System.Drawing.Color.DimGray;
+            this.labelDebugHint.Location = new System.Drawing.Point(107, 480);
+            this.labelDebugHint.Name = "labelDebugHint";
+            this.labelDebugHint.Size = new System.Drawing.Size(550, 13);
+            this.labelDebugHint.TabIndex = 93;
+            this.labelDebugHint.Text = "Check your assembly alyways in the debug version. an optimized release assembly l" +
+                "ost some informations.";
+            this.labelDebugHint.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Orange;
+            this.panel1.Controls.Add(this.textBoxAssembly);
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(104, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(654, 25);
+            this.panel1.TabIndex = 96;
+            // 
+            // labelBadImageError
+            // 
+            this.labelBadImageError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelBadImageError.AutoSize = true;
+            this.labelBadImageError.BackColor = System.Drawing.Color.Transparent;
+            this.labelBadImageError.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelBadImageError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBadImageError.ForeColor = System.Drawing.Color.DimGray;
+            this.labelBadImageError.Location = new System.Drawing.Point(108, 449);
+            this.labelBadImageError.Name = "labelBadImageError";
+            this.labelBadImageError.Size = new System.Drawing.Size(361, 13);
+            this.labelBadImageError.TabIndex = 97;
+            this.labelBadImageError.Text = "The choosen file is not a valid .NET assembly. (BadImageFormatException)";
+            this.labelBadImageError.Visible = false;
+            // 
+            // labelNoNetOfficeError
+            // 
+            this.labelNoNetOfficeError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNoNetOfficeError.AutoSize = true;
+            this.labelNoNetOfficeError.BackColor = System.Drawing.Color.Transparent;
+            this.labelNoNetOfficeError.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelNoNetOfficeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoNetOfficeError.ForeColor = System.Drawing.Color.DimGray;
+            this.labelNoNetOfficeError.Location = new System.Drawing.Point(107, 464);
+            this.labelNoNetOfficeError.Name = "labelNoNetOfficeError";
+            this.labelNoNetOfficeError.Size = new System.Drawing.Size(256, 13);
+            this.labelNoNetOfficeError.TabIndex = 98;
+            this.labelNoNetOfficeError.Text = "This assembly has no direct connection to NetOffice.";
+            this.labelNoNetOfficeError.Visible = false;
             // 
             // OfficeCompatibilityControl
             // 
@@ -1480,17 +1480,6 @@
             this.Size = new System.Drawing.Size(924, 496);
             this.panelResultTable.ResumeLayout(false);
             this.panelResultTable.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotSupported)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).EndInit();
-            this.panelAssemblyError.ResumeLayout(false);
-            this.panelAssemblyError.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelVersionTable.ResumeLayout(false);
-            this.panelVersionTable.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutResult.ResumeLayout(false);
             this.tableLayoutResult.PerformLayout();
@@ -1542,6 +1531,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccess09)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisio15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotSupported)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProblem)).EndInit();
+            this.panelAssemblyError.ResumeLayout(false);
+            this.panelAssemblyError.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelVersionTable.ResumeLayout(false);
+            this.panelVersionTable.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

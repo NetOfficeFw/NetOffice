@@ -78,6 +78,7 @@
             this.labelTitle.BackColor = System.Drawing.Color.Orange;
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.Black;
             this.labelTitle.Location = new System.Drawing.Point(30, 1);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(883, 21);
@@ -92,6 +93,7 @@
             this.buttonRefresh.FlatAppearance.BorderSize = 0;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
             this.buttonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefresh.Image")));
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonRefresh.Location = new System.Drawing.Point(792, 611);
@@ -188,7 +190,7 @@
             this.regValue});
             this.dataGridViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -209,6 +211,8 @@
             this.dataGridViewRegistry.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewRegistry.RowHeadersVisible = false;
             this.dataGridViewRegistry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRegistry.ShowCellErrors = false;
+            this.dataGridViewRegistry.ShowRowErrors = false;
             this.dataGridViewRegistry.Size = new System.Drawing.Size(603, 587);
             this.dataGridViewRegistry.TabIndex = 31;
             this.dataGridViewRegistry.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRegistry_CellDoubleClick);
@@ -399,8 +403,10 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearch.BackColor = System.Drawing.Color.White;
             this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.ForeColor = System.Drawing.Color.Black;
             this.textBoxSearch.Location = new System.Drawing.Point(683, 1);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(230, 25);
@@ -456,6 +462,7 @@
             // 
             // treeViewRegistry
             // 
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
             this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
             this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;

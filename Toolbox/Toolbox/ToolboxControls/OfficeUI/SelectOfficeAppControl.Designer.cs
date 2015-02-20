@@ -168,6 +168,7 @@
             this.labelInfo.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelInfo.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfo.ForeColor = System.Drawing.Color.Black;
             this.labelInfo.Location = new System.Drawing.Point(42, 7);
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(316, 13);

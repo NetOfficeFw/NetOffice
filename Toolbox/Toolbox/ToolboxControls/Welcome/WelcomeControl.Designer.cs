@@ -99,6 +99,7 @@
             this.labelBeginBottom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.labelBeginBottom.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelBeginBottom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.labelBeginBottom.ForeColor = System.Drawing.Color.Black;
             this.labelBeginBottom.Location = new System.Drawing.Point(12, 147);
             this.labelBeginBottom.Name = "labelBeginBottom";
             this.labelBeginBottom.ReadOnly = true;
@@ -115,6 +116,7 @@
             this.labelBeginTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.labelBeginTop.Cursor = System.Windows.Forms.Cursors.Default;
             this.labelBeginTop.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.labelBeginTop.ForeColor = System.Drawing.Color.Black;
             this.labelBeginTop.Location = new System.Drawing.Point(12, 51);
             this.labelBeginTop.Name = "labelBeginTop";
             this.labelBeginTop.ReadOnly = true;
@@ -255,6 +257,7 @@
             this.labelMailMe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMailMe.AutoSize = true;
             this.labelMailMe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMailMe.ForeColor = System.Drawing.Color.Black;
             this.labelMailMe.Location = new System.Drawing.Point(12, 217);
             this.labelMailMe.Name = "labelMailMe";
             this.labelMailMe.Size = new System.Drawing.Size(118, 17);
@@ -279,6 +282,7 @@
             this.labelQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelQuestion.AutoSize = true;
             this.labelQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuestion.ForeColor = System.Drawing.Color.Black;
             this.labelQuestion.Location = new System.Drawing.Point(13, 158);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(92, 17);
@@ -303,6 +307,7 @@
             this.labelUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUpdate.ForeColor = System.Drawing.Color.Black;
             this.labelUpdate.Location = new System.Drawing.Point(15, 103);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(124, 17);
@@ -324,6 +329,7 @@
             this.labelBug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBug.AutoSize = true;
             this.labelBug.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBug.ForeColor = System.Drawing.Color.Black;
             this.labelBug.Location = new System.Drawing.Point(14, 48);
             this.labelBug.Name = "labelBug";
             this.labelBug.Size = new System.Drawing.Size(83, 17);

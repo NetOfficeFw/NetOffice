@@ -43,6 +43,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.ForeColor = System.Drawing.Color.Black;
             this.labelDescription.Location = new System.Drawing.Point(40, 98);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(86, 17);
@@ -53,6 +54,7 @@
             // 
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescription.ForeColor = System.Drawing.Color.Black;
             this.textBoxDescription.Location = new System.Drawing.Point(43, 116);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(473, 25);
@@ -63,6 +65,7 @@
             // 
             this.labelClassName.AutoSize = true;
             this.labelClassName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClassName.ForeColor = System.Drawing.Color.Black;
             this.labelClassName.Location = new System.Drawing.Point(40, 33);
             this.labelClassName.Name = "labelClassName";
             this.labelClassName.Size = new System.Drawing.Size(43, 17);
@@ -73,6 +76,7 @@
             // 
             this.textBoxClassName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxClassName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClassName.ForeColor = System.Drawing.Color.Black;
             this.errorProvider1.SetIconAlignment(this.textBoxClassName, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
             this.textBoxClassName.Location = new System.Drawing.Point(43, 51);
             this.textBoxClassName.Name = "textBoxClassName";

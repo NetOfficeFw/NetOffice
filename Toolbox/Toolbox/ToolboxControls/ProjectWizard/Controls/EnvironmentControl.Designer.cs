@@ -70,6 +70,7 @@
             this.labelProgrammingLanguage.AutoSize = true;
             this.labelProgrammingLanguage.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelProgrammingLanguage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProgrammingLanguage.ForeColor = System.Drawing.Color.Black;
             this.labelProgrammingLanguage.Location = new System.Drawing.Point(42, 11);
             this.labelProgrammingLanguage.Name = "labelProgrammingLanguage";
             this.labelProgrammingLanguage.Size = new System.Drawing.Size(65, 17);
@@ -122,6 +123,7 @@
             this.labelNetRuntime.AutoSize = true;
             this.labelNetRuntime.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelNetRuntime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNetRuntime.ForeColor = System.Drawing.Color.Black;
             this.labelNetRuntime.Location = new System.Drawing.Point(65, 181);
             this.labelNetRuntime.Name = "labelNetRuntime";
             this.labelNetRuntime.Size = new System.Drawing.Size(86, 17);
@@ -143,6 +145,7 @@
             this.labelEnvironment.AutoSize = true;
             this.labelEnvironment.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelEnvironment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEnvironment.ForeColor = System.Drawing.Color.Black;
             this.labelEnvironment.Location = new System.Drawing.Point(45, 7);
             this.labelEnvironment.Name = "labelEnvironment";
             this.labelEnvironment.Size = new System.Drawing.Size(80, 17);
@@ -206,8 +209,9 @@
             // labelNet45Hint
             // 
             this.labelNet45Hint.AutoSize = true;
-            this.labelNet45Hint.BackColor = System.Drawing.Color.Khaki;
+            this.labelNet45Hint.BackColor = System.Drawing.Color.Orange;
             this.labelNet45Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNet45Hint.ForeColor = System.Drawing.Color.Black;
             this.labelNet45Hint.Location = new System.Drawing.Point(455, 7);
             this.labelNet45Hint.Name = "labelNet45Hint";
             this.labelNet45Hint.Size = new System.Drawing.Size(205, 16);

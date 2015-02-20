@@ -54,10 +54,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelHint = new System.Windows.Forms.Label();
             this.panelHint = new System.Windows.Forms.Panel();
+            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
-            this.buttonCreateProject = new NetOffice.DeveloperToolbox.Controls.Buttons.RoundedButton();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.controlBackColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.Colors.ControlBackColorAnimator(this.components);
             this.panelLeftHeader.SuspendLayout();
@@ -226,6 +226,7 @@
             this.labelCaption.AutoSize = true;
             this.labelCaption.BackColor = System.Drawing.Color.White;
             this.labelCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCaption.ForeColor = System.Drawing.Color.Black;
             this.labelCaption.Location = new System.Drawing.Point(14, 13);
             this.labelCaption.Name = "labelCaption";
             this.labelCaption.Size = new System.Drawing.Size(56, 17);
@@ -248,6 +249,7 @@
             this.labelDescription.AutoSize = true;
             this.labelDescription.BackColor = System.Drawing.Color.White;
             this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.ForeColor = System.Drawing.Color.Black;
             this.labelDescription.Location = new System.Drawing.Point(30, 34);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(74, 17);
@@ -260,6 +262,7 @@
             this.cancelButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.Black;
             this.cancelButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelButton.Image")));
             this.cancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cancelButton.Location = new System.Drawing.Point(520, 445);
@@ -275,6 +278,7 @@
             this.finishButton.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.finishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.finishButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finishButton.ForeColor = System.Drawing.Color.Black;
             this.finishButton.Image = ((System.Drawing.Image)(resources.GetObject("finishButton.Image")));
             this.finishButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.finishButton.Location = new System.Drawing.Point(406, 445);
@@ -292,6 +296,7 @@
             this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.Color.Black;
             this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
             this.backButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.backButton.Location = new System.Drawing.Point(654, 445);
@@ -308,6 +313,7 @@
             this.nextButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.ForeColor = System.Drawing.Color.Black;
             this.nextButton.Image = ((System.Drawing.Image)(resources.GetObject("nextButton.Image")));
             this.nextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.nextButton.Location = new System.Drawing.Point(774, 445);
@@ -368,6 +374,23 @@
             this.panelHint.Size = new System.Drawing.Size(747, 373);
             this.panelHint.TabIndex = 93;
             // 
+            // buttonCreateProject
+            // 
+            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
+            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
+            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
+            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateProject.Location = new System.Drawing.Point(230, 341);
+            this.buttonCreateProject.Name = "buttonCreateProject";
+            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
+            this.buttonCreateProject.TabIndex = 95;
+            this.buttonCreateProject.Text = "Create New Project";
+            this.buttonCreateProject.UseVisualStyleBackColor = true;
+            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
@@ -394,23 +417,6 @@
             this.imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListIcons.Images.SetKeyName(0, "question.png");
             this.imageListIcons.Images.SetKeyName(1, "information.png");
-            // 
-            // buttonCreateProject
-            // 
-            this.buttonCreateProject.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonCreateProject.FlatAppearance.BorderSize = 2;
-            this.buttonCreateProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCreateProject.ForeColor = System.Drawing.Color.DarkBlue;
-            this.buttonCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateProject.Image")));
-            this.buttonCreateProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateProject.Location = new System.Drawing.Point(230, 341);
-            this.buttonCreateProject.Name = "buttonCreateProject";
-            this.buttonCreateProject.Size = new System.Drawing.Size(284, 29);
-            this.buttonCreateProject.TabIndex = 95;
-            this.buttonCreateProject.Text = "Create New Project";
-            this.buttonCreateProject.UseVisualStyleBackColor = true;
-            this.buttonCreateProject.Click += new System.EventHandler(this.buttonCreateProject_Click);
             // 
             // controlForeColorAnimator1
             // 

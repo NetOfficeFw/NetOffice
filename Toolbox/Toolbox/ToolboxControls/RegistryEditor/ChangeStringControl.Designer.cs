@@ -40,6 +40,7 @@
             // 
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOK.ForeColor = System.Drawing.Color.Black;
             this.buttonOK.Location = new System.Drawing.Point(170, 107);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(74, 22);
@@ -52,6 +53,7 @@
             // 
             this.buttonAbort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAbort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbort.ForeColor = System.Drawing.Color.Black;
             this.buttonAbort.Location = new System.Drawing.Point(257, 107);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(74, 22);
@@ -64,6 +66,7 @@
             // 
             this.textBoxValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxValue.ForeColor = System.Drawing.Color.Black;
             this.textBoxValue.Location = new System.Drawing.Point(12, 71);
             this.textBoxValue.Name = "textBoxValue";
             this.textBoxValue.Size = new System.Drawing.Size(320, 23);
@@ -72,6 +75,7 @@
             // labelValue
             // 
             this.labelValue.AutoSize = true;
+            this.labelValue.ForeColor = System.Drawing.Color.Black;
             this.labelValue.Location = new System.Drawing.Point(9, 55);
             this.labelValue.Name = "labelValue";
             this.labelValue.Size = new System.Drawing.Size(36, 13);
@@ -81,6 +85,7 @@
             // textBoxName
             // 
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxName.ForeColor = System.Drawing.Color.Black;
             this.textBoxName.Location = new System.Drawing.Point(12, 26);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
@@ -90,6 +95,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
+            this.labelName.ForeColor = System.Drawing.Color.Black;
             this.labelName.Location = new System.Drawing.Point(9, 10);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(36, 13);

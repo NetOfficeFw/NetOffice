@@ -372,34 +372,34 @@
             "Tajik",
             "Tamazight (Arabic)",
             "Tamazight (Latin)",
-            "Tamil\t0449\t1097",
-            "Tatar\t0444\t1092",
-            "Telugu\t044a\t1098",
-            "Thai\t041e\t1054",
-            "Tibetan-Bhutan\t0851\t2129",
-            "Tibetan-People\'s Republic of China\t0451\t1105",
-            "Tigrigna-Eritrea\t0873\t2163",
-            "Tigrigna-Ethiopia\t0473\t1139",
-            "Tsonga\t0431\t1073",
-            "Tswana\t0432\t1074",
-            "Turkish\t041f\t1055",
-            "Turkmen\t0442\t1090",
-            "Uighur-China\t0480\t1152",
-            "Ukrainian\t0422\t1058",
-            "Urdu\t0420\t1056",
-            "Urdu-India\t0820\t2080",
-            "Uzbek (Cyrillic)\t0843\t2115",
-            "Uzbek (Latin)\t0443\t1091",
-            "Venda\t0433\t1075",
-            "Vietnamese\t042a\t1066",
-            "Welsh\t0452\t1106",
-            "Wolof\t0488\t1160",
-            "Xhosa\t0434\t1076",
-            "Yakut\t0485\t1157",
-            "Yi\t0478\t1144",
-            "Yiddish\t043d\t1085",
-            "Yoruba\t046a\t1130",
-            "Zulu\t0435\t1077"});
+            "Tamil",
+            "Tatar",
+            "Telugu",
+            "Thai",
+            "Tibetan-Bhutan",
+            "Tibetan-People\'s Republic of China",
+            "Tigrigna-Eritrea",
+            "Tigrigna-Ethiopia",
+            "Tsonga",
+            "Tswana",
+            "Turkish",
+            "Turkmen",
+            "Uighur-China",
+            "Ukrainian",
+            "Urdu",
+            "Urdu-India",
+            "Uzbek (Cyrillic)",
+            "Uzbek (Latin)",
+            "Venda",
+            "Vietnamese",
+            "Welsh",
+            "Wolof",
+            "Xhosa",
+            "Yakut",
+            "Yi",
+            "Yiddish",
+            "Yoruba",
+            "Zulu"});
             this.textBoxNameGlobal.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBoxNameGlobal.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxNameGlobal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -548,7 +548,6 @@
             // textBoxLanguageID
             // 
             this.textBoxLanguageID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.errorProvider1.SetIconAlignment(this.textBoxLanguageID, System.Windows.Forms.ErrorIconAlignment.TopLeft);
             this.textBoxLanguageID.Location = new System.Drawing.Point(181, 173);
             this.textBoxLanguageID.Name = "textBoxLanguageID";
             this.textBoxLanguageID.Size = new System.Drawing.Size(247, 20);
@@ -576,6 +575,7 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // LanguageSummaryControl

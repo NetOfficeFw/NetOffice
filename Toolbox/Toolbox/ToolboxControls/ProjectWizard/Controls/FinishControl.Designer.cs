@@ -115,6 +115,7 @@
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonClose.FlatAppearance.BorderSize = 2;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.Black;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonClose.Location = new System.Drawing.Point(6, 117);
@@ -131,6 +132,7 @@
             this.buttonOpenFolder.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonOpenFolder.FlatAppearance.BorderSize = 2;
             this.buttonOpenFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenFolder.ForeColor = System.Drawing.Color.Black;
             this.buttonOpenFolder.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenFolder.Image")));
             this.buttonOpenFolder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOpenFolder.Location = new System.Drawing.Point(6, 61);
@@ -148,6 +150,7 @@
             this.buttonOpenSolution.FlatAppearance.BorderSize = 2;
             this.buttonOpenSolution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOpenSolution.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOpenSolution.ForeColor = System.Drawing.Color.Black;
             this.buttonOpenSolution.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenSolution.Image")));
             this.buttonOpenSolution.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOpenSolution.Location = new System.Drawing.Point(6, 4);

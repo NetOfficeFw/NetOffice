@@ -67,6 +67,9 @@
             this.labelRegistryValues = new System.Windows.Forms.Label();
             this.dataGridViewValues = new System.Windows.Forms.DataGridView();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnWert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDeactivatedElements = new System.Windows.Forms.Panel();
             this.labelDeactiveElementCaption = new System.Windows.Forms.Label();
             this.labelDisabledRegistryPath = new System.Windows.Forms.Label();
@@ -99,9 +102,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnTyp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnWert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -159,6 +159,7 @@
             this.treeViewRegistry.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
             this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeViewRegistry.HideSelection = false;
@@ -303,6 +304,7 @@
             this.labelTrayhint.BackColor = System.Drawing.Color.Orange;
             this.labelTrayhint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelTrayhint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrayhint.ForeColor = System.Drawing.Color.Black;
             this.labelTrayhint.Location = new System.Drawing.Point(230, 20);
             this.labelTrayhint.Name = "labelTrayhint";
             this.labelTrayhint.Size = new System.Drawing.Size(373, 34);
@@ -423,6 +425,7 @@
             // 
             this.labelNoAdminHint.BackColor = System.Drawing.Color.Orange;
             this.labelNoAdminHint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoAdminHint.ForeColor = System.Drawing.Color.Black;
             this.labelNoAdminHint.Location = new System.Drawing.Point(260, 3);
             this.labelNoAdminHint.Name = "labelNoAdminHint";
             this.labelNoAdminHint.Size = new System.Drawing.Size(322, 34);
@@ -484,6 +487,7 @@
             // 
             this.labelClickInfo.AutoSize = true;
             this.labelClickInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClickInfo.ForeColor = System.Drawing.Color.Black;
             this.labelClickInfo.Location = new System.Drawing.Point(34, 40);
             this.labelClickInfo.Name = "labelClickInfo";
             this.labelClickInfo.Size = new System.Drawing.Size(484, 17);
@@ -548,6 +552,27 @@
             this.Image.ReadOnly = true;
             this.Image.Width = 30;
             // 
+            // columnName
+            // 
+            this.columnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnName.Frozen = true;
+            this.columnName.HeaderText = "Name";
+            this.columnName.Name = "columnName";
+            this.columnName.Width = 61;
+            // 
+            // columnTyp
+            // 
+            this.columnTyp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.columnTyp.HeaderText = "Typ";
+            this.columnTyp.Name = "columnTyp";
+            this.columnTyp.Width = 49;
+            // 
+            // columnWert
+            // 
+            this.columnWert.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.columnWert.HeaderText = "Value";
+            this.columnWert.Name = "columnWert";
+            // 
             // panelDeactivatedElements
             // 
             this.panelDeactivatedElements.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -570,6 +595,7 @@
             // 
             this.labelDeactiveElementCaption.AutoSize = true;
             this.labelDeactiveElementCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeactiveElementCaption.ForeColor = System.Drawing.Color.Black;
             this.labelDeactiveElementCaption.Location = new System.Drawing.Point(3, 0);
             this.labelDeactiveElementCaption.Name = "labelDeactiveElementCaption";
             this.labelDeactiveElementCaption.Size = new System.Drawing.Size(125, 13);
@@ -760,6 +786,7 @@
             // 
             this.labelUnkownValue.AutoSize = true;
             this.labelUnkownValue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUnkownValue.ForeColor = System.Drawing.Color.Black;
             this.labelUnkownValue.Location = new System.Drawing.Point(326, 2);
             this.labelUnkownValue.Name = "labelUnkownValue";
             this.labelUnkownValue.Size = new System.Drawing.Size(81, 17);
@@ -770,6 +797,7 @@
             // 
             this.labelAccessError.AutoSize = true;
             this.labelAccessError.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccessError.ForeColor = System.Drawing.Color.Black;
             this.labelAccessError.Location = new System.Drawing.Point(473, 2);
             this.labelAccessError.Name = "labelAccessError";
             this.labelAccessError.Size = new System.Drawing.Size(85, 17);
@@ -780,6 +808,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(25, 2);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(111, 17);
@@ -817,6 +846,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(174, 2);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(111, 17);
@@ -861,41 +891,18 @@
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 60;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn2.HeaderText = "Typ";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 50;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.HeaderText = "Value";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // columnName
-            // 
-            this.columnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnName.Frozen = true;
-            this.columnName.HeaderText = "Name";
-            this.columnName.Name = "columnName";
-            this.columnName.Width = 61;
-            // 
-            // columnTyp
-            // 
-            this.columnTyp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.columnTyp.HeaderText = "Typ";
-            this.columnTyp.Name = "columnTyp";
-            this.columnTyp.Width = 49;
-            // 
-            // columnWert
-            // 
-            this.columnWert.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.columnWert.HeaderText = "Value";
-            this.columnWert.Name = "columnWert";
             // 
             // AddinGuardControl
             // 

@@ -40,6 +40,7 @@
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOK.ForeColor = System.Drawing.Color.Black;
             this.buttonOK.Location = new System.Drawing.Point(216, 284);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(74, 22);
@@ -52,6 +53,7 @@
             this.buttonAbort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAbort.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAbort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbort.ForeColor = System.Drawing.Color.Black;
             this.buttonAbort.Location = new System.Drawing.Point(303, 284);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(74, 22);
@@ -64,6 +66,7 @@
             this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxName.ForeColor = System.Drawing.Color.Black;
             this.textBoxName.Location = new System.Drawing.Point(20, 26);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
@@ -73,6 +76,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
+            this.labelName.ForeColor = System.Drawing.Color.Black;
             this.labelName.Location = new System.Drawing.Point(17, 10);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(36, 13);
@@ -88,6 +92,7 @@
             this.hexBox.BytesPerLine = 7;
             this.hexBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.hexBox.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hexBox.ForeColor = System.Drawing.Color.Black;
             this.hexBox.HexCasing = NetOffice.DeveloperToolbox.Controls.Hex.HexCasing.Lower;
             this.hexBox.LineInfoForeColor = System.Drawing.Color.Empty;
             this.hexBox.LineInfoVisible = true;

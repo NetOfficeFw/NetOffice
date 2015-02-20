@@ -84,6 +84,7 @@
             // 
             this.labelLog.AutoSize = true;
             this.labelLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLog.ForeColor = System.Drawing.Color.Black;
             this.labelLog.Location = new System.Drawing.Point(20, 263);
             this.labelLog.Name = "labelLog";
             this.labelLog.Size = new System.Drawing.Size(58, 16);
@@ -125,6 +126,7 @@
             // labelHint
             // 
             this.labelHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.Black;
             this.labelHint.Location = new System.Drawing.Point(406, 89);
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(432, 36);
@@ -136,6 +138,7 @@
             // 
             this.labelSources.AutoSize = true;
             this.labelSources.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSources.ForeColor = System.Drawing.Color.Black;
             this.labelSources.Location = new System.Drawing.Point(406, 133);
             this.labelSources.Name = "labelSources";
             this.labelSources.Size = new System.Drawing.Size(127, 16);
@@ -194,6 +197,7 @@
             this.labelDidYouKnow.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelDidYouKnow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelDidYouKnow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDidYouKnow.ForeColor = System.Drawing.Color.Black;
             this.labelDidYouKnow.Location = new System.Drawing.Point(426, 59);
             this.labelDidYouKnow.Name = "labelDidYouKnow";
             this.labelDidYouKnow.Size = new System.Drawing.Size(124, 16);

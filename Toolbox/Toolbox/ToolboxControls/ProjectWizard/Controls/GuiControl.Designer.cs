@@ -43,7 +43,7 @@
             this.checkBoxClassicUISupport.AutoSize = true;
             this.checkBoxClassicUISupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxClassicUISupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxClassicUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxClassicUISupport.ForeColor = System.Drawing.Color.Black;
             this.checkBoxClassicUISupport.Location = new System.Drawing.Point(40, 33);
             this.checkBoxClassicUISupport.Name = "checkBoxClassicUISupport";
             this.checkBoxClassicUISupport.Size = new System.Drawing.Size(237, 21);
@@ -59,7 +59,7 @@
             this.checkBoxRibbonUISupport.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxRibbonUISupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxRibbonUISupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRibbonUISupport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxRibbonUISupport.ForeColor = System.Drawing.Color.Black;
             this.checkBoxRibbonUISupport.Location = new System.Drawing.Point(40, 61);
             this.checkBoxRibbonUISupport.Name = "checkBoxRibbonUISupport";
             this.checkBoxRibbonUISupport.Size = new System.Drawing.Size(204, 21);
@@ -75,7 +75,7 @@
             this.checkBoxTaskPaneSupport.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxTaskPaneSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxTaskPaneSupport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxTaskPaneSupport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxTaskPaneSupport.ForeColor = System.Drawing.Color.Black;
             this.checkBoxTaskPaneSupport.Location = new System.Drawing.Point(40, 89);
             this.checkBoxTaskPaneSupport.Name = "checkBoxTaskPaneSupport";
             this.checkBoxTaskPaneSupport.Size = new System.Drawing.Size(190, 21);
@@ -91,7 +91,7 @@
             this.checkBoxToogleButton.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxToogleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxToogleButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxToogleButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxToogleButton.ForeColor = System.Drawing.Color.Black;
             this.checkBoxToogleButton.Location = new System.Drawing.Point(40, 117);
             this.checkBoxToogleButton.Name = "checkBoxToogleButton";
             this.checkBoxToogleButton.Size = new System.Drawing.Size(323, 21);

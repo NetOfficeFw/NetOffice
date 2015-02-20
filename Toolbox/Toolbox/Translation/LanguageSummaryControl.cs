@@ -29,6 +29,7 @@ namespace NetOffice.DeveloperToolbox.Translation
         public LanguageSummaryControl()
         {
             InitializeComponent();
+             
         }
 
         #endregion
@@ -66,7 +67,7 @@ namespace NetOffice.DeveloperToolbox.Translation
                 textBoxAuthorName.DataBindings.Add("Text", _selectedLanguage, "Author", true, DataSourceUpdateMode.OnPropertyChanged);
                 textBoxAuthorSite.DataBindings.Add("Text", _selectedLanguage, "AuthorSite", true, DataSourceUpdateMode.OnPropertyChanged);
                 textBoxAuthorMail.DataBindings.Add("Text", _selectedLanguage, "AuthorMail", true, DataSourceUpdateMode.OnPropertyChanged);
-                _selectedLanguage.PropertyChanged += new PropertyChangedEventHandler(Item_PropertyChanged);            
+                _selectedLanguage.PropertyChanged += new PropertyChangedEventHandler(Item_PropertyChanged);
             }
             else
             {
@@ -79,6 +80,7 @@ namespace NetOffice.DeveloperToolbox.Translation
             }
             _initialize = false;
         }
+
         
         private string GetLanguageLCID(string languageName)
         {
@@ -108,11 +110,6 @@ namespace NetOffice.DeveloperToolbox.Translation
             return array2[languageIndex-1];
         }
 
-        private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            _selectedLanguage.IsDirty = true;
-        }
-
         private decimal ToDecimal(string value)
         { 
             decimal d = 0;
@@ -121,6 +118,22 @@ namespace NetOffice.DeveloperToolbox.Translation
                 return 0;
             else
                 return d;
+        }
+       
+        #endregion
+
+        #region Trigger
+
+        private void Item_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            try
+            {
+                _selectedLanguage.IsDirty = true;
+            }
+            catch
+            {
+                ;
+            }
         }
 
         private void linkLabelLCID_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -142,7 +155,7 @@ namespace NetOffice.DeveloperToolbox.Translation
             {
                 if (_initialize)
                     return;
-   
+
                 string lcid = GetLanguageLCID(textBoxNameGlobal.Text.Trim());
                 if (null != lcid && textBoxLanguageID.Text.Trim() == "0")
                 {

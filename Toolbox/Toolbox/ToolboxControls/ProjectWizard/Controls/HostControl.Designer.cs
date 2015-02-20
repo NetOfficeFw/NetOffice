@@ -68,7 +68,7 @@
             this.checkBoxVisio.AutoSize = true;
             this.checkBoxVisio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxVisio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxVisio.ForeColor = System.Drawing.Color.Black;
             this.checkBoxVisio.Location = new System.Drawing.Point(40, 176);
             this.checkBoxVisio.Name = "checkBoxVisio";
             this.checkBoxVisio.Size = new System.Drawing.Size(52, 21);
@@ -82,7 +82,7 @@
             this.checkBoxProject.AutoSize = true;
             this.checkBoxProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxProject.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxProject.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxProject.ForeColor = System.Drawing.Color.Black;
             this.checkBoxProject.Location = new System.Drawing.Point(40, 153);
             this.checkBoxProject.Name = "checkBoxProject";
             this.checkBoxProject.Size = new System.Drawing.Size(64, 21);
@@ -96,7 +96,7 @@
             this.checkBoxAccess.AutoSize = true;
             this.checkBoxAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxAccess.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAccess.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxAccess.ForeColor = System.Drawing.Color.Black;
             this.checkBoxAccess.Location = new System.Drawing.Point(40, 130);
             this.checkBoxAccess.Name = "checkBoxAccess";
             this.checkBoxAccess.Size = new System.Drawing.Size(63, 21);
@@ -110,7 +110,7 @@
             this.checkBoxPowerPoint.AutoSize = true;
             this.checkBoxPowerPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxPowerPoint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxPowerPoint.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxPowerPoint.ForeColor = System.Drawing.Color.Black;
             this.checkBoxPowerPoint.Location = new System.Drawing.Point(40, 107);
             this.checkBoxPowerPoint.Name = "checkBoxPowerPoint";
             this.checkBoxPowerPoint.Size = new System.Drawing.Size(93, 21);
@@ -124,7 +124,7 @@
             this.checkBoxOutlook.AutoSize = true;
             this.checkBoxOutlook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxOutlook.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOutlook.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxOutlook.ForeColor = System.Drawing.Color.Black;
             this.checkBoxOutlook.Location = new System.Drawing.Point(40, 82);
             this.checkBoxOutlook.Name = "checkBoxOutlook";
             this.checkBoxOutlook.Size = new System.Drawing.Size(70, 21);
@@ -138,7 +138,7 @@
             this.checkBoxWord.AutoSize = true;
             this.checkBoxWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxWord.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxWord.ForeColor = System.Drawing.Color.Black;
             this.checkBoxWord.Location = new System.Drawing.Point(40, 57);
             this.checkBoxWord.Name = "checkBoxWord";
             this.checkBoxWord.Size = new System.Drawing.Size(57, 21);
@@ -152,7 +152,7 @@
             this.checkBoxExcel.AutoSize = true;
             this.checkBoxExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxExcel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxExcel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.checkBoxExcel.ForeColor = System.Drawing.Color.Black;
             this.checkBoxExcel.Location = new System.Drawing.Point(40, 33);
             this.checkBoxExcel.Name = "checkBoxExcel";
             this.checkBoxExcel.Size = new System.Drawing.Size(53, 21);

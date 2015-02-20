@@ -69,6 +69,7 @@
             this.columnHeaderType,
             this.columnHeaderSource});
             this.listViewTrace.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewTrace.ForeColor = System.Drawing.Color.Black;
             this.listViewTrace.FullRowSelect = true;
             this.listViewTrace.GridLines = true;
             this.listViewTrace.Location = new System.Drawing.Point(39, 189);
@@ -105,7 +106,8 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCopyToClipboard.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonCopyToClipboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCopyToClipboard.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCopyToClipboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonCopyToClipboard.ForeColor = System.Drawing.Color.Black;
             this.buttonCopyToClipboard.Location = new System.Drawing.Point(39, 440);
             this.buttonCopyToClipboard.Name = "buttonCopyToClipboard";
             this.buttonCopyToClipboard.Size = new System.Drawing.Size(562, 26);
@@ -118,6 +120,7 @@
             // 
             this.labelExitMessage.AutoSize = true;
             this.labelExitMessage.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExitMessage.ForeColor = System.Drawing.Color.Black;
             this.labelExitMessage.Location = new System.Drawing.Point(98, 79);
             this.labelExitMessage.Name = "labelExitMessage";
             this.labelExitMessage.Size = new System.Drawing.Size(170, 13);
@@ -129,6 +132,7 @@
             // 
             this.labelErrorMessage.AutoSize = true;
             this.labelErrorMessage.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorMessage.ForeColor = System.Drawing.Color.Black;
             this.labelErrorMessage.Location = new System.Drawing.Point(98, 53);
             this.labelErrorMessage.Name = "labelErrorMessage";
             this.labelErrorMessage.Size = new System.Drawing.Size(54, 13);
@@ -140,6 +144,7 @@
             // 
             this.labelErrorCaption.AutoSize = true;
             this.labelErrorCaption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErrorCaption.ForeColor = System.Drawing.Color.Black;
             this.labelErrorCaption.Location = new System.Drawing.Point(96, 23);
             this.labelErrorCaption.Name = "labelErrorCaption";
             this.labelErrorCaption.Size = new System.Drawing.Size(157, 21);
@@ -152,7 +157,8 @@
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOK.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonOK.ForeColor = System.Drawing.Color.Black;
             this.buttonOK.Location = new System.Drawing.Point(508, 127);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(93, 25);

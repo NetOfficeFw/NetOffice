@@ -39,6 +39,7 @@
             // 
             this.labelUserCaption.AutoSize = true;
             this.labelUserCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserCaption.ForeColor = System.Drawing.Color.Black;
             this.labelUserCaption.Location = new System.Drawing.Point(40, 33);
             this.labelUserCaption.Name = "labelUserCaption";
             this.labelUserCaption.Size = new System.Drawing.Size(317, 16);
@@ -66,6 +67,7 @@
             // 
             this.labelLoadCaption.AutoSize = true;
             this.labelLoadCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoadCaption.ForeColor = System.Drawing.Color.Black;
             this.labelLoadCaption.Location = new System.Drawing.Point(43, 119);
             this.labelLoadCaption.Name = "labelLoadCaption";
             this.labelLoadCaption.Size = new System.Drawing.Size(230, 16);

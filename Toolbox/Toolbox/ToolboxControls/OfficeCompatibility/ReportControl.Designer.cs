@@ -253,6 +253,7 @@
             this.labelFilterHint.AutoSize = true;
             this.labelFilterHint.BackColor = System.Drawing.Color.Orange;
             this.labelFilterHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelFilterHint.ForeColor = System.Drawing.Color.Black;
             this.labelFilterHint.Location = new System.Drawing.Point(385, 27);
             this.labelFilterHint.Name = "labelFilterHint";
             this.labelFilterHint.Size = new System.Drawing.Size(358, 13);
