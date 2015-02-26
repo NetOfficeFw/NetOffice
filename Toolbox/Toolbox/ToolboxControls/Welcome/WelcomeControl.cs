@@ -4,12 +4,9 @@ using System.Xml;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using System.Runtime.InteropServices;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 {

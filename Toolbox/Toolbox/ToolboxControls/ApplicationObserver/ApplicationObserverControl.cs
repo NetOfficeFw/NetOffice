@@ -1,11 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Xml;
-using System.Text;
 using System.Diagnostics;
 using System.Windows.Forms;
 

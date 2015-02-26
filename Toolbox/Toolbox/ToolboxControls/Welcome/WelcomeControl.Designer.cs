@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeControl));
             this.labelVersionHint = new System.Windows.Forms.Label();
             this.panelMainLeft = new System.Windows.Forms.Panel();
-            this.labelBeginBottom = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
-            this.labelBeginTop = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.labelBeginTitle = new System.Windows.Forms.Label();
             this.pictureBoxIconLeft = new System.Windows.Forms.PictureBox();
             this.checkBoxStartAppWithWindows = new System.Windows.Forms.CheckBox();
@@ -56,6 +54,8 @@
             this.panelOptions = new System.Windows.Forms.Panel();
             this.buttonLanguageEditor = new System.Windows.Forms.Button();
             this.pictureBoxHeader = new System.Windows.Forms.PictureBox();
+            this.labelBeginBottom = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
+            this.labelBeginTop = new NetOffice.DeveloperToolbox.Controls.Text.AdvRichTextBox();
             this.controlForeColorAnimator1 = new NetOffice.DeveloperToolbox.Utils.Animation.ControlForeColorAnimator(this.components);
             this.panelMainLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconLeft)).BeginInit();
@@ -93,47 +93,14 @@
             this.panelMainLeft.Size = new System.Drawing.Size(271, 304);
             this.panelMainLeft.TabIndex = 99;
             // 
-            // labelBeginBottom
-            // 
-            this.labelBeginBottom.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.labelBeginBottom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.labelBeginBottom.Cursor = System.Windows.Forms.Cursors.Default;
-            this.labelBeginBottom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.labelBeginBottom.ForeColor = System.Drawing.Color.Black;
-            this.labelBeginBottom.Location = new System.Drawing.Point(12, 147);
-            this.labelBeginBottom.Name = "labelBeginBottom";
-            this.labelBeginBottom.ReadOnly = true;
-            this.labelBeginBottom.SelectionAlignment = NetOffice.DeveloperToolbox.Controls.Text.TextAlign.Justify;
-            this.labelBeginBottom.Size = new System.Drawing.Size(255, 104);
-            this.labelBeginBottom.TabIndex = 105;
-            this.labelBeginBottom.Text = "You can find a help button in the upper right corner of every tab. I am looking f" +
-                "orward to your message if you have any questions, suggestions, comments or reque" +
-                "sts regarding the Developer Toolbox.";
-            // 
-            // labelBeginTop
-            // 
-            this.labelBeginTop.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.labelBeginTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.labelBeginTop.Cursor = System.Windows.Forms.Cursors.Default;
-            this.labelBeginTop.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.labelBeginTop.ForeColor = System.Drawing.Color.Black;
-            this.labelBeginTop.Location = new System.Drawing.Point(12, 51);
-            this.labelBeginTop.Name = "labelBeginTop";
-            this.labelBeginTop.ReadOnly = true;
-            this.labelBeginTop.SelectionAlignment = NetOffice.DeveloperToolbox.Controls.Text.TextAlign.Justify;
-            this.labelBeginTop.Size = new System.Drawing.Size(255, 93);
-            this.labelBeginTop.TabIndex = 104;
-            this.labelBeginTop.Text = "The NetOffice Developer Toolbox supports .NET Office developers in his daily work" +
-                " with a set of helpful functions.";
-            // 
             // labelBeginTitle
             // 
             this.labelBeginTitle.AutoSize = true;
-            this.labelBeginTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBeginTitle.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBeginTitle.ForeColor = System.Drawing.Color.White;
             this.labelBeginTitle.Location = new System.Drawing.Point(39, 9);
             this.labelBeginTitle.Name = "labelBeginTitle";
-            this.labelBeginTitle.Size = new System.Drawing.Size(65, 17);
+            this.labelBeginTitle.Size = new System.Drawing.Size(82, 21);
             this.labelBeginTitle.TabIndex = 79;
             this.labelBeginTitle.Text = "Welcome";
             // 
@@ -141,7 +108,7 @@
             // 
             this.pictureBoxIconLeft.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxIconLeft.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconLeft.Image")));
-            this.pictureBoxIconLeft.Location = new System.Drawing.Point(17, 10);
+            this.pictureBoxIconLeft.Location = new System.Drawing.Point(17, 12);
             this.pictureBoxIconLeft.Name = "pictureBoxIconLeft";
             this.pictureBoxIconLeft.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconLeft.TabIndex = 77;
@@ -308,7 +275,7 @@
             this.labelUpdate.AutoSize = true;
             this.labelUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUpdate.ForeColor = System.Drawing.Color.Black;
-            this.labelUpdate.Location = new System.Drawing.Point(15, 103);
+            this.labelUpdate.Location = new System.Drawing.Point(15, 101);
             this.labelUpdate.Name = "labelUpdate";
             this.labelUpdate.Size = new System.Drawing.Size(124, 17);
             this.labelUpdate.TabIndex = 75;
@@ -318,7 +285,7 @@
             // 
             this.pictureBoxIconRight.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxIconRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconRight.Image")));
-            this.pictureBoxIconRight.Location = new System.Drawing.Point(17, 10);
+            this.pictureBoxIconRight.Location = new System.Drawing.Point(17, 12);
             this.pictureBoxIconRight.Name = "pictureBoxIconRight";
             this.pictureBoxIconRight.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconRight.TabIndex = 77;
@@ -352,11 +319,11 @@
             // labelIWant
             // 
             this.labelIWant.AutoSize = true;
-            this.labelIWant.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIWant.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIWant.ForeColor = System.Drawing.Color.White;
             this.labelIWant.Location = new System.Drawing.Point(39, 9);
             this.labelIWant.Name = "labelIWant";
-            this.labelIWant.Size = new System.Drawing.Size(63, 17);
+            this.labelIWant.Size = new System.Drawing.Size(77, 21);
             this.labelIWant.TabIndex = 76;
             this.labelIWant.Text = "I want to";
             // 
@@ -365,7 +332,7 @@
             this.linkLabelNetOfficeUpdates.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelNetOfficeUpdates.AutoSize = true;
             this.linkLabelNetOfficeUpdates.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelNetOfficeUpdates.Location = new System.Drawing.Point(16, 121);
+            this.linkLabelNetOfficeUpdates.Location = new System.Drawing.Point(16, 119);
             this.linkLabelNetOfficeUpdates.Name = "linkLabelNetOfficeUpdates";
             this.linkLabelNetOfficeUpdates.Size = new System.Drawing.Size(231, 17);
             this.linkLabelNetOfficeUpdates.TabIndex = 12;
@@ -414,6 +381,39 @@
             this.pictureBoxHeader.TabIndex = 103;
             this.pictureBoxHeader.TabStop = false;
             this.pictureBoxHeader.Visible = false;
+            // 
+            // labelBeginBottom
+            // 
+            this.labelBeginBottom.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelBeginBottom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.labelBeginBottom.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelBeginBottom.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.labelBeginBottom.ForeColor = System.Drawing.Color.Black;
+            this.labelBeginBottom.Location = new System.Drawing.Point(12, 147);
+            this.labelBeginBottom.Name = "labelBeginBottom";
+            this.labelBeginBottom.ReadOnly = true;
+            this.labelBeginBottom.SelectionAlignment = NetOffice.DeveloperToolbox.Controls.Text.TextAlign.Justify;
+            this.labelBeginBottom.Size = new System.Drawing.Size(255, 104);
+            this.labelBeginBottom.TabIndex = 105;
+            this.labelBeginBottom.Text = "You can find a help button in the upper right corner of every tab. I am looking f" +
+                "orward to your message if you have any questions, suggestions, comments or reque" +
+                "sts regarding the Developer Toolbox.";
+            // 
+            // labelBeginTop
+            // 
+            this.labelBeginTop.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.labelBeginTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.labelBeginTop.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelBeginTop.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.labelBeginTop.ForeColor = System.Drawing.Color.Black;
+            this.labelBeginTop.Location = new System.Drawing.Point(12, 51);
+            this.labelBeginTop.Name = "labelBeginTop";
+            this.labelBeginTop.ReadOnly = true;
+            this.labelBeginTop.SelectionAlignment = NetOffice.DeveloperToolbox.Controls.Text.TextAlign.Justify;
+            this.labelBeginTop.Size = new System.Drawing.Size(255, 93);
+            this.labelBeginTop.TabIndex = 104;
+            this.labelBeginTop.Text = "The NetOffice Developer Toolbox supports .NET Office developers in his daily work" +
+                " with a set of helpful functions.";
             // 
             // controlForeColorAnimator1
             // 

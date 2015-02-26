@@ -3,10 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using Microsoft.Win32;
-using System.Text;
-using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.AddinGuard

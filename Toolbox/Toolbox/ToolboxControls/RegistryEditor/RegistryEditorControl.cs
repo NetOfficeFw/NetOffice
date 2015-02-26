@@ -3,11 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Xml;
 using Microsoft.Win32;
-using System.Text;
-using System.Security.Principal;
 using System.Windows.Forms;
 using NetOffice.DeveloperToolbox.Utils.Registry;
 

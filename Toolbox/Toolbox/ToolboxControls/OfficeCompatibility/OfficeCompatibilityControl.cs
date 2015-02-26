@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.IO;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
-using System.Linq;
-using System.Xml.Linq;
 using Mono.Cecil;
-using Mono.Cecil.Cil;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {

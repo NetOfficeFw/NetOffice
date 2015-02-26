@@ -2,14 +2,13 @@
 using System.Runtime.InteropServices;
 using System;
 using System.Text;
-using System.ComponentModel;
 using System.Windows.Forms;
 using System.Drawing;
 
 namespace NetOffice.OutlookSecurity
 {
     /// <summary>
-    /// taken and modified from pinvoke.net
+    /// User32.dll imports (taken and modified from pinvoke.net)
     /// </summary>
     internal class User32
     {
@@ -60,8 +59,20 @@ namespace NetOffice.OutlookSecurity
 
         #region Delegates
         
+        /// <summary>
+        /// Window enumerator 
+        /// </summary>
+        /// <param name="hWnd">entry handle</param>
+        /// <param name="lParam">optionals</param>
+        /// <returns>true if child wnd found</returns>
         internal delegate bool EnumDelegate(IntPtr hWnd, int lParam);
 
+        /// <summary>
+        /// Callback enumerator
+        /// </summary>
+        /// <param name="hWnd">entry handle</param>
+        /// <param name="parameter">optionals</param>
+        /// <returns>true if callback found</returns>
         internal delegate bool EnumWindowProc(IntPtr hWnd, IntPtr parameter);
        
         #endregion
@@ -179,6 +190,7 @@ namespace NetOffice.OutlookSecurity
             User32.mouse_event(User32.MOUSEEVENTF_ABSOLUTE | User32.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
             SetCursorPos(MousePoint.X, MousePoint.Y);
         }
+
         #endregion
     }
 }

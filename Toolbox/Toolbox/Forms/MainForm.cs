@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.IO;
 using System.Drawing;
 using System.Xml;
-using System.Text;
 using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Reflection;
 using NetOffice.DeveloperToolbox.Translation;
 using NetOffice.DeveloperToolbox.ToolboxControls;
 
