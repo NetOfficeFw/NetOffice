@@ -19,7 +19,7 @@ namespace Sample.Server
     {
         #region Fields
 
-        private static DataEventRepeators reapters;
+        private static DataEventRepeators _repeators;
         private static string[] _availableTranslations;
 
         #endregion
@@ -79,11 +79,11 @@ namespace Sample.Server
         {
             get
             {
-                if (reapters == null)
+                if (_repeators == null)
                 {
-                    reapters = new DataEventRepeators();
+                    _repeators = new DataEventRepeators();
                 }
-                return WebTranslationService.reapters;
+                return _repeators;
             }
         }
 

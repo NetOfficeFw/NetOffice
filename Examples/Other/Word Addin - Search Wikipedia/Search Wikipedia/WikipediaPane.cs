@@ -18,6 +18,16 @@ namespace Sample.Addin
     /// </summary>
     public partial class WikipediaPane : UserControl, ITaskPane
     {
+        #region Delegates
+
+        /// <summary>
+        /// Error Async Invoker. Of course ActionT works as well but this example is also available in .NET 2.0
+        /// </summary>
+        /// <param name="exception">exception to display</param>
+        public delegate void DisplayErrorAction(Exception exception);
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -48,16 +58,32 @@ namespace Sample.Addin
         
         #endregion
 
+        #region Methods
+
+        private bool WaitForCancelation(int timeOutMS)
+        {
+            DateTime start = DateTime.Now;
+            while (backgroundWorker1.IsBusy && (DateTime.Now - start).TotalMilliseconds < timeOutMS)
+            {
+                ;
+            }
+            return !backgroundWorker1.IsBusy;
+        }
+
+        #endregion
+
         #region UI Trigger
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             try
             {
+                // run async(otherwise search is block the Word UI) we wait a second for cancelation if backgroundworker is currently busy
                 ClearError();
-                var opensearch = (from wikipedia in Datacontext.OpenSearch where wikipedia.Keyword == textBoxKeyWords.Text select wikipedia).Take(100);
-                gridResults.DataSource = opensearch.ToList();
-
+                if (backgroundWorker1.IsBusy)
+                    backgroundWorker1.CancelAsync();
+                if(WaitForCancelation(1000))
+                    backgroundWorker1.RunWorkerAsync(textBoxKeyWords.Text);
             }
             catch (Exception exception)
             {
@@ -111,7 +137,6 @@ namespace Sample.Addin
             {
                 DisplayError(exception);
             }
-           
         }
 
         #endregion
@@ -165,19 +190,71 @@ namespace Sample.Addin
 
         private void ClearError()
         {
-            labelMessage.ForeColor = Color.FromKnownColor(KnownColor.DarkBlue);
-            labelMessage.Text = "Double click in the result list to open the article in your Web Browser.";
+            if (labelMessage.InvokeRequired)
+            {
+                MethodInvoker invoker = ClearError;
+                invoker.Invoke();
+            }
+            else
+            {
+                labelMessage.ForeColor = Color.FromKnownColor(KnownColor.DarkBlue);
+                labelMessage.Text = "Double click in the result list to open the article in your Web Browser.";
+            }
         }
 
         private void DisplayError(Exception exception)
         {
-            labelMessage.ForeColor = Color.Red;
-            labelMessage.Text = "An error ocurred. Details:" + exception.Message;
+            if (labelMessage.InvokeRequired)
+            {
+                DisplayErrorAction invoker = DisplayError;
+                invoker.Invoke(exception);
+            }
+            else
+            {
+                labelMessage.ForeColor = Color.Red;
+                labelMessage.Text = "An error ocurred. Details:" + exception.Message;
+            }
         }
 
         private void ClearResult()
         {
-            gridResults.Rows.Clear();
+            if (gridResults.InvokeRequired)
+            {
+                MethodInvoker invoker = ClearResult;
+                invoker.Invoke();
+            }
+            else
+            {
+                gridResults.Rows.Clear();
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                string search = e.Argument as string;
+                var opensearch = (from wikipedia in Datacontext.OpenSearch where wikipedia.Keyword == search select wikipedia).Take(100);
+                e.Result = opensearch.ToList();
+            }
+            catch (Exception exception)
+            {
+                DisplayError(exception);                
+            }
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            try
+            {
+                ClearError();
+                List<WikipediaOpenSearchResult> result = e.Result as List<WikipediaOpenSearchResult>;
+                gridResults.DataSource = result;
+            }
+            catch (Exception exception)
+            {
+                DisplayError(exception);
+            }
         }
 
         #endregion
