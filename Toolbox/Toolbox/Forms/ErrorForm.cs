@@ -28,6 +28,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         public ErrorForm(Exception exception, string message, ErrorCategory category, int currentLanguageID)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             errorControl1.ShowError(exception, message, category, currentLanguageID);
         }
 
@@ -40,6 +41,7 @@ namespace NetOffice.DeveloperToolbox.Forms
         public ErrorForm(Exception exception, ErrorCategory category, int currentLanguageID)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             errorControl1.ShowError(exception, category, currentLanguageID);
         }
 
@@ -87,6 +89,19 @@ namespace NetOffice.DeveloperToolbox.Forms
         public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category)
         {
             ErrorForm form = new ErrorForm(exception, category, Forms.MainForm.Singleton.CurrentLanguageID );
+            form.ShowDialog(parent);
+        }
+
+        /// <summary>
+        /// Creates an instance of ErrorForm and show
+        /// </summary>
+        /// <param name="parent">modal parent</param>
+        /// <param name="exception">exception as any</param>
+        /// <param name="category">error category</param>
+        /// <param name="message">friendly header message for the user</param>
+        public static void ShowError(IWin32Window parent, Exception exception, ErrorCategory category, string message)
+        {
+            ErrorForm form = new ErrorForm(exception, message, category, Forms.MainForm.Singleton.CurrentLanguageID);
             form.ShowDialog(parent);
         }
 

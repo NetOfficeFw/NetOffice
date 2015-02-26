@@ -72,6 +72,7 @@
             this.listViewTrace.ForeColor = System.Drawing.Color.Black;
             this.listViewTrace.FullRowSelect = true;
             this.listViewTrace.GridLines = true;
+            this.listViewTrace.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewTrace.Location = new System.Drawing.Point(39, 189);
             this.listViewTrace.Name = "listViewTrace";
             this.listViewTrace.Size = new System.Drawing.Size(562, 245);
@@ -107,7 +108,7 @@
             this.buttonCopyToClipboard.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonCopyToClipboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCopyToClipboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonCopyToClipboard.ForeColor = System.Drawing.Color.Black;
+            this.buttonCopyToClipboard.ForeColor = System.Drawing.Color.Blue;
             this.buttonCopyToClipboard.Location = new System.Drawing.Point(39, 440);
             this.buttonCopyToClipboard.Name = "buttonCopyToClipboard";
             this.buttonCopyToClipboard.Size = new System.Drawing.Size(562, 26);
@@ -158,7 +159,7 @@
             this.buttonOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.buttonOK.ForeColor = System.Drawing.Color.Black;
+            this.buttonOK.ForeColor = System.Drawing.Color.Blue;
             this.buttonOK.Location = new System.Drawing.Point(508, 127);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(93, 25);

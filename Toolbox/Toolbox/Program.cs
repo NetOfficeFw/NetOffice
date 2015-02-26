@@ -17,6 +17,11 @@ namespace NetOffice.DeveloperToolbox
         private static bool? _isAdmin;
 
         /// <summary>
+        /// An error occured in the AssemblyResolve trigger. We dont show the error dialog again in Main(string[] args) in this case
+        /// </summary>
+        private static bool _isShutDown;
+
+        /// <summary>
         /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future.
         /// </summary>
         [STAThread]
@@ -42,7 +47,8 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty);
+                if(!_isShutDown)
+                    Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty);
             }
         }
 
@@ -94,32 +100,6 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Find the local root folder in debug mode. The method use the Application.Startup method path and returns the folder 3x upward.
-        /// </summary>
-        /// <returns>The current related debug root folder</returns>
-        private static string GetInternalRelativeDebugPath()
-        {
-            string result = String.Empty;
-            string[] array = Application.StartupPath.Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
-            for (int i = 0; i < array.Length - 3; i++)
-                result += array[i] + "\\";
-            return result;
-        }
-
-        /// <summary>
-        /// Analyze commandline arguments for self elevation
-        /// </summary>
-        /// <param name="args">arguments from command line</param>
-        private static void ProceedCommandLineElevationArguments(string[] args)
-        {
-            foreach (string item in args)
-            {
-                if (item.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase))
-                    SelfElevation = true;
-            }
-        } 
-
-        /// <summary>
         /// Returns the program has admin privilegs
         /// </summary>
         internal static bool IsAdmin
@@ -155,6 +135,31 @@ namespace NetOffice.DeveloperToolbox
         internal static bool SelfElevation { get; set; }
 
         /// <summary>
+        /// Find the local root folder in debug mode. The method use the Application.Startup method path and returns the folder 3x upward.
+        /// </summary>
+        /// <returns>The current related debug root folder</returns>
+        private static string GetInternalRelativeDebugPath()
+        {
+            string result = String.Empty;
+            string[] array = Application.StartupPath.Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < array.Length - 3; i++)
+                result += array[i] + "\\";
+            return result;
+        }
+
+        /// <summary>
+        /// Analyze commandline arguments for self elevation
+        /// </summary>
+        /// <param name="args">arguments from command line</param>
+        private static void ProceedCommandLineElevationArguments(string[] args)
+        {
+            foreach (string item in args)
+            {
+                if (item.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase))
+                    SelfElevation = true;
+            }
+        } 
+        /// <summary>
         /// Perform self elevation if necessary and wanted
         /// </summary>
         /// <returns>new process is sucsessfuly started</returns>
@@ -188,7 +193,15 @@ namespace NetOffice.DeveloperToolbox
         /// <param name="e">args</param>
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Forms.ErrorForm.ShowError(null, e.ExceptionObject as Exception, ErrorCategory.Penalty);
+            try
+            {
+                Forms.ErrorForm.ShowError(null, e.ExceptionObject as Exception, ErrorCategory.Penalty);
+            }
+            catch (Exception exception)
+            {
+                // no idea whats the problem right now but log the error to further investigation
+                Console.WriteLine("CurrentDomain_UnhandledException:{0}=>{1}", exception, e.ExceptionObject as Exception);   
+            }
         }
 
         /// <summary>
@@ -240,10 +253,10 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty);
+                Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty, "Unable to load a dependency.");
+                _isShutDown = true;
                 return null;
             }
         }
-
     }
 }

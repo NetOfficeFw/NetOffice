@@ -36,12 +36,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBoxWideString = new System.Windows.Forms.TextBox();
             this.textBoxString = new System.Windows.Forms.TextBox();
-            this.imageStrip = new System.Windows.Forms.ImageList(this.components);
+            this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelHint = new System.Windows.Forms.Label();
+            this.imageStrip = new System.Windows.Forms.ImageList(this.components);
             this.treeGridView1 = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridView();
             this.ColumnName = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridColumn();
-            this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,14 +111,17 @@
             this.textBoxString.Visible = false;
             this.textBoxString.TextChanged += new System.EventHandler(this.textBoxString_TextChanged);
             // 
-            // imageStrip
+            // textBoxRichString
             // 
-            this.imageStrip.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageStrip.ImageStream")));
-            this.imageStrip.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageStrip.Images.SetKeyName(0, "window_dialog.png");
-            this.imageStrip.Images.SetKeyName(1, "text.png");
-            this.imageStrip.Images.SetKeyName(2, "text_rich.png");
-            this.imageStrip.Images.SetKeyName(3, "text_rich_colored.png");
+            this.textBoxRichString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxRichString.Location = new System.Drawing.Point(31, 302);
+            this.textBoxRichString.Name = "textBoxRichString";
+            this.textBoxRichString.RichText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft S" +
+                "ans Serif;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
+            this.textBoxRichString.Size = new System.Drawing.Size(555, 114);
+            this.textBoxRichString.TabIndex = 2;
+            this.textBoxRichString.Visible = false;
+            this.textBoxRichString.TextChanged += new System.EventHandler(this.textBoxRichString_TextChanged);
             // 
             // pictureBox1
             // 
@@ -135,12 +138,21 @@
             this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelHint.AutoSize = true;
             this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHint.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.labelHint.ForeColor = System.Drawing.Color.Orange;
             this.labelHint.Location = new System.Drawing.Point(42, 508);
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(510, 21);
             this.labelHint.TabIndex = 5;
             this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
+            // 
+            // imageStrip
+            // 
+            this.imageStrip.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageStrip.ImageStream")));
+            this.imageStrip.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageStrip.Images.SetKeyName(0, "window_dialog.png");
+            this.imageStrip.Images.SetKeyName(1, "text.png");
+            this.imageStrip.Images.SetKeyName(2, "text_rich.png");
+            this.imageStrip.Images.SetKeyName(3, "text_rich_colored.png");
             // 
             // treeGridView1
             // 
@@ -189,18 +201,6 @@
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // textBoxRichString
-            // 
-            this.textBoxRichString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxRichString.Location = new System.Drawing.Point(31, 302);
-            this.textBoxRichString.Name = "textBoxRichString";
-            this.textBoxRichString.RichText = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft S" +
-                "ans Serif;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
-            this.textBoxRichString.Size = new System.Drawing.Size(555, 114);
-            this.textBoxRichString.TabIndex = 2;
-            this.textBoxRichString.Visible = false;
-            this.textBoxRichString.TextChanged += new System.EventHandler(this.textBoxRichString_TextChanged);
             // 
             // LanguageApplicationControl
             // 

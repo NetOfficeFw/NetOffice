@@ -34,11 +34,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelHint = new System.Windows.Forms.Label();
             this.textBoxRichString = new NetOffice.DeveloperToolbox.Controls.Text.RichTextEditor();
             this.textBoxWideString = new System.Windows.Forms.TextBox();
             this.textBoxString = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelHint = new System.Windows.Forms.Label();
             this.imageStrip = new System.Windows.Forms.ImageList(this.components);
             this.treeGridView1 = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridView();
             this.ColumnName = new NetOffice.DeveloperToolbox.Controls.Tree.TreeGridColumn();
@@ -89,28 +89,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "String Editor";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 512);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelHint
-            // 
-            this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelHint.AutoSize = true;
-            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHint.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.labelHint.Location = new System.Drawing.Point(42, 508);
-            this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(510, 21);
-            this.labelHint.TabIndex = 3;
-            this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
-            // 
             // textBoxRichString
             // 
             this.textBoxRichString.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -144,6 +122,28 @@
             this.textBoxString.TabIndex = 0;
             this.textBoxString.Visible = false;
             this.textBoxString.TextChanged += new System.EventHandler(this.textBoxString_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 512);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelHint
+            // 
+            this.labelHint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.ForeColor = System.Drawing.Color.Orange;
+            this.labelHint.Location = new System.Drawing.Point(42, 508);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(510, 21);
+            this.labelHint.TabIndex = 3;
+            this.labelHint.Text = "To switch between elements use also Alt + Arrow(Up+Down) keys";
             // 
             // imageStrip
             // 
