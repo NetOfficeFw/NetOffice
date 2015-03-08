@@ -13,7 +13,7 @@ using Office = NetOffice.OfficeApi;
 
 namespace TutorialsCS4
 {
-    public partial class Tutorial05 : ITutorial
+    public class Tutorial05 : ITutorial
     { 
         #region ITutorial Member
 

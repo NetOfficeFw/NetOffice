@@ -12,7 +12,7 @@ using NetOffice.ExcelApi.GlobalHelperModules;
 
 namespace TutorialsCS4
 {
-    public partial class Tutorial12 : ITutorial
+    public class Tutorial12 : ITutorial
     {
         #region ITutorial
 

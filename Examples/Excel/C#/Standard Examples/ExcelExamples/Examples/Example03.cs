@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
-
-using NetOffice;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
-using NetOffice.VBIDEApi.Enums;
 
 namespace ExcelExamplesCS4
 {

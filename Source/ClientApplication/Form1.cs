@@ -10,18 +10,7 @@ using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using Office = NetOffice.OfficeApi;
 using VBIDE = NetOffice.VBIDEApi;
-using Word = NetOffice.WordApi;
-using Outlook = NetOffice.OutlookApi;
-using PowerPoint = NetOffice.PowerPointApi;
-using Access = NetOffice.AccessApi;
-using DAO = NetOffice.DAOApi;
-using ADODB = NetOffice.ADODBApi;
-using OWC10 = NetOffice.OWC10Api;
-using MSDATASRC = NetOffice.MSDATASRCApi;
-using MSComctlLib = NetOffice.MSComctlLibApi;
-using MSProject = NetOffice.MSProjectApi;
-using MSHTML = NetOffice.MSHTMLApi;
-using Visio = NetOffice.VisioApi;
+using NOTools = NetOffice.OfficeApi.Tools;
 
 namespace ClientApplication
 {
@@ -35,8 +24,29 @@ namespace ClientApplication
         public Form1()
         {
             InitializeComponent();
-            
-            /*>> your testcode here <<*/
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            Excel.Application app = null;
+            try
+            {
+                app = new Excel.Application();
+                NOTools.CommonUtils utils = new NOTools.CommonUtils(app, typeof(Form1).Assembly);
+                utils.Dialog.SuppressOnAutomation = false;
+                utils.Dialog.SuppressOnHide = false;
+                utils.Dialog.ShowDiagnostics(true);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.ToString());
+            }
+            finally
+            {
+                app.Quit();
+                app.Dispose();
+                Close();
+            }
         }
 
         /// <summary>
@@ -67,6 +77,7 @@ namespace ClientApplication
             this.ClientSize = new System.Drawing.Size(292, 273);
             this.Name = "Form1";
             this.Text = "ClientApplication";
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.ResumeLayout(false);
 
         }

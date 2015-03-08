@@ -12,7 +12,7 @@ using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
 {
-    public partial class Tutorial04 : ITutorial
+    public class Tutorial04 : ITutorial
     {
         #region ITutorial
 

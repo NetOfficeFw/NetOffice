@@ -12,7 +12,7 @@ using Excel = NetOffice.ExcelApi;
 
 namespace TutorialsCS4
 {
-    public partial class Tutorial01 : ITutorial
+    public class Tutorial01 : ITutorial
     {
         #region ITutorial
 
@@ -76,7 +76,7 @@ namespace TutorialsCS4
 
         public string Caption
         {
-            get { return "Tutorial01"; }
+            get { return "Tutorial13"; }
         }
 
 

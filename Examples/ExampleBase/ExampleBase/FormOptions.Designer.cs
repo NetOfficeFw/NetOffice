@@ -127,10 +127,12 @@
             // 
             this.buttonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonDone.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDone.ForeColor = System.Drawing.Color.Blue;
             this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
             this.buttonDone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDone.Location = new System.Drawing.Point(134, 242);
+            this.buttonDone.Location = new System.Drawing.Point(134, 237);
             this.buttonDone.Name = "buttonDone";
             this.buttonDone.Size = new System.Drawing.Size(171, 29);
             this.buttonDone.TabIndex = 4;

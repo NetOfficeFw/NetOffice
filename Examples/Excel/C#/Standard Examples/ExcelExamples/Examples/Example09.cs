@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Reflection;
-
-using NetOffice;
-using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 using ExampleBase;
+using Office = NetOffice.OfficeApi;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.OfficeApi.Enums;
 
 namespace ExcelExamplesCS4
 {

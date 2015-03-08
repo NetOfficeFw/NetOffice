@@ -114,7 +114,9 @@
             // 
             this.buttonStartExample.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStartExample.Enabled = false;
+            this.buttonStartExample.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStartExample.ForeColor = System.Drawing.Color.Blue;
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStartExample.Location = new System.Drawing.Point(619, 18);
@@ -221,7 +223,9 @@
             // buttonOptions
             // 
             this.buttonOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOptions.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOptions.ForeColor = System.Drawing.Color.Blue;
             this.buttonOptions.Image = ((System.Drawing.Image)(resources.GetObject("buttonOptions.Image")));
             this.buttonOptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOptions.Location = new System.Drawing.Point(506, 18);

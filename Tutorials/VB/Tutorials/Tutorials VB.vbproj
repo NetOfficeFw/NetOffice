@@ -155,6 +155,7 @@
     <Compile Include="Tutorial10.vb" />
     <Compile Include="Tutorial11.vb" />
     <Compile Include="Tutorial12.vb" />
+    <Compile Include="Tutorial13.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormMain.resx">

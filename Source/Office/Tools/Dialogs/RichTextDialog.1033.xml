@@ -1,0 +1,8 @@
+﻿<Dialog Name ="RichTextDialog" LCID="1033">
+  <String>
+    <String>
+      <Name>buttonClose</Name>
+      <Value>Close</Value>
+    </String>
+  </String>
+</Dialog>

@@ -16,7 +16,7 @@ namespace NetOffice.OfficeApi.Tools
     /// NetOffice COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
+    public abstract class COMAddin : COMAddinBase, IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         #region Fields
 
@@ -24,6 +24,11 @@ namespace NetOffice.OfficeApi.Tools
         /// MS-Office Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\{0}\\AddIns\\";
+
+        /// <summary>
+        /// First field in OnConnection custom argument array
+        /// </summary>
+        private int _automationCode = -1;
 
         #endregion
         
@@ -47,6 +52,11 @@ namespace NetOffice.OfficeApi.Tools
         #region Properties
 
         /// <summary>
+        /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
+        /// </summary>
+        public CommonUtils Utils { get; private set; }
+
+        /// <summary>
         /// The used factory core
         /// </summary>
         public Core Factory { get; private set; }
@@ -59,7 +69,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Host Application Instance
         /// </summary>
-        protected COMObject Application { get; private set; }
+        protected internal COMObject Application { get; private set; }
         
         /// <summary>
         /// Collection with all created custom Task Panes
@@ -144,9 +154,9 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (NetRuntimeSystem.Exception exception)
+            catch (Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
@@ -158,7 +168,7 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (NetRuntimeSystem.Exception exception)
+            catch (Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -172,9 +182,9 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (NetRuntimeSystem.Exception exception)
+            catch (Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnConnection, exception);
             }
         }
@@ -186,7 +196,7 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (NetRuntimeSystem.Exception exception)
+            catch (Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
@@ -200,6 +210,151 @@ namespace NetOffice.OfficeApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
+            catch (Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
+            }
+        }
+
+        #endregion
+
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override COMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        #endregion
+
+        #region IDTExtensibility2 Members
+
+        void IDTExtensibility2.OnStartupComplete(ref Array custom)
+        {
+            try
+            {
+                RaiseOnStartupComplete(ref custom);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
+            }
+        }
+
+        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
+        {
+            try
+            {
+                if (AttributeHelper.GetTweakAttribute(Type).Enabled == true)
+                {
+                    string registryEndPoint = TryDetectHostRegistryKey(Application);
+                    if (null != registryEndPoint)
+                        Tweaks.ApplyTweaks(Factory, this, Type, registryEndPoint);
+                }
+
+                if (custom.Length > 0)
+                {
+                    object firstCustomItem = custom.GetValue(1);
+                    string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
+                    System.Int32.TryParse(tryString, out _automationCode);
+                }
+
+                this.Application = Factory.CreateObjectFromComProxy(null, Application);
+                Utils = OnCreateUtils();
+                RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
+            }
+        }
+
+        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        {
+            try
+            {
+                Tweaks.DisposeTweaks(Factory, this, Type);
+                Utils.Dispose();
+                RaiseOnDisconnection(RemoveMode, ref custom);
+
+                foreach (ITaskPane item in TaskPaneInstances)
+                {
+                    try
+                    {
+                        item.OnDisconnection();
+                    }
+                    catch (System.Exception exception)
+                    {
+                        NetOffice.DebugConsole.Default.WriteException(exception);
+                    }
+                }
+
+                foreach (var item in TaskPanes)
+                {
+                    try
+                    {
+                        if (null != item.Pane && !item.Pane.IsDisposed)
+                            item.Pane.Dispose();
+                    }
+                    catch (System.Exception exception)
+                    {
+                        NetOffice.DebugConsole.Default.WriteException(exception);
+                    }
+                }
+
+                try
+                {
+                    if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
+                        TaskPaneFactory.Dispose();
+                }
+                catch (System.Exception exception)
+                {
+                    NetOffice.DebugConsole.Default.WriteException(exception);
+                }
+
+                try
+                {
+                    if (!Application.IsDisposed)
+                        Application.Dispose();
+                }
+                catch (System.Exception exception)
+                {
+                    NetOffice.DebugConsole.Default.WriteException(exception);
+                }
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
+            }
+        }
+
+        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+        {
+            try
+            {
+                RaiseOnAddInsUpdate(ref custom);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                NetOffice.DebugConsole.Default.WriteException(exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
+            }
+        }
+
+        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+        {
+            try
+            {
+                RaiseOnBeginShutdown(ref custom);
+            }
             catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
@@ -209,103 +364,21 @@ namespace NetOffice.OfficeApi.Tools
 
         #endregion
 
-        #region IDTExtensibility2 Members
-
-        void IDTExtensibility2.OnStartupComplete(ref Array custom)
-        {
-            RaiseOnStartupComplete(ref custom);
-        }
-
-        void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
-        {
-            if (AttributeHelper.GetTweakAttribute(Type).Enabled == true)
-            {
-                string registryEndPoint = TryDetectHostRegistryKey(Application);
-                if(null != registryEndPoint)
-                    Tweaks.ApplyTweaks(Factory, this, Type, registryEndPoint);
-            }             
-
-			this.Application = Factory.CreateObjectFromComProxy(null, Application);
-			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
-        }
-
-        void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
-        {
-            Tweaks.DisposeTweaks(Factory, this, Type);
-            RaiseOnDisconnection(RemoveMode, ref custom);
-
-			foreach(ITaskPane item in TaskPaneInstances)
-			{
-				try
-				{
-					item.OnDisconnection();
-				}
-				catch(System.Exception exception)
-				{
-                    NetOffice.DebugConsole.Default.WriteException(exception);
-				}			
-			}
-
-			foreach (var item in TaskPanes)
-            {
-				try
-				{
-					if(null != item.Pane && !item.Pane.IsDisposed)
-	                    item.Pane.Dispose();
-				}
-				catch(System.Exception exception)
-				{
-                    NetOffice.DebugConsole.Default.WriteException(exception);
-				}		
-            }
-             
-			try
-			{
-				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
-					TaskPaneFactory.Dispose();
-			}
-			catch(System.Exception exception)
-			{
-                NetOffice.DebugConsole.Default.WriteException(exception);
-			}	
-			
-			try
-			{
-				if (!Application.IsDisposed)
-					Application.Dispose();
-			}
-			catch(System.Exception exception)
-			{
-                NetOffice.DebugConsole.Default.WriteException(exception);
-			}	
-        }
-
-        void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
-        {
-            RaiseOnAddInsUpdate(ref custom);
-        }
-
-        void IDTExtensibility2.OnBeginShutdown(ref Array custom)
-        {
-            RaiseOnBeginShutdown(ref custom);
-        }
-
-        #endregion
-
         #region IRibbonExtensibility Members
 
         /// <summary>
         /// IRibbonExtensibility implementation
         /// </summary>
-        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard impklementation. overwrite this method if you need a custom behavior</param>
-        /// <returns>XML content oder string.Empty</returns>
+        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
+        /// <returns>XML content or String.Empty</returns>
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
+                
                 CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
                 if (null != ribbon)
-                    return ReadRessourceFile(ribbon.Value);
+                    return Utils.Resource.ReadString(ribbon.Value);
                 else
                     return string.Empty;
             }
@@ -672,6 +745,15 @@ namespace NetOffice.OfficeApi.Tools
         #region Virtual Methods
 
         /// <summary>
+        /// Create the used utils. The method was called in OnConnection
+        /// </summary>
+        /// <returns>new ToolsUtils instance</returns>
+        protected internal virtual CommonUtils OnCreateUtils()
+        {
+            return new CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
+        }
+
+        /// <summary>
         /// Create the used factory. The method was called as first in the base ctor
         /// </summary>
         /// <returns>new Settings instance</returns>
@@ -700,7 +782,7 @@ namespace NetOffice.OfficeApi.Tools
 
         #endregion
 
-        #region ErrorHandler 
+        #region ErrorHandler
         
         /// <summary>
         /// Checks for a static method, signed with the ErrorHandlerAttribute and call them if its available
@@ -730,7 +812,7 @@ namespace NetOffice.OfficeApi.Tools
         #region COM Register Functions
 
         /// <summary>
-        /// Called from regasm while register 
+        /// Called from regasm while register
         /// </summary>
         /// <param name="type">Type information for the class</param>
         [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
@@ -882,28 +964,6 @@ namespace NetOffice.OfficeApi.Tools
         #endregion
 
         #region Private Helper Methods
-
-        /// <summary>
-        /// reads text file from ressource
-        /// </summary>
-        /// <param name="fileName">ressourceLocation</param>
-        /// <returns>text content</returns>
-        private string ReadRessourceFile(string fileName)
-        {
-            Assembly assembly = Type.Assembly;
-            System.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
-            if (ressourceStream == null)
-                throw (new System.IO.IOException("Error accessing resource Stream."));
-
-            System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
-            if (textStreamReader == null)
-                throw (new System.IO.IOException("Error accessing resource File."));
-
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
-        }
 
         /// <summary>
         /// Try to detect the registry end for the current loaded host application(unkown)

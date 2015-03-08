@@ -17,7 +17,7 @@ namespace NetOffice.ExcelApi.Tools
     /// NetOffice MS-Excel COM Addin
     /// </summary>
 	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
-    public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
+    public abstract class COMAddin : COMAddinBase, IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         #region Fields
 
@@ -25,6 +25,11 @@ namespace NetOffice.ExcelApi.Tools
         /// MS-Excel Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
+
+        /// <summary>
+        /// First field in OnConnection custom argument array
+        /// </summary>
+        private int _automationCode = -1;
 
         #endregion
         
@@ -48,6 +53,11 @@ namespace NetOffice.ExcelApi.Tools
         #region Properties
 
         /// <summary>
+        /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
+        /// </summary>
+        public CommonUtils Utils { get; private set; }
+
+        /// <summary>
         /// The used factory core
         /// </summary>
         public Core Factory { get; private set; }
@@ -60,8 +70,8 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// Host Application Instance
         /// </summary>
-        protected Excel.Application Application { get; private set; }
-        
+        protected internal Excel.Application Application { get; private set; }
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -89,7 +99,20 @@ namespace NetOffice.ExcelApi.Tools
 
         #endregion
 
-        #region IDTExtensibility2 Events 
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override COMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        #endregion
+
+        #region IDTExtensibility2 Events
 
         /// <summary>
         /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup. 
@@ -214,75 +237,124 @@ namespace NetOffice.ExcelApi.Tools
 
         void IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
-            Tweaks.ApplyTweaks(Factory, this, Type, "Excel");
-            RaiseOnStartupComplete(ref custom);
+            try
+            {
+                Tweaks.ApplyTweaks(Factory, this, Type, "Excel");
+                RaiseOnStartupComplete(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
+            }
         }
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            this.Application = new Excel.Application(Factory, null, Application);
-			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+            try
+            {
+                if (custom.Length > 0)
+                {
+                    object firstCustomItem = custom.GetValue(1);
+                    string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
+                    System.Int32.TryParse(tryString, out _automationCode);
+                }
+
+                this.Application = new Excel.Application(Factory, null, Application);
+                Utils = OnCreateUtils();
+                RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
+            }
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
-            Tweaks.DisposeTweaks(Factory, this, Type);
-            RaiseOnDisconnection(RemoveMode, ref custom);
-
-			foreach(ITaskPane item in TaskPaneInstances)
-			{
-				try
-				{
-					item.OnDisconnection();
-				}
-				catch(NetRuntimeSystem.Exception exception)
-				{
-                    Factory.Console.WriteException(exception);
-				}			
-			}
-
-			foreach (var item in TaskPanes)
+            try
             {
-				try
-				{
-					if(null != item.Pane && !item.Pane.IsDisposed)
-	                    item.Pane.Dispose();
-				}
-				catch(NetRuntimeSystem.Exception exception)
-				{
+                Tweaks.DisposeTweaks(Factory, this, Type);
+                Utils.Dispose();
+                RaiseOnDisconnection(RemoveMode, ref custom);
+
+                foreach (ITaskPane item in TaskPaneInstances)
+                {
+                    try
+                    {
+                        item.OnDisconnection();
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        Factory.Console.WriteException(exception);
+                    }
+                }
+
+                foreach (var item in TaskPanes)
+                {
+                    try
+                    {
+                        if (null != item.Pane && !item.Pane.IsDisposed)
+                            item.Pane.Dispose();
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        Factory.Console.WriteException(exception);
+                    }
+                }
+
+                try
+                {
+                    if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
+                        TaskPaneFactory.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
                     Factory.Console.WriteException(exception);
-				}		
-			 }
-             
-			 try
-			 { 
-				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
-					TaskPaneFactory.Dispose();
-			 }
-			 catch(NetRuntimeSystem.Exception exception)
-			 {
-                 Factory.Console.WriteException(exception);
-			 }	
-                
-             try
-			 { 
-				 if (!Application.IsDisposed)
-                    Application.Dispose();
-			 }
-			 catch(NetRuntimeSystem.Exception exception)
-			 {
-                 Factory.Console.WriteException(exception);
-			 }	
+                }
+
+                try
+                {
+                    if (!Application.IsDisposed)
+                        Application.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }	
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
+            }
         }
 
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
-            RaiseOnAddInsUpdate(ref custom);
+            try
+            {
+                RaiseOnAddInsUpdate(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
+            }
         }
 
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
-            RaiseOnBeginShutdown(ref custom);
+            try
+            {
+                RaiseOnBeginShutdown(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
+            }
         }
 
         #endregion
@@ -293,16 +365,16 @@ namespace NetOffice.ExcelApi.Tools
         /// IRibbonExtensibility implementation
         /// </summary>
         /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
-        /// <returns>XML content oder string.Empty</returns>
+        /// <returns>XML content or sSring.Empty</returns>
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
                 CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
                 if (null != ribbon)
-                    return ReadRessourceFile(ribbon.Value);
+                    return Utils.Resource.ReadString(ribbon.Value);
                 else
-                    return string.Empty;
+                    return String.Empty;
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -663,10 +735,19 @@ namespace NetOffice.ExcelApi.Tools
         #region Virtual Methods
 
         /// <summary>
+        /// Create the used utils. The method was called in OnConnection
+        /// </summary>
+        /// <returns>new ToolsUtils instance</returns>
+        protected internal virtual CommonUtils OnCreateUtils()
+        {
+            return new CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
+        }
+
+        /// <summary>
         /// Create the used factory. The method was called as first in the base ctor
         /// </summary>
-        /// <returns>new Settings instance</returns>
-        protected virtual Core CreateFactory()
+        /// <returns>new Core instance</returns>
+        protected internal virtual Core CreateFactory()
         {
             return new Core();
         }
@@ -674,7 +755,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// Create the necessary factory and was called in the first line in base ctor
         /// </summary>
-        /// <returns></returns>
+        /// <returns>new Core instance or null if failed</returns>
         private Core RaiseCreateFactory()
         {
             try
@@ -724,7 +805,7 @@ namespace NetOffice.ExcelApi.Tools
         /// Called from regasm while register 
         /// </summary>
         /// <param name="type">Type information for the class</param>
-        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
             try                
@@ -862,32 +943,6 @@ namespace NetOffice.ExcelApi.Tools
                 registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
         }
 
-
-        #endregion
-
-        #region Private Helper Methods
-
-        /// <summary>
-        /// reads text file from ressource
-        /// </summary>
-        /// <param name="fileName">ressourceLocation</param>
-        /// <returns>text content</returns>
-        private string ReadRessourceFile(string fileName)
-        {
-            Assembly assembly = Type.Assembly;
-            NetRuntimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
-            if (ressourceStream == null)
-                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource Stream."));
-
-            NetRuntimeSystem.IO.StreamReader textStreamReader = new NetRuntimeSystem.IO.StreamReader(ressourceStream);
-            if (textStreamReader == null)
-                throw (new NetRuntimeSystem.IO.IOException("Error accessing resource File."));
-
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
-        }
 
         #endregion
     }

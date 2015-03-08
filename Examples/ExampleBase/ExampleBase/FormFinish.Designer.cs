@@ -50,15 +50,19 @@
             // labelMessage
             // 
             this.labelMessage.AutoSize = true;
+            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.ForeColor = System.Drawing.Color.Black;
             this.labelMessage.Location = new System.Drawing.Point(44, 25);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(72, 13);
+            this.labelMessage.Size = new System.Drawing.Size(107, 16);
             this.labelMessage.TabIndex = 8;
             this.labelMessage.Text = "labelMessage";
             // 
             // buttonOpenDocument
             // 
+            this.buttonOpenDocument.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonOpenDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenDocument.ForeColor = System.Drawing.Color.Blue;
             this.buttonOpenDocument.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenDocument.Image")));
             this.buttonOpenDocument.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonOpenDocument.Location = new System.Drawing.Point(43, 130);
@@ -72,7 +76,9 @@
             // buttonClose
             // 
             this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.Blue;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonClose.Location = new System.Drawing.Point(320, 130);
@@ -98,6 +104,7 @@
             this.checkBoxDeleteDocument.Checked = true;
             this.checkBoxDeleteDocument.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxDeleteDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxDeleteDocument.ForeColor = System.Drawing.Color.Blue;
             this.checkBoxDeleteDocument.Location = new System.Drawing.Point(43, 173);
             this.checkBoxDeleteDocument.Name = "checkBoxDeleteDocument";
             this.checkBoxDeleteDocument.Size = new System.Drawing.Size(161, 17);
@@ -118,10 +125,12 @@
             this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.buttonOpenDocument);
             this.Controls.Add(this.buttonClose);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormFinish";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Finish";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
