@@ -275,9 +275,6 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                Tweaks.DisposeTweaks(Factory, this, Type);
-                RaiseOnDisconnection(RemoveMode, ref custom);
-
                 foreach (ITaskPane item in TaskPaneInstances)
                 {
                     try
@@ -311,6 +308,17 @@ namespace NetOffice.WordApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     NetOffice.DebugConsole.Default.WriteException(exception);
+                }
+
+                try
+                {
+                    Tweaks.DisposeTweaks(Factory, this, Type);
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                    Utils.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
                 }
 
                 try

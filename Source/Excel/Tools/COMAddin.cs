@@ -275,10 +275,6 @@ namespace NetOffice.ExcelApi.Tools
         {
             try
             {
-                Tweaks.DisposeTweaks(Factory, this, Type);
-                Utils.Dispose();
-                RaiseOnDisconnection(RemoveMode, ref custom);
-
                 foreach (ITaskPane item in TaskPaneInstances)
                 {
                     try
@@ -302,6 +298,18 @@ namespace NetOffice.ExcelApi.Tools
                     {
                         Factory.Console.WriteException(exception);
                     }
+                }
+
+                try
+                {
+                    Tweaks.DisposeTweaks(Factory, this, Type);
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                    Utils.Dispose();
+
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
                 }
 
                 try
