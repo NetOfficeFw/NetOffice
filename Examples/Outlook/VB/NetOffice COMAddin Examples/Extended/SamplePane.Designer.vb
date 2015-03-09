@@ -50,6 +50,7 @@ Partial Class SamplePane
         'labelHint
         '
         Me.labelHint.AutoSize = True
+        Me.labelHint.ForeColor = System.Drawing.Color.Blue
         Me.labelHint.Location = New System.Drawing.Point(529, 7)
         Me.labelHint.Name = "labelHint"
         Me.labelHint.Size = New System.Drawing.Size(256, 16)
@@ -69,7 +70,9 @@ Partial Class SamplePane
         '
         Me.buttonReset.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.buttonReset.ForeColor = System.Drawing.Color.Blue
         Me.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonReset.ImageKey = "delete2.png"
         Me.buttonReset.ImageList = Me.imageListButtons
@@ -84,7 +87,7 @@ Partial Class SamplePane
         'label1
         '
         Me.label1.AutoSize = True
-        Me.label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.label1.ForeColor = System.Drawing.Color.Blue
         Me.label1.Location = New System.Drawing.Point(279, 7)
         Me.label1.Name = "label1"
         Me.label1.Size = New System.Drawing.Size(94, 16)
@@ -95,7 +98,7 @@ Partial Class SamplePane
         '
         Me.labelTime.AutoSize = True
         Me.labelTime.BackColor = System.Drawing.Color.Transparent
-        Me.labelTime.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.labelTime.ForeColor = System.Drawing.Color.Blue
         Me.labelTime.Location = New System.Drawing.Point(371, 7)
         Me.labelTime.Name = "labelTime"
         Me.labelTime.Size = New System.Drawing.Size(56, 16)
@@ -106,7 +109,9 @@ Partial Class SamplePane
         '
         Me.buttonEnabled.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.buttonEnabled.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.buttonEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.buttonEnabled.ForeColor = System.Drawing.Color.Blue
         Me.buttonEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.buttonEnabled.ImageKey = "alarmclock_run.png"
         Me.buttonEnabled.ImageList = Me.imageListButtons
@@ -129,7 +134,7 @@ Partial Class SamplePane
         Me.Controls.Add(Me.labelTime)
         Me.Controls.Add(Me.buttonEnabled)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "SamplePane"
         Me.Size = New System.Drawing.Size(807, 30)
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

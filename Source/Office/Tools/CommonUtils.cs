@@ -97,6 +97,7 @@ namespace NetOffice.OfficeApi.Tools
                 throw new ArgumentNullException("ownerAssembly");
             Owner = owner;
             _ownerApplication = owner.AppInstance;
+            _ownerAssembly = ownerAssembly;
             _isAutomation = isAutomation;
             _headerCaptionLine = _headerCaptionLineDefault;
             _infos = new Infos(this);

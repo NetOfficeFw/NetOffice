@@ -29,30 +29,15 @@ namespace NetOfficeTools.ExtendedOutlookCS4
    * The CustomPane attribute allows you to set a task pane very easy 
    */
     [COMAddin("NetOfficeCS4 Extended Sample Addin", "This Addin shows you the COMAddin class from the NetOffice Tools", 3)]
-    [CustomUI("NetOfficeTools.ExtendedOutlookCS4.RibbonUI.xml")]
-    [RegistryLocation(RegistrySaveLocation.CurrentUser)]
+    [CustomUI("RibbonUI.xml", true), RegistryLocation(RegistrySaveLocation.CurrentUser)]
     [CustomPane(typeof(SamplePane), "NetOffice Tools - Sample Pane(CS4)", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)]
-    [Guid("B3F60319-1A11-4F3E-9C1B-3AE908D9CA86"), ProgId("ExtendedOutlookCS4.Addin"), Tweak(true)]
+    [Guid("B3F60319-1A11-4F3E-9C1B-3AE908D9CA86"), ProgId("ExtendedOutlookCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()        
         {
             // trigger the well known IExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
-
-            /*
-            // We add a second taskpane here at hand, you can also overwrite the CTPFactoryAvailable method and create your panes in this method.
-            // Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
-            // Take a look into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application.
-            
-            Office.Tools.TaskPaneInfo pane = TaskPanes.Add(typeof(SamplePane), "NetOffice Tools - 2. Sample Pane(CS4)");
-            pane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionTop;
-            pane.DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange;
-            pane.Height = 50;
-            pane.Visible = true;
-            pane.Arguments = new object[] { this };
-            pane.VisibleStateChange += new Office.CustomTaskPane_VisibleStateChangeEventHandler(TaskPane_VisibleStateChange);
-            */
         }
 
         // ouer ribbon instance to manipulate ui at runtime 
@@ -65,13 +50,6 @@ namespace NetOfficeTools.ExtendedOutlookCS4
             // the application property was disposed automaticly while shutdown
             Console.WriteLine("Host Application Version is:{0}", this.Application.Version);
         }
-
-        //// attached in ctor to trigger taskpane visibility has been changed and update the checkbutton in the ribbon ui for show/hide taskpane
-        //private void TaskPane_VisibleStateChange(Office._CustomTaskPane CustomTaskPaneInst)
-        //{
-        //    if(null != RibbonUI) // may no ribbon supported
-        //        RibbonUI.InvalidateControl("paneVisibleToogleButton");
-        //}
 
         // taskpane visibility has been changed. we upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
@@ -101,7 +79,7 @@ namespace NetOfficeTools.ExtendedOutlookCS4
         // defined in RibbonUI.xml to catch the user click for the about button
         public void OnClickAboutButton(Office.IRibbonControl control)
         {
-            MessageBox.Show("NetOffice Tools - Extended Sample Addin.", "ExtendedOutlookCS4.Addin");
+            Utils.Dialog.ShowAbout("NetOffice Addin Example", "http://netoffice.codeplex.com", "<No licence set>");
         }
 
         /*
@@ -154,7 +132,8 @@ namespace NetOfficeTools.ExtendedOutlookCS4
         // Rethrow the exception otherwise the exception is marked as handled.   
         protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
         {
-            MessageBox.Show("An error occurend in " + methodKind.ToString(), "COMAddinNetOfficeToolsExCS4.AccessSampleAddin");
+            string friendlyErrorDescription = String.Format("Unexpected state in {0}.", methodKind);
+            Utils.Dialog.ShowError(exception, friendlyErrorDescription);
         }
 
         // This method demonstrate an error handler for the register/unregister process.

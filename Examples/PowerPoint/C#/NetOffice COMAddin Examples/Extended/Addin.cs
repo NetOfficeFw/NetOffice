@@ -28,30 +28,15 @@ namespace NetOfficeTools.ExtendedPPointCS4
      * The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
      */
     [COMAddin("NetOfficeCS4 Extended Sample Addin", "This Addin shows you the COMAddin class from the NetOffice Tools", 3)]
-    [CustomUI("NetOfficeTools.ExtendedPPointCS4.RibbonUI.xml")]
-    [RegistryLocation(RegistrySaveLocation.CurrentUser)]
+    [CustomUI("RibbonUI.xml", true), RegistryLocation(RegistrySaveLocation.CurrentUser)]
     [CustomPane(typeof(SamplePane), "NetOffice Tools - Sample Pane(CS4)", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)]
-    [Guid("ECC3C2C8-18F4-4D37-8B31-5FFC12FF9A6E"), ProgId("ExtendedPPointCS4.Addin"), Tweak(true)]
+    [Guid("ECC3C2C8-18F4-4D37-8B31-5FFC12FF9A6E"), ProgId("ExtendedPPointCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()
         {
             // trigger the well known IExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
-
-            /*
-            // We add a second taskpane here at hand, you can also overwrite the CTPFactoryAvailable method and create your panes in this method.
-            // Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
-            // Take a look into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application.
-            
-            Office.Tools.TaskPaneInfo pane = TaskPanes.Add(typeof(SamplePane), "NetOffice Tools - 2. Sample Pane(CS4)");
-            pane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionTop;
-            pane.DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange;
-            pane.Height = 50;
-            pane.Visible = true;
-            pane.Arguments = new object[] { this };
-            pane.VisibleStateChange += new Office.CustomTaskPane_VisibleStateChangeEventHandler(TaskPane_VisibleStateChange);
-            */
         }
 
         // ouer ribbon instance to manipulate ui at runtime 
@@ -64,15 +49,6 @@ namespace NetOfficeTools.ExtendedPPointCS4
             // The application property was disposed automaticly while shutdown.
             Factory.Console.WriteLine("Host Application Version is:{0}.", this.Application.Version);
         }
-
-        //// attached in ctor to trigger taskpane visibility has been changed and update the checkbutton in the ribbon ui for show/hide taskpane
-        //private void TaskPane_VisibleStateChange(Office._CustomTaskPane CustomTaskPaneInst)
-        //{
-        //    // ouer taskpane visibility has been changed. we send a message to the host application
-        //    // and say please refresh the checkbutton state. now the host application want call ouer OnGetPressedPanelToggle method to update the checkstate.
-        //    if (null != RibbonUI)
-        //        RibbonUI.InvalidateControl("paneVisibleToogleButton");
-        //}
 
         // taskpane visibility has been changed. we upate the checkbutton in the ribbon ui for show/hide taskpane
         protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
@@ -102,7 +78,7 @@ namespace NetOfficeTools.ExtendedPPointCS4
         // defined in RibbonUI.xml to catch the user click for the about button
         public void OnClickAboutButton(Office.IRibbonControl control)
         {
-            MessageBox.Show("NetOffice Tools - Extended Sample Addin.", "ExtendedPPointCS4.Addin");
+            Utils.Dialog.ShowAbout("NetOffice Addin Example", "http://netoffice.codeplex.com", "<No licence set>");
         }
 
         /*
@@ -155,7 +131,8 @@ namespace NetOfficeTools.ExtendedPPointCS4
         // Rethrow the exception otherwise the exception is marked as handled.
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)
         {
-            MessageBox.Show("An error occurend in " + methodKind.ToString(), "ExtendedPPointCS4.Addin");
+            string friendlyErrorDescription = String.Format("Unexpected state in {0}.", methodKind);
+            Utils.Dialog.ShowError(exception, friendlyErrorDescription);
         }
 
         // This method demonstrate an error handler for the register/unregister process.

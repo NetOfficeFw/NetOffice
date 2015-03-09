@@ -6,7 +6,7 @@ Imports Office = NetOffice.OfficeApi
 Imports NetOffice.OfficeApi.Enums
 
 <COMAddin("NetOfficeTools Super Addin Sample", "This Addin shows you how i can create a NO Tools based Addin and support multiple office products", 3)> _
-<RegistryLocation(RegistrySaveLocation.CurrentUser), CustomUI("NetOfficeTools.SuperAddinVB4.RibbonUI.xml")> _
+<RegistryLocation(RegistrySaveLocation.CurrentUser), CustomUI("RibbonUI.xml", True)> _
 <Guid("B7561D9F-E3DE-49cd-B5FE-D812F8999EFD"), ProgId("NOToolsSuperAddinVB4.Addin"), ComVisible(True), Tweak(True)> _
 <MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)> _
 Public Class Addin

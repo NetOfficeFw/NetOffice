@@ -13,7 +13,7 @@ Imports NetOffice.WordApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Word Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("DED6912A-F691-40AC-BF67-825E2469730A"), ProgId("SimpleWordVB4.Addin"), Tweak(True)> _
+<Guid("DED6912A-F691-40AC-BF67-825E2469730A"), ProgId("SimpleWordVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 

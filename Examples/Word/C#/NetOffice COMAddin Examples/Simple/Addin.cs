@@ -15,7 +15,7 @@ using NetOffice.WordApi;
 namespace NetOfficeTools.SimpleAccessCS4
 {
     [COMAddin("NetOfficeCS4 Sample Word Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("F4EC5A72-C431-4BFA-85AB-43A0817617C7"), ProgId("SimpleWordCS4.Addin"), Tweak(true)]
+    [Guid("F4EC5A72-C431-4BFA-85AB-43A0817617C7"), ProgId("SimpleWordCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()

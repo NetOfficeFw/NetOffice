@@ -16,7 +16,7 @@ using NetOffice.PowerPointApi;
 namespace NetOfficeTools.SimplePPointCS4
 {
     [COMAddin("NetOfficeCS4 Sample PowerPoint Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("DD560ED5-C600-4D99-ADC6-9675511C3387"), ProgId("SimplePPointCS4.Addin"), Tweak(true)]
+    [Guid("DD560ED5-C600-4D99-ADC6-9675511C3387"), ProgId("SimplePPointCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,6 +17,11 @@ namespace NetOffice.Tools
         public readonly string Value;
 
         /// <summary>
+        /// Use root namespace of the calling instance
+        /// </summary>
+        public readonly bool UseAssemblyNamespace;
+
+        /// <summary>
         /// Creates an instance of the Attribute
         /// </summary>
         /// <param name="value">Full qualified location</param>
@@ -25,6 +31,50 @@ namespace NetOffice.Tools
                 throw new ArgumentException("value");
 
             Value = value;
+        }
+
+        /// <summary>
+        /// Creates an instance of the Attribute
+        /// </summary>
+        /// <param name="value">Full qualified location</param>
+        /// <param name="useAssemblyNamespace">Use namespace of the calling instance</param>
+        public CustomUIAttribute(string value, bool useAssemblyNamespace)
+        {
+            if (String.IsNullOrEmpty(value))
+                throw new ArgumentException("value");
+
+            Value = value;
+            UseAssemblyNamespace = useAssemblyNamespace;
+        }
+
+        /// <summary>
+        /// Build resource path with attribute values
+        /// </summary>
+        /// <param name="resourcePath">resource path</param>
+        /// <param name="useAssemblyNamespace">use assembly namespace</param>
+        /// <param name="assemblyNamespace">root assembly namespace</param>
+        /// <returns>return resource path</returns>
+        public static string BuildPath(string resourcePath, bool useAssemblyNamespace, string assemblyNamespace)
+        {
+            if (String.IsNullOrEmpty(resourcePath))
+                throw new ArgumentNullException("resourcePath");
+            if (String.IsNullOrEmpty(assemblyNamespace))
+                throw new ArgumentNullException("assemblyNamespace");
+
+            if (useAssemblyNamespace)
+            {
+                string result = "";
+                string[] validation = new string[] { resourcePath.Substring(0, 1), assemblyNamespace.Substring(resourcePath.Length - 1) };
+                if (validation[0].Equals(".", StringComparison.InvariantCultureIgnoreCase) || validation[1].Equals(".", StringComparison.InvariantCultureIgnoreCase))
+                    result = assemblyNamespace + resourcePath;
+                else
+                    result = assemblyNamespace + "." + resourcePath;
+                return result;
+            }
+            else
+            {
+                return resourcePath;
+            }
         }
     }
 }

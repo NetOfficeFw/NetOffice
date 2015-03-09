@@ -1,3 +1,4 @@
+
 using System;
 using NetRuntimeSystem = System;
 using System.Collections.Generic;
@@ -96,6 +97,19 @@ namespace NetOffice.AccessApi.Tools
         /// Cached Register Error Method Delegate
         /// </summary>
 		private static MethodInfo RegisterErrorMethod { get; set; }
+
+        #endregion
+
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override COMObject AppInstance
+        {
+            get { return Application; }
+        }
 
         #endregion
 
@@ -358,7 +372,7 @@ namespace NetOffice.AccessApi.Tools
             {
                 CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
                 if (null != ribbon)
-                    return Utils.Resource.ReadString(ribbon.Value);
+                     return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
                     return String.Empty;
             }

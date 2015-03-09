@@ -13,15 +13,15 @@ Imports NetOffice.ExcelApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Excel Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("B5CBBECD-4DEE-4A61-AD34-E9B8618452B0"), ProgId("SimpleExcelVB4.Addin"), Tweak(True)> _
+<Guid("B5CBBECD-4DEE-4A61-AD34-E9B8618452B0"), ProgId("SimpleExcelVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 
     Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
 
-        ' get the host application version
-        Dim hostVersion As String = Me.Application.Version
-        Console.WriteLine("Host Application Version is:{0}", hostVersion)
+        ' show the host application version
+        Dim hostVersion As String = String.Format("Host Application Version is:{0}", Me.Application.Version)
+        Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK)
 
     End Sub
 

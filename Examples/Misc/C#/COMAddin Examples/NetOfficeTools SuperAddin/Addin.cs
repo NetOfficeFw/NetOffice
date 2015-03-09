@@ -10,7 +10,7 @@ using NetOffice.OfficeApi.Enums;
 namespace NetOfficeTools.SuperAddinCS4
 {
     [COMAddin("NetOfficeTools Super Addin Sample", "This Addin shows you how i can create a NO Tools based Addin and support multiple office products", 3)]
-    [RegistryLocation(RegistrySaveLocation.CurrentUser), CustomUI("NetOfficeTools.SuperAddinCS4.RibbonUI.xml")]
+    [RegistryLocation(RegistrySaveLocation.CurrentUser), CustomUI("RibbonUI.xml", true)]
     [Guid("CF0E2618-37D5-4efb-BD25-58301228ED0E"), ProgId("NOToolsSuperAddinCS4.Addin"), Tweak(true)]
     [MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)]  // visio is not supported because visio doesnt use the common office core
     public class Addin : COMAddin 

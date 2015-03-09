@@ -15,7 +15,7 @@ using NetOffice.OutlookApi;
 namespace NetOfficeTools.SimpleOutlookCS4
 {
     [COMAddin("NetOfficeCS4 Sample Outlook Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("E84FBA68-FDA6-4cf6-A0E7-5F025C0F9867"), ProgId("SimpleOutlookCS4.Addin"), Tweak(true)]
+    [Guid("E84FBA68-FDA6-4cf6-A0E7-5F025C0F9867"), ProgId("SimpleOutlookCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()

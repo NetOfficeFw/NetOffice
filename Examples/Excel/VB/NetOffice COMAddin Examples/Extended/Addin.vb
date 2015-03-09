@@ -29,28 +29,11 @@ Imports NetOffice.OfficeApi.Enums
 '* The CustomPane attribute allows you to set a task pane very easy
 '*/
 <COMAddin("NetOfficeVB4 Extended Excel Addin", "This Addin shows you the COMAddin  baseclass from the NetOffice Tools", 3)> _
-<CustomUI("NetOfficeTools.ExtendedExcelVB4.RibbonUI.xml")> _
-<RegistryLocation(RegistrySaveLocation.CurrentUser)> _
+<CustomUI("RibbonUI.xml", True), RegistryLocation(RegistrySaveLocation.CurrentUser)> _
 <CustomPane(GetType(SamplePane), "NetOffice Tools - Sample Pane(VB4)", True, PaneDockPosition.msoCTPDockPositionBottom, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)> _
-<Guid("ED20A119-9E0D-4D7B-B50A-71CFFD44A7C7"), ProgId("ExtendedExcelVB4.Addin"), Tweak(True)> _
+<Guid("ED20A119-9E0D-4D7B-B50A-71CFFD44A7C7"), ProgId("ExtendedExcelVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
-
-    Public Sub New()
-
-        '' We add a second taskpane here, you can also overwrite the CTPFactoryAvailable method and create your panes in this method.
-        '' Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
-        '' Take a look into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application.
-        'TaskPanes.Add(GetType(SamplePane), "NetOffice Tools - 2. Sample Pane(VB4)")
-        'TaskPanes(0).DockPosition = MsoCTPDockPosition.msoCTPDockPositionBottom
-        'TaskPanes(0).DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange
-        'TaskPanes(0).Height = 50
-        'TaskPanes(0).Visible = True
-        'TaskPanes(0).Arguments = New Object() {Me}
-        'Dim handler As Office.CustomTaskPane_VisibleStateChangeEventHandler = AddressOf Me.TaskPane_VisibleStateChange
-        'AddHandler TaskPanes(0).VisibleStateChange, handler
-
-    End Sub
 
     ' ouer ribbon instance
     Private RibbonUI As Office.IRibbonUI
@@ -63,17 +46,6 @@ Public Class Addin
         Factory.Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
 
     End Sub
-
-    '' trigger taskpane visibility has been changed and update the checkbutton in the ribbon ui for show/hide taskpane
-    'Private Sub TaskPane_VisibleStateChange(ByVal CustomTaskPaneInst As Office._CustomTaskPane)
-
-    '    ' ouer taskpane visibility has been changed. we send a message to the host application
-    '    ' and say please refresh the checkbutton state. now the host application want call ouer OnGetPressedPanelToggle method to update the checkstate.
-    '    If Not IsNothing(RibbonUI) Then
-    '        RibbonUI.InvalidateControl("paneVisibleToogleButton")
-    '    End If
-
-    'End Sub
 
     ' taskpane visibility has been changed. we upate the checkbutton in the ribbon ui for show/hide taskpane
     Protected Overrides Sub TaskPaneVisibleStateChanged(ByVal customTaskPaneInst As NetOffice.OfficeApi._CustomTaskPane)
@@ -110,7 +82,7 @@ Public Class Addin
     ' defined in RibbonUI.xml to catch the user click for the about button
     Public Sub OnClickAboutButton(ByVal control As Office.IRibbonControl)
 
-        MessageBox.Show("NetOffice Tools - Extended Sample Addin.", "ExtendedExcelVB4.Addin")
+        Utils.Dialog.ShowAbout("NetOffice Addin Example", "http://netoffice.codeplex.com", "<No licence set>")
 
     End Sub
 
@@ -131,7 +103,6 @@ Public Class Addin
             Case registerCall.CallAfter
 
             Case registerCall.Replace
-
 
         End Select
 
@@ -161,7 +132,8 @@ Public Class Addin
     ' Rethrow the exception otherwise the exception is marked as handled.
     Protected Overrides Sub OnError(ByVal methodKind As NetOffice.Tools.ErrorMethodKind, ByVal exception As System.Exception)
 
-        MessageBox.Show("An error occured in " & methodKind.ToString(), "ExtendedExcelVB4.Addin")
+        Dim friendlyErrorDescription As String = String.Format("Unexpected state in {0}.", methodKind)
+        Utils.Dialog.ShowError(exception, friendlyErrorDescription)
 
     End Sub
 

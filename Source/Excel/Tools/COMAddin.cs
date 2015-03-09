@@ -365,14 +365,14 @@ namespace NetOffice.ExcelApi.Tools
         /// IRibbonExtensibility implementation
         /// </summary>
         /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
-        /// <returns>XML content or sSring.Empty</returns>
+        /// <returns>XML content or String.Empty</returns>
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
+                CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);                                
                 if (null != ribbon)
-                    return Utils.Resource.ReadString(ribbon.Value);
+                    return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
                     return String.Empty;
             }
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi.Tools
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
-				return string.Empty;
+				return String.Empty;
             } 
         }
 

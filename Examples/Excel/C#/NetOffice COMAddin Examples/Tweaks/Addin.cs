@@ -38,11 +38,14 @@ namespace NetOfficeTools.TweaksCS4
         // This method was called from IExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
         protected override void ApplyCustomTweak(string name, string value)
         {
-            if (name == "ShowMessageBoxAtStartUp" && value == "yes")
-                MessageBox.Show("The tweak sample addin has been loaded.", "Custom Tweak", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (name == "ShowTray" && value == "yes")
+            {
+                Utils.Tray.Text = "TweakExcelCS4.Addin";
+                Utils.Tray.Visible = true;
+            }
         }
 
-        // This method was called from IExtensibility2.OnDisconnection for all your allowed custom aplied tweaks to remove or unload them.
+        // This method was called while disconnection for all your allowed custom aplied tweaks to remove or unload them.
         // Please keep in your mind: the method is never called in state of unexpected termination. you have no warranties for the method.
         protected override void DisposeCustomTweak(string name, string value)
         {
@@ -56,9 +59,9 @@ namespace NetOfficeTools.TweaksCS4
         public static void Register(Type type, RegisterCall registerCall)
         {
             // SetTweakPersistenceEntry sets the key for you in the current registry key.
-            // We set a Netoffice default tweak and a custom tweak.
+            // We set a custom tweak and a Netoffice default tweak.
+            SetTweakPersistenceEntry(type, "ShowTray", "yes", false);
             SetTweakPersistenceEntry(type, "NOConsoleMode", "trace", false);
-            SetTweakPersistenceEntry(type, "ShowMessageBoxAtStartUp", "yes", false);
         }
     }
 }

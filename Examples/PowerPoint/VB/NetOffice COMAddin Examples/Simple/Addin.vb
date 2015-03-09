@@ -13,7 +13,7 @@ Imports NetOffice.PowerPointApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample PowerPoint Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("F8E32638-8BC0-4A0D-82B5-1B1478FB41D2"), ProgId("SimplePPointVB4.Addin"), Tweak(True)> _
+<Guid("F8E32638-8BC0-4A0D-82B5-1B1478FB41D2"), ProgId("SimplePPointVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 

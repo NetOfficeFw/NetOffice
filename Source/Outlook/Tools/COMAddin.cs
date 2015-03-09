@@ -371,7 +371,7 @@ namespace NetOffice.OutlookApi.Tools
             {
                 CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
                 if (null != ribbon)
-                    return Utils.Resource.ReadString(ribbon.Value);
+                    return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
                     return String.Empty;
             }

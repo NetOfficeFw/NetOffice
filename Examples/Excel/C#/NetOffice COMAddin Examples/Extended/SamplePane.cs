@@ -80,7 +80,6 @@ namespace NetOfficeTools.ExtendedExcelCS4
         {
             TimeSpan ts = DateTime.Now - StartTime;
             labelTime.Text = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-
         }
 
         #endregion
