@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,7 @@ namespace Sample.Server
     {
         #region Fields
 
+        private object _lock = new object();
         private static DataEventRepeators _repeators;
         private static string[] _availableTranslations;
 
@@ -101,7 +104,7 @@ namespace Sample.Server
         }
 
         /// <summary>
-        /// Translate a text
+        /// Translate a text (should be async in a real-life scenario)
         /// </summary>
         /// <param name="sourceLanguage">source language</param>
         /// <param name="destLanguage">target language</param>
@@ -109,55 +112,92 @@ namespace Sample.Server
         /// <returns>A result object</returns>
         public string Translate(string sourceLanguage, string destLanguage, string text)
         {
-            try
-            {
-                string source = null;
-                string dest = null;
-                if (!LanguageModeMap.TryGetValue(sourceLanguage, out source))
-                    throw new ArgumentOutOfRangeException("Unkown language: " + sourceLanguage);
-                if (!LanguageModeMap.TryGetValue(destLanguage, out dest))
-                    throw new ArgumentOutOfRangeException("Unkown language" + destLanguage);
+            if (String.IsNullOrWhiteSpace(text))
+                return text;
 
-                LocalTranslationCacheItem cacheItem = Cache.TryGetValue(source, dest, text);
-                if (null != cacheItem)
-                {
-                    TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Sucseed, text, cacheItem.TranslationText, null, true);
-                    RaiseOnTranslation(result);
-                    return cacheItem.TranslationText;
-                }
-                else
-                {
-                    string translatedText = TranslateText(text, String.Format("{0}|{1}", source, dest));
-                    TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Sucseed, text, translatedText, null);
-                    Cache.Add(source, dest, text, translatedText);
-                    RaiseOnTranslation(result);
-                    return translatedText;    
-                }
-            }
-            catch (Exception exception)
+            lock (_lock)
             {
-                TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Error, text, null, exception);
-                RaiseOnTranslation(result);
-                throw exception;
+                try
+                {
+                    string source = null;
+                    string dest = null;
+                    if (!LanguageModeMap.TryGetValue(sourceLanguage, out source))
+                        throw new ArgumentOutOfRangeException("Unkown language: " + sourceLanguage);
+                    if (!LanguageModeMap.TryGetValue(destLanguage, out dest))
+                        throw new ArgumentOutOfRangeException("Unkown language" + destLanguage);
+
+                    text = text.Trim();
+
+                    LocalTranslationCacheItem cacheItem = Cache.TryGetValue(source, dest, text);
+                    if (null != cacheItem)
+                    {
+                        TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Sucseed, text, cacheItem.TranslationText, null, true);
+                        RaiseOnTranslation(result);
+                        return cacheItem.TranslationText;
+                    }
+                    else
+                    {
+                        string translatedText = TranslateText(text, String.Format("{0}|{1}", source, dest));
+                        TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Sucseed, text, translatedText, null);
+                        Cache.Add(source, dest, text, translatedText);
+                        RaiseOnTranslation(result);
+                        return translatedText;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    TranslateOperationResult result = new TranslateOperationResult(TranslateOperationState.Error, text, null, exception);
+                    RaiseOnTranslation(result);
+                    throw exception;
+                }
             }
         }
 
         /// <summary>
-        /// The real translation job so far. (should be async in a real-life scenario)
+        /// The real translation job so far
         /// </summary>
         /// <param name="input">given text as any</param>
         /// <param name="languagePair">language set as source|dest</param>
         /// <returns>translated text</returns>
         private static string TranslateText(string input, string languagePair)
         {
+            if (String.IsNullOrWhiteSpace(input))
+                return String.Empty;
             string url = String.Format("http://www.google.com/translate_t?hl=en&ie=UTF8&text={0}&langpair={1}", input, languagePair);
-            WebClient webClient = new WebClient();
-            webClient.Encoding = System.Text.Encoding.UTF8;
-            string result = webClient.DownloadString(url);
-            result = result.Substring(result.IndexOf("<span title=\"") + "<span title=\"".Length);
-            result = result.Substring(result.IndexOf(">") + 1);
-            result = result.Substring(0, result.IndexOf("</span>"));
-            return result.Trim();
+            using (WebClient webClient = new WebClient())
+            {
+                webClient.Encoding = System.Text.Encoding.UTF8;
+                webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0");
+                webClient.Headers.Add(HttpRequestHeader.AcceptCharset, "UTF-8");
+                string result = webClient.DownloadString(url);
+                return ProceedTranslationResult(input, result);
+            }
+        }
+
+        /// <summary>
+        /// Extract translation result from web response
+        /// </summary>
+        /// <param name="input">input as fallback if its failed to extract</param>
+        /// <param name="result">google translation response</param>
+        /// <returns>translation result or input</returns>
+        private static string ProceedTranslationResult(string input, string response)
+        {
+            string result = response;
+
+            string firstTarget = "TRANSLATED_TEXT='";
+            string secondTarget = "'";
+
+            int index = result.IndexOf(firstTarget, 0, StringComparison.InvariantCultureIgnoreCase);
+            if (index < 0)
+                return input;
+
+            result = result.Substring(index + firstTarget.Length);
+            index = result.IndexOf(secondTarget, 0, StringComparison.InvariantCultureIgnoreCase);
+            if (index < 0)
+                return input;
+
+            result = result.Substring(0, index).Replace("\\r\\x3cbr\\x3e", Environment.NewLine);
+            return result;
         }
 
         /// <summary>
@@ -166,69 +206,19 @@ namespace Sample.Server
         /// <param name="languageMap">target map to initialize</param>
         private static void InitLanguageMap(Dictionary<string, string> languageMap)
         {
-            languageMap.Add("Afrikaans", "af");
-            languageMap.Add("Albanian", "sq");
-            languageMap.Add("Arabic", "ar");
-            languageMap.Add("Armenian", "hy");
-            languageMap.Add("Azerbaijani", "az");
-            languageMap.Add("Basque", "eu");
-            languageMap.Add("Belarusian", "be");
-            languageMap.Add("Bengali", "bn");
-            languageMap.Add("Bulgarian", "bg");
-            languageMap.Add("Catalan", "ca");
-            languageMap.Add("Chinese", "zh-CN");
-            languageMap.Add("Croatian", "hr");
-            languageMap.Add("Czech", "cs");
-            languageMap.Add("Danish", "da");
-            languageMap.Add("Dutch", "nl");
-            languageMap.Add("English", "en");
-            languageMap.Add("Esperanto", "eo");
-            languageMap.Add("Estonian", "et");
-            languageMap.Add("Filipino", "tl");
-            languageMap.Add("Finnish", "fi");
-            languageMap.Add("French", "fr");
-            languageMap.Add("Galician", "gl");
-            languageMap.Add("German", "de");
-            languageMap.Add("Georgian", "ka");
-            languageMap.Add("Greek", "el");
-            languageMap.Add("Haitian Creole", "ht");
-            languageMap.Add("Hebrew", "iw");
-            languageMap.Add("Hindi", "hi");
-            languageMap.Add("Hungarian", "hu");
-            languageMap.Add("Icelandic", "is");
-            languageMap.Add("Indonesian", "id");
-            languageMap.Add("Irish", "ga");
-            languageMap.Add("Italian", "it");
-            languageMap.Add("Japanese", "ja");
-            languageMap.Add("Korean", "ko");
-            languageMap.Add("Lao", "lo");
-            languageMap.Add("Latin", "la");
-            languageMap.Add("Latvian", "lv");
-            languageMap.Add("Lithuanian", "lt");
-            languageMap.Add("Macedonian", "mk");
-            languageMap.Add("Malay", "ms");
-            languageMap.Add("Maltese", "mt");
-            languageMap.Add("Norwegian", "no");
-            languageMap.Add("Persian", "fa");
-            languageMap.Add("Polish", "pl");
-            languageMap.Add("Portuguese", "pt");
-            languageMap.Add("Romanian", "ro");
-            languageMap.Add("Russian", "ru");
-            languageMap.Add("Serbian", "sr");
-            languageMap.Add("Slovak", "sk");
-            languageMap.Add("Slovenian", "sl");
-            languageMap.Add("Spanish", "es");
-            languageMap.Add("Swahili", "sw");
-            languageMap.Add("Swedish", "sv");
-            languageMap.Add("Tamil", "ta");
-            languageMap.Add("Telugu", "te");
-            languageMap.Add("Thai", "th");
-            languageMap.Add("Turkish", "tr");
-            languageMap.Add("Ukrainian", "uk");
-            languageMap.Add("Urdu", "ur");
-            languageMap.Add("Vietnamese", "vi");
-            languageMap.Add("Welsh", "cy");
-            languageMap.Add("Yiddish", "yi");
+            Assembly assembly = typeof(WebTranslationService).Assembly;
+            Stream stream = assembly.GetManifestResourceStream(typeof(WebTranslationService).Namespace + ".Languages.txt");
+            StreamReader reader = new StreamReader(stream);
+            string[] languages = reader.ReadToEnd().Split(new string[]{Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string item in languages)
+            {
+                string[] keyPair = item.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                languageMap.Add(keyPair[0], keyPair[1]);
+            }
+
+            reader.Dispose();
+            stream.Dispose();
         }
 
         #endregion

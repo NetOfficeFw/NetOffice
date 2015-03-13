@@ -803,8 +803,14 @@ namespace NetOffice.OfficeApi.Tools.Utils
             dialog.DoLocalization(Localization[dialogName][CurrentLanguage, true]);
             dialog.DoLayout(Layout);
         }
-
-        private bool TryGetApplicationVisible(bool defaultResult)
+        
+        /// <summary>
+        /// Try to detect the visibilty of host application main window.
+        /// The implementation want find a Visible property and analyze its current state
+        /// </summary>
+        /// <param name="defaultResult">fallback result if its failed</param>
+        /// <returns>true if application is visible, otherwise false</returns>
+        protected virtual bool TryGetApplicationVisible(bool defaultResult)
         {
             try
             {

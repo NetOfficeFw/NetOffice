@@ -42,7 +42,7 @@ namespace Sample.ExcelAddin
         /// </summary>
         /// <param name="RemoveMode"></param>
         /// <param name="custom"></param>
-        private  void ThisAddIn_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        private void ThisAddIn_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             
         }

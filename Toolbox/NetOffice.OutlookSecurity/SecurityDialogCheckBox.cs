@@ -34,5 +34,14 @@ namespace NetOffice.OutlookSecurity
         /// Control dimension
         /// </summary>
         public Rect Dimension { get; internal set; }
+
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("SecurityDialogCheckBox {0}", Handle);
+        }
     }
 }

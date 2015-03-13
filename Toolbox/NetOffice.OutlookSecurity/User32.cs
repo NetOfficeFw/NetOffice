@@ -111,7 +111,23 @@ namespace NetOffice.OutlookSecurity
        
         [DllImport("user32.dll", EntryPoint = "EnumDesktopWindows",ExactSpelling = false, CharSet = CharSet.Auto, SetLastError = true)]
         internal static extern bool EnumDesktopWindows(IntPtr hDesktop, EnumDelegate lpEnumCallbackFunction, IntPtr lParam);
-     
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool IsWindowEnabled(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        internal static extern bool EnableWindow(IntPtr hWnd, bool bEnable);
+ 
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        internal static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        internal static extern int PostMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+        private const int BM_CLICK = 0x00F5; 
+
         #endregion
 
         #region Methods
@@ -165,8 +181,8 @@ namespace NetOffice.OutlookSecurity
         /// <summary>
         /// class name of window
         /// </summary>
-        /// <param name="hWnd"></param>
-        /// <returns></returns>
+        /// <param name="hWnd">target window handle</param>
+        /// <returns>window class name</returns>
         public static string GetClassName(IntPtr hWnd)
         {
             StringBuilder strbClassName = new StringBuilder(255);
@@ -175,20 +191,34 @@ namespace NetOffice.OutlookSecurity
         }
 
         /// <summary>
-        /// send a click to x y
+        /// Move the mouse to x:y,  do left mouse click and move mouse back to origin position
         /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        public static void MouseClick(int x, int y)
+        /// <param name="x">location on x</param>
+        /// <param name="y">location on y</param>
+        public static void DoMouseMoveClick(int x, int y)
         {
-            Point MousePoint = new Point();
-            GetCursorPos(ref MousePoint);
+            Point mousePoint = new Point();
+            GetCursorPos(ref mousePoint);
             x = (int)(65535.0f / Screen.PrimaryScreen.Bounds.Width * x);
             y = (int)(65535.0f / Screen.PrimaryScreen.Bounds.Height * y);
             User32.mouse_event(User32.MOUSEEVENTF_ABSOLUTE + User32.MOUSEEVENTF_MOVE, (uint)x, (uint)y, 0, 0);
             User32.mouse_event(User32.MOUSEEVENTF_ABSOLUTE | User32.MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
             User32.mouse_event(User32.MOUSEEVENTF_ABSOLUTE | User32.MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-            SetCursorPos(MousePoint.X, MousePoint.Y);
+            SetCursorPos(mousePoint.X, mousePoint.Y);
+        }
+
+        /// <summary>
+        /// Send BM_CLICK via SendMessage
+        /// </summary>
+        /// <param name="handle">target handle</param>
+        public static void DoSendMouseClick(IntPtr handle)
+        {
+            SendMessage(handle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);        
+        }
+
+        public static void DoPostMouseClick(IntPtr handle)
+        {
+            PostMessage(handle, BM_CLICK, IntPtr.Zero, IntPtr.Zero);        
         }
 
         #endregion

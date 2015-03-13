@@ -37,10 +37,28 @@ namespace NetOffice.OutlookSecurity
         /// </summary>
         public string ClassName { get; internal set; }
 
-
         /// <summary>
         /// Dialog position/size
         /// </summary>
         public Rect Dimension { get; internal set; }
+
+        /// <summary>
+        /// Flag to keep information a TimeoutException was thrown for the dialog
+        /// </summary>
+        internal bool ExceptionThrown { get; set; }
+
+        /// <summary>
+        /// Flag to keep information checkbox is clicked for the dialog
+        /// </summary>
+        internal bool CheckBoxPassed { get; set; }
+
+        /// <summary>
+        /// Returns a System.String that represents the instance
+        /// </summary>
+        /// <returns>System.String</returns>
+        public override string ToString()
+        {
+            return String.Format("SecurityDialog {0}", Handle);
+        }
     }
 }

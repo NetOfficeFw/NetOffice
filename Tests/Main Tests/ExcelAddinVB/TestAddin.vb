@@ -101,8 +101,6 @@ Public Class TestAddin
 
     Private Sub Addin_OnConnection(ByVal Application As Object, ByVal ConnectMode As NetOffice.Tools.ext_ConnectMode, ByVal AddInInst As Object, ByRef custom As System.Array) Handles Me.OnConnection
 
-        Factory.Initialize()
-
         Dim addin As New Office.COMAddIn(Nothing, AddInInst)
         addin.Object = Me
         addin.Dispose()

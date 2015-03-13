@@ -35,24 +35,26 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBoxPermission = new System.Windows.Forms.PictureBox();
             this.labelPermission = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.labelTargetLanguage = new System.Windows.Forms.Label();
-            this.comboBoxTargetLanguage = new System.Windows.Forms.ComboBox();
-            this.comboBoxSourceLanguage = new System.Windows.Forms.ComboBox();
-            this.labelSourceLanguage = new System.Windows.Forms.Label();
+            this.buttonTranslate = new System.Windows.Forms.Button();
             this.textBoxRequested = new System.Windows.Forms.TextBox();
             this.textBoxTranslation = new System.Windows.Forms.TextBox();
             this.labelRequestedText = new System.Windows.Forms.Label();
             this.labelTranslation = new System.Windows.Forms.Label();
-            this.buttonTranslate = new System.Windows.Forms.Button();
+            this.labelTargetLanguage = new System.Windows.Forms.Label();
+            this.comboBoxTargetLanguage = new System.Windows.Forms.ComboBox();
+            this.comboBoxSourceLanguage = new System.Windows.Forms.ComboBox();
+            this.labelSourceLanguage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPermission)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -82,6 +84,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBoxPermission);
             this.splitContainer1.Panel2.Controls.Add(this.labelPermission);
             this.splitContainer1.Panel2.Controls.Add(this.buttonClose);
             this.splitContainer1.Size = new System.Drawing.Size(721, 292);
@@ -115,11 +118,20 @@
             this.columnHeader2.Text = "";
             this.columnHeader2.Width = 500;
             // 
+            // pictureBoxPermission
+            // 
+            this.pictureBoxPermission.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPermission.Image")));
+            this.pictureBoxPermission.Location = new System.Drawing.Point(22, 19);
+            this.pictureBoxPermission.Name = "pictureBoxPermission";
+            this.pictureBoxPermission.Size = new System.Drawing.Size(18, 18);
+            this.pictureBoxPermission.TabIndex = 3;
+            this.pictureBoxPermission.TabStop = false;
+            // 
             // labelPermission
             // 
             this.labelPermission.AutoSize = true;
             this.labelPermission.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.labelPermission.Location = new System.Drawing.Point(22, 22);
+            this.labelPermission.Location = new System.Drawing.Point(43, 21);
             this.labelPermission.Name = "labelPermission";
             this.labelPermission.Size = new System.Drawing.Size(359, 13);
             this.labelPermission.TabIndex = 2;
@@ -129,6 +141,8 @@
             // buttonClose
             // 
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.ForeColor = System.Drawing.Color.MidnightBlue;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonClose.Location = new System.Drawing.Point(520, 13);
@@ -183,56 +197,28 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Translation";
             // 
-            // labelTargetLanguage
+            // buttonTranslate
             // 
-            this.labelTargetLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelTargetLanguage.AutoSize = true;
-            this.labelTargetLanguage.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTargetLanguage.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.labelTargetLanguage.Location = new System.Drawing.Point(414, 26);
-            this.labelTargetLanguage.Name = "labelTargetLanguage";
-            this.labelTargetLanguage.Size = new System.Drawing.Size(25, 16);
-            this.labelTargetLanguage.TabIndex = 8;
-            this.labelTargetLanguage.Text = "To";
-            // 
-            // comboBoxTargetLanguage
-            // 
-            this.comboBoxTargetLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBoxTargetLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxTargetLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxTargetLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBoxTargetLanguage.FormattingEnabled = true;
-            this.comboBoxTargetLanguage.Location = new System.Drawing.Point(448, 23);
-            this.comboBoxTargetLanguage.Name = "comboBoxTargetLanguage";
-            this.comboBoxTargetLanguage.Size = new System.Drawing.Size(235, 21);
-            this.comboBoxTargetLanguage.TabIndex = 7;
-            // 
-            // comboBoxSourceLanguage
-            // 
-            this.comboBoxSourceLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxSourceLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxSourceLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBoxSourceLanguage.FormattingEnabled = true;
-            this.comboBoxSourceLanguage.Location = new System.Drawing.Point(78, 23);
-            this.comboBoxSourceLanguage.Name = "comboBoxSourceLanguage";
-            this.comboBoxSourceLanguage.Size = new System.Drawing.Size(235, 21);
-            this.comboBoxSourceLanguage.TabIndex = 5;
-            // 
-            // labelSourceLanguage
-            // 
-            this.labelSourceLanguage.AutoSize = true;
-            this.labelSourceLanguage.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSourceLanguage.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.labelSourceLanguage.Location = new System.Drawing.Point(33, 27);
-            this.labelSourceLanguage.Name = "labelSourceLanguage";
-            this.labelSourceLanguage.Size = new System.Drawing.Size(40, 16);
-            this.labelSourceLanguage.TabIndex = 6;
-            this.labelSourceLanguage.Text = "From";
+            this.buttonTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTranslate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonTranslate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTranslate.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.buttonTranslate.Image = ((System.Drawing.Image)(resources.GetObject("buttonTranslate.Image")));
+            this.buttonTranslate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTranslate.Location = new System.Drawing.Point(36, 144);
+            this.buttonTranslate.Name = "buttonTranslate";
+            this.buttonTranslate.Size = new System.Drawing.Size(648, 27);
+            this.buttonTranslate.TabIndex = 13;
+            this.buttonTranslate.Text = "Translate (Ctrl + Return)";
+            this.buttonTranslate.UseVisualStyleBackColor = true;
+            this.buttonTranslate.Click += new System.EventHandler(this.buttonTranslate_Click);
             // 
             // textBoxRequested
             // 
-            this.textBoxRequested.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxRequested.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxRequested.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRequested.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRequested.Location = new System.Drawing.Point(36, 78);
@@ -240,11 +226,11 @@
             this.textBoxRequested.Name = "textBoxRequested";
             this.textBoxRequested.Size = new System.Drawing.Size(648, 69);
             this.textBoxRequested.TabIndex = 9;
+            this.textBoxRequested.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRequested_KeyDown);
             // 
             // textBoxTranslation
             // 
-            this.textBoxTranslation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
+            this.textBoxTranslation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTranslation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxTranslation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,6 +254,7 @@
             // 
             // labelTranslation
             // 
+            this.labelTranslation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelTranslation.AutoSize = true;
             this.labelTranslation.BackColor = System.Drawing.Color.Transparent;
             this.labelTranslation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,21 +265,53 @@
             this.labelTranslation.TabIndex = 12;
             this.labelTranslation.Text = "Translation";
             // 
-            // buttonTranslate
+            // labelTargetLanguage
             // 
-            this.buttonTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonTranslate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonTranslate.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTranslate.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.buttonTranslate.Image = ((System.Drawing.Image)(resources.GetObject("buttonTranslate.Image")));
-            this.buttonTranslate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTranslate.Location = new System.Drawing.Point(36, 144);
-            this.buttonTranslate.Name = "buttonTranslate";
-            this.buttonTranslate.Size = new System.Drawing.Size(648, 27);
-            this.buttonTranslate.TabIndex = 13;
-            this.buttonTranslate.Text = "Translate";
-            this.buttonTranslate.UseVisualStyleBackColor = true;
-            this.buttonTranslate.Click += new System.EventHandler(this.buttonTranslate_Click);
+            this.labelTargetLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTargetLanguage.AutoSize = true;
+            this.labelTargetLanguage.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTargetLanguage.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.labelTargetLanguage.Location = new System.Drawing.Point(414, 26);
+            this.labelTargetLanguage.Name = "labelTargetLanguage";
+            this.labelTargetLanguage.Size = new System.Drawing.Size(25, 16);
+            this.labelTargetLanguage.TabIndex = 8;
+            this.labelTargetLanguage.Text = "To";
+            // 
+            // comboBoxTargetLanguage
+            // 
+            this.comboBoxTargetLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxTargetLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxTargetLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxTargetLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTargetLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxTargetLanguage.FormattingEnabled = true;
+            this.comboBoxTargetLanguage.Location = new System.Drawing.Point(448, 23);
+            this.comboBoxTargetLanguage.Name = "comboBoxTargetLanguage";
+            this.comboBoxTargetLanguage.Size = new System.Drawing.Size(235, 21);
+            this.comboBoxTargetLanguage.TabIndex = 7;
+            // 
+            // comboBoxSourceLanguage
+            // 
+            this.comboBoxSourceLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxSourceLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxSourceLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSourceLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxSourceLanguage.FormattingEnabled = true;
+            this.comboBoxSourceLanguage.Location = new System.Drawing.Point(78, 23);
+            this.comboBoxSourceLanguage.Name = "comboBoxSourceLanguage";
+            this.comboBoxSourceLanguage.Size = new System.Drawing.Size(235, 21);
+            this.comboBoxSourceLanguage.TabIndex = 5;
+            // 
+            // labelSourceLanguage
+            // 
+            this.labelSourceLanguage.AutoSize = true;
+            this.labelSourceLanguage.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSourceLanguage.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.labelSourceLanguage.Location = new System.Drawing.Point(33, 27);
+            this.labelSourceLanguage.Name = "labelSourceLanguage";
+            this.labelSourceLanguage.Size = new System.Drawing.Size(40, 16);
+            this.labelSourceLanguage.TabIndex = 6;
+            this.labelSourceLanguage.Text = "From";
             // 
             // FormMain
             // 
@@ -311,6 +330,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPermission)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -340,6 +360,7 @@
         private System.Windows.Forms.Label labelRequestedText;
         private System.Windows.Forms.Label labelTranslation;
         private System.Windows.Forms.Button buttonTranslate;
+        private System.Windows.Forms.PictureBox pictureBoxPermission;
 
     }
 }

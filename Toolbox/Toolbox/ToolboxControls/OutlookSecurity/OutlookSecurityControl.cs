@@ -35,8 +35,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
                 InitializeComponent();
                 if (!Program.IsDesign)
                 {
-                    NetOffice.OutlookSecurity.Supress.OnAction += new NetOffice.OutlookSecurity.Supress.SecurityDialogAction(Supress_OnAction);
-                    NetOffice.OutlookSecurity.Supress.OnError += new NetOffice.OutlookSecurity.Supress.ErrorOccuredEventHandler(Supress_OnError);
+                    NetOffice.OutlookSecurity.Suppress.OnAction += new NetOffice.OutlookSecurity.Suppress.SecurityDialogAction(Supress_OnAction);
+                    NetOffice.OutlookSecurity.Suppress.OnError += new NetOffice.OutlookSecurity.Suppress.ErrorOccuredEventHandler(Supress_OnError);
                 }
             }
             catch (Exception exception)
@@ -269,7 +269,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OutlookSecurity
             {
                 if (_programaticChange)
                     return;
-                NetOffice.OutlookSecurity.Supress.Enabled = checkBoxSupressEnabled.Checked;
+                NetOffice.OutlookSecurity.Suppress.Enabled = checkBoxSupressEnabled.Checked;
             }
             catch (Exception exception)
             {
