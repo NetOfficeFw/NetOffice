@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi.Tools.Utils
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        internal DialogUtils(CommonUtils owner)
+        protected internal DialogUtils(CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");

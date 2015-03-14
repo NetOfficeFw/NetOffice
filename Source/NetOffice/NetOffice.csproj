@@ -122,8 +122,8 @@
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\IDTExtensibility2.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="WndUtils\WindowEnumerator.cs" />
-    <Compile Include="WndUtils\ExcelApplicationWindow.cs" />
+    <Compile Include="Tools\WndUtils\WindowEnumerator.cs" />
+    <Compile Include="Tools\WndUtils\ExcelApplicationWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

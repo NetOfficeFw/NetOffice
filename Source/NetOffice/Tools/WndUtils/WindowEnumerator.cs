@@ -4,13 +4,33 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Text;
 
-namespace NetOffice.WndUtils
+namespace NetOffice.Tools.WndUtils
 {
     /// <summary>
     /// Enumerate Top Level Windows on Desktop
     /// </summary>
-    internal class WindowEnumerator
+    public class WindowEnumerator
     {
+        #region Embedded Types
+
+        /// <summary>
+        /// Internal operatotion mode 
+        /// </summary>
+        public enum FilterMode
+        {
+            /// <summary>
+            ///  Class name must match totaly 
+            /// </summary>
+            Full = 0,
+            
+            /// <summary>
+            /// Class name must match in start and end of name
+            /// </summary>
+            StartEnd = 1
+        }
+
+        #endregion
+
         #region Imports
 
         protected delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
@@ -42,7 +62,21 @@ namespace NetOffice.WndUtils
         /// <param name="filter">optional class name filter or null</param>
         public WindowEnumerator(string filter)
         {
+            Mode = FilterMode.Full;
             Filter = filter;
+            Result = new List<IntPtr>();
+        }
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="startsWithfilter">starts with class name filter</param>
+        /// <param name="endsWithFilter">ends with class name filter</param>
+        public WindowEnumerator(string startsWithfilter, string endsWithFilter)
+        {
+            Mode = FilterMode.StartEnd;
+            StartsWithFilter = startsWithfilter;
+            EndsWithFilter = endsWithFilter;
             Result = new List<IntPtr>();
         }
 
@@ -54,6 +88,21 @@ namespace NetOffice.WndUtils
         /// Optional class name filter or null
         /// </summary>
         public string Filter { get; private set; }
+
+        /// <summary>
+        /// Class name begin
+        /// </summary>
+        public string StartsWithFilter { get; private set; }
+
+        /// <summary>
+        /// Class name end
+        /// </summary>
+        public string EndsWithFilter { get; private set; }
+
+        /// <summary>
+        /// Current Filter Mode
+        /// </summary>
+        public FilterMode Mode { get; private set; }
 
         private List<IntPtr> Result { get; set; }
 
@@ -68,6 +117,9 @@ namespace NetOffice.WndUtils
         /// <returns>result array or null</returns>
         public IntPtr[] EnumerateWindows(int milliSecondsTimeout)
         {
+            if (milliSecondsTimeout < 0)
+                throw new ArgumentOutOfRangeException("milliSecondsTimeout");
+
             try
             {
                 lock (_lockInstance)
@@ -101,6 +153,18 @@ namespace NetOffice.WndUtils
             }
         }
 
+        /// <summary>
+        /// Returns information a window is currently visible
+        /// </summary>
+        /// <param name="handle">target window handle</param>
+        /// <returns>true if window is visible, otherwise false</returns>
+        public bool IsVisible(IntPtr handle)
+        {
+            if (IntPtr.Zero == handle)
+                throw new ArgumentNullException("handle");
+            return IsWindowVisible(handle);
+        }
+
         private void EnumerateWindowsAsync(object mre)
         {
             try
@@ -128,12 +192,7 @@ namespace NetOffice.WndUtils
                     if (nRet != 0)
                     {
                         string className = sb2.ToString();
-                        if (null != _currentInstance.Filter)
-                        {
-                            if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
-                                _currentInstance.Result.Add(hWnd);
-                        }
-                        else
+                        if (FilterMatch(className, _currentInstance))
                             _currentInstance.Result.Add(hWnd);
                     }
                 }
@@ -144,6 +203,32 @@ namespace NetOffice.WndUtils
                 DebugConsole.Default.WriteException(exception);
                 return true;
             }
+        }
+
+        private static bool FilterMatch(string className, WindowEnumerator instance)
+        {
+            switch (instance.Mode)
+            {
+                case FilterMode.StartEnd:
+                {
+                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
+                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
+                    string target = className.ToLower();    
+                    return target.StartsWith(start) && target.EndsWith(end);
+                }
+                default: // Full
+                {
+                    if (null != _currentInstance.Filter)
+                    {
+                        if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
+                            return true;
+                        else
+                            return false;
+                    }
+                    else
+                        return false;
+                }
+            }           
         }
 
         #endregion

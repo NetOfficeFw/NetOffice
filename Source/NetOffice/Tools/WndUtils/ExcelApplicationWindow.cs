@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace NetOffice.WndUtils
+namespace NetOffice.Tools.WndUtils
 {
     internal static class ExcelApplicationWindow
     { 

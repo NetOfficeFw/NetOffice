@@ -18,6 +18,7 @@ namespace NetOffice.PowerPointApi.Tools
 
         private PowerPointApi.Application _ownerApplication;
         private FileUtils _fileUtils;
+        private ApplicationUtils _appUtils;
 
         #endregion
 
@@ -83,9 +84,31 @@ namespace NetOffice.PowerPointApi.Tools
             }
         }
 
+        /// <summary>
+        /// Application related utils
+        /// </summary>
+        public ApplicationUtils Application
+        {
+            get
+            {
+                if (null == _appUtils)
+                    _appUtils = OnCreateApplicationUtils();
+                return _appUtils;
+            }
+        }
+
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Creates an instance of ApplicationUtils
+        /// </summary>
+        /// <returns>instance of ApplicationUtils</returns>
+        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        {
+            return new ApplicationUtils(this);
+        }
 
         /// <summary>
         /// Creates an instance of FileUtils

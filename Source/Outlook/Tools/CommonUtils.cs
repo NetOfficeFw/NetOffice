@@ -16,6 +16,7 @@ namespace NetOffice.OutlookApi.Tools
         #region Fields
 
         private OutlookApi.Application _ownerApplication;
+        private ApplicationUtils _application;
 
         #endregion
 
@@ -62,6 +63,49 @@ namespace NetOffice.OutlookApi.Tools
         internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly) : base(owner, isAutomation, ownerAssembly)
         {
 
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Application related utils
+        /// </summary>
+        public ApplicationUtils Application
+        {
+            get
+            {
+                if (null == _application)
+                    _application = OnCreateApplicationUtils();
+                return _application;
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Creates an instance of ApplicationUtils
+        /// </summary>
+        /// <returns>instance of ApplicationUtils</returns>
+        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        {
+            return new ApplicationUtils(this);
+        }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Creates an instance of DialogUtils
+        /// </summary>
+        /// <returns>instance of DialogUtils</returns>
+        protected override OfficeApi.Tools.Utils.DialogUtils OnCreateDialogUtils()
+        {
+            return new OutlookDialogUtils(this);
         }
 
         #endregion
