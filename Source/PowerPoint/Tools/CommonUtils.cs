@@ -97,6 +97,17 @@ namespace NetOffice.PowerPointApi.Tools
             }
         }
 
+        /// <summary>
+        /// Encapsulate the owner application to make accessible for child utils
+        /// </summary>
+        internal COMObject PowerPointApplication
+        {
+            get
+            {
+                return base.OwnerApplication;
+            }
+        }
+
         #endregion
 
         #region Methods

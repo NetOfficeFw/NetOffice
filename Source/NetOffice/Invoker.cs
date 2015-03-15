@@ -565,8 +565,12 @@ namespace NetOffice
         {
             try
             {
-                if ((comObject as COMObject).IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                COMObject wrapperInstance = comObject as COMObject;
+                if (null != wrapperInstance)
+                {
+                    if (wrapperInstance.IsDisposed)
+                        throw new ObjectDisposedException("COMObject");
+                }
 
                 object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, null, Settings.Default.ThreadCulture);
                 return returnValue;
@@ -615,8 +619,12 @@ namespace NetOffice
         {
             try
             {
-                if ((comObject as COMObject).IsDisposed)
-                    throw new ObjectDisposedException("COMObject");
+                COMObject wrapperInstance = comObject as COMObject;
+                if (null != wrapperInstance)
+                {
+                    if (wrapperInstance.IsDisposed)
+                        throw new ObjectDisposedException("COMObject");
+                }
 
                 object returnValue = comObject.GetType().InvokeMember(name, BindingFlags.GetProperty, null, comObject, paramsArray, Settings.Default.ThreadCulture);
                 return returnValue;

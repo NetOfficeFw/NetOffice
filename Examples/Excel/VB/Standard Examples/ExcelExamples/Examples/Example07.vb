@@ -25,6 +25,9 @@ Public Class Example07
             excelApplication.DisplayAlerts = False
             excelApplication.Visible = False
 
+            ' create a utils instance, not need for but helpful to keep the lines of code low
+            Dim utils As Excel.Tools.CommonUtils = New Excel.Tools.CommonUtils(excelApplication)
+
             ' add a new workbook
             Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
 
@@ -47,9 +50,8 @@ Public Class Example07
             sheet.Cells(8, 2).Value = "Do a double click to catch the BeforeDoubleClick Event from this Worksheet."
 
             ' save the book 
-            Dim fileExtension As String = GetDefaultExtension(excelApplication)
             Dim fileFormat As XlFileFormat = GetFileFormat(excelApplication)
-            workbookFile = String.Format("{0}\Example07{1}", _hostApplication.RootDirectory, fileExtension)
+            workbookFile = utils.File.Combine(_hostApplication.RootDirectory, "Example07", Excel.Tools.DocumentFormat.Macros)
             workBook.SaveAs(workbookFile, fileFormat)
 
         Catch throwedException As System.Runtime.InteropServices.COMException
@@ -99,23 +101,6 @@ Public Class Example07
 #End Region
 
 #Region "Helper"
-
-    ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-    ''' </summary>
-    ''' <param name="application">the instance</param>
-    ''' <returns>the extension</returns>
-    ''' <remarks></remarks>
-    Private Function GetDefaultExtension(ByVal application As Excel.Application) As String
-
-        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (version >= 12.0) Then
-            Return ".xlsm"
-        Else
-            Return ".xls"
-        End If
-
-    End Function
 
     Private Function GetFileFormat(ByVal application As Excel.Application) As XlFileFormat
 

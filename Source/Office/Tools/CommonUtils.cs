@@ -293,7 +293,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Assembly informations used in AssemblyInfo
         /// </summary>
-        internal Assembly OwnerAssembly
+        protected internal Assembly OwnerAssembly
         {
             get
             {
@@ -309,7 +309,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Office Owner Application
         /// </summary>
-        internal COMObject OwnerApplication
+        protected internal COMObject OwnerApplication
         {
             get
             {

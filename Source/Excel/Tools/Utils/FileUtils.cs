@@ -66,7 +66,8 @@ namespace NetOffice.ExcelApi.Tools.Utils
         /// <returns>filename with dot and extension</returns>
         public string Combine(string fileName, DocumentFormat type)
         {
-            return System.IO.Path.Combine(fileName, "." + FileExtension(type));
+            string dotSeperator = fileName.EndsWith(".", StringComparison.InvariantCultureIgnoreCase) ? String.Empty : ".";
+            return System.IO.Path.Combine(fileName, dotSeperator + FileExtension(type));
         }
 
         /// <summary>
@@ -78,7 +79,8 @@ namespace NetOffice.ExcelApi.Tools.Utils
         /// <returns>Combined file path</returns>
         public string Combine(string directoryPath, string fileName, DocumentFormat type)
         {
-            return System.IO.Path.Combine(directoryPath, fileName, "." + FileExtension(type));
+            string dotSeperator = fileName.EndsWith(".", StringComparison.InvariantCultureIgnoreCase) ? String.Empty : ".";
+            return System.IO.Path.Combine(directoryPath, fileName + dotSeperator + FileExtension(type));
         }
 
         #endregion

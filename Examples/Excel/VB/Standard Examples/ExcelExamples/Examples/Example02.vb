@@ -16,6 +16,9 @@ Public Class Example02
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
 
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As Excel.Tools.CommonUtils = New Excel.Tools.CommonUtils(excelApplication)
+
         ' add a new workbook
         Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
         Dim workSheet As Excel.Worksheet = workBook.Worksheets(1)
@@ -81,8 +84,7 @@ Public Class Example02
         workSheet.Rows(9).RowHeight = 25
 
         ' save the book 
-        Dim fileExtension As String = GetDefaultExtension(excelApplication)
-        Dim workbookFile As String = String.Format("{0}\Example02{1}", _hostApplication.RootDirectory, fileExtension)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", Excel.Tools.DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -117,27 +119,6 @@ Public Class Example02
             Return Nothing
         End Get
     End Property
-
-#End Region
-
-#Region "Helper"
-
-    ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-    ''' </summary>
-    ''' <param name="application">the instance</param>
-    ''' <returns>the extension</returns>
-    ''' <remarks></remarks>
-    Private Function GetDefaultExtension(ByVal application As Excel.Application) As String
-
-        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (version >= 12.0) Then
-            Return ".xlsx"
-        Else
-            Return ".xls"
-        End If
-
-    End Function
 
 #End Region
 

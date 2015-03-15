@@ -1,8 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace NetOffice.PowerPointApi.Tools.Utils
 {
@@ -13,14 +16,33 @@ namespace NetOffice.PowerPointApi.Tools.Utils
     {
         #region Imports
 
+        /// <summary>
+        /// Application VTable interface
+        /// </summary>
+        [DefaultMember("Name"), Guid("91493442-5A91-11CF-8700-00AA0060263B"), TypeLibType(4288)]
+        [ComImport]
+        public interface VTableApplication
+        {
+            /// <summary>
+            /// Main window handle from application window
+            /// </summary>
+            [DispId(2031)]
+            int HWND
+            {
+                [DispId(2031), TypeLibFunc(1)]
+                [MethodImpl(4096)]
+                get;
+            }
+        }
+
         [DllImport("User32")]
         private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
 
         [DllImport("User32")]
         private static extern bool EnumChildWindows(IntPtr hWndParent, EnumChildCallback lpEnumFunc, ref int lParam);
-
+     
         [DllImport("Oleacc.dll")]
-        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, ref object ptr);
+        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, [MarshalAs(UnmanagedType.IDispatch)]ref object ptr);
 
         private delegate bool EnumChildCallback(IntPtr hwnd, ref int lParam);
 
@@ -29,7 +51,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
         #region Fields
 
         private static uint objid_NATIVEOM = 0xFFFFFFF0;
-        private static Guid _dispatch = new Guid("{00020400-0000-0000-C000-000000000046}");
+        private static Guid _dispatch = new Guid("00020400-0000-0000-C000-000000000046");
         private static Guid _unknown = new Guid("00000000-0000-0000-C000-000000000046");
 
         private CommonUtils _owner;
@@ -82,6 +104,28 @@ namespace NetOffice.PowerPointApi.Tools.Utils
 
         private int TryGetHostApplicationWindowHandle()
         {
+            int result = TryGetHostApplicationWindowHandleFromVTable();
+            if(0 == result)
+                result = TryGetHostApplicationWindowHandleFromDesktop();
+            return result;
+        }
+
+        private int TryGetHostApplicationWindowHandleFromVTable()        
+        {
+            try
+            {
+                VTableApplication test = _owner.PowerPointApplication.UnderlyingObject as VTableApplication;
+                return null != test ? test.HWND : 0;
+            }
+            catch (Exception exception)
+            {
+                NetOffice.Core.Default.Console.WriteException(exception);
+                return 0;
+            }
+        }
+
+        private int TryGetHostApplicationWindowHandleFromDesktop()
+        {
             try
             {
                 int result = 0;
@@ -91,16 +135,23 @@ namespace NetOffice.PowerPointApi.Tools.Utils
                 foreach (IntPtr item in handles)
                 {
                     object proxyApplication = GetAccessibleObject(item);
-                    if (null == proxyApplication)
+                    if (null != proxyApplication)
                     {
-                        bool equals = Equals(_owner.Owner.AppInstance.UnderlyingObject, proxyApplication);
-                        if (equals)
+                        try
                         {
-                            result = (int)item;
-                            Marshal.ReleaseComObject(proxyApplication);
+                            bool equals = Equal(_owner.PowerPointApplication.UnderlyingObject, proxyApplication);
+                            if (equals)
+                                result = (int)item;
                             break;
                         }
-                        Marshal.ReleaseComObject(proxyApplication);
+                        catch
+                        {
+                            throw;
+                        }
+                        finally
+                        {
+                            Marshal.ReleaseComObject(proxyApplication);
+                        }
                     }                    
                 }
 
@@ -134,39 +185,38 @@ namespace NetOffice.PowerPointApi.Tools.Utils
             return null;
         }
 
-        private bool Equal(object applicationProxyA, object applicationProxyB)
+        private static int GetVBEMainWindowHandle(object applicationProxy)
         {
-            IntPtr outValueA = IntPtr.Zero;
-            IntPtr outValueB = IntPtr.Zero;
-            IntPtr ptrA = IntPtr.Zero;
-            IntPtr ptrB = IntPtr.Zero;
+            PowerPointApi.Application app = null;
             try
             {
-                ptrA = Marshal.GetIUnknownForObject(applicationProxyA);
-                int hResultA = Marshal.QueryInterface(ptrA, ref _unknown, out outValueA);
-
-                ptrB = Marshal.GetIUnknownForObject(applicationProxyB);
-                int hResultB = Marshal.QueryInterface(ptrB, ref _unknown, out outValueB);
-
-                return (hResultA == 0 && hResultB == 0 && ptrA == ptrB);
+                Core core = new Core();
+                app = new Application(core, null, applicationProxy);
+                int result = app.VBE.MainWindow.HWnd;
+                return result;
             }
-            catch (Exception)
+            catch
             {
                 throw;
             }
             finally
             {
-                if (IntPtr.Zero != ptrA)
-                    Marshal.Release(ptrA);
+                if (null != app)
+                    app.DisposeChildInstances();
+            }
+        }
 
-                if (IntPtr.Zero != outValueA)
-                    Marshal.Release(outValueA);
-
-                if (IntPtr.Zero != ptrB)
-                    Marshal.Release(ptrB);
-
-                if (IntPtr.Zero != outValueB)
-                    Marshal.Release(outValueB);
+        private bool Equal(object applicationProxyA, object applicationProxyB)
+        {
+            try
+            {
+                int hwndA = GetVBEMainWindowHandle(applicationProxyA);
+                int hwndB = GetVBEMainWindowHandle(applicationProxyB);
+                return hwndA == hwndB;        
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 

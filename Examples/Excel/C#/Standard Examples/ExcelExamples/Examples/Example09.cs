@@ -106,7 +106,7 @@ namespace ExcelExamplesCS4
             Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
-            
+
             #endregion
 
             #region Create a new toolbar

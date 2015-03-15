@@ -1,4 +1,5 @@
 ﻿using System;
+using NetRuntimeSystem = System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
@@ -63,7 +64,8 @@ namespace NetOffice.WordApi.Tools.Utils
         /// <returns>filename with dot and extension</returns>
         public string Combine(string fileName, DocumentFormat type)
         {
-            return Path.Combine(fileName, "." + FileExtension(type));
+            string dotSeperator = fileName.EndsWith(".", StringComparison.InvariantCultureIgnoreCase) ? String.Empty : ".";
+            return NetRuntimeSystem.IO.Path.Combine(fileName, dotSeperator + FileExtension(type));
         }
 
         /// <summary>
@@ -75,7 +77,8 @@ namespace NetOffice.WordApi.Tools.Utils
         /// <returns>Combined file path</returns>
         public string Combine(string directoryPath, string fileName, DocumentFormat type)
         {
-            return Path.Combine(directoryPath, fileName, "." + FileExtension(type));
+            string dotSeperator = fileName.EndsWith(".", StringComparison.InvariantCultureIgnoreCase) ? String.Empty : ".";
+            return NetRuntimeSystem.IO.Path.Combine(directoryPath, fileName + dotSeperator + FileExtension(type));
         }
 
         #endregion

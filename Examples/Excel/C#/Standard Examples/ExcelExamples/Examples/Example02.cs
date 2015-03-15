@@ -22,6 +22,9 @@ namespace ExcelExamplesCS4
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            Excel.Tools.CommonUtils utils = new Excel.Tools.CommonUtils(excelApplication);
+
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
             Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
@@ -87,8 +90,7 @@ namespace ExcelExamplesCS4
             workSheet.Rows[9].RowHeight = 25;
 
             // save the book 
-            string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = String.Format("{0}\\Example02{1}", HostApplication.RootDirectory, fileExtension);
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", Excel.Tools.DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -127,24 +129,6 @@ namespace ExcelExamplesCS4
         /// Current Example Host
         /// </summary>
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsx";
-            else
-                return ".xls";
-        }
 
         #endregion
     }

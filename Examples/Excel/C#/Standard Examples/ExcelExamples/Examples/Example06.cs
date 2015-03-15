@@ -122,7 +122,7 @@ namespace ExcelExamplesCS4
                     break;
 
                 default:
-                    throw (new Exception("Unkown dialog selected."));
+                    throw (new ArgumentOutOfRangeException("Unkown dialog selected."));
 
             }
 

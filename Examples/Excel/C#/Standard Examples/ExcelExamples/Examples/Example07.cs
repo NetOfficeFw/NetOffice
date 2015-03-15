@@ -29,6 +29,9 @@ namespace ExcelExamplesCS4
                 excelApplication.DisplayAlerts = false;
                 excelApplication.Visible = false;
 
+                // create a utils instance, not need for but helpful to keep the lines of code low
+                Excel.Tools.CommonUtils utils = new Excel.Tools.CommonUtils(excelApplication);
+
                 // add a new workbook
                 Excel.Workbook workBook = excelApplication.Workbooks.Add();
 
@@ -51,11 +54,9 @@ namespace ExcelExamplesCS4
                 sheet.Cells[8, 2].Value = "Do a double click to catch the BeforeDoubleClick Event from this Worksheet.";
 
                 // save the book 
-                string fileExtension = GetDefaultExtension(excelApplication);
                 XlFileFormat fileFormat = GetFileFormat(excelApplication);
-                workbookFile = string.Format("{0}\\Example07{1}", HostApplication.RootDirectory, fileExtension);
+                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example07", Excel.Tools.DocumentFormat.Macros);
                 workBook.SaveAs(workbookFile, fileFormat);
-
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {
@@ -105,35 +106,6 @@ namespace ExcelExamplesCS4
         #endregion
 
         #region Helper
-
-        /// <summary>
-        /// Translate a color to double
-        /// </summary>
-        /// <param name="color">expression to convert</param>
-        /// <returns>color</returns>
-        private static double ToDouble(System.Drawing.Color color)
-        {
-            uint returnValue = color.B;
-            returnValue = returnValue << 8;
-            returnValue += color.G;
-            returnValue = returnValue << 8;
-            returnValue += color.R;
-            return returnValue;
-        }
-
-        /// <summary>
-        /// Returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsm";
-            else
-                return ".xls";
-        }
 
         /// <summary>
         /// Returns the valid file format for the instance. Documents with macro's need a bit xtra config since 2007
