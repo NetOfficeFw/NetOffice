@@ -573,14 +573,14 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                             dependecies.Add("MSComctlLib");
                         break;
                     case "MSProject":
-                        break;
-                    case "Visio":
                         if (!dependecies.Any(a => a == "Office"))
                             dependecies.Add("Office");
                         if (!dependecies.Any(a => a == "VBIDE"))
                             dependecies.Add("VBIDE");
                         if (!dependecies.Any(a => a == "MSHTML"))
                             dependecies.Add("MSHTML");
+                        break;
+                    case "Visio":
                         break;
                     default:
                         break;

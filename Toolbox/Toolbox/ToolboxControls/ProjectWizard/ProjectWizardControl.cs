@@ -398,7 +398,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                             CheckBox box = winCtrl as CheckBox;
                             if (null != box)
                             {
-                                if (box.Name == "checkBoxProject" && box.Checked)
+                                if (box.Name == "checkBoxVisio" && box.Checked)
                                 {
                                     visioChecked = true;
                                 }
