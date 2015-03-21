@@ -35,9 +35,10 @@ Public Class Example01
 
         workSheet.Cells(1, 1).Value = "We have 2 simple shapes created."
 
-        ' save the book
-        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", Excel.Tools.DocumentFormat.Normal)
-        workBook.SaveAs(workbookFile)
+
+        'save document
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Word.Tools.DocumentFormat.Normal)
+        newDocument.SaveAs(documentFile)
 
         ' close excel and dispose reference
         excelApplication.Quit()

@@ -28,6 +28,9 @@ Public Class Example04
         Dim wordApplication As New Word.Application
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As Word.Tools.CommonUtils = New Word.Tools.CommonUtils(wordApplication)
+
         ' add a new document
         Dim newDocument As Word.Document
         newDocument = wordApplication.Documents.Add()
@@ -48,7 +51,7 @@ Public Class Example04
         wordApplication.Selection.TypeText(" or click ")
 
         newDocument.Hyperlinks.Add(wordApplication.Selection.Range, newDocument.MailMerge.DataSource.DataFields(2).Value, _
-                                   Type.Missing, "click me if know you want.", "here", Type.Missing)
+                                   Nothing, "click me if know you want.", "here")
 
         'show the contents of the fields
         newDocument.MailMerge.ViewMailMergeFieldCodes = WdConstants.wdToggle
@@ -56,14 +59,9 @@ Public Class Example04
         ' do not show the fieldcodes
         wordApplication.ActiveWindow.View.ShowFieldCodes = False
 
-        ' we save the document as .doc for compatibility with all word versions
-        Dim documentFile As String = String.Format("{0}\Example03{1}", _hostApplication.RootDirectory, ".doc")
-        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
-        If (wordVersion >= 12.0) Then
-            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
-        Else
-            newDocument.SaveAs(documentFile)
-        End If
+        'save document
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example04", Word.Tools.DocumentFormat.Normal)
+        newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()

@@ -24,6 +24,9 @@ Public Class Example03
             ' start powerpoint
             powerApplication = New PowerPoint.Application()
 
+            ' create a utils instance, not need for but helpful to keep the lines of code low
+            Dim utils As PowerPoint.Tools.CommonUtils = New PowerPoint.Tools.CommonUtils(powerApplication)
+
             ' add a new presentation with one new slide
             Dim presentation As PowerPoint.Presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue)
             Dim slide As PowerPoint.Slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank)
@@ -41,8 +44,7 @@ Public Class Example03
             button.ActionSettings(PpMouseActivation.ppMouseClick).Run = "NetOfficeTestMacro"
 
             ' save the document 
-            Dim fileExtension As String = GetDefaultExtension(powerApplication)
-            documentFile = String.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension)
+            documentFile = utils.File.Combine(_hostApplication.RootDirectory, "Example03", PowerPoint.Tools.DocumentFormat.Macros)
             presentation.SaveAs(documentFile)
 
         Catch throwedException As Exception
@@ -88,27 +90,6 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
-
-#Region "Helper"
-
-    ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".ppt" or ".pptm"
-    ''' </summary>
-    ''' <param name="application">the instance</param>
-    ''' <returns>the extension</returns>
-    ''' <remarks></remarks>
-    Private Function GetDefaultExtension(ByVal application As PowerPoint.Application) As String
-
-        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (version >= 12.0) Then
-            Return ".pptm"
-        Else
-            Return ".ppt"
-        End If
-
-    End Function
 
 #End Region
 

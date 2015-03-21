@@ -19,9 +19,9 @@ Public Class Addin
 
     Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
 
-        ' get the host application version
-        Dim hostVersion As String = Me.Application.Version
-        Console.WriteLine("Host Application Version is:{0}", hostVersion)
+        ' show the host application version
+        Dim hostVersion As String = String.Format("Host Application Version is:{0}", Me.Application.Version)
+        Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK)
 
     End Sub
 

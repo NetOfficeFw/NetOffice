@@ -823,7 +823,7 @@ namespace NetOffice.OfficeApi.Tools
         /// Called from regasm while register
         /// </summary>
         /// <param name="type">Type information for the class</param>
-        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
             try                
@@ -866,16 +866,16 @@ namespace NetOffice.OfficeApi.Tools
 				foreach(RegisterIn item in attribute.Products)
 				{
 					 // register addin in Office
-					if(location.Value == RegistrySaveLocation.LocalMachine)
-						Registry.LocalMachine.CreateSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) +  progId.Value);
-					else
-						Registry.CurrentUser.CreateSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) +  progId.Value);
-					
+                    if (location.Value == RegistrySaveLocation.LocalMachine)
+                        Registry.LocalMachine.CreateSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value);
+                    else
+                        Registry.CurrentUser.CreateSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value);
+
 					RegistryKey regKeyProduct = null;
 					if(location.Value == RegistrySaveLocation.LocalMachine)
-						regKeyProduct = Registry.LocalMachine.OpenSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progId.Value, true);
+                        regKeyProduct = Registry.LocalMachine.OpenSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value, true);
 					else
-						regKeyProduct = Registry.CurrentUser.OpenSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progId.Value, true);
+                        regKeyProduct = Registry.CurrentUser.OpenSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value, true);
 
 					regKeyProduct.SetValue("LoadBehavior", addin.LoadBehavior);
 					regKeyProduct.SetValue("FriendlyName", addin.Name);
@@ -926,9 +926,9 @@ namespace NetOffice.OfficeApi.Tools
 				{
 				    // unregister addin in office 
 					if (location.Value == RegistrySaveLocation.LocalMachine)
-						Registry.LocalMachine.DeleteSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progId.Value, false);
+                        Registry.LocalMachine.DeleteSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value, false);
 					else
-						Registry.CurrentUser.DeleteSubKey(string.Format(_addinOfficeRegistryKey, item.ToString()) + progId.Value, false);
+                        Registry.CurrentUser.DeleteSubKey(string.Format(_addinOfficeRegistryKey, MultiRegisterAttribute.RegistryEntry(item)) + progId.Value, false);
 				}
 
                 if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))

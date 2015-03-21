@@ -5,9 +5,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Text;
 using System.Globalization;
-
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
@@ -27,6 +25,9 @@ namespace WordExamplesCS4
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(wordApplication);
+
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
 
@@ -38,13 +39,9 @@ namespace WordExamplesCS4
             wordApplication.Selection.Font.Bold = 1;
             wordApplication.Selection.Font.Size = 18;
 
-            // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, ".doc");
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
-            else
-                newDocument.SaveAs(documentFile);
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example01", Word.Tools.DocumentFormat.Normal);
+            newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();

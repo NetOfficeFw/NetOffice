@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listOverView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelAddinCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,27 +52,43 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listOverView.FullRowSelect = true;
+            this.listOverView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listOverView.Location = new System.Drawing.Point(0, 0);
-            this.listOverView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listOverView.Margin = new System.Windows.Forms.Padding(4);
             this.listOverView.Name = "listOverView";
             this.listOverView.Size = new System.Drawing.Size(827, 315);
             this.listOverView.TabIndex = 0;
             this.listOverView.UseCompatibleStateImageBehavior = false;
             this.listOverView.View = System.Windows.Forms.View.Details;
+            this.listOverView.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listOverView_ItemChecked);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
             this.columnHeader1.Width = 240;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Product";
+            this.columnHeader4.Width = 80;
+            // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Description";
             this.columnHeader2.Width = 300;
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ProgID";
+            this.columnHeader3.Width = 170;
+            // 
             // buttonExit
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonExit.Location = new System.Drawing.Point(677, 339);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(110, 26);
@@ -84,6 +100,11 @@
             // buttonRemove
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRemove.Enabled = false;
+            this.buttonRemove.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemove.Image = ((System.Drawing.Image)(resources.GetObject("buttonRemove.Image")));
+            this.buttonRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRemove.Location = new System.Drawing.Point(528, 339);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(110, 26);
@@ -92,19 +113,13 @@
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "ProgID";
-            this.columnHeader3.Width = 170;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Product";
-            this.columnHeader4.Width = 80;
-            // 
             // buttonRefresh
             // 
             this.buttonRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRefresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefresh.Image")));
+            this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRefresh.Location = new System.Drawing.Point(401, 339);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(110, 26);
@@ -115,6 +130,7 @@
             // 
             // labelAddinCount
             // 
+            this.labelAddinCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelAddinCount.AutoSize = true;
             this.labelAddinCount.ForeColor = System.Drawing.Color.MidnightBlue;
             this.labelAddinCount.Location = new System.Drawing.Point(34, 340);
@@ -127,6 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(830, 386);
             this.Controls.Add(this.labelAddinCount);
             this.Controls.Add(this.buttonRefresh);
@@ -135,7 +152,7 @@
             this.Controls.Add(this.listOverView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "NetOffice Addin Removal Tool - Find and remove NetOffice Sample Addins";
             this.ResumeLayout(false);

@@ -18,20 +18,24 @@ Public Class Addin
 
             Select Case control.Id
                 Case "customButton1"
-                    MessageBox.Show("This is the first sample button. " & Application.FriendlyTypeName, "NetOfficeTools.SuperAddinVB4")
+                    Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinVB4", DialogResult.None)
                 Case "customButton2"
-                    MessageBox.Show("This is the second sample button. " & Application.FriendlyTypeName, "NetOfficeTools.SuperAddinVB4")
+                    Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinVB4", DialogResult.None)
                 Case Else
-                    MessageBox.Show("Unkown Control Id: " + control.Id, "NetOfficeTools.SuperAddinVB4")
-
+                    Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, "NetOfficeTools.SuperAddinVB4", DialogResult.None)
             End Select
 
         Catch throwedException As Exception
 
-            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
-            MessageBox.Show("An error occured in OnAction." + details, "NetOfficeTools.SuperAddinVB4", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Utils.Dialog.ShowError(throwedException, "Unexpected state in SuperAddinVB4 OnAction")
 
         End Try
+
+    End Sub
+
+    Protected Overrides Sub OnError(ByVal methodKind As NetOffice.Tools.ErrorMethodKind, ByVal exception As System.Exception)
+
+        Utils.Dialog.ShowError(exception, "Unexpected state in SuperAddinVB4 " + methodKind.ToString())
 
     End Sub
 

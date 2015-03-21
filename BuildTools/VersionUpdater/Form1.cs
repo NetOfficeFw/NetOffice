@@ -211,6 +211,12 @@ namespace NOBuildTools.VersionUpdater
 
         private void ChangeNetVersionEntryInProjectFile(ref string fileContent, string toNetVersion)
         {
+            if (toNetVersion != "4.0")
+            {
+                fileContent = fileContent.Replace("<TargetFrameworkProfile>Client</TargetFrameworkProfile>", "");
+            }
+
+
             string net1 = "<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>";
             int position = fileContent.IndexOf(net1);
             if (position > -1)
@@ -250,6 +256,7 @@ namespace NOBuildTools.VersionUpdater
                 fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
                 return;
             }
+
         }
 
         private void ChangeFormatVersionInSolutionFile(ref string fileContent, string toNetVersion)

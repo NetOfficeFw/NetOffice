@@ -24,7 +24,7 @@ namespace NetOffice.MSProjectApi.Tools
         /// <summary>
         /// MS-Project Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\MSProject\\AddIns\\";
+        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\MS Project\\AddIns\\";
     
         /// <summary>
         /// First field in OnConnection custom argument array
@@ -253,7 +253,15 @@ namespace NetOffice.MSProjectApi.Tools
         {
             try
             {
+                if (custom.Length > 0)
+                {
+                    object firstCustomItem = custom.GetValue(1);
+                    string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
+                    System.Int32.TryParse(tryString, out _automationCode);
+                }
+
                 this.Application = new MSProject.Application(Factory, null, Application);
+                Utils = OnCreateUtils();
                 RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
             catch (NetRuntimeSystem.Exception exception)

@@ -43,7 +43,7 @@ Public Class Addin
 
         ' You see the host application is accessible as property from the class instance.
         ' The application property was disposed automaticly while shutdown.
-        Factory.Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
+        Console.WriteLine("Host Application Version is:{0}", Me.Application.Version)
 
     End Sub
 

@@ -18,6 +18,9 @@ Public Class Example05
         Dim wordApplication As New Word.Application
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As Word.Tools.CommonUtils = New Word.Tools.CommonUtils(wordApplication)
+
         ' add a new document
         Dim newDocument As Word.Document
         newDocument = wordApplication.Documents.Add()
@@ -39,11 +42,9 @@ Public Class Example05
         'start the macro
         wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro")
 
-        ' we save the document as .doc for compatibility with all word versions
-        Dim fileExtension = GetFileExtension(wordApplication)
-        Dim documentFile As String = String.Format("{0}\Example05{1}", _hostApplication.RootDirectory, fileExtension)
-        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
-        If (wordVersion >= 12.0) Then
+        ' save the document
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example05", Word.Tools.DocumentFormat.Macros)
+        If (utils.ApplicationIs2007OrHigher) Then
             newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
         Else
             newDocument.SaveAs(documentFile)
@@ -81,21 +82,6 @@ Public Class Example05
             Return Nothing
         End Get
     End Property
-
-#End Region
-
-#Region "Helper"
-
-    Private Function GetFileExtension(ByVal application As Word.Application) As String
-
-        Dim wordVersion As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (wordVersion >= 12.0) Then
-            Return ".docm"
-        Else
-            Return ".docm"
-        End If
-
-    End Function
 
 #End Region
 

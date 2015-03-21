@@ -37,6 +37,9 @@ namespace WordExamplesCS4
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(wordApplication);
+
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
 
@@ -67,13 +70,9 @@ namespace WordExamplesCS4
             //do not show the fieldcodes
             wordApplication.ActiveWindow.View.ShowFieldCodes = false;
 
-            // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example04{1}", HostApplication.RootDirectory, ".doc");
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
-            else
-                newDocument.SaveAs(documentFile);
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", Word.Tools.DocumentFormat.Normal);
+            newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();

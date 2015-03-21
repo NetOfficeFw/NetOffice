@@ -71,6 +71,11 @@ namespace NetOffice
         /// </summary>
         private object _childListLock = new object();
 
+        /// <summary>
+        /// associated factory
+        /// </summary>
+        private Core _factory;
+
         #endregion
 
         #region Ctor
@@ -389,7 +394,6 @@ namespace NetOffice
                 _factory = value;
             }
         }
-        private Core _factory;
 
         /// <summary>
         /// NetOffice property: the associated invoker
@@ -456,13 +460,12 @@ namespace NetOffice
         {
             get
             {
-                string fullname = InstanceType.FullName;
+                string fullname = GetType().FullName;
                 if (!String.IsNullOrEmpty(fullname))
                 {
                     if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
                         fullname = fullname.Replace("NetOffice.", "");
-                    if (fullname.StartsWith("Api.", StringComparison.InvariantCultureIgnoreCase))
-                        fullname = fullname.Replace("Api.", "");
+                    fullname = fullname.Replace("Api.", "");
                 }
                 return fullname;
             }

@@ -23,6 +23,9 @@ namespace PowerPointExamplesCS4
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
+         
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            PowerPoint.Tools.CommonUtils utils = new PowerPoint.Tools.CommonUtils(powerApplication);
 
             // add a new presentation with two new slides
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -41,8 +44,7 @@ namespace PowerPointExamplesCS4
             slide2.SlideShowTransition.Speed = PpTransitionSpeed.ppTransitionSpeedFast;
 
             // save the document 
-            string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example04{1}", HostApplication.RootDirectory, fileExtension);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", PowerPoint.Tools.DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference

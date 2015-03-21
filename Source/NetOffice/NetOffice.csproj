@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="COMObjectExpandableObjectConverter.cs" />
     <Compile Include="Core.cs" />
+    <Compile Include="CurrentAppDomain.cs" />
     <Compile Include="DebugConsoleMode.cs" />
     <Compile Include="NamedPipes\ClientPipeConnection.cs" />
     <Compile Include="NamedPipes\InterProcessConnectionState.cs" />

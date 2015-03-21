@@ -132,7 +132,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
         // Rethrow the exception otherwise the exception is marked as handled.   
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)
         {
-            string friendlyErrorDescription = String.Format("Unexpected state in {0}.", methodKind);
+            string friendlyErrorDescription = String.Format("Unexpected state in ExtendedExcelCS4.Addin {0}.", methodKind);
             Utils.Dialog.ShowError(exception, friendlyErrorDescription);
         }
 

@@ -28,10 +28,12 @@ namespace AccessExamplesCS4
         {
             // start access 
             Access.Application accessApplication = new Access.Application();
-             
-            // create database name 
-            string fileExtension = GetDefaultExtension(accessApplication);
-            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, fileExtension);
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            Access.Tools.CommonUtils utils = new Access.Tools.CommonUtils(accessApplication);
+
+            // create database file name 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example01", Access.Tools.DocumentFormat.Normal);
 
             // delete old database if exists
             if (System.IO.File.Exists(documentFile))
@@ -73,29 +75,6 @@ namespace AccessExamplesCS4
         #region Properties
 
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Access.Application application)
-        {
-            // Access 2000 doesnt have the Version property(unfortunately)
-            // we check for support with the SupportEntity method, implemented by NetOffice
-            if (!application.EntityIsAvailable("Version"))
-                return ".mdb";
-
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".accdb";
-            else
-                return ".mdb";
-        }
 
         #endregion
     }

@@ -75,5 +75,18 @@ namespace NetOffice.OfficeApi.Tools
                 throw new ArgumentNullException("MultiRegisterAttribute is missing");
             return array[0] as MultiRegisterAttribute;
 		}
+
+        /// <summary>
+        /// Get registry value string
+        /// </summary>
+        /// <param name="register">target office application</param>
+        /// <returns>registry sub string from office application</returns>
+        internal static string RegistryEntry(RegisterIn register)
+        {
+            if (register == RegisterIn.MSProject)
+                return "MS Project";
+            else
+                return register.ToString();
+        }
     }
 }

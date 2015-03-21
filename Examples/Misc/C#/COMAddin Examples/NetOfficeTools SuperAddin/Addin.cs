@@ -24,22 +24,35 @@ namespace NetOfficeTools.SuperAddinCS4
                 switch (control.Id)
                 {
                     case "customButton1":
-
-                        MessageBox.Show("This is the first sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4");
+                        Utils.Dialog.ShowMessageBox("This is the first sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
                         break;
                     case "customButton2":
-                        MessageBox.Show("This is the second sample button." + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4");
+                        Utils.Dialog.ShowMessageBox("This is the second sample button. " + Application.FriendlyTypeName, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
                         break;
                     default:
-                        MessageBox.Show("Unkown Control Id: " + control.Id, "NetOfficeTools.SuperAddinCS4");
+                        Utils.Dialog.ShowMessageBox("Unkown Control Id: " + control.Id, "NetOfficeTools.SuperAddinCS4", DialogResult.None);
                         break;
                 }
             }
             catch (Exception throwedException)
             {
-                string details = string.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine);
-                MessageBox.Show("An error occured in OnAction." + details, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Utils.Dialog.ShowError(throwedException, "Unexpected state in SuperAddinCS4 OnAction");
             }
+        }
+
+        #endregion
+
+        #region Error Handler
+
+        protected override void OnError(ErrorMethodKind methodKind, Exception exception)
+        {
+            Utils.Dialog.ShowError(exception, "Unexpected state in SuperAddinCS4 " + methodKind.ToString());
+        }
+
+        [RegisterErrorHandler]
+        public static void RegisterErrorHandler(RegisterErrorMethodKind methodKind, Exception exception)
+        {
+            MessageBox.Show("An register error occurend in " + methodKind.ToString(), "SuperAddinCS4");
         }
 
         #endregion

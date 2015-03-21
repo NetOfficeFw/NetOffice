@@ -16,6 +16,9 @@ Public Class Example05
         ' start powerpoint
         Dim powerApplication As New PowerPoint.Application()
 
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As PowerPoint.Tools.CommonUtils = New PowerPoint.Tools.CommonUtils(powerApplication)
+
         ' add a new presentation with one new slide
         Dim presentation As PowerPoint.Presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue)
         Dim slide As PowerPoint.Slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank)
@@ -24,8 +27,7 @@ Public Class Example05
         slide.Shapes.AddOLEObject(120, 111, 480, 320, "MSGraph.Chart", "", MsoTriState.msoFalse, "", 0, "", MsoTriState.msoFalse)
 
         ' save the document 
-        Dim fileExtension As String = GetDefaultExtension(powerApplication)
-        Dim documentFile As String = String.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension)
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example05", PowerPoint.Tools.DocumentFormat.Normal)
         presentation.SaveAs(documentFile)
 
         ' close power point and dispose reference
@@ -60,27 +62,6 @@ Public Class Example05
             Return Nothing
         End Get
     End Property
-
-#End Region
-
-#Region "Helper"
-
-    ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".ppt" or ".pptx"
-    ''' </summary>
-    ''' <param name="application">the instance</param>
-    ''' <returns>the extension</returns>
-    ''' <remarks></remarks>
-    Private Function GetDefaultExtension(ByVal application As PowerPoint.Application) As String
-
-        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (version >= 12.0) Then
-            Return ".pptx"
-        Else
-            Return ".ppt"
-        End If
-
-    End Function
 
 #End Region
 

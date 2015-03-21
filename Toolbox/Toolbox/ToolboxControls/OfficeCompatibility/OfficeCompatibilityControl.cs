@@ -161,7 +161,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 
         public void LoadComplete()
         {
-
+            labelCurrentNetOffice.Text = Program.CurrentNetOfficeVersion;
         }
 
         public void Activate(bool firstTime)

@@ -30,6 +30,9 @@ namespace WordExamplesCS4
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             wordApplication.Visible = true;
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(wordApplication);
+
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
 
@@ -48,10 +51,10 @@ namespace WordExamplesCS4
             //start the macro NetOfficeTestModule
             wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro");
 
-            string fileExtension = GetFileExtension(wordApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", HostApplication.RootDirectory, fileExtension);
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", Word.Tools.DocumentFormat.Macros);
+            newDocument.SaveAs(documentFile);
+            if(utils.ApplicationIs2007OrHigher)
                 newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatXMLDocumentMacroEnabled);
             else
                 newDocument.SaveAs(documentFile);
@@ -89,19 +92,6 @@ namespace WordExamplesCS4
         #region Properties
 
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        string GetFileExtension(Word.Application application)
-        {
-            double wordVersion = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                return ".docm";
-            else
-                return ".docm";
-        }
 
         #endregion
     }

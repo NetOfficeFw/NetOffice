@@ -31,6 +31,9 @@ namespace PowerPointExamplesCS4
                 // start powerpoint
                 powerApplication = new PowerPoint.Application();
 
+                // create a utils instance, not need for but helpful to keep the lines of code low
+                PowerPoint.Tools.CommonUtils utils = new PowerPoint.Tools.CommonUtils(powerApplication);
+
                 // add a new presentation with one new slide
                 PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
                 PowerPoint.Slide slide = presentation.Slides.Add(1, PpSlideLayout.ppLayoutBlank);
@@ -47,8 +50,7 @@ namespace PowerPointExamplesCS4
                 button.ActionSettings[PpMouseActivation.ppMouseClick].Run = "NetOfficeTestMacro";
                
                 // save the document 
-                string fileExtension = GetDefaultExtension(powerApplication);
-                documentFile = string.Format("{0}\\Example03{1}", HostApplication.RootDirectory, fileExtension);
+                documentFile =  utils.File.Combine(HostApplication.RootDirectory, "Example03", PowerPoint.Tools.DocumentFormat.Macros);
                 presentation.SaveAs(documentFile);
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
@@ -95,24 +97,6 @@ namespace PowerPointExamplesCS4
         #region Properties
 
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptm"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptm";
-            else
-                return ".ppt";
-        }
 
         #endregion
     }

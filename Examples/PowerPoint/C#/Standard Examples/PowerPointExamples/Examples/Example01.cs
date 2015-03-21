@@ -24,13 +24,15 @@ namespace PowerPointExamplesCS4
             // start powerpoint
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            PowerPoint.Tools.CommonUtils utils = new PowerPoint.Tools.CommonUtils(powerApplication);
+
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
             presentation.Slides.Add(1, PpSlideLayout.ppLayoutClipArtAndVerticalText);
             
             // save the document 
-            string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example01{1}", HostApplication.RootDirectory, fileExtension);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example01", PowerPoint.Tools.DocumentFormat.Normal);
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -66,24 +68,6 @@ namespace PowerPointExamplesCS4
         #region Properties
 
         internal IHost HostApplication { get; private set; }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptx";
-            else
-                return ".ppt";
-        }
 
         #endregion
     }
