@@ -5,6 +5,7 @@ using System.Text;
 using Excel = NetOffice.ExcelApi;
 using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
+using Word = NetOffice.WordApi;
 
 namespace ConsoleApplication1
 {
@@ -16,6 +17,7 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine("NetOffice Utils Concept Test");
 
+                TestWord();
                 TestExcel();
                 TestOutlook();
                 TestPowerPoint();
@@ -28,6 +30,24 @@ namespace ConsoleApplication1
                 Console.WriteLine(exception.Message);
                 Console.ReadKey();
             }
+        }
+
+        private static void TestWord()
+        {
+            Console.WriteLine("Test Word Application Utils");
+            
+            Word.Application application = new Word.Application();
+            application.DisplayAlerts = Word.Enums.WdAlertLevel.wdAlertsNone;
+            application.Documents.Add();
+
+            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(application);
+            int hwnd = utils.Application.TryGetMainWindowHandle(application.Documents[1]);
+
+            application.Quit();
+            application.Dispose();
+
+            if (0 == hwnd)
+                throw new Exception("Cant resolve word hwnd");
         }
 
         private static void TestPowerPoint()

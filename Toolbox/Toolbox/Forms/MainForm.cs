@@ -63,10 +63,10 @@ namespace NetOffice.DeveloperToolbox.Forms
         {
             InitializeComponent();
             Singleton = this;
+            CommandLineArgs = args;
             LoadLanguages();
             LoadRuntimeControls();
             LoadConfiguration();
-            CommandLineArgs = args;
         }
 
         #endregion
@@ -86,6 +86,22 @@ namespace NetOffice.DeveloperToolbox.Forms
         #endregion
 
         #region IToolboxHost
+
+        public event EventHandler LanguageEditorVisibleChanged;
+
+        private void RaiseLanguageEditorVisibleChanged()
+        {
+            if (null != LanguageEditorVisibleChanged)
+                LanguageEditorVisibleChanged(this, EventArgs.Empty);
+        }
+
+        public event EventHandler Minimized;
+
+        private void RaiseMinimized()
+        {
+            if (null != Minimized)
+                Minimized(this, EventArgs.Empty);
+        }
 
         public ToolLanguages Languages { get; private set; }
 
@@ -118,14 +134,6 @@ namespace NetOffice.DeveloperToolbox.Forms
                 if (changesMade)
                     RaiseLanguageEditorVisibleChanged();
             }
-        }
-
-        public event EventHandler LanguageEditorVisibleChanged;
-
-        private void RaiseLanguageEditorVisibleChanged()
-        {
-            if (null != LanguageEditorVisibleChanged)
-                LanguageEditorVisibleChanged(this, EventArgs.Empty);
         }
 
         public int CurrentLanguageID 
@@ -165,14 +173,6 @@ namespace NetOffice.DeveloperToolbox.Forms
         {
             WindowState = FormWindowState.Minimized;
             ShowInTaskbar = showInTaskbar;
-        }
-
-        public event EventHandler Minimized;
-
-        private void RaiseMinimized()
-        {
-            if (null != Minimized)
-                Minimized(this, EventArgs.Empty);
         }
         
         public void SwitchTo(string controlName)
@@ -308,7 +308,7 @@ namespace NetOffice.DeveloperToolbox.Forms
 
         #region UI Trigger
 
-        private void translationEditor_LanguageChanged(object sender, int lcid)
+        private void TranslationEditor_LanguageChanged(object sender, int lcid)
         {
             try
             {
@@ -390,7 +390,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
         }
 
-        private void tabControlMain_Deselecting(object sender, TabControlCancelEventArgs e)
+        private void TabControlMain_Deselecting(object sender, TabControlCancelEventArgs e)
         {
             try
             {
@@ -503,7 +503,7 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
         }
 
-        private void translationEditor_UserTranslationAbout(object sender, EventArgs e)
+        private void TranslationEditor_UserTranslationAbout(object sender, EventArgs e)
         {
             try
             {

@@ -91,6 +91,8 @@ namespace NetOffice.PowerPointApi.Tools.Utils
 
         #endregion
 
+        #region Methods
+
         private bool EnumChildProc(IntPtr hwnd, ref int lParam)
         {
             StringBuilder windowClass = new StringBuilder(128);
@@ -99,9 +101,7 @@ namespace NetOffice.PowerPointApi.Tools.Utils
                 lParam = (int)hwnd;
             return true;
         }
-
-        #region Methods
-
+     
         private int TryGetHostApplicationWindowHandle()
         {
             int result = TryGetHostApplicationWindowHandleFromVTable();

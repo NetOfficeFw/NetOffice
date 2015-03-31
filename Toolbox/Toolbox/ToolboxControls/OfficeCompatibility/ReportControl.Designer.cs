@@ -93,10 +93,10 @@
             this.treeViewReport.HideSelection = false;
             this.treeViewReport.ImageIndex = 0;
             this.treeViewReport.ImageList = this.imageList1;
-            this.treeViewReport.Location = new System.Drawing.Point(0, 15);
+            this.treeViewReport.Location = new System.Drawing.Point(0, 20);
             this.treeViewReport.Name = "treeViewReport";
             this.treeViewReport.SelectedImageIndex = 0;
-            this.treeViewReport.Size = new System.Drawing.Size(265, 340);
+            this.treeViewReport.Size = new System.Drawing.Size(265, 335);
             this.treeViewReport.TabIndex = 0;
             this.treeViewReport.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewReport_AfterSelect);
             // 
@@ -119,11 +119,12 @@
             this.labelExplorerHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelExplorerHeader.BackColor = System.Drawing.Color.Orange;
-            this.labelExplorerHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelExplorerHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelExplorerHeader.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelExplorerHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelExplorerHeader.Location = new System.Drawing.Point(0, 0);
             this.labelExplorerHeader.Name = "labelExplorerHeader";
-            this.labelExplorerHeader.Size = new System.Drawing.Size(265, 21);
+            this.labelExplorerHeader.Size = new System.Drawing.Size(265, 24);
             this.labelExplorerHeader.TabIndex = 75;
             this.labelExplorerHeader.Text = "Assembly Explorer";
             // 
@@ -133,11 +134,13 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSaveReport.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonSaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaveReport.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveReport.ForeColor = System.Drawing.Color.Blue;
-            this.buttonSaveReport.Location = new System.Drawing.Point(2, 358);
+            this.buttonSaveReport.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveReport.Image")));
+            this.buttonSaveReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveReport.Location = new System.Drawing.Point(1, 357);
             this.buttonSaveReport.Name = "buttonSaveReport";
-            this.buttonSaveReport.Size = new System.Drawing.Size(262, 24);
+            this.buttonSaveReport.Size = new System.Drawing.Size(264, 26);
             this.buttonSaveReport.TabIndex = 74;
             this.buttonSaveReport.Text = "Save report as file";
             this.buttonSaveReport.UseVisualStyleBackColor = true;
@@ -169,7 +172,6 @@
             // 
             // panelView
             // 
-            this.panelView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelView.Controls.Add(this.listViewDetail);
             this.panelView.Location = new System.Drawing.Point(1, 5);
             this.panelView.Name = "panelView";
@@ -178,12 +180,14 @@
             // 
             // listViewDetail
             // 
+            this.listViewDetail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDetail.FullRowSelect = true;
+            this.listViewDetail.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewDetail.Location = new System.Drawing.Point(0, 0);
             this.listViewDetail.Name = "listViewDetail";
-            this.listViewDetail.Size = new System.Drawing.Size(522, 166);
+            this.listViewDetail.Size = new System.Drawing.Size(524, 168);
             this.listViewDetail.TabIndex = 1;
             this.listViewDetail.UseCompatibleStateImageBehavior = false;
             this.listViewDetail.View = System.Windows.Forms.View.Details;
@@ -220,19 +224,21 @@
             // labelFilterCaption
             // 
             this.labelFilterCaption.AutoSize = true;
-            this.labelFilterCaption.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilterCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFilterCaption.ForeColor = System.Drawing.Color.Blue;
-            this.labelFilterCaption.Location = new System.Drawing.Point(303, 6);
+            this.labelFilterCaption.Location = new System.Drawing.Point(310, 3);
             this.labelFilterCaption.Name = "labelFilterCaption";
-            this.labelFilterCaption.Size = new System.Drawing.Size(79, 13);
+            this.labelFilterCaption.Size = new System.Drawing.Size(89, 17);
             this.labelFilterCaption.TabIndex = 31;
             this.labelFilterCaption.Text = "Negativ-Filter:";
             // 
             // comboBoxFilter
             // 
+            this.comboBoxFilter.BackColor = System.Drawing.Color.Orange;
             this.comboBoxFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxFilter.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilter.ForeColor = System.Drawing.Color.Blue;
             this.comboBoxFilter.FormattingEnabled = true;
             this.comboBoxFilter.Items.AddRange(new object[] {
             "No Filter",
@@ -242,7 +248,7 @@
             "Office 2007 (12)",
             "Office 2010 (14)",
             "Office 2013 (15)"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(385, 2);
+            this.comboBoxFilter.Location = new System.Drawing.Point(403, 2);
             this.comboBoxFilter.Name = "comboBoxFilter";
             this.comboBoxFilter.Size = new System.Drawing.Size(123, 21);
             this.comboBoxFilter.TabIndex = 32;
@@ -254,7 +260,7 @@
             this.labelFilterHint.BackColor = System.Drawing.Color.Orange;
             this.labelFilterHint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelFilterHint.ForeColor = System.Drawing.Color.Black;
-            this.labelFilterHint.Location = new System.Drawing.Point(385, 27);
+            this.labelFilterHint.Location = new System.Drawing.Point(314, 27);
             this.labelFilterHint.Name = "labelFilterHint";
             this.labelFilterHint.Size = new System.Drawing.Size(358, 13);
             this.labelFilterHint.TabIndex = 71;

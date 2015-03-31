@@ -32,6 +32,9 @@
             this.imageListRegistry = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewRegistry = new System.Windows.Forms.DataGridView();
             this.TypeIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripEntries = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripCreateEntry = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripCreateStringEntry = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +46,7 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -55,10 +59,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
-            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
@@ -198,7 +198,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewRegistry.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRegistry.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridViewRegistry.GridColor = System.Drawing.Color.White;
             this.dataGridViewRegistry.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewRegistry.Name = "dataGridViewRegistry";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -227,6 +227,27 @@
             this.TypeIcon.ReadOnly = true;
             this.TypeIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TypeIcon.Width = 30;
+            // 
+            // regName
+            // 
+            this.regName.Frozen = true;
+            this.regName.HeaderText = "Name";
+            this.regName.Name = "regName";
+            this.regName.ReadOnly = true;
+            this.regName.Width = 180;
+            // 
+            // regType
+            // 
+            this.regType.HeaderText = "Type";
+            this.regType.Name = "regType";
+            this.regType.ReadOnly = true;
+            // 
+            // regValue
+            // 
+            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regValue.HeaderText = "Value";
+            this.regValue.Name = "regValue";
+            this.regValue.ReadOnly = true;
             // 
             // contextMenuStripEntries
             // 
@@ -335,6 +356,30 @@
             this.splitContainer1.Size = new System.Drawing.Size(910, 589);
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 34;
+            // 
+            // treeViewRegistry
+            // 
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
+            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
             // 
             // imageListValueTypes
             // 
@@ -459,51 +504,6 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Value";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
-            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
-            this.treeViewRegistry.TabIndex = 33;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
-            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
-            // 
-            // regName
-            // 
-            this.regName.Frozen = true;
-            this.regName.HeaderText = "Name";
-            this.regName.Name = "regName";
-            this.regName.ReadOnly = true;
-            this.regName.Width = 180;
-            // 
-            // regType
-            // 
-            this.regType.HeaderText = "Type";
-            this.regType.Name = "regType";
-            this.regType.ReadOnly = true;
-            // 
-            // regValue
-            // 
-            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regValue.HeaderText = "Value";
-            this.regValue.Name = "regValue";
-            this.regValue.ReadOnly = true;
             // 
             // RegistryEditorControl
             // 

@@ -18,6 +18,7 @@ namespace NetOffice.WordApi.Tools
 
         private WordApi.Application _ownerApplication;
         private FileUtils _fileUtils;
+        private ApplicationUtils _applicationUtils;
 
         #endregion
 
@@ -83,6 +84,30 @@ namespace NetOffice.WordApi.Tools
             }
         }
 
+        /// <summary>
+        /// Application related utils
+        /// </summary>
+        public ApplicationUtils Application
+        {
+            get 
+            {
+                if (null == _applicationUtils)
+                    _applicationUtils = OnCreateApplicationUtils();
+                return _applicationUtils;
+            }
+        }
+
+        /// <summary>
+        /// Encapsulate the owner application to make accessible for child utils
+        /// </summary>
+        internal COMObject WordApplication
+        {
+            get
+            {
+                return base.OwnerApplication;
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -94,6 +119,15 @@ namespace NetOffice.WordApi.Tools
         protected internal virtual FileUtils OnCreateFileUtils()
         {
             return new FileUtils(this);
+        }
+
+        /// <summary>
+        /// Creates an instance of ApplicationUtils
+        /// </summary>
+        /// <returns>instance of ApplicationUtils</returns>
+        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        {
+            return new ApplicationUtils(this);
         }
 
         #endregion

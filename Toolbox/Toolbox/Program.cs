@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Principal;
@@ -22,7 +23,7 @@ namespace NetOffice.DeveloperToolbox
         private static bool _isShutDown;
 
         /// <summary>
-        /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future.
+        /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future
         /// </summary>
         [STAThread]
         public static void Main(string[] args)
@@ -135,7 +136,7 @@ namespace NetOffice.DeveloperToolbox
         internal static bool SelfElevation { get; set; }
 
         /// <summary>
-        /// Find the local root folder in debug mode. The method use the Application.Startup method path and returns the folder 3x upward.
+        /// Find the local root folder in debug mode. The method use the Application.Startup path and returns the folder 3x upward.
         /// </summary>
         /// <returns>The current related debug root folder</returns>
         private static string GetInternalRelativeDebugPath()
@@ -159,6 +160,7 @@ namespace NetOffice.DeveloperToolbox
                     SelfElevation = true;
             }
         } 
+
         /// <summary>
         /// Perform self elevation if necessary and wanted
         /// </summary>
@@ -185,7 +187,24 @@ namespace NetOffice.DeveloperToolbox
             }
             return false;
         }
-         
+
+        /// <summary>
+        /// Try to load an assembly with given file path
+        /// </summary>
+        /// <param name="assemblyFullPath">full qualified assembly path</param>
+        /// <returns>Loaded assembly instance</returns>
+        private static Assembly LoadFile(string assemblyFullPath)
+        {
+            try
+            {
+                return Assembly.UnsafeLoadFrom(assemblyFullPath);
+            }
+            catch (Exception exception)
+            {
+                throw new FileLoadException(String.Format("Failed to load {0}", assemblyFullPath), exception);
+            }
+        }
+
         /// <summary>
         /// display unhandled exception(s)
         /// </summary>
@@ -193,6 +212,9 @@ namespace NetOffice.DeveloperToolbox
         /// <param name="e">args</param>
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
+            if (_isShutDown)
+                return;
+
             try
             {
                 Forms.ErrorForm.ShowError(null, e.ExceptionObject as Exception, ErrorCategory.Penalty);
@@ -212,6 +234,9 @@ namespace NetOffice.DeveloperToolbox
         /// <returns>Resolved assembly or null</returns>
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
+            if (_isShutDown)
+                return null;
+
             try
             {
                 string assemblyName = args.Name.Substring(0, args.Name.IndexOf(",")) + ".dll";
@@ -238,13 +263,13 @@ namespace NetOffice.DeveloperToolbox
                     case "VisioApi.dll":
                     case "WordApi.dll":
                     case "MSFormsApi.dll":
-                        {
-                            assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);
-                            if (File.Exists(assemblyFullPath))
-                                return System.Reflection.Assembly.LoadFile(assemblyFullPath);
-                            else
-                                throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
-                        }
+                    {
+                        assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);
+                        if (File.Exists(assemblyFullPath))
+                            return LoadFile(assemblyFullPath);
+                        else
+                            throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
+                    }
                     default:
                         break;
                 }

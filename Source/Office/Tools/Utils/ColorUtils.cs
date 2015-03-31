@@ -56,6 +56,16 @@ namespace NetOffice.OfficeApi.Tools.Utils
             return returnValue;
         }
 
+        /// <summary>
+        /// Converts a double to its color representation
+        /// </summary>
+        /// <param name="color">target color to convert</param>
+        /// <returns>color argument as System.Drawing.Color</returns>
+        public Color ToColor(double color)
+        {
+            return System.Drawing.ColorTranslator.FromOle((int)color);
+        }
+
         #endregion
     }
 }

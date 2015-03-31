@@ -103,6 +103,7 @@
             this.labelBeginTitle.Size = new System.Drawing.Size(82, 21);
             this.labelBeginTitle.TabIndex = 79;
             this.labelBeginTitle.Text = "Welcome";
+            this.labelBeginTitle.Visible = false;
             // 
             // pictureBoxIconLeft
             // 
@@ -113,6 +114,7 @@
             this.pictureBoxIconLeft.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconLeft.TabIndex = 77;
             this.pictureBoxIconLeft.TabStop = false;
+            this.pictureBoxIconLeft.Visible = false;
             // 
             // checkBoxStartAppWithWindows
             // 
@@ -230,6 +232,7 @@
             this.labelMailMe.Size = new System.Drawing.Size(118, 17);
             this.labelMailMe.TabIndex = 81;
             this.labelMailMe.Text = "make a suggestion";
+            this.labelMailMe.Visible = false;
             // 
             // linkLabelMailMe
             // 
@@ -242,6 +245,7 @@
             this.linkLabelMailMe.TabIndex = 80;
             this.linkLabelMailMe.TabStop = true;
             this.linkLabelMailMe.Text = "mailto:public.sebastian@web.de";
+            this.linkLabelMailMe.Visible = false;
             this.linkLabelMailMe.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelQuestion
@@ -255,6 +259,7 @@
             this.labelQuestion.Size = new System.Drawing.Size(92, 17);
             this.labelQuestion.TabIndex = 79;
             this.labelQuestion.Text = "ask a question";
+            this.labelQuestion.Visible = false;
             // 
             // linkLabelNetOfficeQuestions
             // 
@@ -267,6 +272,7 @@
             this.linkLabelNetOfficeQuestions.TabIndex = 78;
             this.linkLabelNetOfficeQuestions.TabStop = true;
             this.linkLabelNetOfficeQuestions.Text = "http://netoffice.codeplex.com/discussions";
+            this.linkLabelNetOfficeQuestions.Visible = false;
             this.linkLabelNetOfficeQuestions.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelUpdate
@@ -280,16 +286,18 @@
             this.labelUpdate.Size = new System.Drawing.Size(124, 17);
             this.labelUpdate.TabIndex = 75;
             this.labelUpdate.Text = "check for an update";
+            this.labelUpdate.Visible = false;
             // 
             // pictureBoxIconRight
             // 
             this.pictureBoxIconRight.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxIconRight.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIconRight.Image")));
-            this.pictureBoxIconRight.Location = new System.Drawing.Point(17, 12);
+            this.pictureBoxIconRight.Location = new System.Drawing.Point(13, 12);
             this.pictureBoxIconRight.Name = "pictureBoxIconRight";
             this.pictureBoxIconRight.Size = new System.Drawing.Size(17, 17);
             this.pictureBoxIconRight.TabIndex = 77;
             this.pictureBoxIconRight.TabStop = false;
+            this.pictureBoxIconRight.Visible = false;
             // 
             // labelBug
             // 
@@ -302,6 +310,7 @@
             this.labelBug.Size = new System.Drawing.Size(83, 17);
             this.labelBug.TabIndex = 74;
             this.labelBug.Text = "report a bug";
+            this.labelBug.Visible = false;
             // 
             // linkLabelNetOfficeIssues
             // 
@@ -314,6 +323,7 @@
             this.linkLabelNetOfficeIssues.TabIndex = 10;
             this.linkLabelNetOfficeIssues.TabStop = true;
             this.linkLabelNetOfficeIssues.Text = "http://netoffice.codeplex.com/issues";
+            this.linkLabelNetOfficeIssues.Visible = false;
             this.linkLabelNetOfficeIssues.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // labelIWant
@@ -326,6 +336,7 @@
             this.labelIWant.Size = new System.Drawing.Size(77, 21);
             this.labelIWant.TabIndex = 76;
             this.labelIWant.Text = "I want to";
+            this.labelIWant.Visible = false;
             // 
             // linkLabelNetOfficeUpdates
             // 
@@ -338,6 +349,7 @@
             this.linkLabelNetOfficeUpdates.TabIndex = 12;
             this.linkLabelNetOfficeUpdates.TabStop = true;
             this.linkLabelNetOfficeUpdates.Text = "http://netoffice.codeplex.com/releases";
+            this.linkLabelNetOfficeUpdates.Visible = false;
             this.linkLabelNetOfficeUpdates.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_LinkClicked);
             // 
             // panelOptions
@@ -398,6 +410,7 @@
             this.labelBeginBottom.Text = "You can find a help button in the upper right corner of every tab. I am looking f" +
                 "orward to your message if you have any questions, suggestions, comments or reque" +
                 "sts regarding the Developer Toolbox.";
+            this.labelBeginBottom.Visible = false;
             // 
             // labelBeginTop
             // 
@@ -414,6 +427,7 @@
             this.labelBeginTop.TabIndex = 104;
             this.labelBeginTop.Text = "The NetOffice Developer Toolbox supports .NET Office developers in his daily work" +
                 " with a set of helpful functions.";
+            this.labelBeginTop.Visible = false;
             // 
             // controlForeColorAnimator1
             // 

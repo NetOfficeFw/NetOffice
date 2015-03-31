@@ -57,6 +57,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             pictureBoxField.Image = imageList1.Images[3];
             pictureBoxProperty.Image = imageList1.Images[7];
             pictureBoxMethod.Image = imageList1.Images[5];
+            if (treeViewReport.Nodes.Count > 0)
+                treeViewReport.SelectedNode = treeViewReport.Nodes[0];
         }
         
         #endregion

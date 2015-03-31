@@ -59,7 +59,7 @@
             this.tabControlMain.Size = new System.Drawing.Size(936, 661);
             this.tabControlMain.TabIndex = 0;
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.TabControlMain_SelectedIndexChanged);
-            this.tabControlMain.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlMain_Deselecting);
+            this.tabControlMain.Deselecting += new System.Windows.Forms.TabControlCancelEventHandler(this.TabControlMain_Deselecting);
             // 
             // splitContainer1
             // 
@@ -95,8 +95,8 @@
             this.translationEditor.Size = new System.Drawing.Size(96, 100);
             this.translationEditor.TabIndex = 0;
             this.translationEditor.UserClose += new System.EventHandler(this.TranslationEditor_UserClose);
-            this.translationEditor.UserTranslationAbout += new System.EventHandler(this.translationEditor_UserTranslationAbout);
-            this.translationEditor.LanguageChanged += new NetOffice.DeveloperToolbox.Translation.LanuageChangedEventHandler(this.translationEditor_LanguageChanged);
+            this.translationEditor.UserTranslationAbout += new System.EventHandler(this.TranslationEditor_UserTranslationAbout);
+            this.translationEditor.LanguageChanged += new NetOffice.DeveloperToolbox.Translation.LanuageChangedEventHandler(this.TranslationEditor_LanguageChanged);
             // 
             // MainForm
             // 

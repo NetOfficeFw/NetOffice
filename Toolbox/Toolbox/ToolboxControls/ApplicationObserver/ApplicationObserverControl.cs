@@ -481,6 +481,18 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             }
         }
 
+        private void listViewProcess_Resize(object sender, EventArgs e)
+        {
+            try
+            {
+                listViewProcess.Columns[2].Width = (listViewProcess.Width - (listViewProcess.Columns[1].Width + listViewProcess.Columns[0].Width)) - 32;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(exception, ErrorCategory.NonCritical, Host.CurrentLanguageID);
+            }
+        }
+
         #endregion
     }
 }

@@ -365,6 +365,7 @@
             this.listViewProcess.TabIndex = 33;
             this.listViewProcess.UseCompatibleStateImageBehavior = false;
             this.listViewProcess.View = System.Windows.Forms.View.Details;
+            this.listViewProcess.Resize += new System.EventHandler(this.listViewProcess_Resize);
             // 
             // colImage
             // 

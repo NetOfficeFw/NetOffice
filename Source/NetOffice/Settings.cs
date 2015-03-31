@@ -54,6 +54,7 @@ namespace NetOffice
         private bool _enableOperatorOverlads = true;
         private string _exceptionMessage = "See inner exception(s) for details.";
         private ExceptionMessageHandling _copyInnerExceptionMessage;
+        private bool _loadAssembliesUnsafe = false;
 
         #endregion
 
@@ -209,7 +210,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
+        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EnableAdHocLoading
@@ -301,7 +302,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
+        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CacheOptions CacheOptions
@@ -329,6 +330,22 @@ namespace NetOffice
             set
             {
                 _enableOperatorOverlads = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or set NetOffice try load dependent assemblies unsafe(System.Reflection.Assembly.UnsafeLoadFrom). false by default
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool LoadAssembliesUnsafe
+        {
+            get
+            {
+                return _loadAssembliesUnsafe;
+            }
+            set
+            {
+                _loadAssembliesUnsafe = value;
             }
         }
 

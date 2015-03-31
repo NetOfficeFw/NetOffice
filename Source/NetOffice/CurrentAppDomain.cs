@@ -81,10 +81,22 @@ namespace NetOffice
         /// <returns>Assembly instance or null</returns>
         internal Assembly Load(string fileName)
         {
-            if (ValidateVersion(fileName))
-                return Assembly.Load(fileName);
-            else
+            try
+            {
+                if (ValidateVersion(fileName))
+                {
+                    if (Owner.Settings.LoadAssembliesUnsafe)
+                        return Assembly.UnsafeLoadFrom(fileName);
+                    else
+                        return Assembly.Load(fileName);
+                }
+                else
+                    return null;
+            }
+            catch
+            {
                 return null;
+            }
         }
 
         /// <summary>
@@ -114,7 +126,12 @@ namespace NetOffice
             try
             {
                 if (ValidateVersion(fileName))
-                    return Assembly.LoadFile(fileName);
+                {
+                    if (Owner.Settings.LoadAssembliesUnsafe)
+                        return Assembly.UnsafeLoadFrom(fileName);
+                    else
+                        return Assembly.Load(fileName);
+                }
                 else
                     return null;
             }
@@ -134,7 +151,12 @@ namespace NetOffice
             try
             {
                 if (ValidateVersion(fileName))
-                    return Assembly.LoadFrom(fileName);
+                {
+                    if (Owner.Settings.LoadAssembliesUnsafe)
+                        return Assembly.UnsafeLoadFrom(fileName);
+                    else
+                        return Assembly.Load(fileName);
+                }
                 else
                     return null;
             }
