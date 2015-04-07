@@ -94,22 +94,11 @@ namespace AccessExamplesCS4
         {
             // start access
             _accessApplication = new Access.Application();
-
+            Access.Tools.CommonUtils utils = new Access.Tools.CommonUtils(_accessApplication);
             Office.CommandBarButton commandBarBtn = null;
 
-            // create database name 
-            string fileExtension = GetDefaultExtension(_accessApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", HostApplication.RootDirectory, fileExtension);
-
-            // delete old database if exists
-            if (System.IO.File.Exists(documentFile))
-                System.IO.File.Delete(documentFile);
-
-            // create database 
-            DAO.Database newDatabase = _accessApplication.DBEngine.Workspaces[0].CreateDatabase(documentFile, LanguageConstants.dbLangGeneral);
-
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, null, null, null, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             #region few words, how to access the picture
@@ -125,7 +114,7 @@ namespace AccessExamplesCS4
             #region CommandBarButton
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, null, null, null, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
             Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
@@ -153,29 +142,6 @@ namespace AccessExamplesCS4
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Click called." });
             Ctrl.Dispose();
-        }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Access.Application application)
-        {
-            // Access 2000 doesnt have the Version property(unfortunately)
-            // we check for support with the SupportEntity method, implemented by NetOffice
-            if (!application.EntityIsAvailable("Version"))
-                return ".mdb";
-
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
-                return ".accdb";
-            else
-                return ".mdb";
         }
 
         #endregion

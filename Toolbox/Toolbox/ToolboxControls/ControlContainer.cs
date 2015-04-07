@@ -157,6 +157,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls
                 Translation.Translator.TranslateControls(InnerInstance as Control, String.Format("ToolboxControls.{0}.Strings.txt", space), id);
             }
 
+            InnerInstance.SetLanguage(id);
             SetupInfoMessage();
         }
 

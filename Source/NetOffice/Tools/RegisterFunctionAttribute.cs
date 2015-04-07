@@ -54,7 +54,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Mark a static method as Register method. the method need the following signature public void Register(Type type, RegisterCall callType)
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Method)]
+    [System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple = false)]
     public class RegisterFunctionAttribute : System.Attribute
     {
         /// <summary>

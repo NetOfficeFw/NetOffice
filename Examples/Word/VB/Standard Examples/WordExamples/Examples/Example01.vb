@@ -23,28 +23,13 @@ Public Class Example01
         Dim newDocument As Word.Document
         newDocument = wordApplication.Documents.Add()
 
-        ' add a table
-        Dim table As Word.Table
-        table = newDocument.Tables.Add(wordApplication.Selection.Range, 3, 2)
+        ' insert some text
+        wordApplication.Selection.TypeText("This text is written by NetOffice")
 
-        'insert some text into the cells
-        table.Cell(1, 1).Select()
-        wordApplication.Selection.TypeText("This")
-
-        table.Cell(1, 2).Select()
-        wordApplication.Selection.TypeText("table")
-
-        table.Cell(2, 1).Select()
-        wordApplication.Selection.TypeText("was")
-
-        table.Cell(2, 2).Select()
-        wordApplication.Selection.TypeText("created")
-
-        table.Cell(3, 1).Select()
-        wordApplication.Selection.TypeText("by")
-
-        table.Cell(3, 2).Select()
-        wordApplication.Selection.TypeText("NetOffice")
+        wordApplication.Selection.HomeKey(WdUnits.wdLine, WdMovementType.wdExtend)
+        wordApplication.Selection.Font.Color = WdColor.wdColorSeaGreen
+        wordApplication.Selection.Font.Bold = 1
+        wordApplication.Selection.Font.Size = 18
 
         'save document
         Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", Word.Tools.DocumentFormat.Normal)

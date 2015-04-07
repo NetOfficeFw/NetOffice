@@ -8,7 +8,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Specify an embedded XML File for RibbonUI
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class)]
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class CustomUIAttribute : System.Attribute
     {
         /// <summary>

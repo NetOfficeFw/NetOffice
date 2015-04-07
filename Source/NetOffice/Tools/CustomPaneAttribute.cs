@@ -7,7 +7,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Specify a custom task pane
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class)]
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]
     public class CustomPaneAttribute : System.Attribute
     {
         /// <summary>

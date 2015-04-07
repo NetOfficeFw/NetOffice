@@ -46,7 +46,7 @@ namespace NetOffice.OfficeApi.Tools
     /// <summary>
     /// This attribute can be used from NetOffice.OfficeApi.Tools.COMAddin to specify multipe office products
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class)]
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple= false)]
     public class MultiRegisterAttribute : System.Attribute
     {
         /// <summary>

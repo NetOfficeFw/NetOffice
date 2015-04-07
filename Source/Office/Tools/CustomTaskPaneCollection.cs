@@ -85,6 +85,17 @@ namespace NetOffice.OfficeApi.Tools
         #region Properties
 
         /// <summary>
+        /// Default Height or Width if unset - 150
+        /// </summary>
+        public static int DefaultSize
+        {
+            get
+            {
+                return 150;
+            }
+        }
+
+        /// <summary>
         /// properties was set from the client before the instance was created. The COMAddin class perfom latebind property set calls during this dictionary
         /// </summary>
 		[Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]

@@ -32,9 +32,6 @@
             this.imageListRegistry = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewRegistry = new System.Windows.Forms.DataGridView();
             this.TypeIcon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripEntries = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripCreateEntry = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripCreateStringEntry = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,10 +43,8 @@
             this.toolStripEditEntryName = new System.Windows.Forms.ToolStripMenuItem();
             this.labelCurrentPath = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
             this.imageListValueTypes = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxDeleteQuestion = new System.Windows.Forms.CheckBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelNoAdminHint = new System.Windows.Forms.Label();
             this.contextMenuStripNoAdmin = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +54,10 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.treeViewRegistry = new NetOffice.DeveloperToolbox.Controls.Tree.MultiSelectTreeView();
+            this.regName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.regValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStripKeys.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistry)).BeginInit();
             this.contextMenuStripEntries.SuspendLayout();
@@ -66,7 +65,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.contextMenuStripNoAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoResult)).BeginInit();
             this.SuspendLayout();
@@ -76,14 +74,17 @@
             this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTitle.BackColor = System.Drawing.Color.Orange;
+            this.labelTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.Black;
-            this.labelTitle.Location = new System.Drawing.Point(30, 1);
+            this.labelTitle.Image = ((System.Drawing.Image)(resources.GetObject("labelTitle.Image")));
+            this.labelTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitle.Location = new System.Drawing.Point(3, 1);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(883, 21);
+            this.labelTitle.Size = new System.Drawing.Size(908, 23);
             this.labelTitle.TabIndex = 29;
-            this.labelTitle.Text = "Office Registry Keys at a glance";
+            this.labelTitle.Text = "     Office Registry Keys at a glance";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // buttonRefresh
@@ -93,7 +94,7 @@
             this.buttonRefresh.FlatAppearance.BorderSize = 0;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.ForeColor = System.Drawing.Color.Black;
+            this.buttonRefresh.ForeColor = System.Drawing.Color.Blue;
             this.buttonRefresh.Image = ((System.Drawing.Image)(resources.GetObject("buttonRefresh.Image")));
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonRefresh.Location = new System.Drawing.Point(792, 611);
@@ -228,27 +229,6 @@
             this.TypeIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.TypeIcon.Width = 30;
             // 
-            // regName
-            // 
-            this.regName.Frozen = true;
-            this.regName.HeaderText = "Name";
-            this.regName.Name = "regName";
-            this.regName.ReadOnly = true;
-            this.regName.Width = 180;
-            // 
-            // regType
-            // 
-            this.regType.HeaderText = "Type";
-            this.regType.Name = "regType";
-            this.regType.ReadOnly = true;
-            // 
-            // regValue
-            // 
-            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regValue.HeaderText = "Value";
-            this.regValue.Name = "regValue";
-            this.regValue.ReadOnly = true;
-            // 
             // contextMenuStripEntries
             // 
             this.contextMenuStripEntries.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -357,30 +337,6 @@
             this.splitContainer1.SplitterDistance = 301;
             this.splitContainer1.TabIndex = 34;
             // 
-            // treeViewRegistry
-            // 
-            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
-            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
-            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
-            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewRegistry.HideSelection = false;
-            this.treeViewRegistry.ImageIndex = 0;
-            this.treeViewRegistry.ImageList = this.imageListRegistry;
-            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
-            this.treeViewRegistry.Name = "treeViewRegistry";
-            this.treeViewRegistry.SelectedImageIndex = 1;
-            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
-            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
-            this.treeViewRegistry.TabIndex = 33;
-            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
-            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
-            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
-            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
-            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
-            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
-            // 
             // imageListValueTypes
             // 
             this.imageListValueTypes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListValueTypes.ImageStream")));
@@ -397,23 +353,12 @@
             this.checkBoxDeleteQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxDeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxDeleteQuestion.ForeColor = System.Drawing.Color.Blue;
-            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(314, 1);
+            this.checkBoxDeleteQuestion.Location = new System.Drawing.Point(311, 2);
             this.checkBoxDeleteQuestion.Name = "checkBoxDeleteQuestion";
             this.checkBoxDeleteQuestion.Size = new System.Drawing.Size(138, 21);
             this.checkBoxDeleteQuestion.TabIndex = 36;
             this.checkBoxDeleteQuestion.Text = "Ask before deleting";
             this.checkBoxDeleteQuestion.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Orange;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 21);
-            this.pictureBox4.TabIndex = 40;
-            this.pictureBox4.TabStop = false;
             // 
             // labelNoAdminHint
             // 
@@ -466,7 +411,7 @@
             this.labelSearch.BackColor = System.Drawing.Color.Orange;
             this.labelSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSearch.ForeColor = System.Drawing.Color.Blue;
-            this.labelSearch.Location = new System.Drawing.Point(630, 2);
+            this.labelSearch.Location = new System.Drawing.Point(630, 3);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(47, 17);
             this.labelSearch.TabIndex = 43;
@@ -505,6 +450,51 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // treeViewRegistry
+            // 
+            this.treeViewRegistry.BackColor = System.Drawing.Color.White;
+            this.treeViewRegistry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeViewRegistry.ContextMenuStrip = this.contextMenuStripEntries;
+            this.treeViewRegistry.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewRegistry.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
+            this.treeViewRegistry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeViewRegistry.HideSelection = false;
+            this.treeViewRegistry.ImageIndex = 0;
+            this.treeViewRegistry.ImageList = this.imageListRegistry;
+            this.treeViewRegistry.Location = new System.Drawing.Point(0, 0);
+            this.treeViewRegistry.Name = "treeViewRegistry";
+            this.treeViewRegistry.SelectedImageIndex = 1;
+            this.treeViewRegistry.SelectedNodes = ((System.Collections.Generic.List<System.Windows.Forms.TreeNode>)(resources.GetObject("treeViewRegistry.SelectedNodes")));
+            this.treeViewRegistry.Size = new System.Drawing.Size(299, 587);
+            this.treeViewRegistry.TabIndex = 33;
+            this.treeViewRegistry.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeViewRegistry_AfterLabelEdit);
+            this.treeViewRegistry.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterCollapse);
+            this.treeViewRegistry.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeViewRegistry_BeforeExpand);
+            this.treeViewRegistry.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterExpand);
+            this.treeViewRegistry.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewRegistry_AfterSelect);
+            this.treeViewRegistry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeViewRegistry_KeyDown);
+            // 
+            // regName
+            // 
+            this.regName.Frozen = true;
+            this.regName.HeaderText = "Name";
+            this.regName.Name = "regName";
+            this.regName.ReadOnly = true;
+            this.regName.Width = 180;
+            // 
+            // regType
+            // 
+            this.regType.HeaderText = "Type";
+            this.regType.Name = "regType";
+            this.regType.ReadOnly = true;
+            // 
+            // regValue
+            // 
+            this.regValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regValue.HeaderText = "Value";
+            this.regValue.Name = "regValue";
+            this.regValue.ReadOnly = true;
+            // 
             // RegistryEditorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,7 +502,6 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.pictureBoxNoResult);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelNoAdminHint);
             this.Controls.Add(this.buttonRefresh);
@@ -530,7 +519,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.contextMenuStripNoAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNoResult)).EndInit();
             this.ResumeLayout(false);
@@ -581,7 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn regName;
         private System.Windows.Forms.DataGridViewTextBoxColumn regType;
         private System.Windows.Forms.DataGridViewTextBoxColumn regValue;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelNoAdminHint;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripNoAdmin;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;

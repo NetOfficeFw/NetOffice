@@ -8,7 +8,7 @@ namespace NetOffice.Tools
     /// Mark a static method as error handler for COMAddin methods. The static method need the following signature: public static void ErrorHandler(RegisterErrorMethodKind methodKind, Exception exception)
     /// Rethrow the exception(second argument) in the method body to the runtime system if you want signalize an error to the environment(typical not wanted)
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Method)]
+    [System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple = false)]
     public class RegisterErrorHandlerAttribute : System.Attribute
     {
     }

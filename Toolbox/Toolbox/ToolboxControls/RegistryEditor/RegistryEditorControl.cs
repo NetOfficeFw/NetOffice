@@ -148,7 +148,9 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.RegistryEditor
 
         public void SetLanguage(int id)
         {
-           
+            string space = "     ";
+            if (!labelTitle.Text.StartsWith(space))
+                labelTitle.Text = space + labelTitle.Text;
         }
 
         public Stream GetHelpText(int lcid)

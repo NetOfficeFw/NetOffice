@@ -1187,21 +1187,24 @@ namespace NetOffice
                 if (System.IO.File.Exists(fullFileName))
                 {
                     Assembly assembly = _appDomain.LoadFrom(fullFileName);
-                    Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);
-                    NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
-                    bool exists = false;
-                    foreach (IFactoryInfo itemFactory in _factoryList)
-                    {
-                        if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                    if (null != assembly)
+                    { 
+                        Type factoryInfoType = assembly.GetType(fileName.Substring(0, fileName.Length - 4) + ".Utils.ProjectInfo", false, false);
+                        NetOffice.IFactoryInfo factoryInfo = Activator.CreateInstance(factoryInfoType) as NetOffice.IFactoryInfo;
+                        bool exists = false;
+                        foreach (IFactoryInfo itemFactory in _factoryList)
                         {
-                            exists = true;
-                            break;
+                            if (itemFactory.Assembly.FullName == factoryInfo.Assembly.FullName)
+                            {
+                                exists = true;
+                                break;
+                            }
                         }
-                    }
-                    if (!exists)
-                    {
-                        _factoryList.Add(factoryInfo);
-                        Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                        if (!exists)
+                        {
+                            _factoryList.Add(factoryInfo);
+                            Console.WriteLine("Recieve IFactoryInfo:{0}:{1}", factoryInfo.Assembly.FullName, factoryInfo.Assembly.FullName);
+                        }
                     }
                     return assembly;
                 }

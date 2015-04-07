@@ -202,7 +202,7 @@ namespace NetOffice
 
                 string directoryName = Owner.ThisAssembly.CodeBase.Substring(0, Owner.ThisAssembly.CodeBase.LastIndexOf("/"));
                 directoryName = directoryName.Replace("/", "\\").Substring(8);
-                string fileName = args.Name.Substring(0, args.Name.IndexOf(","));
+                string fileName = args.Name.IndexOf(",") > -1 ? args.Name.Substring(0, args.Name.IndexOf(",")) : Path.GetFileName(args.Name);
                 string fullFileName = System.IO.Path.Combine(directoryName, fileName + ".dll");
                 if (System.IO.File.Exists(fullFileName))
                 {
