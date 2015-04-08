@@ -212,7 +212,7 @@ namespace NetOffice
                 }
                 else
                 {
-                    Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesnt exists in current codebase.", args.Name));
+                    Owner.Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesnt exists in current codebase.", args.Name));
                     return null;
                 }
             }

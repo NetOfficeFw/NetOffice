@@ -79,6 +79,50 @@ namespace NetOffice
     /// </summary>
     public class Core
     {
+        #region Nested
+
+        /// <summary>
+        /// Arguments in CreateInstance event
+        /// </summary>
+        public class OnCreateInstanceEventArgs : EventArgs
+        {
+            /// <summary>
+            /// Creates an instance of the class
+            /// </summary>
+            /// <param name="instance">origin instane</param>
+            internal OnCreateInstanceEventArgs(COMObject instance)
+            {
+                if (null == instance)
+                    throw new ArgumentNullException();
+                Instance = instance;
+            }
+
+            /// <summary>
+            /// DisposeChildInstance is called for the instance after event triger
+            /// </summary>
+            public COMObject Instance { get; private set; }
+
+            /// <summary>
+            /// Type muste inherit from originInstance class type and make COMObject public .ctors available
+            /// </summary>
+            public Type Replace { get; set; }
+        }
+
+        /// <summary>
+        /// OnCreateInstance event handler
+        /// </summary>
+        /// <param name="sender">Core sender instance</param>
+        /// <param name="args"></param>
+        public delegate void OnCreateInstanceEventHandler(Core sender, OnCreateInstanceEventArgs args);
+
+        /// <summary>
+        /// ProxyCountChanged delegate
+        /// </summary>
+        /// <param name="proxyCount">current count of com proxies</param>
+        public delegate void ProxyCountChangedHandler(int proxyCount);
+
+        #endregion
+
         #region Fields
 
         private bool _initalized;
@@ -230,10 +274,24 @@ namespace NetOffice
         #region Events
 
         /// <summary>
-        /// ProxyCountChanged delegate
+        /// Occours when a new COMObject instance has been created
         /// </summary>
-        /// <param name="proxyCount">current count of com proxies</param>
-        public delegate void ProxyCountChangedHandler(int proxyCount);
+        public event OnCreateInstanceEventHandler CreateInstance;
+
+        /// <summary>
+        /// Raise CreateInstance event
+        /// </summary>
+        /// <param name="instance">origin instance</param>
+        /// <param name="replace">type to replace the instance</param>
+        private void RaiseCreateInstance(COMObject instance, ref Type replace)
+        {
+            if (null != CreateInstance)
+            {
+                OnCreateInstanceEventArgs args = new OnCreateInstanceEventArgs(instance);
+                CreateInstance(this, args);
+                replace = args.Replace;
+            }
+        }
 
         /// <summary>
         /// notify info the count of proxies there open are changed
@@ -590,8 +648,10 @@ namespace NetOffice
                     _proxyTypeCache.Add(wrapperClassType.FullName, comProxyType);
                 }
 
-                COMObject newClass = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType }) as COMObject;
-                return newClass;
+                COMObject newInstance = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxy, comProxyType }) as COMObject;
+                newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
+
+                return newInstance;
             }
             catch (Exception throwedException)
             {
@@ -630,7 +690,11 @@ namespace NetOffice
                 Type comVariantType = null;
                 COMObject[] newVariantArray = new COMObject[comProxyArray.Length];
                 for (int i = 0; i < comProxyArray.Length; i++)
-                    newVariantArray[i] = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType }) as COMObject;
+                {
+                    COMObject newInstance = Activator.CreateInstance(wrapperClassType, new object[] { caller, comProxyArray[i], comVariantType }) as COMObject;
+                    newInstance = TryReplaceInstance(caller, newInstance, comVariantType);
+                    newVariantArray[i] = newInstance;
+                }
 
                 return newVariantArray;
             }
@@ -679,8 +743,10 @@ namespace NetOffice
                     _proxyTypeCache.Add(fullClassName, comProxyType);
                 }
 
-                COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
-                return newObject;
+                COMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
+                newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
+
+                return newInstance;
             }
             catch (Exception throwedException)
             {
@@ -722,8 +788,10 @@ namespace NetOffice
                 string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
                 // create new classType
-                COMObject newObject = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
-                return newObject;
+                COMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
+                newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
+
+                return newInstance;
             }
             catch (Exception throwedException)
             {
@@ -763,8 +831,9 @@ namespace NetOffice
                 if (true == _wrapperTypeCache.TryGetValue(fullClassName, out classType))
                 {
                     // cached classType
-                    object newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy });
-                    return newClass as COMObject;
+                    COMObject newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy }) as COMObject;
+                    newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
+                    return newInstance as COMObject;
                 }
                 else
                 {
@@ -774,8 +843,9 @@ namespace NetOffice
                         throw new ArgumentException("Class not exists: " + fullClassName);
 
                     _wrapperTypeCache.Add(fullClassName, classType);
-                    COMObject newClass = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
-                    return newClass;
+                    COMObject newInstance = Activator.CreateInstance(classType, new object[] { caller, comProxy, comProxyType }) as COMObject;
+                    newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
+                    return newInstance;
                 }
             }
             catch (Exception throwedException)
@@ -836,6 +906,33 @@ namespace NetOffice
                     isLocked = false;
                 }
             }
+        }
+
+        /// <summary>
+        /// Try to replace new created instance on CreateInstance event
+        /// </summary>
+        /// <param name="caller">parent instance</param>
+        /// <param name="instance">origin instance</param>
+        /// <param name="comProxyType">type of native com proxy</param>
+        /// <returns>replace instance or origin instance</returns>
+        private COMObject TryReplaceInstance(COMObject caller, COMObject instance, Type comProxyType)
+        {
+            Type typeToReplace = null;
+            RaiseCreateInstance(instance, ref typeToReplace);
+            instance.DisposeChildInstances();
+
+            if (null != typeToReplace)
+            {
+                COMObject replaceInstance = Activator.CreateInstance(typeToReplace, new object[] { caller, instance.UnderlyingObject, comProxyType }) as COMObject;
+                if (null != replaceInstance)
+                {
+                    caller.RemoveChildObject(instance);
+                    RemoveObjectFromList(instance);
+                    return replaceInstance;
+                }
+            }
+
+            return instance;
         }
 
         #endregion

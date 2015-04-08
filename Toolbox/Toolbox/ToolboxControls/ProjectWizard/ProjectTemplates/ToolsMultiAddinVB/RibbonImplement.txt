@@ -1,7 +1,6 @@
 ﻿	Public Sub AboutButton_Click(ByVal control As Office.IRibbonControl)
 
-		MessageBox.Show(String.Format("$safeprojectname$ Version {0}", Me.GetType().Assembly.GetName().Version),
-			"About $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Information)
+		Utils.Dialog.ShowAbout("$safeprojectname$", "http://netoffice.codeplex.com", "<No Licence set>")
 
 	End Sub
 

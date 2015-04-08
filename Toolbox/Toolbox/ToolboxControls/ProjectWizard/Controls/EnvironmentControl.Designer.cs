@@ -195,10 +195,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radioButtonVS2012);
             this.panel2.Controls.Add(this.labelNet45Hint);
             this.panel2.Controls.Add(this.radioButtonVS2013);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.radioButtonVS2012);
             this.panel2.Controls.Add(this.labelEnvironment);
             this.panel2.Controls.Add(this.radioButtonVS2010);
             this.panel2.Location = new System.Drawing.Point(20, 100);

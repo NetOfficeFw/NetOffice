@@ -5,7 +5,8 @@ using NetOffice.Tools;
 namespace NetOffice.OfficeApi.Tools
 {
  	/// <summary>
-    /// Task pane UserControl instances can implement these interface in a NetOffice Tools Addin as a special service
+    /// Office TaskPane UserControl classes can implement these interface in a NetOffice Tools Addin(COMAddin) as a special service.
+    /// NetOffice want call ITaskPane members automaticly 
     /// </summary>
     public interface ITaskPane
     {
@@ -18,7 +19,7 @@ namespace NetOffice.OfficeApi.Tools
         void OnConnection(COMObject application, NetOffice.OfficeApi._CustomTaskPane parentPane, object[] customArguments);
 
 		/// <summary>
-        /// While Excel Application shutdown. The method is not called in case of unexpected termination (may user kill the instance in task manager)
+        /// While Office Application shutdown. The method is not called in case of unexpected termination (may user kills the instance in task manager)
         /// </summary>
 		void OnDisconnection();
 

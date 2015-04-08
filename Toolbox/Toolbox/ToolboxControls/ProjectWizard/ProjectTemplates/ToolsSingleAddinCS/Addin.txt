@@ -34,7 +34,7 @@ $classicUICreateRemoveMethod$
 
 		protected override void OnError(ErrorMethodKind methodKind, System.Exception exception)
 		{
-			MessageBox.Show("An error occurend in " + methodKind.ToString(), "$safeprojectname$");
+            Utils.Dialog.ShowError(exception, "An error occurend in " + methodKind.ToString());
 		}
 
 		[RegisterErrorHandler]

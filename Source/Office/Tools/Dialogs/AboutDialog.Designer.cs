@@ -37,13 +37,13 @@
             this.linkLabelCompany = new System.Windows.Forms.LinkLabel();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.richTextBoxLicence = new System.Windows.Forms.RichTextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLicenceContent = new System.Windows.Forms.Panel();
             this.panelLicenceHeader = new System.Windows.Forms.Panel();
             this.labelLicenceHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelLicenceContent.SuspendLayout();
             this.panelLicenceHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -142,18 +142,17 @@
             this.richTextBoxLicence.Text = "";
             this.richTextBoxLicence.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxLicence_LinkClicked);
             // 
-            // panel1
+            // panelLicenceContent
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panelLicenceContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.richTextBoxLicence);
-            this.panel1.Location = new System.Drawing.Point(0, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 159);
-            this.panel1.TabIndex = 10;
+            this.panelLicenceContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelLicenceContent.Controls.Add(this.richTextBoxLicence);
+            this.panelLicenceContent.Location = new System.Drawing.Point(0, 36);
+            this.panelLicenceContent.Name = "panelLicenceContent";
+            this.panelLicenceContent.Size = new System.Drawing.Size(468, 157);
+            this.panelLicenceContent.TabIndex = 10;
             // 
             // panelLicenceHeader
             // 
@@ -161,9 +160,10 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLicenceHeader.BackColor = System.Drawing.Color.Orange;
+            this.panelLicenceHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelLicenceHeader.Controls.Add(this.labelLicenceHeader);
             this.panelLicenceHeader.Controls.Add(this.pictureBox1);
-            this.panelLicenceHeader.Controls.Add(this.panel1);
+            this.panelLicenceHeader.Controls.Add(this.panelLicenceContent);
             this.panelLicenceHeader.Location = new System.Drawing.Point(33, 182);
             this.panelLicenceHeader.Name = "panelLicenceHeader";
             this.panelLicenceHeader.Size = new System.Drawing.Size(470, 195);
@@ -207,7 +207,7 @@
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panelLicenceContent.ResumeLayout(false);
             this.panelLicenceHeader.ResumeLayout(false);
             this.panelLicenceHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -226,7 +226,7 @@
         private System.Windows.Forms.LinkLabel linkLabelCompany;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.RichTextBox richTextBoxLicence;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelLicenceContent;
         private System.Windows.Forms.Panel panelLicenceHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelLicenceHeader;

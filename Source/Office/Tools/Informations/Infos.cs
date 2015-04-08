@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// Called from DiagnosticPairCollection to add custom system informations
         /// </summary>
         /// <param name="diagnostics">sender instance</param>
-        protected internal void GetCustomInformations(DiagnosticPairCollection diagnostics)
+        protected internal virtual void GetCustomInformations(DiagnosticPairCollection diagnostics)
         { 
         
         }

@@ -299,7 +299,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         #endregion
 
-
         #region Methods
        
         private void ChangeSettings()

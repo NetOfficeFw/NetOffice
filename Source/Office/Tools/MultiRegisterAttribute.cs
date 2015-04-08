@@ -44,13 +44,13 @@ namespace NetOffice.OfficeApi.Tools
     }
 
     /// <summary>
-    /// This attribute can be used from NetOffice.OfficeApi.Tools.COMAddin to specify multipe office products
+    /// This attribute must be used for NetOffice.OfficeApi.Tools.COMAddin to specify multipe office products you want support
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple= false)]
     public class MultiRegisterAttribute : System.Attribute
     {
         /// <summary>
-        /// The office products for addin registration
+        /// The office products for addin (un-)registration
         /// </summary>
         public readonly RegisterIn[] Products;
 
@@ -67,12 +67,12 @@ namespace NetOffice.OfficeApi.Tools
         /// Looks for the MultiRegisterAttribute. Throws an exception if not found
         /// </summary>
         /// <param name="type">the type you want looking for the attribute</param>
-        /// <returns>MultiRegisterAttribute</returns>
+        /// <returns>MultiRegisterAttribute instance</returns>
 		internal static MultiRegisterAttribute GetAttribute(Type type)
 		{
 		    object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentNullException("MultiRegisterAttribute is missing");
+                throw new ArgumentException("MultiRegisterAttribute is missing");
             return array[0] as MultiRegisterAttribute;
 		}
 
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Tools
         internal static string RegistryEntry(RegisterIn register)
         {
             if (register == RegisterIn.MSProject)
-                return "MS Project";
+                return "MS Project"; // Visio use one empty space. Some previous NetOffice(<1.7.3) releases handle this not as well 
             else
                 return register.ToString();
         }

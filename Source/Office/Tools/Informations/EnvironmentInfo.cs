@@ -139,18 +139,14 @@ namespace NetOffice.OfficeApi.Tools.Informations
         #region IEnumerable<KeyValuePair<string, string>>
 
         /// <summary>
-        /// Returns a summary enumerator collect instance properties
+        /// Returns an enumerator to retrieve the collection
         /// </summary>
-        /// <returns>summary enumerator</returns>
+        /// <returns>IEnumerator instance</returns>
         IEnumerator<KeyValuePair<string, string>> IEnumerable<KeyValuePair<string, string>>.GetEnumerator()
         {
             return GetSummary().GetEnumerator();
         }
 
-        /// <summary>
-        /// Returns a summary enumerator collect instance properties
-        /// </summary>
-        /// <returns>summary enumerator</returns>
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return GetSummary().GetEnumerator();

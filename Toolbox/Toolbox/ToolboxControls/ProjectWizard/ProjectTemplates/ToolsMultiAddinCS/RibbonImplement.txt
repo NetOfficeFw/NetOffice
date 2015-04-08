@@ -1,7 +1,6 @@
 ﻿        public void AboutButton_Click(Office.IRibbonControl control)
         {
-			MessageBox.Show(String.Format("$safeprojectname$ Version {0}", this.GetType().Assembly.GetName().Version),
-				"About $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			Utils.Dialog.ShowAbout("$safeprojectname$", "http://netoffice.codeplex.com", "<No Licence set>");
         }
 
 $tooglecode$

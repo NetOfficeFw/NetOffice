@@ -38,7 +38,7 @@ $classicUICreateRemoveMethod$
 
     Protected Overrides Sub OnError(ByVal methodKind As NetOffice.Tools.ErrorMethodKind, ByVal exception As System.Exception)
 
-        MessageBox.Show("An error occured in " & methodKind.ToString(), "$safeprojectname$")
+		Utils.Dialog.ShowError(exception, "An error occurend in " + methodKind.ToString())
 
     End Sub
 

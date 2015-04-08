@@ -94,6 +94,10 @@ namespace NetOffice.OfficeApi.Tools.Informations
 
         #region IEnumerable<KeyValuePair<string, string>>
 
+        /// <summary>
+        /// Returns an enumerator to retrieve the collection
+        /// </summary>
+        /// <returns>IEnumerator instance</returns>
         public virtual IEnumerator<KeyValuePair<string, string>> GetEnumerator()
         {
             return GetSummary().GetEnumerator();

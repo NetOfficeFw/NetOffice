@@ -8,7 +8,7 @@ using NetOffice.OfficeApi.Enums;
 namespace NetOffice.OfficeApi.Tools
 {    
     /// <summary>
-    /// wrapper class for CustomTaskPane instance
+    /// Wrapper class for CustomTaskPane instance, also used as creation definition if its create before CTPFactoryAvailable is called from MS-Office host application. (Best use in .ctor for creation definition)
     /// </summary>
     public class TaskPaneInfo
     {

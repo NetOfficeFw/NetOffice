@@ -119,10 +119,29 @@ namespace NetOffice.DeveloperToolbox.Translation
         }
 
         /// <summary>
+        /// Lookup to copy embed language packages to the file-sytem
+        /// </summary>
+        internal void InitializeFolder()
+        {
+            try
+            {
+                // a little code smell(because hardcoded). todo: perform reflection on assembly for .lng files
+                System.Reflection.Assembly assembly =  System.Reflection.Assembly.GetExecutingAssembly();
+                ExtractLanguagePackage(assembly, "1049"); 
+            }
+            catch (Exception exception)
+            {
+                // no need to confusing the user
+                Console.WriteLine(exception);
+            }
+        }
+
+        /// <summary>
         /// Load all languages from folder
         /// </summary>
         internal void LoadFromFolder()
         {
+            InitializeFolder();
             Clear();
             Add(new ToolDefaultLanguage(this, ToolDefaultLanguageName.English));
             this[0].Initialize();
@@ -148,6 +167,31 @@ namespace NetOffice.DeveloperToolbox.Translation
                 catch (Exception exception)
                 {
                     Console.WriteLine(exception);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Extract resource and copy to file system if not exists
+        /// </summary>
+        /// <param name="assembly">toolbox assembly</param>
+        /// <param name="fileName">target file</param>
+        private void ExtractLanguagePackage(System.Reflection.Assembly assembly, string fileName)
+        {
+            string targetFilePath = Path.Combine(DirectoryPath, fileName + Extension);
+            if (!File.Exists(targetFilePath))
+            {
+                Stream stream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName + Extension);
+                if (null != stream)
+                {
+                    byte[] bytes = new byte[stream.Length];
+                    stream.Read(bytes, 0, (int)stream.Length);
+                    FileStream fs = new FileStream(targetFilePath, FileMode.Create);
+                    fs.Write(bytes, 0, bytes.Length);
+                    fs.Close();
+                    fs.Dispose();
+                    stream.Close();
+                    stream.Dispose();
                 }
             }
         }

@@ -5,7 +5,7 @@ using System.Text;
 namespace NetOffice.OfficeApi.Tools.Informations
 {
     /// <summary>
-    /// Office Application and NetOffice related utils
+    /// Office Application and NetOffice related diagnostic informations
     /// </summary>
     public class HostInfo : IEnumerable<KeyValuePair<string, string>>
     {      
@@ -92,9 +92,9 @@ namespace NetOffice.OfficeApi.Tools.Informations
         #region IEnumerable<KeyValuePair<string, string>>
 
         /// <summary>
-        /// Returns a summary enumerator collect instance properties
+        /// Returns an enumerator to retrieve the collection
         /// </summary>
-        /// <returns>summary enumerator</returns>
+        /// <returns>IEnumerator instance</returns>
         IEnumerator<KeyValuePair<string, string>> IEnumerable<KeyValuePair<string, string>>.GetEnumerator()
         {
             return GetSummary().GetEnumerator();

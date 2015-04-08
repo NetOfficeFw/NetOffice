@@ -96,7 +96,7 @@ namespace NetOffice.DeveloperToolbox
         {
             get 
             {
-                return "1.7.3.0";
+                return "1.7.4.0";
             }
         }
 

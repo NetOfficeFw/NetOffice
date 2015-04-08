@@ -255,7 +255,7 @@ namespace NetOffice
         public object MethodReturn(COMObject comObject, string name, object[] paramsArray)
         {
             try
-            {
+            {                
                 if (comObject.IsDisposed)
                     throw new ObjectDisposedException("COMObject");
 
