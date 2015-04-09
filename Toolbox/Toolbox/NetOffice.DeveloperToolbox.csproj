@@ -553,6 +553,7 @@
     <Compile Include="Utils\Animation\Panel\ImageShape.cs" />
     <Compile Include="Utils\Animation\Panel\Shape.cs" />
     <Compile Include="Utils\Animation\Round\RoundedRectangleRegion.cs" />
+    <Compile Include="Utils\Native\Win32.cs" />
     <Compile Include="Utils\Registry\UtilsRegistryKeyExporter.cs" />
     <Compile Include="Utils\Ressources\RessourceUtils.cs" />
     <Compile Include="Translation\Translator.cs" />

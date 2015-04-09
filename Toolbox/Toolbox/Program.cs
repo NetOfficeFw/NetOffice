@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Principal;
 using System.Diagnostics;
+using System.Threading;
+using NetOffice.DeveloperToolbox.Utils.Native;
 
 namespace NetOffice.DeveloperToolbox
 {
@@ -23,6 +26,28 @@ namespace NetOffice.DeveloperToolbox
         private static bool _isShutDown;
 
         /// <summary>
+        /// Used as systemwide singleton to create a single-application-instance. The 0FF1CE idea in the GUID is from the MS-PowerPoint Product Code (i stoled from these guys)
+        /// </summary>
+        private static Mutex _systemSingleton = new Mutex(true, "D3413BEF-46D9-4F96-82FC-0000000FF1CE");
+
+        /// <summary>
+        /// Set in PerformSingleInstanceValidation. Its mean we are the origin owner of the mutex and we have to free them
+        /// </summary>
+        private static bool _mutexOwner;
+
+        /// <summary>
+        /// Assemblies we know from the dependencies sub folder. We load them at hand in AppDomain AssemblyResolve trigger
+        /// </summary>
+        private static string[] _dependencies = new string[] { "ICSharpCode.SharpZipLib.dll", "Mono.Cecil.dll", "NetOffice.OutlookSecurity.dll",
+                                                                "AccessApi.dll", "ADODBApi.dll", "DAOApi.dll",
+                                                                "ExcelApi.dll", "MSComctlLibApi.dll", "MSDATASRCApi.dll",
+                                                                "MSHTMLApi.dll", "MSProjectApi.dll", "NetOffice.dll",
+                                                                "OfficeApi.dll", "OutlookApi.dll", "OWC10Api.dll",
+                                                                "PowerPointApi.dll", "VBIDEApi.dll", "VisioApi.dll",
+                                                                "WordApi.dll", "MSFormsApi.dll" };
+
+
+        /// <summary>
         /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future
         /// </summary>
         [STAThread]
@@ -32,7 +57,7 @@ namespace NetOffice.DeveloperToolbox
             {
                 StartTime = DateTime.Now;
                 ProceedCommandLineElevationArguments(args);
-                if (PerformSelfElevation())
+                if (PerformSingleInstanceValidation() || PerformSelfElevation())
                     return;
 
                 AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
@@ -48,8 +73,14 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                if(!_isShutDown)
+                if (!_isShutDown)
                     Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty);
+            }
+            finally
+            {
+                if (null != _systemSingleton && _mutexOwner)
+                    _systemSingleton.ReleaseMutex();
+                _systemSingleton = null;
             }
         }
 
@@ -90,7 +121,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Current NO public release version
+        /// Current NetOffice public release version
         /// </summary>
         public static string CurrentNetOfficeVersion
         {
@@ -159,7 +190,25 @@ namespace NetOffice.DeveloperToolbox
                 if (item.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase))
                     SelfElevation = true;
             }
-        } 
+        }
+
+        /// <summary>
+        /// We want to detect an instance of the application is already running. If its true we want post a message to the main window of these instance that means "bring you in front" 
+        /// </summary>
+        /// <returns>true if a previous instance is running, otherwise false</returns>
+        private static bool PerformSingleInstanceValidation()
+        {
+            if (!_systemSingleton.WaitOne(TimeSpan.Zero))
+            {
+                Win32.PostMessage((IntPtr)Win32.HWND_BROADCAST, Win32.WM_SHOWTOOLBOX, IntPtr.Zero, IntPtr.Zero);
+                return true;
+            }
+            else
+            {
+                _mutexOwner = true;
+                return false;
+            }
+        }
 
         /// <summary>
         /// Perform self elevation if necessary and wanted
@@ -221,7 +270,7 @@ namespace NetOffice.DeveloperToolbox
             }
             catch (Exception exception)
             {
-                // no idea whats the problem right now but log the error to further investigation
+                // no idea whats the problem right now(may no message loop) but log the error to further investigation
                 Console.WriteLine("CurrentDomain_UnhandledException:{0}=>{1}", exception, e.ExceptionObject as Exception);   
             }
         }
@@ -231,7 +280,7 @@ namespace NetOffice.DeveloperToolbox
         /// </summary>
         /// <param name="sender">unkown sender</param>
         /// <param name="args">arguments with info what we are looking for</param>
-        /// <returns>Resolved assembly or null</returns>
+        /// <returns>resolved assembly or null</returns>
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             if (_isShutDown)
@@ -240,48 +289,22 @@ namespace NetOffice.DeveloperToolbox
             try
             {
                 string assemblyName = args.Name.Substring(0, args.Name.IndexOf(",")) + ".dll";
-                string assemblyFullPath = string.Empty;
-                switch (assemblyName)
+                if (_dependencies.Contains(assemblyName))
                 {
-                    case "ICSharpCode.SharpZipLib.dll":
-                    case "Mono.Cecil.dll":
-                    case "NetOffice.OutlookSecurity.dll":
-                    case "AccessApi.dll":
-                    case "ADODBApi.dll":
-                    case "DAOApi.dll":
-                    case "ExcelApi.dll":
-                    case "MSComctlLibApi.dll":
-                    case "MSDATASRCApi.dll":
-                    case "MSHTMLApi.dll":
-                    case "MSProjectApi.dll":
-                    case "NetOffice.dll":
-                    case "OfficeApi.dll":
-                    case "OutlookApi.dll":
-                    case "OWC10Api.dll":
-                    case "PowerPointApi.dll":
-                    case "VBIDEApi.dll":
-                    case "VisioApi.dll":
-                    case "WordApi.dll":
-                    case "MSFormsApi.dll":
-                    {
-                        assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);
-                        if (File.Exists(assemblyFullPath))
-                            return LoadFile(assemblyFullPath);
-                        else
-                            throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
-                    }
-                    default:
-                        break;
+                    string assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);
+                    if (File.Exists(assemblyFullPath))
+                        return LoadFile(assemblyFullPath);
+                    else
+                        throw new FileNotFoundException(String.Format("Failed to load {0}", assemblyName));
                 }
-
-                return null;
             }
             catch (Exception exception)
             {
                 Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty, "Unable to load a dependency.");
                 _isShutDown = true;
-                return null;
             }
+
+            return null;
         }
     }
 }

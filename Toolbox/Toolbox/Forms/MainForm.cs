@@ -7,6 +7,7 @@ using System.Xml;
 using System.Windows.Forms;
 using NetOffice.DeveloperToolbox.Translation;
 using NetOffice.DeveloperToolbox.ToolboxControls;
+using NetOffice.DeveloperToolbox.Utils.Native;
 
 namespace NetOffice.DeveloperToolbox.Forms
 {
@@ -41,6 +42,11 @@ namespace NetOffice.DeveloperToolbox.Forms
         /// store last selection to call IToolboxControl.Deactivated() in SelectedIndexChanged
         /// </summary>
         private IToolboxControl _lastSelectedcontrol;
+
+        /// <summary>
+        /// An error occured in WndProc
+        /// </summary>
+        private bool _wndProcErrorOccured;
 
         #endregion
 
@@ -302,6 +308,43 @@ namespace NetOffice.DeveloperToolbox.Forms
             }
 
             document.Save(filePath);
+        }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// We wait for ouer custom message to bring up the window in front 
+        /// </summary>
+        /// <param name="m">window message kind and args </param>
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+
+            if (_wndProcErrorOccured)
+                return;
+            
+            try
+            {
+                if (m.Msg == Win32.WM_SHOWTOOLBOX)
+                {
+                    if (WindowState == FormWindowState.Minimized)
+                        WindowState = FormWindowState.Normal;
+                    Win32.SetForegroundWindow(Handle);
+                    Show();
+                    BringToFront();
+                    bool top = TopMost;
+                    TopMost = true;
+                    TopMost = top;
+                }
+            }
+            catch
+            {
+                // dont show errors here. may its called multiple times in a milliseconds
+                // we set a flag and dont try to run the code again because its only a minor
+                _wndProcErrorOccured = true;
+            }
         }
 
         #endregion
