@@ -340,7 +340,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.Welcome
 
                 TrayIcon = new NotifyIcon();
                 TrayIcon.Icon = Host.Icon;
-                TrayIcon.Text = "NetOffice DeveloperToolbox";
+                TrayIcon.Text = Host.Caption;
                 TrayIcon.Visible = true;
                 TrayIcon.Click += new EventHandler(TrayNotifyIcon_Click);
                 Host.MinimizeMainWindow(false);

@@ -125,7 +125,7 @@ namespace NetOffice.DeveloperToolbox.Translation
         {
             try
             {
-                // a little code smell(because hardcoded). todo: perform reflection on assembly for .lng files
+                // OPEN-TODO-2: a little code smell(because hardcoded). perform reflection on assembly for .lng files
                 System.Reflection.Assembly assembly =  System.Reflection.Assembly.GetExecutingAssembly();
                 ExtractLanguagePackage(assembly, "1049"); 
             }

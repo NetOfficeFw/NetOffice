@@ -50,6 +50,7 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future
         /// </summary>
+        /// <param name="args">application arguments</param>
         [STAThread]
         public static void Main(string[] args)
         {
@@ -60,6 +61,9 @@ namespace NetOffice.DeveloperToolbox
                 if (PerformSingleInstanceValidation() || PerformSelfElevation())
                     return;
 
+                // Nice to know: Its more safe to trigger the AssemblyResolve event in Main(string[] args) only and move all other code to a Main2 method (call Main2 at last in Main)
+                // because the runtime try to bind target/used assemblies(when jump into main) before the AssemblyResolve trigger is established.
+                // But we dont use ouer custom-bind assemblies in this Main(string[] args) so everything is okay.
                 AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
                 Application.EnableVisualStyles();
@@ -95,7 +99,7 @@ namespace NetOffice.DeveloperToolbox
         internal static TimeSpan LoadedTime { get; private set; }
 
         /// <summary>
-        /// The current used folder for dependent assemblies
+        /// The current used folder for dependent assemblies. Its the application subfolder 'Toolbox Binaries' in Release-Build and a custom folder in Debug-Build
         /// </summary>
         public static string DependencySubFolder
         {
@@ -121,7 +125,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Current NetOffice public release version
+        /// Current/Highest NetOffice public or preview release version
         /// </summary>
         public static string CurrentNetOfficeVersion
         {
@@ -132,7 +136,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Returns the program has admin privilegs
+        /// Returns info the program has admin privilegs
         /// </summary>
         internal static bool IsAdmin
         {
@@ -151,7 +155,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Returns the assembly is currently in design mode
+        /// Returns info the assembly is currently in design mode. In other words its not runtimeexecuted
         /// </summary>
         internal static bool IsDesign
         {
@@ -185,6 +189,9 @@ namespace NetOffice.DeveloperToolbox
         /// <param name="args">arguments from command line</param>
         private static void ProceedCommandLineElevationArguments(string[] args)
         {
+            if (null == args)
+                return;
+
             foreach (string item in args)
             {
                 if (item.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase))
@@ -200,6 +207,8 @@ namespace NetOffice.DeveloperToolbox
         {
             if (!_systemSingleton.WaitOne(TimeSpan.Zero))
             {
+                _mutexOwner = false;
+                // I dislike "on the fly-casts" but its okay for constant values(which it is here) what i find
                 Win32.PostMessage((IntPtr)Win32.HWND_BROADCAST, Win32.WM_SHOWTOOLBOX, IntPtr.Zero, IntPtr.Zero);
                 return true;
             }
@@ -213,7 +222,7 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// Perform self elevation if necessary and wanted
         /// </summary>
-        /// <returns>new process is sucsessfuly started</returns>
+        /// <returns>true if new process is sucsessfuly started, otherwise false</returns>
         private static bool PerformSelfElevation()
         {
             if (!IsAdmin && SelfElevation)
@@ -244,8 +253,23 @@ namespace NetOffice.DeveloperToolbox
         /// <returns>Loaded assembly instance</returns>
         private static Assembly LoadFile(string assemblyFullPath)
         {
+            if (String.IsNullOrWhiteSpace(assemblyFullPath))
+                throw new ArgumentNullException("assemblyFullPath");
+
             try
             {
+                // we check its from well known dependencies folder and one of the registererd dependencies
+                // OPEN-TODO-1: Add file version/hash and signed assembly check to improve security
+
+                string assemblyFolderPath = Path.GetDirectoryName(assemblyFullPath);
+                string assemblyFileName = Path.GetFileName(assemblyFullPath);
+
+                if (!DependencySubFolder.Equals(assemblyFolderPath, StringComparison.InvariantCultureIgnoreCase))
+                    throw new System.Security.SecurityException("Invalid assembly directory.");
+
+                if (!_dependencies.Contains(assemblyFileName))
+                    throw new System.Security.SecurityException("Invalid assembly file.");
+
                 return Assembly.UnsafeLoadFrom(assemblyFullPath);
             }
             catch (Exception exception)
@@ -255,10 +279,10 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// display unhandled exception(s)
+        /// display unhandled exception(s) with non-modal ErrorForm instance
         /// </summary>
         /// <param name="sender">source(ignored)</param>
-        /// <param name="e">args</param>
+        /// <param name="e">exception detailed informations</param>
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             if (_isShutDown)
@@ -278,7 +302,7 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// We handle missing dependencies at hand because we want this .exe assembly in a clean directory. This looks more nicely for the user
         /// </summary>
-        /// <param name="sender">unkown sender</param>
+        /// <param name="sender">unkown sender(ignored)</param>
         /// <param name="args">arguments with info what we are looking for</param>
         /// <returns>resolved assembly or null</returns>
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
@@ -302,6 +326,7 @@ namespace NetOffice.DeveloperToolbox
             {
                 Forms.ErrorForm.ShowError(null, exception, ErrorCategory.Penalty, "Unable to load a dependency.");
                 _isShutDown = true;
+                Application.Exit();
             }
 
             return null;

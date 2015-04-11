@@ -1017,6 +1017,7 @@
     <EmbeddedResource Include="ToolboxControls\Welcome\Strings.txt" />
     <EmbeddedResource Include="ToolboxControls\Welcome\welcome.png" />
     <EmbeddedResource Include="ToolboxControls\About\info_rhombus.png" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Ressources\NetOffice.Icon.32x32.ico" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\ProjectControl.txt" />
     <EmbeddedResource Include="ToolboxControls\ProjectWizard\Controls\EnvironmentControl.txt" />

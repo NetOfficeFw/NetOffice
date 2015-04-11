@@ -109,6 +109,14 @@ namespace NetOffice.DeveloperToolbox.Forms
                 Minimized(this, EventArgs.Empty);
         }
 
+        public string Caption
+        {
+            get 
+            {
+                return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            }
+        }
+
         public ToolLanguages Languages { get; private set; }
 
         public bool SupportsLanguageEditor { get { return true; } }

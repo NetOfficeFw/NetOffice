@@ -10,6 +10,11 @@ namespace NetOffice.DeveloperToolbox
     public interface IToolboxHost
     {
         /// <summary>
+        /// Application Name
+        /// </summary>
+        string Caption { get; }
+
+        /// <summary>
         /// Available Application Languages
         /// </summary>
         ToolLanguages Languages { get; }
