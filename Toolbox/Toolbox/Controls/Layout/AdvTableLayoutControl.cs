@@ -9,17 +9,18 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.Layout
 {
+    /// <summary>
+    /// Standard TableLayoutPanel but its flicker-free
+    /// </summary>
     public partial class AdvTableLayoutControl : TableLayoutPanel
     {
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public AdvTableLayoutControl()
         {
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.UserPaint, true);
-        }
-
-        protected override void OnPaint(PaintEventArgs pe)
-        {
-            base.OnPaint(pe);
         }
     }
 }

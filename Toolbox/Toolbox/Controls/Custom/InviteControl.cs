@@ -10,13 +10,25 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.Custom
 {
+    /// <summary>
+    /// A custom control to invite people for translations
+    /// </summary>
     public partial class InviteControl : UserControl
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public InviteControl()
         {
             InitializeComponent();
             controlBackColorAnimator1.Start(false);
         }
+
+        #endregion
+
+        #region Trigger
 
         private void InviteControl_Resize(object sender, EventArgs e)
         {
@@ -52,7 +64,16 @@ namespace NetOffice.DeveloperToolbox.Controls.Custom
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            try
+            {
+                this.Visible = false;
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(null, exception);
+            }
         }
+
+        #endregion
     }
 }

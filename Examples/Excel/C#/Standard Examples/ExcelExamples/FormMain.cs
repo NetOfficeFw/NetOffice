@@ -24,6 +24,7 @@ namespace ExcelExamplesCS4
             LoadExample(new Example07());
             LoadExample(new Example08());
             LoadExample(new Example09());
+            LoadExample(new Example10());
         }
     }
 }

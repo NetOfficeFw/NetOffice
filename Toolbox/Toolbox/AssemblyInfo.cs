@@ -9,6 +9,7 @@ namespace NetOffice.DeveloperToolbox
     internal static class AssemblyInfo
     {
         private static Assembly _executingAssembly;
+        private static object _lock = new object();
 
         /// <summary>
         /// Title of the Assembly
@@ -82,7 +83,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Complany Markup of the Assembly
+        /// Company Markup of the Assembly
         /// </summary>
         public static string AssemblyCompany
         {
@@ -97,8 +98,11 @@ namespace NetOffice.DeveloperToolbox
 
         private static Assembly GetExecutingAssembly()
         {
-            if (null == _executingAssembly)
-                _executingAssembly = Assembly.GetExecutingAssembly();
+            lock (_lock)
+            {
+                if (null == _executingAssembly)
+                    _executingAssembly = Assembly.GetExecutingAssembly();                
+            }
             return _executingAssembly;
         }
     }

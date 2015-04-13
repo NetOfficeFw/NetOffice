@@ -7,3 +7,4 @@ Example06 - Dialogs
 Example07 - VBA Code
 Example08 - Events
 Example09 - Customize UI
+Example10 - Create PDF Document

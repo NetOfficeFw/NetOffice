@@ -18,22 +18,22 @@ namespace NetOffice.DeveloperToolbox
         /// <summary>
         /// cache field to check program has admin privileges only at once
         /// </summary>
-        private static bool? _isAdmin;
+        private static bool? _isAdmin = null;
 
         /// <summary>
         /// An error occured in the AssemblyResolve trigger. We dont show the error dialog again in Main(string[] args) in this case
         /// </summary>
-        private static bool _isShutDown;
+        private static bool _isShutDown = false;
 
         /// <summary>
-        /// Used as systemwide singleton to create a single-application-instance. The 0FF1CE idea in the GUID is from the MS-PowerPoint Product Code (i stoled from these guys)
+        /// Used as systemwide singleton to create a single-application-instance. Works different in Debug/Release build
         /// </summary>
-        private static Mutex _systemSingleton = new Mutex(true, "D3413BEF-46D9-4F96-82FC-0000000FF1CE");
-
+        private static Mutex _systemSingleton = null;
+        
         /// <summary>
         /// Set in PerformSingleInstanceValidation. Its mean we are the origin owner of the mutex and we have to free them
         /// </summary>
-        private static bool _mutexOwner;
+        private static bool _mutexOwner = false;
 
         /// <summary>
         /// Assemblies we know from the dependencies sub folder. We load them at hand in AppDomain AssemblyResolve trigger
@@ -57,6 +57,7 @@ namespace NetOffice.DeveloperToolbox
             try
             {
                 StartTime = DateTime.Now;
+                CreateMutex();
                 ProceedCommandLineElevationArguments(args);
                 if (PerformSingleInstanceValidation() || PerformSelfElevation())
                     return;
@@ -82,9 +83,7 @@ namespace NetOffice.DeveloperToolbox
             }
             finally
             {
-                if (null != _systemSingleton && _mutexOwner)
-                    _systemSingleton.ReleaseMutex();
-                _systemSingleton = null;
+                ReleaseMutex();
             }
         }
 
@@ -112,7 +111,7 @@ namespace NetOffice.DeveloperToolbox
                     resultPath = Path.Combine(GetInternalRelativeDebugPath(), "Libs");
                 
                 #else
-                    
+                                        
                     resultPath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Toolbox Binaries");
                 
                 #endif
@@ -136,7 +135,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Returns info the program has admin privilegs
+        /// Returns info the program has admin privilegs (Cache supported, not thread-safe)
         /// </summary>
         internal static bool IsAdmin
         {
@@ -155,7 +154,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Returns info the assembly is currently in design mode. In other words its not runtimeexecuted
+        /// Returns info the assembly is currently in design mode. In other words its not runtime-executed
         /// </summary>
         internal static bool IsDesign
         {
@@ -184,39 +183,74 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Analyze commandline arguments for self elevation
+        /// Creates the systemwide singleton mutex
+        /// </summary>
+        private static void CreateMutex()
+        {             
+            #if DEBUG
+                
+                _systemSingleton = new Mutex(true, Guid.NewGuid().ToString());
+                
+            #else
+
+                // The 0FF1CE idea in the GUID is from the MS-PowerPoint Product Code (i stoled from the pp dev)
+                _systemSingleton =  new Mutex(true, "D3413BEF-46D9-4F96-82FC-0000000FF1CE");
+            
+            #endif
+        }
+
+        /// <summary>
+        /// Release the systemwide singleton mutex if we are the owner
+        /// </summary>
+        private static void ReleaseMutex()
+        {
+            if (null != _systemSingleton && _mutexOwner)
+                _systemSingleton.ReleaseMutex();
+            _systemSingleton = null;
+        }
+
+        /// <summary>
+        /// Analyze commandline arguments for self elevation and set SelfElevation property
         /// </summary>
         /// <param name="args">arguments from command line</param>
         private static void ProceedCommandLineElevationArguments(string[] args)
         {
             if (null == args)
                 return;
-
-            foreach (string item in args)
-            {
-                if (item.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase))
-                    SelfElevation = true;
-            }
+            
+            SelfElevation = (null != args.FirstOrDefault(e => e.Equals("-SelfElevation", StringComparison.InvariantCultureIgnoreCase)));
         }
 
         /// <summary>
-        /// We want to detect an instance of the application is already running. If its true we want post a message to the main window of these instance that means "bring you in front" 
+        /// We want to detect an instance of the application is already running.
+        /// If its true we want post a message to the main window of these instance that means "bring you in front"
         /// </summary>
         /// <returns>true if a previous instance is running, otherwise false</returns>
         private static bool PerformSingleInstanceValidation()
-        {
-            if (!_systemSingleton.WaitOne(TimeSpan.Zero))
-            {
-                _mutexOwner = false;
-                // I dislike "on the fly-casts" but its okay for constant values(which it is here) what i find
-                Win32.PostMessage((IntPtr)Win32.HWND_BROADCAST, Win32.WM_SHOWTOOLBOX, IntPtr.Zero, IntPtr.Zero);
-                return true;
-            }
-            else
-            {
+        {            
+            #if DEBUG
+            
+                // we want allow multiple instances in debug build
+                // (its also easier to use because sometimes the mutex still lives on if debugging is aborted at hand) 
                 _mutexOwner = true;
                 return false;
-            }
+            
+            #else
+
+                if (!_systemSingleton.WaitOne(TimeSpan.Zero))
+                {
+                    _mutexOwner = false;
+                    // I dislike "on the fly-casts" but its okay for constant values(which it is) what i find
+                    Win32.PostMessage((IntPtr)Win32.HWND_BROADCAST, Win32.WM_SHOWTOOLBOX, IntPtr.Zero, IntPtr.Zero);
+                    return true;
+                }
+                else
+                {
+                    _mutexOwner = true;
+                    return false;
+                }
+            
+            #endif
         }
 
         /// <summary>
@@ -250,7 +284,7 @@ namespace NetOffice.DeveloperToolbox
         /// Try to load an assembly with given file path
         /// </summary>
         /// <param name="assemblyFullPath">full qualified assembly path</param>
-        /// <returns>Loaded assembly instance</returns>
+        /// <returns>loaded assembly instance</returns>
         private static Assembly LoadFile(string assemblyFullPath)
         {
             if (String.IsNullOrWhiteSpace(assemblyFullPath))
@@ -312,7 +346,13 @@ namespace NetOffice.DeveloperToolbox
 
             try
             {
-                string assemblyName = args.Name.Substring(0, args.Name.IndexOf(",")) + ".dll";
+                // detect its a assembly reference or a file path and extract the assembly file name
+                string assemblyName = null;
+                if (args.Name.IndexOf(",", StringComparison.InvariantCultureIgnoreCase) > -1)
+                    assemblyName = args.Name.Substring(0, args.Name.IndexOf(",")) + ".dll";
+                else
+                    assemblyName = Path.GetFileName(args.Name);
+
                 if (_dependencies.Contains(assemblyName))
                 {
                     string assemblyFullPath = Path.Combine(Program.DependencySubFolder, assemblyName);

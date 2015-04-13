@@ -7,14 +7,30 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.Check
 {    
+    /// <summary>
+    /// Standard checkbox with alternate(blue) check color if checked
+    /// </summary>
     public class GlowCheckBox : System.Windows.Forms.CheckBox
     {
+        #region Fields
+
         private Pen _selectedPen;
 
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public GlowCheckBox()
         {
             _selectedPen = new Pen(Color.Blue, 1);
         }
+
+        #endregion
+
+        #region Overrides
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
@@ -43,5 +59,7 @@ namespace NetOffice.DeveloperToolbox.Controls.Check
             }
             base.Dispose(disposing);
         }
+
+        #endregion
     }
 }

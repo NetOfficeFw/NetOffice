@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.InfoLayer
 {
+    /// <summary>
+    /// Control to display rich text
+    /// </summary>
     [RessourceTable("Controls.InfoLayer.Strings.txt")]
     public partial class InfoControl : UserControl, ILocalizationDesign, ILocalizationReplaceProvider
     {
@@ -22,11 +25,18 @@ namespace NetOffice.DeveloperToolbox.Controls.InfoLayer
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public InfoControl()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="text"></param>
         public InfoControl(string text)
         {
             InitializeComponent();
@@ -34,13 +44,11 @@ namespace NetOffice.DeveloperToolbox.Controls.InfoLayer
             richTextBoxHelpContent.Text = text;            
         }
 
-        public InfoControl(Stream rtfStream)
-        {
-            InitializeComponent();
-            this.Dock = DockStyle.Fill;
-            richTextBoxHelpContent.LoadFile(rtfStream, RichTextBoxStreamType.RichText);
-        }
-
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="text">rtf text</param>
+        /// <param name="isRessourceAddress">indicates first argument is a resource address instead of rtf text</param>
         public InfoControl(string text, bool isRessourceAddress)
         {
             InitializeComponent();
@@ -56,14 +64,20 @@ namespace NetOffice.DeveloperToolbox.Controls.InfoLayer
             }
         }
 
+        /// <summary>
+        /// Stream with rtf data inside
+        /// </summary>
+        /// <param name="rtfStream">rtf data stream</param>
+        public InfoControl(Stream rtfStream)
+        {
+            InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            richTextBoxHelpContent.LoadFile(rtfStream, RichTextBoxStreamType.RichText);
+        }
+
         #endregion
 
-        #region Trigger
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+        #region Methods
 
         private static Stream ReadStream(string resId)
         {
@@ -74,6 +88,22 @@ namespace NetOffice.DeveloperToolbox.Controls.InfoLayer
                 throw (new System.IO.IOException("Error accessing resource Stream."));
             return ressourceStream;
         }
+            
+        #endregion
+
+        #region Trigger
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+            }
+            catch (Exception exception)
+            {
+                Forms.ErrorForm.ShowError(null, exception);
+            }
+         }
 
         private void richTextBox_LinkClicked(object sender, LinkClickedEventArgs e)
         {

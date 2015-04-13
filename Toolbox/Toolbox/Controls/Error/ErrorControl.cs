@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace NetOffice.DeveloperToolbox.Controls.Error
 {
+    /// <summary>
+    /// Control to display errors
+    /// </summary>
     [RessourceTable("Ressources.ErrorFormStrings.txt")]
     public partial class ErrorControl : UserControl, ILocalizationDesign
     {
@@ -16,6 +19,9 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public ErrorControl()
         {
             InitializeComponent();
@@ -25,6 +31,9 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         #region Events
 
+        /// <summary>
+        /// User want close the control
+        /// </summary>
         public event EventHandler UserClose;
 
         private void RaiseUserClose()
@@ -37,6 +46,13 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         #region Methods
 
+        /// <summary>
+        /// Show exception in user frontend
+        /// </summary>
+        /// <param name="exception">exception to display</param>
+        /// <param name="message">user friendly message</param>
+        /// <param name="category"error category></param>
+        /// <param name="currentLanguageID">user preferred lcid</param>
         internal void ShowError(Exception exception, string message, ErrorCategory category, int currentLanguageID)
         {
             _category = category;
@@ -49,6 +65,12 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
             Translation.Translator.TranslateControls(this, "Ressources.ErrorFormStrings.txt", currentLanguageID);
         }
 
+        /// <summary>
+        /// Show exception in user frontend
+        /// </summary>
+        /// <param name="exception">exception to display</param>
+        /// <param name="category"error category></param>
+        /// <param name="currentLanguageID">user preferred lcid</param>
         internal void ShowError(Exception exception, ErrorCategory category, int currentLanguageID)
         {
             _category = category;
@@ -148,27 +170,48 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         private void ErrorControl_Resize(object sender, EventArgs e)
         {
-            columnHeaderSpace.Width = _columnSizes[0];
-            columnHeaderType.Width = _columnSizes[2];
-            columnHeaderSource.Width = _columnSizes[3];
-            columnHeaderMessage.Width = listViewTrace.Width - (_columnSizes[3] + _columnSizes[2] + _columnSizes[0] + _columnSizes[0]);
+            try
+            {
+                columnHeaderSpace.Width = _columnSizes[0];
+                columnHeaderType.Width = _columnSizes[2];
+                columnHeaderSource.Width = _columnSizes[3];
+                columnHeaderMessage.Width = listViewTrace.Width - (_columnSizes[3] + _columnSizes[2] + _columnSizes[0] + _columnSizes[0]);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            RaiseUserClose();
-            if (ErrorCategory.Critical == _category)
-                Application.Exit();
+            try
+            {
+                RaiseUserClose();
+                if (ErrorCategory.Critical == _category)
+                    Application.Exit();
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         }
 
         private void buttonCopyToClipboard_Click(object sender, EventArgs e)
         {
-            string clipboardContent = "";
+            try
+            {
+                string clipboardContent = "";
 
-            foreach (ListViewItem item in listViewTrace.Items)
-                clipboardContent += item.SubItems[0].Text + " | " + item.SubItems[1].Text + " | " + item.SubItems[2].Text + " | " + item.SubItems[3].Text + Environment.NewLine;
+                foreach (ListViewItem item in listViewTrace.Items)
+                    clipboardContent += item.SubItems[0].Text + " | " + item.SubItems[1].Text + " | " + item.SubItems[2].Text + " | " + item.SubItems[3].Text + Environment.NewLine;
 
-            Clipboard.SetData(DataFormats.Text, clipboardContent);
+                Clipboard.SetData(DataFormats.Text, clipboardContent);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         }
 
         private void linkLabelDiscussionBoard_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -185,14 +228,21 @@ namespace NetOffice.DeveloperToolbox.Controls.Error
 
         private void listViewTrace_DoubleClick(object sender, EventArgs e)
         {
-            if (listViewTrace.SelectedItems.Count > 0)
+            try
             {
-                Exception exception = listViewTrace.SelectedItems[0].Tag as Exception;
-                if (null != exception)
+                if (listViewTrace.SelectedItems.Count > 0)
                 {
-                    string details = String.Format("{0}{2}{2}{1}", exception.Message, exception, Environment.NewLine);
-                    MessageBox.Show(this, details, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Exception exception = listViewTrace.SelectedItems[0].Tag as Exception;
+                    if (null != exception)
+                    {
+                        string details = String.Format("{0}{2}{2}{1}", exception.Message, exception, Environment.NewLine);
+                        MessageBox.Show(this, details, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
                 }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
             }
         }
 
