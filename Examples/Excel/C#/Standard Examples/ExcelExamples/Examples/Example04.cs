@@ -5,6 +5,7 @@ using ExampleBase;
 using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
@@ -22,7 +23,7 @@ namespace ExcelExamplesCS4
             excelApplication.DisplayAlerts = false;
 
             // create a utils instance, not need for but helpful to keep the lines of code low
-            Excel.Tools.CommonUtils utils = new Excel.Tools.CommonUtils(excelApplication);
+            CommonUtils utils = new CommonUtils(excelApplication);
 
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();

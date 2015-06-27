@@ -184,6 +184,8 @@ namespace NetOffice.DeveloperToolbox.Translation
                 Stream stream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName + Extension);
                 if (null != stream)
                 {
+                    if (!Directory.Exists(DirectoryPath))
+                        Directory.CreateDirectory(DirectoryPath);
                     byte[] bytes = new byte[stream.Length];
                     stream.Read(bytes, 0, (int)stream.Length);
                     FileStream fs = new FileStream(targetFilePath, FileMode.Create);

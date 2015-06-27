@@ -17,7 +17,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        public DiagnosticPairCollection(CommonUtils owner)
+        public DiagnosticPairCollection(Utils.CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
@@ -33,7 +33,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// <summary>
         /// Utils Owner Instance
         /// </summary>
-        internal CommonUtils Owner { get; set; }
+        internal Utils.CommonUtils Owner { get; set; }
 
         #endregion
 

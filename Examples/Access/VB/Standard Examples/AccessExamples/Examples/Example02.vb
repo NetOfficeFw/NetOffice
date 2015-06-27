@@ -1,12 +1,12 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-
 Imports Access = NetOffice.AccessApi
 Imports NetOffice.AccessApi.Enums
 Imports NetOffice.AccessApi.Constants
 Imports DAO = NetOffice.DAOApi
 Imports NetOffice.DAOApi.Enums
 Imports NetOffice.DAOApi.Constants
+Imports NetOffice.AccessApi.Tools.Utils
 
 Public Class Example02
     Implements IExample
@@ -21,7 +21,7 @@ Public Class Example02
         Dim accessApplication As New Access.Application()
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
-        Dim utils As Access.Tools.CommonUtils = New Access.Tools.CommonUtils(accessApplication)
+        Dim utils As CommonUtils = New CommonUtils(accessApplication)
 
         ' create database file name 
         Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example02", Access.Tools.DocumentFormat.Normal)

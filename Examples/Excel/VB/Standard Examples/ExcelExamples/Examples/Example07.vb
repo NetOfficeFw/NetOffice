@@ -4,6 +4,7 @@ Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
 Imports VB = NetOffice.VBIDEApi
 Imports NetOffice.VBIDEApi.Enums
+Imports NetOffice.ExcelApi.Tools.Utils
 
 Public Class Example07
     Implements IExample
@@ -26,7 +27,7 @@ Public Class Example07
             excelApplication.Visible = False
 
             ' create a utils instance, not need for but helpful to keep the lines of code low
-            Dim utils As Excel.Tools.CommonUtils = New Excel.Tools.CommonUtils(excelApplication)
+            Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
             ' add a new workbook
             Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()

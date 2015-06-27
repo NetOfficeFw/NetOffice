@@ -9,6 +9,7 @@ using TutorialsBase;
 
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Tools;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace TutorialsCS4
 {

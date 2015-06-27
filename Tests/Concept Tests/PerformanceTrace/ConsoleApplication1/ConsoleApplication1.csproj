@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E21AB5C3-818A-4D5A-883A-4AFA9DA17715}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Source\Access\AccessApi.csproj">
+      <Project>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</Project>
+      <Name>AccessApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\ADODB\ADODBApi.csproj">
+      <Project>{CBF10BD9-CFC5-4F6B-9BC1-374BC7C6DB80}</Project>
+      <Name>ADODBApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\DAO\DAOApi.csproj">
+      <Project>{9F9E1AA6-516C-4121-87A9-241C80528866}</Project>
+      <Name>DAOApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Excel\ExcelApi.csproj">
+      <Project>{43C2FFD2-1680-490A-B0CF-BE425D6EEC7C}</Project>
+      <Name>ExcelApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\MSComctlLib\MSComctlLibApi.csproj">
+      <Project>{76A38510-A8E7-4B6F-A90B-10384D845F42}</Project>
+      <Name>MSComctlLibApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\MSDATASRC\MSDATASRCApi.csproj">
+      <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
+      <Name>MSDATASRCApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\MSForms\MSFormsApi.csproj">
+      <Project>{F1A3EBA7-5C09-4986-9821-244E8468FBAE}</Project>
+      <Name>MSFormsApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\MSHTML\MSHTMLApi.csproj">
+      <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
+      <Name>MSHTMLApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\MSProject\MSProjectApi.csproj">
+      <Project>{6C715072-6B0D-43D5-B620-2AC997CEF2CA}</Project>
+      <Name>MSProjectApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Outlook\OutlookApi.csproj">
+      <Project>{98DE103A-F036-4814-A740-9B4DE13001FF}</Project>
+      <Name>OutlookApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\OWC10\OWC10Api.csproj">
+      <Project>{AE08E748-9569-4538-8BB1-F9E7AF0FCB3C}</Project>
+      <Name>OWC10Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\PowerPoint\PowerPointApi.csproj">
+      <Project>{D2DF07D1-46EA-4578-9183-9ABB368547E5}</Project>
+      <Name>PowerPointApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\VBIDE\VBIDEApi.csproj">
+      <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
+      <Name>VBIDEApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Visio\VisioApi.csproj">
+      <Project>{581B0DB6-8146-4729-9AE6-61B27F53B3E6}</Project>
+      <Name>VisioApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Source\Word\WordApi.csproj">
+      <Project>{5C457066-D488-4BC1-B7F8-1E90F2A80648}</Project>
+      <Name>WordApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

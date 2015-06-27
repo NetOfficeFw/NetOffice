@@ -1,5 +1,6 @@
 ﻿Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Tools
+Imports NetOffice.ExcelApi.Tools.Utils
 
 Public Class Tutorial13
     Implements ITutorial

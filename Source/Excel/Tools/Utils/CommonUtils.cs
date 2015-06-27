@@ -5,18 +5,19 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Security.Principal;
+using NetOffice.ExcelApi.Tools.Utils;
 
-namespace NetOffice.OutlookApi.Tools
+namespace NetOffice.ExcelApi.Tools.Utils
 {
     /// <summary>
     /// Various helper for common tasks
     /// </summary>
-    public class CommonUtils : NetOffice.OfficeApi.Tools.CommonUtils
+    public class CommonUtils : NetOffice.OfficeApi.Tools.Utils.CommonUtils
     {
         #region Fields
 
-        private OutlookApi.Application _ownerApplication;
-        private ApplicationUtils _application;
+        private ExcelApi.Application _ownerApplication;
+        private FileUtils _fileUtils; 
 
         #endregion
 
@@ -26,7 +27,7 @@ namespace NetOffice.OutlookApi.Tools
         /// Creates an instance of the application
         /// </summary>
         /// <param name="application">owner application</param>
-        public CommonUtils(OutlookApi.Application application) : base(application)
+        public CommonUtils(ExcelApi.Application application) : base(application)
         {
             _ownerApplication = application;
         }
@@ -36,7 +37,7 @@ namespace NetOffice.OutlookApi.Tools
         /// </summary>
         /// <param name="application">owner application</param>
         /// <param name="ownerAssembly">owner assembly</param>
-        public CommonUtils(OutlookApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
+        public CommonUtils(ExcelApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
         {
             if (null == application)
                 throw new ArgumentNullException("application");
@@ -60,7 +61,7 @@ namespace NetOffice.OutlookApi.Tools
         /// <param name="owner">addin owner</param>
         /// <param name="isAutomation">indicates the host application is currently in automation</param>
         /// <param name="ownerAssembly">owner application</param>
-        internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly) : base(owner, isAutomation, ownerAssembly)
+        internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly)  : base(owner, isAutomation, ownerAssembly)
         {
 
         }
@@ -68,17 +69,17 @@ namespace NetOffice.OutlookApi.Tools
         #endregion
 
         #region Properties
-
+        
         /// <summary>
-        /// Application related utils
+        /// File related utils
         /// </summary>
-        public ApplicationUtils Application
+        public FileUtils File
         {
             get
             {
-                if (null == _application)
-                    _application = OnCreateApplicationUtils();
-                return _application;
+                if (null == _fileUtils)
+                    _fileUtils = OnCreateFileUtils();
+                return _fileUtils;
             }
         }
 
@@ -87,25 +88,12 @@ namespace NetOffice.OutlookApi.Tools
         #region Methods
 
         /// <summary>
-        /// Creates an instance of ApplicationUtils
+        /// Creates an instance of FileUtils
         /// </summary>
-        /// <returns>instance of ApplicationUtils</returns>
-        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        /// <returns>instance of FileUtils</returns>
+        protected internal virtual FileUtils OnCreateFileUtils()
         {
-            return new ApplicationUtils(this);
-        }
-
-        #endregion
-
-        #region Overrides
-
-        /// <summary>
-        /// Creates an instance of DialogUtils
-        /// </summary>
-        /// <returns>instance of DialogUtils</returns>
-        protected override OfficeApi.Tools.Utils.DialogUtils OnCreateDialogUtils()
-        {
-            return new OutlookDialogUtils(this);
+            return new FileUtils(this);
         }
 
         #endregion

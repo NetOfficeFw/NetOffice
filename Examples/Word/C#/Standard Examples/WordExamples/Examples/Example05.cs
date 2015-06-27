@@ -7,12 +7,12 @@ using System.Reflection;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
+using NetOffice.WordApi.Tools.Utils;
 
 namespace WordExamplesCS4
 {
@@ -31,7 +31,7 @@ namespace WordExamplesCS4
             wordApplication.Visible = true;
 
             // create a utils instance, not need for but helpful to keep the lines of code low
-            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(wordApplication);
+            CommonUtils utils = new CommonUtils(wordApplication);
 
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();

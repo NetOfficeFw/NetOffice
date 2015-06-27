@@ -6,16 +6,17 @@ using System.Globalization;
 using System.Text;
 using System.Security.Principal;
 
-namespace NetOffice.MSProjectApi.Tools
+namespace NetOffice.OutlookApi.Tools.Utils
 {
     /// <summary>
     /// Various helper for common tasks
     /// </summary>
-    public class CommonUtils : NetOffice.OfficeApi.Tools.CommonUtils
+    public class CommonUtils : NetOffice.OfficeApi.Tools.Utils.CommonUtils
     {
         #region Fields
 
-        private MSProjectApi.Application _ownerApplication;
+        private OutlookApi.Application _ownerApplication;
+        private ApplicationUtils _application;
 
         #endregion
 
@@ -25,7 +26,7 @@ namespace NetOffice.MSProjectApi.Tools
         /// Creates an instance of the application
         /// </summary>
         /// <param name="application">owner application</param>
-        public CommonUtils(MSProjectApi.Application application) : base(application)
+        public CommonUtils(OutlookApi.Application application) : base(application)
         {
             _ownerApplication = application;
         }
@@ -35,7 +36,7 @@ namespace NetOffice.MSProjectApi.Tools
         /// </summary>
         /// <param name="application">owner application</param>
         /// <param name="ownerAssembly">owner assembly</param>
-        public CommonUtils(MSProjectApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
+        public CommonUtils(OutlookApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
         {
             if (null == application)
                 throw new ArgumentNullException("application");
@@ -62,6 +63,49 @@ namespace NetOffice.MSProjectApi.Tools
         internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly) : base(owner, isAutomation, ownerAssembly)
         {
 
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Application related utils
+        /// </summary>
+        public ApplicationUtils Application
+        {
+            get
+            {
+                if (null == _application)
+                    _application = OnCreateApplicationUtils();
+                return _application;
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Creates an instance of ApplicationUtils
+        /// </summary>
+        /// <returns>instance of ApplicationUtils</returns>
+        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        {
+            return new ApplicationUtils(this);
+        }
+
+        #endregion
+
+        #region Overrides
+
+        /// <summary>
+        /// Creates an instance of DialogUtils
+        /// </summary>
+        /// <returns>instance of DialogUtils</returns>
+        protected override OfficeApi.Tools.Utils.DialogUtils OnCreateDialogUtils()
+        {
+            return new OutlookDialogUtils(this);
         }
 
         #endregion

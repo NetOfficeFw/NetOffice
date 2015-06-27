@@ -31,8 +31,17 @@ namespace ClientApplication
             Excel.Application app = null;
             try
             {
+                Settings.Default.PerformanceTrace.Alert += new PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
+                Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
+                Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
+
+                //Settings.Default.PerformanceTrace["ExcelApi", "Application", "DisplayAlerts"].Enabled = true;
+                //Settings.Default.PerformanceTrace["ExcelApi", "Application", "DisplayAlerts"].IntervalMS = 0;
+
                 app = new Excel.Application();
-                NOTools.CommonUtils utils = new NOTools.CommonUtils(app, typeof(Form1).Assembly);
+                NOTools.Utils.CommonUtils utils = new NOTools.Utils.CommonUtils(app, typeof(Form1).Assembly);
+                app.DisplayAlerts = false;
+                //string s = app.ComponentRootName;
                 utils.Dialog.SuppressOnAutomation = false;
                 utils.Dialog.SuppressOnHide = false;
                 utils.Dialog.ShowDiagnostics(true);
@@ -47,6 +56,11 @@ namespace ClientApplication
                 app.Dispose();
                 Close();
             }
+        }
+
+        private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs e)
+        {
+            Console.WriteLine("Call {4} => {0}:{1} passed in {2} milliseconds ({3} Ticks)", e.EntityName, e.MethodName, e.TimeElapsedMS, e.Ticks, e.CallType);
         }
 
         /// <summary>

@@ -9,13 +9,13 @@ using System.Data;
 using System.Data.OleDb;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
+using NetOffice.AccessApi.Tools.Utils;
 
 namespace AccessExamplesCS4
 {
@@ -32,7 +32,7 @@ namespace AccessExamplesCS4
             Access.Application accessApplication = new Access.Application();
 
             // create a utils instance, not need for but helpful to keep the lines of code low
-            Access.Tools.CommonUtils utils = new Access.Tools.CommonUtils(accessApplication);
+            CommonUtils utils = new CommonUtils(accessApplication);
 
             // create database file name 
             string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example03", Access.Tools.DocumentFormat.Normal);

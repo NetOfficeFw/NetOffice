@@ -49,7 +49,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Tools\CommonUtils.cs" />
     <Compile Include="Tools\Dialogs\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +89,7 @@
     <Compile Include="Tools\Informations\HostInfo.cs" />
     <Compile Include="Tools\Informations\Infos.cs" />
     <Compile Include="Tools\Utils\ColorUtils.cs" />
+    <Compile Include="Tools\Utils\CommonUtils.cs" />
     <Compile Include="Tools\Utils\DialogUtils.cs" />
     <Compile Include="Tools\Utils\ImageUtils.cs" />
     <Compile Include="Tools\Utils\ResourceUtils.cs" />

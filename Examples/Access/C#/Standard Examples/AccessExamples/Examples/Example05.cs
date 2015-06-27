@@ -8,7 +8,6 @@ using System.Text;
 using System.Data;
 using System.Data.OleDb;
 using ExampleBase;
-
 using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
@@ -17,6 +16,7 @@ using NetOffice.OfficeApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
+using NetOffice.AccessApi.Tools.Utils;
 
 namespace AccessExamplesCS4
 {
@@ -94,7 +94,7 @@ namespace AccessExamplesCS4
         {
             // start access
             _accessApplication = new Access.Application();
-            Access.Tools.CommonUtils utils = new Access.Tools.CommonUtils(_accessApplication);
+            CommonUtils utils = new CommonUtils(_accessApplication);
             Office.CommandBarButton commandBarBtn = null;
 
             // add a commandbar popup

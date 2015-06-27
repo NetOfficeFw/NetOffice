@@ -7,12 +7,12 @@ using System.Text;
 using System.Security.Principal;
 using NetOffice.AccessApi.Tools.Utils;
 
-namespace NetOffice.AccessApi.Tools
+namespace NetOffice.AccessApi.Tools.Utils
 {
     /// <summary>
     /// Various helper for common tasks
     /// </summary>
-    public class CommonUtils : NetOffice.OfficeApi.Tools.CommonUtils
+    public class CommonUtils : NetOffice.OfficeApi.Tools.Utils.CommonUtils
     {
         #region Fields
 

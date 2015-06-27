@@ -40,7 +40,7 @@ namespace ConsoleApplication1
             application.DisplayAlerts = Word.Enums.WdAlertLevel.wdAlertsNone;
             application.Documents.Add();
 
-            Word.Tools.CommonUtils utils = new Word.Tools.CommonUtils(application);
+            Word.Tools.Utils.CommonUtils utils = new Word.Tools.Utils.CommonUtils(application);
             int hwnd = utils.Application.TryGetMainWindowHandle(application.Documents[1]);
 
             application.Quit();
@@ -58,7 +58,7 @@ namespace ConsoleApplication1
             application.Visible = NetOffice.OfficeApi.Enums.MsoTriState.msoTrue;
             application.Presentations.Add();
 
-            PowerPoint.Tools.CommonUtils utils = new PowerPoint.Tools.CommonUtils(application);
+            PowerPoint.Tools.Utils.CommonUtils utils = new PowerPoint.Tools.Utils.CommonUtils(application);
             int hwnd = utils.Application.HWND;
 
             application.Quit();
@@ -73,7 +73,7 @@ namespace ConsoleApplication1
             Console.WriteLine("Test Outlook Application Utils");
 
             Outlook.Application application = new Outlook.Application();
-            Outlook.Tools.CommonUtils utils = new Outlook.Tools.CommonUtils(application);
+            Outlook.Tools.Utils.CommonUtils utils = new Outlook.Tools.Utils.CommonUtils(application);
 
             bool visible1 = utils.Application.Visible;
             application.Session.GetDefaultFolder(Outlook.Enums.OlDefaultFolders.olFolderInbox).Display();
@@ -93,7 +93,7 @@ namespace ConsoleApplication1
 
             Excel.Application application = new Excel.Application();
             application.DisplayAlerts = false;
-            Excel.Tools.CommonUtils utils = new Excel.Tools.CommonUtils(application);
+            Excel.Tools.Utils.CommonUtils utils = new Excel.Tools.Utils.CommonUtils(application);
 
             string fileName = utils.File.Combine("C:\\MyFiles", "Test01", Excel.Tools.DocumentFormat.Normal);
 

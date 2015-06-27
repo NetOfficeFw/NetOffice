@@ -162,6 +162,7 @@ namespace NetOffice
             }
             catch
             {
+                Owner.Console.WriteLine("AssemblyLoad Exception {0}", Path.GetFileName(fileName));
                 return null;
             }
         }

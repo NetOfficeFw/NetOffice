@@ -80,6 +80,7 @@
     <Compile Include="NamedPipes\PipeClient.cs" />
     <Compile Include="NamedPipes\PipeConnection.cs" />
     <Compile Include="NamedPipes\PipeHandle.cs" />
+    <Compile Include="PerformanceTrace.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -5,20 +5,20 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 using System.Security.Principal;
-using NetOffice.PowerPointApi.Tools.Utils;
+using NetOffice.WordApi.Tools.Utils;
 
-namespace NetOffice.PowerPointApi.Tools
+namespace NetOffice.WordApi.Tools.Utils
 {
     /// <summary>
     /// Various helper for common tasks
     /// </summary>
-    public class CommonUtils : NetOffice.OfficeApi.Tools.CommonUtils
+    public class CommonUtils : NetOffice.OfficeApi.Tools.Utils.CommonUtils
     {
         #region Fields
 
-        private PowerPointApi.Application _ownerApplication;
+        private WordApi.Application _ownerApplication;
         private FileUtils _fileUtils;
-        private ApplicationUtils _appUtils;
+        private ApplicationUtils _applicationUtils;
 
         #endregion
 
@@ -28,7 +28,7 @@ namespace NetOffice.PowerPointApi.Tools
         /// Creates an instance of the application
         /// </summary>
         /// <param name="application">owner application</param>
-        public CommonUtils(PowerPointApi.Application application) : base(application)
+        public CommonUtils(WordApi.Application application): base(application)
         {
             _ownerApplication = application;
         }
@@ -38,7 +38,7 @@ namespace NetOffice.PowerPointApi.Tools
         /// </summary>
         /// <param name="application">owner application</param>
         /// <param name="ownerAssembly">owner assembly</param>
-        public CommonUtils(PowerPointApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
+        public CommonUtils(WordApi.Application application, Assembly ownerAssembly) : base(application, ownerAssembly)
         {
             if (null == application)
                 throw new ArgumentNullException("application");
@@ -89,18 +89,18 @@ namespace NetOffice.PowerPointApi.Tools
         /// </summary>
         public ApplicationUtils Application
         {
-            get
+            get 
             {
-                if (null == _appUtils)
-                    _appUtils = OnCreateApplicationUtils();
-                return _appUtils;
+                if (null == _applicationUtils)
+                    _applicationUtils = OnCreateApplicationUtils();
+                return _applicationUtils;
             }
         }
 
         /// <summary>
         /// Encapsulate the owner application to make accessible for child utils
         /// </summary>
-        internal COMObject PowerPointApplication
+        internal COMObject WordApplication
         {
             get
             {
@@ -113,21 +113,21 @@ namespace NetOffice.PowerPointApi.Tools
         #region Methods
 
         /// <summary>
-        /// Creates an instance of ApplicationUtils
-        /// </summary>
-        /// <returns>instance of ApplicationUtils</returns>
-        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
-        {
-            return new ApplicationUtils(this);
-        }
-
-        /// <summary>
         /// Creates an instance of FileUtils
         /// </summary>
         /// <returns>instance of FileUtils</returns>
         protected internal virtual FileUtils OnCreateFileUtils()
         {
             return new FileUtils(this);
+        }
+
+        /// <summary>
+        /// Creates an instance of ApplicationUtils
+        /// </summary>
+        /// <returns>instance of ApplicationUtils</returns>
+        protected internal virtual ApplicationUtils OnCreateApplicationUtils()
+        {
+            return new ApplicationUtils(this);
         }
 
         #endregion

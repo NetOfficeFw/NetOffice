@@ -3,6 +3,7 @@ Imports NetOffice
 Imports PowerPoint = NetOffice.PowerPointApi
 Imports NetOffice.PowerPointApi.Enums
 Imports NetOffice.OfficeApi.Enums
+Imports NetOffice.PowerPointApi.Tools.Utils
 
 Public Class Example05
     Implements IExample
@@ -17,7 +18,7 @@ Public Class Example05
         Dim powerApplication As New PowerPoint.Application()
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
-        Dim utils As PowerPoint.Tools.CommonUtils = New PowerPoint.Tools.CommonUtils(powerApplication)
+        Dim utils As CommonUtils = New CommonUtils(powerApplication)
 
         ' add a new presentation with one new slide
         Dim presentation As PowerPoint.Presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue)

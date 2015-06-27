@@ -55,7 +55,7 @@ namespace NetOffice.MSProjectApi.Tools
         /// <summary>
         /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
         /// </summary>
-        public CommonUtils Utils { get; private set; }
+        public Office.Tools.Utils.CommonUtils Utils { get; private set; }
 
         /// <summary>
         /// The used factory core
@@ -788,9 +788,9 @@ namespace NetOffice.MSProjectApi.Tools
         /// Create the used utils. The method was called in OnConnection
         /// </summary>
         /// <returns>new ToolsUtils instance</returns>
-        protected internal virtual CommonUtils OnCreateUtils()
+        protected internal virtual Utils.CommonUtils OnCreateUtils()
         {
-            return new CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
+            return new Utils.CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
         }
 
         /// <summary>

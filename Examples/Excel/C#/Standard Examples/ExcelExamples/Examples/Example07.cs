@@ -7,6 +7,7 @@ using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
@@ -30,7 +31,7 @@ namespace ExcelExamplesCS4
                 excelApplication.Visible = false;
 
                 // create a utils instance, not need for but helpful to keep the lines of code low
-                Excel.Tools.CommonUtils utils = new Excel.Tools.CommonUtils(excelApplication);
+                CommonUtils utils = new CommonUtils(excelApplication);
 
                 // add a new workbook
                 Excel.Workbook workBook = excelApplication.Workbooks.Add();

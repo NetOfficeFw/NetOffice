@@ -142,19 +142,21 @@ namespace NetOffice.DeveloperToolbox
             get 
             {
                 if (null == _isAdmin)
-                { 
-                    WindowsIdentity identity = WindowsIdentity.GetCurrent();
-                    WindowsPrincipal principal = new WindowsPrincipal(identity);                
-                    bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
-                    identity.Dispose();
-                    _isAdmin = result;
+                {
+                    using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+                    {
+                        WindowsPrincipal principal = new WindowsPrincipal(identity);
+                        bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
+                        identity.Dispose();
+                        _isAdmin = result;
+                    }
                 }
                 return (bool)_isAdmin;
             }
         }
 
         /// <summary>
-        /// Returns info the assembly is currently in design mode. In other words its not runtime-executed
+        /// Returns info the assembly is currently in design mode. In other words its running in ouer IDE at design-time
         /// </summary>
         internal static bool IsDesign
         {
@@ -183,7 +185,7 @@ namespace NetOffice.DeveloperToolbox
         }
 
         /// <summary>
-        /// Creates the systemwide singleton mutex
+        /// Creates the systemwide singleton mutex for the single-application pattern
         /// </summary>
         private static void CreateMutex()
         {             
@@ -193,8 +195,8 @@ namespace NetOffice.DeveloperToolbox
                 
             #else
 
-                // The 0FF1CE idea in the GUID is from the MS-PowerPoint Product Code (i stoled from the pp dev)
-                _systemSingleton =  new Mutex(true, "D3413BEF-46D9-4F96-82FC-0000000FF1CE");
+                // The 0FF1CE idea in the GUID is from the MS-PowerPoint Product Code (i stoled from the pp devs)
+                _systemSingleton = new Mutex(true, "D3413BEF-46D9-4F96-82FC-0000000FF1CE");
             
             #endif
         }
@@ -223,7 +225,7 @@ namespace NetOffice.DeveloperToolbox
 
         /// <summary>
         /// We want to detect an instance of the application is already running.
-        /// If its true we want post a message to the main window of these instance that means "bring you in front"
+        /// If its true we want post a (custom) message to the main window of these instance that means "bring you in front"
         /// </summary>
         /// <returns>true if a previous instance is running, otherwise false</returns>
         private static bool PerformSingleInstanceValidation()
@@ -304,6 +306,7 @@ namespace NetOffice.DeveloperToolbox
                 if (!_dependencies.Contains(assemblyFileName))
                     throw new System.Security.SecurityException("Invalid assembly file.");
 
+                // UnsafeLoadFrom allows to load assemblies from may unsafe locations. A lot of issue reports before so i switch to this one
                 return Assembly.UnsafeLoadFrom(assemblyFullPath);
             }
             catch (Exception exception)
@@ -319,6 +322,7 @@ namespace NetOffice.DeveloperToolbox
         /// <param name="e">exception detailed informations</param>
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
+            // if its in shutdown(because a heavy error occured) we dont want to show another error again
             if (_isShutDown)
                 return;
 
@@ -341,6 +345,7 @@ namespace NetOffice.DeveloperToolbox
         /// <returns>resolved assembly or null</returns>
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
+            // if its in shutdown we dont need another assembly anymore
             if (_isShutDown)
                 return null;
 

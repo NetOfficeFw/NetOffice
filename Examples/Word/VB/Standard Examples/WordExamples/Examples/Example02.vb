@@ -2,6 +2,7 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
+Imports NetOffice.WordApi.Tools.Utils
 
 Public Class Example02
     Implements IExample
@@ -17,7 +18,7 @@ Public Class Example02
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
         ' create a utils instance, not need for but helpful to keep the lines of code low
-        Dim utils As Word.Tools.CommonUtils = New Word.Tools.CommonUtils(wordApplication)
+        Dim utils As CommonUtils = New CommonUtils(wordApplication)
 
         ' add a new document
         Dim newDocument As Word.Document

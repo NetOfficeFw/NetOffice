@@ -23,18 +23,6 @@ namespace NetOffice
 
         #endregion
 
-        #region Ctor
-
-        /// <summary>
-        /// Creates an instance of the class
-        /// </summary>
-        public Settings()
-        {
-            _messageFilter = new RetryMessageFilter();
-        }
-
-        #endregion
-
         #region Fields
 
         private CultureInfo _cultureInfo;
@@ -55,6 +43,21 @@ namespace NetOffice
         private string _exceptionMessage = "See inner exception(s) for details.";
         private ExceptionMessageHandling _copyInnerExceptionMessage;
         private bool _loadAssembliesUnsafe = false;
+        private PerformanceTrace _performanceTrace;
+        private static Settings _default;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        public Settings()
+        {
+            _messageFilter = new RetryMessageFilter();
+            _performanceTrace = new PerformanceTrace();
+        }
 
         #endregion
 
@@ -72,7 +75,17 @@ namespace NetOffice
                 return _default;
             }
         }
-        private static Settings _default;
+      
+        /// <summary>
+        /// Performance tracer to see how long its need to call and return all or specific actions
+        /// </summary>
+        public PerformanceTrace PerformanceTrace
+        {
+            get
+            {
+                return _performanceTrace;
+            }
+        }
 
         /// <summary>
         /// Enable the NetOffice COM proxy management. true by default

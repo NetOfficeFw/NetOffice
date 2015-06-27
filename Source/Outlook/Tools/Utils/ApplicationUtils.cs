@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.OutlookApi.Tools
+namespace NetOffice.OutlookApi.Tools.Utils
 {
     /// <summary>
     /// Application related utils

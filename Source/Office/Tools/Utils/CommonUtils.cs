@@ -8,7 +8,7 @@ using System.Security.Principal;
 using NetOffice.OfficeApi.Tools.Utils;
 using NetOffice.OfficeApi.Tools.Informations;
 
-namespace NetOffice.OfficeApi.Tools
+namespace NetOffice.OfficeApi.Tools.Utils
 {
     /// <summary>
     /// Various helper for common tasks

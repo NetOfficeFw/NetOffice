@@ -9,6 +9,7 @@ using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Tools.Utils;
 
 namespace PowerPointExamplesCS4
 {
@@ -25,7 +26,7 @@ namespace PowerPointExamplesCS4
             PowerPoint.Application powerApplication = new PowerPoint.Application();
 
             // create a utils instance, not need for but helpful to keep the lines of code low
-            PowerPoint.Tools.CommonUtils utils = new PowerPoint.Tools.CommonUtils(powerApplication);
+            CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
