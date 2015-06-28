@@ -13,6 +13,7 @@ namespace NetOffice
         #region Fields
 
         private int _intervalMS = 1000;
+        private bool _enabled = false;
 
         #endregion
 
@@ -56,7 +57,18 @@ namespace NetOffice
         /// <summary>
         /// Enable or disable trace alert
         /// </summary>
-        public bool Enabled { get; set; }
+        public bool Enabled
+        {
+            get
+            {
+                return _enabled;
+            }
+            set
+            {
+                if (_enabled != value)
+                    _enabled = value;
+            }
+        }
 
         internal string EntityName { get; private set; }
 
@@ -73,7 +85,7 @@ namespace NetOffice
     {
         internal PerformanceTraceSettingCollection()
         {
-            WildCard = new PerformanceTraceSetting("*", "*");
+            WildCard = new PerformanceTraceSetting( "*", "*");
         }
 
         internal PerformanceTraceSetting WildCard { get; private set; }
@@ -108,47 +120,55 @@ namespace NetOffice
             }
         }
 
-        internal PerformanceTraceSetting TryGetEnabledSetting(string entityName, string methodName)
+        internal IEnumerable<PerformanceTraceSetting> GetTargetEnabledSettings(string entityName, string methodName)
         {
+            List<PerformanceTraceSetting> list = null;
+
             if (WildCard.Enabled)
             {
-                return WildCard;
+                list = new List<PerformanceTraceSetting>();
+                list.Add(WildCard);
             }
-            else
+
+            foreach (var item in this)
             {
-                foreach (var item in this)
+                if (item.Enabled && item.EntityName == entityName && (item.MethodName == methodName || item.MethodName == "*"))
                 {
-                    if (item.Enabled && item.EntityName == entityName && (item.MethodName == methodName || item.MethodName == "*"))
-                    {
-                        return item;
-                    }
+                    if (null == list)
+                        list = new List<PerformanceTraceSetting>();
+                    list.Add(item);
                 }
             }
 
-            return null;
+            if (null == list)
+                return new PerformanceTraceSetting[0];
+            else
+                return list;
         }
 
         internal bool TryStartMeasureTime(string entityName, string methodName, PerformanceTrace.CallType callType)
         {
+            bool result = false;
+            DateTime now = DateTime.Now;
+
             if (WildCard.Enabled)
             {
-                WildCard.LastCallTime = DateTime.Now;
+                WildCard.LastCallTime = now;
                 WildCard.LastCallType = callType;
-                return true;
+                result = true;
             }
-            else
+            
+            foreach (var item in this)
             {
-                foreach (var item in this)
+                if (item.Enabled && item.EntityName == entityName && (item.MethodName == methodName || item.MethodName == "*"))
                 {
-                    if (item.Enabled && item.EntityName == entityName && (item.MethodName == methodName || item.MethodName == "*") )
-                    {
-                        item.LastCallTime = DateTime.Now;
-                        item.LastCallType = callType;
-                        return true;
-                    }
+                    item.LastCallTime = now;
+                    item.LastCallType = callType;
+                    result = true;
                 }
             }
-            return false;
+
+            return result;
         }
     }
 
@@ -241,7 +261,7 @@ namespace NetOffice
         /// PerformanceTrace alert event handler
         /// </summary>
         /// <param name="sender">sender instance</param>
-        /// <param name="e">alert information arguments</param>
+        /// <param name="args">alert information arguments</param>
         public delegate void PerformanceAlertEventHandler(PerformanceTrace sender, PerformanceAlertEventArgs args);
 
         #endregion
@@ -277,7 +297,6 @@ namespace NetOffice
         }
 
         #endregion
-
        
         #region Properties
 
@@ -398,17 +417,17 @@ namespace NetOffice
             PerformanceTraceSettingCollection list = null;
             if (_repository.TryGetValue(componentName, out list))
             {
-                PerformanceTraceSetting setting = list.TryGetEnabledSetting(entityName, methodName);
-                if (null != setting)
+                IEnumerable<PerformanceTraceSetting> settings = list.GetTargetEnabledSettings(entityName, methodName);
+                foreach (var item in settings)
                 {
-                    TimeSpan ts = now - setting.LastCallTime;
-                    if (ts.TotalMilliseconds >= setting.IntervalMS)
+                    TimeSpan ts = now - item.LastCallTime;
+                    if (ts.TotalMilliseconds >= item.IntervalMS)
                     {
                         List<string> args = new List<string>();
-                        foreach (var item in arguments)
-                            args.Add((null == item || item == Type.Missing) ? "<Empty>" : item.ToString());
-                        RaiseAlert(componentName, entityName, methodName, ts.TotalMilliseconds, ts.Ticks, setting.LastCallType, args.ToArray());
-
+                        foreach (var arg in arguments)
+                            args.Add((null == arg || arg == Type.Missing) ? "<Empty>" : arg.ToString());
+                        RaiseAlert(componentName, entityName, methodName, ts.TotalMilliseconds, ts.Ticks, item.LastCallType, args.ToArray());
+                        return;
                     }
                 }
             }

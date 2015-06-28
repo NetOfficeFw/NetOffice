@@ -21,27 +21,36 @@ namespace ConsoleApplication1
 
                 NetOffice.Settings.Default.PerformanceTrace.Alert += new NetOffice.PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
 
-                // Test 1:
-                // Enable performance trace in excel generaly. set interval limit to 0 to see all actions
+                // Criteria 1
+                // Enable performance trace in excel generaly. set interval limit to 100 to see all actions there need >= 100 milliseconds
                 NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
-                NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 0;
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 100;
 
-                // Test 2:
-                // Enable performance trace for range in excel. set interval limit to 100 to see all actions there need 100 or more milliseconds
-                // NetOffice.Settings.Default.PerformanceTrace["Excel", "Range"].Enabled = true;
-                // NetOffice.Settings.Default.PerformanceTrace["Excel", "Range"].IntervalMS = 100;
+                // Criteria 2
+                // Enable additional performance trace for all members of Range in excel. set interval limit to 20 to see all actions there need >=20 milliseconds
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range"].IntervalMS = 20;
 
-                // Test 3: 
-                // Enable performance trace for range this[] indexer in excel. set interval limit to 10 to see all actions there need 10 or more milliseconds
-                // NetOffice.Settings.Default.PerformanceTrace["Excel", "Range", "Item"].Enabled = true;
-                // NetOffice.Settings.Default.PerformanceTrace["Excel", "Range", "Item"].IntervalMS = 10;
+                // Criteria 3
+                // Enable additional performance trace for WorkSheet Range property in excel. set interval limit to 0 to see all calls anywhere
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Worksheet", "Range"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Worksheet", "Range"].IntervalMS = 0;
+
+                // Criteria 4
+                // Enable additional performance trace for Range this[] indexer in excel. set interval limit to 0 to see all calls anywhere
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].Enabled = true;
+                NetOffice.Settings.Default.PerformanceTrace["ExcelApi", "Range", "_Default"].IntervalMS = 0;
 
                 Excel.Application application = new Excel.Application();
                 application.DisplayAlerts = false;
                 Excel.Workbook book = application.Workbooks.Add();
                 Excel.Worksheet sheet = book.Sheets.Add() as Excel.Worksheet;
                 for (int i = 1; i <= 5; i++)
-                    sheet.Range("A" + i.ToString()).Value = "Test123";
+                {
+                    Excel.Range range = sheet.Range("A" + i.ToString());
+                    range.Value = "Test123";
+                    range[1, 1].Value = "Test234";
+                }
 
                 application.Quit();
                 application.Dispose();

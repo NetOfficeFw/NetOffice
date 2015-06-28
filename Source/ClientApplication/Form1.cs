@@ -41,7 +41,7 @@ namespace ClientApplication
                 app = new Excel.Application();
                 NOTools.Utils.CommonUtils utils = new NOTools.Utils.CommonUtils(app, typeof(Form1).Assembly);
                 app.DisplayAlerts = false;
-                //string s = app.ComponentRootName;
+             
                 utils.Dialog.SuppressOnAutomation = false;
                 utils.Dialog.SuppressOnHide = false;
                 utils.Dialog.ShowDiagnostics(true);
