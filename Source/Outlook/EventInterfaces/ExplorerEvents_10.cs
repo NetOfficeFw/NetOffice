@@ -81,6 +81,10 @@ namespace NetOffice.OutlookApi
 		[SupportByVersionAttribute("Outlook", 15)]
 		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64658)]
 		void InlineResponse([In, MarshalAs(UnmanagedType.IDispatch)] object item);
+
+        [SupportByVersionAttribute("Outlook", 15)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64658)]
+        void InlineResponseClose();
 	}
 	
 	#endregion
@@ -388,6 +392,19 @@ namespace NetOffice.OutlookApi
 			paramsArray[0] = newItem;
 			_eventBinding.RaiseCustomEvent("InlineResponse", ref paramsArray);
 		}
+
+        public void InlineResponseClose()
+        {
+            Delegate[] recipients = _eventBinding.GetEventRecipients("InlineResponseClose");
+            if ((true == _eventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
+            {
+                Invoker.ReleaseParamsArray();
+                return;
+            }
+
+            object[] paramsArray = new object[0];
+            _eventBinding.RaiseCustomEvent("InlineResponseClose", ref paramsArray);
+        }
 
 		#endregion
 	}

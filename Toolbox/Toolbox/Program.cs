@@ -147,7 +147,6 @@ namespace NetOffice.DeveloperToolbox
                     {
                         WindowsPrincipal principal = new WindowsPrincipal(identity);
                         bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
-                        identity.Dispose();
                         _isAdmin = result;
                     }
                 }
