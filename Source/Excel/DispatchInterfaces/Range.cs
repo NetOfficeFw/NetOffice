@@ -1181,7 +1181,6 @@ namespace NetOffice.ExcelApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff834476.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range EntireColumn
 		{
 			get
@@ -1199,7 +1198,6 @@ namespace NetOffice.ExcelApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836836.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range EntireRow
 		{
 			get
