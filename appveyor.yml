@@ -9,7 +9,7 @@ branches:
   except:
     - gh-pages
 
-os: Windows Server 2012
+os: Visual Studio 2015
 
 matrix:
   fast_finish: true     # true => immediately finish build once one of the jobs fails
@@ -20,7 +20,7 @@ configuration:
   - Release
 
 build:
-  project: Source\NetOffice.sln
+  project: NetOffice.sln
   verbosity: detailed
 
 assembly_info:
