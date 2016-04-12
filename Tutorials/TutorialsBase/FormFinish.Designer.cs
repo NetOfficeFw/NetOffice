@@ -46,11 +46,13 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClose.Location = new System.Drawing.Point(263, 91);
+            this.buttonClose.Location = new System.Drawing.Point(254, 91);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(102, 22);
+            this.buttonClose.Size = new System.Drawing.Size(107, 25);
             this.buttonClose.TabIndex = 6;
             this.buttonClose.Text = "Ok";
             this.buttonClose.UseVisualStyleBackColor = true;
@@ -67,8 +69,11 @@
             // 
             // FormFinish
             // 
+            this.AcceptButton = this.buttonClose;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(394, 135);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelMessage);

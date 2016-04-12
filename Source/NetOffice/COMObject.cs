@@ -71,6 +71,36 @@ namespace NetOffice
         /// </summary>
         private object _childListLock = new object();
 
+        /// <summary>
+        /// associated factory
+        /// </summary>
+        private Core _factory;
+
+        /// <summary>
+        /// FriendlyTypeName chache field
+        /// </summary>
+        private string _friendlyTypeName;
+
+        /// <summary>
+        /// UnderlyingTypeName chache field
+        /// </summary>
+        private string _underlyingTypeName;
+
+        /// <summary>
+        /// UnderlyingComponentName chache field
+        /// </summary>
+        private string _underlyingComponentName;
+
+        /// <summary>
+        /// ComponentRootName chache field
+        /// </summary>
+        private string _componentRootName;
+        
+        /// <summary>
+        /// Instance chaNameche field
+        /// </summary>
+        private string _instanceName;
+
         #endregion
 
         #region Ctor
@@ -95,7 +125,7 @@ namespace NetOffice
             _instanceType = replacedObject.InstanceType;
 
             // copy childs
-            foreach (COMObject item in replacedObject.ListChildObjects)
+            foreach (COMObject item in replacedObject.ChildObjects)
                 AddChildObject(item);
 
             // remove old object from parent chain
@@ -132,7 +162,7 @@ namespace NetOffice
             _instanceType = replacedObject.InstanceType;
 
             // copy childs
-            foreach (COMObject item in replacedObject.ListChildObjects)
+            foreach (COMObject item in replacedObject.ChildObjects)
                 AddChildObject(item);
 
             // remove old object from parent chain
@@ -360,6 +390,18 @@ namespace NetOffice
         #region COMObject Properties
 
         /// <summary>
+        /// always null (Nothing in Visual Basic)
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
+        public static COMObject Empty
+        {
+            get 
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// NetOffice property: the associated factory
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
@@ -377,7 +419,6 @@ namespace NetOffice
                 _factory = value;
             }
         }
-        private Core _factory;
 
         /// <summary>
         /// NetOffice property: the associated invoker
@@ -444,18 +485,21 @@ namespace NetOffice
         {
             get
             {
-                string fullname = InstanceType.FullName;
-                if (!String.IsNullOrEmpty(fullname))
+                if (null == _friendlyTypeName)
                 {
-                    if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
-                        fullname = fullname.Replace("NetOffice.", "");
-                    if (fullname.StartsWith("Api.", StringComparison.InvariantCultureIgnoreCase))
-                        fullname = fullname.Replace("Api.", "");
+                    string fullname = GetType().FullName;
+                    if (!String.IsNullOrEmpty(fullname))
+                    {
+                        if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
+                            fullname = fullname.Replace("NetOffice.", "");
+                        fullname = fullname.Replace("Api", "");
+                    }
+                    _friendlyTypeName = fullname;
                 }
-                return fullname;
+                return _friendlyTypeName;
             }
         }
-
+       
         /// <summary>
         /// NetOffice property: returns class name of native wrapped proxy
         /// </summary>
@@ -464,7 +508,9 @@ namespace NetOffice
         {
             get
             {
-                return TypeDescriptor.GetClassName(_underlyingObject);
+                if(null == _underlyingTypeName)
+                    _underlyingTypeName = TypeDescriptor.GetClassName(_underlyingObject);
+                return _underlyingTypeName;
             }
         }
 
@@ -476,7 +522,9 @@ namespace NetOffice
         {
             get
             {
-                return TypeDescriptor.GetComponentName(_underlyingObject);
+                if (null == _underlyingComponentName)
+                    _underlyingComponentName = TypeDescriptor.GetComponentName(_underlyingObject);
+                return _underlyingComponentName;
             }
         }
 
@@ -532,14 +580,82 @@ namespace NetOffice
         }
 
         /// <summary>
-        ///  child instance array
+        /// Name of the hosting NetOffice component
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
-        internal COMObject[] ListChildObjects
+        internal string ComponentRootName
         {
             get
             {
-                return _listChildObjects.ToArray();
+                if (null == _componentRootName)
+                {
+                    string fullname = GetType().FullName;
+                    if (!String.IsNullOrEmpty(fullname))
+                    {
+                        if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            string[] split = fullname.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                            if (split.Length == 3)
+                            {
+                                _componentRootName = split[1];
+                                if (null == _instanceName)
+                                    _instanceName = split[2];
+                            }
+                            else
+                            {
+                                _componentRootName = String.Empty;
+                                _instanceName = String.Empty;
+                            }
+                        }
+                    }
+                }
+                return _componentRootName;
+            }
+        }
+
+        /// <summary>
+        /// Name of the NetOffice Wrapper class
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        internal string InstanceName
+        {
+            get
+            {
+                if (null == _instanceName)
+                {
+                    string fullname = GetType().FullName;
+                    if (!String.IsNullOrEmpty(fullname))
+                    {
+                        if (fullname.StartsWith("NetOffice.", StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            string[] split = fullname.Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
+                            if (split.Length == 3)
+                            { 
+                                _instanceName = split[2];
+                                if (null == _componentRootName)
+                                    _componentRootName = split[1];
+                            }
+                            else
+                            {
+                                _componentRootName = String.Empty;
+                                _instanceName = String.Empty;
+                            }
+                        }
+                    }
+                }
+                return _instanceName;
+            }
+        }
+
+        /// <summary>
+        /// Child instances
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), Category("NetOffice")]
+        internal IEnumerable<COMObject> ChildObjects
+        {
+            get
+            {
+                return _listChildObjects;
             }
         }
 
@@ -698,6 +814,9 @@ namespace NetOffice
             bool isLocked = false;
             try
             {
+                Monitor.Enter(_childListLock);
+                isLocked = true;
+
                 _listChildObjects.Remove(childObject);
             }
             catch (Exception throwedException)
@@ -1034,7 +1153,13 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return true;
             else if (!Object.ReferenceEquals(objectA, null))
-                return (objectA as COMObject).EqualsOnServer(objectB);
+            {
+                COMObject a = (objectA as COMObject);
+                if (null != a)
+                    return a.EqualsOnServer(objectB);
+                else
+                    return false;
+            }
             else
                 return false;
         }
@@ -1091,7 +1216,13 @@ namespace NetOffice
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
                 return false;
             else if (!Object.ReferenceEquals(objectA, null))
-                return !(objectA as COMObject).EqualsOnServer(objectB);
+            {
+                COMObject a = objectA as COMObject;
+                if (null != a)
+                    return !(objectA as COMObject).EqualsOnServer(objectB);
+                else
+                    return null == objectB ? false : true;
+            }
             else
                 return true;
         }

@@ -50,7 +50,8 @@
             // buttonTest
             // 
             this.buttonTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTest.Location = new System.Drawing.Point(507, 377);
+            this.buttonTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTest.Location = new System.Drawing.Point(507, 381);
             this.buttonTest.Name = "buttonTest";
             this.buttonTest.Size = new System.Drawing.Size(145, 25);
             this.buttonTest.TabIndex = 3;
@@ -63,16 +64,18 @@
             this.listViewResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderIcon,
             this.columnHeaderDetails});
             this.listViewResults.FullRowSelect = true;
             this.listViewResults.GridLines = true;
+            this.listViewResults.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewResults.LargeImageList = this.imageList1;
             this.listViewResults.Location = new System.Drawing.Point(30, 31);
             this.listViewResults.MultiSelect = false;
             this.listViewResults.Name = "listViewResults";
-            this.listViewResults.Size = new System.Drawing.Size(622, 332);
+            this.listViewResults.Size = new System.Drawing.Size(622, 327);
             this.listViewResults.SmallImageList = this.imageList1;
             this.listViewResults.StateImageList = this.imageList1;
             this.listViewResults.TabIndex = 6;
@@ -134,9 +137,10 @@
             this.checkBoxExcel.AutoSize = true;
             this.checkBoxExcel.Checked = true;
             this.checkBoxExcel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxExcel.Location = new System.Drawing.Point(677, 60);
+            this.checkBoxExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxExcel.Location = new System.Drawing.Point(680, 60);
             this.checkBoxExcel.Name = "checkBoxExcel";
-            this.checkBoxExcel.Size = new System.Drawing.Size(52, 17);
+            this.checkBoxExcel.Size = new System.Drawing.Size(49, 17);
             this.checkBoxExcel.TabIndex = 10;
             this.checkBoxExcel.Text = "Excel";
             this.checkBoxExcel.UseVisualStyleBackColor = true;
@@ -145,9 +149,10 @@
             // 
             this.checkBoxWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxWord.AutoSize = true;
-            this.checkBoxWord.Location = new System.Drawing.Point(677, 83);
+            this.checkBoxWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxWord.Location = new System.Drawing.Point(680, 83);
             this.checkBoxWord.Name = "checkBoxWord";
-            this.checkBoxWord.Size = new System.Drawing.Size(52, 17);
+            this.checkBoxWord.Size = new System.Drawing.Size(49, 17);
             this.checkBoxWord.TabIndex = 11;
             this.checkBoxWord.Text = "Word";
             this.checkBoxWord.UseVisualStyleBackColor = true;
@@ -156,9 +161,10 @@
             // 
             this.checkBoxOutlook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxOutlook.AutoSize = true;
-            this.checkBoxOutlook.Location = new System.Drawing.Point(677, 106);
+            this.checkBoxOutlook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxOutlook.Location = new System.Drawing.Point(680, 106);
             this.checkBoxOutlook.Name = "checkBoxOutlook";
-            this.checkBoxOutlook.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxOutlook.Size = new System.Drawing.Size(60, 17);
             this.checkBoxOutlook.TabIndex = 12;
             this.checkBoxOutlook.Text = "Outlook";
             this.checkBoxOutlook.UseVisualStyleBackColor = true;
@@ -167,9 +173,10 @@
             // 
             this.checkBoxPowerPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxPowerPoint.AutoSize = true;
-            this.checkBoxPowerPoint.Location = new System.Drawing.Point(677, 129);
+            this.checkBoxPowerPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxPowerPoint.Location = new System.Drawing.Point(680, 129);
             this.checkBoxPowerPoint.Name = "checkBoxPowerPoint";
-            this.checkBoxPowerPoint.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxPowerPoint.Size = new System.Drawing.Size(80, 17);
             this.checkBoxPowerPoint.TabIndex = 13;
             this.checkBoxPowerPoint.Text = "Power Point";
             this.checkBoxPowerPoint.UseVisualStyleBackColor = true;
@@ -178,9 +185,10 @@
             // 
             this.checkBoxAccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxAccess.AutoSize = true;
-            this.checkBoxAccess.Location = new System.Drawing.Point(677, 152);
+            this.checkBoxAccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxAccess.Location = new System.Drawing.Point(680, 152);
             this.checkBoxAccess.Name = "checkBoxAccess";
-            this.checkBoxAccess.Size = new System.Drawing.Size(61, 17);
+            this.checkBoxAccess.Size = new System.Drawing.Size(58, 17);
             this.checkBoxAccess.TabIndex = 14;
             this.checkBoxAccess.Text = "Access";
             this.checkBoxAccess.UseVisualStyleBackColor = true;
@@ -200,9 +208,10 @@
             // 
             this.checkBoxProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxProject.AutoSize = true;
-            this.checkBoxProject.Location = new System.Drawing.Point(677, 176);
+            this.checkBoxProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxProject.Location = new System.Drawing.Point(680, 176);
             this.checkBoxProject.Name = "checkBoxProject";
-            this.checkBoxProject.Size = new System.Drawing.Size(59, 17);
+            this.checkBoxProject.Size = new System.Drawing.Size(56, 17);
             this.checkBoxProject.TabIndex = 16;
             this.checkBoxProject.Text = "Project";
             this.checkBoxProject.UseVisualStyleBackColor = true;
@@ -211,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 407);
+            this.ClientSize = new System.Drawing.Size(789, 422);
             this.Controls.Add(this.checkBoxProject);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxAccess);

@@ -1,24 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
-
-using NetOffice;
+using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
-using NetOffice.VBIDEApi.Enums;
-using NetOffice.OfficeApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
+    /// <summary>
+    /// Example 5 - Working with Charts
+    /// </summary>
     class Example05 : IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -26,6 +20,9 @@ namespace ExcelExamplesCS4
             // start excel and turn off msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(excelApplication);
 
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
@@ -39,8 +36,7 @@ namespace ExcelExamplesCS4
             chart.Chart.SetSourceData(dataRange);
 
             // save the book 
-            string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", Excel.Tools.DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -48,22 +44,22 @@ namespace ExcelExamplesCS4
             excelApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, workbookFile);
+            HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Working with Charts" : "Arbeiten mit Charts"; }
+            get { return HostApplication.LCID == 1033 ? "Working with Charts" : "Arbeiten mit Charts"; }
         }
 
         public UserControl Panel
@@ -73,11 +69,20 @@ namespace ExcelExamplesCS4
 
         #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
         #region Helper
 
         private static Excel.Range PutSampleData(Excel.Worksheet workSheet)
         {
-            workSheet.Cells[2, 2].Value = "Datum";
+            workSheet.Cells[2, 2].Value = "Date";
             workSheet.Cells[3, 2].Value = DateTime.Now.ToShortDateString();
             workSheet.Cells[4, 2].Value = DateTime.Now.ToShortDateString();
             workSheet.Cells[5, 2].Value = DateTime.Now.ToShortDateString();
@@ -102,20 +107,6 @@ namespace ExcelExamplesCS4
             workSheet.Cells[6, 5].Value = 22;
 
             return workSheet.Range("$B2:$E6");
-        }
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsx";
-            else
-                return ".xls";
         }
 
         #endregion

@@ -156,9 +156,7 @@ namespace COMAddinClassicExampleCS4
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
-                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
-                key.SetValue("CodeBase", thisAssembly.CodeBase);
-                key.Close();
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
@@ -169,9 +167,7 @@ namespace COMAddinClassicExampleCS4
                 key.Close();
 
                 // add access addin key
-                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
-                Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
-                RegistryKey rk = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
+                RegistryKey rk = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
                 rk.SetValue("LoadBehavior", Convert.ToInt32(3));
                 rk.SetValue("FriendlyName", _addinFriendlyName);
                 rk.SetValue("Description", _addinDescription);

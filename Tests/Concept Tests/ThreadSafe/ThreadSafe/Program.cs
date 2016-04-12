@@ -7,11 +7,11 @@ using Excel = NetOffice.ExcelApi;
 
 namespace ThreadSafe
 {
-    class Program
+    public class Program
     {
-        static Excel.Application _application;
+        private static Excel.Application _application;
          
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             try
             {
@@ -62,6 +62,8 @@ namespace ThreadSafe
             _application.Quit();
             _application.Dispose();
         }
+
+        // here comes a DRY issue but its just a test okay ;)
 
         private static void Thread1Method(object mre)
         {

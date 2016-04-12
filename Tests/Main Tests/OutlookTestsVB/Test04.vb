@@ -36,10 +36,14 @@ Public Class Test04
         Dim startTime As DateTime = DateTime.Now
         Try
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             If application.Session.EntityIsAvailable("SendAndReceive") Then
+
                 application.Session.SendAndReceive(False)
+                ' give few seconds to outlook or may its failed to quit because its busy - depending on how many mails comes in
+                System.Threading.Thread.Sleep(3000)
+
             Else
                 Return New TestResult(False, DateTime.Now.Subtract(startTime), "SendAndReceive is not supported from this Outlook Version.", Nothing, "")
             End If
@@ -56,7 +60,7 @@ Public Class Test04
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

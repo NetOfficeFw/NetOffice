@@ -15,7 +15,7 @@ namespace DAOApi.Utils
         #region Fields
 
         private string   _namespace     = "NetOffice.DAOApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("00025E01-0000-0000-C000-000000000046")};
+        private Guid[] _componentGuid = new Guid[] { new Guid("00025E01-0000-0000-C000-000000000046"), new Guid("4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28") };
         private Assembly _assembly;
 		private Type[]	 _exportedTypes;
 		private string[] _dependents;

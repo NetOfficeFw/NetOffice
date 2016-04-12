@@ -1,0 +1,6 @@
+﻿[1031]
+labelSummaryHeader = Ausgwählte Einstellungen in der Übersicht
+[End]
+[1033]
+labelSummaryHeader = Summary Table
+[End]

@@ -1,0 +1,16 @@
+﻿[1031]
+labelProgrammingLanguage = Programmiersprache
+labelEnvironment = Entwicklungsumgebung
+labelNet45Hint = .NET 4.5 benötigt Visual Studio 2013
+labelNetRuntime = .NET Laufzeitumgebung
+labelSharpDevelop = Für #SharpDevelop 4.3 kann Visual Studio 2010 verwendet werden
+labelVersion = Version
+[End]
+[1033]
+labelProgrammingLanguage = Language
+labelEnvironment = Environment
+labelNet45Hint = .NET 4.5 need Visual Studio 2013
+labelNetRuntime = .NET Runtime
+labelSharpDevelop = Use Visual Studio 2010 if you want #SharpDevelop 4.3
+labelVersion = Version
+[End]

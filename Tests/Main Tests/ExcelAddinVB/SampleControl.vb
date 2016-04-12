@@ -16,4 +16,13 @@
 
     End Sub
 
+    Public Sub OnDockPositionChanged(ByVal position As NetOffice.OfficeApi.Enums.MsoCTPDockPosition) Implements NetOffice.ExcelApi.Tools.ITaskPane.OnDockPositionChanged
+
+    End Sub
+
+
+    Public Sub OnVisibleStateChanged(ByVal visible As Boolean) Implements NetOffice.ExcelApi.Tools.ITaskPane.OnVisibleStateChanged
+
+    End Sub
+
 End Class

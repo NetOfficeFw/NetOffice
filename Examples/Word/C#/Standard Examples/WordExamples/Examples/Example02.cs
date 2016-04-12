@@ -6,24 +6,28 @@ using System.Reflection;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
+using NetOffice.WordApi.Tools.Utils;
 
 namespace WordExamplesCS4
 {
-    class Example02 : IExample
+    /// <summary>
+    /// Example 2 - Insert table
+    /// </summary>
+    internal class Example02 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(wordApplication);
 
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
@@ -50,41 +54,43 @@ namespace WordExamplesCS4
             table.Cell(3, 2).Select();
             wordApplication.Selection.TypeText("NetOffice");
 
-            // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example02{1}", _hostApplication.RootDirectory, ".doc");
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
-            else
-                newDocument.SaveAs(documentFile);
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", Word.Tools.DocumentFormat.Normal);
+            newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();
             wordApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Insert a table to document" : "Eine Tabelle erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Insert a table to document" : "Eine Tabelle erstellen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

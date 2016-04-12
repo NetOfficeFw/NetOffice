@@ -99,9 +99,7 @@ namespace COMAddinClassicExampleCS4
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
 
-                key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32");
-                key.SetValue("CodeBase", thisAssembly.CodeBase);
-                key.Close();
+                Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
 
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
@@ -112,8 +110,7 @@ namespace COMAddinClassicExampleCS4
                 key.Close();
 
                 // register addin in Excel
-                Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
-                RegistryKey regKeyExcel = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _progId, true);
+                RegistryKey regKeyExcel = Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _progId);
                 regKeyExcel.SetValue("LoadBehavior", Convert.ToInt32(3));
                 regKeyExcel.SetValue("FriendlyName", _addinFriendlyName);
                 regKeyExcel.SetValue("Description", _addinDescription);

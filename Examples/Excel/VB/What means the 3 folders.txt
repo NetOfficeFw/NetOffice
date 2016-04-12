@@ -1,0 +1,19 @@
+1.) Standard Examples
+
+A Windows Forms Application with some examples to start the office application, generate a document or do some stuff and close them immediately.
+
+
+2.) IExtensibility COMAddin Examples
+
+Addin project examples that use the native IExtensibility2 interface.
+You may never heard of them. In this you should to you use the NetOffice COMAddin Examples.
+
+3.) NetOffice COMAddin Examples
+
+Addin project examples that use the NetOffice Tools and the NetOffice COMAddin base class.
+The NetOffice Tools is designed to be more familiar with VSTO. (a heavy top-of layer from Microsoft arround the native IExtensibility2 interface)
+Its reduce infrastructure code and handle common tasks for you with ALL possible control.
+Please note: NO Tools is almost not complete to be a real VSTO opponent so far but good enough to be valuable and increase your development rapidly.
+
+
+*Sebastian, 15/02/2015

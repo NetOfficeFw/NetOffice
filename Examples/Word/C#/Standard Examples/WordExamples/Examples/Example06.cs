@@ -14,12 +14,16 @@ using NetOffice.OfficeApi.Enums;
 
 namespace WordExamplesCS4
 {
-    public partial class Example06 : UserControl, IExample
+    internal partial class Example06 : UserControl, IExample
     {
+        #region Fields
+
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
-        
-        IHost _hostApplication;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example06()
         {
@@ -27,7 +31,9 @@ namespace WordExamplesCS4
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
 
-        #region IExample Member
+        #endregion
+
+        #region IExample
 
         public void RunExample()
         {
@@ -37,17 +43,17 @@ namespace WordExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
+            get { return HostApplication.LCID == 1033 ? "Using Events" : "Verwenden von Ereignissen"; }
         }
 
         public UserControl Panel
@@ -57,7 +63,22 @@ namespace WordExamplesCS4
 
         #endregion
 
-        #region UI Trigger
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+        
+        private void UpdateTextbox(string message)
+        {
+            textBoxEvents.AppendText(message + "\r\n");
+        }
+
+        #endregion
+
+        #region Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
@@ -78,25 +99,16 @@ namespace WordExamplesCS4
             wordApplication.Dispose();
         }
 
-        #endregion
-
-        #region Word Trigger
-
-        void wordApplication_DocumentBeforeCloseEvent(NetOffice.WordApi.Document Doc, ref bool Cancel)
+        private void wordApplication_DocumentBeforeCloseEvent(NetOffice.WordApi.Document Doc, ref bool Cancel)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event DocumentBeforeClose called." });
             Doc.Dispose();
         }
 
-        void wordApplication_NewDocumentEvent(NetOffice.WordApi.Document Doc)
+        private void wordApplication_NewDocumentEvent(NetOffice.WordApi.Document Doc)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event NewDocumentEvent called." });
             Doc.Dispose();
-        }
-
-        private void UpdateTextbox(string message)
-        {
-            textBoxEvents.AppendText(message + "\r\n");
         }
 
         #endregion

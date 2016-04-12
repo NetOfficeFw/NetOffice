@@ -8,10 +8,16 @@ using HtmlAgilityPack;
 
 namespace NOBuildTools.ReferenceAnalyzer
 {
+    /// <summary>
+    /// Progress log action handler
+    /// </summary>
+    /// <param name="message">log action message</param>
     public delegate void LogAction(string message);
 
     internal static class Parser
     {
+        #region Fields
+
         private static string _rootAdress = "http://msdn.microsoft.com/en-us";
         
         private static string _excelTypesRelative = "/library/office/ff194068.aspx";
@@ -39,26 +45,15 @@ namespace NOBuildTools.ReferenceAnalyzer
         private static string _wordTypesRelative = "/library/office/ff837519.aspx";
         private static string _wordEnumsRelative = "/library/office/dn353221.aspx";
 
-        internal static XDocument ParseReference(LogAction func)
-        {
-            func("Parse References ");
-            XDocument document = new XDocument();
-            document.Add(new XElement("NOBuildTools.ReferenceAnalyzer"));
-            ParseExcel(document, func);
-            ParseAccess(document, func);
-            ParseOffice(document, func);
-            ParseOutlook(document, func);
-            ParsePowerPoint(document, func);
-            ParseProject(document, func);
-            ParseVisio(document, func);
-            ParseWord(document, func);
-            func("Done!");
-
-            return document;
-        }
+        #endregion
 
         #region Parse Word
 
+        /// <summary>
+        /// Parse Word Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseWord(XDocument document, LogAction func)
         {
             XElement WordNode = new XElement("Word");
@@ -299,6 +294,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Visio
 
+        /// <summary>
+        /// Parse Visio Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseVisio(XDocument document, LogAction func)
         {
             XElement VisioNode = new XElement("Visio");
@@ -539,6 +539,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Project
 
+        /// <summary>
+        /// Parse MSProject Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseProject(XDocument document, LogAction func)
         {
             XElement projectNode = new XElement("MSProject");
@@ -779,6 +784,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse PowerPoint
 
+        /// <summary>
+        /// Parse PPoint Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParsePowerPoint(XDocument document, LogAction func)
         {
             XElement pPointNode = new XElement("PowerPoint");
@@ -1019,6 +1029,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Outlook
 
+        /// <summary>
+        /// Parse Outlook Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseOutlook(XDocument document, LogAction func)
         {
             XElement outlookNode = new XElement("Outlook");
@@ -1259,6 +1274,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Office
 
+        /// <summary>
+        /// Parse Common Office Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseOffice(XDocument document, LogAction func)
         {
             XElement officeNode = new XElement("Office");
@@ -1499,6 +1519,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Excel
 
+        /// <summary>
+        /// Parse Excel Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseExcel(XDocument document, LogAction func)
         {
             XElement excelNode = new XElement("Excel");
@@ -1739,6 +1764,11 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Access 
 
+        /// <summary>
+        /// Parse Access Docu pages
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
         internal static void ParseAccess(XDocument document, LogAction func)
         {
             XElement accessNode = new XElement("Access");
@@ -1991,6 +2021,29 @@ namespace NOBuildTools.ReferenceAnalyzer
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Parse MSDN Docu pages for MS-Office
+        /// </summary>
+        /// <param name="document">document to fill</param>
+        /// <param name="func">progress handler</param>
+        internal static XDocument ParseReference(LogAction func)
+        {
+            func("Parse References ");
+            XDocument document = new XDocument();
+            document.Add(new XElement("NOBuildTools.ReferenceAnalyzer"));
+            ParseExcel(document, func);
+            ParseAccess(document, func);
+            ParseOffice(document, func);
+            ParseOutlook(document, func);
+            ParsePowerPoint(document, func);
+            ParseProject(document, func);
+            ParseVisio(document, func);
+            ParseWord(document, func);
+            func("Done!");
+
+            return document;
+        }
 
         private static string DownloadPage(System.Net.WebClient client, string uri)
         {

@@ -15,10 +15,8 @@ namespace PowerPointExamplesCS4
         public FormMain()
         {
             InitializeComponent();
-
             this.Text = "NetOffice PowerPoint Examples in C#";
             LoadExamples();
-
         }
 
         private void LoadExamples()

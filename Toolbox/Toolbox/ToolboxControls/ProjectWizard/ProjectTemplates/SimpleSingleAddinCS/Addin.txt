@@ -1,0 +1,167 @@
+﻿using System;
+using System.Reflection;
+using System.Windows.Forms; 
+using System.Runtime.InteropServices;
+using Microsoft.Win32;
+using Extensibility;
+$usingItems$
+namespace $safeprojectname$
+{
+	[ProgId("$safeprojectname$.Addin"), Guid("$randomGuid$"), ComVisible(true)]
+	public class Addin : IDTExtensibility2$ribbonDefine$$taskpaneDefine$
+	{
+		#region Fields
+
+$applicationField$
+$taskpaneField$
+
+		#endregion
+
+		#region Ctor
+
+		public Addin()
+		{
+		}
+
+		#endregion
+
+		#region IDTExtensibility2
+
+		void IDTExtensibility2.OnConnection(object application, ext_ConnectMode connectMode, object addInInst, ref Array custom)
+		{
+			try
+			{
+$applicationConstruction$
+			}
+			catch(Exception throwedException)
+			{
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnConnection");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+ 		void IDTExtensibility2.OnStartupComplete(ref Array custom)
+		{
+			try
+			{
+$classicUICreateCall$
+			}
+			catch(Exception throwedException)
+			{
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnStartupComplete");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		void IDTExtensibility2.OnDisconnection(ext_DisconnectMode removeMode, ref Array custom)
+		{
+			try
+			{
+$classicUIRemoveCall$
+$applicationDestroy$
+			}
+			catch(Exception throwedException)
+			{
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnDisconnection");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
+		{
+			try
+			{
+
+			}
+			catch(Exception throwedException)
+			{
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnAddinsUpdate");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		void IDTExtensibility2.OnBeginShutdown(ref Array custom)
+ 		{
+			try
+			{
+
+			}
+			catch(Exception throwedException)
+			{
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnBeginShutdown");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		#endregion
+
+$ribbonImplement$
+
+$taskpaneImplement$
+
+$classicUICreateRemoveMethod$
+
+		#region COM Register Methods
+
+		[ComRegisterFunction]
+		public static void RegisterMethod(Type type)
+		{
+			try
+			{
+				// get assembly version
+				Assembly thisAssembly = Assembly.GetAssembly(type);
+				string assemblyVersion = thisAssembly.GetName().Version.ToString();
+
+				// add codebase value
+				RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
+				key.SetValue("CodeBase", thisAssembly.CodeBase);
+				key.Close();
+
+				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
+				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32"), true);
+				key.SetValue("", System.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.Close();
+
+				// add bypass key
+				// http://support.microsoft.com/kb/948461
+				key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
+				string defaultValue = key.GetValue(String.Empty) as string;
+				if (null == defaultValue)
+					key.SetValue(String.Empty, "Office .NET Framework Lockback Bypass Key");
+				key.Close();
+
+				// register addin in office
+$register$
+			}
+			catch (Exception ex)
+			{
+				string details = String.Format("{1}{1}Details:{1}{1}{0}", ex, Environment.NewLine);
+				MessageBox.Show("An error occured." + details, "Register $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				throw;
+			}
+		}
+
+		[ComUnregisterFunction]
+		public static void UnregisterMethod(Type type)
+		{
+			try
+			{
+				// unregister addin
+				Registry.ClassesRoot.DeleteSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable", false);
+
+				// unregister addin in office
+$unregister$
+			}
+			catch (Exception throwedException)
+			{
+				string details = String.Format("{1}{1}Details:{1}{1}{0}", throwedException, Environment.NewLine);
+				MessageBox.Show("An error occured." + details, "Unregister $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				throw;
+			}
+		}
+
+		#endregion
+
+$readRessource$
+	}
+}

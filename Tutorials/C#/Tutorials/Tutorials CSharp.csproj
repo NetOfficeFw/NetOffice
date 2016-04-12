@@ -110,6 +110,7 @@
     <Compile Include="Tutorial10.cs" />
     <Compile Include="Tutorial11.cs" />
     <Compile Include="Tutorial12.cs" />
+    <Compile Include="Tutorial13.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

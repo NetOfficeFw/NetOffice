@@ -41,7 +41,7 @@ Public Class Test07
         Try
             Dim iconBitmap As New Bitmap(System.Reflection.Assembly.GetAssembly(Me.GetType()).GetManifestResourceStream("OutlookTestsVB.Test07.bmp"))
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             Dim commandBar As Office.CommandBar = Nothing
             Dim commandBarBtn As Office.CommandBarButton = Nothing
@@ -102,7 +102,7 @@ Public Class Test07
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

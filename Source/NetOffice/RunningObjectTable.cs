@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Collections.Generic;
 using System.Text;
-using NetOffice.WndUtils;
+using NetOffice.Tools.WndUtils;
 
 namespace NetOffice
 {
@@ -217,7 +217,7 @@ namespace NetOffice
         private static List<object> GetActiveExcelApplicationProxiesFromROT()
         {
             try
-            {
+            {                
                 WindowEnumerator enumerator = new WindowEnumerator("XLMAIN");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
                 if (null == handles || handles.Length == 0)

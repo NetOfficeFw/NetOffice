@@ -4,24 +4,28 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Tools.Utils;
 
 namespace PowerPointExamplesCS4
 {
-    class Example05 : IExample
+    /// <summary>
+    /// Example 5 - Create OLE chart
+    /// </summary>
+    internal class Example05 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -31,8 +35,7 @@ namespace PowerPointExamplesCS4
             slide.Shapes.AddOLEObject(120, 111, 480, 320, "MSGraph.Chart", "", MsoTriState.msoFalse, "", 0, "", MsoTriState.msoFalse);
 
             // save the document
-            string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", PowerPoint.Tools.DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -40,22 +43,22 @@ namespace PowerPointExamplesCS4
             powerApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create OLE chart object" : "Ein OLE Chart Objekt erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create OLE chart object" : "Ein OLE Chart Objekt erstellen"; }
         }
 
         public UserControl Panel
@@ -65,21 +68,9 @@ namespace PowerPointExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptx";
-            else
-                return ".ppt";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

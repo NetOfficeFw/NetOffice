@@ -13,15 +13,15 @@ Imports NetOffice.WordApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Word Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("DED6912A-F691-40AC-BF67-825E2469730A"), ProgId("SimpleWordVB4.Addin"), Tweak(True)> _
+<Guid("DED6912A-F691-40AC-BF67-825E2469730A"), ProgId("SimpleWordVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 
     Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
 
-        ' get the host application version
-        Dim hostVersion As String = Me.Application.Version
-        Console.WriteLine("Host Application Version is:{0}", hostVersion)
+        ' show the host application version
+        Dim hostVersion As String = String.Format("Host Application Version is:{0}", Me.Application.Version)
+        Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK)
 
     End Sub
 

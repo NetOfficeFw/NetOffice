@@ -1,0 +1,172 @@
+﻿Imports System.Reflection
+Imports Microsoft.Win32
+Imports Extensibility
+Imports System.Runtime.InteropServices
+$usingItems$
+<ProgIdAttribute("$safeprojectname$.Addin"), GuidAttribute("$randomGuid$"), ComVisible(TRUE)> _
+Public Class Addin
+    Implements IDTExtensibility2$ribbonDefine$$taskpaneDefine$
+
+#Region "Fields"
+
+$applicationField$
+$taskpaneField$
+
+#End Region
+
+#Region "Ctor"
+
+    Public Sub New()
+
+
+    End Sub
+
+#End Region
+
+#Region "IDTExtensibility2"
+
+	Public Sub OnConnection(ByVal application As Object, ByVal connectMode As ext_ConnectMode, ByVal addInInst As Object, ByRef custom As System.Array) Implements IDTExtensibility2.OnConnection
+
+	    Try
+
+$applicationConstruction$
+
+        Catch ex As Exception
+
+            Dim text As String = String.Format("An error occured.{1}{1}Details:{1}{1}{0}Source:{2}", ex.Message, Environment.NewLine, "OnConnection")
+            MessageBox.Show(text, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+    Public Sub OnStartupComplete(ByRef custom As System.Array) Implements IDTExtensibility2.OnStartupComplete
+
+	    Try
+
+$classicUICreateCall$
+
+        Catch ex As Exception
+
+            Dim text As String = String.Format("An error occured.{1}{1}Details:{1}{1}{0}Source:{2}", ex.Message, Environment.NewLine, "OnStartupComplete")
+            MessageBox.Show(text, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+
+    Public Sub OnDisconnection(ByVal removeMode As ext_DisconnectMode, ByRef custom As System.Array) Implements IDTExtensibility2.OnDisconnection
+
+	    Try
+
+$classicUIRemoveCall$
+$applicationDestroy$ 
+
+        Catch ex As Exception
+
+            Dim text As String = String.Format("An error occured.{1}{1}Details:{1}{1}{0}Source:{2}", ex.Message, Environment.NewLine, "OnDisconnection")
+            MessageBox.Show(text, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+    Public Sub OnAddInsUpdate(ByRef custom As System.Array) Implements IDTExtensibility2.OnAddInsUpdate
+
+	    Try
+
+        Catch ex As Exception
+
+            Dim text As String = String.Format("An error occured.{1}{1}Details:{1}{1}{0}Source:{2}", ex.Message, Environment.NewLine, "OnAddInsUpdate")
+            MessageBox.Show(text, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+    Public Sub OnBeginShutdown(ByRef custom As System.Array) Implements IDTExtensibility2.OnBeginShutdown
+
+	    Try
+
+        Catch ex As Exception
+
+            Dim text As String = String.Format("An error occured.{1}{1}Details:{1}{1}{0}Source:{2}", ex.Message, Environment.NewLine, "OnBeginShutdown")
+            MessageBox.Show(text, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+#End Region
+
+$ribbonImplement$
+
+$taskpaneImplement$
+
+$classicUICreateRemoveMethod$
+
+#Region "COM Register Methods"
+
+    <ComRegisterFunctionAttribute()> _
+    Public Shared Sub RegisterMethod(ByVal type As Type)
+
+        Try
+            ' get assembly version
+			Dim thisAssembly As Assembly = Assembly.GetAssembly(type)
+			Dim assemblyVersion As String = thisAssembly.GetName().Version.ToString()
+
+			' add codebase value
+            Dim key As RegistryKey = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion)
+            key.SetValue("CodeBase", thisAssembly.CodeBase)
+            key.Close()
+
+			Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
+			key = Registry.ClassesRoot.OpenSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\InprocServer32"), True)
+			key.SetValue("", System.Environment.SystemDirectory + "\mscoree.dll", RegistryValueKind.String)
+			key.Close()
+
+            ' add bypass key
+            ' http://support.microsoft.com/kb/948461
+            key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}")
+            Dim defaultValue As String = key.GetValue("")
+            If (IsNothing(defaultValue)) Then
+                key.SetValue("", "Office .NET Framework Lockback Bypass Key")
+            End If
+            key.Close()
+
+			' register addin in office
+$register$
+        Catch ex As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
+            MessageBox.Show("An error occured." + details, "Register $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+    <ComUnregisterFunctionAttribute()> _
+    Public Shared Sub UnregisterMethod(ByVal type As Type)
+
+        Try
+
+			' unregister addin
+            Registry.ClassesRoot.DeleteSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable", False)
+
+            ' unregister addin in office
+$unregister$
+		Catch throwedException As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
+            MessageBox.Show("An error occured." + details, "Unregister $safeprojectname$", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+#End Region
+
+$readRessource$
+
+End Class

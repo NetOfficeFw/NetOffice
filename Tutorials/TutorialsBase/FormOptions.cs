@@ -9,13 +9,25 @@ using System.Windows.Forms;
 
 namespace TutorialsBase
 {
+    /// <summary>
+    /// Application user options form
+    /// </summary>
     partial class FormOptions : TutorialForm
     {
-        static string _fullConfigFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) , "NetOfficeTutorialsCS4.xml");
-        static int _lcid = DefaultLCID;
-        static bool _connectToDocumentation = true;
-        static bool _saveSettings = true;
+        #region Fields
 
+        private static string _fullConfigFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) , "NetOfficeTutorialsCS4.xml");
+        private static int _lcid = DefaultLCID;
+        private static bool _connectToDocumentation = true;
+        private static bool _saveSettings = true;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public FormOptions()
         {
             InitializeComponent();
@@ -30,8 +42,14 @@ namespace TutorialsBase
                 checkBoxSaveSettings.Checked = true;
         }
 
+        #endregion
+
         #region Methods
 
+        /// <summary>
+        /// Load config file or display options dialog if config file not exists
+        /// </summary>
+        /// <param name="owner">modal owner for dialog</param>
         public static void LoadConfigurationFromXMLFile(IWin32Window owner)
         {
             if (File.Exists(_fullConfigFilePath))
@@ -49,6 +67,9 @@ namespace TutorialsBase
             }
         }
 
+        /// <summary>
+        /// Save current configuration to config file
+        /// </summary>
         public static void SaveConfigurationToXMLFile()
         {
             if (File.Exists(_fullConfigFilePath))
@@ -73,6 +94,9 @@ namespace TutorialsBase
 
         #region Properties
 
+        /// <summary>
+        /// User allows to connect the NetOffice tutorial pages
+        /// </summary>
         public static bool ConnectToDocumentation
         {
             get 
@@ -81,6 +105,9 @@ namespace TutorialsBase
             }
         }
           
+        /// <summary>
+        /// User want store the settings permanently
+        /// </summary>
         public static bool SaveSettings
         {
             get
@@ -89,6 +116,9 @@ namespace TutorialsBase
             }
         }
 
+        /// <summary>
+        /// Current Language LCID
+        /// </summary>
         public static int LCID
         {
             get
@@ -97,6 +127,9 @@ namespace TutorialsBase
             }
         }
 
+        /// <summary>
+        /// Default Language LCID. (1033 = En-us)
+        /// </summary>
         public static int DefaultLCID
         {
             get 

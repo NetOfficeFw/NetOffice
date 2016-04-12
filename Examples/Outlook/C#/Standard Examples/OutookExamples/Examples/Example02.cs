@@ -11,10 +11,11 @@ using NetOffice.OutlookApi.Enums;
 
 namespace OutlookExamplesCS4
 {
-    class Example02 :IExample
+    /// <summary>
+    /// Example 2 - Create Task Item
+    /// </summary>
+    internal class Example02 :IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -36,28 +37,34 @@ namespace OutlookExamplesCS4
             outlookApplication.Quit();
             outlookApplication.Dispose();
 
-            _hostApplication.ShowFinishDialog("Done!", null);
+            HostApplication.ShowFinishDialog("Done!", null);
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create task item" : "Ein TaskItem erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create task item" : "Ein TaskItem erstellen"; }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
         
         public System.Windows.Forms.UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

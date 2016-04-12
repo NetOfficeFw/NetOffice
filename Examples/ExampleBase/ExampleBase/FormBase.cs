@@ -16,13 +16,16 @@ namespace ExampleBase
     {
         #region Fields
 
-        List<IExample> _listExamples = new List<IExample>();
-        string _rootDirectory = FormOptions.DefaultRootDirectory;
+        private List<IExample> _listExamples = new List<IExample>();
+        private string _rootDirectory = FormOptions.DefaultRootDirectory;
   
         #endregion
 
-        #region .ctor
+        #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public FormBase()
         {
             InitializeComponent();     
@@ -30,7 +33,22 @@ namespace ExampleBase
 
         #endregion
 
-        #region IHost Member
+        #region Properties
+
+        /// <summary>
+        /// Containter to use in localization
+        /// </summary>
+        internal IContainer Components
+        {
+            get
+            {
+                return this.components;
+            }
+        }
+
+        #endregion
+
+        #region IHost
 
         public DialogResult ShowQuestion(string message)
         {
@@ -86,16 +104,24 @@ namespace ExampleBase
 
         #endregion
 
-        #region Private Methods
+        #region Methods
 
+        /// <summary>
+        /// Loads an example to the instance
+        /// </summary>
+        /// <param name="example">example instance as any</param>
         protected internal void LoadExample(IExample example)
         {
             example.Connect(this);
             ListViewItem viewItem = listViewExamples.Items.Add(example.Caption);
+            viewItem.BackColor = listViewExamples.Items.Count % 2 != 0 ? Color.White : Color.AliceBlue;
             viewItem.SubItems.Add(example.Description);
             viewItem.ImageIndex = 0;
             viewItem.Tag = example;
             _listExamples.Add(example);
+            // select first item if nothing selected
+            if (listViewExamples.SelectedItems.Count <= 0)
+                listViewExamples.Items[0].Selected = true;
         }
 
         #endregion
@@ -106,6 +132,7 @@ namespace ExampleBase
         {
             try
             {
+                buttonStartExample.Enabled = listViewExamples.SelectedItems.Count > 0;
                 if(panelExamples.Controls.Count == 0)
                     return;
 
@@ -180,7 +207,7 @@ namespace ExampleBase
             }
         }
 
-        private void linkLabelRessouce_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabelRessource_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
             {
@@ -227,13 +254,5 @@ namespace ExampleBase
         }
 
         #endregion
-        
-        internal IContainer Components
-        {
-           get
-           {
-                return this.components;
-           }
-        }
     }
 }

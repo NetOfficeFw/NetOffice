@@ -1,0 +1,30 @@
+﻿[1031]
+labelMain = Wählen Sie die Office Anwendungen aus die Sie überwachen möchten
+labelOfficeApplication = Anwendung
+labelOfficeApplicationInstanceCount = Instanzen im Speicher
+buttonKillApps = Beenden
+labelInsertHotkey = Geben Sie eine Tastenkombination ein mit der Sie ausgewählte Office Anwendungen aus dem Speicher entfernen möchten
+checkBoxAppKill = Eingeschaltet
+checkBoxShowQuestion = Vor Beenden nachfragen
+checkBoxAppsTray = Eingeschaltet
+labelShowTray = Information als Tray Icon anzeigen
+labelOneOrMoreIsRunning = Eine oder mehrere der ausgewählten Anwendungen aktiv
+labelNoOfficeAppRunning = Keine der ausgewählten Anwendungen aktiv
+labelActiveProcessList = Aktive Prozesse
+labelKillQuestion = Ausgewählte Instanzen beenden?
+[End]
+[1033]
+labelMain = Choose your Office application(s) you want to observe
+labelOfficeApplication = Application
+labelOfficeApplicationInstanceCount = Instances in memory
+buttonKillApps = Close
+labelInsertHotkey = Enter the hotkey which you want to assign to remove the application from memory
+checkBoxAppKill = Active
+checkBoxShowQuestion = Ask before close
+checkBoxAppsTray = Active
+labelShowTray = Show information as tray icon
+labelOneOrMoreIsRunning = One or more of the chosen applications are active
+labelNoOfficeAppRunning = None of the chosen applications are active
+labelActiveProcessList = Active Processes
+labelKillQuestion = Kill selected Instances?
+[End]

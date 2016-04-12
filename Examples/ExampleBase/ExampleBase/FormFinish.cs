@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -9,10 +10,24 @@ using System.Windows.Forms;
 
 namespace ExampleBase
 {
+    /// <summary>
+    /// Example finish dialog
+    /// </summary>
     public partial class FormFinish : Form
     {
-        string _documentPath;
+        #region Fields
 
+        private string _documentPath;
+        
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        /// <param name="message">finish message</param>
+        /// <param name="documentPath">path to created document</param>
         public FormFinish(string message, string documentPath)
         {
             InitializeComponent();
@@ -24,6 +39,29 @@ namespace ExampleBase
             labelDocumentPath.Text = documentPath;
             _documentPath = documentPath;
         }
+
+        #endregion
+
+        #region Methods
+
+        private void TryDeleteDocument()
+        {
+            try
+            {
+                if (File.Exists(_documentPath))
+                    File.Delete(_documentPath);
+            }
+            catch
+            {
+                // its already open - aren't so?
+                // we ignore this and dont refuse the user
+                Console.WriteLine("Unable to delete {0}.", _documentPath);
+            }
+        }
+
+        #endregion
+
+        #region Trigger
 
         private void buttonOpenDocument_Click(object sender, EventArgs e)
         {
@@ -42,6 +80,8 @@ namespace ExampleBase
         {
             try
             {
+                if (checkBoxDeleteDocument.Checked)
+                    TryDeleteDocument();
                 this.Close();
             }
             catch
@@ -49,5 +89,7 @@ namespace ExampleBase
                 MessageBox.Show(this, "An error occured.", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
     }
 }

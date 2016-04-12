@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoadRibonUI">
+  <ribbon>
+    <tabs>
+      <tab id="$safeprojectname$" label="$safeprojectname$">
+        <group id="group1" label="$safeprojectname$">
+           <button id="aboutButton" label="About" imageMso="AdvertisePublishAs" size="large" onAction="AboutButton_Click" />
+$tooglebutton$
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

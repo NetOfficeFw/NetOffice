@@ -1,0 +1,14 @@
+﻿[1031]
+this = Fehler
+labelErrorCaption = Leider ist ein Fehler augetreten.
+labelExitMessage = Das Programm wird beendet.
+buttonOK = OK
+buttonCopyToClipboard = In die Zwischenablage kopieren
+[End]
+[1033]
+this = Error
+labelErrorCaption = An error is occured.
+labelExitMessage = The application want close now.
+buttonOK = OK
+buttonCopyToClipboard = Copy to Clipboard
+[End]

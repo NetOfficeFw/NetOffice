@@ -1,0 +1,28 @@
+﻿[1031]
+labelAboutNetOffice = Über NetOffice Developer Toolbox
+labelStallmanSays = "Freie Software bedeutet den Benutzer nicht hinters Licht zu führen und ihm alle Möglichkeiten der Kontrolle zu überlassen".
+labelNetOfficeIsFree = NetOffice ist freie Software.
+labelAboutWarranty = Verpflichtungserklärung
+labelWarranty1 = NetOffice.DeveloperToolbox unternimmt keinerlei Versuche eine Internetverbindung oder Netzerwerkverbindung aufzubauen.
+labelWarranty2 = Es werden keinerlei Daten gesammelt oder gespeichert mit Ausnahme einer Konfigurationsdatei im Anwendungsordner.
+labelWarranty3 = Wenn Sie Facebook Nutzer sind erscheint Ihnen das am Anfang vielleicht ungewohnt.
+labelTechnicalDetails = Technische Details
+labelContainsExistingWorks = Dieses Programm enthält Code von anderen Open Source Projekten
+labelHotKey = Systemweite Hotkey-Klasse
+labelLicense = Die Developer Toolbox steht unter der MIT Lizenz (MIT)
+labelLanguageCredits = Sprachpakete
+[End]
+[1033]
+labelAboutNetOffice = About NetOffice Developer Toolbox
+labelStallmanSays = "free software means to be honest with your users and allow them to be free by giving them all possible control."
+labelNetOfficeIsFree = NetOffice is free software.
+labelAboutWarranty = Privacy Policy
+labelWarranty1 = NetOffice.DeveloperToolbox does not try to establish a connection to the internet or a local network.
+labelWarranty2 = There is no data being collected or stored except a configuration file in the application folder.
+labelWarranty3 = If you are using Facebook this might be unfamiliar to you.
+labelTechnicalDetails = Technical Details
+labelContainsExistingWorks = This program contains code from other open source projects
+labelHotKey = systemwide hotkey-class
+labelLicense = The developer toolbox is licensed under the MIT License (MIT)
+labelLanguageCredits = Language Credits
+[End]

@@ -1,23 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
-
-using NetOffice;
+using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
-    class Example01 : IExample
-    {
-        IHost _hostApplication;
-        
-        #region IExample Member
+    /// <summary>
+    /// Example 1 - Background Colors and Borders for Cells
+    /// </summary>
+    internal class Example01 : IExample
+    {        
+        #region IExample
 
         public void RunExample()
         {
@@ -25,25 +23,27 @@ namespace ExcelExamplesCS4
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
 
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(excelApplication);
+        
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
             Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
 
             // draw back color and perform the BorderAround method
-            workSheet.Range("$B2:$B5").Interior.Color = ToDouble(Color.DarkGreen);
+            workSheet.Range("$B2:$B5").Interior.Color = utils.Color.ToDouble(Color.DarkGreen);
             workSheet.Range("$B2:$B5").BorderAround(XlLineStyle.xlContinuous, XlBorderWeight.xlMedium, XlColorIndex.xlColorIndexAutomatic);
 
             // draw back color and border the range explicitly
-            workSheet.Range("$D2:$D5").Interior.Color = ToDouble(Color.DarkGreen);
+            workSheet.Range("$D2:$D5").Interior.Color = utils.Color.ToDouble(Color.DarkGreen);
             workSheet.Range("$D2:$D5").Borders[XlBordersIndex.xlInsideHorizontal].LineStyle = XlLineStyle.xlDouble;
             workSheet.Range("$D2:$D5").Borders[XlBordersIndex.xlInsideHorizontal].Weight = 4;
-            workSheet.Range("$D2:$D5").Borders[XlBordersIndex.xlInsideHorizontal].Color = ToDouble(Color.Black);
+            workSheet.Range("$D2:$D5").Borders[XlBordersIndex.xlInsideHorizontal].Color = utils.Color.ToDouble(Color.Black);
 
             workSheet.Cells[1, 1].Value = "We have 2 simple shapes created.";
 
             // save the book 
-            string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example01{1}", _hostApplication.RootDirectory, fileExtension);
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example01", Excel.Tools.DocumentFormat.Normal);
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -51,22 +51,22 @@ namespace ExcelExamplesCS4
             excelApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, workbookFile);
+            HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
+            get { return HostApplication.LCID == 1033 ? "Example01" : "Beispiel01"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Background Colors and Borders for Cells" : "Hintergrundfarben und Rahmen in Zellen"; }
+            get { return HostApplication.LCID == 1033 ? "Background Colors and Borders for Cells" : "Hintergrundfarben und Rahmen in Zellen"; }
         }
 
         public UserControl Panel 
@@ -76,36 +76,12 @@ namespace ExcelExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
         /// <summary>
-        /// Translate a color to double
+        /// Current Example Host
         /// </summary>
-        /// <param name="color">expression to convert</param>
-        /// <returns>color</returns>
-        private static double ToDouble(System.Drawing.Color color)
-        {
-            uint returnValue = color.B;
-            returnValue = returnValue << 8;
-            returnValue += color.G;
-            returnValue = returnValue << 8;
-            returnValue += color.R;
-            return returnValue;
-        }
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsx";
-            else
-                return ".xls";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

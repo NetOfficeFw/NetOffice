@@ -4,21 +4,22 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
+using NetOffice.PowerPointApi.Tools.Utils;
 
 namespace PowerPointExamplesCS4
 {
-    class Example03 : IExample
+    /// <summary>
+    /// Example 3 - Create Macros 
+    /// </summary>
+    internal  class Example03 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
@@ -29,6 +30,9 @@ namespace PowerPointExamplesCS4
             {
                 // start powerpoint
                 powerApplication = new PowerPoint.Application();
+
+                // create a utils instance, not need for but helpful to keep the lines of code low
+                CommonUtils utils = new CommonUtils(powerApplication);
 
                 // add a new presentation with one new slide
                 PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -46,14 +50,13 @@ namespace PowerPointExamplesCS4
                 button.ActionSettings[PpMouseActivation.ppMouseClick].Run = "NetOfficeTestMacro";
                
                 // save the document 
-                string fileExtension = GetDefaultExtension(powerApplication);
-                documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+                documentFile =  utils.File.Combine(HostApplication.RootDirectory, "Example03", PowerPoint.Tools.DocumentFormat.Macros);
                 presentation.SaveAs(documentFile);
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {
                 isFailed = true;
-                _hostApplication.ShowErrorDialog("VBA Error", throwedException);
+                HostApplication.ShowErrorDialog("VBA Error", throwedException);
             }
             finally
             {
@@ -65,23 +68,23 @@ namespace PowerPointExamplesCS4
                 }
 
                 if ((null != documentFile) && (!isFailed))
-                    _hostApplication.ShowFinishDialog(null, documentFile);
+                    HostApplication.ShowFinishDialog(null, documentFile);
             }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create an run macros. the option 'Trust access to Visual Basic Project' must be set" : "Makros erstellen und ausführen. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
+            get { return HostApplication.LCID == 1033 ? "Create an run macros. the option 'Trust access to Visual Basic Project' must be set" : "Makros erstellen und ausführen. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
         }
 
         public UserControl Panel
@@ -91,21 +94,9 @@ namespace PowerPointExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptm"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptm";
-            else
-                return ".ppt";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

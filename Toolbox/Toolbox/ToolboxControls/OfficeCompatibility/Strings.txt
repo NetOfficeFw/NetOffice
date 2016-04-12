@@ -1,0 +1,28 @@
+﻿[1031]
+buttonSelectAssembly = Auswählen
+labelInvalidAssembly = Die angegebene Datei ist kein gültges .NET Assembly. (BadImageFormatException)
+labelNoNetOfficeReferences = Dieses Assembly hat keine direkte Verbindung zu NetOffice.
+labelVersionTable = Versionstabelle
+labelLibrary = Bibliothek
+labelVersionOk = = Version ist kompatibel
+labelVersionNotOk = = Version ist nicht kompatibel
+linkLabelNotSupported = = Version wird nicht unterstützt
+buttonRefresh = Wiederholen
+buttonReport = Bericht
+labelDebugHint = Prüfen Sie Ihr Assembly immer in der Debug Konfiguration da Optimierungen zu Informationsverlust führen können.
+labelNetOfficeVersion = Aktuelle NetOffice Version
+[End]
+[1033]
+buttonSelectAssembly = Choose
+labelInvalidAssembly = The choosen file is not a valid .NET assembly. (BadImageFormatException)
+labelNoNetOfficeReferences = This assembly has no direct connection to NetOffice.
+labelVersionTable = Versiontable
+labelLibrary = Library
+labelVersionOk = = Version is compatible
+labelVersionNotOk = = Version is not compatible
+linkLabelNotSupported = = Version is unsupported
+buttonRefresh = Refresh
+buttonReport = Report
+labelDebugHint = Check your assembly alyways in the debug version. an optimized release assembly lost some informations.
+labelNetOfficeVersion = NO version or below compatible
+[End]

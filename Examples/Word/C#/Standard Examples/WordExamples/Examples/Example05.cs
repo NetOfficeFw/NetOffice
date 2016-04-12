@@ -7,19 +7,20 @@ using System.Reflection;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.VBIDEApi.Enums;
+using NetOffice.WordApi.Tools.Utils;
 
 namespace WordExamplesCS4
 {
-    class Example05 : IExample
+    /// <summary>
+    /// Example 5 - Create macros
+    /// </summary>
+    internal class Example05 : IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -28,6 +29,9 @@ namespace WordExamplesCS4
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
             wordApplication.Visible = true;
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(wordApplication);
 
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
@@ -47,10 +51,10 @@ namespace WordExamplesCS4
             //start the macro NetOfficeTestModule
             wordApplication.Run("NetOfficeTestModule!NetOfficeTestMacro");
 
-            string fileExtension = GetFileExtension(wordApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example05", Word.Tools.DocumentFormat.Macros);
+            newDocument.SaveAs(documentFile);
+            if(utils.ApplicationIs2007OrHigher)
                 newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatXMLDocumentMacroEnabled);
             else
                 newDocument.SaveAs(documentFile);
@@ -60,22 +64,22 @@ namespace WordExamplesCS4
             wordApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create vba macros. The option Trust access to Visual Basic Project must be set." : "Erstellen von VBA Macros. Die Option Visual Basic Projekten vertrauen muss aktiviert sein."; }
+            get { return HostApplication.LCID == 1033 ? "Create vba macros. The option Trust access to Visual Basic Project must be set." : "Erstellen von VBA Macros. Die Option Visual Basic Projekten vertrauen muss aktiviert sein."; }
         }
 
         public UserControl Panel
@@ -84,17 +88,10 @@ namespace WordExamplesCS4
         }
 
         #endregion
-        
-        #region Helper
 
-        string GetFileExtension(Word.Application application)
-        {
-            double wordVersion = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                return ".docm";
-            else
-                return ".docm";
-        }
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

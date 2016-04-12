@@ -13,7 +13,7 @@ Imports NetOffice.AccessApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Access Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("BD432A44-89E6-492e-9CB7-35D57CBC2B64"), ProgId("SimpleAccessVB4.Addin"), Tweak(True)> _
+<Guid("BD432A44-89E6-492e-9CB7-35D57CBC2B64"), ProgId("SimpleAccessVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 
@@ -21,8 +21,10 @@ Public Class Addin
 
         ' get the host application version. we check at runtime the property is available because Access 2000 doesnt have the Version property
         If Application.EntityIsAvailable("Version", NetOffice.SupportEntityType.Property) Then
-            Dim hostVersion As String = Me.Application.Version
-            Console.WriteLine("Host Application Version is:{0}", hostVersion)
+
+            Dim hostVersion As String = String.Format("Host Application Version is:{0}", Application.Version)
+            Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK)
+
         End If
 
     End Sub

@@ -9,6 +9,7 @@ namespace NetOffice.Tools
     /// to customize NetOffice diagnostic/log settings at runtime. This can be very helpful in troubleshooting.
     /// See tweak overview here: http://netoffice.codeplex.com/wikipage?title=Tweaks_EN
     /// </summary>
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple= false)]
     public class TweakAttribute : System.Attribute
     {
         /// <summary>

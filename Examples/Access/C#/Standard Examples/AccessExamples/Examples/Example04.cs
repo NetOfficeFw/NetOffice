@@ -18,14 +18,19 @@ using NetOffice.DAOApi.Constants;
 
 namespace AccessExamplesCS4
 {
-    public partial class Example04 : UserControl, IExample
+    /// <summary>
+    /// Example 4 - Database informations
+    /// </summary>
+    internal partial class Example04 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Ctor
 
         public Example04()
         {
             InitializeComponent();
-        }       
+        }
+
+        #endregion
 
         #region IExample Member
 
@@ -37,23 +42,29 @@ namespace AccessExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Database informations" : "Datenbankinformationen auslesen"; }
+            get { return HostApplication.LCID == 1033 ? "Database informations" : "Datenbankinformationen auslesen"; }
         }
 
         public UserControl Panel
         {
             get { return this; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

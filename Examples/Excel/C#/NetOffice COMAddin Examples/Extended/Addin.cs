@@ -26,56 +26,39 @@ namespace NetOfficeTools.ExtendedExcelCS4
      * The RegistryLocation attribute is not always necessary. CurrentUser is default, no need for this attribute if you dont want HKEY_CURRENTUSER (just for example here)
      * You see also the CustomUI attribute. You can specify a path to an embedded xml ressource file with your ribbon schema. If you dont want this then you can override the GetCustomUI method from the base class.
      * The Tweak attribute allows to set various NetOffice options at runtime with custom values entries in the current office addin key(helpful for troubleshooting). Learn more about in the Tweaks sample addin project.
+     * The CustomPane attribute allows you to set a task pane very easy
      */
     [COMAddin("NetOfficeCS4 Extended Sample Addin", "This Addin shows you the COMAddin class from the NetOffice Tools", 3)]
-    [CustomUI("NetOfficeTools.ExtendedExcelCS4.RibbonUI.xml"), RegistryLocation(RegistrySaveLocation.CurrentUser)]
-    [Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), ProgId("ExtendedExcelCS4.Addin"), Tweak(true)]
+    [CustomUI("RibbonUI.xml", true), RegistryLocation(RegistrySaveLocation.CurrentUser)]
+    [CustomPane(typeof(SamplePane), "NetOffice Tools - Sample Pane(CS4)", true, PaneDockPosition.msoCTPDockPositionTop, PaneDockPositionRestrict.msoCTPDockPositionRestrictNoChange, 50, 50)]
+    [Guid("BA38FD48-47BD-43de-8177-0D067A01B566"), ProgId("ExtendedExcelCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()
         {
-            // Enable shared debug output and send a load message(use NOTools.ConsoleMonitor.exe to observe the shared console output)
-            Factory.Console.EnableSharedOutput = true;
-            Factory.Console.SendPipeConsoleMessage(null, "Addin has been loaded.");
-
-            // We want observe the current count of open proxies with NOTools.ConsoleMonitor.exe 
-            Factory.Settings.EnableProxyCountChannel = true;
-
             // trigger the well known IExtensibility2 methods, this is very similar to VSTO
             this.OnStartupComplete += new OnStartupCompleteEventHandler(Addin_OnStartupComplete);
-
-            // We add our own taskpane here, if you dont want this way then overwrite the CTPFactoryAvailable method and create your panes in this method.
-            // Taskpanes in Netoffice can implement the ITaskPane interface with the OnConnection/OnDisconnection to avoid the singleton pattern.
-            // Take a look into the SamplePane.cs to see how you can use the NetOffice ITaskPane interface to get more control for Load/Unload and connect the host application.
-            TaskPanes.Add(typeof(SamplePane), "NetOffice Tools - Sample Pane(CS4)");
-            TaskPanes[0].DockPosition = MsoCTPDockPosition.msoCTPDockPositionTop;
-            TaskPanes[0].DockPositionRestrict = MsoCTPDockPositionRestrict.msoCTPDockPositionRestrictNoChange;
-            TaskPanes[0].Height = 50;
-            TaskPanes[0].Visible = true;
-            TaskPanes[0].Arguments = new object[] { this };
-            TaskPanes[0].VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(TaskPane_VisibleStateChange);
         }
 
         // ouer ribbon instance to manipulate ui at runtime 
-        private Office.IRibbonUI RibbonUI { get; set; }
+        internal Office.IRibbonUI RibbonUI { get; private set; }
 
         // attached in ctor to say hello in console
         private void Addin_OnStartupComplete(ref Array custom)
         {
-            // Tou see the host application is accessible as property from the class instance.
+            // You see the host application is accessible as property from the class instance.
             // The application property was disposed automaticly while shutdown.
             Factory.Console.WriteLine("Host Application Version is:{0}", this.Application.Version);
         }
 
-        // attached in ctor to trigger taskpane visibility has been changed and update the checkbutton in the ribbon ui for show/hide taskpane
-        private void TaskPane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {           
-            // ouer taskpane visibility has been changed. we send a message to the host application
-            // and say please refresh the checkbutton state. now the host application want call ouer OnGetPressedPanelToggle method to update the checkstate.
-            RibbonUI.InvalidateControl("paneVisibleToogleButton");
+        // taskpane visibility has been changed. we upate the checkbutton in the ribbon ui for show/hide taskpane
+        protected override void TaskPaneVisibleStateChanged(Office._CustomTaskPane customTaskPaneInst)
+        {
+            if (null != RibbonUI)
+                RibbonUI.InvalidateControl("paneVisibleToogleButton");
         }
 
-        // defined in RibbonUI.xml to get a instance for ouer ribbon ui.
+        // defined in RibbonUI.xml to get an instance for ouer ribbon ui.
         public void OnLoadRibonUI(Office.IRibbonUI ribbonUI)
         {
             RibbonUI = ribbonUI;
@@ -96,7 +79,7 @@ namespace NetOfficeTools.ExtendedExcelCS4
         // defined in RibbonUI.xml to catch the user click for the about button
         public void OnClickAboutButton(Office.IRibbonControl control)
         {
-            MessageBox.Show("NetOffice Tools - Extended Sample Addin.", "ExtendedExcelCS4.Addin");
+            Utils.Dialog.ShowAbout("NetOffice Addin Example", "http://netoffice.codeplex.com", "<No licence set>");
         }
 
         /*
@@ -149,7 +132,8 @@ namespace NetOfficeTools.ExtendedExcelCS4
         // Rethrow the exception otherwise the exception is marked as handled.   
         protected override void OnError(ErrorMethodKind methodKind, Exception exception)
         {
-            MessageBox.Show("An error occurend in " + methodKind.ToString(), "ExtendedExcelCS4.Addin");
+            string friendlyErrorDescription = String.Format("Unexpected state in ExtendedExcelCS4.Addin {0}.", methodKind);
+            Utils.Dialog.ShowError(exception, friendlyErrorDescription);
         }
 
         // This method demonstrate an error handler for the register/unregister process.

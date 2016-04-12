@@ -1,0 +1,14 @@
+﻿[1031]
+checkBoxClassicUISupport = Ich möchte die Benutzeroberfläche in älteren Office Versionen erweitern
+checkBoxRibbonUISupport = Ich möchte die Ribbon Oberfläche in neueren Office Versionen erweitern
+checkBoxTaskPaneSupport = Ich möchte eine Task Pane zur Verfügung stellen
+checkBoxToogleButton = Für die Task Pane einen Toogle Button zum ein- und ausblenden erstellen
+labelHint = Diese Einstellungen sind auch mit den Tasten 1-4 der Tastatur änderbar
+[End]
+[1033]
+checkBoxClassicUISupport = I want customize the classic Office UI
+checkBoxRibbonUISupport = I want customize the Ribbon UI
+checkBoxTaskPaneSupport = Ich want a custom Task Pane
+checkBoxToogleButton = Create a Toogle Button for the Task Pane (Visibility)
+labelHint = Use also number keys(1-4) on your keyboard to select/deselect an option
+[End]

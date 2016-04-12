@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-
 using ExampleBase;
 
 namespace ExcelExamplesCS4
@@ -15,7 +9,6 @@ namespace ExcelExamplesCS4
         public FormMain()
         {
             InitializeComponent();
-
             this.Text = "NetOffice Excel Examples in C#";
             LoadExamples();
         }
@@ -31,6 +24,7 @@ namespace ExcelExamplesCS4
             LoadExample(new Example07());
             LoadExample(new Example08());
             LoadExample(new Example09());
+            LoadExample(new Example10());
         }
     }
 }

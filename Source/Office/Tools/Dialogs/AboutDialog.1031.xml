@@ -1,0 +1,16 @@
+﻿<Dialog Name ="AboutDialog" LCID="1031">
+  <String>
+    <String>
+      <Name>Title</Name>
+      <Value>Über</Value>
+    </String>
+    <String>
+      <Name>LicenceHeader</Name>
+      <Value>Lizenzvereinbarung</Value>
+    </String>
+    <String>
+      <Name>buttonClose</Name>
+      <Value>Schliessen</Value>
+    </String>
+  </String>
+</Dialog>

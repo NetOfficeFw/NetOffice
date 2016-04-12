@@ -31,8 +31,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,6 +71,7 @@
   <ItemGroup>
     <Compile Include="COMObjectExpandableObjectConverter.cs" />
     <Compile Include="Core.cs" />
+    <Compile Include="CurrentAppDomain.cs" />
     <Compile Include="DebugConsoleMode.cs" />
     <Compile Include="NamedPipes\ClientPipeConnection.cs" />
     <Compile Include="NamedPipes\InterProcessConnectionState.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="NamedPipes\PipeClient.cs" />
     <Compile Include="NamedPipes\PipeConnection.cs" />
     <Compile Include="NamedPipes\PipeHandle.cs" />
+    <Compile Include="PerformanceTrace.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +91,8 @@
     <Compile Include="Tools\COMAddinAttribute.cs" />
     <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
     <Compile Include="Attributes\CustomMethodAttribute.cs" />
+    <Compile Include="Tools\COMAddinBase.cs" />
+    <Compile Include="Tools\CustomPaneAttribute.cs" />
     <Compile Include="Tools\CustomUIAttribute.cs" />
     <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
     <Compile Include="Tools\ErrorMethodKind.cs" />
@@ -121,8 +124,8 @@
     <Compile Include="Tools\COMAddinEventHandler.cs" />
     <Compile Include="Tools\IDTExtensibility2.cs" />
     <Compile Include="Utils.cs" />
-    <Compile Include="WndUtils\WindowEnumerator.cs" />
-    <Compile Include="WndUtils\ExcelApplicationWindow.cs" />
+    <Compile Include="Tools\WndUtils\WindowEnumerator.cs" />
+    <Compile Include="Tools\WndUtils\ExcelApplicationWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

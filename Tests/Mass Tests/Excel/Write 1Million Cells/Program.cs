@@ -12,6 +12,10 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("Write 1 million cells in excel.");
 
+            NetOffice.Settings.Default.PerformanceTrace.Alert += new NetOffice.PerformanceTrace.PerformanceAlertEventHandler(PerformanceTrace_Alert);
+            NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].Enabled = true;
+            NetOffice.Settings.Default.PerformanceTrace["ExcelApi"].IntervalMS = 20;
+
             Excel.Application application = new NetOffice.ExcelApi.Application();
             application.DisplayAlerts = false;
             application.Interactive = false;
@@ -44,6 +48,11 @@ namespace ConsoleApplication1
            application.Dispose();
 
            Console.WriteLine("Done!");
+        }
+
+        private static void PerformanceTrace_Alert(NetOffice.PerformanceTrace sender, NetOffice.PerformanceTrace.PerformanceAlertEventArgs args)
+        {
+            Console.WriteLine("{0}:{1} {2} Milliseconds", args.EntityName, args.MethodName, args.TimeElapsedMS);
         }
     }
 }

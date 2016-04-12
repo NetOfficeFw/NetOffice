@@ -51,6 +51,7 @@
             this.listViewInboxFolder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listViewInboxFolder.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewInboxFolder.Location = new System.Drawing.Point(36, 109);
             this.listViewInboxFolder.MultiSelect = false;
             this.listViewInboxFolder.Name = "listViewInboxFolder";
@@ -83,6 +84,7 @@
             // 
             // buttonStartExample
             // 
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -98,6 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.labelItemsCount);
             this.Controls.Add(this.listViewInboxFolder);
             this.Controls.Add(this.textBox1);

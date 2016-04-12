@@ -1,0 +1,30 @@
+﻿[1031]
+labelBeginTitle = Einstieg
+labelBeginTop = Die NetOffice Developer Toolbox unterstützt den .NET Office Entwickler in seiner täglichen Arbeit mit einer Reihe von hilfreichen Funktionen.
+labelBeginBottom = In jeder Registerkarte finden Sie in der oberen rechten Ecke einen Hilfe Button. Wenn Sie Fragen, Anregungen, Kommentare oder Wünsche zur Developer Toolbox haben freuen wir uns auf Ihre Nachricht.
+checkBoxMinimizeToTray = Bei Minimierung in den Tray Bereich verschieben
+checkBoxStartAppWithWindows = Mit Windows starten
+checkBoxStartAppMinimized = Minimiert starten
+labelIWant = Ich möchte
+labelBug = einen Bug melden
+labelUpdate = auf ein Update prüfen
+labelQuestion = eine Frage stellen
+labelMailMe = einen Verbesserungsvorschlag machen
+labelLanguage = Sprache
+buttonLanguageEditor = Sprachen Editor
+[End]
+[1033]
+labelBeginTitle = Welcome
+labelBeginTop = The NetOffice Developer Toolbox supports .NET Office developers in his daily work with a set of helpful functions.
+labelBeginBottom = You can find a help button in the upper right corner of every tab. I am looking forward to your message if you have any questions, suggestions, comments or requests regarding the Developer Toolbox.
+checkBoxMinimizeToTray = Send to tray at minimize
+checkBoxStartAppWithWindows = Start with Windows
+checkBoxStartAppMinimized = Start minimized
+labelIWant = I want to
+labelBug = report a bug
+labelUpdate = check for an update
+labelQuestion = ask a question
+labelMailMe = make a suggestion
+labelLanguage = Language
+buttonLanguageEditor = Language Editor
+[End]

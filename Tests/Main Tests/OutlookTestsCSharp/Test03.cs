@@ -41,7 +41,7 @@ namespace OutlookTestsCSharp
             {
                 // start outlook
                 application = new Outlook.Application();
-                NetOffice.OutlookSecurity.Supress.Enabled = true;
+                NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 // Create a new MailItem.
                 Outlook.MailItem mailItem = application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
@@ -65,7 +65,6 @@ namespace OutlookTestsCSharp
                     application.Quit();
                     application.Dispose();
                 }
-                NetOffice.OutlookSecurity.Supress.Enabled = false;
             }
         }
 

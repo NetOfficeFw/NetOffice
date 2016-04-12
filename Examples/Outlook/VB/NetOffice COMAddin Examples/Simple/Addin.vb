@@ -13,7 +13,7 @@ Imports NetOffice.OutlookApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample Outlook Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("B4A1EEBF-0C21-4971-9D4D-1980EED534CE"), ProgId("SimpleOutlookVB4.Addin"), Tweak(True)> _
+<Guid("B4A1EEBF-0C21-4971-9D4D-1980EED534CE"), ProgId("SimpleOutlookVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 

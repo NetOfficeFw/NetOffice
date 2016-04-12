@@ -2,6 +2,7 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
+Imports NetOffice.WordApi.Tools.Utils
 
 Public Class Example03
     Implements IExample
@@ -16,6 +17,9 @@ Public Class Example03
         Dim wordApplication As Word.Application
         wordApplication = New Word.Application()
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
+
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As CommonUtils = New CommonUtils(wordApplication)
 
         'add a new document
         Dim newDocument As Word.Document
@@ -93,14 +97,9 @@ Public Class Example03
         wordApplication.Selection.Range.ListFormat.ListOutdent()
         wordApplication.Selection.TypeText("Questions & Answers")
 
-        ' we save the document as .doc for compatibility with all word versions
-        Dim documentFile As String = String.Format("{0}\Example03{1}", _hostApplication.RootDirectory, ".doc")
-        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
-        If (wordVersion >= 12.0) Then
-            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
-        Else
-            newDocument.SaveAs(documentFile)
-        End If
+        'save document
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Word.Tools.DocumentFormat.Normal)
+        newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()

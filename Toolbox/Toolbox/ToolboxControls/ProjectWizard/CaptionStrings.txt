@@ -1,0 +1,36 @@
+﻿[1033]
+EnvironmentCaption = Environment
+EnvironmentDescription = The assistent prepare the implementation for you.
+FinishCaption = The Project is successfully completed
+FinishDescription = We wish you much success in your work
+GuiCaption = User Interface
+GuiDescription = The assistent prepare the implementation for you.
+HostCaption = Which Office applications you want support?
+HostDescription = Select one or more Office application(s).
+LoadCaption = Choose Load Behavior options
+LoadDescription = Decide when it has to be loaded
+NameCaption = Informations about your assembly.
+NameDescription = These informations are visible for your customers.
+ProjectCaption = Project Type
+ProjectDescription = Select your project type.
+SummaryCaption = Done!
+SummaryDescription = Check your settings and lets get started.
+[End]
+[1031]
+EnvironmentCaption = Umgebung
+EnvironmentDescription = Der Assistent kann die Implementierung für Sie vorbereiten.
+FinishCaption = Das Projekt wurde erfolgreich erstellt
+FinishDescription = Viel Erfolg bei der Arbeit.
+GuiCaption = Benutzerschnittstelle
+GuiDescription = Der Assistent kann die Implementierung für Sie vorbereiten.
+HostCaption = Welche Office Anwendungen möchten Sie unterstützen?
+HostDescription = Wählen Sie eine oder mehrere Office Anwendungen.
+LoadCaption = Ladeverhalten festlegen
+LoadDescription = Entscheiden Sie wann und von wem Ihr Addin geladen wird.
+NameCaption = Tragen Sie Informationen zu Ihrem Assembly ein.
+NameDescription = Diese Informationen sind für Anwender sichtbar.
+ProjectCaption = Project Typ
+ProjectDescription = Was für ein Projekt soll erstellt werden?
+SummaryCaption = Fertig! Nur noch ein Klick bis zur Erstellung.
+SummaryDescription = Prüfen Sie Ihre Einstellungen in der Zusammenfassung.
+[End]

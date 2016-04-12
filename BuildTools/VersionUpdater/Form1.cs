@@ -9,8 +9,16 @@ using System.Windows.Forms;
 
 namespace NOBuildTools.VersionUpdater
 {
+    /// <summary>
+    /// Main form in the application
+    /// </summary>
     public partial class Form1 : Form
     {
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -19,6 +27,10 @@ namespace NOBuildTools.VersionUpdater
             comboBoxToNetVersion.SelectedIndex = 0;             
         }
 
+        #endregion
+
+        #region Methods
+        
         private string GetSelectedFromNetVersion()
         {
             switch (comboBoxFromNetVersion.SelectedIndex)
@@ -60,12 +72,6 @@ namespace NOBuildTools.VersionUpdater
             if (!Directory.Exists(textBoxFolder.Text))
             {
                 MessageBox.Show("Directory not exists", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
-            if (GetSelectedFromNetVersion() == GetSelectedToNetVersion())
-            {
-                MessageBox.Show("Same .NET versions.", "Doooh", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -205,6 +211,12 @@ namespace NOBuildTools.VersionUpdater
 
         private void ChangeNetVersionEntryInProjectFile(ref string fileContent, string toNetVersion)
         {
+            if (toNetVersion != "4.0")
+            {
+                fileContent = fileContent.Replace("<TargetFrameworkProfile>Client</TargetFrameworkProfile>", "");
+            }
+
+
             string net1 = "<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>";
             int position = fileContent.IndexOf(net1);
             if (position > -1)
@@ -244,6 +256,7 @@ namespace NOBuildTools.VersionUpdater
                 fileContent = fileContent.Replace(net4, "<TargetFrameworkVersion>v" + toNetVersion + "</TargetFrameworkVersion>");
                 return;
             }
+
         }
 
         private void ChangeFormatVersionInSolutionFile(ref string fileContent, string toNetVersion)
@@ -292,6 +305,10 @@ namespace NOBuildTools.VersionUpdater
             }
         }
 
+        #endregion
+
+        #region Trigger
+
         private void buttonStart_Click(object sender, EventArgs e)
         {
             if (!CheckPrequsits())
@@ -312,7 +329,7 @@ namespace NOBuildTools.VersionUpdater
 
                     ChangeNetVersionEntryInProjectFile(ref fileContent, netToVersion);
                     ChangeToolsVersionEntryInProjectFile(ref fileContent);
-                    if(checkBoxChangeKeyFiles.Checked)
+                    if (checkBoxChangeKeyFiles.Checked)
                         ChangeKeyFileInProjectFile(ref fileContent, System.IO.Path.GetDirectoryName(file), System.IO.Path.GetFileNameWithoutExtension(file), netToVersion);
 
                     File.Delete(file);
@@ -352,6 +369,11 @@ namespace NOBuildTools.VersionUpdater
                     string fileContent = File.ReadAllText(file);
                     string csMarkerSource = "CS" + netFromVersion.Replace(".", "");
                     string csMarkerTarget = "CS" + netToVersion.Replace(".", "");
+                    if (csMarkerSource.EndsWith("0"))
+                        csMarkerSource = csMarkerSource.Substring(0, csMarkerSource.Length - 1);
+                    if (csMarkerTarget.EndsWith("0"))
+                        csMarkerTarget = csMarkerTarget.Substring(0, csMarkerTarget.Length - 1);
+
                     if (fileContent.IndexOf(csMarkerSource) > -1)
                     {
                         fileContent = fileContent.Replace(csMarkerSource, csMarkerTarget);
@@ -364,6 +386,11 @@ namespace NOBuildTools.VersionUpdater
                     string fileContent = File.ReadAllText(file);
                     string vbMarkerSource = "VB" + netFromVersion.Replace(".", "");
                     string vbMarkerTarget = "VB" + netToVersion.Replace(".", "");
+                    if (vbMarkerSource.EndsWith("0"))
+                        vbMarkerSource = vbMarkerSource.Substring(0, vbMarkerSource.Length - 1);
+                    if (vbMarkerTarget.EndsWith("0"))
+                        vbMarkerTarget = vbMarkerTarget.Substring(0, vbMarkerTarget.Length - 1);
+
                     if (fileContent.IndexOf(vbMarkerSource) > -1)
                     {
                         fileContent = fileContent.Replace(vbMarkerSource, vbMarkerTarget);
@@ -379,7 +406,6 @@ namespace NOBuildTools.VersionUpdater
             FolderBrowserDialog fdg = new FolderBrowserDialog();
             if (DialogResult.OK == fdg.ShowDialog(this))
                 textBoxFolder.Text = fdg.SelectedPath;
-
         }
 
         private void buttonLoadConfig_Click(object sender, EventArgs e)
@@ -432,5 +458,6 @@ namespace NOBuildTools.VersionUpdater
             }
         }
 
+        #endregion
     }
 }

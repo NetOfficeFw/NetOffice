@@ -15,7 +15,7 @@ using NetOffice.ExcelApi;
 namespace NetOfficeTools.SimpleExcelCS4
 {
     [COMAddin("NetOfficeCS4 Sample Excel Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("C7C8C543-251B-4258-9CAB-3BC0C2ADB2BE"), ProgId("SimpleExcelCS4.Addin"), Tweak(true)]
+    [Guid("C7C8C543-251B-4258-9CAB-3BC0C2ADB2BE"), ProgId("SimpleExcelCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()
@@ -27,9 +27,9 @@ namespace NetOfficeTools.SimpleExcelCS4
 
         private void Addin_OnStartupComplete(ref Array custom)
         {
-            // get the host application version
-            string hostVersion = this.Application.Version;
-            Console.WriteLine("Host Application Version is:{0}", hostVersion);
+            // show the host application version
+            string hostVersion = String.Format("Host Application Version is:{0}", this.Application.Version);
+            Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK);
         }
 
         private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)

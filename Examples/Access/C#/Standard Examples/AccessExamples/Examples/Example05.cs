@@ -8,7 +8,6 @@ using System.Text;
 using System.Data;
 using System.Data.OleDb;
 using ExampleBase;
-
 using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
@@ -17,23 +16,32 @@ using NetOffice.OfficeApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
+using NetOffice.AccessApi.Tools.Utils;
 
 namespace AccessExamplesCS4
 {
-    public partial class Example05 : UserControl, IExample
+    /// <summary>
+    /// Example 5 - Customize UI
+    /// </summary>
+    internal partial class Example05 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Fields/Delegates
 
         Access.Application _accessApplication;
-
         private delegate void UpdateEventTextDelegate(string Message);
         UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example05()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -45,17 +53,17 @@ namespace AccessExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
+            get { return HostApplication.LCID == 1033 ? "Example05" : "Beispiel05"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize UI" : "Erweitern der klassischen Oberfläche"; }
+            get { return HostApplication.LCID == 1033 ? "Customize UI" : "Erweitern der klassischen Oberfläche"; }
         }
 
         public UserControl Panel
@@ -65,26 +73,32 @@ namespace AccessExamplesCS4
 
         #endregion
 
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateTextbox(string Message)
+        {
+            textBoxEvents.AppendText(Message + "\r\n");
+        }
+
+        #endregion
+
+        #region Trigger
+
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
             // start access
             _accessApplication = new Access.Application();
-
+            CommonUtils utils = new CommonUtils(_accessApplication);
             Office.CommandBarButton commandBarBtn = null;
 
-            // create database name 
-            string fileExtension = GetDefaultExtension(_accessApplication);
-            string documentFile = string.Format("{0}\\Example05{1}", _hostApplication.RootDirectory, fileExtension);
-
-            // delete old database if exists
-            if (System.IO.File.Exists(documentFile))
-                System.IO.File.Delete(documentFile);
-
-            // create database 
-            DAO.Database newDatabase = _accessApplication.DBEngine.Workspaces[0].CreateDatabase(documentFile, LanguageConstants.dbLangGeneral);
-
             // add a commandbar popup
-            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            Office.CommandBarPopup commandBarPopup = (Office.CommandBarPopup)_accessApplication.CommandBars["Menu Bar"].Controls.Add(MsoControlType.msoControlPopup, null, null, null, true);
             commandBarPopup.Caption = "commandBarPopup";
 
             #region few words, how to access the picture
@@ -100,10 +114,10 @@ namespace AccessExamplesCS4
             #region CommandBarButton
 
             // add a button to the popup
-            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
+            commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, null, null, null, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -112,7 +126,7 @@ namespace AccessExamplesCS4
             // make visible
             _accessApplication.Visible = true;
             buttonStartExample.Enabled = false;
-            buttonQuitExample.Enabled = true; 
+            buttonQuitExample.Enabled = true;
         }
 
         private void buttonQuitExample_Click(object sender, EventArgs e)
@@ -121,43 +135,13 @@ namespace AccessExamplesCS4
             _accessApplication.Dispose();
 
             buttonStartExample.Enabled = true;
-            buttonQuitExample.Enabled = false;       
+            buttonQuitExample.Enabled = false;
         }
 
-        #region Access Trigger
-
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Click called." });
             Ctrl.Dispose();
-        }
-
-        private void UpdateTextbox(string Message)
-        {
-            textBoxEvents.AppendText(Message + "\r\n");
-        }
-
-        #endregion
-
-        #region Helper
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Access.Application application)
-        {
-            // Access 2000 doesnt have the Version property(unfortunately)
-            // we check for support with the SupportEntity method, implemented by NetOffice
-            if (!application.EntityIsAvailable("Version"))
-                return ".mdb";
-
-            double Version = Convert.ToDouble(application.Version);
-            if (Version >= 120.00)
-                return ".accdb";
-            else
-                return ".mdb";
         }
 
         #endregion

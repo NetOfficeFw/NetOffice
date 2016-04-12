@@ -1,6 +1,0 @@
-﻿    <Compile Include="TaskPaneControl.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="TaskPaneControl.Designer.vb">
-      <DependentUpon>TaskPaneControl.vb</DependentUpon>
-    </Compile>

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace NetOfficeTools.ExtendedExcelCS4
 {
-    public partial class SamplePane : UserControl, NetOffice.ExcelApi.Tools.ITaskPane
+    public partial class SamplePane : UserControl, NetOffice.ExcelApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
     {
         #region Ctor
 
@@ -36,6 +36,16 @@ namespace NetOfficeTools.ExtendedExcelCS4
         public void OnDisconnection()
         {
 
+        }
+
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+            
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+            
         }
 
         #endregion
@@ -70,7 +80,6 @@ namespace NetOfficeTools.ExtendedExcelCS4
         {
             TimeSpan ts = DateTime.Now - StartTime;
             labelTime.Text = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-
         }
 
         #endregion

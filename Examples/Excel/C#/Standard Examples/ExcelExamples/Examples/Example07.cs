@@ -1,24 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
-
-using NetOffice;
+using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using VB = NetOffice.VBIDEApi;
 using NetOffice.ExcelApi.Enums;
 using NetOffice.VBIDEApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
-    class Example07 : IExample
+    /// <summary>
+    /// Example 7 - Attach VBA Code to a workbook
+    /// </summary>
+    internal class Example07 : IExample
     {
-        IHost _hostApplication;
-
         #region IExample Member
 
         public void RunExample()
@@ -32,6 +29,9 @@ namespace ExcelExamplesCS4
                 excelApplication = new Excel.Application();
                 excelApplication.DisplayAlerts = false;
                 excelApplication.Visible = false;
+
+                // create a utils instance, not need for but helpful to keep the lines of code low
+                CommonUtils utils = new CommonUtils(excelApplication);
 
                 // add a new workbook
                 Excel.Workbook workBook = excelApplication.Workbooks.Add();
@@ -55,16 +55,14 @@ namespace ExcelExamplesCS4
                 sheet.Cells[8, 2].Value = "Do a double click to catch the BeforeDoubleClick Event from this Worksheet.";
 
                 // save the book 
-                string fileExtension = GetDefaultExtension(excelApplication);
                 XlFileFormat fileFormat = GetFileFormat(excelApplication);
-                workbookFile = string.Format("{0}\\Example07{1}", _hostApplication.RootDirectory, fileExtension);
+                workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example07", Excel.Tools.DocumentFormat.Macros);
                 workBook.SaveAs(workbookFile, fileFormat);
-
             }
             catch (System.Runtime.InteropServices.COMException throwedException)
             {
                 isFailed = true;
-                _hostApplication.ShowErrorDialog("VBA Error", throwedException);
+                HostApplication.ShowErrorDialog("VBA Error", throwedException);
             }
             finally
             {
@@ -73,23 +71,23 @@ namespace ExcelExamplesCS4
                 excelApplication.Dispose();
 
                 if ((null != workbookFile) && (!isFailed))
-                    _hostApplication.ShowFinishDialog(null, workbookFile);
+                    HostApplication.ShowFinishDialog(null, workbookFile);
             }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
+            get { return HostApplication.LCID == 1033 ? "Example07" : "Beispiel07"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
+            get { return HostApplication.LCID == 1033 ? "Attach VBA Code to a workbook. The option 'Trust Visual Basic projects' must be set." : "Dynamisches hinzufügen von VBA Code zu einem Workbook. Die Option 'Visual Basic Projekten vertrauen' muss aktiviert sein."; }
         }
 
         public UserControl Panel
@@ -99,38 +97,23 @@ namespace ExcelExamplesCS4
   
         #endregion
 
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
         #region Helper
 
         /// <summary>
-        /// Translate a color to double
-        /// </summary>
-        /// <param name="color">expression to convert</param>
-        /// <returns>color</returns>
-        private static double ToDouble(System.Drawing.Color color)
-        {
-            uint returnValue = color.B;
-            returnValue = returnValue << 8;
-            returnValue += color.G;
-            returnValue = returnValue << 8;
-            returnValue += color.R;
-            return returnValue;
-        }
-
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
+        /// Returns the valid file format for the instance. Documents with macro's need a bit xtra config since 2007
         /// </summary>
         /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsm";
-            else
-                return ".xls";
-        }
-
-        private XlFileFormat GetFileFormat(Excel.Application application)
+        /// <returns>the format</returns>
+        private static XlFileFormat GetFileFormat(Excel.Application application)
         {
             double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
             if (Version >= 12.00)

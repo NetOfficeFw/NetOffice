@@ -23,7 +23,7 @@ namespace NetOffice.Tools
     /// <summary>
     /// Specify the addin registry keys for office was created in the Machine key or current user
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class)]
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class RegistryLocationAttribute : System.Attribute
     {
         /// <summary>

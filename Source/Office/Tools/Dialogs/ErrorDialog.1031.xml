@@ -1,0 +1,40 @@
+﻿<Dialog Name ="ErrorDialog" LCID="1031">
+  <String>
+    <String>
+      <Name>Title</Name>
+      <Value>Fehler</Value>
+    </String>
+    <String>
+      <Name>ErrorHeader</Name>
+      <Value>Leider ist ein Fehler aufgetreten.</Value>
+    </String>
+    <String>
+      <Name>ErrorMessage</Name>
+      <Value>Es ist keine Fehlerbeschreibung verfügbar.</Value>
+    </String>    
+    <String>
+      <Name>Message</Name>
+      <Value>Beschreibung</Value>
+    </String>    
+    <String>
+      <Name>Type</Name>
+      <Value>Typ</Value>
+    </String>
+    <String>
+      <Name>Source</Name>
+      <Value>Quelle</Value>
+    </String>
+    <String>
+      <Name>buttonShowDetails</Name>
+      <Value>Fehlerprotokoll anzeigen</Value>
+    </String>    
+    <String>
+      <Name>buttonClipboardCopy</Name>
+      <Value>In die Zwischenablage kopieren</Value>
+    </String>
+    <String>
+      <Name>buttonClose</Name>
+      <Value>Schliessen</Value>
+    </String>
+  </String>
+</Dialog>

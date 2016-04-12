@@ -1,0 +1,20 @@
+﻿[1031]
+labelCaption = Unterdrücken Sie die Security Abfrage in Outlook.
+checkBoxSupressEnabled = Unterdrückung eingeschaltet
+labelSupressThisDialog = Diesen Dialog unterdrücken
+labelDidYouKnow = Wussten Sie schon... ?
+labelHint = Outlook bietet je nach Version verschiedene Wege an diesen Dialog für Ihr Addin nicht anzuzeigen.
+labelSources = Informationsquellen:
+labelLog = Protokoll
+labelMessages = <Keine Einträge>
+[End]
+[1033]
+labelCaption = Suppress the Security Conformation in Outlook.
+checkBoxSupressEnabled = Suppress enabled
+labelSupressThisDialog = Suppress this Dialog
+labelDidYouKnow = Did you know... ?
+labelHint = Outlook provides -depending on the version- several ways to suppress this dialog for your Addin.
+labelSources = Sources of information:
+labelLog = Protocol
+labelMessages = <No Entries>
+[End]

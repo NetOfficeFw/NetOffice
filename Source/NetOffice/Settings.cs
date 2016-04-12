@@ -23,18 +23,6 @@ namespace NetOffice
 
         #endregion
 
-        #region Ctor
-
-        /// <summary>
-        /// Creates an instance of the class
-        /// </summary>
-        public Settings()
-        {
-            _messageFilter = new RetryMessageFilter();
-        }
-
-        #endregion
-
         #region Fields
 
         private CultureInfo _cultureInfo;
@@ -54,6 +42,22 @@ namespace NetOffice
         private bool _enableOperatorOverlads = true;
         private string _exceptionMessage = "See inner exception(s) for details.";
         private ExceptionMessageHandling _copyInnerExceptionMessage;
+        private bool _loadAssembliesUnsafe = false;
+        private PerformanceTrace _performanceTrace;
+        private static Settings _default;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
+        public Settings()
+        {
+            _messageFilter = new RetryMessageFilter();
+            _performanceTrace = new PerformanceTrace();
+        }
 
         #endregion
 
@@ -71,7 +75,17 @@ namespace NetOffice
                 return _default;
             }
         }
-        private static Settings _default;
+      
+        /// <summary>
+        /// Performance tracer to see how long its need to call and return all or specific actions
+        /// </summary>
+        public PerformanceTrace PerformanceTrace
+        {
+            get
+            {
+                return _performanceTrace;
+            }
+        }
 
         /// <summary>
         /// Enable the NetOffice COM proxy management. true by default
@@ -209,7 +223,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
+        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EnableAdHocLoading
@@ -225,7 +239,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set the Initialize method perform a deep level analyzing(may cause security issues)
+        /// Get or set the Initialize method perform a deep level analyzing(may cause security issues). true by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EnableDeepLoading
@@ -301,7 +315,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get or set Factory.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
+        /// Get or set Core.Initialize() try to load non loaded dependend assemblies to fetch type informations. KeepExistingCacheAlive by default
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CacheOptions CacheOptions
@@ -329,6 +343,22 @@ namespace NetOffice
             set
             {
                 _enableOperatorOverlads = value;
+            }
+        }
+
+        /// <summary>
+        /// Get or set NetOffice try load dependent assemblies unsafe(System.Reflection.Assembly.UnsafeLoadFrom). false by default
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public bool LoadAssembliesUnsafe
+        {
+            get
+            {
+                return _loadAssembliesUnsafe;
+            }
+            set
+            {
+                _loadAssembliesUnsafe = value;
             }
         }
 

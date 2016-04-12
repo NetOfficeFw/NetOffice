@@ -41,6 +41,7 @@
             // 
             // textBoxBody
             // 
+            this.textBoxBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBody.Location = new System.Drawing.Point(91, 162);
             this.textBoxBody.Multiline = true;
             this.textBoxBody.Name = "textBoxBody";
@@ -51,6 +52,7 @@
             // 
             // textBoxSubject
             // 
+            this.textBoxSubject.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxSubject.Location = new System.Drawing.Point(91, 136);
             this.textBoxSubject.Name = "textBoxSubject";
             this.textBoxSubject.Size = new System.Drawing.Size(610, 20);
@@ -59,6 +61,7 @@
             // 
             // textBoxReciever
             // 
+            this.textBoxReciever.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxReciever.Location = new System.Drawing.Point(91, 110);
             this.textBoxReciever.Name = "textBoxReciever";
             this.textBoxReciever.Size = new System.Drawing.Size(610, 20);
@@ -107,6 +110,7 @@
             // 
             // buttonStartExample
             // 
+            this.buttonStartExample.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStartExample.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStartExample.Image = ((System.Drawing.Image)(resources.GetObject("buttonStartExample.Image")));
             this.buttonStartExample.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.textBoxBody);
             this.Controls.Add(this.textBoxSubject);
             this.Controls.Add(this.textBoxReciever);

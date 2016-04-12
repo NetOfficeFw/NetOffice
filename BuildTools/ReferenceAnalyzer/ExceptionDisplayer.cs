@@ -5,8 +5,16 @@ using System.Text;
 
 namespace NOBuildTools.ReferenceAnalyzer
 {
+    /// <summary>
+    /// Exception display helper
+    /// </summary>
     internal static class ExceptionDisplayer
     {
+        /// <summary>
+        /// Shows exception as string message box to the user
+        /// </summary>
+        /// <param name="parent">modal parent</param>
+        /// <param name="exception">exception as any</param>
         public static void ShowException(IWin32Window parent, Exception exception)
         {
             string message = "An error is occured." + Environment.NewLine;

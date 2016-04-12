@@ -44,6 +44,7 @@
             this.listViewTrace.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.listViewTrace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewTrace.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
@@ -51,6 +52,7 @@
             this.columnHeader8});
             this.listViewTrace.FullRowSelect = true;
             this.listViewTrace.GridLines = true;
+            this.listViewTrace.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewTrace.Location = new System.Drawing.Point(26, 119);
             this.listViewTrace.Name = "listViewTrace";
             this.listViewTrace.Size = new System.Drawing.Size(423, 206);
@@ -84,17 +86,20 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.labelErrorMessage.Location = new System.Drawing.Point(81, 24);
             this.labelErrorMessage.Name = "labelErrorMessage";
-            this.labelErrorMessage.Size = new System.Drawing.Size(366, 30);
+            this.labelErrorMessage.Size = new System.Drawing.Size(366, 46);
             this.labelErrorMessage.TabIndex = 28;
-            this.labelErrorMessage.Text = "<Leer>";
+            this.labelErrorMessage.Text = "<Empty>";
             // 
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonOK.Location = new System.Drawing.Point(373, 73);
+            this.buttonOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOK.Image = ((System.Drawing.Image)(resources.GetObject("buttonOK.Image")));
+            this.buttonOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOK.Location = new System.Drawing.Point(331, 73);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(74, 22);
+            this.buttonOK.Size = new System.Drawing.Size(116, 27);
             this.buttonOK.TabIndex = 26;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -113,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.CancelButton = this.buttonOK;
             this.ClientSize = new System.Drawing.Size(473, 340);
             this.Controls.Add(this.listViewTrace);

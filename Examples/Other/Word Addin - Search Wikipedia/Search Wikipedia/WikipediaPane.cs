@@ -15,10 +15,21 @@ namespace Sample.Addin
 { 
     /// <summary>
     /// Custom pane for Word. The control implements the ITaskPane interface from NetOffice.WordApi.Tools
-    /// Learn more about the NetOffice Tools namespace: http://netoffice.codeplex.com/wikipage?title=Tools_EN
     /// </summary>
-    public partial class WikipediaPane : UserControl, ITaskPane 
+    public partial class WikipediaPane : UserControl, ITaskPane
     {
+        #region Delegates
+
+        /// <summary>
+        /// Error Async Invoker. Of course ActionT works as well but this example is also available in .NET 2.0
+        /// </summary>
+        /// <param name="exception">exception to display</param>
+        public delegate void DisplayErrorAction(Exception exception);
+
+        #endregion
+
+        #region Ctor
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
@@ -35,8 +46,31 @@ namespace Sample.Addin
                 DisplayError(exception);
             }
         }
-    
-        WikipediaContext Datacontext { get; set; }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// The connection to wikipedia
+        /// </summary>
+        internal WikipediaContext Datacontext { get; private set; }
+        
+        #endregion
+
+        #region Methods
+
+        private bool WaitForCancelation(int timeOutMS)
+        {
+            DateTime start = DateTime.Now;
+            while (backgroundWorker1.IsBusy && (DateTime.Now - start).TotalMilliseconds < timeOutMS)
+            {
+                ;
+            }
+            return !backgroundWorker1.IsBusy;
+        }
+
+        #endregion
 
         #region UI Trigger
 
@@ -44,10 +78,12 @@ namespace Sample.Addin
         {
             try
             {
+                // run async(otherwise search is block the Word UI) we wait a second for cancelation if backgroundworker is currently busy
                 ClearError();
-                var opensearch = (from wikipedia in Datacontext.OpenSearch where wikipedia.Keyword == textBoxKeyWords.Text select wikipedia).Take(100);
-                gridResults.DataSource = opensearch.ToList();
-
+                if (backgroundWorker1.IsBusy)
+                    backgroundWorker1.CancelAsync();
+                if(WaitForCancelation(1000))
+                    backgroundWorker1.RunWorkerAsync(textBoxKeyWords.Text);
             }
             catch (Exception exception)
             {
@@ -101,14 +137,13 @@ namespace Sample.Addin
             {
                 DisplayError(exception);
             }
-           
         }
 
         #endregion
 
         #region Word Trigger
 
-        void Application_WindowSelectionChangeEvent(NetOffice.WordApi.Selection Sel)
+        private void Application_WindowSelectionChangeEvent(NetOffice.WordApi.Selection Sel)
         {
             try
             {
@@ -139,25 +174,87 @@ namespace Sample.Addin
         
         }
 
+        public void OnDockPositionChanged(MsoCTPDockPosition position)
+        {
+
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+
+        }
+
         #endregion
 
         #region Methods
 
         private void ClearError()
         {
-            labelMessage.ForeColor = Color.FromKnownColor(KnownColor.DarkBlue);
-            labelMessage.Text = "Double click in the result list to open the article in your Web Browser.";
+            if (labelMessage.InvokeRequired)
+            {
+                MethodInvoker invoker = ClearError;
+                invoker.Invoke();
+            }
+            else
+            {
+                labelMessage.ForeColor = Color.FromKnownColor(KnownColor.DarkBlue);
+                labelMessage.Text = "Double click in the result list to open the article in your Web Browser.";
+            }
         }
 
         private void DisplayError(Exception exception)
         {
-            labelMessage.ForeColor = Color.Red;
-            labelMessage.Text = "An error ocurred. Details:" + exception.Message;
+            if (labelMessage.InvokeRequired)
+            {
+                DisplayErrorAction invoker = DisplayError;
+                invoker.Invoke(exception);
+            }
+            else
+            {
+                labelMessage.ForeColor = Color.Red;
+                labelMessage.Text = "An error ocurred. Details:" + exception.Message;
+            }
         }
 
         private void ClearResult()
         {
-            gridResults.Rows.Clear();
+            if (gridResults.InvokeRequired)
+            {
+                MethodInvoker invoker = ClearResult;
+                invoker.Invoke();
+            }
+            else
+            {
+                gridResults.Rows.Clear();
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                string search = e.Argument as string;
+                var opensearch = (from wikipedia in Datacontext.OpenSearch where wikipedia.Keyword == search select wikipedia).Take(100);
+                e.Result = opensearch.ToList();
+            }
+            catch (Exception exception)
+            {
+                DisplayError(exception);                
+            }
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            try
+            {
+                ClearError();
+                List<WikipediaOpenSearchResult> result = e.Result as List<WikipediaOpenSearchResult>;
+                gridResults.DataSource = result;
+            }
+            catch (Exception exception)
+            {
+                DisplayError(exception);
+            }
         }
 
         #endregion

@@ -1,0 +1,10 @@
+﻿		public bool TooglePaneVisibleButton_GetPressed(Office.IRibbonControl control)
+		{
+			return TaskPanes.Count > 0 ? TaskPanes[0].Visible : false;
+		}
+
+		public void TooglePaneVisibleButton_Click(Office.IRibbonControl control, bool pressed)
+		{
+			if(TaskPanes.Count > 0)
+				TaskPanes[0].Visible = pressed;
+		}

@@ -1,28 +1,34 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Reflection;
-
-using NetOffice;
-using Excel = NetOffice.ExcelApi;
-using Office = NetOffice.OfficeApi;
-using NetOffice.OfficeApi.Enums;
 using ExampleBase;
+using Office = NetOffice.OfficeApi;
+using Excel = NetOffice.ExcelApi;
+using NetOffice.OfficeApi.Enums;
 
 namespace ExcelExamplesCS4
 {
+    /// <summary>
+    /// Example 9 - Customize classic UI and recieve events
+    /// </summary>
     partial class Example09 : UserControl , IExample
     {
-        IHost _hostApplication;
-        Excel.Application _excelApplication;
+        #region Fields/Delegates
 
+        private Excel.Application _excelApplication;
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example09()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -34,23 +40,32 @@ namespace ExcelExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example09" : "Beispiel09"; }
+            get { return HostApplication.LCID == 1033 ? "Example09" : "Beispiel09"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
+            get { return HostApplication.LCID == 1033 ? "Customize classic UI without ribbons and recieve click events" : "Erweitern der klassischen Oberfläche und beziehen von Click Events"; }
         }
      
         public UserControl Panel
         {
             get { return this; }
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 
@@ -88,10 +103,10 @@ namespace ExcelExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
-            
+
             #endregion
 
             #region Create a new toolbar
@@ -115,7 +130,7 @@ namespace ExcelExamplesCS4
             commandBarBtn = (Office.CommandBarButton)commandBarPopup.Controls.Add(MsoControlType.msoControlButton, System.Type.Missing, System.Type.Missing, System.Type.Missing, true);
             commandBarBtn.Style = MsoButtonStyle.msoButtonIconAndCaption;
             commandBarBtn.Caption = "commandBarButton";
-            Clipboard.SetDataObject(_hostApplication.DisplayIcon.ToBitmap());
+            Clipboard.SetDataObject(HostApplication.DisplayIcon.ToBitmap());
             commandBarBtn.PasteFace();
             commandBarBtn.ClickEvent += new Office.CommandBarButton_ClickEventHandler(commandBarBtn_Click);
 
@@ -166,7 +181,7 @@ namespace ExcelExamplesCS4
 
         #region Excel Trigger
 
-        void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
+        private void commandBarBtn_Click(Office.CommandBarButton Ctrl, ref bool CancelDefault)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Click called." });
             Ctrl.Dispose();

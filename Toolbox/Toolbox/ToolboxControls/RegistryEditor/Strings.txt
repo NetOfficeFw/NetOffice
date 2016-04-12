@@ -1,0 +1,36 @@
+﻿[1031]
+labelTitle = Office Registry Keys auf einen Blick.
+checkBoxDeleteQuestion = Vor dem Löschen nachfragen
+labelNoAdminHint = Aufgrund fehlender Administratorberechtigung können Sie keine Werte im HiveKey LocalMachine hinzufügen, löschen oder ändern.
+buttonRefresh = Aktualisieren
+toolStripKeyCreate = Neu
+toolStripKeyDelete = Löschen
+toolStripKeyEdit = Umbenennen
+toolStripCreateEntry = Neuer Wert
+toolStripCreateStringEntry = Zeichenfolge
+toolStripCreateBinaryEntry = Binärwert
+toolStripCreateDWORDEntry = DWORD
+toolStripEditEntryValue = Wert ändern
+toolStripDeleteEntry = Löschen
+toolStripEditEntryName = Umbenennen
+contextMenuStripNoAdmin = Keine Administrator Rechte
+labelSearch = Suchen
+[End]
+[1033]
+labelTitle = Office Registry Keys at a glance
+checkBoxDeleteQuestion = Ask before deleting
+labelNoAdminHint = Due to missing administrator privileges you cannot add, delete or change values in the HiveKey LocalMachine.
+buttonRefresh = Refresh    
+toolStripKeyCreate = New
+toolStripKeyDelete = Delete
+toolStripKeyEdit = Rename
+toolStripCreateEntry = New Value
+toolStripCreateStringEntry = String
+toolStripCreateBinaryEntry = Binary Value
+toolStripCreateDWORDEntry = DWORD
+toolStripEditEntryValue = Change Value
+toolStripDeleteEntry = Delete
+toolStripEditEntryName = Rename
+contextMenuStripNoAdmin = No Administrator Privileges
+labelSearch = Search
+[End]

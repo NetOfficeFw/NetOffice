@@ -25,6 +25,7 @@ namespace NetOffice.OutlookApi
 	public delegate void Explorer_BeforeItemPasteEventHandler(ref object ClipboardContent, NetOffice.OutlookApi.MAPIFolder Target, ref bool Cancel);
 	public delegate void Explorer_AttachmentSelectionChangeEventHandler();
 	public delegate void Explorer_InlineResponseEventHandler(COMObject Item);
+    public delegate void Explorer_InlineResponseCloseEventHandler();
 	#pragma warning restore
 
 	#endregion
@@ -563,6 +564,29 @@ namespace NetOffice.OutlookApi
 				_InlineResponseEvent -= value;
 			}
 		}
+
+        /// <summary>
+        /// SupportByVersion Outlook, 15
+        /// </summary>
+        private event Explorer_InlineResponseCloseEventHandler _InlineResponseCloseEvent;
+
+        /// <summary>
+        /// SupportByVersion Outlook 15
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/jj229061.aspx </remarks>
+        [SupportByVersion("Outlook", 15)]
+        public event Explorer_InlineResponseCloseEventHandler InlineResponseCloseEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _InlineResponseCloseEvent += value;
+            }
+            remove
+            {
+                _InlineResponseCloseEvent -= value;
+            }
+        }
 
 		#endregion
        

@@ -7,10 +7,39 @@ using System.Text;
 
 namespace NOBuildTools.SearchAndReplace
 {
+    /// Progress log action handler
+    /// </summary>
+    /// <param name="message">log action message</param>
     public delegate void LogAction(string message);
 
+    /// <summary>
+    /// Search and replace logic for text files
+    /// </summary>
     internal static class SearchAndReplaceManager
     {
+        /// <summary>
+        /// Read all files in a directory and replace arg search with arg replace in file content(s)
+        /// </summary>
+        /// <param name="directoryName">target root directory</param>
+        /// <param name="fileFilter">exclude filter as file extension</param>
+        /// <param name="search">search expression</param>
+        /// <param name="replace">replace value</param>
+        /// <param name="func">log handler</param>
+        public static void SearchAndReplace(string directoryName, string fileFilter, string search, string replace, LogAction func)
+        {
+            if (!Directory.Exists(directoryName))
+                throw new DirectoryNotFoundException(directoryName);
+            if (null == func || String.IsNullOrWhiteSpace(replace) || String.IsNullOrWhiteSpace(search) || String.IsNullOrWhiteSpace(fileFilter) || String.IsNullOrWhiteSpace(directoryName))
+                throw new ArgumentNullException();
+
+            string[] filterArray = BuildFilterArray(fileFilter);
+            string[] searchArray = BuildSearchArray(search);
+            string[] replaceArray = BuildReplaceArray(replace);
+            if (searchArray.Length != replaceArray.Length)
+                throw new FormatException("Search and Repleace terms count must equal");
+            SearchAndReplace(directoryName, filterArray, searchArray, replaceArray, func);
+        }
+
         private static string[] BuildFilterArray(string fileFilter)
         {
             List<string> list = new List<string>();
@@ -173,21 +202,6 @@ namespace NOBuildTools.SearchAndReplace
                 func("File reading error." + exception.ToString());
                 return false;
             }
-        }
-
-        public static void SearchAndReplace(string directoryName, string fileFilter, string search, string replace, LogAction func)
-        { 
-            if(!Directory.Exists(directoryName))
-                throw new DirectoryNotFoundException(directoryName);
-            if (null == func || String.IsNullOrWhiteSpace(replace) || String.IsNullOrWhiteSpace(search) || String.IsNullOrWhiteSpace(fileFilter) || String.IsNullOrWhiteSpace(directoryName))
-                throw new ArgumentNullException();
-
-            string[] filterArray = BuildFilterArray(fileFilter);
-            string[] searchArray = BuildSearchArray(search);
-            string[] replaceArray = BuildReplaceArray(replace);
-            if (searchArray.Length != replaceArray.Length)
-                throw new FormatException("Search and Repleace terms count must equal");
-            SearchAndReplace(directoryName, filterArray, searchArray, replaceArray, func);
         }
 
         private static void DeleteBackupFile(string fileName)

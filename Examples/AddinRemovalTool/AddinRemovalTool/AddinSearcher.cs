@@ -14,18 +14,27 @@ namespace AddinRemovalTool
 
     public delegate void ActionEventHandler(ActionType type, string action);
     
-    class AddinSearcher : List<AddinEntry>
+    internal class AddinSearcher : List<AddinEntry>
     {
-        #region Properties
+        #region Ctor
 
-        string[] Products = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access", "SuperAddin" };
+        public AddinSearcher()
+        {
+            Refresh();
+        }
+
+        #endregion
+
+        #region Properties / Events
+
+        string[] Products = new string[] { "Excel", "Word", "Outlook", "PPoint", "Access" };
         string[] Runtimes = new string[] { "2", "3", "35", "4", "45" };
         string[] Languages = new string[] { "CS", "VB" };
-        string[] Names = new string[] { "SimpleAddin", "RibbonAddin", "TaskPaneAddin", "Addin" };
-
-        string[] KnownAddins = new string[] { @"Software\Microsoft\Office\Excel\Addins\Sample.ExcelAddin",
-                                              @"Software\Microsoft\Office\Word\Addins\Sample.WordAddin", 
-                                              @"Software\Microsoft\Office\Outlook\Addins\Sample.TwitterAddin" };
+        string[] Names = new string[] { "Simple", "Extended", "Tweak"};
+        string[] KnownAddins = new string[] { @"Software\Microsoft\Office\Excel\Addins\NOSample.GoogleTranslation",
+                                              @"Software\Microsoft\Office\Word\Addins\NOSample.Wikipedia", 
+                                              @"Software\Microsoft\Office\Outlook\Addins\NOSample.Twitter" };
+        string[] SuperAddins = new string[] { "NOToolsSuperAddin", "SuperAddin" };
 
         private string Actions { get; set; }
 
@@ -46,18 +55,15 @@ namespace AddinRemovalTool
                 Actions += action + Environment.NewLine;
             }
             else
-            { 
-                if(null != Action)
+            {
+                if (null != Action)
                     Action(type, action);
             }
         }
 
         #endregion
 
-        public AddinSearcher()
-        {
-            Refresh();
-        }
+        #region Methods
 
         internal void Refresh()
         {
@@ -67,6 +73,7 @@ namespace AddinRemovalTool
                 this.Clear();
                 FindStandardExampleAddins();
                 FindWellKnownExampleAddins();
+                FindSuperAddins();
             }
             catch (Exception exception)
             {
@@ -90,6 +97,26 @@ namespace AddinRemovalTool
             }
         }
 
+        private void FindSuperAddins()
+        {
+            foreach (string name in SuperAddins)
+            {
+                foreach (string language in Languages)
+                {
+                    foreach (string runtime in Runtimes)
+                    {
+                        foreach (string product in Products)
+                        {
+                            string targetProgID = name + language + runtime + ".Addin";
+                            AddinEntry entry = KeyExists(product, targetProgID);
+                            if (null != entry)
+                                this.Add(entry);
+                        }                        
+                    }
+                }            
+            }
+        }
+
         private void FindStandardExampleAddins()
         {
             foreach (string product in Products)
@@ -100,7 +127,7 @@ namespace AddinRemovalTool
                     {
                         foreach (string name in Names)
                         {
-                            string targetProgID = product + "Addin" + language + runtime + "." + name;
+                            string targetProgID = name + product + language + runtime + ".Addin";
                             AddinEntry entry = KeyExists(product, targetProgID);
                             if (null != entry)
                                 this.Add(entry);
@@ -125,6 +152,9 @@ namespace AddinRemovalTool
         
         private AddinEntry KeyExists(string product, string progID)
         {
+            if (product == "PPoint") // bad hot fix - please dont look!
+                product = "PowerPoint";
+
             RegistryKey key = Registry.CurrentUser.OpenSubKey(String.Format(@"Software\Microsoft\Office\{0}\Addins\{1}", product, progID));
             if(null != key)
             {
@@ -137,5 +167,7 @@ namespace AddinRemovalTool
             else
                 return null;
         }
+
+        #endregion
     }
 }

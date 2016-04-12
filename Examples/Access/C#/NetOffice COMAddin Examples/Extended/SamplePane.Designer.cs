@@ -50,7 +50,7 @@
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.BackColor = System.Drawing.Color.Transparent;
-            this.labelTime.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelTime.ForeColor = System.Drawing.Color.Blue;
             this.labelTime.Location = new System.Drawing.Point(371, 7);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(58, 16);
@@ -60,7 +60,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(279, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 16);
@@ -71,7 +71,9 @@
             // 
             this.buttonEnabled.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEnabled.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonEnabled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEnabled.ForeColor = System.Drawing.Color.Blue;
             this.buttonEnabled.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonEnabled.ImageKey = "alarmclock_run.png";
             this.buttonEnabled.ImageList = this.imageListButtons;
@@ -96,7 +98,9 @@
             // 
             this.buttonReset.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReset.ForeColor = System.Drawing.Color.Blue;
             this.buttonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonReset.ImageKey = "delete2.png";
             this.buttonReset.ImageList = this.imageListButtons;
@@ -121,6 +125,7 @@
             // labelHint
             // 
             this.labelHint.AutoSize = true;
+            this.labelHint.ForeColor = System.Drawing.Color.Blue;
             this.labelHint.Location = new System.Drawing.Point(529, 7);
             this.labelHint.Name = "labelHint";
             this.labelHint.Size = new System.Drawing.Size(248, 16);

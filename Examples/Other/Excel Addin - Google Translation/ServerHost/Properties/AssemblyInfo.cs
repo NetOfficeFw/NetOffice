@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("Sample.ServerHost")]
-[assembly: AssemblyDescription("Sample Server")]
+[assembly: AssemblyTitle("Google Translations Server")]
+[assembly: AssemblyDescription("Demonstrate a local service concept")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("NetOffice")]

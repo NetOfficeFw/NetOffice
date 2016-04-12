@@ -8,187 +8,47 @@ using System.Collections.Generic;
 using NetOffice;
 namespace NetOffice.ExcelApi
 {
+	#pragma warning disable
 	///<summary>
-	/// DispatchInterface IRtdServer 
-	/// SupportByVersion Excel, 10,11,12,14,15
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff822377.aspx
+	/// DispatchInterface IRtdServer SupportByVersionAttribute Excel, 10,11,12,14,15
 	///</summary>
 	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+	[ComImport, ComVisible(true), Guid("EC0E6191-DB51-11D3-8F3E-00C04F3651B8"), TypeLibType((short) 4160)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IRtdServer : COMObject
+	public interface IRtdServer
 	{
-		#pragma warning disable
-		#region Type Information
+		#region Methods
 
-        private static Type _type;
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(10)]
+		Int32 ServerStart([In, MarshalAs(UnmanagedType.Interface)] object CallbackObject);
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IRtdServer);
-                    
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Construction
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[return: MarshalAs(UnmanagedType.Struct)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(11)]
+		object ConnectData([In]Int32 TopicID, [In] object Strings, [In]bool GetNewValues);
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IRtdServer(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(12)]
+		object RefreshData([In]Int32 TopicCount);
 
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(13)]
+		void DisconnectData([In]Int32 TopicID);
 
-		}
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(14)]
+		Int32 Heartbeat();
 
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer(COMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer() : base()
-		{
-		}
-		
-		/// <param name="progId">registered ProgID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRtdServer(string progId) : base(progId)
-		{
-		}
-		
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(15)]
+		void ServerTerminate();
+
 		#endregion
-		
+
 		#region Properties
 
 		#endregion
-
-		#region Methods
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198343.aspx
-		/// </summary>
-		/// <param name="callbackObject">NetOffice.ExcelApi.IRTDUpdateEvent CallbackObject</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public Int32 ServerStart(NetOffice.ExcelApi.IRTDUpdateEvent callbackObject)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(callbackObject);
-			object returnItem = Invoker.MethodReturn(this, "ServerStart", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff195923.aspx
-		/// </summary>
-		/// <param name="topicID">Int32 TopicID</param>
-		/// <param name="strings">object[] Strings</param>
-		/// <param name="getNewValues">bool GetNewValues</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object ConnectData(Int32 topicID, object[] strings, bool getNewValues)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(topicID, (object)strings, getNewValues);
-			object returnItem = Invoker.MethodReturn(this, "ConnectData", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				COMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
-				return newObject;
-			}
-			else
-			{
-				return  returnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197313.aspx
-		/// </summary>
-		/// <param name="topicCount">Int32 TopicCount</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public object[] RefreshData(Int32 topicCount)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(topicCount);
-			object returnItem = Invoker.MethodReturn(this, "RefreshData", paramsArray);
-			if((null != returnItem) && (returnItem is MarshalByRefObject))
-			{
-				COMObject[] newObject = Factory.CreateObjectArrayFromComProxy(this, (object[])returnItem);
-				return newObject;
-			}
-			else
-			{
-				return (object[]) returnItem;
-			}
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff194189.aspx
-		/// </summary>
-		/// <param name="topicID">Int32 TopicID</param>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void DisconnectData(Int32 topicID)
-		{
-			object[] paramsArray = Invoker.ValidateParamsArray(topicID);
-			Invoker.Method(this, "DisconnectData", paramsArray);
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff836824.aspx
-		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public Int32 Heartbeat()
-		{
-			object[] paramsArray = null;
-			object returnItem = Invoker.MethodReturn(this, "Heartbeat", paramsArray);
-			return NetRuntimeSystem.Convert.ToInt32(returnItem);
-		}
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff820931.aspx
-		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void ServerTerminate()
-		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "ServerTerminate", paramsArray);
-		}
-
-		#endregion
-		#pragma warning restore
 	}
 }
+	#pragma warning restore

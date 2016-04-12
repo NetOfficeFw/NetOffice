@@ -1,0 +1,16 @@
+﻿[1031]
+labelHint = Klicken Sie auf die Schaltfläche 'Ein neues Projekt erstellen'
+buttonCreateProject = Ein neues Projekt erstellen
+cancelButton = Abbrechen
+backButton = Zurück
+nextButton = Weiter
+finishButton = Fertig
+[End]
+[1033]
+labelHint = Hit the button 'Create New Project' to start the project wizard.
+buttonCreateProject = Create New Project
+cancelButton = Cancel
+backButton = Back
+nextButton = Next
+finishButton = Finish
+[End]

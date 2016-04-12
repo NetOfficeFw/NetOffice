@@ -1,0 +1,28 @@
+﻿<Dialog Name ="DiagnosticsDialog" LCID="1033">
+  <String>
+    <String>
+      <Name>Title</Name>
+      <Value>Diagnostics</Value>
+    </String>
+    <String>
+      <Name>Type</Name>
+      <Value>Type</Value>
+    </String>
+    <String>
+      <Name>Value</Name>
+      <Value>Value</Value>
+    </String>
+    <String>
+      <Name>buttonClipboardCopy</Name>
+      <Value>Copy to Clipboard</Value>
+    </String>
+    <String>
+      <Name>buttonClose</Name>
+      <Value>Close</Value>
+    </String>
+    <String>
+      <Name>labelAssemblyInfo</Name>
+      <Value>Technical Environment</Value>
+    </String>
+  </String>
+</Dialog>

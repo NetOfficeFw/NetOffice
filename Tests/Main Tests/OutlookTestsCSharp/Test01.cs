@@ -41,7 +41,7 @@ namespace OutlookTestsCSharp
             {
                 // start outlook
                 application = new Outlook.Application();
-                NetOffice.OutlookSecurity.Supress.Enabled = true;
+                NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 // Get inbox 
                 Outlook._NameSpace outlookNS = application.GetNamespace("MAPI");
@@ -80,7 +80,6 @@ namespace OutlookTestsCSharp
                     application.Quit();
                     application.Dispose();
                 }
-                NetOffice.OutlookSecurity.Supress.Enabled = false;
             }
         }
 

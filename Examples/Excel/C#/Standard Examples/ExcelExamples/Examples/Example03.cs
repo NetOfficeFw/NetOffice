@@ -1,31 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using System.Globalization;
 using ExampleBase;
-
-using NetOffice;
 using Excel = NetOffice.ExcelApi;
-using NetOffice.ExcelApi.Enums;
-using NetOffice.VBIDEApi.Enums;
+using NetOffice.ExcelApi.Tools.Utils;
 
 namespace ExcelExamplesCS4
 {
-    class Example03 : IExample
+    /// <summary>
+    /// Example 3 - Using Numberformats
+    /// </summary>
+    internal class Example03 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {         
             // start excel and turn Application msg boxes
             Excel.Application excelApplication = new Excel.Application();
             excelApplication.DisplayAlerts = false;
-
+            
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(excelApplication);
+         
             // add a new workbook
             Excel.Workbook workBook = excelApplication.Workbooks.Add();
             Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
@@ -113,8 +110,7 @@ namespace ExcelExamplesCS4
             workSheet.Columns[4].AutoFit();
 
             // save the book 
-            string fileExtension = GetDefaultExtension(excelApplication);
-            string workbookFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+            string workbookFile = utils.File.Combine(HostApplication.RootDirectory, "Example03", Excel.Tools.DocumentFormat.Normal);           
             workBook.SaveAs(workbookFile);
 
             // close excel and dispose reference
@@ -122,22 +118,22 @@ namespace ExcelExamplesCS4
             excelApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, workbookFile);
+            HostApplication.ShowFinishDialog(null, workbookFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using Numberformats" : "Zellen formatieren mit NumberFormat"; }
+            get { return HostApplication.LCID == 1033 ? "Using Numberformats" : "Zellen formatieren mit NumberFormat"; }
         }
      
         public UserControl Panel
@@ -147,21 +143,12 @@ namespace ExcelExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
         /// <summary>
-        /// returns the valid file extension for the instance. for example ".xls" or ".xlsx"
+        /// Current Example Host
         /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Excel.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".xlsx";
-            else
-                return ".xls";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

@@ -1,0 +1,7 @@
+If you try to compile and checkout one or more NetOffice addin examples, you face the problem the addins want never go away.
+You have to remove the example addins at hand to cleanup your system. sry, we still figure out to handle this better.
+
+The AddinRemovalTool allows you to remove all registry entries from the NetOffice addin examples with one click to cleanup your system very easy.
+
+
+

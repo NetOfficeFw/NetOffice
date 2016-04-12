@@ -541,7 +541,6 @@ namespace NetOffice.ExcelApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197266.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range Columns
 		{
 			get
@@ -901,7 +900,6 @@ namespace NetOffice.ExcelApi
 		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff821382.aspx
 		/// </summary>
 		[SupportByVersionAttribute("Excel", 9,10,11,12,14,15)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public NetOffice.ExcelApi.Range Rows
 		{
 			get

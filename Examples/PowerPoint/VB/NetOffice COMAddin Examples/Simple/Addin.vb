@@ -13,15 +13,15 @@ Imports NetOffice.PowerPointApi
 '*/
 
 <COMAddin("NetOfficeVB4 Sample PowerPoint Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)> _
-<Guid("F8E32638-8BC0-4A0D-82B5-1B1478FB41D2"), ProgId("SimplePPointVB4.Addin"), Tweak(True)> _
+<Guid("F8E32638-8BC0-4A0D-82B5-1B1478FB41D2"), ProgId("SimplePPointVB4.Addin")> _
 Public Class Addin
     Inherits COMAddin
 
     Private Sub Addin_OnStartupComplete(ByRef custom As System.Array) Handles Me.OnStartupComplete
 
-        ' get the host application version
-        Dim hostVersion As String = Me.Application.Version
-        Console.WriteLine("Host Application Version is:{0}", hostVersion)
+        ' show the host application version
+        Dim hostVersion As String = String.Format("Host Application Version is:{0}", Me.Application.Version)
+        Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK)
 
     End Sub
 

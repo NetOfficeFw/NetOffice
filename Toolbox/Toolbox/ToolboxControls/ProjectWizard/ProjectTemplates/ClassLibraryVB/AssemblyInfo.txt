@@ -1,0 +1,16 @@
+﻿Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+<Assembly: AssemblyTitle("$safeprojectname$")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyProduct("$safeprojectname$")> 
+<Assembly: AssemblyCopyright("")> 
+<Assembly: AssemblyTrademark("")> 
+
+<Assembly: ComVisible(False)>
+<Assembly: Guid("$assemblyguid$")> 
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> 

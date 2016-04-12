@@ -9,19 +9,24 @@ using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Tools.Utils;
 
 namespace PowerPointExamplesCS4
 {
-    class Example02 : IExample
+    /// <summary>
+    /// Example 2 - Create shapes
+    /// </summary>
+    internal class Example02 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with one new slide
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -42,8 +47,7 @@ namespace PowerPointExamplesCS4
             slide.Shapes.AddShape(MsoAutoShapeType.msoShape24pointStar, 200, 200, 250, 250);
 
             // save the document 
-            string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example02{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example02", PowerPoint.Tools.DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -51,22 +55,22 @@ namespace PowerPointExamplesCS4
             powerApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
+            get { return HostApplication.LCID == 1033 ? "Example02" : "Beispiel02"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create some kind of shapes" : "Verschiede Shapes erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create some kind of shapes" : "Verschiede Shapes erstellen"; }
         }
 
         public UserControl Panel
@@ -76,21 +80,9 @@ namespace PowerPointExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".ppt" or ".pptx"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(PowerPoint.Application application)
-        {
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".pptx";
-            else
-                return ".ppt";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

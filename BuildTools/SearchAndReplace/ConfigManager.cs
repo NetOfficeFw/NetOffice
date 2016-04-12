@@ -8,8 +8,19 @@ using System.Text;
 
 namespace NOBuildTools.SearchAndReplace
 {
+    /// <summary>
+    /// Little helper to read and save config
+    /// </summary>
     internal static class ConfigManager
     {
+        /// <summary>
+        /// Save a configuration file
+        /// </summary>
+        /// <param name="fullFileName">target config file name</param>
+        /// <param name="targetFolder">update folder</param>
+        /// <param name="fileFilter">filter extension</param>
+        /// <param name="search">search expression</param>
+        /// <param name="replace">replace value</param>
         public static void SaveConfigurationToXMLFile(string fullFileName, string targetFolder, string fileFilter, string search, string replace)
         {
             if (File.Exists(fullFileName))
@@ -25,6 +36,14 @@ namespace NOBuildTools.SearchAndReplace
             document.Save(fullFileName);
         }
 
+        /// <summary>
+        /// Load a configuration file
+        /// </summary>
+        /// <param name="fullFileName">target config file name</param>
+        /// <param name="targetFolder">update folder</param>
+        /// <param name="fileFilter">filter extension</param>
+        /// <param name="search">search expression</param>
+        /// <param name="replace">replace value</param>
         public static void LoadConfigurationFromConfigFile(string fullFileName, ref string targetFolder, ref string fileFilter, ref string search, ref string replace)
         {
             if (!File.Exists(fullFileName))

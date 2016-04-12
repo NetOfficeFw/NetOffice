@@ -41,10 +41,14 @@ namespace OutlookTestsCSharp
             {
                 // start outlook
                 application = new Outlook.Application();
-                NetOffice.OutlookSecurity.Supress.Enabled = true;
+                NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 if (application.Session.EntityIsAvailable("SendAndReceive"))
+                {
                     application.Session.SendAndReceive(false);
+                    // give few seconds to outlook or may its failed to quit because its busy - depending on how many mails comes in
+                    System.Threading.Thread.Sleep(3000);
+                }
                 else
                     return new TestResult(false, DateTime.Now.Subtract(startTime), "SendAndReceive is not supported from this Outlook Version.", null, "");
 
@@ -61,7 +65,6 @@ namespace OutlookTestsCSharp
                     application.Quit();
                     application.Dispose();
                 }
-                NetOffice.OutlookSecurity.Supress.Enabled = false;
             }
         }
 

@@ -16,7 +16,7 @@ using NetOffice.PowerPointApi;
 namespace NetOfficeTools.SimplePPointCS4
 {
     [COMAddin("NetOfficeCS4 Sample PowerPoint Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("DD560ED5-C600-4D99-ADC6-9675511C3387"), ProgId("SimplePPointCS4.Addin"), Tweak(true)]
+    [Guid("DD560ED5-C600-4D99-ADC6-9675511C3387"), ProgId("SimplePPointCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()
@@ -25,14 +25,14 @@ namespace NetOfficeTools.SimplePPointCS4
             this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
         }
 
-        void Addin_OnStartupComplete(ref Array custom)
+        private void Addin_OnStartupComplete(ref Array custom)
         {
-            // get the host application version
-            string hostVersion = this.Application.Version;
-            Console.WriteLine("Host Application Version is:{0}", this.Application.Version);
+            // show the host application version
+            string hostVersion = String.Format("Host Application Version is:{0}", this.Application.Version);
+            Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK);
         }
 
-        void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
 
         }

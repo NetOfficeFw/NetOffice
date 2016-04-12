@@ -43,7 +43,7 @@ namespace OutlookTestsCSharp
             {
                 // start outlook
                 application = new Outlook.Application();
-                NetOffice.OutlookSecurity.Supress.Enabled = true;
+                NetOffice.OutlookSecurity.Suppress.Enabled = true;
 
                 Outlook.MailItem mailItem = application.CreateItem(OlItemType.olMailItem) as Outlook.MailItem;
                 mailItem.CloseEvent += new NetOffice.OutlookApi.MailItem_CloseEventHandler(mailItem_CloseEvent);
@@ -73,7 +73,6 @@ namespace OutlookTestsCSharp
                     application.Quit();
                     application.Dispose();
                 }
-                NetOffice.OutlookSecurity.Supress.Enabled = false;
             }
         }
 

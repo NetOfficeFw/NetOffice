@@ -1,0 +1,24 @@
+﻿
+#Region "ICustomTaskPaneConsumer Member"
+
+    Public Sub CTPFactoryAvailable(ByVal ctpFactoryInst As Object) Implements NetOffice.OfficeApi.ICustomTaskPaneConsumer.CTPFactoryAvailable
+
+        Try
+
+            Dim ctpFactory As Office.ICTPFactory = New Office.ICTPFactory(_application, ctpFactoryInst)
+            Dim taskPane As Office._CustomTaskPane = ctpFactory.CreateCTP(GetType(MyTaskPane).FullName, "My TaskPane")
+            taskPane.DockPosition = MsoCTPDockPosition.msoCTPDockPositionLeft
+            taskPane.Visible = True
+            _mytaskPane = taskPane.ContentControl
+            ctpFactory.Dispose()
+
+        Catch ex As Exception
+
+            Dim message As String = String.Format("An error occured.{0}{0}{1}", Environment.NewLine, ex.Message)
+            MessageBox.Show(message, "$safeprojectname$ - CTPFactoryAvailable", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+
+    End Sub
+
+#End Region

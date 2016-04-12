@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Windows.Forms;
+$usingItems$
+namespace $safeprojectname$
+{
+    public partial class MyTaskPane : UserControl , $appName$.Tools.ITaskPane
+    {
+		#region Ctor
+        
+		public MyTaskPane()
+        {
+            InitializeComponent();
+        }
+
+		#endregion
+
+		#region Properties
+		
+		private Addin ParentAddin { get; set; }
+
+		#endregion
+		
+        #region ITaskpane
+
+        public void OnConnection($appName$.Application application, Office._CustomTaskPane definition, object[] customArguments)
+        {
+			if(customArguments.Length > 0)
+				ParentAddin = customArguments[0] as Addin;
+        }
+
+        public void OnDisconnection()
+        {
+
+        }
+
+        public void OnDockPositionChanged(MsoCTPDockPosition position)
+        {
+            
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+$tooglecall$
+        }
+
+        #endregion
+    }
+}

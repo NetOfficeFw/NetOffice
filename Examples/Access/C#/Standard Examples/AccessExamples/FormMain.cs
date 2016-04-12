@@ -10,9 +10,9 @@ using ExampleBase;
 
 namespace AccessExamplesCS4
 {
-    public partial class Form1 : FormBase
+    public partial class FormMain : FormBase
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             this.Text = "NetOffice Access Examples in C#";

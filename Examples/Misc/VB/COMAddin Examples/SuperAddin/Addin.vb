@@ -137,9 +137,7 @@ Public Class Addin
             key.SetValue("CodeBase", thisAssembly.CodeBase)
             key.Close()
 
-            key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32")
-            key.SetValue("CodeBase", thisAssembly.CodeBase)
-            key.Close()
+            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
 
             ' add bypass key
             ' http://support.microsoft.com/kb/948461
@@ -149,8 +147,6 @@ Public Class Addin
                 key.SetValue("", "Office .NET Framework Lockback Bypass Key")
             End If
             key.Close()
-
-            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
 
             OfficeRegistry.CreateAddinKey("Excel", _progId, _addinFriendlyName, _addinDescription)
             OfficeRegistry.CreateAddinKey("Word", _progId, _addinFriendlyName, _addinDescription)

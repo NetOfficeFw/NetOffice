@@ -31,5 +31,15 @@ namespace WordAddinCSharp
         {
 
         }
+
+        void NetOffice.WordApi.Tools.ITaskPane.OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+
+        }
+
+        void NetOffice.WordApi.Tools.ITaskPane.OnVisibleStateChanged(bool visible)
+        {
+
+        }
     }
 }

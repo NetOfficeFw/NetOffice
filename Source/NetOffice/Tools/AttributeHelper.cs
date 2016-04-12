@@ -113,6 +113,40 @@ namespace NetOffice.Tools
         }
 
         /// <summary>
+        /// Looks for the CustomPaneAttribute
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <returns>CustomPaneAttribute or null</returns>
+        public static CustomPaneAttribute GetCustomPaneAttribute(Type type)
+        {
+            object[] array = type.GetCustomAttributes(typeof(CustomPaneAttribute), false);
+            if (array.Length == 0)
+                return null;
+            return array[0] as CustomPaneAttribute;
+        }
+
+        /// <summary>
+        /// Looks the CustomPaneAttributes
+        /// </summary>
+        /// <param name="type">the type you want looking for the attribute</param>
+        /// <returns>CustomPaneAttribute[] instance</returns>
+        public static CustomPaneAttribute[] GetCustomPaneAttributes(Type type)
+        {
+            object[] array = type.GetCustomAttributes(typeof(CustomPaneAttribute), false);
+            if (array.Length > 0)
+            {
+                CustomPaneAttribute[] result = new CustomPaneAttribute[array.Length];
+                for (int i = 0; i < array.Length; i++)
+                    result[i] = array[i] as CustomPaneAttribute;
+                return result;
+            }
+            else
+            { 
+                return new CustomPaneAttribute[0];
+            }
+        }
+
+        /// <summary>
         /// Looks for the GuidAttribute. Throws an exception if not found
         /// </summary>
         /// <param name="type">the type you want looking for the attribute</param>
@@ -122,7 +156,7 @@ namespace NetOffice.Tools
 
             object[] array = type.GetCustomAttributes(typeof(GuidAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentNullException("GuidAttribute is missing");
+                throw new ArgumentOutOfRangeException("GuidAttribute is missing");
             return array[0] as GuidAttribute;
         }
 
@@ -135,7 +169,7 @@ namespace NetOffice.Tools
         {
             object[] array = type.GetCustomAttributes(typeof(ProgIdAttribute), false);
             if (array.Length == 0)
-                throw new ArgumentNullException("ProgIdAttribute is missing");
+                throw new ArgumentOutOfRangeException("ProgIdAttribute is missing");
             return array[0] as ProgIdAttribute;
         }
 

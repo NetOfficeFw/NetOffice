@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuppressOutlookSecurity", "SuppressOutlookSecurity\SuppressOutlookSecurity.csproj", "{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetOffice.OutlookSecurity", "..\..\..\Toolbox\NetOffice.OutlookSecurity\NetOffice.OutlookSecurity.csproj", "{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Debug|x86.ActiveCfg = Debug|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Debug|x86.Build.0 = Debug|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Release|Any CPU.ActiveCfg = Release|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Release|Mixed Platforms.Build.0 = Release|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Release|x86.ActiveCfg = Release|x86
+		{50F37778-9D4D-4E2F-B9D5-D8BCCEBBB6CE}.Release|x86.Build.0 = Release|x86
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{340A1E64-C26A-4EAD-A1EB-51DEB8AF8AED}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

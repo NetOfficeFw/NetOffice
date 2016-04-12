@@ -36,8 +36,9 @@ Public Class Addin
     ' This method was called from IExtensibility2.OnStartupComplete for all your custom tweaks if its allowed(see AllowApplyTweak)
     Protected Overrides Sub ApplyCustomTweak(ByVal name As String, ByVal value As String)
 
-        If (name = "ShowMessageBoxAtStartUp" And value = "yes") Then
-            MessageBox.Show("The tweak sample addin has been loaded.", "Custom Tweak", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If (name = "ShowTray" And value = "yes") Then
+            Utils.Tray.Text = "TweakExcelVB4.Addin"
+            Utils.Tray.Visible = True
         End If
 
     End Sub
@@ -55,9 +56,9 @@ Public Class Addin
     Public Shared Sub Register(ByVal type As Type, ByVal registerCall As RegisterCall)
 
         ' SetTweakPersistenceEntry sets the key for you in the current registry key.
-        ' We set a Netoffice default tweak and a custom tweak.
+        ' We set a custom tweak and a Netoffice default tweak.
+        SetTweakPersistenceEntry(type, "ShowTray", "yes", False)
         SetTweakPersistenceEntry(type, "NOConsoleMode", "trace", False)
-        SetTweakPersistenceEntry(type, "ShowMessageBoxAtStartUp", "yes", False)
 
     End Sub
 

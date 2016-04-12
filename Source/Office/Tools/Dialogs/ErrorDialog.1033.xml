@@ -1,0 +1,40 @@
+﻿<Dialog Name ="ErrorDialog" LCID="1033">
+  <String>
+    <String>
+      <Name>Title</Name>
+      <Value>Error</Value>
+    </String>
+    <String>
+      <Name>ErrorHeader</Name>
+      <Value>An error is occured.</Value>
+    </String>
+    <String>
+      <Name>ErrorMessage</Name>
+      <Value>There is no error description available.</Value>
+    </String>
+    <String>
+      <Name>Message</Name>
+      <Value>Description</Value>
+    </String>
+    <String>
+      <Name>Type</Name>
+      <Value>Type</Value>
+    </String>
+    <String>
+      <Name>Source</Name>
+      <Value>Source</Value>
+    </String>
+    <String>
+      <Name>buttonShowDetails</Name>
+      <Value>Show detailed error informations</Value>
+    </String>
+    <String>
+      <Name>buttonClipboardCopy</Name>
+      <Value>Copy to Clipboard</Value>
+    </String>
+    <String>
+      <Name>buttonClose</Name>
+      <Value>Close</Value>
+    </String>
+  </String>
+</Dialog>

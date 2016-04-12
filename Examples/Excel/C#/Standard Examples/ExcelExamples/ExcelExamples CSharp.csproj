@@ -106,6 +106,7 @@
     <Compile Include="Examples\Example09.Designer.cs">
       <DependentUpon>Example09.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examples\Example10.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>

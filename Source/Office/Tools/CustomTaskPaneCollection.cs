@@ -8,7 +8,7 @@ using NetOffice.OfficeApi.Enums;
 namespace NetOffice.OfficeApi.Tools
 {    
     /// <summary>
-    /// wrapper class for CustomTaskPane instance
+    /// Wrapper class for CustomTaskPane instance, also used as creation definition if its create before CTPFactoryAvailable is called from MS-Office host application. (Best use in .ctor for creation definition)
     /// </summary>
     public class TaskPaneInfo
     {
@@ -83,6 +83,17 @@ namespace NetOffice.OfficeApi.Tools
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Default Height or Width if unset - 150
+        /// </summary>
+        public static int DefaultSize
+        {
+            get
+            {
+                return 150;
+            }
+        }
 
         /// <summary>
         /// properties was set from the client before the instance was created. The COMAddin class perfom latebind property set calls during this dictionary
@@ -207,7 +218,7 @@ namespace NetOffice.OfficeApi.Tools
                 else
                     return "";
             }
-            internal set
+            set
             {
                 object outValue;
                 if (ChangedProperties.TryGetValue("Title", out outValue))
@@ -359,10 +370,24 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         /// <param name="taskPaneType">new child</param>
         /// <param name="title">title(caption) of the child</param>
-        public void Add(Type taskPaneType, string title)
+		/// <returns>new instance</returns>
+        public TaskPaneInfo Add(Type taskPaneType, string title)
         {
-            InnerList.Add(new TaskPaneInfo(taskPaneType, title));  
+			TaskPaneInfo item = new TaskPaneInfo(taskPaneType, title);
+            InnerList.Add(item);
+			return item;
         }
+
+		/// <summary>
+        /// Collection items count
+        /// </summary>
+		public int Count
+		{
+			get
+			{
+				return InnerList.Count;
+			}
+		}
 
         /// <summary>
         /// Returns an element from specified index
@@ -380,7 +405,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Returns an Enumerator
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IEnumerator instance</returns>
         public IEnumerator<TaskPaneInfo> GetEnumerator()
         {
             return InnerList.GetEnumerator();
@@ -389,7 +414,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Returns an Enumerator
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IEnumerator instance</returns>
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();

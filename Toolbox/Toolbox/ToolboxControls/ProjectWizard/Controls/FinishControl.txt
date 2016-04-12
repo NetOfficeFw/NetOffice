@@ -1,0 +1,12 @@
+﻿[1031]
+labelMessage = Das Projekt wurde erfolgreich erstellt.
+buttonOpenSolution = Solution Öffnen 
+buttonOpenFolder = Ordner anzeigen
+buttonClose = Schliessen
+[End]
+[1033]
+labelMessage = The Project is successfully completed.
+buttonOpenSolution = Open Solution 
+buttonOpenFolder = Open Folder
+buttonClose = Close
+[End]

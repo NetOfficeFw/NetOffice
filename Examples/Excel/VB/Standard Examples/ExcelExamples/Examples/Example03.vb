@@ -3,6 +3,7 @@ Imports ExampleBase
 Imports NetOffice
 Imports Excel = NetOffice.ExcelApi
 Imports NetOffice.ExcelApi.Enums
+Imports NetOffice.ExcelApi.Tools.Utils
 
 Public Class Example03
     Implements IExample
@@ -16,6 +17,9 @@ Public Class Example03
         ' start excel and turn off msg boxes
         Dim excelApplication As New Excel.Application()
         excelApplication.DisplayAlerts = False
+
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As CommonUtils = New CommonUtils(excelApplication)
 
         ' add a new workbook
         Dim workBook As Excel.Workbook = excelApplication.Workbooks.Add()
@@ -104,8 +108,7 @@ Public Class Example03
         workSheet.Columns(4).AutoFit()
 
         ' save the book 
-        Dim fileExtension As String = GetDefaultExtension(excelApplication)
-        Dim workbookFile As String = String.Format("{0}\Example03{1}", _hostApplication.RootDirectory, fileExtension)
+        Dim workbookFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example03", Excel.Tools.DocumentFormat.Normal)
         workBook.SaveAs(workbookFile)
 
         ' close excel and dispose reference
@@ -140,27 +143,6 @@ Public Class Example03
             Return Nothing
         End Get
     End Property
-
-#End Region
-
-#Region "Helper"
-
-    ''' <summary>
-    ''' returns the valid file extension for the instance. for example ".xls" or ".xlsx"
-    ''' </summary>
-    ''' <param name="application">the instance</param>
-    ''' <returns>the extension</returns>
-    ''' <remarks></remarks>
-    Private Function GetDefaultExtension(ByVal application As Excel.Application) As String
-
-        Dim version As Double = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture)
-        If (version >= 12.0) Then
-            Return ".xlsx"
-        Else
-            Return ".xls"
-        End If
-
-    End Function
 
 #End Region
 

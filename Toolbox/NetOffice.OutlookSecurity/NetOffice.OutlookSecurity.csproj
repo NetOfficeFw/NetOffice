@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClickStrategy.cs" />
     <Compile Include="Rect.cs" />
     <Compile Include="SecurityDialog.cs" />
     <Compile Include="SecurityDialogCheckBox.cs" />

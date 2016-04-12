@@ -106,9 +106,7 @@ Public Class Addin
             key.SetValue("CodeBase", thisAssembly.CodeBase)
             key.Close()
 
-            key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32")
-            key.SetValue("CodeBase", thisAssembly.CodeBase)
-            key.Close()
+            Registry.ClassesRoot.CreateSubKey("CLSID\{" + type.GUID.ToString().ToUpper() + "}\Programmable")
 
             ' add bypass key
             ' http://support.microsoft.com/kb/948461
@@ -120,7 +118,6 @@ Public Class Addin
             key.Close()
 
             ' add word addin key
-            Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\Programmable")
             Registry.CurrentUser.CreateSubKey(_addinOfficeRegistryKey + _prodId)
             Dim rk As RegistryKey = Registry.CurrentUser.OpenSubKey(_addinOfficeRegistryKey + _prodId, True)
             rk.SetValue("LoadBehavior", CInt(3))

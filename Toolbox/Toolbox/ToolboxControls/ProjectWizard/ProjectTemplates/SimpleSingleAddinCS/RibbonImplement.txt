@@ -1,0 +1,42 @@
+﻿
+		#region IRibbonExtensibility
+
+		string Office.IRibbonExtensibility.GetCustomUI(string ribbonID)
+        {
+            try
+            {
+                return ReadResourceFile("RibbonUI.xml");
+            }
+            catch (Exception throwedException)
+            {
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnBeginShutdown");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return String.Empty;
+            }
+        }
+
+        public void OnAction(Office.IRibbonControl control)
+        {
+            try
+            {
+                switch (control.Id)
+                {
+                    case "customButton1":
+                        MessageBox.Show("This is the first sample button.");
+                        break;
+                    case "customButton2":
+                        MessageBox.Show("This is the second sample button.");
+                        break;
+                    default:
+                        MessageBox.Show("Unkown Control Id: " + control.Id);
+                        break;
+                }
+            }
+            catch (Exception throwedException)
+            {
+                string text = String.Format("An error occured.{1}{1}Details:{1}{1}{0}{1}Source:{2}", throwedException, Environment.NewLine, "OnBeginShutdown");
+                MessageBox.Show(text, this.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion

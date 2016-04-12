@@ -8,138 +8,34 @@ using System.Collections.Generic;
 using NetOffice;
 namespace NetOffice.ExcelApi
 {
+	#pragma warning disable
 	///<summary>
-	/// DispatchInterface IRTDUpdateEvent 
-	/// SupportByVersion Excel, 10,11,12,14,15
-	/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff835519.aspx
+	/// DispatchInterface IRTDUpdateEvent SupportByVersionAttribute Excel, 10,11,12,14,15
 	///</summary>
 	[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+	[ComImport, ComVisible(true), Guid("A43788C1-D91B-11D3-8F39-00C04F3651B8"), TypeLibType((short) 4160)]
 	[EntityTypeAttribute(EntityType.IsDispatchInterface)]
-	public class IRTDUpdateEvent : COMObject
+	public interface IRTDUpdateEvent
 	{
-		#pragma warning disable
-		#region Type Information
-
-        private static Type _type;
-
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public static Type LateBindingApiWrapperType
-        {
-            get
-            {
-                if (null == _type)
-                    _type = typeof(IRTDUpdateEvent);
-                    
-                return _type;
-            }
-        }
-        
-        #endregion
-        
-		#region Construction
-
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IRTDUpdateEvent(Core factory, COMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
-
-        ///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent(COMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent(Core factory, COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent(COMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent(COMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent() : base()
-		{
-		}
-		
-		/// <param name="progId">registered ProgID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IRTDUpdateEvent(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
-
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// Get/Set
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff197550.aspx
-		/// </summary>
-		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public Int32 HeartbeatInterval
-		{
-			get
-			{
-				object[] paramsArray = null;
-				object returnItem = Invoker.PropertyGet(this, "HeartbeatInterval", paramsArray);
-				return NetRuntimeSystem.Convert.ToInt32(returnItem);
-			}
-			set
-			{
-				object[] paramsArray = Invoker.ValidateParamsArray(value);
-				Invoker.PropertySet(this, "HeartbeatInterval", paramsArray);
-			}
-		}
-
-		#endregion
-
 		#region Methods
 
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff840231.aspx
-		/// </summary>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void UpdateNotify()
-		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "UpdateNotify", paramsArray);
-		}
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(10)]
+		void UpdateNotify();
 
-		/// <summary>
-		/// SupportByVersion Excel 10, 11, 12, 14, 15
-		/// MSDN Online Documentation: http://msdn.microsoft.com/en-us/en-us/library/office/ff198106.aspx
-		/// </summary>
 		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
-		public void Disconnect()
-		{
-			object[] paramsArray = null;
-			Invoker.Method(this, "Disconnect", paramsArray);
-		}
+		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(12)]
+		void Disconnect();
 
 		#endregion
-		#pragma warning restore
+
+		#region Properties
+
+		[SupportByVersionAttribute("Excel", 10,11,12,14,15)]
+		[DispId(11)]
+		Int32 HeartbeatInterval{[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(11)] get;}
+
+		#endregion
 	}
 }
+	#pragma warning restore

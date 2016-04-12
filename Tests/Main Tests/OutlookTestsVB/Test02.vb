@@ -36,7 +36,7 @@ Public Class Test02
         Dim startTime As DateTime = DateTime.Now
         Try
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             ' Create a new TaskItem
             Dim newTask As Outlook.TaskItem = application.CreateItem(OlItemType.olTaskItem)
@@ -60,7 +60,7 @@ Public Class Test02
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

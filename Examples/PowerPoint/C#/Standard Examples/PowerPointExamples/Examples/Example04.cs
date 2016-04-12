@@ -4,24 +4,28 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using PowerPoint = NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Enums;
 using NetOffice.OfficeApi.Enums;
+using NetOffice.PowerPointApi.Tools.Utils;
 
 namespace PowerPointExamplesCS4
 {
-    class Example04 : IExample
+    /// <summary>
+    /// Example 4 - Create blend animation
+    /// </summary>
+    internal class Example04 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // start powerpoint 
             PowerPoint.Application powerApplication = new PowerPoint.Application();
+         
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(powerApplication);
 
             // add a new presentation with two new slides
             PowerPoint.Presentation presentation = powerApplication.Presentations.Add(MsoTriState.msoTrue);
@@ -40,8 +44,7 @@ namespace PowerPointExamplesCS4
             slide2.SlideShowTransition.Speed = PpTransitionSpeed.ppTransitionSpeedFast;
 
             // save the document 
-            string fileExtension = GetDefaultExtension(powerApplication);
-            string documentFile = string.Format("{0}\\Example04{1}", _hostApplication.RootDirectory, fileExtension);
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", PowerPoint.Tools.DocumentFormat.Normal); 
             presentation.SaveAs(documentFile);
 
             // close power point and dispose reference
@@ -49,28 +52,34 @@ namespace PowerPointExamplesCS4
             powerApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Create blend animation" : "Eine Blend Animation erstellen"; }
+            get { return HostApplication.LCID == 1033 ? "Create blend animation" : "Eine Blend Animation erstellen"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
 

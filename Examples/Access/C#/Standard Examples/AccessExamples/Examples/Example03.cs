@@ -9,31 +9,33 @@ using System.Data;
 using System.Data.OleDb;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Access = NetOffice.AccessApi;
 using NetOffice.AccessApi.Enums;
 using DAO = NetOffice.DAOApi;
 using NetOffice.DAOApi.Enums;
 using NetOffice.DAOApi.Constants;
+using NetOffice.AccessApi.Tools.Utils;
 
 namespace AccessExamplesCS4
 {
-    class Example03 : IExample
+    /// <summary>
+    /// Example 3 - Use CompactDatabase
+    /// </summary>
+    internal class Example03 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // start access 
             Access.Application accessApplication = new Access.Application();
 
-            // create database name 
-            string fileExtension = GetDefaultExtension(accessApplication);
-            string documentFile = string.Format("{0}\\Example03{1}", _hostApplication.RootDirectory, fileExtension);
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(accessApplication);
 
+            // create database file name 
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example03", Access.Tools.DocumentFormat.Normal);
 
             // delete old database if exists
             if (System.IO.File.Exists(documentFile))
@@ -60,12 +62,12 @@ namespace AccessExamplesCS4
             }
             oleConnection.Close();
 
-            // now we do CompactDatabase            
-
-            string newDocumentFile = string.Format("{0}\\CompactDatabase{1}", _hostApplication, fileExtension);
+            // delete old file if exists
+            string newDocumentFile = string.Format("{0}\\CompactDatabase{1}", HostApplication, utils.File.FileExtension(Access.Tools.DocumentFormat.Normal));
             if (File.Exists(newDocumentFile))
                 File.Delete(newDocumentFile);
 
+            // now we do CompactDatabase            
             accessApplication.DBEngine.CompactDatabase(documentFile, newDocumentFile);
 
             // close access and dispose reference
@@ -73,22 +75,22 @@ namespace AccessExamplesCS4
             accessApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
+            get { return HostApplication.LCID == 1033 ? "Example03" : "Beispiel03"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Use CompactDatabase" : "CompactDatabase ausführen"; }
+            get { return HostApplication.LCID == 1033 ? "Use CompactDatabase" : "CompactDatabase ausführen"; }
         }
 
         public UserControl Panel
@@ -98,26 +100,9 @@ namespace AccessExamplesCS4
 
         #endregion
 
-        #region Helper
+        #region Properties
 
-        /// <summary>
-        /// returns the valid file extension for the instance. for example ".mdb" or ".accdb"
-        /// </summary>
-        /// <param name="application">the instance</param>
-        /// <returns>the extension</returns>
-        private static string GetDefaultExtension(Access.Application application)
-        {
-            // Access 2000 doesnt have the Version property(unfortunately)
-            // we check for support with the SupportEntity method, implemented by NetOffice
-            if (!application.EntityIsAvailable("Version"))
-                return ".mdb";
-
-            double Version = Convert.ToDouble(application.Version, CultureInfo.InvariantCulture);
-            if (Version >= 12.00)
-                return ".accdb";
-            else
-                return ".mdb";
-        }
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

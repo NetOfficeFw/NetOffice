@@ -15,7 +15,7 @@ using NetOffice.WordApi;
 namespace NetOfficeTools.SimpleAccessCS4
 {
     [COMAddin("NetOfficeCS4 Sample Word Addin", "This Addin shows you the COMAddin base class from the NetOffice Tools", 3)]
-    [Guid("F4EC5A72-C431-4BFA-85AB-43A0817617C7"), ProgId("SimpleWordCS4.Addin"), Tweak(true)]
+    [Guid("F4EC5A72-C431-4BFA-85AB-43A0817617C7"), ProgId("SimpleWordCS4.Addin")]
     public class Addin : COMAddin
     {
         public Addin()
@@ -24,14 +24,14 @@ namespace NetOfficeTools.SimpleAccessCS4
             this.OnDisconnection += new OnDisconnectionEventHandler(Addin_OnDisconnection);
         }
 
-        void Addin_OnStartupComplete(ref Array custom)
+        private void Addin_OnStartupComplete(ref Array custom)
         {
-            // get the host application version
-            string hostVersion = this.Application.Version;
-            Console.WriteLine("Host Application Version is:{0}", hostVersion);
+            // show the host application version
+            string hostVersion = String.Format("Host Application Version is:{0}", this.Application.Version);
+            Utils.Dialog.ShowMessageBox(hostVersion, MessageBoxIcon.Information, DialogResult.OK);
         }
 
-        void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
+        private void Addin_OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
 
         }

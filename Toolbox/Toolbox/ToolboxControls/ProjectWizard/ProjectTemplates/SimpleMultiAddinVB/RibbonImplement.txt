@@ -1,0 +1,41 @@
+﻿
+#Region "IRibbonExtensibility Members"
+
+    Public Function GetCustomUI(ByVal ribbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
+
+        Try
+
+            Return ReadResourceFile("RibbonUI.xml")
+
+        Catch ex As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", ex.Message, Environment.NewLine)
+            MessageBox.Show("An error occured in GetCustomUI: " + details, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ""
+
+        End Try
+
+    End Function
+
+    Public Sub OnAction(ByVal control As Office.IRibbonControl)
+
+        Try
+
+            Select Case control.Id
+                Case "customButton1"
+                    MessageBox.Show("This is the first sample button.")
+                Case "customButton2"
+                    MessageBox.Show("This is the second sample button.")
+                Case Else
+                    MessageBox.Show("Unkown Control Id: " + control.Id)
+            End Select
+
+        Catch throwedException As Exception
+
+            Dim details As String = String.Format("{1}{1}Details:{1}{1}{0}", throwedException.Message, Environment.NewLine)
+            MessageBox.Show("An error occured in OnAction: " + details, Me.GetType().FullName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        End Try
+    End Sub
+
+#End Region

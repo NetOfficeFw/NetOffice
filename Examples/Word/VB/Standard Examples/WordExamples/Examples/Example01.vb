@@ -2,6 +2,7 @@
 Imports NetOffice
 Imports Word = NetOffice.WordApi
 Imports NetOffice.WordApi.Enums
+Imports NetOffice.WordApi.Tools.Utils
 
 Public Class Example01
     Implements IExample
@@ -16,41 +17,24 @@ Public Class Example01
         Dim wordApplication As New Word.Application
         wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone
 
+        ' create a utils instance, not need for but helpful to keep the lines of code low
+        Dim utils As CommonUtils = New CommonUtils(wordApplication)
+
         ' add a new document
         Dim newDocument As Word.Document
         newDocument = wordApplication.Documents.Add()
 
-        ' add a table
-        Dim table As Word.Table
-        table = newDocument.Tables.Add(wordApplication.Selection.Range, 3, 2)
+        ' insert some text
+        wordApplication.Selection.TypeText("This text is written by NetOffice")
 
-        'insert some text into the cells
-        table.Cell(1, 1).Select()
-        wordApplication.Selection.TypeText("This")
+        wordApplication.Selection.HomeKey(WdUnits.wdLine, WdMovementType.wdExtend)
+        wordApplication.Selection.Font.Color = WdColor.wdColorSeaGreen
+        wordApplication.Selection.Font.Bold = 1
+        wordApplication.Selection.Font.Size = 18
 
-        table.Cell(1, 2).Select()
-        wordApplication.Selection.TypeText("table")
-
-        table.Cell(2, 1).Select()
-        wordApplication.Selection.TypeText("was")
-
-        table.Cell(2, 2).Select()
-        wordApplication.Selection.TypeText("created")
-
-        table.Cell(3, 1).Select()
-        wordApplication.Selection.TypeText("by")
-
-        table.Cell(3, 2).Select()
-        wordApplication.Selection.TypeText("NetOffice")
-
-        ' we save the document as .doc for compatibility with all word versions
-        Dim documentFile As String = String.Format("{0}\Example01{1}", _hostApplication.RootDirectory, ".doc")
-        Dim wordVersion As Double = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture)
-        If (wordVersion >= 12.0) Then
-            newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault)
-        Else
-            newDocument.SaveAs(documentFile)
-        End If
+        'save document
+        Dim documentFile As String = utils.File.Combine(_hostApplication.RootDirectory, "Example01", Word.Tools.DocumentFormat.Normal)
+        newDocument.SaveAs(documentFile)
 
         ' close word and dispose reference
         wordApplication.Quit()

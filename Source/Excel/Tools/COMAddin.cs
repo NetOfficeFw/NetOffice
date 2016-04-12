@@ -1,5 +1,5 @@
 using System;
-using NetRunTimeSystem = System;
+using NetRuntimeSystem = System;
 using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Win32;
@@ -14,10 +14,10 @@ using Excel = NetOffice.ExcelApi;
 namespace NetOffice.ExcelApi.Tools
 {
     /// <summary>
-    /// The class provides a lot of essential functionality for an MS-Excel COMAddin
+    /// NetOffice MS-Excel COM Addin
     /// </summary>
-	[ComVisible(true)]
-    public abstract class COMAddin : IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
+	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+    public abstract class COMAddin : COMAddinBase, IDTExtensibility2, Office.IRibbonExtensibility, Office.ICustomTaskPaneConsumer
     {
         #region Fields
 
@@ -25,6 +25,11 @@ namespace NetOffice.ExcelApi.Tools
         /// MS-Excel Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\AddIns\\";
+
+        /// <summary>
+        /// First field in OnConnection custom argument array
+        /// </summary>
+        private int _automationCode = -1;
 
         #endregion
         
@@ -48,6 +53,11 @@ namespace NetOffice.ExcelApi.Tools
         #region Properties
 
         /// <summary>
+        /// Common Tasks Helper. The property is available after the host application has called OnConnection for the instance
+        /// </summary>
+        public Utils.CommonUtils Utils { get; private set; }
+
+        /// <summary>
         /// The used factory core
         /// </summary>
         public Core Factory { get; private set; }
@@ -60,8 +70,8 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// Host Application Instance
         /// </summary>
-        protected Excel.Application Application { get; private set; }
-        
+        protected internal Excel.Application Application { get; private set; }
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -89,7 +99,20 @@ namespace NetOffice.ExcelApi.Tools
 
         #endregion
 
-        #region IDTExtensibility2 Events 
+        #region COMAddinBase
+
+        /// <summary>
+        /// Generic Host Application Instance
+        /// </summary>
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        public override COMObject AppInstance
+        {
+            get { return Application; }
+        }
+
+        #endregion
+
+        #region IDTExtensibility2 Events
 
         /// <summary>
         /// The OnStartupComplete event occurs when the host application completes its startup routines, in the case where the COM add-in loads at startup. 
@@ -145,7 +168,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnStartupComplete)
                     OnStartupComplete(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
@@ -159,7 +182,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnDisconnection)
                     OnDisconnection(RemoveMode, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -173,7 +196,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnConnection)
                     OnConnection(Application, ConnectMode, AddInInst, ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
@@ -187,7 +210,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnAddInsUpdate)
                     OnAddInsUpdate(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
@@ -201,7 +224,7 @@ namespace NetOffice.ExcelApi.Tools
                 if (null != OnBeginShutdown)
                     OnBeginShutdown(ref custom);
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
@@ -214,75 +237,132 @@ namespace NetOffice.ExcelApi.Tools
 
         void IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
-            Tweaks.ApplyTweaks(Factory, this, Type, "Excel");
-            RaiseOnStartupComplete(ref custom);
+            try
+            {
+                Tweaks.ApplyTweaks(Factory, this, Type, "Excel");
+                RaiseOnStartupComplete(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnStartupComplete, exception);
+            }
         }
 
         void IDTExtensibility2.OnConnection(object Application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
-            this.Application = new Excel.Application(Factory, null, Application);
-			RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+            try
+            {
+                if (custom.Length > 0)
+                {
+                    object firstCustomItem = custom.GetValue(1);
+                    string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
+                    System.Int32.TryParse(tryString, out _automationCode);
+                }
+
+                this.Application = new Excel.Application(Factory, null, Application);
+                Utils = OnCreateUtils();
+                RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnConnection, exception);
+            }
         }
 
         void IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
-            Tweaks.DisposeTweaks(Factory, this, Type);
-            RaiseOnDisconnection(RemoveMode, ref custom);
-
-			foreach(ITaskPane item in TaskPaneInstances)
-			{
-				try
-				{
-					item.OnDisconnection();
-				}
-				catch(NetRunTimeSystem.Exception exception)
-				{
-                    Factory.Console.WriteException(exception);
-				}			
-			}
-
-			foreach (var item in TaskPanes)
+            try
             {
-				try
-				{
-					if(null != item.Pane && !item.Pane.IsDisposed)
-	                    item.Pane.Dispose();
-				}
-				catch(NetRunTimeSystem.Exception exception)
-				{
+                foreach (ITaskPane item in TaskPaneInstances)
+                {
+                    try
+                    {
+                        item.OnDisconnection();
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        Factory.Console.WriteException(exception);
+                    }
+                }
+
+                foreach (var item in TaskPanes)
+                {
+                    try
+                    {
+                        if (null != item.Pane && !item.Pane.IsDisposed)
+                            item.Pane.Dispose();
+                    }
+                    catch (NetRuntimeSystem.Exception exception)
+                    {
+                        Factory.Console.WriteException(exception);
+                    }
+                }
+
+                try
+                {
+                    Tweaks.DisposeTweaks(Factory, this, Type);
+                    RaiseOnDisconnection(RemoveMode, ref custom);
+                    Utils.Dispose();
+
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
                     Factory.Console.WriteException(exception);
-				}		
-			 }
-             
-			 try
-			 { 
-				if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
-					TaskPaneFactory.Dispose();
-			 }
-			 catch(NetRunTimeSystem.Exception exception)
-			 {
-                 Factory.Console.WriteException(exception);
-			 }	
-                
-             try
-			 { 
-				 if (!Application.IsDisposed)
-                    Application.Dispose();
-			 }
-			 catch(NetRunTimeSystem.Exception exception)
-			 {
-                 Factory.Console.WriteException(exception);
-			 }	
+                }
+
+                try
+                {
+                    if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
+                        TaskPaneFactory.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }
+
+                try
+                {
+                    if (!Application.IsDisposed)
+                        Application.Dispose();
+                }
+                catch (NetRuntimeSystem.Exception exception)
+                {
+                    Factory.Console.WriteException(exception);
+                }	
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnDisconnection, exception);
+            }
         }
 
         void IDTExtensibility2.OnAddInsUpdate(ref Array custom)
         {
-            RaiseOnAddInsUpdate(ref custom);
+            try
+            {
+                RaiseOnAddInsUpdate(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnAddInsUpdate, exception);
+            }
         }
 
         void IDTExtensibility2.OnBeginShutdown(ref Array custom)
         {
-            RaiseOnBeginShutdown(ref custom);
+            try
+            {
+                RaiseOnBeginShutdown(ref custom);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.OnBeginShutdown, exception);
+            }
         }
 
         #endregion
@@ -292,23 +372,24 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// IRibbonExtensibility implementation
         /// </summary>
-        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard impklementation. overwrite this method if you need a custom behavior</param>
-        /// <returns>XML content oder string.Empty</returns>
+        /// <param name="RibbonID">target ribbon id, only used from Outlook and ignored in this standard implementation. overwrite this method if you need a custom behavior</param>
+        /// <returns>XML content or String.Empty</returns>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual string GetCustomUI(string RibbonID)
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);
+                CustomUIAttribute ribbon = AttributeHelper.GetRibbonAttribute(Type);                                
                 if (null != ribbon)
-                    return ReadRessourceFile(ribbon.Value);
+                    return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
-                    return string.Empty;
+                    return String.Empty;
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
-				return string.Empty;
+				return String.Empty;
             } 
         }
 
@@ -320,44 +401,300 @@ namespace NetOffice.ExcelApi.Tools
         /// ICustomTaskPaneConsumer implementation
         /// </summary>
         /// <param name="CTPFactoryInst">factory proxy from host application</param>
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
         public virtual void CTPFactoryAvailable(object CTPFactoryInst)
         {
             try
             {
-                if (null != CTPFactoryInst)
+                if (null == CTPFactoryInst)
                 {
-                    TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
-                    foreach (TaskPaneInfo item in TaskPanes)
-                    {
-                        string title = item.Title;
-                        Office.CustomTaskPane taskPane = TaskPaneFactory.CreateCTP(item.Type.FullName, title) as Office.CustomTaskPane;                        
-                        item.Pane = taskPane;
-                        item.AssignEvents();
-                        item.IsLoaded = true;
-
-                        ITaskPane pane = taskPane.ContentControl as ITaskPane;
-                        if (null != pane)
-						{
-							TaskPaneInstances.Add(pane);
-							object[] argumentArray = new object[0];
-
-							if(item.Arguments != null)
-								argumentArray = item.Arguments;
-
-							pane.OnConnection(Application, taskPane, argumentArray);
-						}
-
-                        foreach (KeyValuePair<string, object> property in item.ChangedProperties)
-                            if (property.Key != "Title")
-                                taskPane.GetType().InvokeMember(property.Key, BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
-                    }
+                    Factory.Console.WriteLine("Warning: null argument recieved in CTPFactoryAvailable. argument name: CTPFactoryInst");
+                    return;
                 }
+
+                ProceedCustomPaneAttributes();
+                CreateCustomPanes(CTPFactoryInst);			
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             } 
+        }
+
+        private void ProceedCustomPaneAttributes()
+        {
+            CustomPaneAttribute[] paneAttributes = AttributeHelper.GetCustomPaneAttributes(Type);
+            foreach (CustomPaneAttribute itemPane in paneAttributes)
+            {
+                if (null != itemPane)
+                {
+                    TaskPaneInfo item = TaskPanes.Add(itemPane.PaneType, itemPane.PaneType.Name);
+                    if (!CallOnCreateTaskPaneInfo(item))
+                    {
+                        item.Title = itemPane.Title;
+                        item.Visible = itemPane.Visible;
+                        item.DockPosition = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), itemPane.DockPosition.ToString());
+                        item.DockPositionRestrict = (Office.Enums.MsoCTPDockPositionRestrict)Enum.Parse(typeof(Office.Enums.MsoCTPDockPositionRestrict), itemPane.DockPositionRestrict.ToString());
+                        item.Width = itemPane.Width;
+                        item.Height = itemPane.Height;
+                        item.Arguments = new object[] { this };
+                    }
+
+                    item.VisibleStateChange += new NetOffice.OfficeApi.CustomTaskPane_VisibleStateChangeEventHandler(AttributePane_VisibleStateChange);
+                    item.DockPositionStateChange += new Office.CustomTaskPane_DockPositionStateChangeEventHandler(AttributePane_DockPositionStateChange);
+                }
+            }
+        }
+
+        private void CreateCustomPanes(object CTPFactoryInst)
+        {
+            TaskPaneFactory = new NetOffice.OfficeApi.ICTPFactory(Factory, null, CTPFactoryInst);
+            foreach (TaskPaneInfo item in TaskPanes)
+            {
+                string title = item.Title;
+                Office.CustomTaskPane taskPane = CreateCTP(item.Type.FullName, title);
+                if (null == taskPane)
+                    continue;
+
+                item.Pane = taskPane;
+                item.AssignEvents();
+                item.IsLoaded = true;
+
+                switch (taskPane.DockPosition)
+                {
+                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft:
+                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionRight:
+                        taskPane.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
+                        break;
+                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionTop:
+                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom:
+                        taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
+                        break;
+                    case NetOffice.OfficeApi.Enums.MsoCTPDockPosition.msoCTPDockPositionFloating:
+                        item.Width = item.Width >= 0 ? item.Width : TaskPaneInfo.DefaultSize;
+                        taskPane.Height = item.Height >= 0 ? item.Height : TaskPaneInfo.DefaultSize;
+                        break;
+                    default:
+                        break;
+                }
+
+                ITaskPane pane = taskPane.ContentControl as ITaskPane;
+                if (null != pane)
+                {
+                    TaskPaneInstances.Add(pane);
+                    object[] argumentArray = new object[0];
+
+                    if (item.Arguments != null)
+                        argumentArray = item.Arguments;
+
+                    try
+                    {
+                        pane.OnConnection(Application, taskPane, argumentArray);
+                    }
+                    catch (Exception exception)
+                    {
+                        Factory.Console.WriteException(exception);
+                    }
+                }
+
+                foreach (KeyValuePair<string, object> property in item.ChangedProperties)
+                {
+                    if (property.Key == "Title")
+                        continue;
+
+                    try
+                    {
+                        if (property.Key == "Width") // avoid to set width in top and bottom align
+                        {
+                            object outValue = null;
+                            item.ChangedProperties.TryGetValue("DockPosition", out outValue);
+                            if (null != outValue)
+                            {
+
+                                Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
+                                if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionTop || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionBottom)
+                                    continue;
+                            }
+                        }
+
+                        if (property.Key == "Height")   // avoid to set height in left and right align
+                        {
+                            object outValue = null;
+                            item.ChangedProperties.TryGetValue("DockPosition", out outValue);
+                            if (null == outValue)
+                                outValue = Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight; // NetOffice default position if unset
+
+                            Office.Enums.MsoCTPDockPosition position = (Office.Enums.MsoCTPDockPosition)Enum.Parse(typeof(Office.Enums.MsoCTPDockPosition), outValue.ToString());
+                            if (position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionLeft || position == Office.Enums.MsoCTPDockPosition.msoCTPDockPositionRight)
+                                continue;
+                        }
+
+                        taskPane.GetType().InvokeMember(property.Key, BindingFlags.SetProperty, null, taskPane, new object[] { property.Value });
+                    }
+                    catch
+                    {
+                        Factory.Console.WriteLine("Failed to set TaskPane property {0}", property.Key);
+                    }
+                }
+            }
+        }
+
+        private Office.CustomTaskPane CreateCTP(string fullName, string title)
+        {
+            Office.CustomTaskPane taskPane = null;
+            try
+            {
+                taskPane = TaskPaneFactory.CreateCTP(fullName, title) as Office.CustomTaskPane;
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                string message = String.Format("Unable to create {0}({1}).", fullName, title);
+                NetRuntimeSystem.Runtime.InteropServices.COMException wrapperException = new NetRuntimeSystem.Runtime.InteropServices.COMException(message, exception);
+                Factory.Console.WriteException(wrapperException);
+                OnError(ErrorMethodKind.CTPFactoryAvailable, wrapperException);
+            }
+            return taskPane;
+        }
+
+        /// <summary>
+        /// The method is called while the CustomPane attribute is processed
+        /// </summary>
+        /// <param name="paneInfo">pane definition</param>
+		/// <returns>true if paneInfo is modified, otherwise false to set the default or attribute values</returns>
+		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+		{
+			return false;
+		}
+		
+        /// <summary>
+        /// Called after any visibility changes
+        /// </summary>
+        /// <param name="customTaskPaneInst">pane instance</param>
+		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+	
+		}
+
+		/// <summary>
+        /// Called after any position changes but not for size changes
+        /// </summary>
+        /// <param name="customTaskPaneInst">pane instance</param>
+		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			
+		}
+
+		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			try
+			{
+				foreach(TaskPaneInfo item in TaskPanes)
+				{
+					if(item.Pane == customTaskPaneInst)
+					{
+						try
+						{
+                            ITaskPane target = item.Pane.ContentControl as ITaskPane;
+							if (null != target && item.Pane == customTaskPaneInst)
+							{
+								try
+                                {
+									target.OnVisibleStateChanged(item.Pane.Visible);
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
+							}
+						}
+						catch(Exception exception)
+						{
+							Factory.Console.WriteException(exception);
+						}
+					}
+				}
+                TaskPaneVisibleStateChanged(customTaskPaneInst);
+			}
+			catch(Exception exception)
+			{
+			   Factory.Console.WriteException(exception);
+			}
+		}
+
+		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+		{
+			try
+			{
+				foreach(TaskPaneInfo item in TaskPanes)
+				{
+					if(item.Pane == customTaskPaneInst)
+					{
+						try
+						{
+                            ITaskPane target = item.Pane.ContentControl as ITaskPane;
+							if (null != target && item.Pane == customTaskPaneInst)
+							{
+								try
+								{
+                                    target.OnDockPositionChanged(item.Pane.DockPosition);
+								}
+								catch(Exception exception)
+								{
+									Factory.Console.WriteException(exception);
+								}
+							}
+						}
+						catch(Exception exception)
+						{
+							Factory.Console.WriteException(exception);
+						}
+					}
+				}
+                TaskPaneDockStateChanged(customTaskPaneInst);
+			}
+			catch(Exception exception)
+			{
+			   Factory.Console.WriteException(exception);
+			}
+		}
+
+		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+		{
+			try
+			{
+				return OnCreateTaskPaneInfo(paneInfo);
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
+                OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
+				return false;
+			}
+		}
+		
+        private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
+        {           
+			try
+			{
+				CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
+			}
+        }
+
+        private void AttributePane_DockPositionStateChange(Office._CustomTaskPane CustomTaskPaneInst)
+        {
+			try
+			{
+                CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
+			}
+			catch(Exception exception)
+			{
+				Factory.Console.WriteException(exception);
+			}            
         }
 
         #endregion
@@ -386,7 +723,7 @@ namespace NetOffice.ExcelApi.Tools
 
         /// <summary>
         /// Called for custom tweaks to unload a tweak. Please note: This method is not called in case of unexpected termination.
-        /// You have no warranties for dispose your tweak.
+        /// You have no warranties for disposing your tweak.
         /// </summary>
         /// <param name="name">name for the tweak</param>
         /// <param name="value">value for the teak</param>
@@ -396,7 +733,7 @@ namespace NetOffice.ExcelApi.Tools
         }
 
         /// <summary>
-        /// Creates an registry tweak entry in the current addin key
+        /// Creates a registry tweak entry in the current addin key
         /// </summary>
         /// <param name="addinType">addin type information</param>
         /// <param name="name">name for the tweak</param>
@@ -447,10 +784,19 @@ namespace NetOffice.ExcelApi.Tools
         #region Virtual Methods
 
         /// <summary>
+        /// Create the used utils. The method was called in OnConnection
+        /// </summary>
+        /// <returns>new ToolsUtils instance</returns>
+        protected internal virtual Utils.CommonUtils OnCreateUtils()
+        {
+            return new Utils.CommonUtils(this, 3 == _automationCode ? true : false, this.Type.Assembly);
+        }
+
+        /// <summary>
         /// Create the used factory. The method was called as first in the base ctor
         /// </summary>
-        /// <returns>new Settings instance</returns>
-        protected virtual Core CreateFactory()
+        /// <returns>new Core instance</returns>
+        protected internal virtual Core CreateFactory()
         {
             return new Core();
         }
@@ -458,14 +804,14 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// Create the necessary factory and was called in the first line in base ctor
         /// </summary>
-        /// <returns></returns>
+        /// <returns>new Core instance or null if failed</returns>
         private Core RaiseCreateFactory()
         {
             try
             {
                 return CreateFactory();
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.CreateFactory, exception);
@@ -483,7 +829,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <param name="type">type information for the class wtih static method </param>
        /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        private static void RaiseStaticErrorHandlerMethod(Type type, RegisterErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 			MethodInfo errorMethod = AttributeHelper.GetRegisterErrorMethod(type);
             if (null != errorMethod)
@@ -495,7 +841,7 @@ namespace NetOffice.ExcelApi.Tools
         /// </summary>
         /// <param name="methodKind">origin method where the error comes from</param>
         /// <param name="exception">occured exception</param>
-        protected virtual void OnError(ErrorMethodKind methodKind, NetRunTimeSystem.Exception exception)
+        protected virtual void OnError(ErrorMethodKind methodKind, NetRuntimeSystem.Exception exception)
         {
 
         }
@@ -508,7 +854,7 @@ namespace NetOffice.ExcelApi.Tools
         /// Called from regasm while register 
         /// </summary>
         /// <param name="type">Type information for the class</param>
-        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
             try                
@@ -529,10 +875,16 @@ namespace NetOffice.ExcelApi.Tools
 				COMAddinAttribute addin = AttributeHelper.GetCOMAddinAttribute(type);
 
                 Assembly thisAssembly = Assembly.GetAssembly(type);
-                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + GetAssemblyVersionString(type.Assembly));
+				string assemblyVersion = thisAssembly.GetName().Version.ToString();
+                RegistryKey key = Registry.ClassesRoot.CreateSubKey("CLSID\\{" + type.GUID.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
                 key.SetValue("CodeBase", thisAssembly.CodeBase);
                 key.Close();
                 
+				Registry.ClassesRoot.CreateSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\Programmable");
+				key = Registry.ClassesRoot.OpenSubKey(@"CLSID\{" + type.GUID.ToString().ToUpper() + @"}\InprocServer32", true);
+				key.SetValue("", NetRuntimeSystem.Environment.SystemDirectory + @"\mscoree.dll", RegistryValueKind.String);
+				key.Close();
+
                 // add bypass key
                 // http://support.microsoft.com/kb/948461
                 key = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
@@ -564,7 +916,7 @@ namespace NetOffice.ExcelApi.Tools
                  if( (registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                         registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception);
@@ -605,7 +957,7 @@ namespace NetOffice.ExcelApi.Tools
                 if ((registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallBeforeAndAfter || registerAttribute.Value == RegisterMode.CallAfter))
                     registerMethod.Invoke(null, new object[] { type, RegisterCall.CallAfter });
             }
-            catch (NetRunTimeSystem.Exception exception)
+            catch (NetRuntimeSystem.Exception exception)
             {
 				NetOffice.DebugConsole.Default.WriteException(exception);
                 RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception);
@@ -640,49 +992,6 @@ namespace NetOffice.ExcelApi.Tools
                 registerMethod.Invoke(null, new object[] { type, RegisterCall.CallBefore });
         }
 
-
-        #endregion
-
-        #region Private Helper Methods
-
-		/// <summary>
-        /// Returns the Addin Version String
-        /// </summary>
-        /// <param name="assembly">Addin Assembly</param>
-        /// <returns>Version String</returns>
-		private static string GetAssemblyVersionString(Assembly assembly)
-        {
-            object[] attributes = assembly.GetCustomAttributes(typeof(AssemblyVersionAttribute), false);
-            if (attributes.Length > 0)
-            {
-                AssemblyVersionAttribute titleAttribute = (AssemblyVersionAttribute)attributes[0];
-                if (titleAttribute.Version != "")
-                    return titleAttribute.Version;
-            }
-            return "1.0.0.0";
-        }
-
-        /// <summary>
-        /// reads text file from ressource
-        /// </summary>
-        /// <param name="fileName">ressourceLocation</param>
-        /// <returns>text content</returns>
-        private string ReadRessourceFile(string fileName)
-        {
-            Assembly assembly = Type.Assembly;
-            NetRunTimeSystem.IO.Stream ressourceStream = assembly.GetManifestResourceStream(fileName);
-            if (ressourceStream == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource Stream."));
-
-            NetRunTimeSystem.IO.StreamReader textStreamReader = new NetRunTimeSystem.IO.StreamReader(ressourceStream);
-            if (textStreamReader == null)
-                throw (new NetRunTimeSystem.IO.IOException("Error accessing resource File."));
-
-            string text = textStreamReader.ReadToEnd();
-            ressourceStream.Close();
-            textStreamReader.Close();
-            return text;
-        }
 
         #endregion
     }

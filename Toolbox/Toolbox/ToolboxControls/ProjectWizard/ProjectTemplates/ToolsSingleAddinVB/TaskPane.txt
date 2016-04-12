@@ -1,0 +1,37 @@
+﻿$usingItems$
+Public Class MyTaskPane
+	Implements $appName$.Tools.ITaskPane
+
+    Public Sub New()
+
+        InitializeComponent()
+
+    End Sub
+
+	Private ParentAddin As Addin
+
+    Public Sub OnConnection(ByVal application As $appName$.Application, ByVal parentPane As Office._CustomTaskPane, ByVal customArguments() As Object) Implements NetOffice.$appName$Api.Tools.ITaskPane.OnConnection
+
+		If customArguments.Length > 0 Then
+			ParentAddin = customArguments(0)
+		End If
+
+    End Sub
+
+
+    Public Sub OnDisconnection() Implements NetOffice.$appName$Api.Tools.ITaskPane.OnDisconnection
+
+    End Sub
+
+
+    Public Sub OnDockPositionChanged(ByVal position As MsoCTPDockPosition) Implements NetOffice.$appName$Api.Tools.ITaskPane.OnDockPositionChanged
+
+    End Sub
+
+
+    Public Sub OnVisibleStateChanged(ByVal visible As Boolean) Implements NetOffice.$appName$Api.Tools.ITaskPane.OnVisibleStateChanged
+
+$tooglecall$
+    End Sub
+
+End Class

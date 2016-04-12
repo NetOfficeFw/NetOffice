@@ -36,7 +36,7 @@ Public Class Test01
         Dim startTime As DateTime = DateTime.Now
         Try
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             ' Get inbox 
             Dim outlookNS As Outlook._NameSpace = application.GetNamespace("MAPI")
@@ -79,7 +79,7 @@ Public Class Test01
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

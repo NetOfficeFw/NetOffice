@@ -13,18 +13,27 @@ using NetOffice.OutlookApi.Enums;
 
 namespace OutlookExamplesCS4
 {
-    public partial class Example06 : UserControl, IExample
+    /// <summary>
+    /// Example 6 - Using events
+    /// </summary>
+    internal partial class Example06 : UserControl, IExample
     {
-        IHost _hostApplication;
+        #region Fields/Delegates
 
         private delegate void UpdateEventTextDelegate(string Message);
-        UpdateEventTextDelegate _updateDelegate;
+        private UpdateEventTextDelegate _updateDelegate;
+
+        #endregion
+
+        #region Ctor
 
         public Example06()
         {
             InitializeComponent();
             _updateDelegate = new UpdateEventTextDelegate(UpdateTextbox);
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -36,17 +45,17 @@ namespace OutlookExamplesCS4
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Events" : "Ereignisse"; }
+            get { return HostApplication.LCID == 1033 ? "Events" : "Ereignisse"; }
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public UserControl Panel
@@ -56,7 +65,22 @@ namespace OutlookExamplesCS4
 
         #endregion
 
-        #region UI Trigger
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        private void UpdateTextbox(string message)
+        {
+            textBoxEvents.AppendText(message + "\r\n");
+        }
+
+        #endregion
+
+        #region Trigger
 
         private void buttonStartExample_Click(object sender, EventArgs e)
         {
@@ -80,20 +104,11 @@ namespace OutlookExamplesCS4
             outlookApplication.Dispose();
         }
 
-        #endregion
-
-        #region Outlook Trigger
-
-        void mailItem_CloseEvent(ref bool Cancel)
+        private void mailItem_CloseEvent(ref bool Cancel)
         {
             textBoxEvents.BeginInvoke(_updateDelegate, new object[] { "Event Close called." });
         }
 
-        private void UpdateTextbox(string message)
-        {
-            textBoxEvents.AppendText(message + "\r\n");
-        }
-        
         #endregion
     }
 }

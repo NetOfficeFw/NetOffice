@@ -7,23 +7,24 @@ using System.Reflection;
 using System.Text;
 using System.Globalization;
 using ExampleBase;
-
 using NetOffice;
 using Word = NetOffice.WordApi;
 using NetOffice.WordApi.Enums;
+using NetOffice.WordApi.Tools.Utils;
 
 namespace WordExamplesCS4
 {
-    class Example04 : IExample
+    /// <summary>
+    /// Example 4 - Using a datasource
+    /// </summary>
+    internal class Example04 : IExample
     {
-        IHost _hostApplication;
-
-        #region IExample Member
+        #region IExample
 
         public void RunExample()
         {
             // create simple a csv-file as datasource
-            string fileName = string.Format("{0}\\DataSource.csv", _hostApplication.RootDirectory);
+            string fileName = string.Format("{0}\\DataSource.csv", HostApplication.RootDirectory);
              
             // if file exists then delete
             if (File.Exists(fileName))
@@ -35,6 +36,9 @@ namespace WordExamplesCS4
             // start word and turn off msg boxes
             Word.Application wordApplication = new Word.Application();
             wordApplication.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+
+            // create a utils instance, not need for but helpful to keep the lines of code low
+            CommonUtils utils = new CommonUtils(wordApplication);
 
             // add a new document
             Word.Document newDocument = wordApplication.Documents.Add();
@@ -66,41 +70,43 @@ namespace WordExamplesCS4
             //do not show the fieldcodes
             wordApplication.ActiveWindow.View.ShowFieldCodes = false;
 
-            // we save the document as .doc for compatibility with all word versions
-            string documentFile = string.Format("{0}\\Example04{1}", _hostApplication.RootDirectory, ".doc");
-            double wordVersion = Convert.ToDouble(wordApplication.Version, CultureInfo.InvariantCulture);
-            if (wordVersion >= 12.0)
-                newDocument.SaveAs(documentFile, WdSaveFormat.wdFormatDocumentDefault);
-            else
-                newDocument.SaveAs(documentFile);
+            // save the document
+            string documentFile = utils.File.Combine(HostApplication.RootDirectory, "Example04", Word.Tools.DocumentFormat.Normal);
+            newDocument.SaveAs(documentFile);
 
             // close word and dispose reference
             wordApplication.Quit();
             wordApplication.Dispose();
 
             // show dialog for the user(you!)
-            _hostApplication.ShowFinishDialog(null, documentFile);
+            HostApplication.ShowFinishDialog(null, documentFile);
         }
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
+            get { return HostApplication.LCID == 1033 ? "Example04" : "Beispiel04"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Using data source" : "Verwendung von DataSource"; }
+            get { return HostApplication.LCID == 1033 ? "Using data source" : "Verwendung von DataSource"; }
         }
 
         public UserControl Panel
         {
             get { return null; }
         }
+
+        #endregion
+
+        #region Properties
+
+        internal IHost HostApplication { get; private set; }
 
         #endregion
     }

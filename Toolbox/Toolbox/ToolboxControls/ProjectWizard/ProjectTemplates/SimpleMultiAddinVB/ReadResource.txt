@@ -1,0 +1,32 @@
+﻿
+#Region "Shared Helper Methods"
+
+    ''' <summary>
+    ''' reads text file from ressource
+    ''' </summary>
+    ''' <param name="fileName">relative ressource path</param>
+    ''' <returns>ressource string</returns>
+    Private Shared Function ReadResourceFile(ByVal fileName As String) As String 
+
+		Dim assembly As Assembly = GetType(Addin).Assembly
+        Dim ressourceStream As System.IO.Stream = assembly.GetManifestResourceStream(assembly.GetName().Name + "." + fileName)
+        If (IsNothing(ressourceStream)) Then
+            Throw (New System.IO.IOException("Error accessing resource Stream."))
+        End If
+
+        Dim textStreamReader As System.IO.StreamReader = New System.IO.StreamReader(ressourceStream)
+        If (IsNothing(textStreamReader)) Then
+            Throw (New System.IO.IOException("Error accessing resource File."))
+        End If
+
+        Dim text As String = textStreamReader.ReadToEnd()
+		textStreamReader.Close()
+        ressourceStream.Close()
+        textStreamReader.Dispose()
+		ressourceStream.Dispose()        
+
+        Return text
+
+    End Function
+
+#End Region

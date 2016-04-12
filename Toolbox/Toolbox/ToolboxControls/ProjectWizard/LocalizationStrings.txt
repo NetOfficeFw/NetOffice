@@ -1,0 +1,38 @@
+﻿[1033]
+StepProgress = Step {0} of {1}
+Completed = Completed
+Yes = Yes
+No = No
+AddinOption1 = 3   = Load at startup
+AddinOption2 = 2   = On demand
+AddinOption3 = 1   = Not automatically
+AddinOption4 = 16  = Load first time, then load on demand
+Registry = Registry
+CurrentUser = Current User
+LocalMachine = Local Machine
+LoadBehavior = Load Behavior
+Language = Language
+Runtime = .Net Runtime
+Applications = Office Applications
+ProjectType = Project Type
+ProjectFolder = Project Folder
+[End]
+[1031]
+StepProgress = Schritt {0} von {1}
+Completed = Abgeschlossen
+Yes = Ja
+No = Nein
+AddinOption1 = 3   = Beim Start der Office Anwendung automatisch laden
+AddinOption2 = 2   = Bei Bedarf laden
+AddinOption3 = 1   = Nicht automatisch laden
+AddinOption4 = 16  = Beim ersten Start automatisch laden, danach bei Bedarf laden
+Registry = Registry
+CurrentUser = Current User
+LocalMachine = Local Machine
+LoadBehavior = Ladeverhalten
+Language = Sprache
+Runtime = .Net Laufzeitumgebung
+Applications = Office Anwendungen
+ProjectType = Projekt Typ
+ProjectFolder = Projekt Ordner
+[End]

@@ -9,8 +9,14 @@ namespace Sample.ExcelAddin
     /// <summary>
     /// These class handles the IPC communication and contains the WebTranslationService proxy
     /// </summary>
-    internal class TranslationClient
+    internal class TranslationClient : IDisposable
     {
+        #region Fields
+
+        private IpcClientChannel _channel;
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -57,18 +63,67 @@ namespace Sample.ExcelAddin
         /// </summary>
         internal void RegisterProxy()
         {
-            //Create an IPC client channel.
-            IpcClientChannel channel = new IpcClientChannel();
+            try
+            {
+                string uri = "ipc://NetOffice.SampleChannel/NetOffice.WebTranslationService.DataService";
 
-            //Register the channel with ChannelServices.
-            ChannelServices.RegisterChannel(channel, true);
+                //Create an IPC client channel.
+                _channel = new IpcClientChannel();
 
-            //Register the client type.
-            RemotingConfiguration.RegisterWellKnownClientType(
-                                typeof(WebTranslationService),
-                                "ipc://NetOffice.SampleChannel/NetOffice.WebTranslationService.DataService");
+                //Register the channel with ChannelServices.
+                ChannelServices.RegisterChannel(_channel, true);
 
-            DataService = new WebTranslationService();
+                //Register the client type.
+                WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
+                if (null == GetEntry(entries, uri))
+                {
+                    RemotingConfiguration.RegisterWellKnownClientType(
+                                        typeof(WebTranslationService),
+                                        uri);
+                }
+                DataService = new WebTranslationService();
+
+                // try to do some action to see the server is alive
+                string[] dumy = DataService.AvailableTranslations;
+            }
+            catch (RemotingException exception)
+            {
+                // rethrow the exception with a friendly message
+                throw new RemotingException("Unable to connect the local translation service.", exception);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get entry from array based on objectUrl or null if not match. We can not use Linq here because NO examples comes also in .Net 2
+        /// </summary>
+        /// <param name="entries">entries from RemotingConfiguration</param>
+        /// <param name="objectUrl">target url</param>
+        /// <returns>entry or null</returns>
+        private static WellKnownClientTypeEntry GetEntry(WellKnownClientTypeEntry[] entries, string objectUrl)
+        {
+            foreach (WellKnownClientTypeEntry item in entries)
+            {
+                if (objectUrl.Equals(item.ObjectUrl, StringComparison.InvariantCultureIgnoreCase))
+                    return item;
+            }
+            return null;
+        }
+
+        #endregion
+
+        #region IDisposable
+
+        public void Dispose()
+        {
+            if (null != _channel)
+            {
+                ChannelServices.UnregisterChannel(_channel);
+                _channel = null;
+            }
         }
 
         #endregion

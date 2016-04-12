@@ -2,7 +2,7 @@
 labelHeader2 = The tutorial code is available in the VS Solution Explorer.
 labelControlsHeader = Visual area for tutorials
 labelQuestions = Questions or Comments?
-labelRessourceHeader = Ressources
+labelRessourceHeader = Resources
 labelOffHint = Online Documentation is turned off. Enable in program options or visit:
 linkLabelTutorialOverview = Tutorial Overview
 linkLabelDocumentation = Documentation

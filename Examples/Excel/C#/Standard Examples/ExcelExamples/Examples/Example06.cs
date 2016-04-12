@@ -1,26 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Reflection;
-using System.Text;
 using ExampleBase;
-
-using NetOffice;
+using Office = NetOffice.OfficeApi;
 using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Enums;
-using NetOffice.VBIDEApi.Enums;
 
 namespace ExcelExamplesCS4
 {
+    /// <summary>
+    /// Example 6 - Dialogs in Excel
+    /// </summary>
     partial class Example06 : UserControl , IExample
     {
-        IHost _hostApplication;
+        #region Ctor
 
+        /// <summary>
+        /// Creates an instance of the class
+        /// </summary>
         public Example06()
         {
             InitializeComponent();
         }
+
+        #endregion
 
         #region IExample Member
 
@@ -32,17 +34,17 @@ namespace ExcelExamplesCS4
 
         public void Connect(IHost hostApplication)
         {
-            _hostApplication = hostApplication;
+            HostApplication = hostApplication;
         }
 
         public string Caption
         {
-            get { return _hostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
+            get { return HostApplication.LCID == 1033 ? "Example06" : "Beispiel06"; }
         }
 
         public string Description
         {
-            get { return _hostApplication.LCID == 1033 ? "Dialogs in Excel" : "Dialoge in Excel"; }
+            get { return HostApplication.LCID == 1033 ? "Dialogs in Excel" : "Dialoge in Excel"; }
         }
 
         public UserControl Panel
@@ -50,6 +52,15 @@ namespace ExcelExamplesCS4
             get { return this; }
         }
     
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Current Example Host
+        /// </summary>
+        internal IHost HostApplication { get; private set; }
+
         #endregion
 
         #region UI Trigger
@@ -111,7 +122,7 @@ namespace ExcelExamplesCS4
                     break;
 
                 default:
-                    throw (new Exception("Unkown dialog selected."));
+                    throw (new ArgumentOutOfRangeException("Unkown dialog selected."));
 
             }
 

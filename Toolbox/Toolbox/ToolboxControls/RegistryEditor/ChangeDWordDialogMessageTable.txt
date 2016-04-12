@@ -1,0 +1,20 @@
+﻿[1031]
+this = DWORD-Wert bearbeiten
+labelName = Name
+labelValue = Wert
+groupBoxBase = Basis
+radioButtonHex = Hexadezimal
+radioButtonDecimal = Dezimal
+buttonOK = OK
+buttonAbort = Abbrechen
+[End]
+[1033]
+this = Edit DWORD Value
+labelName = Name
+labelValue = Value
+groupBoxBase = Base
+radioButtonHex = Hexadecimal
+radioButtonDecimal = Decimal
+buttonOK = OK
+buttonAbort = Cancel
+[End]

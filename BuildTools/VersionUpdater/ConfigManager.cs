@@ -7,9 +7,22 @@ using System.Xml.Linq;
 using System.Text;
 
 namespace NOBuildTools.VersionUpdater
-{
+{  
+    /// <summary>
+    /// Little helper to read and save config
+    /// </summary>
     internal static class ConfigManager
     {
+        /// <summary>
+        /// Save a configuration file
+        /// </summary>
+        /// <param name="fullFileName">target config file</param>
+        /// <param name="directory">target update root directory</param>
+        /// <param name="changeMarker">change Marker</param>
+        /// <param name="fromNet">from .net version</param>
+        /// <param name="toNet">to .net versions</param>
+        /// <param name="changeKeyFiles">change also key files</param>
+        /// <param name="keyFilesFolder">root folder with key files</param>
         public static void SaveConfigurationToXMLFile(string fullFileName, string directory, bool changeMarker, string fromNet, string toNet, bool changeKeyFiles, string keyFilesFolder)
         {
             if (File.Exists(fullFileName))
@@ -27,6 +40,16 @@ namespace NOBuildTools.VersionUpdater
             document.Save(fullFileName);
         }
 
+        /// <summary>
+        /// Loads a configuration file
+        /// </summary>
+        /// <param name="fullFileName">target config file</param>
+        /// <param name="directory">target update root directory</param>
+        /// <param name="changeMarker">change Marker</param>
+        /// <param name="fromNet">from .net version</param>
+        /// <param name="toNet">to .net versions</param>
+        /// <param name="changeKeyFiles">change also key files</param>
+        /// <param name="keyFilesFolder">root folder with key files</param>
         public static void LoadConfigurationFromConfigFile(string fullFileName, ref string directory, ref bool changeMarker, ref string fromNet, ref string toNet, ref bool changeKeyFiles, ref string keyFilesFolder)
         {
             if (!File.Exists(fullFileName))

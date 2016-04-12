@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace NetOfficeTools.ExtendedWordCS4
 {
-    public partial class SamplePane : UserControl, NetOffice.WordApi.Tools.ITaskPane
+    public partial class SamplePane : UserControl, NetOffice.WordApi.Tools.ITaskPane // Not necessary to implement ITaskPane but its helpful
     {
         #region Ctor
 
@@ -36,6 +36,16 @@ namespace NetOfficeTools.ExtendedWordCS4
         public void OnDisconnection()
         {
 
+        }
+
+        public void OnDockPositionChanged(NetOffice.OfficeApi.Enums.MsoCTPDockPosition position)
+        {
+            
+        }
+
+        public void OnVisibleStateChanged(bool visible)
+        {
+            
         }
 
         #endregion

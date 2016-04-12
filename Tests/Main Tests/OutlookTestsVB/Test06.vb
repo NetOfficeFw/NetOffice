@@ -39,7 +39,7 @@ Public Class Test06
         Try
 
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             Dim mailItem As Outlook.MailItem = application.CreateItem(OlItemType.olMailItem)
 
@@ -73,7 +73,7 @@ Public Class Test06
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

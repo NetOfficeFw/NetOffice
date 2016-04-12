@@ -36,7 +36,7 @@ Public Class Test05
         Dim startTime As DateTime = DateTime.Now
         Try
             application = New NetOffice.OutlookApi.Application()
-            NetOffice.OutlookSecurity.Supress.Enabled = True
+            NetOffice.OutlookSecurity.Suppress.Enabled = True
 
             ' enum contacts 
             Dim contactFolder As Outlook.MAPIFolder = application.Session.GetDefaultFolder(OlDefaultFolders.olFolderContacts)
@@ -62,7 +62,7 @@ Public Class Test05
                 application.Quit()
                 application.Dispose()
             End If
-            NetOffice.OutlookSecurity.Supress.Enabled = False
+
         End Try
 
     End Function

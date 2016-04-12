@@ -1,0 +1,17 @@
+﻿    Public Function TooglePaneVisibleButton_GetPressed(ByVal control As Office.IRibbonControl) As Boolean
+
+		If TaskPanes.Count > 0 Then
+			Return TaskPanes(0).Visible
+		Else
+			Return False
+		End If
+
+    End Function
+
+    Public Sub TooglePaneVisibleButton_Click(ByVal control As Office.IRibbonControl, ByVal pressed As Boolean)
+
+        If TaskPanes.Count > 0 Then
+			TaskPanes(0).Visible = pressed
+		End If
+
+	End Sub
