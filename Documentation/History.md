@@ -1,20 +1,18 @@
-# NetOffice repository history
+# NetOfficeFw/NetOffice Tepository History
 
-Original NetOffice project is located at [http://netoffice.codeplex.com/](http://netoffice.codeplex.com/).
+Original NetOffice project was started at [http://netoffice.codeplex.com/](http://netoffice.codeplex.com/).
 Over the years, NetOffice became a very big repository and Codeplex became very slow to work with it.
-It is problematic to checkout the source code, view messages log or even do simple updates, as SvnBridge
-is not working properly with NetOffice repository at Codeplex (problems included timeouts with Subversion
-operations, Subversion is not able to export all files from a revision from time to time and viewing logs
-or diffs with previous revisions is too long).
+In 2016 the SvnBridge used by Codeplex stopped working so the original repository is not accessible anymore.
 
 This Git repository was created by importing each individual revision from Subversion repository into Git.
-Some revisions were omitted from import and some were were modified to exclude binary files (eg. build
+Some revisions were omitted from import and some were were modified to exclude binary files (eg. built
 assemblies, some RAR files) which were unnecessary and just consumed a lot of space.
 
+The imported history can be found in the `import/legacy_repository` branch.
 
 ## Excluded revisions
 
-These revisions from original Subversion repository were not imported, as they changeset contained only
+These revisions were not imported from original Subversion repository, as those changesets contained only
 deletion of all source code files.
 
 * [87527](https://netoffice.codeplex.com/SourceControl/changeset/87527)
