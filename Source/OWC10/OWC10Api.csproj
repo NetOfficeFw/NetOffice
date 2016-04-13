@@ -10,7 +10,6 @@
     <RootNamespace>NetOffice.OWC10Api</RootNamespace>
     <AssemblyName>OWC10Api</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>OWC10Api_v4.0.snk</AssemblyOriginatorKeyFile>

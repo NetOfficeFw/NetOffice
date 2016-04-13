@@ -10,7 +10,6 @@
     <RootNamespace>NetOffice.ADODBApi</RootNamespace>
     <AssemblyName>ADODBApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>ADODBApi_v4.0.snk</AssemblyOriginatorKeyFile>
