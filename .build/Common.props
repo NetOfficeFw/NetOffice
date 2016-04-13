@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\'))</SolutionDir>
     <BuildToolsDir>$(SolutionDir)\.build</BuildToolsDir>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName Condition=" '$(AssemblyName)' == '' ">$(MSBuildProjectName)</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType Condition=" '$(OutputType)' == '' ">Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OutputPath Condition=" '$(OutputPath)' == '' ">$(SolutionDir)\out\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+    <DocumentationFile Condition=" '$(DocumentationFile)' == '' ">$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DebugSymbols>true</DebugSymbols>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <!-- Assembly signing properties -->
