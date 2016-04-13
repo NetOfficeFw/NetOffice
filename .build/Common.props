@@ -40,4 +40,10 @@
     <SignAssemblyKeyName Condition=" '$(SignAssemblyKeyName)' == '' ">NetOffice.snk</SignAssemblyKeyName>
     <AssemblyOriginatorKeyFile>$(BuildToolsDir)\$(SignAssemblyKeyName)</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <ItemDefinitionGroup>
+    <ProjectReference>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemDefinitionGroup>
 </Project>
