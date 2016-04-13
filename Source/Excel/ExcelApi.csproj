@@ -12,8 +12,6 @@
     <AssemblyName>ExcelApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1053,7 +1051,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ExcelApi_v4.0.snk" />
+    <None Include="$(AssemblyOriginatorKeyFile)">
+      <Link>Properties\NetOffice.snk</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

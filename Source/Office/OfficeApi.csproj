@@ -12,8 +12,6 @@
     <AssemblyName>OfficeApi</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -616,9 +614,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="OfficeApi_v4.0.snk" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1031.xml" />
     <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1033.xml" />
   </ItemGroup>
@@ -658,6 +653,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1031.xml" />
     <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1033.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(AssemblyOriginatorKeyFile)">
+      <Link>Properties\NetOffice.snk</Link>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
