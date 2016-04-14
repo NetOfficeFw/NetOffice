@@ -80,7 +80,6 @@
     <Compile Include="Tools\WndUtils\ExcelApplicationWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="KeyTokens.txt" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

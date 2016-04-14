@@ -4,6 +4,7 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Linq;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 
 namespace NetOffice
@@ -133,7 +134,6 @@ namespace NetOffice
         private Dictionary<Guid, Guid> _hostCache = new Dictionary<Guid, Guid>();
         private Dictionary<string, Dictionary<string, string>> _entitiesListCache = new Dictionary<string, Dictionary<string, string>>();
         private List<DependentAssembly> _dependentAssemblies = new List<DependentAssembly>();
-        private static string[] _knownNetOfficeKeyTokens;
         private Assembly _thisAssembly;
         private CurrentAppDomain _appDomain;
 
@@ -389,6 +389,9 @@ namespace NetOffice
         /// </summary>
         private void AddNetOfficeAssemblies()
         {
+            var currentAssemblyName = new AssemblyName(this.ThisAssembly.FullName);
+            var netOfficePublicKey = currentAssemblyName.KeyPair.PublicKey;
+
             _dependentAssemblies.Clear();
 
             if (Settings.EnableDeepLoading)
@@ -398,7 +401,7 @@ namespace NetOffice
                 {
                     foreach (AssemblyName itemName in domainAssembly.GetReferencedAssemblies())
                     {
-                        if (ContainsNetOfficePublicKeyToken(itemName))
+                        if (ContainsNetOfficePublicKeyToken(itemName, netOfficePublicKey))
                         {
                             Assembly itemAssembly = _appDomain.Load(itemName);
                             if (null == itemAssembly)
@@ -1042,46 +1045,18 @@ namespace NetOffice
         /// <summary>
         /// returns info the assembly is a NetOffice Api Assembly with known keytoken
         /// </summary>
-        /// <param name="itemName">assembly informations</param>
+        /// <param name="itemName">Assembly name to check for equal public key in strong name.</param>
+        /// <param name="netOfficePublicKeyToken">NetOffice public key token.</param>
         /// <returns>true if NetOffice assembly with token, otherwise false</returns>
-        private bool ContainsNetOfficePublicKeyToken(AssemblyName itemName)
+        internal bool ContainsNetOfficePublicKeyToken(AssemblyName itemName, byte[] netOfficePublicKeyToken)
         {
-            try
+            var assemblyToken = itemName.GetPublicKeyToken();
+            if (assemblyToken == null)
             {
-                string targetKeyToken = itemName.FullName.Substring(itemName.FullName.LastIndexOf(" ") + 1);
-                foreach (string item in KnownNetOfficeKeyTokens)
-                {
-                    if (item.EndsWith(targetKeyToken, StringComparison.InvariantCultureIgnoreCase))
-                        return true;
-                }
                 return false;
             }
-            catch (System.IO.FileNotFoundException exception)
-            {
-                Console.WriteException(exception);
-                return false;
-            }
-        }
 
-        /// <summary>
-        /// contains a list of all known netoffice 
-        /// </summary>
-        private static string[] KnownNetOfficeKeyTokens
-        {
-            get
-            {
-                if (null == _knownNetOfficeKeyTokens)
-                {
-                    Type thisType = typeof(Core);
-                    System.IO.Stream ressourceStream = thisType.Assembly.GetManifestResourceStream(thisType.Namespace + ".KeyTokens.txt");
-                    System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream);
-                    string text = textStreamReader.ReadToEnd();
-                    ressourceStream.Close();
-                    textStreamReader.Close();
-                    _knownNetOfficeKeyTokens = text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                }
-                return _knownNetOfficeKeyTokens;
-            }
+            return netOfficePublicKeyToken.SequenceEqual(assemblyToken);
         }
 
         /// <summary>
