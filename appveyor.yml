@@ -38,6 +38,3 @@ assembly_info:
 
 test:
   assemblies:
-
-cache:
-  - packages
