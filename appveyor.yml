@@ -19,9 +19,15 @@ configuration:
   - Debug
   - Release
 
+before_build:
+  - nuget restore NetOffice.sln
+
 build:
   project: NetOffice.sln
   verbosity: detailed
+
+cache:
+  - packages -> **\packages.config
 
 assembly_info:
   patch: true
