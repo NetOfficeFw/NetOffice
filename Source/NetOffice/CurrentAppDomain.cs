@@ -77,32 +77,7 @@ namespace NetOffice
         /// <summary>
         /// Try load an assembly
         /// </summary>
-        /// <param name="fileName">full qualified file path</param>
-        /// <returns>Assembly instance or null</returns>
-        internal Assembly Load(string fileName)
-        {
-            try
-            {
-                if (ValidateVersion(fileName))
-                {
-                    if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
-                    else
-                        return Assembly.Load(fileName);
-                }
-                else
-                    return null;
-            }
-            catch
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Try load an assembly
-        /// </summary>
-        /// <param name="name">assembly reference name</param>
+        /// <param name="name">Assembly reference name</param>
         /// <returns>Assembly instance or null</returns>
         internal Assembly Load(AssemblyName name)
         {
@@ -117,20 +92,20 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Try load an assembly
+        /// Try load an assembly given the file name or path
         /// </summary>
-        /// <param name="fileName">full qualified name</param>
+        /// <param name="assemblyFile">Assembly filename or path</param>
         /// <returns>Assembly instance or null</returns>
-        internal Assembly LoadFile(string fileName)
+        internal Assembly LoadFile(string assemblyFile)
         {
             try
             {
-                if (ValidateVersion(fileName))
+                if (ValidateVersion(assemblyFile))
                 {
                     if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
+                        return Assembly.UnsafeLoadFrom(assemblyFile);
                     else
-                        return Assembly.Load(fileName);
+                        return Assembly.Load(assemblyFile);
                 }
                 else
                     return null;
@@ -142,27 +117,27 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Try load an assembly
+        /// Try load an assembly given the file name or path
         /// </summary>
-        /// <param name="fileName">full qualified file name</param>
+        /// <param name="assemblyFile">Assembly filename or path</param>
         /// <returns>Assembly instance or null</returns>
-        internal Assembly LoadFrom(string fileName)
+        internal Assembly LoadFrom(string assemblyFile)
         {
             try
             {
-                if (ValidateVersion(fileName))
+                if (ValidateVersion(assemblyFile))
                 {
                     if (Owner.Settings.LoadAssembliesUnsafe)
-                        return Assembly.UnsafeLoadFrom(fileName);
+                        return Assembly.UnsafeLoadFrom(assemblyFile);
                     else
-                        return Assembly.Load(fileName);
+                        return Assembly.LoadFrom(assemblyFile);
                 }
                 else
                     return null;
             }
             catch
             {
-                Owner.Console.WriteLine("AssemblyLoad Exception {0}", Path.GetFileName(fileName));
+                Owner.Console.WriteLine("AssemblyLoad Exception {0}", Path.GetFileName(assemblyFile));
                 return null;
             }
         }
@@ -208,7 +183,7 @@ namespace NetOffice
                 if (System.IO.File.Exists(fullFileName))
                 {
                     Console.WriteLine(string.Format("Try to resolve assembly {0}", args.Name));
-                    Assembly assembly = Load(args.Name);
+                    Assembly assembly = LoadFrom(args.Name);
                     return assembly;
                 }
                 else
